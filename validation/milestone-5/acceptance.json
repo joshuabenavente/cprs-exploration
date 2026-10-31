@@ -41,7 +41,7 @@
       }
     ],
     "windows_monitor_dpi_changed": false,
-    "orders_spoken_output": "unverified pending user listening result"
+    "orders_spoken_output": "user-reported pass for the scoped Orders Narrator checklist"
   },
   "review": "Local code/evidence self-review; no independent reviewer or original-client runtime parity claimed",
   "safe_boundary": {
@@ -53,7 +53,7 @@
     "analysis_loaded_by_runtime": false
   },
   "limits": [
-    "New Orders Narrator listening results remain separate from the prior Notes pass; full assistive-technology conformance and physical IME/dead keys are unverified.",
+    "The scoped Orders Narrator checklist passed by user report; full assistive-technology conformance and physical IME/dead keys remain unverified.",
     "Immediate UIA state/focus snapshots can lag input; settled screenshots, caret/selection, and native keyboard behavior were checked separately.",
     "Table scrollbar dragging worked at minimum width; horizontal-wheel movement was not demonstrated. Intermediate application scales and Windows monitor DPI changes were not tested.",
     "Original-client runtime, complete display-group/view/status semantics, RPC contracts/permissions/site behavior, and clinical compatibility are not established."

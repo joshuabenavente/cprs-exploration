@@ -51,8 +51,18 @@
     "Minimum-size startup exposed a 16x16 related surface as the first capture; coordinate actions used the full 1962x1392 mock-window screenshot ID after activation."
   ],
   "spoken_output": {
-    "status": "unverified for new Orders controls",
-    "historical": "The user passed the Milestone 4 Notes Narrator checklist; that result is not carried forward as an Orders pass."
+    "status": "user-reported pass",
+    "historical": "The earlier Milestone 4 Notes Narrator pass remains separate; this result applies to the new Orders checklist.",
+    "reported_at": "2026-10-31T18:57:38.102453+00:00",
+    "report": "Narrator checklist passes",
+    "patient": "SYNTH-001",
+    "checklist": [
+      "Filter, mock-status, and scenario labels",
+      "Enter then Down selects an order; speech identifies the selected order",
+      "Enter opens detail; Caps Lock+R reads matching patient/order text",
+      "Escape closes detail and returns to the list"
+    ],
+    "evidence_kind": "User listening result; no recorded audio or independent agent verification of speech"
   },
   "limits": [
     "Physical IME/dead-key input, original-client runtime equivalence, server/site behavior, and clinical compatibility are unverified."
