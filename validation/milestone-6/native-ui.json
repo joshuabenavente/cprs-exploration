@@ -42,8 +42,18 @@
     "Patient commit reset navigation to Cover Sheet with the SYNTH-002 header. Opening Results produced the settled successful empty-list message, no selected report, and no document value. No SYNTH-001 report text was restored."
   ],
   "spoken_output": {
-    "status": "unverified for new Results controls",
-    "historical": "Prior Notes and Orders user listening passes remain separate."
+    "status": "user-reported pass",
+    "historical": "Prior Notes and Orders user listening passes remain separate.",
+    "reported_at": "2026-10-31T19:38:43.064658+00:00",
+    "report": "Results Narrator checklist passes",
+    "patient": "SYNTH-001",
+    "checklist": [
+      "Results filter and scenario labels",
+      "Enter then Down selects a report; speech identifies the selected report",
+      "Enter opens detail; Caps Lock+R reads matching SYNTH-001/report text",
+      "Escape closes detail and returns to the list"
+    ],
+    "evidence_kind": "User listening result; no recorded audio or independent agent verification of speech"
   },
   "limits": [
     "Full assistive-technology conformance, physical IME/dead keys, original-client parity, server/site behavior, and clinical compatibility are unverified.",

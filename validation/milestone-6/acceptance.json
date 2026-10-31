@@ -49,7 +49,7 @@
       }
     ],
     "windows_monitor_dpi_changed": false,
-    "results_spoken_output": "unverified pending separate user listening result"
+    "results_spoken_output": "user-reported pass for the scoped Results Narrator checklist"
   },
   "review": "Local code/evidence self-review; no independent reviewer or original-client runtime parity claimed",
   "safe_boundary": {
@@ -62,7 +62,7 @@
     "analysis_loaded_by_runtime": false
   },
   "limits": [
-    "Results speech requires a separate listening result; prior Notes/Orders passes are historical. Full assistive-technology conformance and physical IME/dead keys remain unverified.",
+    "The scoped Results Narrator checklist passed by user report; earlier Notes/Orders passes remain separate. Full assistive-technology conformance and physical IME/dead keys remain unverified.",
     "Immediate UIA snapshots can lag native focus/document transitions; settled captures and native caret/selection behavior were assessed separately.",
     "Only the default 100% and minimum-size 200% application-scale samples were tested; intermediate scales and monitor DPI changes remain unverified.",
     "The list, identifiers, filtering, sorting, and explicit activation are authored prototype policy. Original report categories/date ranges, Delphi ABI, server contracts, site permissions, clinical compatibility, and runtime parity remain unverified."
