@@ -26,7 +26,8 @@
       2
     ],
     "windows_monitor_dpi_changed": false,
-    "read_only_long_text_and_state_transitions": "observed; scope/limits in native receipt"
+    "read_only_long_text_and_state_transitions": "observed; scope/limits in native receipt",
+    "manual_paste_after_native_launch": "User-confirmed working; details in native-input.json"
   },
   "review": "Local code/evidence self-review; no independent reviewer or original-client runtime comparison claimed",
   "safe_boundary": {
@@ -38,7 +39,7 @@
     "analysis_files_loaded_by_runtime": false
   },
   "limits": [
-    "Clipboard failure was launch-dependent; exact OS restriction was not instrumented. Final native-launch copy/paste passed; the user confirmed earlier shell-launch typing worked and paste failed. Manual retest after native relaunch remains separately recorded.",
+    "Clipboard failure was launch-dependent; the exact OS restriction was not instrumented. Final native-launch copy/paste passed both tool checks and the user manual retest; earlier shell-launch typing worked and paste failed.",
     "UIA focus/invocation limitations persist; native caret, selection, screenshots, and keyboard behavior supplied separate evidence.",
     "Physical IME, dead keys, intermediate Notes application scales, and complete assistive-technology conformance are unverified.",
     "Narrator spoken output remains unverified per user instruction.",
