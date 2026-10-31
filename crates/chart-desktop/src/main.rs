@@ -505,6 +505,8 @@ fn sync(app: &AppWindow, controller: &Controller) {
                                 vital.taken.clone(),
                                 vital.qualifiers.clone(),
                             ]
+                        } else if let Some(medication) = &item.medication {
+                            vec![item.label.clone(), medication.status.clone()]
                         } else if panel == PanelKind::Allergies {
                             vec![
                                 item.label.clone(),
@@ -522,12 +524,14 @@ fn sync(app: &AppWindow, controller: &Controller) {
             PanelKind::ProblemList => app.get_problem_rows(),
             PanelKind::Allergies => app.get_allergy_rows(),
             PanelKind::Vitals => app.get_vital_rows(),
+            PanelKind::ActiveMedications => app.get_medication_rows(),
         };
         if let Some(model) = changed_rows(&current, rows) {
             match panel {
                 PanelKind::ProblemList => app.set_problem_rows(model),
                 PanelKind::Allergies => app.set_allergy_rows(model),
                 PanelKind::Vitals => app.set_vital_rows(model),
+                PanelKind::ActiveMedications => app.set_medication_rows(model),
             }
         }
         let index = state.selected_cover_index(panel).map_or(-1, |i| i as i32);
@@ -535,6 +539,7 @@ fn sync(app: &AppWindow, controller: &Controller) {
             PanelKind::ProblemList => app.set_selected_problem(index),
             PanelKind::Allergies => app.set_selected_allergy(index),
             PanelKind::Vitals => app.set_selected_vital(index),
+            PanelKind::ActiveMedications => app.set_selected_medication(index),
         }
     }
     app.set_detail_open(state.detail.is_open());
@@ -598,6 +603,7 @@ fn panel(index: i32) -> PanelKind {
     match index {
         1 => PanelKind::Allergies,
         2 => PanelKind::Vitals,
+        3 => PanelKind::ActiveMedications,
         _ => PanelKind::ProblemList,
     }
 }
@@ -606,6 +612,7 @@ fn panel_index(panel: PanelKind) -> i32 {
         PanelKind::ProblemList => 0,
         PanelKind::Allergies => 1,
         PanelKind::Vitals => 2,
+        PanelKind::ActiveMedications => 3,
     }
 }
 
@@ -1630,6 +1637,20 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_problem_rows().row_count(), 2);
     assert_eq!(app.get_allergy_rows().row_count(), 2);
     assert_eq!(app.get_vital_rows().row_count(), 3);
+    assert_eq!(app.get_medication_rows().row_count(), 3);
+    app.invoke_cover_selected(3, 2);
+    assert!(!app.get_detail_open());
+    app.invoke_cover_activated(3);
+    assert!(app.get_detail_body().contains("SYNTH-001"));
+    assert!(app.get_detail_body().contains("MED-03"));
+    assert!(app.get_detail_body().contains("Demo active C"));
+    assert!(app.get_detail_body().contains("Zoë 李"));
+    app.invoke_close_detail();
+    assert_eq!(app.get_selected_medication(), 2);
+    app.invoke_cover_released(3, 0);
+    app.invoke_cover_released(3, 0);
+    assert!(app.get_detail_body().contains("MED-01"));
+    app.invoke_close_detail();
     app.invoke_cover_selected(2, 2);
     assert!(!app.get_detail_open());
     app.invoke_cover_activated(2);
@@ -1659,6 +1680,7 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_selected_problem(), -1);
     assert_eq!(app.get_selected_allergy(), -1);
     assert_eq!(app.get_selected_vital(), -1);
+    assert_eq!(app.get_selected_medication(), -1);
     app.invoke_query_edited("NGUYEN".into());
     app.invoke_simulation_changed(5);
     app.invoke_row_selected(0);
@@ -1666,6 +1688,10 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_active_id().as_str(), "SYNTH-002");
     assert_eq!(app.get_allergy_rows().row_count(), 0);
     assert_eq!(app.get_vital_rows().row_count(), 0);
+    assert_eq!(app.get_medication_rows().row_count(), 0);
+    app.invoke_cover_selected(3, 0);
+    app.invoke_cover_activated(3);
+    assert!(!app.get_detail_open());
     app.invoke_cover_selected(2, 0);
     app.invoke_cover_activated(2);
     assert!(!app.get_detail_open());
@@ -1701,6 +1727,11 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_preview_name().as_str(), "ZÁRATE, ZOË 李");
     app.invoke_confirm_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
+    app.invoke_cover_selected(3, 0);
+    app.invoke_cover_activated(3);
+    assert!(app.get_detail_body().contains("ZÁRATE, ZOË 李"));
+    assert!(app.get_detail_body().contains("Demo active A"));
+    app.invoke_close_detail();
     app.invoke_cover_selected(2, 0);
     app.invoke_cover_activated(2);
     assert!(app.get_detail_body().contains("ZÁRATE, ZOË 李"));
@@ -1715,9 +1746,22 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert!(app.get_detail_error());
     assert!(!app.get_detail_body().contains("36.8 °C"));
     app.invoke_close_detail();
+    app.invoke_cover_selected(3, 0);
+    app.invoke_cover_activated(3);
+    assert!(app.get_detail_error());
+    assert!(!app.get_detail_body().contains("Demo active A"));
+    shared.borrow_mut().provider.simulation = Simulation::Normal;
+    app.invoke_retry_detail();
+    assert!(!app.get_detail_error());
+    assert!(app.get_detail_body().contains("MED-01"));
+    app.invoke_open_selection();
+    assert_eq!(app.get_selected_medication(), -1);
+    assert!(app.get_detail_body().is_empty());
+    app.invoke_cancel_selection();
+    assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
     assert!(shared.borrow().immediate);
     println!(
-        "Mock UI callback smoke passed: patient selection, Cover Sheet, Notes, Results reports and Orders selection/detail/double-click/filter/status/close/error/retry, patient clearing, and Unicode fixture identity."
+        "Mock UI callback smoke passed: patient selection, Cover Sheet including Active Medications, Notes, Results reports and Orders selection/detail/double-click/filter/status/close/error/retry, patient clearing, and Unicode fixture identity."
     );
 }
 

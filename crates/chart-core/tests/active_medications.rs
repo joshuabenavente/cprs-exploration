@@ -1,0 +1,230 @@
+use chart_core::*;
+
+fn open(s: &mut AppState, p: &MockProvider, id: &str) {
+    s.open_selection();
+    let r = s.begin_search(id.into(), ListMode::All);
+    assert!(s.apply_search(&r, p.search(&r)));
+    s.choose_row(0, p);
+    let r = s.confirm(p, false).unwrap();
+    assert!(s.apply_chart(&r, p.chart(&r.patient_id)));
+}
+fn request(s: &mut AppState, index: usize) -> DetailRequest {
+    s.select_cover_item(PanelKind::ActiveMedications, index);
+    s.begin_detail(PanelKind::ActiveMedications).unwrap()
+}
+
+#[test]
+fn medications_display_strings_and_details_preserve_identity_status_and_unicode() {
+    let p = MockProvider::default();
+    let mut s = AppState::default();
+    open(&mut s, &p, "SYNTH-009");
+    let rows = s.active.as_ref().unwrap().cover_sheet.medications.clone();
+    assert_eq!(rows.len(), 3);
+    for (index, row) in rows.iter().enumerate() {
+        let r = request(&mut s, index);
+        let d = p.detail(&r).unwrap();
+        let v = row.medication.as_ref().unwrap();
+        assert_eq!(d.patient_id.as_str(), "SYNTH-009");
+        assert_eq!(d.item_id, row.id);
+        for text in ["ZÁRATE, ZOË 李", &v.status] {
+            assert!(d.body.contains(text));
+        }
+        assert!(s.apply_detail(&r, Ok(d)));
+        assert_eq!(s.close_detail(), Some(PanelKind::ActiveMedications));
+    }
+}
+
+#[test]
+fn medications_chart_rejects_foreign_duplicate_blank_and_missing_display_data() {
+    let p = MockProvider::default();
+    for mismatch in 0..8 {
+        let mut s = AppState::default();
+        open(&mut s, &p, "SYNTH-001");
+        s.open_selection();
+        let search = s.begin_search("SYNTH-004".into(), ListMode::All);
+        s.apply_search(&search, p.search(&search));
+        s.choose_row(0, &p);
+        let r = s.confirm(&p, false).unwrap();
+        let mut c = p.chart(&r.patient_id).unwrap();
+        match mismatch {
+            0 => {
+                c.cover_sheet.medications[0].patient_id = PatientId::synthetic("SYNTH-001").unwrap()
+            }
+            1 => c
+                .cover_sheet
+                .medications
+                .push(c.cover_sheet.medications[0].clone()),
+            2 => c.cover_sheet.medications[0].id.clear(),
+            3 => c.cover_sheet.medications[0].label.clear(),
+            4 => c.cover_sheet.medications[0].medication = None,
+            5 => {
+                c.cover_sheet.problems[0].medication =
+                    c.cover_sheet.medications[0].medication.clone()
+            }
+            6 => {
+                c.cover_sheet.vitals[0].medication = c.cover_sheet.medications[0].medication.clone()
+            }
+            _ => c.cover_sheet.medications[0].vital = c.cover_sheet.vitals[0].vital.clone(),
+        }
+        s.apply_chart(&r, Ok(c));
+        assert_eq!(s.active.as_ref().unwrap().patient.id.as_str(), "SYNTH-001");
+        assert!(s.selector_open);
+        assert!(s.message.contains("identity mismatch"));
+    }
+}
+
+#[test]
+fn medications_wrong_patient_panel_or_item_response_fails_closed() {
+    let p = MockProvider::default();
+    for mismatch in 0..3 {
+        let mut s = AppState::default();
+        open(&mut s, &p, "SYNTH-001");
+        let r = request(&mut s, 0);
+        let mut d = p.detail(&r).unwrap();
+        match mismatch {
+            0 => d.patient_id = PatientId::synthetic("SYNTH-004").unwrap(),
+            1 => d.panel = PanelKind::ProblemList,
+            _ => d.item_id = "MED-02".into(),
+        }
+        assert!(s.apply_detail(&r, Ok(d)));
+        assert!(matches!(s.detail, DetailState::Error { .. }));
+        assert!(!s.apply_detail(&r, p.detail(&r)));
+    }
+}
+
+#[test]
+fn medications_close_reopen_rejects_stale_and_duplicate_success_and_failure() {
+    let p = MockProvider::default();
+    let mut s = AppState::default();
+    open(&mut s, &p, "SYNTH-001");
+    let old = request(&mut s, 0);
+    s.close_detail();
+    let current = request(&mut s, 0);
+    assert_ne!(old.generation, current.generation);
+    assert!(!s.apply_detail(&old, p.detail(&old)));
+    assert!(!s.apply_detail(&old, Err(ProviderError::NotFound)));
+    assert!(s.apply_detail(&current, p.detail(&current)));
+    assert!(!s.apply_detail(&current, p.detail(&current)));
+    assert!(!s.apply_detail(&current, Err(ProviderError::NotFound)));
+    assert!(matches!(s.detail, DetailState::Ready { .. }));
+}
+
+#[test]
+fn medications_patient_switch_same_item_id_rejects_previous_owner() {
+    let p = MockProvider::default();
+    let mut s = AppState::default();
+    open(&mut s, &p, "SYNTH-003");
+    let old = request(&mut s, 0);
+    open(&mut s, &p, "SYNTH-004");
+    assert!(s.selected_medication.is_none());
+    assert!(!s.detail.is_open());
+    let current = request(&mut s, 0);
+    assert_eq!(old.item_id, current.item_id);
+    assert!(!s.apply_detail(&old, p.detail(&old)));
+    assert!(!s.apply_detail(&old, Err(ProviderError::NotFound)));
+    assert!(s.apply_detail(&current, p.detail(&current)));
+    let DetailState::Ready { snapshot, .. } = &s.detail else {
+        panic!("ready")
+    };
+    assert!(snapshot.body.contains("SYNTH-004"));
+    assert!(!snapshot.body.contains("SYNTH-003"));
+}
+
+#[test]
+fn medications_selector_cancel_and_tab_changes_invalidate_pending_work() {
+    let p = MockProvider::default();
+    for selector in [false, true] {
+        let mut s = AppState::default();
+        open(&mut s, &p, "SYNTH-001");
+        let old = request(&mut s, 0);
+        let chart = s.active.clone();
+        if selector {
+            s.open_selection();
+            assert!(s.selected_medication.is_none());
+            s.cancel_selection();
+        } else {
+            s.set_tab(ChartTab::Notes);
+        }
+        assert!(!s.apply_detail(&old, p.detail(&old)));
+        assert!(!s.apply_detail(&old, Err(ProviderError::NotFound)));
+        assert_eq!(s.active, chart);
+        assert!(!s.detail.is_open());
+    }
+}
+
+#[test]
+fn medications_empty_list_and_error_retry_remain_distinct() {
+    let mut p = MockProvider::default();
+    let mut s = AppState::default();
+    open(&mut s, &p, "SYNTH-002");
+    assert!(
+        s.active
+            .as_ref()
+            .unwrap()
+            .cover_sheet
+            .medications
+            .is_empty()
+    );
+    s.select_cover_item(PanelKind::ActiveMedications, 0);
+    assert!(s.begin_detail(PanelKind::ActiveMedications).is_none());
+    open(&mut s, &p, "SYNTH-001");
+    p.simulation = Simulation::DetailUnavailable;
+    let old = request(&mut s, 0);
+    assert!(s.apply_detail(&old, p.detail(&old)));
+    assert!(matches!(s.detail, DetailState::Error { .. }));
+    assert!(!s.apply_detail(&old, p.detail(&old)));
+    p.simulation = Simulation::Normal;
+    let retry = s.begin_detail(PanelKind::ActiveMedications).unwrap();
+    assert!(!s.apply_detail(&old, p.detail(&old)));
+    assert!(s.apply_detail(&retry, p.detail(&retry)));
+    assert!(matches!(s.detail, DetailState::Ready { .. }));
+}
+
+#[test]
+fn medications_activation_requires_current_cover_selection() {
+    let p = MockProvider::default();
+    let mut s = AppState::default();
+    assert!(s.begin_detail(PanelKind::ActiveMedications).is_none());
+    open(&mut s, &p, "SYNTH-001");
+    assert!(s.begin_detail(PanelKind::ActiveMedications).is_none());
+    s.select_cover_item(PanelKind::ActiveMedications, usize::MAX);
+    assert!(s.begin_detail(PanelKind::ActiveMedications).is_none());
+    request(&mut s, 1);
+    assert!(s.begin_detail(PanelKind::ActiveMedications).is_none());
+    s.set_tab(ChartTab::Results);
+    assert!(s.begin_detail(PanelKind::ActiveMedications).is_none());
+}
+
+#[test]
+fn medications_and_orders_have_independent_fixtures_and_requests() {
+    let p = MockProvider::default();
+    let mut s = AppState::default();
+    open(&mut s, &p, "SYNTH-001");
+    let medications = s.active.as_ref().unwrap().cover_sheet.medications.clone();
+    let pending = request(&mut s, 0);
+    s.set_tab(ChartTab::Orders);
+    let list = s
+        .begin_orders_list("".into(), OrderStatusFilter::All)
+        .unwrap();
+    assert!(s.apply_orders_list(&list, p.orders_list(&list)));
+    assert!(
+        s.orders
+            .rows
+            .iter()
+            .all(|o| medications.iter().all(|m| m.id != o.id.as_str()))
+    );
+    s.select_order(0);
+    let order = s.begin_order_detail().unwrap();
+    assert!(!s.apply_detail(&pending, p.detail(&pending)));
+    assert!(!s.apply_detail(&pending, Err(ProviderError::NotFound)));
+    assert!(s.apply_order(&order, p.order_detail(&order)));
+    assert_eq!(
+        s.active.as_ref().unwrap().cover_sheet.medications,
+        medications
+    );
+    assert!(!s.detail.is_open());
+    s.set_tab(ChartTab::CoverSheet);
+    let current = request(&mut s, 0);
+    assert!(s.apply_detail(&current, p.detail(&current)));
+    assert!(matches!(s.orders.detail, OrderDetailState::Closed));
+}

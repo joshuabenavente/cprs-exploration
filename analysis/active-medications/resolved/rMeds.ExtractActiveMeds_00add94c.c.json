@@ -1,0 +1,150 @@
+{
+  "function": "rMeds.ExtractActiveMeds",
+  "address": "00add94c",
+  "status": "decompiled",
+  "file": "rMeds.ExtractActiveMeds_00add94c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "009b2f6c",
+      "map_names": [
+        "ORFn.Piece"
+      ]
+    },
+    {
+      "address": "009b3114",
+      "map_names": [
+        "ORFn.SetPiece"
+      ]
+    },
+    {
+      "address": "009b3eb4",
+      "map_names": [
+        "ORFn.FastAssign"
+      ]
+    },
+    {
+      "address": "00addeb4",
+      "map_names": [
+        "rMeds.MedStatusGroup"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00addd08",
+      "file_offset": 7196936,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "N;"
+    },
+    {
+      "address": "00addd1c",
+      "file_offset": 7196956,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "D"
+    },
+    {
+      "address": "00addd2c",
+      "file_offset": 7196972,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "IO"
+    },
+    {
+      "address": "00addd40",
+      "file_offset": 7196992,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "I"
+    },
+    {
+      "address": "00addd50",
+      "file_offset": 7197008,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "O"
+    },
+    {
+      "address": "00addd60",
+      "file_offset": 7197024,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "C"
+    },
+    {
+      "address": "00addd70",
+      "file_offset": 7197040,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 8,
+      "text": "Non-VA  "
+    },
+    {
+      "address": "00addd90",
+      "file_offset": 7197072,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "Clin Meds  "
+    },
+    {
+      "address": "00adddb4",
+      "file_offset": 7197108,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": " - "
+    },
+    {
+      "address": "00adddc8",
+      "file_offset": 7197128,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 29,
+      "text": "0^No active medications found"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-31T15:26:51.2634987-06:00",
+  "scope": "Milestone 9 mock-only Active Medications and integrated chart validation",
+  "passed": true,
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+  "checks": [
+    {
+      "name": "format",
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "clippy",
+      "command": "cargo clippy --workspace --all-targets --locked --offline -- -D warnings",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "tests",
+      "command": "cargo test --workspace --locked --offline",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "build",
+      "command": "cargo build -p cprs-chart-mock --locked --offline",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "callbacks",
+      "command": "cargo run -p cprs-chart-mock --locked --offline -- --smoke-check",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "integrated",
+      "command": "cargo run -p cprs-chart-mock --locked --offline -- --integration-check",
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "executable": "target/debug/cprs-chart-mock.exe",
+  "executable_sha256": "e7b5056cfb688033cd3ed9dc1994a81d9d50e386c73fb4917b32eb213cbb0773",
+  "evidence_limits": [
+    "Callback smoke uses immediate responses; the separate integrated journey uses real timers and checks accepted/rejected deliveries and UI bindings. It does not inject physical keys or verify speech.",
+    "Visual and keyboard observations are recorded separately.",
+    "No clinical server or original CPRS process is involved."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "Milestone 9 user-reported medication listening follow-up",
+  "report": "The medication listening checklist passes.",
+  "evidence_kind": "User report; no recorded audio or independent speech verification",
+  "executable_sha256": "e7b5056cfb688033cd3ed9dc1994a81d9d50e386c73fb4917b32eb213cbb0773",
+  "implementation_changed": false,
+  "files_sha256": {
+    "docs/handoff.md": "9b3d916d1524045c6527a751742b25dc3576af6f7a9e3ef56e7837b1d8591b3d",
+    "docs/milestone-9.md": "97a576b46c2a118a972a98f83949333a88d6470fe92ec8f315ac4c13013352f6",
+    "validation/milestone-9/acceptance.json": "33c30541fa71c89d2cd421c9d7f5300c38c4054000c6202e1bef22efb7a0fd3b",
+    "validation/milestone-9/native-ui.json": "89434584b2c7f9fcd037aa9da9d04c6062f7cefdd2db7fc7760cc6603c904ccb"
+  },
+  "previous_review_hashes": {
+    "docs/handoff.md": "052fb276778397ca4eedf54b265788a51ce979b4128247c797addaa5be33e88a",
+    "docs/milestone-9.md": "24f1c8ffc1426117f45d286d07e86e94a42bfed0eee5dea675e79a9b1cd4feba",
+    "validation/milestone-9/acceptance.json": "30eacd8bbe40cf88ea8335dab103c064f3f63568971c34f2a2aa884ae89589fc",
+    "validation/milestone-9/native-ui.json": "b6307bcc540ab104011eec2122fdded540bb85b104ba443ca658a12a68661cc3"
+  }
+}

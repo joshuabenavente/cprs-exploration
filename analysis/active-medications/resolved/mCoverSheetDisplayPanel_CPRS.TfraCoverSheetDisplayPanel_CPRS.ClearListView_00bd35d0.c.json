@@ -1,0 +1,51 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView",
+  "address": "00bd35d0",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+  "numeric_callee_references": [
+    {
+      "address": "0067cfe0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.Clear"
+      ]
+    },
+    {
+      "address": "0067d074",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.BeginUpdate"
+      ]
+    },
+    {
+      "address": "0067d264",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.EndUpdate"
+      ]
+    },
+    {
+      "address": "009fc628",
+      "map_names": [
+        "VA508AccessibilityManager.TVA508AccessibilityManager.SetComponentManager"
+      ]
+    },
+    {
+      "address": "009fc648",
+      "map_names": [
+        "VA508AccessibilityManager.TVA508AccessibilityManager.SetUseDefault"
+      ]
+    },
+    {
+      "address": "00a01f1c",
+      "map_names": [
+        "U508Extensions.FindControl508Manager"
+      ]
+    },
+    {
+      "address": "00a02048",
+      "map_names": [
+        "U508Extensions.Tlv508Manager.Create"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

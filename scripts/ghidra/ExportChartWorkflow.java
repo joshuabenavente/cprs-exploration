@@ -54,6 +54,16 @@ public class ExportChartWorkflow extends HeadlessScript {
                 disassemble(toAddr(0x00ff4e2eL));
                 function.setBody(new AddressSet(function.getEntryPoint(), toAddr(0x00ff569fL)));
             }
+            // ActiveMeds has nested Delphi finally trampolines which normal flow
+            // stops at. Keep the bounded MAP span (next public: 00bd615c),
+            // including its literal pool, and explicitly decode continuations.
+            if (name.equals("mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnAddItems")) {
+                for (long at : new long[] {0x00bd60c3L, 0x00bd60caL, 0x00bd60e7L,
+                        0x00bd60eeL, 0x00bd6112L, 0x00bd6119L, 0x00bd613eL, 0x00bd6145L}) {
+                    disassemble(toAddr(at));
+                }
+                function.setBody(new AddressSet(function.getEntryPoint(), toAddr(0x00bd615bL)));
+            }
             String filename = name.replaceAll("[^A-Za-z0-9_.-]", "_") + "_" + symbol.getAddress() + ".c";
             DecompileResults result = decomp.decompileFunction(function, 60, monitor);
             String status = result.decompileCompleted() ? "decompiled" : "failed";

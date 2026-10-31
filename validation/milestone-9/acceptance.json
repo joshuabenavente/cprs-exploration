@@ -1,0 +1,26 @@
+{
+  "scope": "Milestone 9 mock-only Active Medications bounded code/automated/native checkpoint",
+  "checkpoint_passed": true,
+  "milestone_acceptance_complete": true,
+  "executable_sha256": "e7b5056cfb688033cd3ed9dc1994a81d9d50e386c73fb4917b32eb213cbb0773",
+  "core_tests": 87,
+  "timed_checkpoints": 61,
+  "actual_deliveries": 82,
+  "rejected_stale_deliveries": 34,
+  "native_layout_samples": 10,
+  "spoken_output": "user-reported pass",
+  "receipts_sha256": {
+    "validation/milestone-9/automated.json": "30812387ea59a5930f60debad38888ead3194ffdada69e2a14ed323af7f2b359",
+    "validation/milestone-9/integrated.json": "22cb44f009dd0c45a98fbccf64a1441bae21034d5d25f411da983a06484f4b4b",
+    "validation/milestone-9/native-ui.json": "89434584b2c7f9fcd037aa9da9d04c6062f7cefdd2db7fc7760cc6603c904ccb",
+    "validation/milestone-9/static.json": "33eee845b8beaeb7d1aa0643110c3b782de462f097c55522fd0ce82cd93ca924",
+    "validation/milestone-9/historical-bytes.json": "7351618423428f29daacf0df23cbb305ba742ef6471025d3a2da408770941cdd",
+    "validation/milestone-9/startup-handoff.md": "8b62c4959363b207d80ff6e2fb904a5f4387d08e6b6b33fb27f11f45ffff41de"
+  },
+  "review": "Local self-review; no independent review or original-client runtime parity claimed",
+  "boundary": "Compiled invented records only; no server, transport, credentials, imports, original CPRS execution, DLL internals or clinical writes",
+  "limits": [
+    "User listening is separate from native input, UIA snapshots and callback/focus probes.",
+    "No full accessibility, monitor-DPI, physical IME or clinical-compatibility claim."
+  ]
+}

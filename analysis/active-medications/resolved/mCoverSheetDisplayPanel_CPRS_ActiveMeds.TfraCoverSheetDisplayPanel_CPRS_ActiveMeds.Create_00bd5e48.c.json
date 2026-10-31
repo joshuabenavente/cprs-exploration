@@ -1,0 +1,50 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.Create",
+  "address": "00bd5e48",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.Create_00bd5e48.c",
+  "numeric_callee_references": [
+    {
+      "address": "004096ac",
+      "map_names": [
+        "System.@ClassCreate"
+      ]
+    },
+    {
+      "address": "00409704",
+      "map_names": [
+        "System.@AfterConstruction"
+      ]
+    },
+    {
+      "address": "00bd36a0",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+      ]
+    },
+    {
+      "address": "00bd3894",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.AddColumn"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bd5eb8",
+      "file_offset": 8213176,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 10,
+      "text": "Medication"
+    },
+    {
+      "address": "00bd5edc",
+      "file_offset": 8213212,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "Status"
+    }
+  ]
+}

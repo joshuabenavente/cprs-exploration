@@ -21,6 +21,7 @@ def main():
     group.add_argument('--orders', action='store_true')
     group.add_argument('--results', action='store_true')
     group.add_argument('--vitals', action='store_true')
+    group.add_argument('--active-medications', action='store_true')
     args = parser.parse_args()
     analysis = ROOT / 'analysis' / 'cover-sheet' if args.cover_sheet else ROOT / 'analysis'
     if args.notes:
@@ -31,6 +32,8 @@ def main():
         analysis = ROOT / 'analysis/results'
     if args.vitals:
         analysis = ROOT / 'analysis/vitals'
+    if args.active_medications:
+        analysis = ROOT / 'analysis/active-medications'
     pe = PE(ROOT / 'cprs/CPRSChart.exe')
     by_address = {}
     with (ROOT / 'analysis/inventory/chart-symbols.tsv').open(encoding='utf-8', newline='') as f:

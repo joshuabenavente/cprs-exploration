@@ -113,7 +113,8 @@ fn visible_owners(a: &AppWindow, s: &Shared) -> Result<(), String> {
             "foreign Cover Sheet row"
         );
         require!(
-            a.get_vital_rows().row_count() == chart.cover_sheet.vitals.len(),
+            a.get_vital_rows().row_count() == chart.cover_sheet.vitals.len()
+                && a.get_medication_rows().row_count() == chart.cover_sheet.medications.len(),
             "Vitals binding row count mismatch"
         );
         if matches!(c.state.detail, DetailState::Ready { .. }) {
@@ -169,7 +170,10 @@ fn visible_owners(a: &AppWindow, s: &Shared) -> Result<(), String> {
     }
     if a.get_selector_open() {
         require!(
-            a.get_selected_vital() == -1 && !a.get_detail_open() && a.get_detail_body().is_empty(),
+            a.get_selected_vital() == -1
+                && a.get_selected_medication() == -1
+                && !a.get_detail_open()
+                && a.get_detail_body().is_empty(),
             "selector retained Vitals selection/detail"
         );
         empty_text(a, s)?;
@@ -353,6 +357,125 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
+        "medications-explicit-close-race",
+        |a, _| {
+            a.invoke_close_detail();
+            a.invoke_cover_selected(3, 0);
+            require!(
+                !a.get_detail_open(),
+                "Active Medications selection opened detail"
+            );
+            a.invoke_cover_activated(3);
+            a.invoke_close_detail();
+            a.invoke_cover_selected(3, 2);
+            a.invoke_cover_activated(3);
+            Ok(())
+        },
+        |a, s, i| {
+            !a.get_detail_loading()
+                && seen(s, i, "cover-detail", "SYNTH-004", "MED-01", false)
+                && seen(s, i, "cover-detail", "SYNTH-004", "MED-03", true)
+        },
+        |a, _| {
+            require!(
+                a.get_detail_body().contains("Demo active C")
+                    && a.get_detail_body().contains("Zoë 李"),
+                "Active Medications display strings changed"
+            );
+            require!(
+                a.get_keyboard_focus() == "cover-detail",
+                "Active Medications initial reading focus wrong"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "medications-close-retains-row",
+        |a, _| {
+            a.invoke_close_detail();
+            Ok(())
+        },
+        |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
+        |a, _| {
+            require!(
+                a.get_selected_medication() == 2 && a.get_detail_body().is_empty(),
+                "Active Medications close lost selection or retained text"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "medications-error",
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::DetailUnavailable;
+            a.invoke_cover_activated(3);
+            Ok(())
+        },
+        |a, _, _| a.get_detail_error(),
+        |a, _| {
+            require!(
+                !a.get_detail_body().contains("Demo active C"),
+                "Active Medications error retained old value"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "medications-retry-real-timer",
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::Normal;
+            a.invoke_retry_detail();
+            Ok(())
+        },
+        |a, s, i| {
+            a.get_detail_open()
+                && !a.get_detail_loading()
+                && !a.get_detail_error()
+                && seen(s, i, "cover-detail", "SYNTH-004", "MED-03", true)
+        },
+        noop,
+    ));
+    q.push_back(Step::new(
+        "medications-late-error-tab",
+        |a, s| {
+            a.invoke_close_detail();
+            s.borrow_mut().provider.simulation = Simulation::DetailUnavailable;
+            a.invoke_cover_activated(3);
+            a.invoke_tab_changed(1);
+            Ok(())
+        },
+        |_, s, i| seen(s, i, "cover-detail", "SYNTH-004", "MED-03", false),
+        |a, s| {
+            require!(
+                !a.get_detail_open() && a.get_detail_body().is_empty(),
+                "late Active Medications failure reopened detail"
+            );
+            owned(a, s, "SYNTH-004", ChartTab::Notes)
+        },
+    ));
+    q.push_back(Step::new(
+        "medications-selector-cancel",
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::Normal;
+            a.invoke_tab_changed(0);
+            a.invoke_cover_selected(3, 0);
+            a.invoke_cover_activated(3);
+            a.invoke_open_selection();
+            a.invoke_cancel_selection();
+            Ok(())
+        },
+        |_, s, i| seen(s, i, "cover-detail", "SYNTH-004", "MED-01", false),
+        |a, s| {
+            require!(
+                a.get_selected_medication() == -1
+                    && !a.get_detail_open()
+                    && a.get_detail_body().is_empty(),
+                "Active Medications survived selector cancel"
+            );
+            owned(a, s, "SYNTH-004", ChartTab::CoverSheet)
+        },
+    ));
+    q.push_back(Step::new(
         "notes-list-real-delay",
         |a, _| {
             a.invoke_close_detail();
@@ -443,6 +566,29 @@ fn journey() -> VecDeque<Step> {
                     && a.get_detail_body().contains("VITAL-01")
                     && !a.get_detail_body().contains("SYNTH-004"),
                 "same Vitals ID has old owner"
+            );
+            a.invoke_close_detail();
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "medications-same-id-new-owner",
+        |a, _| {
+            require!(
+                a.get_selected_medication() == -1,
+                "patient switch retained Active Medications selection"
+            );
+            a.invoke_cover_selected(3, 0);
+            a.invoke_cover_activated(3);
+            Ok(())
+        },
+        |a, _, _| a.get_detail_open() && !a.get_detail_loading(),
+        |a, _| {
+            require!(
+                a.get_detail_body().contains("SYNTH-003")
+                    && a.get_detail_body().contains("MED-01")
+                    && !a.get_detail_body().contains("SYNTH-004"),
+                "same Active Medications ID has old owner"
             );
             a.invoke_close_detail();
             Ok(())
@@ -855,6 +1001,25 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
+        "empty-medications",
+        |a, _| {
+            a.invoke_cover_selected(3, 0);
+            a.invoke_cover_activated(3);
+            Ok(())
+        },
+        now,
+        |a, _| {
+            require!(
+                a.get_medication_rows().row_count() == 0
+                    && a.get_selected_medication() == -1
+                    && !a.get_detail_open()
+                    && !a.get_detail_error(),
+                "empty Active Medications treated as failure or retained content"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
         "empty-notes",
         |a, _| {
             a.invoke_tab_changed(1);
@@ -991,6 +1156,32 @@ fn journey() -> VecDeque<Step> {
         |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
         noop,
     ));
+    q.push_back(Step::new(
+        "review-medications-layout",
+        |a, _| {
+            a.invoke_close_detail();
+            a.invoke_tab_changed(0);
+            a.invoke_cover_selected(3, 2);
+            a.invoke_cover_activated(3);
+            Ok(())
+        },
+        |a, _, _| a.get_detail_open() && !a.get_detail_loading(),
+        |a, s| {
+            owned(a, s, "SYNTH-001", ChartTab::CoverSheet)?;
+            require!(
+                a.get_detail_body().contains("MED-03"),
+                "review Active Medications detail missing"
+            );
+            a.invoke_close_detail();
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "review-medications-closed",
+        noop,
+        |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
+        noop,
+    ));
     q
 }
 
@@ -1019,12 +1210,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M8_DELIVERY {} {} {:?} generation={} applied={}",
+                "M9_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M8_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M9_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -1033,17 +1224,17 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M8_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M9_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
             );
         }
         if driver.keep_open {
-            println!("M8_REVIEW_READY SYNTH-001 CoverSheet VITAL-03; close the mock to exit.");
+            println!("M9_REVIEW_READY SYNTH-001 CoverSheet MED-03; close the mock to exit.");
         }
     } else if let Err(error) = &result {
-        eprintln!("M8_INTEGRATED_FAIL {error}");
+        eprintln!("M9_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -1094,7 +1285,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M8_CHECK {} PASS elapsed_ms={}",
+            "M9_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );

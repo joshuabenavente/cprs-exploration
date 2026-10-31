@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([ValidateSet(8)][int]$Milestone = 8)
+param([ValidateSet(9)][int]$Milestone = 9)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $binaryPath = Join-Path $root 'target/debug/cprs-chart-mock.exe'
@@ -34,7 +34,7 @@ try {
     $binary = Join-Path $root 'target/debug/cprs-chart-mock.exe'
     $receipt = [ordered]@{
         checked_at = [DateTimeOffset]::Now.ToString('o')
-        scope = 'Milestone 8 mock-only Vitals and integrated chart validation'
+        scope = 'Milestone 9 mock-only Active Medications and integrated chart validation'
         passed = ($null -eq $failure -and $results.Count -eq $steps.Count)
         rustc = (& rustc --version | Out-String).Trim()
         cargo = (& cargo --version | Out-String).Trim()

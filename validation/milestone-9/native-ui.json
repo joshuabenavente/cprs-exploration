@@ -1,0 +1,255 @@
+{
+  "scope": "Milestone 9 native keyboard/layout and separate user-reported medication listening evidence",
+  "executable_sha256": "e7b5056cfb688033cd3ed9dc1994a81d9d50e386c73fb4917b32eb213cbb0773",
+  "layout_samples": [
+    {
+      "size": "minimum",
+      "application_scale": 2,
+      "capture_pixels": [
+        1962,
+        1392
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1960,
+        1360
+      ],
+      "log": "validation/milestone-9/layout-minimum-200.log",
+      "log_sha256": "685311d59832373a70e3d738c201c1515957f2c7ae20f52aef292af258c34e18",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    },
+    {
+      "size": "default",
+      "application_scale": 2,
+      "capture_pixels": [
+        2362,
+        1432
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        2360,
+        1400
+      ],
+      "log": "validation/milestone-9/layout-default-200.log",
+      "log_sha256": "8c7c62999e01f64c909e87ac30ff7cc56e3ffacd7d51d96d5042bd484728ba7c",
+      "requested_logical": [
+        1180,
+        700
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    },
+    {
+      "size": "default",
+      "application_scale": 1.75,
+      "capture_pixels": [
+        2067,
+        1432
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        2065,
+        1400
+      ],
+      "log": "validation/milestone-9/layout-default-175.log",
+      "log_sha256": "15460604c23cd8b0e64ea8721427f4b65cfb53af5cf4121cd605e9ec3bd20207",
+      "requested_logical": [
+        1180,
+        800
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1.75,
+      "capture_pixels": [
+        1717,
+        1222
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1715,
+        1190
+      ],
+      "log": "validation/milestone-9/layout-minimum-175.log",
+      "log_sha256": "3495f070c5ca6648d9395582f7998b77b384e84285f4bc38a84142341d5f9541",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    },
+    {
+      "size": "default",
+      "application_scale": 1.5,
+      "capture_pixels": [
+        1772,
+        1232
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1770,
+        1200
+      ],
+      "log": "validation/milestone-9/layout-default-150.log",
+      "log_sha256": "8a71b190e91559d0aa09273c0f26c7c4da8b1fc91c03870fdbe37cdad6ac29af",
+      "requested_logical": [
+        1180,
+        800
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1.5,
+      "capture_pixels": [
+        1472,
+        1052
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1470,
+        1020
+      ],
+      "log": "validation/milestone-9/layout-minimum-150.log",
+      "log_sha256": "ff44f6894b545d4e5a0644a31aae2a3b7c33b5b13a52e352404d73b73ec97d86",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    },
+    {
+      "size": "default",
+      "application_scale": 1.25,
+      "capture_pixels": [
+        1477,
+        1032
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1475,
+        1000
+      ],
+      "log": "validation/milestone-9/layout-default-125.log",
+      "log_sha256": "21329d226718464a27cccfc2fdcb41e590f1ea8521f2b018cfc6662357ae6df2",
+      "requested_logical": [
+        1180,
+        800
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1.25,
+      "capture_pixels": [
+        1227,
+        882
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1225,
+        850
+      ],
+      "log": "validation/milestone-9/layout-minimum-125.log",
+      "log_sha256": "71950a71981e1117d987578c30097b3963356f136d1d11c0deecbb488965b980",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1,
+      "capture_pixels": [
+        982,
+        712
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        980,
+        680
+      ],
+      "log": "validation/milestone-9/layout-minimum-100.log",
+      "log_sha256": "11b1de4baa47be4347bb322e2c5eee8d0e01df94e52049f824d95b50463099d2",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    },
+    {
+      "size": "default",
+      "application_scale": 1,
+      "capture_pixels": [
+        1182,
+        832
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1180,
+        800
+      ],
+      "log": "validation/milestone-9/layout-default-100.log",
+      "log_sha256": "049628c08ba0312cdabc4900c412ad27c6e64b3fe139b174c95faeb6c52d5f25",
+      "requested_logical": [
+        1180,
+        800
+      ],
+      "observed": "Inspected upper Problem List/Allergies, full-width Vitals and lower Active Medications. Medication headings/three rows/View action reachable; horizontal table scrolling at minimum width; header/navigation/status stay fixed. Full capture is unclipped."
+    }
+  ],
+  "native_smoke_completed": true,
+  "keyboard_observations": [
+    "Minimum 200%: Up selected Beta. Enter initially focused loading read-only MED-02; settled UIA exposed SYNTH-001 / MED-02 and Demo active B. Ctrl+A selected the matching complete read-only text. Escape returned to the medication table; native Down selected Gamma, independently establishing table return.",
+    "Minimum 200%: Tab reached View selected Active Medications item detail; Enter loaded MED-03 / Demo active C / Zo\u00eb \u674e. Escape returned to its table. Ctrl+O focused patient search; Escape preserved SYNTH-001 and returned to Select new synthetic patient, with Cover Sheet selections/detail cleared.",
+    "Minimum 100%: native horizontal scrolling moved medication content and exposed the trailing Status column. Reverse Tab from medications reached the retained Vitals View action and revealed the full-width Vitals row. Reverse Tab reveal was also sampled at minimum 150% and both 125% samples.",
+    "Default 100%: native Tab from the toolbar reached Problem List, Allergies, Vitals, its retained View action and Active Medications in sequence. Space focused matching MED-03 text with Demo active C and Unicode. Native double-click Alpha focused matching MED-01 / Demo active A. Escape left Alpha selected in the medication table with detail closed for user listening."
+  ],
+  "uia_observations": "native-input-observations.json",
+  "uia_observations_sha256": "8cafad49b2dcdedf764992c52faaf2470ace9c6c7577664ad7beacd825851b82",
+  "capture_observations": "native-layout-observations.json",
+  "capture_observations_sha256": "01bbe937853e1a00516852ec2e31007b3eeeaaf536ff1de217d59a7fcb8264a0",
+  "uia_limits": [
+    "Immediate snapshots can retain a prior selected label or loading text; settled observations were checked separately.",
+    "Fluent table public has-focus does not reflect its internal keyboard scope; native input/UIA are distinct from callback/focus probes.",
+    "Related 16x16 surfaces were excluded from full-window geometry; coordinate input used the actual full screenshot ID. One scroll call without that ID was rejected as outside the 16x16 surface; it was reobserved and corrected."
+  ],
+  "spoken_output": {
+    "status": "user-reported pass",
+    "checklist": "docs/milestone-9.md#separate-active-medications-listening-checklist",
+    "historical": "Milestone 7 and 8 user-reported Narrator results are historical and do not establish a medication pass.",
+    "evidence_kind": "Scoped user listening result; no recorded audio or independent agent verification of speech.",
+    "report": "The medication listening checklist passes.",
+    "recorded_at": "2026-10-31T21:54:35.198431+00:00",
+    "patients": [
+      "SYNTH-001",
+      "SYNTH-002 (synthetic empty panel)"
+    ],
+    "covered_controls": [
+      "Active Medications panel, patient identity and selected medication label",
+      "Enter reads MED-01 / Demo active A; Escape returns to the medication table",
+      "Down then Space reads MED-02 / Demo active B",
+      "View action identifies Active Medications",
+      "Gamma extended label including Zo\u00eb \u674e and matching MED-03 status/text",
+      "Ctrl+O / Escape clears medication selection/detail while preserving the chart",
+      "SYNTH-002 synthetic empty medication panel"
+    ]
+  },
+  "review_state": {
+    "patient": "SYNTH-001",
+    "panel": "Active Medications",
+    "selected_item": "MED-01",
+    "detail_open": false,
+    "application_scale": 1
+  },
+  "limits": [
+    "Normal-timer review harness first establishes fixture state; all described native actions occur after its completion.",
+    "No Windows settings changes or monitor-DPI transition claim. No physical IME/dead-key or full accessibility-conformance claim.",
+    "Native behavior, UIA snapshots, callback probes and user listening remain separate evidence."
+  ]
+}

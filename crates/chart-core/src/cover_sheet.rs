@@ -7,15 +7,22 @@ pub enum PanelKind {
     ProblemList,
     Allergies,
     Vitals,
+    ActiveMedications,
 }
 
 impl PanelKind {
-    pub const ALL: [Self; 3] = [Self::ProblemList, Self::Allergies, Self::Vitals];
+    pub const ALL: [Self; 4] = [
+        Self::ProblemList,
+        Self::Allergies,
+        Self::Vitals,
+        Self::ActiveMedications,
+    ];
     pub fn title(self) -> &'static str {
         match self {
             Self::ProblemList => "Problem List",
             Self::Allergies => "Allergies",
             Self::Vitals => "Vitals",
+            Self::ActiveMedications => "Active Medications",
         }
     }
 }
@@ -28,6 +35,13 @@ pub struct CoverItem {
     pub severity: String,
     pub symptoms: String,
     pub vital: Option<VitalDisplay>,
+    pub medication: Option<MedicationDisplay>,
+}
+
+/// Authored status text attached only to medication rows; independent of Orders.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct MedicationDisplay {
+    pub status: String,
 }
 
 /// Authored display strings. Never parsed, converted, ranked or interpreted.
@@ -44,6 +58,7 @@ pub struct CoverSheet {
     pub problems: Vec<CoverItem>,
     pub allergies: Vec<CoverItem>,
     pub vitals: Vec<CoverItem>,
+    pub medications: Vec<CoverItem>,
 }
 
 impl CoverSheet {
@@ -52,6 +67,7 @@ impl CoverSheet {
             PanelKind::ProblemList => &self.problems,
             PanelKind::Allergies => &self.allergies,
             PanelKind::Vitals => &self.vitals,
+            PanelKind::ActiveMedications => &self.medications,
         }
     }
 
@@ -64,6 +80,7 @@ impl CoverSheet {
                         && !item.id.is_empty()
                         && !item.label.is_empty()
                         && (kind == PanelKind::Vitals) == item.vital.is_some()
+                        && (kind == PanelKind::ActiveMedications) == item.medication.is_some()
                         && ids.insert(&item.id)
                 })
             })
@@ -125,6 +142,7 @@ pub(crate) fn mock_cover_sheet(patient: &PatientSummary) -> CoverSheet {
         severity: severity.into(),
         symptoms: symptoms.into(),
         vital: None,
+        medication: None,
     };
     let problems = if suffix == "SYNTH-007" {
         vec![]
@@ -200,11 +218,25 @@ pub(crate) fn mock_cover_sheet(patient: &PatientSummary) -> CoverSheet {
         })
         .collect()
     };
+    let medications = if suffix == "SYNTH-002" {
+        vec![]
+    } else {
+        [
+            ("MED-01", "Training medication Alpha", "Demo active A"),
+            ("MED-02", "Training medication Beta", "Demo active B"),
+            ("MED-03", "Training medication Gamma — extended invented label for horizontal scrolling · Zoë 李", "Demo active C"),
+        ].into_iter().map(|(id, label, status)| {
+            let mut row = item(id, label.into(), "", "");
+            row.medication = Some(MedicationDisplay { status: status.into() });
+            row
+        }).collect()
+    };
     CoverSheet {
         patient_id: patient.id.clone(),
         problems,
         allergies,
         vitals,
+        medications,
     }
 }
 
@@ -226,6 +258,11 @@ pub(crate) fn mock_detail(
         format!(
             "\nVital .......... {}\nDate/Time ...... {}\nValue .......... {}\nQualifiers ..... {}\n\nAuthored read-only display; conversion and original Vitals actions are omitted.",
             item.label, vital.taken, vital.value, vital.qualifiers
+        )
+    } else if let Some(medication) = &item.medication {
+        format!(
+            "\nMedication: {}\nStatus: {}\n\nAuthored read-only display. No medication instructions or dates are supplied by this fixture.",
+            item.label, medication.status
         )
     } else if request.panel == PanelKind::Allergies {
         format!(
