@@ -1,0 +1,27 @@
+{
+  "function": "oCoverSheet.TCoverSheet.OnClearPtData",
+  "address": "00bee374",
+  "status": "decompiled",
+  "file": "oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+  "numeric_callee_references": [
+    {
+      "address": "00410738",
+      "map_names": [
+        "System.@IntfClear"
+      ]
+    },
+    {
+      "address": "00439820",
+      "map_names": [
+        "System.SysUtils.Supports"
+      ]
+    },
+    {
+      "address": "0061782c",
+      "map_names": [
+        "Vcl.Controls.{System.Generics.Collections}TList<Vcl.Controls.TControl>.TEnumerator.Create"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

@@ -1,0 +1,60 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems",
+  "address": "00bd391c",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems_00bd391c.c",
+  "numeric_callee_references": [
+    {
+      "address": "004d5460",
+      "map_names": [
+        "System.Classes.TStringsEnumerator.Create"
+      ]
+    },
+    {
+      "address": "004d54a4",
+      "map_names": [
+        "System.Classes.TStringsEnumerator.GetCurrent"
+      ]
+    },
+    {
+      "address": "0067c4d8",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.SetCaption"
+      ]
+    },
+    {
+      "address": "0067c5e0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.SetData"
+      ]
+    },
+    {
+      "address": "0067cde0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.Add"
+      ]
+    },
+    {
+      "address": "00bcf770",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.Create"
+      ]
+    },
+    {
+      "address": "00bcf93c",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPiece"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bd3a50",
+      "file_offset": 8203856,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 16,
+      "text": "^No data found.^"
+    }
+  ]
+}

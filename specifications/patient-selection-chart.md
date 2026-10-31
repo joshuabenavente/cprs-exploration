@@ -73,6 +73,8 @@ The [16 acceptance cases](patient-selection-cases.json) define the first impleme
 
 ## Limits on fidelity
 
+The [Cover Sheet extension](cover-sheet.md) specifies the subsequent two-panel synthetic slice, including patient-scoped item details and clearing behavior. The original patient-selection acceptance cases remain regression coverage.
+
 These forms inherit base properties that have not been expanded. Virtual calls, Delphi managed values, condition flags affected by runtime helpers, exception continuations, and some record layouts remain unresolved. In particular, the menu handler's pseudocode omits some paths visible in its instruction listing; the direct call sites establish its relevant edges. Do not mechanically translate the generated C into Rust or interpret decompiler-produced constant conditions as proven application logic.
 
 Exact restricted-list selection rules, duplicate-identifier resolution, paging behavior, context cancellation, tab population, access/audit policy, and runtime appearance remain fidelity follow-ups. The authored mock state model is sufficient to implement a bounded synthetic slice while those reference questions are investigated.

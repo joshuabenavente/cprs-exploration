@@ -1,0 +1,70 @@
+{
+  "checked_on": "2026-10-31",
+  "scope": "Bounded native checks of the synthetic Rust application only",
+  "window_title": "CPRS Chart — Mock-only Rust prototype",
+  "executable_sha256": "ad1fa8f02f75cbc1a62bea10d0bb90795aa962a0562db28e098e8bb1d6c05267",
+  "automated_receipt": "validation/milestone-3/automated.json",
+  "native_smoke_completed": true,
+  "scale_method": "Process-local SLINT_SCALE_FACTOR override; Windows display settings were not changed",
+  "minimum_client_logical_pixels": [980, 680],
+  "final_build_scale_samples": [
+    {"scale":1,"capture_pixels":[982,712],"views":["selector","empty Allergies panel","detail error and retry"],"position":"top left"},
+    {"scale":1.25,"capture_pixels":[1227,882],"views":["selector"],"position":"top left"},
+    {"scale":1.5,"capture_pixels":[1472,1052],"views":["selector"],"position":"top left"},
+    {"scale":1.75,"capture_pixels":[1717,1222],"views":["selector"],"position":"top left"},
+    {"scale":2,"capture_pixels":[1962,1392],"views":["selector","populated Cover Sheet","focused lower action with workspace scrolling","loaded problem detail"],"position":"top left"},
+    {"scale":1,"capture_pixels":[1182,832],"client_logical_pixels":[1180,800],"views":["populated Cover Sheet","chart keyboard traversal"],"position":"default"}
+  ],
+  "final_build_observations": [
+    "At native scale, search and keyboard confirmation opened SYNTH-002; its Allergies panel explicitly showed no synthetic entries and stated that this is not a clinical finding.",
+    "With Detail unavailable selected, Tab and Down selected a problem; Space opened its loading pane, then an explicit unavailable detail. The patient header and PROB-01 identity remained SYNTH-002.",
+    "Shift+Tab and Return activated Retry mock detail. Loading returned, followed by unavailable for the same patient and item.",
+    "The error status replaced Loading with the unavailable message. Escape closed the pane, restored Problem List table focus, and changed the status to Synthetic item detail closed.",
+    "At 200% application scale, Enter-to-results, Down, and Enter opened SYNTH-001 with two populated panels and the recovered column labels.",
+    "At 200%, Tab to a selected item's detail button scrolled the workspace downward, exposing the complete action, panel hints, and scope footer while the patient header and navigation remained fixed.",
+    "Return from the detail button loaded SYNTH-001 / Problem List / PROB-01. The header stayed visible above the mock-only, read-only body. Return from Close restored table focus.",
+    "The default-size final executable was left on SYNTH-001. Tab traversed Problem List, its detail action, Allergies, its detail action, chart navigation, and back to Select new patient. Down selected an item in each table. Some immediate focus captures lagged a step.",
+    "The 125%, 150%, 175%, and 200% final selector samples retained the result headers and fixed navigation/status. Lower selector actions are reached by workspace scrolling and focus. The 175% bottom clipping observed before the minimum-size revision was absent in the final sample."
+  ],
+  "earlier_same_milestone_checks": {
+    "executable_sha256":"958a68c21caed42cce103586962c5d75d372151c3e7c5ed5324035fd04654ce0",
+    "difference_from_final":"Before the detail-error/close status-message correction; panel layout, Unicode fixtures, and identity guards were already present",
+    "observations":[
+      "At 200%, the accessible search value 李 returned only ZÁRATE, ZOË 李 / SYNTH-009. Native Enter, Down, Enter opened the matching chart; accented and CJK glyphs rendered in the header and detail body.",
+      "Native Enter opened the selected problem detail, and Escape returned focus to its table.",
+      "Tab focused the read-only detail text. Ctrl+A selected its full body; a normal x key did not replace the selected text. Both body and selected text were unchanged.",
+      "Switching from SYNTH-009 to SYNTH-002 removed the earlier rows and displayed the explicit empty Allergies panel. Native double-click on SYNTH-002's second problem opened PROB-02; its unavailable detail contained no previous-patient body.",
+      "Native retry on that error returned to loading for the same patient and item."
+    ]
+  },
+  "earlier_mouse_and_layout_checks": [
+    "Native double-click selected the exact patient and activated allergy item details. At 125%, SYNTH-001 / ALLERGY-02 showed the matching agent, severity, and symptom fields.",
+    "The initial minimum-size checks found extra FocusScope tab stops, clipped allergy summaries, and panel hints outside their borders; the final controls and constraints were adjusted and rechecked."
+  ],
+  "uia": {
+    "observed":"Named search/list/simulation inputs, named panel tables and detail actions, mock detail group, and read-only text. Table/button focus and return paths were checked alongside visible/native behavior.",
+    "limits":[
+      "Some focus/text snapshots lagged visible state, including reporting the read-only text while the Close or Retry button had visible/native keyboard focus.",
+      "Indexed popup clicks were unreliable: an intended Detail unavailable action selected Slow search. The resulting value was inspected and corrected with Down; the detail-error scenario was then verified.",
+      "Screenshot coordinates and keyboard actions were used where indexed hit testing was unreliable. These checks do not establish UIA or screen-reader compatibility."
+    ]
+  },
+  "text_input": {
+    "unicode_accessible_value_and_rendering":"observed; exact fixture identity and glyph rendering verified",
+    "bulk_helper_typing":"did not populate the Slint search field",
+    "synthetic_copy_paste_attempt":"Ctrl+C on selected invented detail text and Ctrl+V in search did not populate the field; cause unestablished",
+    "physical_ime_composition":"unverified"
+  },
+  "narrator_spoken_output": {
+    "status":"unverified",
+    "reason":"The user explicitly chose to record spoken output as unverified; no listening check was performed"
+  },
+  "remaining_limits":[
+    "Application scale overrides are not an actual Windows monitor/DPI/work-area matrix.",
+    "Available physical work area must accommodate the declared minimum client size plus window chrome.",
+    "Physical IME preedit, candidate selection, and commit remain unverified.",
+    "Native observations are bounded smoke checks, separate from deterministic core tests, immediate callback smoke, and static Ghidra evidence.",
+    "No original CPRS execution, clinical server, clinical data, or clinical write was involved."
+  ],
+  "left_open":"Final executable at default 1180 by 800 client size, SYNTH-001 Cover Sheet, both first panel items selected, details closed, focus on Select new patient"
+}

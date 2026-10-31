@@ -1,0 +1,61 @@
+   Compiling chart-core v0.1.0 (C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\crates\chart-core)
+   Compiling cprs-chart-mock v0.1.0 (C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\crates\chart-desktop)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.25s
+     Running unittests src\lib.rs (target\debug\deps\chart_core-b70bb72368796bb7.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\cover_sheet.rs (target\debug\deps\cover_sheet-37d15f11922f35d9.exe)
+
+running 9 tests
+test cs09_unicode_case_mapping_and_cjk_queries_preserve_fixture_identity ... ok
+test cs08_detail_activation_requires_a_valid_selection_and_cover_sheet ... ok
+test cs06_empty_panel_is_distinct_from_unavailable_detail_and_retry_is_explicit ... ok
+test cs01_two_panels_and_details_belong_to_the_committed_patient ... ok
+test cs03_same_item_id_on_a_new_patient_does_not_accept_previous_details ... ok
+test cs07_opening_selector_clears_selection_and_details_cancel_preserves_chart ... ok
+test cs02_closing_and_reopening_same_item_rejects_old_and_duplicate_delivery ... ok
+test cs04_wrong_patient_panel_or_item_in_detail_response_fails_closed ... ok
+test cs05_chart_commit_rejects_foreign_panel_owner_foreign_row_and_duplicate_ids ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\workflow.rs (target\debug\deps\workflow-c3325c16b19b1437.exe)
+
+running 19 tests
+test cancel_and_reopen_rejects_old_search_generation ... ok
+test ps05_successful_zero_rows_is_empty ... ok
+test ps06_unavailable_provider_is_not_an_empty_result ... ok
+test ps02_duplicate_names_resolve_to_exact_id_and_demographics ... ok
+test ps07_malformed_fixture_rows_fail_closed ... ok
+test demo_roster_is_a_fixture_filter_and_does_not_override_access ... ok
+test ps08_paging_carries_explicit_scoped_cursor_and_direction ... ok
+test ps04_stale_search_and_duplicate_delivery_are_ignored ... ok
+test mismatched_chart_identity_is_rejected_atomically ... ok
+test ps03_editing_query_invalidates_selection_and_acknowledgment ... ok
+test ps01_opening_selector_keeps_committed_chart_identity ... ok
+test ps10_no_valid_selected_identifier_cannot_open_a_chart ... ok
+test failed_chart_load_preserves_previous_header_and_view ... ok
+test ps09_cancel_rejects_pending_chart_and_preserves_previous_chart ... ok
+test queued_row_selection_cannot_dismiss_an_access_prompt ... ok
+test ps16_unimplemented_tabs_are_explicit_placeholders ... ok
+test ps11_denied_and_unavailable_access_preserve_active_chart ... ok
+test ps14_late_old_patient_data_cannot_replace_new_chart ... ok
+test ps12_access_and_deceased_flags_require_explicit_acknowledgment ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\main.rs (target\debug\deps\cprs_chart_mock-ddb7dda1bc6c805f.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests chart_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

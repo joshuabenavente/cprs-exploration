@@ -1,0 +1,58 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create",
+  "address": "00bd67fc",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create_00bd67fc.c",
+  "numeric_callee_references": [
+    {
+      "address": "004096ac",
+      "map_names": [
+        "System.@ClassCreate"
+      ]
+    },
+    {
+      "address": "00409704",
+      "map_names": [
+        "System.@AfterConstruction"
+      ]
+    },
+    {
+      "address": "00bd36a0",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+      ]
+    },
+    {
+      "address": "00bd3894",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.AddColumn"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bd687c",
+      "file_offset": 8215676,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "Agent"
+    },
+    {
+      "address": "00bd6894",
+      "file_offset": 8215700,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 8,
+      "text": "Severity"
+    },
+    {
+      "address": "00bd68b4",
+      "file_offset": 8215732,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "Signs/Symptoms"
+    }
+  ]
+}

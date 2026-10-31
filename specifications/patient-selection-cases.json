@@ -1,5 +1,5 @@
 {
-  "scope": "Authored acceptance cases for a future synthetic Rust prototype",
+  "scope": "Authored acceptance cases for the synthetic Rust prototype",
   "status": "Implemented in the mock Rust slice; automated and native UI evidence are tracked separately in validation/milestone-2/acceptance.json. These are prototype policies, not claims about CPRS runtime.",
   "cases": [
     {"id": "PS01", "scenario": "Open selection from an existing synthetic chart", "expected": "Keep the current chart identity until another exact patient identifier is confirmed"},

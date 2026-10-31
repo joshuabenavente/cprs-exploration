@@ -1,11 +1,11 @@
 [CmdletBinding()]
-param()
+param([ValidateRange(3, 99)][int]$Milestone = 3)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $binaryPath = Join-Path $root 'target/debug/cprs-chart-mock.exe'
 $running = Get-Process -Name 'cprs-chart-mock' -ErrorAction SilentlyContinue | Where-Object { $_.Path -eq $binaryPath }
 if ($running) { throw 'Close the running mock app before validation so Windows can replace its executable.' }
-$validation = Join-Path $root 'validation/milestone-2'
+$validation = Join-Path $root "validation/milestone-$Milestone"
 New-Item -ItemType Directory -Path $validation -Force | Out-Null
 $steps = @(
     @{ Name = 'format'; Arguments = @('fmt', '--all', '--', '--check') },
@@ -33,7 +33,7 @@ try {
     $binary = Join-Path $root 'target/debug/cprs-chart-mock.exe'
     $receipt = [ordered]@{
         checked_at = [DateTimeOffset]::Now.ToString('o')
-        scope = 'Mock-only Rust patient selection and chart shell'
+        scope = 'Mock-only Rust patient selection, Cover Sheet panels, and read-only item details'
         passed = ($null -eq $failure -and $results.Count -eq $steps.Count)
         rustc = (& rustc --version | Out-String).Trim()
         cargo = (& cargo --version | Out-String).Trim()

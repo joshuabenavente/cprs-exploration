@@ -304,7 +304,7 @@ fn ps16_unimplemented_tabs_are_explicit_placeholders() {
     let provider = MockProvider::default();
     let mut state = AppState::default();
     state.set_tab(ChartTab::Orders);
-    assert_eq!(state.tab, ChartTab::Overview);
+    assert_eq!(state.tab, ChartTab::CoverSheet);
     open(&mut state, &provider, "SYNTH-001");
     for tab in [ChartTab::Notes, ChartTab::Orders, ChartTab::Results] {
         state.set_tab(tab);

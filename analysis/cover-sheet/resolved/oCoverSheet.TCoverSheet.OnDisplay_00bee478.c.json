@@ -1,0 +1,132 @@
+{
+  "function": "oCoverSheet.TCoverSheet.OnDisplay",
+  "address": "00bee478",
+  "status": "decompiled",
+  "file": "oCoverSheet.TCoverSheet.OnDisplay_00bee478.c",
+  "numeric_callee_references": [
+    {
+      "address": "00408ee4",
+      "map_names": [
+        "System.TObject.ClassName"
+      ]
+    },
+    {
+      "address": "004091e8",
+      "map_names": [
+        "System.TObject.GetInterface"
+      ]
+    },
+    {
+      "address": "0040e9b8",
+      "map_names": [
+        "System.@DynArraySetLength"
+      ]
+    },
+    {
+      "address": "00410738",
+      "map_names": [
+        "System.@IntfClear"
+      ]
+    },
+    {
+      "address": "0042ef18",
+      "map_names": [
+        "System.SysUtils.Format"
+      ]
+    },
+    {
+      "address": "00439820",
+      "map_names": [
+        "System.SysUtils.Supports"
+      ]
+    },
+    {
+      "address": "004597a0",
+      "map_names": [
+        "System.Generics.Collections.TListHelper.InternalAdd4"
+      ]
+    },
+    {
+      "address": "004598c4",
+      "map_names": [
+        "System.Generics.Collections.TListHelper.InternalClear4"
+      ]
+    },
+    {
+      "address": "004d4e14",
+      "map_names": [
+        "System.Classes.TCollection.Clear"
+      ]
+    },
+    {
+      "address": "006015e8",
+      "map_names": [
+        "Vcl.Controls.TControl.SetAlign"
+      ]
+    },
+    {
+      "address": "006025b0",
+      "map_names": [
+        "Vcl.Controls.TControl.SetVisible"
+      ]
+    },
+    {
+      "address": "006bace8",
+      "map_names": [
+        "Vcl.ExtCtrls.TCellItem.SetSizeStyle"
+      ]
+    },
+    {
+      "address": "006bacf8",
+      "map_names": [
+        "Vcl.ExtCtrls.TCellItem.SetValue"
+      ]
+    },
+    {
+      "address": "006bad98",
+      "map_names": [
+        "Vcl.ExtCtrls.TCellCollection.GetItem"
+      ]
+    },
+    {
+      "address": "006bb030",
+      "map_names": [
+        "Vcl.ExtCtrls.TRowCollection.Add"
+      ]
+    },
+    {
+      "address": "006bb1d4",
+      "map_names": [
+        "Vcl.ExtCtrls.TColumnCollection.Add"
+      ]
+    },
+    {
+      "address": "006bb684",
+      "map_names": [
+        "Vcl.ExtCtrls.TControlCollection.AddControl"
+      ]
+    },
+    {
+      "address": "00bcd62c",
+      "map_names": [
+        "iGridPanelIntf.NewGridPanel"
+      ]
+    },
+    {
+      "address": "00bcd77c",
+      "map_names": [
+        "iGridPanelIntf.NewGridPanelDisplay"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bee980",
+      "file_offset": 8314240,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "%s_Row_%d"
+    }
+  ]
+}

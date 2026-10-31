@@ -1,0 +1,98 @@
+{
+  "function": "oCoverSheet.TCoverSheet.OnInitCoverSheet",
+  "address": "00bef608",
+  "status": "decompiled",
+  "file": "oCoverSheet.TCoverSheet.OnInitCoverSheet_00bef608.c",
+  "numeric_callee_references": [
+    {
+      "address": "004091e8",
+      "map_names": [
+        "System.TObject.GetInterface"
+      ]
+    },
+    {
+      "address": "0040c35c",
+      "map_names": [
+        "System.@UStrCopy"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "00410738",
+      "map_names": [
+        "System.@IntfClear"
+      ]
+    },
+    {
+      "address": "0042d238",
+      "map_names": [
+        "System.SysUtils.StrToIntDef"
+      ]
+    },
+    {
+      "address": "004d5460",
+      "map_names": [
+        "System.Classes.TStringsEnumerator.Create"
+      ]
+    },
+    {
+      "address": "004d54a4",
+      "map_names": [
+        "System.Classes.TStringsEnumerator.GetCurrent"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "00bd5758",
+      "map_names": [
+        "oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.Create"
+      ]
+    },
+    {
+      "address": "00bec394",
+      "map_names": [
+        "oCoverSheetParam_WidgetClock.TCoverSheetParam_WidgetClock.Create"
+      ]
+    },
+    {
+      "address": "00bed054",
+      "map_names": [
+        "oCoverSheetParam_Web.TCoverSheetParam_Web.Create"
+      ]
+    },
+    {
+      "address": "00bf0108",
+      "map_names": [
+        "iCoverSheetIntf.CoverSheet"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00befa84",
+      "file_offset": 8318596,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 22,
+      "text": "ORWCV1 COVERSHEET LIST"
+    },
+    {
+      "address": "00befac0",
+      "file_offset": 8318656,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "^"
+    }
+  ]
+}

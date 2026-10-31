@@ -1,4 +1,5 @@
-import { Button, ComboBox, LineEdit, StandardTableView, ScrollView } from "std-widgets.slint";
+import { Button, ComboBox, LineEdit, StandardTableView, ScrollView, TextEdit } from "std-widgets.slint";
+import { CoverPanel } from "cover-panel.slint";
 
 component Field inherits VerticalLayout {
     in property <string> label;
@@ -13,7 +14,7 @@ export component AppWindow inherits Window {
     preferred-width: 1180px;
     preferred-height: 800px;
     min-width: 980px;
-    min-height: 720px;
+    min-height: 680px;
     default-font-family: "Segoe UI";
     default-font-size: 14px;
     background: #eff2f5;
@@ -53,6 +54,16 @@ export component AppWindow inherits Window {
     in property <string> acknowledgment;
     in property <string> message;
     in property <int> search-state: 0;
+    in property <[[StandardListViewItem]]> problem-rows;
+    in property <[[StandardListViewItem]]> allergy-rows;
+    in-out property <int> selected-problem: -1;
+    in-out property <int> selected-allergy: -1;
+    in property <bool> detail-open;
+    in property <bool> detail-loading;
+    in property <bool> detail-error;
+    in property <string> detail-title;
+    in property <string> detail-body;
+    in property <string> detail-identity;
 
     callback open-selection();
     callback query-edited(string);
@@ -67,15 +78,26 @@ export component AppWindow inherits Window {
     callback previous-page();
     callback next-page();
     callback tab-changed(int);
+    callback cover-selected(int, int);
+    callback cover-released(int, int);
+    callback cover-activated(int);
+    callback close-detail();
+    callback retry-detail();
 
-    public function focus-search() { search.focus(); }
-    public function focus-chart() { new-patient.focus(); }
-    public function focus-acknowledgment() { continue-button.focus(); }
+    public function scroll-workspace-bottom() { workspace-scroll.content-y = min(0px, workspace-scroll.visible-height - workspace-scroll.content-height); }
+    public function focus-search() { workspace-scroll.content-y = 0px; search.focus(); }
+    public function focus-chart() { workspace-scroll.content-y = 0px; new-patient.focus(); }
+    public function focus-acknowledgment() { root.scroll-workspace-bottom(); continue-button.focus(); }
+    public function focus-cover(panel: int) { workspace-scroll.content-y = 0px; if panel == 0 { problem-panel.focus-list(); } else { allergy-panel.focus-list(); } }
+    public function focus-detail() { detail-close.focus(); }
 
     shortcuts := FocusScope {
+        focus-on-tab-navigation: false;
+        focus-on-click: false;
         width: parent.width;
         height: parent.height;
         key-pressed(event) => {
+            if event.text == Key.Escape && root.detail-open { root.close-detail(); return accept; }
             if event.text == Key.Escape && root.selector-open {
                 if root.show-acknowledgment { root.decline-acknowledgment(); }
                 else { root.cancel-selection(); }
@@ -94,7 +116,7 @@ export component AppWindow inherits Window {
         }
         KeyBinding {
             keys: @keys(Control + O);
-            activated => { if !root.selector-open { root.open-selection(); } }
+            activated => { if !root.selector-open && !root.detail-open { root.open-selection(); } }
         }
 
         VerticalLayout {
@@ -121,9 +143,10 @@ export component AppWindow inherits Window {
                 HorizontalLayout {
                     padding: 9px; padding-left: 18px; padding-right: 18px; spacing: 16px;
                     new-patient := Button {
-                        text: "Select new patient…"; enabled: !root.selector-open;
+                        text: "Select new patient…"; enabled: !root.selector-open && !root.detail-open;
                         accessible-label: "Select new synthetic patient";
                         clicked => { root.open-selection(); }
+                        changed has-focus => { if self.has-focus { workspace-scroll.content-y = 0px; } }
                     }
                     Text { text: "Ctrl+O  Select patient     Ctrl+F  Search"; color: #616e7a; vertical-alignment: center; }
                     Rectangle { horizontal-stretch: 1; background: transparent; }
@@ -153,6 +176,13 @@ export component AppWindow inherits Window {
             workspace := Rectangle {
                 vertical-stretch: 1;
                 background: #eff2f5;
+                workspace-scroll := ScrollView {
+                    width: parent.width; height: parent.height;
+                    content-width: self.visible-width;
+                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : 440px);
+                    changed content-height => { self.content-y = min(0px, max(self.content-y, self.visible-height - self.content-height)); }
+                    Rectangle {
+                    width: workspace-scroll.visible-width; height: workspace-scroll.content-height;
                 selector := Rectangle {
                     visible: root.selector-open;
                     width: parent.width; height: parent.height;
@@ -184,7 +214,7 @@ export component AppWindow inherits Window {
                             }
                             ComboBox {
                                 preferred-width: 205px;
-                                model: ["Normal simulation", "Search unavailable", "Malformed result", "Chart unavailable", "Slow search"];
+                                model: ["Normal simulation", "Search unavailable", "Malformed result", "Chart unavailable", "Slow search", "Detail unavailable"];
                                 current-index: root.simulation-index;
                                 accessible-label: "Mock simulation scenario";
                                 enabled: !root.chart-loading && !root.show-acknowledgment;
@@ -284,14 +314,15 @@ export component AppWindow inherits Window {
                             Rectangle { horizontal-stretch: 1; background: transparent; }
                             Button { text: root.chart-loading ? "Loading…" : "OK — Open mock chart"; primary: true;
                                 enabled: root.can-confirm && !root.show-acknowledgment;
+                                changed has-focus => { if self.has-focus { root.scroll-workspace-bottom(); } }
                                 clicked => { root.confirm-selection(); } }
-                            Button { text: "Cancel"; clicked => { root.cancel-selection(); } }
+                            Button { text: "Cancel"; changed has-focus => { if self.has-focus { root.scroll-workspace-bottom(); } } clicked => { root.cancel-selection(); } }
                         }
                     }
                 }
 
                 chart := Rectangle {
-                    visible: !root.selector-open;
+                    visible: !root.selector-open && !root.detail-open;
                     width: parent.width; height: parent.height;
                     background: #eff2f5;
                     VerticalLayout {
@@ -302,38 +333,38 @@ export component AppWindow inherits Window {
                             Text { text: "Select an invented patient to explore the read-only shell."; color: #617180; horizontal-alignment: center; }
                             HorizontalLayout { alignment: center; Button { text: "Select a mock patient"; clicked => { root.open-selection(); } } }
                         }
-                        if root.has-active && root.tab-index == 0: VerticalLayout {
+                        Rectangle {
+                            visible: root.has-active && root.tab-index == 0;
+                            min-height: 0px;
+                            max-height: root.has-active && root.tab-index == 0 ? 10000px : 0px;
+                            vertical-stretch: root.has-active && root.tab-index == 0 ? 1 : 0;
+                            background: transparent;
+                            VerticalLayout {
                             spacing: 18px;
-                            Text { text: "Patient overview"; color: #1e3b52; font-size: 23px; font-weight: 600; }
+                            Text { text: "Cover Sheet"; color: #1e3b52; font-size: 23px; font-weight: 600; }
                             HorizontalLayout {
                                 spacing: 16px;
-                                Rectangle {
-                                    background: white; border-width: 1px; border-color: #d1dbe4;
-                                    min-height: 116px;
-                                    VerticalLayout { padding: 20px; spacing: 10px;
-                                        Text { text: "TRAINING LOCATION"; color: #687988; font-size: 12px; }
-                                        Text { text: root.active-location; color: #203d53; font-size: 19px; }
-                                        Text { text: root.active-id; color: #687988; }
-                                    }
+                                problem-panel := CoverPanel {
+                                    title: "Problem List"; rows: root.problem-rows;
+                                    enabled: !root.detail-open;
+                                    selected-row <=> root.selected-problem;
+                                    selected(index) => { root.cover-selected(0, index); }
+                                    released(index) => { root.cover-released(0, index); }
+                                    activated => { root.cover-activated(0); }
+                                    footer-focused => { root.scroll-workspace-bottom(); }
                                 }
-                                Rectangle {
-                                    background: white; border-width: 1px; border-color: #d1dbe4;
-                                    min-height: 116px;
-                                    VerticalLayout { padding: 20px; spacing: 10px;
-                                        Text { text: "MOCK VISIT"; color: #687988; font-size: 12px; }
-                                        Text { text: root.active-visit; color: #203d53; font-size: 17px; wrap: word-wrap; }
-                                        Text { text: "Read-only fixture"; color: #687988; }
-                                    }
+                                allergy-panel := CoverPanel {
+                                    title: "Allergies"; allergies: true; rows: root.allergy-rows;
+                                    enabled: !root.detail-open;
+                                    selected-row <=> root.selected-allergy;
+                                    selected(index) => { root.cover-selected(1, index); }
+                                    released(index) => { root.cover-released(1, index); }
+                                    activated => { root.cover-activated(1); }
+                                    footer-focused => { root.scroll-workspace-bottom(); }
                                 }
                             }
-                            Rectangle {
-                                background: white; border-width: 1px; border-color: #d1dbe4;
-                                vertical-stretch: 1;
-                                VerticalLayout { padding: 22px; spacing: 14px; alignment: start;
-                                    Text { text: "Synthetic record summary"; font-size: 18px; color: #23445b; font-weight: 600; }
-                                    Text { text: root.chart-summary; color: #536879; wrap: word-wrap; }
-                                    Text { text: "Fixed fixture date: " + root.fixture-date; color: #6b7c89; font-size: 13px; }
-                                }
+                            Text { text: "Two synthetic panels · Other Cover Sheet panels are not implemented · Fixture date: " + root.fixture-date;
+                                color: #617180; font-size: 12px; wrap: word-wrap; }
                             }
                         }
                         if root.has-active && root.tab-index != 0: VerticalLayout {
@@ -344,14 +375,16 @@ export component AppWindow inherits Window {
                     }
                 }
             }
+            }
+            }
             Rectangle {
                 height: 44px;
                 background: #e1e7ed;
                 HorizontalLayout {
                     padding: 6px; padding-left: 18px; spacing: 6px;
-                    for label[index] in ["Overview", "Notes", "Orders", "Results"]: Button {
+                    for label[index] in ["Cover Sheet", "Notes", "Orders", "Results"]: Button {
                         text: label; checked: root.tab-index == index;
-                        enabled: root.has-active && !root.selector-open;
+                        enabled: root.has-active && !root.selector-open && !root.detail-open;
                         clicked => { root.tab-changed(index); }
                     }
                     Rectangle { horizontal-stretch: 1; background: transparent; }
@@ -362,6 +395,30 @@ export component AppWindow inherits Window {
                 height: 48px; background: #f9fafb;
                 Text { x: 18px; width: parent.width - 36px; height: parent.height;
                     text: root.message; color: #3b5265; vertical-alignment: center; wrap: word-wrap; font-size: 13px; }
+            }
+        }
+        detail-overlay := Rectangle {
+            visible: root.detail-open;
+            x: 0px; y: 214px; width: parent.width; height: parent.height - 214px;
+            background: #e2e9ef;
+            accessible-role: groupbox;
+            accessible-label: root.detail-title;
+            VerticalLayout {
+                padding: 26px; spacing: 12px;
+                Text { text: root.detail-title; font-size: 21px; font-weight: 600; color: #23445b; wrap: word-wrap; }
+                Text { text: root.detail-identity; color: #526879; wrap: word-wrap; }
+                Text { text: "MOCK ONLY · Invented item details · Read-only"; color: #66501c; }
+                TextEdit {
+                    text: root.detail-body;
+                    read-only: true; font-family: "Lucida Console"; font-size: 13px; wrap: no-wrap;
+                    accessible-label: root.detail-loading ? "Loading synthetic details" : root.detail-error ? "Synthetic detail error" : "Read-only synthetic item details";
+                }
+                HorizontalLayout {
+                    spacing: 12px;
+                    if root.detail-error: Button { text: "Retry mock detail"; clicked => { root.retry-detail(); } }
+                    Rectangle { horizontal-stretch: 1; background: transparent; }
+                    detail-close := Button { text: "Close"; accessible-label: "Close synthetic item detail"; clicked => { root.close-detail(); } }
+                }
             }
         }
     }

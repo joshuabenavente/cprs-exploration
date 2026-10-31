@@ -21,6 +21,7 @@ struct Controller {
     provider: MockProvider,
     immediate: bool,
     last_click: Option<(PatientId, Instant)>,
+    last_cover_click: Option<(PatientId, PanelKind, String, Instant)>,
 }
 
 type Shared = Rc<RefCell<Controller>>;
@@ -38,6 +39,7 @@ fn simulation(index: i32) -> Simulation {
         2 => Simulation::MalformedResult,
         3 => Simulation::ChartUnavailable,
         4 => Simulation::SlowSearch,
+        5 => Simulation::DetailUnavailable,
         _ => Simulation::Normal,
     }
 }
@@ -48,6 +50,7 @@ fn simulation_index(value: Simulation) -> i32 {
         Simulation::MalformedResult => 2,
         Simulation::ChartUnavailable => 3,
         Simulation::SlowSearch => 4,
+        Simulation::DetailUnavailable => 5,
     }
 }
 fn tab(index: i32) -> ChartTab {
@@ -55,7 +58,7 @@ fn tab(index: i32) -> ChartTab {
         1 => ChartTab::Notes,
         2 => ChartTab::Orders,
         3 => ChartTab::Results,
-        _ => ChartTab::Overview,
+        _ => ChartTab::CoverSheet,
     }
 }
 
@@ -218,12 +221,146 @@ fn sync(app: &AppWindow, controller: &Controller) {
     );
     app.set_message(state.message.clone().into());
     app.set_tab_index(match state.tab {
-        ChartTab::Overview => 0,
+        ChartTab::CoverSheet => 0,
         ChartTab::Notes => 1,
         ChartTab::Orders => 2,
         ChartTab::Results => 3,
     });
     app.set_placeholder(state.tab.placeholder().into());
+    for panel in [PanelKind::ProblemList, PanelKind::Allergies] {
+        let rows = state
+            .active
+            .as_ref()
+            .map(|chart| {
+                chart
+                    .cover_sheet
+                    .items(panel)
+                    .iter()
+                    .map(|item| {
+                        if panel == PanelKind::Allergies {
+                            vec![
+                                item.label.clone(),
+                                item.severity.clone(),
+                                item.symptoms.clone(),
+                            ]
+                        } else {
+                            vec![item.label.clone()]
+                        }
+                    })
+                    .collect::<Vec<_>>()
+            })
+            .unwrap_or_default();
+        let current = if panel == PanelKind::ProblemList {
+            app.get_problem_rows()
+        } else {
+            app.get_allergy_rows()
+        };
+        if let Some(model) = changed_rows(&current, rows) {
+            if panel == PanelKind::ProblemList {
+                app.set_problem_rows(model);
+            } else {
+                app.set_allergy_rows(model);
+            }
+        }
+        let index = state.selected_cover_index(panel).map_or(-1, |i| i as i32);
+        if panel == PanelKind::ProblemList {
+            app.set_selected_problem(index);
+        } else {
+            app.set_selected_allergy(index);
+        }
+    }
+    app.set_detail_open(state.detail.is_open());
+    app.set_detail_loading(matches!(state.detail, DetailState::Loading(_)));
+    app.set_detail_error(matches!(state.detail, DetailState::Error { .. }));
+    let (title, body) = match &state.detail {
+        DetailState::Closed => (String::new(), String::new()),
+        DetailState::Loading(request) => (
+            format!("{} Item Detail", request.panel.title()),
+            "Loading synthetic item details…".into(),
+        ),
+        DetailState::Ready { snapshot, .. } => (snapshot.title.clone(), snapshot.body.clone()),
+        DetailState::Error { message, request } => (
+            format!("{} Item Detail — unavailable", request.panel.title()),
+            message.clone(),
+        ),
+    };
+    app.set_detail_title(title.into());
+    app.set_detail_body(body.into());
+    app.set_detail_identity(
+        state
+            .detail
+            .request()
+            .map(|r| format!("{} · {} · {}", r.patient_id, r.panel.title(), r.item_id))
+            .unwrap_or_default()
+            .into(),
+    );
+}
+
+fn changed_rows(
+    current: &ModelRc<ModelRc<StandardListViewItem>>,
+    rows: Vec<Vec<String>>,
+) -> Option<ModelRc<ModelRc<StandardListViewItem>>> {
+    if current.row_count() == rows.len()
+        && rows.iter().enumerate().all(|(i, values)| {
+            current.row_data(i).is_some_and(|row| {
+                row.row_count() == values.len()
+                    && values.iter().enumerate().all(|(j, text)| {
+                        row.row_data(j)
+                            .is_some_and(|cell| cell.text.as_str() == text)
+                    })
+            })
+        })
+    {
+        return None;
+    }
+    Some(ModelRc::new(VecModel::from(
+        rows.into_iter()
+            .map(|row| {
+                ModelRc::new(VecModel::from(
+                    row.into_iter()
+                        .map(|text| StandardListViewItem::from(text.as_str()))
+                        .collect::<Vec<_>>(),
+                ))
+            })
+            .collect::<Vec<_>>(),
+    )))
+}
+
+fn panel(index: i32) -> PanelKind {
+    if index == 1 {
+        PanelKind::Allergies
+    } else {
+        PanelKind::ProblemList
+    }
+}
+fn panel_index(panel: PanelKind) -> i32 {
+    i32::from(panel == PanelKind::Allergies)
+}
+
+fn open_detail(weak: slint::Weak<AppWindow>, shared: Shared, panel: PanelKind) {
+    let request = shared.borrow_mut().state.begin_detail(panel);
+    let Some(request) = request else {
+        return;
+    };
+    paint(&weak, &shared);
+    if let Some(app) = weak.upgrade() {
+        app.invoke_focus_detail();
+    }
+    let (provider, immediate) = {
+        let c = shared.borrow();
+        (c.provider.clone(), c.immediate)
+    };
+    let finish = move || {
+        let result = provider.detail(&request);
+        if shared.borrow_mut().state.apply_detail(&request, result) {
+            paint(&weak, &shared);
+        }
+    };
+    if immediate {
+        finish();
+    } else {
+        slint::Timer::single_shot(Duration::from_millis(350), finish);
+    }
 }
 
 fn paint(weak: &slint::Weak<AppWindow>, shared: &Shared) {
@@ -299,10 +436,87 @@ fn confirm(weak: slint::Weak<AppWindow>, shared: Shared, acknowledged: bool) {
 
 fn wire(app: &AppWindow, shared: &Shared) {
     let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_cover_selected(move |kind, index| {
+        let mut c = data.borrow_mut();
+        let kind = panel(kind);
+        let index = usize::try_from(index).unwrap_or(usize::MAX);
+        if c.state.selected_cover_index(kind) != Some(index) {
+            c.last_cover_click = None;
+        }
+        c.state.select_cover_item(kind, index);
+        drop(c);
+        paint(&weak, &data);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_cover_released(move |kind, index| {
+        let kind = panel(kind);
+        let Ok(index) = usize::try_from(index) else {
+            return;
+        };
+        let activate = {
+            let mut c = data.borrow_mut();
+            if c.state.selector_open || c.state.detail.is_open() {
+                return;
+            }
+            let Some((patient, item)) = c.state.active.as_ref().and_then(|chart| {
+                chart
+                    .cover_sheet
+                    .items(kind)
+                    .get(index)
+                    .map(|item| (chart.patient.id.clone(), item.id.clone()))
+            }) else {
+                return;
+            };
+            let now = Instant::now();
+            let activate = c.last_cover_click.as_ref().is_some_and(|(p, k, i, t)| {
+                *p == patient
+                    && *k == kind
+                    && *i == item
+                    && now.duration_since(*t) <= Duration::from_millis(450)
+            });
+            c.last_cover_click = if activate {
+                None
+            } else {
+                Some((patient, kind, item, now))
+            };
+            c.state.select_cover_item(kind, index);
+            activate
+        };
+        if activate {
+            open_detail(weak.clone(), data.clone(), kind);
+        } else {
+            paint(&weak, &data);
+        }
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_cover_activated(move |kind| open_detail(weak.clone(), data.clone(), panel(kind)));
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_close_detail(move || {
+        let panel = {
+            let mut c = data.borrow_mut();
+            c.last_cover_click = None;
+            c.state.close_detail()
+        };
+        paint(&weak, &data);
+        if let Some(panel) = panel
+            && let Some(app) = weak.upgrade()
+        {
+            app.invoke_focus_cover(panel_index(panel));
+        }
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_retry_detail(move || {
+        let panel = data.borrow().state.detail.request().map(|r| r.panel);
+        if let Some(panel) = panel {
+            open_detail(weak.clone(), data.clone(), panel);
+        }
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
     app.on_open_selection(move || {
         let request = {
             let mut c = data.borrow_mut();
             c.last_click = None;
+            c.last_cover_click = None;
             c.state.open_selection()
         };
         search_request(weak.clone(), data.clone(), request);
@@ -487,28 +701,79 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_simulation_changed(0);
     app.invoke_query_edited("NOT A FIXTURE".into());
     assert_eq!(app.get_search_state(), 3);
+    app.invoke_query_edited("CARTER".into());
+    app.invoke_row_selected(0);
+    app.invoke_confirm_selection();
+    assert_eq!(app.get_tab_index(), 0);
+    assert_eq!(app.get_problem_rows().row_count(), 2);
+    assert_eq!(app.get_allergy_rows().row_count(), 2);
+    app.invoke_cover_selected(0, 1);
+    app.invoke_cover_activated(0);
+    assert!(app.get_detail_open());
+    assert!(app.get_detail_title().contains("Beta"));
+    assert!(app.get_detail_body().contains("SYNTH-001"));
+    app.invoke_close_detail();
+    assert!(!app.get_detail_open());
+    assert!(app.get_detail_body().is_empty());
+    app.invoke_cover_released(1, 0);
+    app.invoke_cover_released(1, 0);
+    assert!(app.get_detail_open());
+    assert!(app.get_detail_title().contains("Allergies Item Detail"));
+    app.invoke_close_detail();
+    app.invoke_open_selection();
+    assert_eq!(app.get_selected_problem(), -1);
+    assert_eq!(app.get_selected_allergy(), -1);
+    app.invoke_query_edited("NGUYEN".into());
+    app.invoke_simulation_changed(5);
+    app.invoke_row_selected(0);
+    app.invoke_confirm_selection();
+    assert_eq!(app.get_active_id().as_str(), "SYNTH-002");
+    assert_eq!(app.get_allergy_rows().row_count(), 0);
+    app.invoke_cover_selected(0, 0);
+    app.invoke_cover_activated(0);
+    assert!(app.get_detail_error());
+    assert!(app.get_message().contains("unavailable"));
+    assert!(!app.get_detail_body().contains("SYNTH-001"));
+    app.invoke_retry_detail();
+    assert!(app.get_detail_error());
+    app.invoke_close_detail();
+    app.invoke_open_selection();
+    app.invoke_simulation_changed(0);
+    app.invoke_query_edited("zárate".into());
+    assert_eq!(app.get_patient_rows().row_count(), 1);
+    app.invoke_row_selected(0);
+    assert_eq!(app.get_preview_name().as_str(), "ZÁRATE, ZOË 李");
+    app.invoke_confirm_selection();
+    assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
     assert!(shared.borrow().immediate);
     println!(
-        "Mock UI callback smoke passed: exact-ID selection, OK/double-click, acknowledgment, denial, cancel, placeholders, chart failure, malformed/empty/unavailable search."
+        "Mock UI callback smoke passed: patient-selection cases, two Cover Sheet panels, exact item activation/double-click, clearing, explicit empty/error/retry, and Unicode fixture identity."
     );
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
     let args: Vec<_> = std::env::args().skip(1).collect();
     let smoke = args.as_slice() == ["--smoke-check"];
-    if !args.is_empty() && !smoke {
-        return Err("Usage: cprs-chart-mock [--smoke-check]".into());
+    let minimum_size = args.as_slice() == ["--minimum-size"];
+    if !args.is_empty() && !smoke && !minimum_size {
+        return Err("Usage: cprs-chart-mock [--smoke-check | --minimum-size]".into());
     }
     slint::BackendSelector::new()
         .backend_name("winit".into())
         .renderer_name("software".into())
         .select()?;
     let app = AppWindow::new()?;
+    if minimum_size {
+        app.window().set_size(slint::LogicalSize::new(980.0, 680.0));
+        app.window()
+            .set_position(slint::PhysicalPosition::new(0, 0));
+    }
     let shared = Rc::new(RefCell::new(Controller {
         state: AppState::default(),
         provider: MockProvider::default(),
         immediate: smoke,
         last_click: None,
+        last_cover_click: None,
     }));
     wire(&app, &shared);
     let request = shared.borrow_mut().state.open_selection();

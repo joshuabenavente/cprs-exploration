@@ -1,0 +1,24 @@
+{
+  "scope": "Synthetic Cover Sheet policies, separate from original CPRS runtime",
+  "automated_receipt": "validation/milestone-3/automated.json",
+  "native_receipt": "validation/milestone-3/native-ui.json",
+  "static_receipt": "validation/milestone-3/static.json",
+  "cases": [
+    {"id":"CS01","scenario":"Two panels and correct selected item details belong to the committed patient","core_test":"cs01_two_panels_and_details_belong_to_the_committed_patient"},
+    {"id":"CS02","scenario":"Close/reopen the same item; old and duplicate deliveries are ignored","core_test":"cs02_closing_and_reopening_same_item_rejects_old_and_duplicate_delivery"},
+    {"id":"CS03","scenario":"Same item IDs on different patients cannot accept the old patient's detail","core_test":"cs03_same_item_id_on_a_new_patient_does_not_accept_previous_details"},
+    {"id":"CS04","scenario":"Wrong patient, panel, or item metadata fails closed","core_test":"cs04_wrong_patient_panel_or_item_in_detail_response_fails_closed"},
+    {"id":"CS05","scenario":"A foreign panel owner, foreign row, or duplicate item ID blocks chart commit","core_test":"cs05_chart_commit_rejects_foreign_panel_owner_foreign_row_and_duplicate_ids"},
+    {"id":"CS06","scenario":"Successful empty panel differs from unavailable detail; retry is explicit","core_test":"cs06_empty_panel_is_distinct_from_unavailable_detail_and_retry_is_explicit"},
+    {"id":"CS07","scenario":"Opening selection clears item selection/detail; cancel preserves chart","core_test":"cs07_opening_selector_clears_selection_and_details_cancel_preserves_chart"},
+    {"id":"CS08","scenario":"Activation requires a valid selection on the Cover Sheet and cannot replace an open detail","core_test":"cs08_detail_activation_requires_a_valid_selection_and_cover_sheet"},
+    {"id":"CS09","scenario":"Accented Unicode case conversion and CJK queries retain exact identity","core_test":"cs09_unicode_case_mapping_and_cjk_queries_preserve_fixture_identity"}
+  ],
+  "patient_selection_regressions": {
+    "core_tests":19,
+    "source":"crates/chart-core/tests/workflow.rs",
+    "original_cases":"specifications/patient-selection-cases.json",
+    "historical_native_evidence":"validation/milestone-2/native-ui.json"
+  },
+  "limits":["Core tests and callback smoke are not native-input or assistive-technology validation.","Unicode data-flow tests do not verify IME preedit/candidate/commit behavior."]
+}

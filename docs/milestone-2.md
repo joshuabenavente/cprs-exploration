@@ -1,5 +1,7 @@
 # Mock Rust patient selection and chart shell
 
+This document records the historical milestone 2 snapshot at tag `milestone-2-mock`. Its receipts remain unchanged. Current Cover Sheet behavior, nine fixtures, and validation commands are documented in the [milestone 3 handoff](milestone-3.md); the current validation script writes milestone 3 receipts.
+
 The native Windows prototype implements patient selection, demographic preview, a committed patient header, and a read-only chart shell. All eight records are invented and compiled into the application. The desktop is labeled mock-only throughout. It has no broker transport, endpoint configuration, credentials, clinical writes, or patient-file import.
 
 ## Run the app

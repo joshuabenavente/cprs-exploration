@@ -1,0 +1,66 @@
+{
+  "function": "oCoverSheet.TCoverSheet.OnSwitchToPatient",
+  "address": "00bef080",
+  "status": "decompiled",
+  "file": "oCoverSheet.TCoverSheet.OnSwitchToPatient_00bef080.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "00410738",
+      "map_names": [
+        "System.@IntfClear"
+      ]
+    },
+    {
+      "address": "0042cfdc",
+      "map_names": [
+        "System.SysUtils.IntToStr"
+      ]
+    },
+    {
+      "address": "004397f8",
+      "map_names": [
+        "System.SysUtils.Supports"
+      ]
+    },
+    {
+      "address": "00439820",
+      "map_names": [
+        "System.SysUtils.Supports"
+      ]
+    },
+    {
+      "address": "0061782c",
+      "map_names": [
+        "Vcl.Controls.{System.Generics.Collections}TList<Vcl.Controls.TControl>.TEnumerator.Create"
+      ]
+    },
+    {
+      "address": "00bf0108",
+      "map_names": [
+        "iCoverSheetIntf.CoverSheet"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bef554",
+      "file_offset": 8317268,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "ORWCV START"
+    }
+  ]
+}

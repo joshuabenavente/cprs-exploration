@@ -1,0 +1,94 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail",
+  "address": "00bda4f8",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail_00bda4f8.c",
+  "numeric_callee_references": [
+    {
+      "address": "009b44a8",
+      "map_names": [
+        "ORFn.InfoBox"
+      ]
+    },
+    {
+      "address": "00bd0338",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPieceEquals"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bda5a4",
+      "file_offset": 8231332,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "#"
+    },
+    {
+      "address": "00bda5b4",
+      "file_offset": 8231348,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "10D"
+    },
+    {
+      "address": "00bda5c8",
+      "file_offset": 8231368,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 23,
+      "text": "Inactive ICD-10-CM code"
+    },
+    {
+      "address": "00bda604",
+      "file_offset": 8231428,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 102,
+      "text": "The ICD-10-CM code for this problem is inactive.\r\n\r\nPlease correct this code using the 'Problems' tab."
+    },
+    {
+      "address": "00bda6e0",
+      "file_offset": 8231648,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 22,
+      "text": "Inactive ICD-9-CM code"
+    },
+    {
+      "address": "00bda71c",
+      "file_offset": 8231708,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 101,
+      "text": "The ICD-9-CM code for this problem is inactive.\r\n\r\nPlease correct this code using the 'Problems' tab."
+    },
+    {
+      "address": "00bda7f4",
+      "file_offset": 8231924,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "$"
+    },
+    {
+      "address": "00bda804",
+      "file_offset": 8231940,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 23,
+      "text": "Inactive SNOMED CT code"
+    },
+    {
+      "address": "00bda840",
+      "file_offset": 8232000,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 102,
+      "text": "The SNOMED CT code for this problem is inactive.\r\n\r\nPlease correct this code using the 'Problems' tab."
+    }
+  ]
+}

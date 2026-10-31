@@ -1,0 +1,27 @@
+{
+  "function": "fCoverSheet.TfrmCoverSheet.OnFocusFirstControl",
+  "address": "00fd9308",
+  "status": "decompiled",
+  "file": "fCoverSheet.TfrmCoverSheet.OnFocusFirstControl_00fd9308.c",
+  "numeric_callee_references": [
+    {
+      "address": "00410738",
+      "map_names": [
+        "System.@IntfClear"
+      ]
+    },
+    {
+      "address": "004397f8",
+      "map_names": [
+        "System.SysUtils.Supports"
+      ]
+    },
+    {
+      "address": "00bf0108",
+      "map_names": [
+        "iCoverSheetIntf.CoverSheet"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

@@ -1,0 +1,72 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail",
+  "address": "00bd41b4",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "00410738",
+      "map_names": [
+        "System.@IntfClear"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "0067cb00",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.GetIndex"
+      ]
+    },
+    {
+      "address": "00bcf93c",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPiece"
+      ]
+    },
+    {
+      "address": "00bd40a4",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataEnter"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bd4354",
+      "file_offset": 8206164,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": " Item Detail: "
+    }
+  ]
+}

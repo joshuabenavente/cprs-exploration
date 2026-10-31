@@ -1,0 +1,33 @@
+{
+  "function": "fCoverSheet.TfrmCoverSheet.OnDisplayPage",
+  "address": "00fd94a8",
+  "status": "decompiled",
+  "file": "fCoverSheet.TfrmCoverSheet.OnDisplayPage_00fd94a8.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040d1c4",
+      "map_names": [
+        "System.@FinalizeArray"
+      ]
+    },
+    {
+      "address": "0060297c",
+      "map_names": [
+        "Vcl.Controls.TControl.BringToFront"
+      ]
+    },
+    {
+      "address": "00724290",
+      "map_names": [
+        "Vcl.Forms.TCustomForm.FocusControl"
+      ]
+    },
+    {
+      "address": "00bf0108",
+      "map_names": [
+        "iCoverSheetIntf.CoverSheet"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

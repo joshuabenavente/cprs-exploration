@@ -1,6 +1,6 @@
 # CPRS Chart Rust recreation research
 
-This workspace contains a mock-only Rust patient selector and chart shell, plus static research on CPRS Chart 1.33.214.5 (executable metadata: OR*3.0*639). All prototype records are invented. The Rust application has no live connection or clinical-write functionality.
+This workspace contains a mock-only Rust patient selector, two Cover Sheet panels with read-only item details, and static research on CPRS Chart 1.33.214.5 (executable metadata: OR*3.0*639). All nine prototype records are invented. The Rust application has no live connection or clinical-write functionality.
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
@@ -10,9 +10,11 @@ Initial scope includes Chart forms, navigation, client state, and the interfaces
 .\scripts\Start-MockChart.ps1
 ```
 
-Use `-Rebuild` after source changes. Search for `MORGAN` to see duplicate-name records with distinct synthetic IDs, `PATEL` for an acknowledgment, or `RIVERA` for denied mock access. The simulation selector demonstrates empty/error/loading states and chart-load failures. Overview is read-only; Notes, Orders, and Results are explicit placeholders.
+Use `-Rebuild` after source changes. Search for `MORGAN` to see duplicate-name records with distinct synthetic IDs, `PATEL` for an acknowledgment, or `RIVERA` for denied mock access. `zárate` or `李` finds the Unicode fixture. The simulation selector demonstrates search, chart, and detail failures. Cover Sheet contains synthetic Problem List and Allergies panels; Notes, Orders, and Results are explicit placeholders. Select a panel item, then use Enter, Space, double-click, or its detail button. Close or Escape returns to its table.
 
-Run `scripts/Test-MockChart.ps1` for offline automated checks. See the [mock milestone handoff](docs/milestone-2.md) for architecture, safeguards, and evidence limits. The original Ghidra analysis remains separate from the running app.
+Run `scripts/Test-MockChart.ps1` for offline automated checks, now written under `validation/milestone-3/`. See the [current handoff](docs/milestone-3.md) and [Cover Sheet specification](specifications/cover-sheet.md). The original Ghidra analysis remains separate from the running app.
+
+For a repeatable layout check, use `scripts/Start-MockChart.ps1 -MinimumSize -ScaleFactor 1.25`. Supported application scale overrides are 1, 1.25, 1.5, 1.75, and 2. They do not change Windows display settings. Close the app before rebuilding or launching another scale check.
 
 ## Analysis tools
 
@@ -66,7 +68,9 @@ Keep the GUI project closed during headless processing. Logs are in `analysis/lo
 
 - [Milestone status and evidence](docs/milestone-1.md)
 - [Rust mock implementation and validation](docs/milestone-2.md)
+- [Cover Sheet implementation and validation](docs/milestone-3.md)
+- [Recovered Cover Sheet evidence and authored behavior](specifications/cover-sheet.md)
 - [Patient selection and chart shell specification](specifications/patient-selection-chart.md)
 - [Machine-readable validation receipt](analysis/validation/milestone-1.json)
 
-Local distributions, terminal profiles, downloaded tools, caches, and the Ghidra database are excluded by `.gitignore`. This directory was not initialized as a Git repository by this milestone.
+Local distributions, terminal profiles, downloaded tools, caches, raw resource bytes, the Ghidra database, and Rust build output are excluded by `.gitignore`. The local milestone 2 baseline is commit `7923c5b`, tagged `milestone-2-mock`. Subsequent work is on `work/milestone-3-cover-sheet`; no remote publication is configured by these scripts.

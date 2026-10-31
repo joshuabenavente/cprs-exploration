@@ -3,6 +3,8 @@
 //! Synthetic patient workflow. No broker, endpoint, credential, or file-import API.
 use std::collections::HashSet;
 use std::fmt;
+mod cover_sheet;
+pub use cover_sheet::*;
 
 pub const FIXTURE_DATE: &str = "31 Oct 2026";
 pub const PAGE_SIZE: usize = 4;
@@ -115,6 +117,7 @@ pub struct ChartSnapshot {
     pub patient: PatientSummary,
     pub visit: String,
     pub summary: String,
+    pub cover_sheet: CoverSheet,
 }
 
 pub trait PatientProvider {
@@ -122,6 +125,7 @@ pub trait PatientProvider {
     fn preview(&self, id: &PatientId) -> Result<PatientSummary, ProviderError>;
     fn access(&self, id: &PatientId) -> AccessDecision;
     fn chart(&self, id: &PatientId) -> Result<ChartSnapshot, ProviderError>;
+    fn detail(&self, request: &DetailRequest) -> Result<DetailSnapshot, ProviderError>;
 }
 
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
@@ -132,6 +136,7 @@ pub enum Simulation {
     MalformedResult,
     ChartUnavailable,
     SlowSearch,
+    DetailUnavailable,
 }
 
 #[derive(Clone, Debug, Default)]
@@ -338,8 +343,25 @@ impl PatientProvider for MockProvider {
                 "The mock chart could not be loaded. The current chart is unchanged.".into(),
             ));
         }
-        Ok(ChartSnapshot { patient: self.record(id)?.patient, visit: "20 Oct 2026 · Synthetic training visit".into(),
+        let patient = self.record(id)?.patient;
+        let cover_sheet = cover_sheet::mock_cover_sheet(&patient);
+        Ok(ChartSnapshot { patient, cover_sheet, visit: "20 Oct 2026 · Synthetic training visit".into(),
             summary: "Invented training record for patient-selection and chart-navigation demonstrations. No clinical interpretation or live data.".into() })
+    }
+
+    fn detail(&self, request: &DetailRequest) -> Result<DetailSnapshot, ProviderError> {
+        if self.simulation == Simulation::DetailUnavailable {
+            return Err(ProviderError::Unavailable(
+                "Mock item details are unavailable. No previous detail content is displayed."
+                    .into(),
+            ));
+        }
+        if let AccessDecision::Deny(message) | AccessDecision::Unavailable(message) =
+            self.access(&request.patient_id)
+        {
+            return Err(ProviderError::Unavailable(message));
+        }
+        cover_sheet::mock_detail(&self.preview(&request.patient_id)?, request)
     }
 }
 
@@ -355,7 +377,7 @@ pub enum SearchStatus {
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
 pub enum ChartTab {
     #[default]
-    Overview,
+    CoverSheet,
     Notes,
     Orders,
     Results,
@@ -364,7 +386,7 @@ pub enum ChartTab {
 impl ChartTab {
     pub fn title(self) -> &'static str {
         match self {
-            Self::Overview => "Overview",
+            Self::CoverSheet => "Cover Sheet",
             Self::Notes => "Notes",
             Self::Orders => "Orders",
             Self::Results => "Results",
@@ -396,6 +418,10 @@ pub struct AppState {
     pub confirmation: Option<Confirmation>,
     pub message: String,
     pub tab: ChartTab,
+    pub selected_problem: Option<String>,
+    pub selected_allergy: Option<String>,
+    pub detail: DetailState,
+    detail_generation: u64,
     search_generation: u64,
     chart_generation: u64,
     active_search: Option<SearchRequest>,
@@ -414,7 +440,11 @@ impl Default for AppState {
             active: None,
             confirmation: None,
             message: "Choose an invented patient to preview demographics.".into(),
-            tab: ChartTab::Overview,
+            tab: ChartTab::CoverSheet,
+            selected_problem: None,
+            selected_allergy: None,
+            detail: DetailState::Closed,
+            detail_generation: 0,
             search_generation: 0,
             chart_generation: 0,
             active_search: None,
@@ -429,6 +459,7 @@ impl AppState {
     }
 
     pub fn open_selection(&mut self) -> SearchRequest {
+        self.clear_cover_transient();
         self.selector_open = true;
         self.begin_search(String::new(), self.mode)
     }
@@ -605,13 +636,17 @@ impl AppState {
         }
         self.pending_chart = None;
         match result {
-            Ok(chart) if chart.patient.id == request.patient_id => {
+            Ok(chart)
+                if chart.patient.id == request.patient_id
+                    && chart.cover_sheet.matches_patient(&request.patient_id) =>
+            {
+                self.clear_cover_transient();
                 self.active = Some(chart);
                 self.selector_open = false;
                 self.pending = None;
                 self.confirmation = None;
                 self.active_search = None;
-                self.tab = ChartTab::Overview;
+                self.tab = ChartTab::CoverSheet;
                 self.message = "Synthetic chart loaded. All information is invented.".into();
             }
             Ok(_) => {
@@ -637,7 +672,121 @@ impl AppState {
 
     pub fn set_tab(&mut self, tab: ChartTab) {
         if self.active.is_some() && !self.selector_open {
+            if tab != self.tab {
+                self.close_detail();
+            }
             self.tab = tab;
         }
+    }
+
+    fn clear_cover_transient(&mut self) {
+        self.detail_generation += 1;
+        self.selected_problem = None;
+        self.selected_allergy = None;
+        self.detail = DetailState::Closed;
+    }
+
+    pub fn selected_cover_index(&self, panel: PanelKind) -> Option<usize> {
+        let selected = match panel {
+            PanelKind::ProblemList => self.selected_problem.as_ref(),
+            PanelKind::Allergies => self.selected_allergy.as_ref(),
+        }?;
+        self.active
+            .as_ref()?
+            .cover_sheet
+            .items(panel)
+            .iter()
+            .position(|i| &i.id == selected)
+    }
+
+    pub fn select_cover_item(&mut self, panel: PanelKind, index: usize) {
+        if self.selector_open || self.tab != ChartTab::CoverSheet || self.detail.is_open() {
+            return;
+        }
+        let id = self
+            .active
+            .as_ref()
+            .and_then(|c| c.cover_sheet.items(panel).get(index))
+            .map(|i| i.id.clone());
+        match panel {
+            PanelKind::ProblemList => self.selected_problem = id,
+            PanelKind::Allergies => self.selected_allergy = id,
+        }
+    }
+
+    pub fn begin_detail(&mut self, panel: PanelKind) -> Option<DetailRequest> {
+        if self.selector_open
+            || self.tab != ChartTab::CoverSheet
+            || matches!(
+                self.detail,
+                DetailState::Loading(_) | DetailState::Ready { .. }
+            )
+        {
+            return None;
+        }
+        let chart = self.active.as_ref()?;
+        let index = self.selected_cover_index(panel)?;
+        self.detail_generation += 1;
+        let request = DetailRequest {
+            generation: self.detail_generation,
+            patient_id: chart.patient.id.clone(),
+            panel,
+            item_id: chart.cover_sheet.items(panel)[index].id.clone(),
+        };
+        self.detail = DetailState::Loading(request.clone());
+        self.message = "Loading synthetic item details…".into();
+        Some(request)
+    }
+
+    pub fn apply_detail(
+        &mut self,
+        request: &DetailRequest,
+        result: Result<DetailSnapshot, ProviderError>,
+    ) -> bool {
+        if self.selector_open
+            || self.tab != ChartTab::CoverSheet
+            || !matches!(&self.detail, DetailState::Loading(r) if r == request)
+            || !self
+                .active
+                .as_ref()
+                .is_some_and(|c| c.patient.id == request.patient_id)
+        {
+            return false;
+        }
+        self.detail = match result {
+            Ok(snapshot)
+                if snapshot.patient_id == request.patient_id
+                    && snapshot.panel == request.panel
+                    && snapshot.item_id == request.item_id =>
+            {
+                self.message = "Synthetic item detail loaded. Read-only.".into();
+                DetailState::Ready {
+                    request: request.clone(),
+                    snapshot,
+                }
+            }
+            Ok(_) => DetailState::Error {
+                request: request.clone(),
+                message: "Detail identity mismatch. Nothing was displayed.".into(),
+            },
+            Err(error) => DetailState::Error {
+                request: request.clone(),
+                message: error.to_string(),
+            },
+        };
+        if let DetailState::Error { message, .. } = &self.detail {
+            self.message = message.clone();
+        }
+        true
+    }
+
+    pub fn close_detail(&mut self) -> Option<PanelKind> {
+        let panel = self.detail.request().map(|r| r.panel);
+        self.detail_generation += 1;
+        self.detail = DetailState::Closed;
+        if panel.is_some() {
+            self.message = "Synthetic item detail closed.".into();
+        }
+        panel
     }
 }

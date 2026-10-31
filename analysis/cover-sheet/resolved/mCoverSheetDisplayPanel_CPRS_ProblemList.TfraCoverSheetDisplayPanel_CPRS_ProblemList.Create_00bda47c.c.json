@@ -1,0 +1,42 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create",
+  "address": "00bda47c",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create_00bda47c.c",
+  "numeric_callee_references": [
+    {
+      "address": "004096ac",
+      "map_names": [
+        "System.@ClassCreate"
+      ]
+    },
+    {
+      "address": "00409704",
+      "map_names": [
+        "System.@AfterConstruction"
+      ]
+    },
+    {
+      "address": "00bd36a0",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+      ]
+    },
+    {
+      "address": "00bd3894",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.AddColumn"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bda4dc",
+      "file_offset": 8231132,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": "Problem List"
+    }
+  ]
+}

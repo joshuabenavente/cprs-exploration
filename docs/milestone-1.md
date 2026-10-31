@@ -60,4 +60,4 @@ Decompiled output requires manual interpretation of Delphi managed types, except
 
 ## Rust handoff
 
-The [workflow specification](../specifications/patient-selection-chart.md) separates binary observations from proposed prototype policy. Its [16 synthetic acceptance cases](../specifications/patient-selection-cases.json) are specified for future implementation and have not been executed. Rust application code is the next milestone.
+The [workflow specification](../specifications/patient-selection-chart.md) separates binary observations from proposed prototype policy. Its [16 synthetic acceptance cases](../specifications/patient-selection-cases.json) were specified during milestone 1 and subsequently implemented and checked in [milestone 2](milestone-2.md). [Milestone 3](milestone-3.md) extends the mock into two Cover Sheet panels.

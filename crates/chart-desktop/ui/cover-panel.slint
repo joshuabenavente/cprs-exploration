@@ -1,0 +1,66 @@
+import { StandardTableView, Button } from "std-widgets.slint";
+export component CoverPanel inherits Rectangle {
+    in property <string> title;
+    in property <bool> allergies;
+    in property <bool> enabled: true;
+    in property <[[StandardListViewItem]]> rows;
+    in-out property <int> selected-row: -1;
+    callback selected(int);
+    callback released(int);
+    callback activated();
+    callback footer-focused();
+    public function focus-list() { data.focus(); }
+    background: white; border-width: 1px; border-color: #c9d5df;
+    min-width: 390px; min-height: 220px;
+    focus := FocusScope {
+        focus-on-tab-navigation: false;
+        focus-on-click: false;
+        width: parent.width; height: parent.height;
+        forward-focus: data;
+        key-pressed(event) => {
+            if root.enabled && (event.text == Key.Return || event.text == " ") {
+                root.activated(); return accept;
+            }
+            reject
+        }
+        VerticalLayout {
+            padding: 12px; spacing: 10px;
+            Text { text: root.title; color: #23445b; font-size: 18px; font-weight: 600; }
+            Rectangle {
+                vertical-stretch: 1;
+                VerticalLayout {
+                padding: 0px;
+                data := StandardTableView {
+                    min-height: 140px;
+                    enabled: root.enabled && root.rows.length > 0;
+                    accessible-label: root.title + " synthetic items";
+                    rows: root.rows; current-row <=> root.selected-row;
+                    columns: root.allergies ? [
+                        { title: "Agent", width: 190px, min-width: 140px },
+                        { title: "Severity", width: 100px, min-width: 90px },
+                        { title: "Signs/Symptoms", width: 155px, min-width: 145px }
+                    ] : [{ title: "Problem List", width: 440px, min-width: 320px }];
+                    current-row-changed(index) => { root.selected(index); }
+                    sort-ascending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
+                    sort-descending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
+                    row-pointer-event(index, event, position) => {
+                        if event.kind == PointerEventKind.up && event.button == PointerEventButton.left { root.released(index); }
+                    }
+                }
+                }
+                if root.rows.length == 0: Text {
+                    x: 12px; y: 55px; width: parent.width - 24px;
+                    text: "No synthetic entries in this panel. This is not a clinical finding.";
+                    color: #617180; wrap: word-wrap;
+                }
+            }
+            Button {
+                text: "View item detail"; accessible-label: "View selected " + root.title + " item detail";
+                enabled: root.enabled && root.selected-row >= 0;
+                clicked => { root.activated(); }
+                changed has-focus => { if self.has-focus { root.footer-focused(); } }
+            }
+            Text { text: "Enter or Space opens the selected item."; color: #617180; font-size: 12px; wrap: word-wrap; }
+        }
+    }
+}

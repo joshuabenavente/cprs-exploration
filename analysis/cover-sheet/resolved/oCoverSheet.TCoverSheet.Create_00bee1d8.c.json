@@ -1,0 +1,81 @@
+{
+  "function": "oCoverSheet.TCoverSheet.Create",
+  "address": "00bee1d8",
+  "status": "decompiled",
+  "file": "oCoverSheet.TCoverSheet.Create_00bee1d8.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040908c",
+      "map_names": [
+        "System.TObject.Create"
+      ]
+    },
+    {
+      "address": "004091e8",
+      "map_names": [
+        "System.TObject.GetInterface"
+      ]
+    },
+    {
+      "address": "004096ac",
+      "map_names": [
+        "System.@ClassCreate"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040eadc",
+      "map_names": [
+        "System.@DynArrayClear"
+      ]
+    },
+    {
+      "address": "00410738",
+      "map_names": [
+        "System.@IntfClear"
+      ]
+    },
+    {
+      "address": "009af7e0",
+      "map_names": [
+        "ORNet.DottedIPStr"
+      ]
+    },
+    {
+      "address": "00bcda20",
+      "map_names": [
+        "oCoverSheetGrid.TCoverSheetGrid.Create"
+      ]
+    },
+    {
+      "address": "00bed824",
+      "map_names": [
+        "oCoverSheetParamList.TCoverSheetParamList.Create"
+      ]
+    },
+    {
+      "address": "00befb04",
+      "map_names": [
+        "oCoverSheet.{System.Generics.Collections}TObjectList<Vcl.Controls.TControl>.Create"
+      ]
+    },
+    {
+      "address": "00bf0138",
+      "map_names": [
+        "iCoverSheetIntf.NewGUID"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

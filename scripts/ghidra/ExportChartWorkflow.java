@@ -26,7 +26,8 @@ public class ExportChartWorkflow extends HeadlessScript {
         List<String> results = new ArrayList<>();
         calls.add("caller\tcaller_address\tcall_site\tcallee\tcallee_address");
         results.add("function\taddress\tstatus\tfile");
-        Set<String> wanted = ImportChartMap.TARGETS;
+        Set<String> wanted = getScriptArgs().length > 1
+            ? new HashSet<>(Files.readAllLines(Path.of(getScriptArgs()[1]))) : ImportChartMap.TARGETS;
         SymbolIterator symbols = currentProgram.getSymbolTable().getAllSymbols(true);
         Set<String> emitted = new HashSet<>();
         Set<String> found = new HashSet<>();
@@ -78,7 +79,7 @@ public class ExportChartWorkflow extends HeadlessScript {
                         + "\t" + (callee == null ? "<unnamed>" : callee.getName()) + "\t" + destination);
                 }
             }
-            Files.write(output.resolve(filename.replace(".c", ".asm")), assembly, StandardCharsets.UTF_8);
+            Files.write(output.resolve(filename.substring(0, filename.length() - 2) + ".asm"), assembly, StandardCharsets.UTF_8);
         }
         for (String name : wanted) {
             if (!found.contains(name)) results.add(name + "\t\tnot_in_map\t");

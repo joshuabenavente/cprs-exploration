@@ -1,0 +1,87 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems",
+  "address": "00bd6b7c",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems_00bd6b7c.c",
+  "numeric_callee_references": [
+    {
+      "address": "004d5460",
+      "map_names": [
+        "System.Classes.TStringsEnumerator.Create"
+      ]
+    },
+    {
+      "address": "004d54a4",
+      "map_names": [
+        "System.Classes.TStringsEnumerator.GetCurrent"
+      ]
+    },
+    {
+      "address": "0067c4d8",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.SetCaption"
+      ]
+    },
+    {
+      "address": "0067c5e0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.SetData"
+      ]
+    },
+    {
+      "address": "0067cde0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.Add"
+      ]
+    },
+    {
+      "address": "0067ce80",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.GetCount"
+      ]
+    },
+    {
+      "address": "0067d074",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.BeginUpdate"
+      ]
+    },
+    {
+      "address": "009b2a68",
+      "map_names": [
+        "ORFn.MixedCase"
+      ]
+    },
+    {
+      "address": "00bcf770",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.Create"
+      ]
+    },
+    {
+      "address": "00bcf93c",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPiece"
+      ]
+    },
+    {
+      "address": "00bd0bd4",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPieceIsNull"
+      ]
+    },
+    {
+      "address": "00bd36a0",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+      ]
+    },
+    {
+      "address": "00bd3be0",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ExpandColumns"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

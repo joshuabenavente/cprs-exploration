@@ -1,0 +1,50 @@
+{
+  "function": "rCover.DetailProblem",
+  "address": "00bf026c",
+  "status": "decompiled",
+  "file": "rCover.DetailProblem_00bf026c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "00430914",
+      "map_names": [
+        "System.SysUtils.FloatToStr"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bf0348",
+      "file_offset": 8320840,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "^"
+    },
+    {
+      "address": "00bf0358",
+      "file_offset": 8320856,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": "ORQQPL DETAIL"
+    }
+  ]
+}

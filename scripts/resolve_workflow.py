@@ -3,6 +3,7 @@
 Raw Ghidra output is preserved. Annotations are separate evidence, not Pascal types.
 """
 import csv
+import argparse
 import json
 from pathlib import Path
 import re
@@ -13,6 +14,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--cover-sheet', action='store_true')
+    args = parser.parse_args()
+    analysis = ROOT / 'analysis' / 'cover-sheet' if args.cover_sheet else ROOT / 'analysis'
     pe = PE(ROOT / 'cprs/CPRSChart.exe')
     by_address = {}
     with (ROOT / 'analysis/inventory/chart-symbols.tsv').open(encoding='utf-8', newline='') as f:
@@ -39,15 +44,15 @@ def main():
         except (ValueError, UnicodeDecodeError, struct.error):
             return None
 
-    out = ROOT / 'analysis/resolved'
+    out = analysis / 'resolved'
     out.mkdir(parents=True, exist_ok=True)
     results = []
-    with (ROOT / 'analysis/decompiled/workflow-functions.tsv').open(encoding='utf-8', newline='') as f:
+    with (analysis / 'decompiled/workflow-functions.tsv').open(encoding='utf-8', newline='') as f:
         functions = list(csv.DictReader(f, delimiter='\t'))
     for function in functions:
         if function['status'] != 'decompiled':
             continue
-        text = (ROOT / 'analysis/decompiled' / function['file']).read_text(encoding='utf-8')
+        text = (analysis / 'decompiled' / function['file']).read_text(encoding='utf-8')
         calls = []
         for address in sorted(set(re.findall(r'func_0x([0-9a-fA-F]{8})', text))):
             calls.append({'address': address, 'map_names': by_address.get(address, [])})
@@ -60,7 +65,7 @@ def main():
         results.append(resolved)
     (out / 'workflow-evidence.json').write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding='utf-8')
     for function in results:
-        if function['function'].startswith(('fPtSel.', 'rCore.')):
+        if args.cover_sheet or function['function'].startswith(('fPtSel.', 'rCore.')):
             print(function['function'])
             for call in function['numeric_callee_references']:
                 relevant = [n for n in call['map_names'] if n.startswith(('rCore.', 'uCore.', 'fPtSel.', 'fFrame.', 'fDupPts.'))]

@@ -1,0 +1,85 @@
+{
+  "scope": "Static resource evidence; inherited defaults and runtime configuration remain separate",
+  "executable_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+  "resources": [
+    {
+      "path": [
+        10,
+        "TFRACOVERSHEETDISPLAYPANEL",
+        0
+      ],
+      "rva": 16273648,
+      "size": 215,
+      "file_offset": 16207600,
+      "codepage": 0,
+      "sha256": "8e454373305534d6ba0b5ca8452429df715789a9073fe7ccebd3067c61d7eab1",
+      "decoded": "analysis/cover-sheet/resources/TFRACOVERSHEETDISPLAYPANEL.dfm.json"
+    },
+    {
+      "path": [
+        10,
+        "TFRACOVERSHEETDISPLAYPANEL_CPRS",
+        0
+      ],
+      "rva": 16273864,
+      "size": 694,
+      "file_offset": 16207816,
+      "codepage": 0,
+      "sha256": "54260100be1799502fe329a4a1aea39c021b3158044f19efe1ccd41d34d177f1",
+      "decoded": "analysis/cover-sheet/resources/TFRACOVERSHEETDISPLAYPANEL_CPRS.dfm.json"
+    },
+    {
+      "path": [
+        10,
+        "TFRACOVERSHEETDISPLAYPANEL_CPRS_ALLERGIES",
+        0
+      ],
+      "rva": 16274652,
+      "size": 90,
+      "file_offset": 16208604,
+      "codepage": 0,
+      "sha256": "dc264d7307cc913ddae7ae5386bd596d478cd63d8a724754869132730069aaa4",
+      "decoded": "analysis/cover-sheet/resources/TFRACOVERSHEETDISPLAYPANEL_CPRS_ALLERGIES.dfm.json"
+    },
+    {
+      "path": [
+        10,
+        "TFRACOVERSHEETDISPLAYPANEL_CPRS_PROBLEMLIST",
+        0
+      ],
+      "rva": 16275096,
+      "size": 94,
+      "file_offset": 16209048,
+      "codepage": 0,
+      "sha256": "045b8b5b3c3e58a890b18e4307765ea7f0660ff67fce6b88bc2c00e630e1e31d",
+      "decoded": "analysis/cover-sheet/resources/TFRACOVERSHEETDISPLAYPANEL_CPRS_PROBLEMLIST.dfm.json"
+    },
+    {
+      "path": [
+        10,
+        "TFRMCOVERSHEET",
+        0
+      ],
+      "rva": 16533520,
+      "size": 701,
+      "file_offset": 16467472,
+      "codepage": 0,
+      "sha256": "a082957f02e37b81c50697aba1f7d45726391aba9285ac3e633c2eb6f89de051",
+      "decoded": "analysis/cover-sheet/resources/TFRMCOVERSHEET.dfm.json"
+    },
+    {
+      "path": [
+        10,
+        "TFRMCOVERSHEETDETAILDISPLAY",
+        0
+      ],
+      "rva": 16534224,
+      "size": 1241,
+      "file_offset": 16468176,
+      "codepage": 0,
+      "sha256": "0a3b865356380636c4881328978ca2a4224d6a2c0c4f83d572124ba21017bbd1",
+      "decoded": "analysis/cover-sheet/resources/TFRMCOVERSHEETDETAILDISPLAY.dfm.json"
+    }
+  ],
+  "not_found": []
+}

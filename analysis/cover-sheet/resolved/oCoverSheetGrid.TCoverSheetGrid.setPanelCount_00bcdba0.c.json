@@ -1,0 +1,42 @@
+{
+  "function": "oCoverSheetGrid.TCoverSheetGrid.setPanelCount",
+  "address": "00bcdba0",
+  "status": "decompiled",
+  "file": "oCoverSheetGrid.TCoverSheetGrid.setPanelCount_00bcdba0.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040a640",
+      "map_names": [
+        "System.@RaiseExcept"
+      ]
+    },
+    {
+      "address": "0040e9b8",
+      "map_names": [
+        "System.@DynArraySetLength"
+      ]
+    },
+    {
+      "address": "0040eadc",
+      "map_names": [
+        "System.@DynArrayClear"
+      ]
+    },
+    {
+      "address": "00435fdc",
+      "map_names": [
+        "System.SysUtils.Exception.CreateFmt"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bce82c",
+      "file_offset": 8182828,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 42,
+      "text": "Panel count of %d not currently supported."
+    }
+  ]
+}

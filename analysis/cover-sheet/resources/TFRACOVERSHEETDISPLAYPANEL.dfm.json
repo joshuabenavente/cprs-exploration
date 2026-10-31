@@ -1,0 +1,39 @@
+{
+  "class": "TfraCoverSheetDisplayPanel",
+  "name": "fraCoverSheetDisplayPanel",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {},
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {},
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlWorkspace",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": false,
+            "Left": 32,
+            "Top": 31,
+            "Width": 473,
+            "Height": 354,
+            "ExplicitLeft": 32,
+            "ExplicitTop": 31,
+            "ExplicitWidth": 473,
+            "ExplicitHeight": 354
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}
