@@ -23,9 +23,8 @@
   ],
   "conclusion": "Clipboard failure is launch-dependent in the observed comparison. The tool-shell launch environment is the likely cause; the exact OS restriction was not instrumented. No application input-code workaround or security-setting change was made. The user also confirmed that manual paste now works after the native relaunch.",
   "limits": [
-    "Physical IME composition, dead keys, keyboard layouts, and full assistive-technology behavior are unverified.",
-    "Successful accessibility value replacement is not native typing or paste.",
-    "Narrator spoken output remains unverified."
+    "Physical IME composition, dead-key composition, other keyboard layouts, and full assistive-technology behavior remain unverified. The supplied Narrator checklist passed by user report.",
+    "Successful accessibility value replacement is not native typing or paste."
   ],
   "comparison_build_sha256": "397efcd90b0d6a4175ff9b7ffde9bd84aeb820ce1e4e0014823664747e355fe9",
   "current_executable_sha256": "11ac4dac9afedbcdef1389af74e763eaf7958749cade54a6027c150c8f0cca7e",
@@ -36,5 +35,12 @@
     "check": "Patient search: Ctrl+A, then paste ZÁRATE, ZOË 李",
     "result": "User confirmed: Paste now works",
     "evidence_type": "User-reported manual result; separate from automated/native tool observations"
-  }
+  },
+  "keyboard_layout_user_report": {
+    "response": "US i guess? normal keyboard",
+    "configuration_inspected": false,
+    "ime_composition_tested": false,
+    "dead_key_composition_tested": false
+  },
+  "narrator_check_receipt": "validation/milestone-4/native-ui.json"
 }

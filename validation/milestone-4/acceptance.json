@@ -27,7 +27,8 @@
     ],
     "windows_monitor_dpi_changed": false,
     "read_only_long_text_and_state_transitions": "observed; scope/limits in native receipt",
-    "manual_paste_after_native_launch": "User-confirmed working; details in native-input.json"
+    "manual_paste_after_native_launch": "User-confirmed working; details in native-input.json",
+    "narrator_checklist": "User-reported pass: search label, distinct MORGAN synthetic IDs, Notes selection, and selected note text"
   },
   "review": "Local code/evidence self-review; no independent reviewer or original-client runtime comparison claimed",
   "safe_boundary": {
@@ -42,7 +43,7 @@
     "Clipboard failure was launch-dependent; the exact OS restriction was not instrumented. Final native-launch copy/paste passed both tool checks and the user manual retest; earlier shell-launch typing worked and paste failed.",
     "UIA focus/invocation limitations persist; native caret, selection, screenshots, and keyboard behavior supplied separate evidence.",
     "Physical IME, dead keys, intermediate Notes application scales, and complete assistive-technology conformance are unverified.",
-    "Narrator spoken output remains unverified per user instruction.",
-    "Original-client runtime, complete TIU context semantics, server contracts/permissions/site behavior, and clinical compatibility are not established."
+    "Original-client runtime, complete TIU context semantics, server contracts/permissions/site behavior, and clinical compatibility are not established.",
+    "Narrator checklist passed by user report; no speech recording, detailed transcript, configuration inventory, or complete assistive-technology audit was performed."
   ]
 }

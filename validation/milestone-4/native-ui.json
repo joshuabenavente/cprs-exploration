@@ -17,7 +17,7 @@
     "finding": "Native list selection worked but Enter did not focus text because the table focus property represented its scroll view rather than internal focus. The final build removes that guard and explicitly focuses Notes filter on tab entry. Rechecked successfully."
   },
   "uia_limit": "Some immediate snapshots reported the filter as focused while native caret/selection/scrolling demonstrated list or document focus. UIA indexed invocation does not reliably move keyboard focus; coordinate clicks and native keys were checked alongside it. This is not a complete AT conformance result. At 200%, an indexed Notes invocation selected Cover Sheet; a full-window screenshot coordinate selected Notes correctly. Startup capture included a 16x16 related surface; coordinates required the full-window screenshot ID.",
-  "spoken_output": "Unverified per user instruction; no new Narrator claim.",
+  "spoken_output": "User-reported pass for the supplied Narrator checklist; not a complete assistive-technology audit.",
   "input_receipt": "validation/milestone-4/native-input.json",
   "limits": [
     "No original Notes runtime, live server, real patient data, or clinical write was involved.",
@@ -76,5 +76,21 @@
       ]
     }
   ],
-  "native_smoke_completed": true
+  "native_smoke_completed": true,
+  "narrator_manual_check": {
+    "executable_sha256": "11ac4dac9afedbcdef1389af74e763eaf7958749cade54a6027c150c8f0cca7e",
+    "result": "pass",
+    "user_response": "passes",
+    "evidence_type": "User-reported listening check; the agent did not hear or record the speech",
+    "reported_checks": [
+      "Search-field label announced",
+      "Both MORGAN records distinguished by synthetic ID",
+      "Notes selection announced",
+      "Selected note text read"
+    ],
+    "limits": [
+      "Summary result only; no detailed spoken transcript or Narrator configuration recorded",
+      "Complete assistive-technology conformance remains unverified"
+    ]
+  }
 }
