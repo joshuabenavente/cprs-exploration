@@ -1,0 +1,207 @@
+{
+  "class": "TfrmNotesByDate",
+  "name": "frmNotesByDate",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 590,
+    "Top": 294,
+    "BorderIcons": [],
+    "Caption": "List Signed Notes by Date Range",
+    "ClientHeight": 151,
+    "ClientWidth": 251,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 267,
+    "ExplicitHeight": 189,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlBase",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 251,
+        "Height": 151,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblBeginDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 8,
+            "Width": 73,
+            "Height": 13,
+            "Caption": "Beginning Date"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblEndDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 51,
+            "Width": 59,
+            "Height": 13,
+            "Caption": "Ending Date"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "calBeginDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 22,
+            "Width": 155,
+            "Height": 21,
+            "TabOrder": 0,
+            "OnKeyPress": "calBeginDateKeyPress",
+            "DateOnly": false,
+            "RequireTime": false,
+            "Caption": "Beginning Date"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "calEndDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 65,
+            "Width": 155,
+            "Height": 21,
+            "TabOrder": 1,
+            "OnKeyPress": "calEndDateKeyPress",
+            "DateOnly": false,
+            "RequireTime": false,
+            "Caption": "Ending Date"
+          },
+          "children": []
+        },
+        {
+          "class": "TRadioGroup",
+          "name": "radSort",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 94,
+            "Width": 155,
+            "Height": 49,
+            "Caption": "Sort Order",
+            "Items.Strings": [
+              "&Ascending (oldest first)",
+              "&Descending (newest first)"
+            ],
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 171,
+            "Top": 22,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "OK",
+            "Default": true,
+            "TabOrder": 3,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 171,
+            "Top": 49,
+            "Width": 72,
+            "Height": 21,
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 4,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calBeginDate",
+            "Text = Beginning Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = calEndDate",
+            "Text = Ending Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = radSort",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmNotesByDate",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import { Button, ComboBox, LineEdit, StandardTableView, ScrollView, TextEdit } from "std-widgets.slint";
 import { CoverPanel } from "cover-panel.slint";
+import { NotesView } from "notes-view.slint";
 
 component Field inherits VerticalLayout {
     in property <string> label;
@@ -64,6 +65,23 @@ export component AppWindow inherits Window {
     in property <string> detail-title;
     in property <string> detail-body;
     in property <string> detail-identity;
+    in property <[[StandardListViewItem]]> notes-rows;
+    in-out property <int> selected-note: -1;
+    in-out property <string> notes-query;
+    in property <int> notes-scenario;
+    in property <bool> notes-loading;
+    in property <bool> notes-list-error;
+    in property <string> notes-list-status;
+    in property <string> note-identity;
+    in property <string> note-body-status;
+    in property <string> note-body;
+    in property <bool> note-body-error;
+    in property <bool> note-body-ready;
+    callback notes-filter-edited(string);
+    callback notes-scenario-changed(int);
+    callback note-selected(int);
+    callback retry-notes-list();
+    callback retry-note();
 
     callback open-selection();
     callback query-edited(string);
@@ -90,6 +108,7 @@ export component AppWindow inherits Window {
     public function focus-acknowledgment() { root.scroll-workspace-bottom(); continue-button.focus(); }
     public function focus-cover(panel: int) { workspace-scroll.content-y = 0px; if panel == 0 { problem-panel.focus-list(); } else { allergy-panel.focus-list(); } }
     public function focus-detail() { detail-close.focus(); }
+    public function focus-notes-filter() { notes-view.focus-filter(); }
 
     shortcuts := FocusScope {
         focus-on-tab-navigation: false;
@@ -112,7 +131,7 @@ export component AppWindow inherits Window {
         }
         KeyBinding {
             keys: @keys(Control + F);
-            activated => { if root.selector-open { search.focus(); } }
+            activated => { if root.selector-open { root.focus-search(); } else if root.has-active && root.tab-index == 1 && !root.detail-open { notes-view.focus-filter(); } }
         }
         KeyBinding {
             keys: @keys(Control + O);
@@ -179,7 +198,7 @@ export component AppWindow inherits Window {
                 workspace-scroll := ScrollView {
                     width: parent.width; height: parent.height;
                     content-width: self.visible-width;
-                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : 440px);
+                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : !root.selector-open && root.tab-index == 1 ? 600px : 440px);
                     changed content-height => { self.content-y = min(0px, max(self.content-y, self.visible-height - self.content-height)); }
                     Rectangle {
                     width: workspace-scroll.visible-width; height: workspace-scroll.content-height;
@@ -214,7 +233,7 @@ export component AppWindow inherits Window {
                             }
                             ComboBox {
                                 preferred-width: 205px;
-                                model: ["Normal simulation", "Search unavailable", "Malformed result", "Chart unavailable", "Slow search", "Detail unavailable"];
+                                model: ["Normal simulation", "Search unavailable", "Malformed result", "Chart unavailable", "Slow search", "Detail unavailable", "Notes list unavailable", "Note text unavailable", "Slow note replies"];
                                 current-index: root.simulation-index;
                                 accessible-label: "Mock simulation scenario";
                                 enabled: !root.chart-loading && !root.show-acknowledgment;
@@ -367,7 +386,23 @@ export component AppWindow inherits Window {
                                 color: #617180; font-size: 12px; wrap: word-wrap; }
                             }
                         }
-                        if root.has-active && root.tab-index != 0: VerticalLayout {
+                        notes-view := NotesView {
+                            visible: root.has-active && root.tab-index == 1;
+                            min-height: 0px; max-height: root.has-active && root.tab-index == 1 ? 10000px : 0px;
+                            rows: root.notes-rows; selected-row <=> root.selected-note; query <=> root.notes-query;
+                            scenario: root.notes-scenario; loading: root.notes-loading;
+                            list-error: root.notes-list-error; list-status: root.notes-list-status;
+                            identity: root.note-identity; body: root.note-body; body-status: root.note-body-status;
+                            body-error: root.note-body-error; body-ready: root.note-body-ready;
+                            filter-edited(query) => { root.notes-filter-edited(query); }
+                            scenario-changed(index) => { root.notes-scenario-changed(index); }
+                            selected(index) => { root.note-selected(index); }
+                            retry-list => { root.retry-notes-list(); }
+                            retry-body => { root.retry-note(); }
+                            top-focused => { workspace-scroll.content-y = 0px; }
+                            body-focused => { root.scroll-workspace-bottom(); }
+                        }
+                        if root.has-active && root.tab-index > 1: VerticalLayout {
                             alignment: center; spacing: 16px;
                             Text { text: root.placeholder; font-size: 22px; color: #36546a; horizontal-alignment: center; wrap: word-wrap; }
                             Text { text: "No chart content or actions are available on this tab."; color: #647886; horizontal-alignment: center; }

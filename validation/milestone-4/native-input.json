@@ -1,0 +1,34 @@
+{
+  "scope": "Native text input investigation; invented text only",
+  "framework": {
+    "slint": "1.18.1",
+    "winit": "0.30.13",
+    "clipboard_dependency": "arboard 3.7.0"
+  },
+  "user_manual_observation": {
+    "launch": "scripts/Start-MockChart.ps1 from tool shell",
+    "typing": "User confirmed typing works",
+    "paste": "User confirmed paste does not work"
+  },
+  "tool_observations": [
+    "Shell-launched M3 executable ad1fa8f02f75cbc1a62bea10d0bb90795aa962a0562db28e098e8bb1d6c05267: bulk type_text MORGAN produced no text; an ordinary m key appeared and began search.",
+    "The same M3 process accepted accessibility set_value ZÁRATE, ZOË 李 and returned only SYNTH-009.",
+    "In that shell-launched process, Ctrl+A visibly selected the invented Unicode string; Ctrl+C, BackSpace, Ctrl+V left search empty.",
+    "M4 same-binary comparison: after closing the shell-launched process, sky.launch_app opened the executable directly. Accessibility set_value prepared ZÁRATE, ZOË 李; Ctrl+A, Ctrl+C, BackSpace, Ctrl+V restored the exact Unicode string and began the matching search.",
+    "Final build 11ac4dac9afedbcdef1389af74e763eaf7958749cade54a6027c150c8f0cca7e, native app-launcher launch: Ctrl+A, Ctrl+C, BackSpace, Ctrl+V again restored exactly ZÁRATE, ZOË 李 in patient search. This final-build observation is distinct from accessibility value replacement used to prepare the source string."
+  ],
+  "source_findings": [
+    "Cached winit Windows keyboard.rs 168 onward discards WM_CHAR/WM_SYSCHAR when no matching key event exists. This is a plausible explanation for bulk tool text, not verified tool internals.",
+    "Cached i-slint-backend-winit clipboard.rs creates a Windows arboard clipboard. Backend clipboard get/set swallow errors. arboard 3.7.0 Windows initialization succeeds directly; opening the OS clipboard can fail after bounded retries."
+  ],
+  "conclusion": "Clipboard failure is launch-dependent in the observed comparison. The tool-shell launch environment is the likely cause; the exact OS restriction was not instrumented. No application input-code workaround or security-setting change was made.",
+  "limits": [
+    "Manual paste after the native relaunch has not been confirmed by the user.",
+    "Physical IME composition, dead keys, keyboard layouts, and full assistive-technology behavior are unverified.",
+    "Successful accessibility value replacement is not native typing or paste.",
+    "Narrator spoken output remains unverified."
+  ],
+  "comparison_build_sha256": "397efcd90b0d6a4175ff9b7ffde9bd84aeb820ce1e4e0014823664747e355fe9",
+  "current_executable_sha256": "11ac4dac9afedbcdef1389af74e763eaf7958749cade54a6027c150c8f0cca7e",
+  "build_difference": "Final build adds Notes keyboard focus correction and expands callback checks; input/clipboard implementation and dependencies are unchanged."
+}

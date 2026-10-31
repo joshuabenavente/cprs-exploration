@@ -40,6 +40,9 @@ fn simulation(index: i32) -> Simulation {
         3 => Simulation::ChartUnavailable,
         4 => Simulation::SlowSearch,
         5 => Simulation::DetailUnavailable,
+        6 => Simulation::NotesListUnavailable,
+        7 => Simulation::NoteBodyUnavailable,
+        8 => Simulation::SlowNotes,
         _ => Simulation::Normal,
     }
 }
@@ -51,6 +54,9 @@ fn simulation_index(value: Simulation) -> i32 {
         Simulation::ChartUnavailable => 3,
         Simulation::SlowSearch => 4,
         Simulation::DetailUnavailable => 5,
+        Simulation::NotesListUnavailable => 6,
+        Simulation::NoteBodyUnavailable => 7,
+        Simulation::SlowNotes => 8,
     }
 }
 fn tab(index: i32) -> ChartTab {
@@ -227,6 +233,80 @@ fn sync(app: &AppWindow, controller: &Controller) {
         ChartTab::Results => 3,
     });
     app.set_placeholder(state.tab.placeholder().into());
+    let n = &state.notes;
+    app.set_notes_query(n.query.clone().into());
+    let rows = n
+        .rows
+        .iter()
+        .map(|r| {
+            vec![
+                r.date.clone(),
+                r.title.clone(),
+                r.subject.clone(),
+                r.author.clone(),
+                r.location.clone(),
+            ]
+        })
+        .collect();
+    if let Some(model) = changed_rows(&app.get_notes_rows(), rows) {
+        app.set_notes_rows(model);
+    }
+    app.set_selected_note(n.selected_index().map_or(-1, |i| i as i32));
+    app.set_notes_scenario(match controller.provider.simulation {
+        Simulation::NotesListUnavailable => 1,
+        Simulation::NoteBodyUnavailable => 2,
+        Simulation::SlowNotes => 3,
+        _ => 0,
+    });
+    app.set_notes_loading(matches!(n.list_status, NotesListStatus::Loading));
+    app.set_notes_list_error(matches!(n.list_status, NotesListStatus::Error(_)));
+    app.set_notes_list_status(match &n.list_status {
+        NotesListStatus::Idle => "Open Notes to load invented records.".into(),
+        NotesListStatus::Loading => "Loading invented note list…".into(),
+        NotesListStatus::Ready => format!(
+            "{} invented notes · Newest first · Select a row to load its text",
+            n.rows.len()
+        )
+        .into(),
+        NotesListStatus::Empty => {
+            "No invented notes match this view. This is not a clinical finding.".into()
+        }
+        NotesListStatus::Error(message) => message.clone().into(),
+    });
+    app.set_note_identity(
+        n.selected
+            .as_ref()
+            .map_or_else(
+                || "No invented note selected".into(),
+                |s| {
+                    format!(
+                        "{} · {} · {} · {}",
+                        s.patient_id,
+                        s.id.as_str(),
+                        s.status,
+                        s.title
+                    )
+                },
+            )
+            .into(),
+    );
+    app.set_note_body_error(matches!(n.body, NoteBodyState::Error(_)));
+    app.set_note_body_ready(matches!(n.body, NoteBodyState::Ready(_)));
+    app.set_note_body_status(match &n.body {
+        NoteBodyState::Unselected => {
+            "Select an invented note above. Its text will appear here.".into()
+        }
+        NoteBodyState::Loading(_) => "Retrieving selected synthetic note…".into(),
+        NoteBodyState::Ready(body) if body.text.is_empty() => {
+            "This invented note has an empty body.".into()
+        }
+        NoteBodyState::Ready(_) => "MOCK ONLY · Invented document text · Read-only".into(),
+        NoteBodyState::Error(message) => message.clone().into(),
+    });
+    app.set_note_body(match &n.body {
+        NoteBodyState::Ready(body) => body.text.clone().into(),
+        _ => "".into(),
+    });
     for panel in [PanelKind::ProblemList, PanelKind::Allergies] {
         let rows = state
             .active
@@ -434,7 +514,96 @@ fn confirm(weak: slint::Weak<AppWindow>, shared: Shared, acknowledged: bool) {
     }
 }
 
+fn load_notes(weak: slint::Weak<AppWindow>, shared: Shared, query: String) {
+    let request = shared.borrow_mut().state.begin_notes_list(query);
+    paint(&weak, &shared);
+    let Some(request) = request else {
+        return;
+    };
+    let (provider, immediate) = {
+        let c = shared.borrow();
+        (c.provider.clone(), c.immediate)
+    };
+    let delay = if provider.simulation == Simulation::SlowNotes {
+        900
+    } else {
+        180
+    };
+    let finish = move || {
+        let result = provider.notes_list(&request);
+        if shared.borrow_mut().state.apply_notes_list(&request, result) {
+            paint(&weak, &shared);
+        }
+    };
+    if immediate {
+        finish();
+    } else {
+        slint::Timer::single_shot(Duration::from_millis(delay), finish);
+    }
+}
+
+fn deliver_note(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<NoteRequest>) {
+    paint(&weak, &shared);
+    let Some(request) = request else {
+        return;
+    };
+    let (provider, immediate) = {
+        let c = shared.borrow();
+        (c.provider.clone(), c.immediate)
+    };
+    let delay =
+        if provider.simulation == Simulation::SlowNotes && request.note_id.as_str() == "NOTE-01" {
+            1100
+        } else {
+            300
+        };
+    let finish = move || {
+        let result = provider.note_body(&request);
+        if shared.borrow_mut().state.apply_note(&request, result) {
+            paint(&weak, &shared);
+        }
+    };
+    if immediate {
+        finish();
+    } else {
+        slint::Timer::single_shot(Duration::from_millis(delay), finish);
+    }
+}
+
 fn wire(app: &AppWindow, shared: &Shared) {
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_notes_filter_edited(move |query| {
+        load_notes(weak.clone(), data.clone(), query.to_string())
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_retry_notes_list(move || {
+        let query = data.borrow().state.notes.query.clone();
+        load_notes(weak.clone(), data.clone(), query);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_notes_scenario_changed(move |index| {
+        data.borrow_mut().provider.simulation = match index {
+            1 => Simulation::NotesListUnavailable,
+            2 => Simulation::NoteBodyUnavailable,
+            3 => Simulation::SlowNotes,
+            _ => Simulation::Normal,
+        };
+        let query = data.borrow().state.notes.query.clone();
+        load_notes(weak.clone(), data.clone(), query);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_note_selected(move |index| {
+        let request = data
+            .borrow_mut()
+            .state
+            .select_note(usize::try_from(index).unwrap_or(usize::MAX));
+        deliver_note(weak.clone(), data.clone(), request);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_retry_note(move || {
+        let request = data.borrow_mut().state.retry_note();
+        deliver_note(weak.clone(), data.clone(), request);
+    });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_cover_selected(move |kind, index| {
         let mut c = data.borrow_mut();
@@ -615,6 +784,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
             c.state.cancel_selection();
         }
         paint(&weak, &data);
+        if data.borrow().state.tab == ChartTab::Notes && !data.borrow().state.selector_open {
+            load_notes(weak.clone(), data.clone(), String::new());
+        }
         if let Some(app) = weak.upgrade() {
             app.invoke_focus_chart();
         }
@@ -645,6 +817,18 @@ fn wire(app: &AppWindow, shared: &Shared) {
     app.on_tab_changed(move |index| {
         data.borrow_mut().state.set_tab(tab(index));
         paint(&weak, &data);
+        if data.borrow().state.tab == ChartTab::Notes
+            && matches!(data.borrow().state.notes.list_status, NotesListStatus::Idle)
+        {
+            load_notes(weak.clone(), data.clone(), String::new());
+        }
+        if index == 1
+            && data.borrow().state.tab == ChartTab::Notes
+            && !data.borrow().state.selector_open
+            && let Some(app) = weak.upgrade()
+        {
+            app.invoke_focus_notes_filter();
+        }
     });
 }
 
@@ -661,7 +845,29 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_active_id().as_str(), "SYNTH-004");
     assert!(!app.get_selector_open());
     app.invoke_tab_changed(1);
-    assert!(app.get_placeholder().contains("not implemented"));
+    assert_eq!(app.get_notes_rows().row_count(), 4);
+    app.invoke_note_selected(0);
+    assert!(app.get_note_body().contains("SYNTH-004"));
+    app.invoke_note_selected(1);
+    assert!(app.get_note_body().contains("NOTE-02"));
+    app.invoke_notes_filter_edited("ZOË 李".into());
+    assert_eq!(app.get_notes_rows().row_count(), 1);
+    assert!(app.get_note_body().is_empty());
+    app.invoke_note_selected(0);
+    assert!(app.get_note_body().contains("END OF INVENTED LONG NOTE"));
+    app.invoke_notes_scenario_changed(1);
+    assert!(app.get_notes_list_error());
+    assert!(app.get_note_body().is_empty());
+    app.invoke_retry_notes_list();
+    assert!(app.get_notes_list_error());
+    app.invoke_notes_scenario_changed(2);
+    app.invoke_note_selected(0);
+    assert!(app.get_note_body_error());
+    app.invoke_retry_note();
+    assert!(app.get_note_body_error());
+    app.invoke_notes_scenario_changed(0);
+    app.invoke_note_selected(0);
+    assert!(app.get_note_body_ready());
     app.invoke_open_selection();
     app.invoke_query_edited("PATEL".into());
     app.invoke_row_released(0);
@@ -729,6 +935,11 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_confirm_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-002");
     assert_eq!(app.get_allergy_rows().row_count(), 0);
+    app.invoke_tab_changed(1);
+    assert_eq!(app.get_notes_rows().row_count(), 0);
+    assert!(app.get_notes_list_status().contains("No invented notes"));
+    assert!(app.get_note_body().is_empty());
+    app.invoke_tab_changed(0);
     app.invoke_cover_selected(0, 0);
     app.invoke_cover_activated(0);
     assert!(app.get_detail_error());
@@ -747,7 +958,7 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
     assert!(shared.borrow().immediate);
     println!(
-        "Mock UI callback smoke passed: patient-selection cases, two Cover Sheet panels, exact item activation/double-click, clearing, explicit empty/error/retry, and Unicode fixture identity."
+        "Mock UI callback smoke passed: patient selection, two Cover Sheet panels/details, Notes list/text/filter/error/retry, clearing, and Unicode fixture identity."
     );
 }
 

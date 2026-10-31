@@ -1,0 +1,114 @@
+{
+  "function": "fNotes.TfrmNotes.tvNotesChange",
+  "address": "00e1e870",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.tvNotesChange_00e1e870.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "0041c028",
+      "map_names": [
+        "Winapi.Windows.SendMessage"
+      ]
+    },
+    {
+      "address": "0060ca58",
+      "map_names": [
+        "Vcl.Controls.TWinControl.GetHandle"
+      ]
+    },
+    {
+      "address": "0067213c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTreeView.GetSelected"
+      ]
+    },
+    {
+      "address": "009fffc4",
+      "map_names": [
+        "VA508AccessibilityManager.TVA508StaticText.SetLabelCaption"
+      ]
+    },
+    {
+      "address": "00a13b8c",
+      "map_names": [
+        "uDocTree.ShowMoreNode"
+      ]
+    },
+    {
+      "address": "00e216c0",
+      "map_names": [
+        "fNotes.TfrmNotes.UpdateActMenu"
+      ]
+    },
+    {
+      "address": "00e238f8",
+      "map_names": [
+        "fNotes.TfrmNotes.SetLvNotesVisible"
+      ]
+    },
+    {
+      "address": "00e23d48",
+      "map_names": [
+        "fNotes.TfrmNotes.SaveTreePosition"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e1e9ec",
+      "file_offset": 10608108,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 46,
+      "text": "--- Older signed notes with recent addenda ---"
+    },
+    {
+      "address": "00e1ea58",
+      "file_offset": 10608216,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "above"
+    },
+    {
+      "address": "00e1ea70",
+      "file_offset": 10608240,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "below"
+    },
+    {
+      "address": "00e1ebd8",
+      "file_offset": 10608600,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 60,
+      "text": "Select another document or double click the node \"SHOW MORE\""
+    }
+  ]
+}

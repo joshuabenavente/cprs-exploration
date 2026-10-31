@@ -1,0 +1,76 @@
+{
+  "function": "fNotes.TfrmNotes.GetTitleText",
+  "address": "00e15850",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.GetTitleText_00e15850.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "007b1014",
+      "map_names": [
+        "ORCtrls.TORListBox.GetMItems"
+      ]
+    },
+    {
+      "address": "009b11a0",
+      "map_names": [
+        "ORFn.FormatFMDateTime"
+      ]
+    },
+    {
+      "address": "009b18cc",
+      "map_names": [
+        "ORFn.MakeFMDateTime"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e159d8",
+      "file_offset": 10571224,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "mmm dd,yy"
+    },
+    {
+      "address": "00e159f8",
+      "file_offset": 10571256,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "  "
+    },
+    {
+      "address": "00e15a0c",
+      "file_offset": 10571276,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": ", "
+    }
+  ]
+}

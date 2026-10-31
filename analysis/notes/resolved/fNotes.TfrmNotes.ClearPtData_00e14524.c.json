@@ -1,0 +1,39 @@
+{
+  "function": "fNotes.TfrmNotes.ClearPtData",
+  "address": "00e14524",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.ClearPtData_00e14524.c",
+  "numeric_callee_references": [
+    {
+      "address": "0066fcb4",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNodes.BeginUpdate"
+      ]
+    },
+    {
+      "address": "0066fd00",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNodes.EndUpdate"
+      ]
+    },
+    {
+      "address": "00e14ec4",
+      "map_names": [
+        "fNotes.TfrmNotes.ClearTVNotes"
+      ]
+    },
+    {
+      "address": "00e14f58",
+      "map_names": [
+        "fNotes.TfrmNotes.ClearEditControls"
+      ]
+    },
+    {
+      "address": "012034d0",
+      "map_names": [
+        "fPage.TfrmPage.ClearPtData"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

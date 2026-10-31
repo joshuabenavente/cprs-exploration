@@ -1,0 +1,33 @@
+; Static instruction listing. Function bodies and indirect exception flow require review.
+00e14524  55  PUSH EBP
+00e14525  8bec  MOV EBP,ESP
+00e14527  83c4f4  ADD ESP,-0xc
+00e1452a  8945fc  MOV dword ptr [EBP + -0x4],EAX
+00e1452d  8b45fc  MOV EAX,dword ptr [EBP + -0x4]
+00e14530  e89bef3e00  CALL 0x012034d0
+00e14535  8b45fc  MOV EAX,dword ptr [EBP + -0x4]
+00e14538  e81b0a0000  CALL 0x00e14f58
+00e1453d  c60565a1250101  MOV byte ptr [0x0125a165],0x1
+00e14544  8b45fc  MOV EAX,dword ptr [EBP + -0x4]
+00e14547  8b80cc040000  MOV EAX,dword ptr [EAX + 0x4cc]
+00e1454d  8b8030030000  MOV EAX,dword ptr [EAX + 0x330]
+00e14553  e85cb785ff  CALL 0x0066fcb4
+00e14558  33c0  XOR EAX,EAX
+00e1455a  55  PUSH EBP
+00e1455b  689245e100  PUSH 0xe14592
+00e14560  64ff30  PUSH dword ptr FS:[EAX]
+00e14563  648920  MOV dword ptr FS:[EAX],ESP
+00e14566  8b45fc  MOV EAX,dword ptr [EBP + -0x4]
+00e14569  e856090000  CALL 0x00e14ec4
+00e1456e  33c0  XOR EAX,EAX
+00e14570  5a  POP EDX
+00e14571  59  POP ECX
+00e14572  59  POP ECX
+00e14573  648910  MOV dword ptr FS:[EAX],EDX
+00e14576  689945e100  PUSH 0xe14599
+00e1457b  8b45fc  MOV EAX,dword ptr [EBP + -0x4]
+00e1457e  8b80cc040000  MOV EAX,dword ptr [EAX + 0x4cc]
+00e14584  8b8030030000  MOV EAX,dword ptr [EAX + 0x330]
+00e1458a  e871b785ff  CALL 0x0066fd00
+00e1458f  58  POP EAX
+00e14590  ffe0  JMP EAX

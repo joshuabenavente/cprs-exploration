@@ -1,0 +1,246 @@
+{
+  "function": "fNotes.TfrmNotes.DoSelect",
+  "address": "00e2307c",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.DoSelect_00e2307c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040a734",
+      "map_names": [
+        "System.@TryFinallyExit"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0041c028",
+      "map_names": [
+        "Winapi.Windows.SendMessage"
+      ]
+    },
+    {
+      "address": "0042d238",
+      "map_names": [
+        "System.SysUtils.StrToIntDef"
+      ]
+    },
+    {
+      "address": "00608594",
+      "map_names": [
+        "Vcl.Controls.TWinControl.LockDrawing"
+      ]
+    },
+    {
+      "address": "006085cc",
+      "map_names": [
+        "Vcl.Controls.TWinControl.UnlockDrawing"
+      ]
+    },
+    {
+      "address": "0060ca58",
+      "map_names": [
+        "Vcl.Controls.TWinControl.GetHandle"
+      ]
+    },
+    {
+      "address": "0060cec0",
+      "map_names": [
+        "Vcl.Controls.TWinControl.HandleAllocated"
+      ]
+    },
+    {
+      "address": "0066e1a0",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNode.GetChildren"
+      ]
+    },
+    {
+      "address": "0066e3b0",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNode.getFirstChild"
+      ]
+    },
+    {
+      "address": "0067213c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTreeView.GetSelected"
+      ]
+    },
+    {
+      "address": "0067ce80",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.GetCount"
+      ]
+    },
+    {
+      "address": "0067ced0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.GetItem"
+      ]
+    },
+    {
+      "address": "00682964",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.GetSelected"
+      ]
+    },
+    {
+      "address": "0068297c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.SetSelected"
+      ]
+    },
+    {
+      "address": "006aa580",
+      "map_names": [
+        "Vcl.Dialogs.MessageDlgPosHelp"
+      ]
+    },
+    {
+      "address": "00709128",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetEnabled"
+      ]
+    },
+    {
+      "address": "00729a50",
+      "map_names": [
+        "Vcl.Forms.TScreen.SetCursor"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "007adbdc",
+      "map_names": [
+        "ORCtrls.TORListBox.GetItemIEN"
+      ]
+    },
+    {
+      "address": "007ae0d4",
+      "map_names": [
+        "ORCtrls.TORListBox.SelectByID"
+      ]
+    },
+    {
+      "address": "009a9728",
+      "map_names": [
+        "UResponsiveGUI.TResponsiveGUI.ProcessMessages"
+      ]
+    },
+    {
+      "address": "00a115b0",
+      "map_names": [
+        "uDocTree.TraverseTree"
+      ]
+    },
+    {
+      "address": "00aa27b8",
+      "map_names": [
+        "U_CPTEditMonitor.TCopyEditMonitor.SetItemIEN"
+      ]
+    },
+    {
+      "address": "00d8f7f8",
+      "map_names": [
+        "fReminderDialog.UpdateReminderFinish"
+      ]
+    },
+    {
+      "address": "00d9a560",
+      "map_names": [
+        "mDrawers.TfraDrawers.DisplayDrawers"
+      ]
+    },
+    {
+      "address": "00e0fe7c",
+      "map_names": [
+        "fNotes.TfrmNotes.GetDrawers"
+      ]
+    },
+    {
+      "address": "00e0fe84",
+      "map_names": [
+        "fNotes.TfrmNotes.SetReadVisible"
+      ]
+    },
+    {
+      "address": "00e15068",
+      "map_names": [
+        "fNotes.TfrmNotes.ShowPCEControls"
+      ]
+    },
+    {
+      "address": "00e1529c",
+      "map_names": [
+        "fNotes.TfrmNotes.ClearPCE"
+      ]
+    },
+    {
+      "address": "00e205dc",
+      "map_names": [
+        "fNotes.TfrmNotes.ShowPCEButtons"
+      ]
+    },
+    {
+      "address": "00e216c0",
+      "map_names": [
+        "fNotes.TfrmNotes.UpdateActMenu"
+      ]
+    },
+    {
+      "address": "00e22bc8",
+      "map_names": [
+        "fNotes.getMyNodeID"
+      ]
+    },
+    {
+      "address": "00e22cb8",
+      "map_names": [
+        "fNotes.lvNotesInitView"
+      ]
+    },
+    {
+      "address": "00e22f70",
+      "map_names": [
+        "fNotes.lvNotesUpdateView"
+      ]
+    },
+    {
+      "address": "00e238f8",
+      "map_names": [
+        "fNotes.TfrmNotes.SetLvNotesVisible"
+      ]
+    },
+    {
+      "address": "01011c80",
+      "map_names": [
+        "uWriteAccess.WriteAccess"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e234f4",
+      "file_offset": 10627316,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 144,
+      "text": "This note was linked to another note that is no longer available. There is no action required, this message is for informational purposes, only."
+    }
+  ]
+}

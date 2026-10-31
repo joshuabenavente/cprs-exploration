@@ -1,0 +1,46 @@
+{
+  "scope": "Static Notes forms; inherited defaults and runtime behavior remain separate",
+  "executable_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+  "resources": [
+    {
+      "path": [
+        10,
+        "TFRMNOTES",
+        0
+      ],
+      "rva": 17023548,
+      "size": 33554,
+      "file_offset": 16957500,
+      "codepage": 0,
+      "sha256": "acc2002bc72fca75f48cbabec385ddec2df57c6a2b54e2b4e2d0a4b29305e2bd",
+      "decoded": "analysis/notes/resources/TFRMNOTES.dfm.json"
+    },
+    {
+      "path": [
+        10,
+        "TFRMNOTESBYAUTHOR",
+        0
+      ],
+      "rva": 17058876,
+      "size": 1605,
+      "file_offset": 16992828,
+      "codepage": 0,
+      "sha256": "597407ef4df6452b6c17b244c018b2854e2be0c697cd8feb4af7e8e512304163",
+      "decoded": "analysis/notes/resources/TFRMNOTESBYAUTHOR.dfm.json"
+    },
+    {
+      "path": [
+        10,
+        "TFRMNOTESBYDATE",
+        0
+      ],
+      "rva": 17060484,
+      "size": 1624,
+      "file_offset": 16994436,
+      "codepage": 0,
+      "sha256": "477ca8c643ba8c596fcddfad060e349346c1a8b2992367df9988f30cd2a9c78a",
+      "decoded": "analysis/notes/resources/TFRMNOTESBYDATE.dfm.json"
+    }
+  ],
+  "not_found": []
+}

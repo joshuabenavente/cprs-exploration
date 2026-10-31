@@ -1,0 +1,80 @@
+{
+  "scope": "Mock Notes visual and keyboard checks; no original CPRS runtime",
+  "executable_sha256": "11ac4dac9afedbcdef1389af74e763eaf7958749cade54a6027c150c8f0cca7e",
+  "final_build_observations": [
+    "Native app-launcher launch at default 1180x800 logical client, capture 1182x832. Enter, Down, Enter committed CARTER, JAMIE / SYNTH-001.",
+    "Opening Notes focused its filter. The five stored-form header labels appeared. Choosing the visible Unicode row selected NOTE-03 for SYNTH-001; Enter focused its read-only body and scrolled lower actions into view while the patient header and chart navigation stayed fixed.",
+    "The long body exposed 14080 characters through UIA. Ctrl+A selected all 14080 characters and scrolled to the final invented section and END OF INVENTED LONG NOTE marker. A normal x key changed neither the document nor the selection.",
+    "Escape restored the list viewport; Down selected NOTE-04, immediately cleared the old body, showed retrieving, then labeled a successful empty body.",
+    "List unavailable cleared rows, selection, and body. A distinct error stated that this was not an empty result. Tab focus revealed lower actions; Retry mock note list returned to loading for the same simulation.",
+    "Accessibility value replacement of Notes filter with 李 cleared transient data. Changing scenario to Text unavailable produced a one-row Unicode list. Selecting it retrieved SYNTH-001 / NOTE-03, then displayed an explicit text error with no old body. Enter exposed Retry mock note text; retry returned to retrieving for the same patient and note.",
+    "At 200% and minimum 980x680 logical client, the Notes filter, scenario control, and all five list headers fit. Enter, Down, Enter loaded SYNTH-001 / NOTE-01 and revealed the complete text pane, Read selected note action, and keyboard hint through focus scrolling. Patient header/navigation/status stayed fixed.",
+    "At that scale, Ctrl+O cleared document text while retaining SYNTH-001 as current chart; Escape returned to Notes with a fresh list request, no selection, and no restored document.",
+    "At 100% minimum size, native double-click opened SYNTH-002. Notes displayed No invented notes match this view. This is not a clinical finding., with no selected note or document. All five list headers, filter, and scenario control remained visible; lower controls are reached by workspace scrolling."
+  ],
+  "earlier_build": {
+    "sha256": "397efcd90b0d6a4175ff9b7ffde9bd84aeb820ce1e4e0014823664747e355fe9",
+    "finding": "Native list selection worked but Enter did not focus text because the table focus property represented its scroll view rather than internal focus. The final build removes that guard and explicitly focuses Notes filter on tab entry. Rechecked successfully."
+  },
+  "uia_limit": "Some immediate snapshots reported the filter as focused while native caret/selection/scrolling demonstrated list or document focus. UIA indexed invocation does not reliably move keyboard focus; coordinate clicks and native keys were checked alongside it. This is not a complete AT conformance result. At 200%, an indexed Notes invocation selected Cover Sheet; a full-window screenshot coordinate selected Notes correctly. Startup capture included a 16x16 related surface; coordinates required the full-window screenshot ID.",
+  "spoken_output": "Unverified per user instruction; no new Narrator claim.",
+  "input_receipt": "validation/milestone-4/native-input.json",
+  "limits": [
+    "No original Notes runtime, live server, real patient data, or clinical write was involved.",
+    "Intermediate scale factors, Windows monitor-DPI changes, physical IME/dead-key input, and complete assistive-technology behavior are unverified for this Notes slice."
+  ],
+  "scale_method": "Process-local SLINT_SCALE_FACTOR only; Windows monitor DPI settings were unchanged",
+  "final_build_scale_samples": [
+    {
+      "scale": 1,
+      "logical_client": [
+        1180,
+        800
+      ],
+      "capture_pixels": [
+        1182,
+        832
+      ],
+      "views": [
+        "populated Notes",
+        "long Unicode/read-only selection",
+        "successful empty document",
+        "list error/retry",
+        "text error/retry"
+      ]
+    },
+    {
+      "scale": 2,
+      "logical_client": [
+        980,
+        680
+      ],
+      "capture_pixels": [
+        1962,
+        1392
+      ],
+      "views": [
+        "selector",
+        "populated Notes",
+        "reading pane/lower actions with focus scrolling",
+        "patient-selection open/cancel"
+      ]
+    },
+    {
+      "scale": 1,
+      "logical_client": [
+        980,
+        680
+      ],
+      "capture_pixels": [
+        982,
+        712
+      ],
+      "views": [
+        "selector",
+        "SYNTH-002 empty Notes list"
+      ]
+    }
+  ],
+  "native_smoke_completed": true
+}

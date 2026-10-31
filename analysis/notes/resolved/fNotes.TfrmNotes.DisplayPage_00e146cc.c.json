@@ -1,0 +1,99 @@
+{
+  "function": "fNotes.TfrmNotes.DisplayPage",
+  "address": "00e146cc",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.DisplayPage_00e146cc.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040d52c",
+      "map_names": [
+        "System.@CopyRecord"
+      ]
+    },
+    {
+      "address": "00608594",
+      "map_names": [
+        "Vcl.Controls.TWinControl.LockDrawing"
+      ]
+    },
+    {
+      "address": "006085cc",
+      "map_names": [
+        "Vcl.Controls.TWinControl.UnlockDrawing"
+      ]
+    },
+    {
+      "address": "006b861c",
+      "map_names": [
+        "Vcl.ExtCtrls.TTimer.SetInterval"
+      ]
+    },
+    {
+      "address": "00709128",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetEnabled"
+      ]
+    },
+    {
+      "address": "00709244",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetVisible"
+      ]
+    },
+    {
+      "address": "009b5ff4",
+      "map_names": [
+        "ORFn.SetEqualTabStops"
+      ]
+    },
+    {
+      "address": "00a0ddb0",
+      "map_names": [
+        "rTIU.GetCurrentTIUContext"
+      ]
+    },
+    {
+      "address": "00aeac0c",
+      "map_names": [
+        "uSpell.SpellCheckAvailable"
+      ]
+    },
+    {
+      "address": "00e1d328",
+      "map_names": [
+        "fNotes.TfrmNotes.ProcessNotifications"
+      ]
+    },
+    {
+      "address": "00e20548",
+      "map_names": [
+        "fNotes.TfrmNotes.EnableDisableIDNotes"
+      ]
+    },
+    {
+      "address": "00ffdcd8",
+      "map_names": [
+        "fFrame.TfrmFrame.ShowHideChartTabMenus"
+      ]
+    },
+    {
+      "address": "012034e8",
+      "map_names": [
+        "fPage.TfrmPage.DisplayPage"
+      ]
+    },
+    {
+      "address": "012035ec",
+      "map_names": [
+        "fPage.TfrmPage.GetInitPage"
+      ]
+    },
+    {
+      "address": "0120360c",
+      "map_names": [
+        "fPage.TfrmPage.GetInitPatient"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

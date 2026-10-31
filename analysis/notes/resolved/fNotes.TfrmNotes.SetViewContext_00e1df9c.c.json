@@ -1,0 +1,51 @@
+{
+  "function": "fNotes.TfrmNotes.SetViewContext",
+  "address": "00e1df9c",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.SetViewContext_00e1df9c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040cd88",
+      "map_names": [
+        "System.@FinalizeRecord"
+      ]
+    },
+    {
+      "address": "0040d3f0",
+      "map_names": [
+        "System.@AddRefRecord"
+      ]
+    },
+    {
+      "address": "0040d52c",
+      "map_names": [
+        "System.@CopyRecord"
+      ]
+    },
+    {
+      "address": "00e16624",
+      "map_names": [
+        "fNotes.TfrmNotes.acSignedExecute"
+      ]
+    },
+    {
+      "address": "00e1946c",
+      "map_names": [
+        "fNotes.TfrmNotes.SaveCurrentNote"
+      ]
+    },
+    {
+      "address": "00e1e48c",
+      "map_names": [
+        "fNotes.TfrmNotes.SetEditingIndex"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

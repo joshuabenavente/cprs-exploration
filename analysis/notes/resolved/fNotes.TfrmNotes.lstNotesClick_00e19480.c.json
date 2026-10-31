@@ -1,0 +1,248 @@
+{
+  "function": "fNotes.TfrmNotes.lstNotesClick",
+  "address": "00e19480",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.lstNotesClick_00e19480.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040d1c4",
+      "map_names": [
+        "System.@FinalizeArray"
+      ]
+    },
+    {
+      "address": "0044973c",
+      "map_names": [
+        "System.Variants.@VarToUStr"
+      ]
+    },
+    {
+      "address": "00449fdc",
+      "map_names": [
+        "System.Variants.@VarFromUStr"
+      ]
+    },
+    {
+      "address": "0044e1a0",
+      "map_names": [
+        "System.Variants.@VarAdd"
+      ]
+    },
+    {
+      "address": "006a60c4",
+      "map_names": [
+        "Vcl.Dialogs.TFindDialog.SetFindText"
+      ]
+    },
+    {
+      "address": "007090d4",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetChecked"
+      ]
+    },
+    {
+      "address": "00709128",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetEnabled"
+      ]
+    },
+    {
+      "address": "00729a50",
+      "map_names": [
+        "Vcl.Forms.TScreen.SetCursor"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "0079af38",
+      "map_names": [
+        "VAUtils.SetPiece"
+      ]
+    },
+    {
+      "address": "007adbdc",
+      "map_names": [
+        "ORCtrls.TORListBox.GetItemIEN"
+      ]
+    },
+    {
+      "address": "007ae008",
+      "map_names": [
+        "ORCtrls.TORListBox.GetItemID"
+      ]
+    },
+    {
+      "address": "007b1014",
+      "map_names": [
+        "ORCtrls.TORListBox.GetMItems"
+      ]
+    },
+    {
+      "address": "009b11a0",
+      "map_names": [
+        "ORFn.FormatFMDateTime"
+      ]
+    },
+    {
+      "address": "009b18cc",
+      "map_names": [
+        "ORFn.MakeFMDateTime"
+      ]
+    },
+    {
+      "address": "009b60ec",
+      "map_names": [
+        "ORFn.StatusText"
+      ]
+    },
+    {
+      "address": "009fffc4",
+      "map_names": [
+        "VA508AccessibilityManager.TVA508StaticText.SetLabelCaption"
+      ]
+    },
+    {
+      "address": "00a95d0c",
+      "map_names": [
+        "U_CPTPasteDetails.TCopyPasteDetails.LoadPasteText"
+      ]
+    },
+    {
+      "address": "00d4b324",
+      "map_names": [
+        "fReminderTree.TfrmReminderTree.EnableActions"
+      ]
+    },
+    {
+      "address": "00d8f7f8",
+      "map_names": [
+        "fReminderDialog.UpdateReminderFinish"
+      ]
+    },
+    {
+      "address": "00e05190",
+      "map_names": [
+        "dShared.TdmodShared.FindRichEditTextAll"
+      ]
+    },
+    {
+      "address": "00e0fe84",
+      "map_names": [
+        "fNotes.TfrmNotes.SetReadVisible"
+      ]
+    },
+    {
+      "address": "00e0ff00",
+      "map_names": [
+        "fNotes.TfrmNotes.GetReadVisible"
+      ]
+    },
+    {
+      "address": "00e14f40",
+      "map_names": [
+        "fNotes.TfrmNotes.LimitEditableNote"
+      ]
+    },
+    {
+      "address": "00e152c4",
+      "map_names": [
+        "fNotes.TfrmNotes.DisplayPCE"
+      ]
+    },
+    {
+      "address": "01011c80",
+      "map_names": [
+        "uWriteAccess.WriteAccess"
+      ]
+    },
+    {
+      "address": "011d3f74",
+      "map_names": [
+        "uCore.NotifyOtherApps"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e198d8",
+      "file_offset": 10587352,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 36,
+      "text": "Retrieving selected progress note..."
+    },
+    {
+      "address": "00e19930",
+      "file_offset": 10587440,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "\t"
+    },
+    {
+      "address": "00e19940",
+      "file_offset": 10587456,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": ", "
+    },
+    {
+      "address": "00e19954",
+      "file_offset": 10587476,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "  ("
+    },
+    {
+      "address": "00e19968",
+      "file_offset": 10587496,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 15,
+      "text": "mmm dd,yy@hh:nn"
+    },
+    {
+      "address": "00e19994",
+      "file_offset": 10587540,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": ")"
+    },
+    {
+      "address": "00e199a8",
+      "file_offset": 10587560,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "TIU^"
+    },
+    {
+      "address": "00e199c0",
+      "file_offset": 10587584,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "RPT"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "function": "fNotes.TfrmNotes.tvNotesKeyDown",
+  "address": "00e1f8e8",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.tvNotesKeyDown_00e1f8e8.c",
+  "numeric_callee_references": [
+    {
+      "address": "00437d28",
+      "map_names": [
+        "System.SysUtils.AnsiPos"
+      ]
+    },
+    {
+      "address": "0067213c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTreeView.GetSelected"
+      ]
+    },
+    {
+      "address": "00e23618",
+      "map_names": [
+        "fNotes.TfrmNotes.GetMoreDocuments"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e1f940",
+      "file_offset": 10612032,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "SHOW MORE"
+    }
+  ]
+}

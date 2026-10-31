@@ -5,6 +5,8 @@ use std::collections::HashSet;
 use std::fmt;
 mod cover_sheet;
 pub use cover_sheet::*;
+mod notes;
+pub use notes::*;
 
 pub const FIXTURE_DATE: &str = "31 Oct 2026";
 pub const PAGE_SIZE: usize = 4;
@@ -126,6 +128,8 @@ pub trait PatientProvider {
     fn access(&self, id: &PatientId) -> AccessDecision;
     fn chart(&self, id: &PatientId) -> Result<ChartSnapshot, ProviderError>;
     fn detail(&self, request: &DetailRequest) -> Result<DetailSnapshot, ProviderError>;
+    fn notes_list(&self, request: &NotesListRequest) -> Result<NotesList, ProviderError>;
+    fn note_body(&self, request: &NoteRequest) -> Result<NoteBody, ProviderError>;
 }
 
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
@@ -137,6 +141,9 @@ pub enum Simulation {
     ChartUnavailable,
     SlowSearch,
     DetailUnavailable,
+    NotesListUnavailable,
+    NoteBodyUnavailable,
+    SlowNotes,
 }
 
 #[derive(Clone, Debug, Default)]
@@ -270,6 +277,35 @@ impl MockProvider {
 }
 
 impl PatientProvider for MockProvider {
+    fn notes_list(&self, request: &NotesListRequest) -> Result<NotesList, ProviderError> {
+        if self.simulation == Simulation::NotesListUnavailable {
+            return Err(ProviderError::Unavailable(
+                "Mock note list unavailable. This is not an empty result.".into(),
+            ));
+        }
+        if let AccessDecision::Deny(reason) | AccessDecision::Unavailable(reason) =
+            self.access(&request.patient_id)
+        {
+            return Err(ProviderError::Unavailable(reason));
+        }
+        Ok(notes::mock_notes(
+            &self.preview(&request.patient_id)?,
+            &request.query,
+        ))
+    }
+    fn note_body(&self, request: &NoteRequest) -> Result<NoteBody, ProviderError> {
+        if self.simulation == Simulation::NoteBodyUnavailable {
+            return Err(ProviderError::Unavailable(
+                "Mock note text unavailable. Previous document text has been cleared.".into(),
+            ));
+        }
+        if let AccessDecision::Deny(reason) | AccessDecision::Unavailable(reason) =
+            self.access(&request.patient_id)
+        {
+            return Err(ProviderError::Unavailable(reason));
+        }
+        notes::mock_note_body(&self.preview(&request.patient_id)?, request)
+    }
     fn search(&self, request: &SearchRequest) -> Result<SearchPage, ProviderError> {
         match self.simulation {
             Simulation::SearchUnavailable => {
@@ -393,6 +429,9 @@ impl ChartTab {
         }
     }
     pub fn placeholder(self) -> String {
+        if self == Self::Notes {
+            return "Mock-only read-only Notes browser.".into();
+        }
         format!(
             "{} is not implemented in this mock prototype.",
             self.title()
@@ -421,6 +460,7 @@ pub struct AppState {
     pub selected_problem: Option<String>,
     pub selected_allergy: Option<String>,
     pub detail: DetailState,
+    pub notes: NotesWorkspace,
     detail_generation: u64,
     search_generation: u64,
     chart_generation: u64,
@@ -444,6 +484,7 @@ impl Default for AppState {
             selected_problem: None,
             selected_allergy: None,
             detail: DetailState::Closed,
+            notes: NotesWorkspace::default(),
             detail_generation: 0,
             search_generation: 0,
             chart_generation: 0,
@@ -459,6 +500,7 @@ impl AppState {
     }
 
     pub fn open_selection(&mut self) -> SearchRequest {
+        self.notes.clear();
         self.clear_cover_transient();
         self.selector_open = true;
         self.begin_search(String::new(), self.mode)
@@ -641,6 +683,7 @@ impl AppState {
                     && chart.cover_sheet.matches_patient(&request.patient_id) =>
             {
                 self.clear_cover_transient();
+                self.notes.clear();
                 self.active = Some(chart);
                 self.selector_open = false;
                 self.pending = None;
@@ -674,6 +717,7 @@ impl AppState {
         if self.active.is_some() && !self.selector_open {
             if tab != self.tab {
                 self.close_detail();
+                self.notes.clear();
             }
             self.tab = tab;
         }

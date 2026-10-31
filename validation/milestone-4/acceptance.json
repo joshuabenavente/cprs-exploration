@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-31T17:52:15.987590+00:00",
+  "scope": "Milestone 4: static Notes reading workflow, native-input investigation, and mock-only read-only Notes browser",
+  "passed": true,
+  "checkpoint": "Bounded synthetic implementation; no live or clinical-write expansion",
+  "branch": "work/milestone-4-notes",
+  "executable_sha256": "11ac4dac9afedbcdef1389af74e763eaf7958749cade54a6027c150c8f0cca7e",
+  "static": {
+    "receipt": "validation/milestone-4/static.json",
+    "functions": 20,
+    "decoded_forms": 3,
+    "automatic_analysis": false
+  },
+  "automated": {
+    "receipt": "validation/milestone-4/automated.json",
+    "core_workflow_tests": 40,
+    "new_notes_cases": 12,
+    "prior_regressions": 28,
+    "format_clippy_build_callbacks": "passed; locked/offline"
+  },
+  "native": {
+    "receipt": "validation/milestone-4/native-ui.json",
+    "input_receipt": "validation/milestone-4/native-input.json",
+    "application_scale_samples": [
+      1,
+      2
+    ],
+    "windows_monitor_dpi_changed": false,
+    "read_only_long_text_and_state_transitions": "observed; scope/limits in native receipt"
+  },
+  "review": "Local code/evidence self-review; no independent reviewer or original-client runtime comparison claimed",
+  "safe_boundary": {
+    "compiled_invented_records_only": true,
+    "network_transport": false,
+    "clinical_data_import": false,
+    "editing_signing_printing": false,
+    "original_cprs_process_executed": false,
+    "analysis_files_loaded_by_runtime": false
+  },
+  "limits": [
+    "Clipboard failure was launch-dependent; exact OS restriction was not instrumented. Final native-launch copy/paste passed; the user confirmed earlier shell-launch typing worked and paste failed. Manual retest after native relaunch remains separately recorded.",
+    "UIA focus/invocation limitations persist; native caret, selection, screenshots, and keyboard behavior supplied separate evidence.",
+    "Physical IME, dead keys, intermediate Notes application scales, and complete assistive-technology conformance are unverified.",
+    "Narrator spoken output remains unverified per user instruction.",
+    "Original-client runtime, complete TIU context semantics, server contracts/permissions/site behavior, and clinical compatibility are not established."
+  ]
+}

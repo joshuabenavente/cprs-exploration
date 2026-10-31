@@ -1,0 +1,236 @@
+{
+  "function": "fNotes.TfrmNotes.LoadNotes",
+  "address": "00e21f14",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.LoadNotes_00e21f14.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040a640",
+      "map_names": [
+        "System.@RaiseExcept"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "0042cfdc",
+      "map_names": [
+        "System.SysUtils.IntToStr"
+      ]
+    },
+    {
+      "address": "0042d238",
+      "map_names": [
+        "System.SysUtils.StrToIntDef"
+      ]
+    },
+    {
+      "address": "00435fa0",
+      "map_names": [
+        "System.SysUtils.Exception.Create"
+      ]
+    },
+    {
+      "address": "004d811c",
+      "map_names": [
+        "System.Classes.TStringList.SetSorted"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "00608594",
+      "map_names": [
+        "Vcl.Controls.TWinControl.LockDrawing"
+      ]
+    },
+    {
+      "address": "0066e014",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNode.Expand"
+      ]
+    },
+    {
+      "address": "0066e290",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNode.getNextSibling"
+      ]
+    },
+    {
+      "address": "0066e3b0",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNode.getFirstChild"
+      ]
+    },
+    {
+      "address": "0066fb68",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNodes.GetFirstNode"
+      ]
+    },
+    {
+      "address": "0066fcb4",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNodes.BeginUpdate"
+      ]
+    },
+    {
+      "address": "0066fd00",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNodes.EndUpdate"
+      ]
+    },
+    {
+      "address": "0067213c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTreeView.GetSelected"
+      ]
+    },
+    {
+      "address": "00672184",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTreeView.SetSelected"
+      ]
+    },
+    {
+      "address": "0067b46c",
+      "map_names": [
+        "Vcl.ComCtrls.TListColumn.GetWidth"
+      ]
+    },
+    {
+      "address": "0067b548",
+      "map_names": [
+        "Vcl.ComCtrls.TListColumn.SetWidth"
+      ]
+    },
+    {
+      "address": "0067b704",
+      "map_names": [
+        "Vcl.ComCtrls.TListColumns.GetItem"
+      ]
+    },
+    {
+      "address": "0067cfe0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.Clear"
+      ]
+    },
+    {
+      "address": "0068297c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.SetSelected"
+      ]
+    },
+    {
+      "address": "007b1014",
+      "map_names": [
+        "ORCtrls.TORListBox.GetMItems"
+      ]
+    },
+    {
+      "address": "007b5f64",
+      "map_names": [
+        "ORCtrls.TORTreeView.FindPieceNode"
+      ]
+    },
+    {
+      "address": "009fffc4",
+      "map_names": [
+        "VA508AccessibilityManager.TVA508StaticText.SetLabelCaption"
+      ]
+    },
+    {
+      "address": "00a0f8dc",
+      "map_names": [
+        "uDocTree.CreateListItemsForDocumentTree"
+      ]
+    },
+    {
+      "address": "00a12328",
+      "map_names": [
+        "uDocTree.RemoveParentsWithNoChildren"
+      ]
+    },
+    {
+      "address": "00a13394",
+      "map_names": [
+        "uDocTree.RemoveDuplicates"
+      ]
+    },
+    {
+      "address": "00a13484",
+      "map_names": [
+        "uDocTree.adjustOrder"
+      ]
+    },
+    {
+      "address": "00a13b8c",
+      "map_names": [
+        "uDocTree.ShowMoreNode"
+      ]
+    },
+    {
+      "address": "00e1e6c8",
+      "map_names": [
+        "fNotes.TfrmNotes.UpdateTreeView"
+      ]
+    },
+    {
+      "address": "00e20ce4",
+      "map_names": [
+        "fNotes.TfrmNotes.SetNoteTreeLabel"
+      ]
+    },
+    {
+      "address": "00e21a04",
+      "map_names": [
+        "fNotes.SearchDocListforString"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e22a60",
+      "file_offset": 10624608,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 39,
+      "text": "LoadNotes, but frmNotes does not exist."
+    },
+    {
+      "address": "00e22abc",
+      "file_offset": 10624700,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "RDSAL"
+    }
+  ]
+}

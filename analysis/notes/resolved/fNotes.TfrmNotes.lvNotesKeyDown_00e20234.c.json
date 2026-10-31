@@ -1,0 +1,42 @@
+{
+  "function": "fNotes.TfrmNotes.lvNotesKeyDown",
+  "address": "00e20234",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.lvNotesKeyDown_00e20234.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "00682964",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.GetSelected"
+      ]
+    },
+    {
+      "address": "00e23618",
+      "map_names": [
+        "fNotes.TfrmNotes.GetMoreDocuments"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e202e4",
+      "file_offset": 10614500,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "SHOW MORE"
+    }
+  ]
+}

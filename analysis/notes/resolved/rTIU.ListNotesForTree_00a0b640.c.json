@@ -1,0 +1,62 @@
+{
+  "function": "rTIU.ListNotesForTree",
+  "address": "00a0b640",
+  "status": "decompiled",
+  "file": "rTIU.ListNotesForTree_00a0b640.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "0042c5fc",
+      "map_names": [
+        "System.SysUtils.Trim"
+      ]
+    },
+    {
+      "address": "00437d28",
+      "map_names": [
+        "System.SysUtils.AnsiPos"
+      ]
+    },
+    {
+      "address": "009b2f6c",
+      "map_names": [
+        "ORFn.Piece"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00a0b81c",
+      "file_offset": 6335516,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 24,
+      "text": "TIU DOCUMENTS BY CONTEXT"
+    },
+    {
+      "address": "00a0b85c",
+      "file_offset": 6335580,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "SHOW MORE"
+    }
+  ]
+}

@@ -1,2 +1,4 @@
 # Preserve generated evidence bytes referenced by the static SHA-256 receipt.
 analysis/cover-sheet/** -text
+# Generated Notes evidence retains exporter whitespace verbatim; hashes verify its bytes.
+analysis/notes/** -text -whitespace

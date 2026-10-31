@@ -1,0 +1,94 @@
+{
+  "function": "fNotes.TfrmNotes.lvNotesSelectItem",
+  "address": "00e202f8",
+  "status": "decompiled",
+  "file": "fNotes.TfrmNotes.lvNotesSelectItem_00e202f8.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0041c028",
+      "map_names": [
+        "Winapi.Windows.SendMessage"
+      ]
+    },
+    {
+      "address": "0042cff8",
+      "map_names": [
+        "System.SysUtils.IntToStr"
+      ]
+    },
+    {
+      "address": "00437d28",
+      "map_names": [
+        "System.SysUtils.AnsiPos"
+      ]
+    },
+    {
+      "address": "0060ca58",
+      "map_names": [
+        "Vcl.Controls.TWinControl.GetHandle"
+      ]
+    },
+    {
+      "address": "007adbdc",
+      "map_names": [
+        "ORCtrls.TORListBox.GetItemIEN"
+      ]
+    },
+    {
+      "address": "007ae0d4",
+      "map_names": [
+        "ORCtrls.TORListBox.SelectByID"
+      ]
+    },
+    {
+      "address": "009b60ec",
+      "map_names": [
+        "ORFn.StatusText"
+      ]
+    },
+    {
+      "address": "009fffc4",
+      "map_names": [
+        "VA508AccessibilityManager.TVA508StaticText.SetLabelCaption"
+      ]
+    },
+    {
+      "address": "00e216c0",
+      "map_names": [
+        "fNotes.TfrmNotes.UpdateActMenu"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e20454",
+      "file_offset": 10614868,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "SHOW MORE"
+    },
+    {
+      "address": "00e20474",
+      "file_offset": 10614900,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 60,
+      "text": "Select another document or double click the line \"SHOW MORE\""
+    },
+    {
+      "address": "00e204fc",
+      "file_offset": 10615036,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 36,
+      "text": "Retrieving selected progress note..."
+    }
+  ]
+}
