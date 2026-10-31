@@ -1,0 +1,45 @@
+   Compiling cprs-chart-mock v0.1.0 (C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\crates\chart-desktop)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 14.02s
+     Running unittests src\lib.rs (target\debug\deps\chart_core-b70bb72368796bb7.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\workflow.rs (target\debug\deps\workflow-c3325c16b19b1437.exe)
+
+running 19 tests
+test cancel_and_reopen_rejects_old_search_generation ... ok
+test demo_roster_is_a_fixture_filter_and_does_not_override_access ... ok
+test ps06_unavailable_provider_is_not_an_empty_result ... ok
+test ps02_duplicate_names_resolve_to_exact_id_and_demographics ... ok
+test ps07_malformed_fixture_rows_fail_closed ... ok
+test ps03_editing_query_invalidates_selection_and_acknowledgment ... ok
+test ps05_successful_zero_rows_is_empty ... ok
+test ps04_stale_search_and_duplicate_delivery_are_ignored ... ok
+test mismatched_chart_identity_is_rejected_atomically ... ok
+test failed_chart_load_preserves_previous_header_and_view ... ok
+test ps08_paging_carries_explicit_scoped_cursor_and_direction ... ok
+test ps01_opening_selector_keeps_committed_chart_identity ... ok
+test ps10_no_valid_selected_identifier_cannot_open_a_chart ... ok
+test ps09_cancel_rejects_pending_chart_and_preserves_previous_chart ... ok
+test ps16_unimplemented_tabs_are_explicit_placeholders ... ok
+test queued_row_selection_cannot_dismiss_an_access_prompt ... ok
+test ps14_late_old_patient_data_cannot_replace_new_chart ... ok
+test ps11_denied_and_unavailable_access_preserve_active_chart ... ok
+test ps12_access_and_deceased_flags_require_explicit_acknowledgment ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\main.rs (target\debug\deps\cprs_chart_mock-ddb7dda1bc6c805f.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests chart_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

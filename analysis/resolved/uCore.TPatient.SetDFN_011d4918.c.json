@@ -1,0 +1,68 @@
+{
+  "function": "uCore.TPatient.SetDFN",
+  "address": "011d4918",
+  "status": "decompiled",
+  "file": "uCore.TPatient.SetDFN_011d4918.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0040c99c",
+      "map_names": [
+        "System.@InitializeRecord"
+      ]
+    },
+    {
+      "address": "0040cd88",
+      "map_names": [
+        "System.@FinalizeRecord"
+      ]
+    },
+    {
+      "address": "011d4438",
+      "map_names": [
+        "uCore.TPatient.Clear"
+      ]
+    },
+    {
+      "address": "011d48d8",
+      "map_names": [
+        "uCore.TPatient.RefreshMHVStatus"
+      ]
+    },
+    {
+      "address": "011d48f8",
+      "map_names": [
+        "uCore.TPatient.RefreshVAAStatus"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011d4b48",
+      "file_offset": 14499656,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": " (INPATIENT)"
+    },
+    {
+      "address": "011d4b70",
+      "file_offset": 14499696,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": " (OUTPATIENT)"
+    }
+  ]
+}

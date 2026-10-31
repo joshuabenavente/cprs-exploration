@@ -1,0 +1,22 @@
+{
+  "scope": "Authored acceptance cases for a future synthetic Rust prototype",
+  "status": "Implemented in the mock Rust slice; automated and native UI evidence are tracked separately in validation/milestone-2/acceptance.json. These are prototype policies, not claims about CPRS runtime.",
+  "cases": [
+    {"id": "PS01", "scenario": "Open selection from an existing synthetic chart", "expected": "Keep the current chart identity until another exact patient identifier is confirmed"},
+    {"id": "PS02", "scenario": "Two synthetic records have the same display name", "expected": "Select by stable identifier and show distinguishing fields; never resolve by name alone"},
+    {"id": "PS03", "scenario": "Edit search text after choosing a row", "expected": "Invalidate the pending selection so confirmation cannot open the previous row"},
+    {"id": "PS04", "scenario": "Older search completes after a newer search", "expected": "Discard the older response using its request generation"},
+    {"id": "PS05", "scenario": "Provider returns successful zero rows", "expected": "Show an explicit empty result state"},
+    {"id": "PS06", "scenario": "Provider reports failure", "expected": "Show an error distinct from successful zero rows"},
+    {"id": "PS07", "scenario": "Provider returns a malformed row", "expected": "Report a parse error without selecting another record or treating the row as valid"},
+    {"id": "PS08", "scenario": "Request the next or previous page", "expected": "Pass an explicit cursor and direction through the provider interface; do not silently substitute prefix matching"},
+    {"id": "PS09", "scenario": "Cancel a pending patient change", "expected": "Return to the previous chart identity without committing the pending selection"},
+    {"id": "PS10", "scenario": "Confirm without a valid stable identifier", "expected": "Remain in patient selection"},
+    {"id": "PS11", "scenario": "Synthetic access policy denies the selected record", "expected": "Do not open its chart"},
+    {"id": "PS12", "scenario": "Synthetic access policy or a synthetic deceased-record flag requires confirmation", "expected": "Require an explicit decision before committing the patient identity"},
+    {"id": "PS13", "scenario": "Press OK or double-click the selected row", "expected": "Use the same confirmation path and apply the same mock access decisions"},
+    {"id": "PS14", "scenario": "Switch from synthetic patient A to synthetic patient B", "expected": "Prevent delayed A data from appearing in B's header or chart view"},
+    {"id": "PS15", "scenario": "Navigate the selector by keyboard", "expected": "Provide predictable focus and visible focus indication; confirm exact identity before opening"},
+    {"id": "PS16", "scenario": "Choose an unimplemented chart tab", "expected": "Show an explicit prototype placeholder rather than fabricated chart content"}
+  ]
+}

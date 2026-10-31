@@ -1,0 +1,39 @@
+{
+  "function": "ORNet.CallVistA",
+  "address": "009ad924",
+  "status": "decompiled",
+  "file": "ORNet.CallVistA_009ad924.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

@@ -1,0 +1,69 @@
+{
+  "function": "fFrame.TfrmFrame.mnuFileOpenClick",
+  "address": "00ff4658",
+  "status": "decompiled",
+  "file": "fFrame.TfrmFrame.mnuFileOpenClick_00ff4658.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040a734",
+      "map_names": [
+        "System.@TryFinallyExit"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "004d2ff0",
+      "map_names": [
+        "System.Classes.TList.Get"
+      ]
+    },
+    {
+      "address": "006026fc",
+      "map_names": [
+        "Vcl.Controls.TControl.SetText"
+      ]
+    },
+    {
+      "address": "00ff0a60",
+      "map_names": [
+        "fFrame.TfrmFrame.setOtherInfoPanel"
+      ]
+    },
+    {
+      "address": "00ff56a0",
+      "map_names": [
+        "fFrame.TfrmFrame.DetermineNextTab"
+      ]
+    },
+    {
+      "address": "011d56a0",
+      "map_names": [
+        "uCore.TChanges.Create"
+      ]
+    },
+    {
+      "address": "011d57b8",
+      "map_names": [
+        "uCore.TChanges.Add"
+      ]
+    },
+    {
+      "address": "011d5ac8",
+      "map_names": [
+        "uCore.TChanges.Clear"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

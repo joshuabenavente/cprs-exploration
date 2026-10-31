@@ -1,0 +1,39 @@
+{
+  "checked_on": "2026-10-31",
+  "scope": "Mock Rust application only",
+  "native_executable_started": true,
+  "native_window_discovered": true,
+  "window_title": "CPRS Chart — Mock-only Rust prototype",
+  "visual_layout": "Observed at the default 1180 by 800 client size; table, demographic preview, prompts, chart shell, and placeholder tab inspected",
+  "native_keyboard_and_focus": "Bounded smoke checks passed for character input, Enter, arrow navigation, Ctrl+O, Ctrl+F, Tab, and Escape; exhaustive traversal not tested",
+  "native_mouse_double_click": "Passed for acknowledgment and denied-access fixtures",
+  "assistive_technology": "not tested",
+  "inspection_tool_result": "App access approved; native input and screenshot inspection completed",
+  "callback_harness": "passed; separate from native input validation",
+  "automated_receipt": "validation/milestone-2/automated.json",
+  "application_state": "Left open on the SYNTH-001 Overview after final-build native OK and keyboard-cancellation checks",
+  "observations": [
+    "MORGAN search returned SYNTH-003 and SYNTH-004. Enter focused results, arrows selected SYNTH-004 with DOB 1986-09-23, and Enter opened the matching chart.",
+    "Notes displayed an explicit unimplemented placeholder while retaining the active patient header.",
+    "Ctrl+O reopened selection without changing SYNTH-004. Native double-click on PATEL opened the acknowledgment prompt with visible focus on Continue.",
+    "Escape declined acknowledgment, and a second Escape canceled switching while preserving the SYNTH-004 chart and Notes tab.",
+    "Next displayed fixtures 5 through 8 and the label 5–8 of 8 fixtures.",
+    "Native double-click on WATTS displayed the synthetic deceased-record prompt. Enter acknowledged it and loaded SYNTH-008.",
+    "Native double-click on RIVERA displayed denial feedback and retained SYNTH-008 as the active chart.",
+    "Tab displayed focus on the OK button, and Ctrl+F returned visible focus to search.",
+    "Selecting Search unavailable in the native combo box showed a distinct error panel, disabled confirmation, cleared the preview, and preserved SYNTH-008.",
+    "After the final column-width change, all four result headers were visible at the default size. Native single-click selected CARTER and the native OK button opened SYNTH-001 with matching overview data.",
+    "On the final executable, Ctrl+O reopened selection and Escape returned to the unchanged SYNTH-001 Overview with visible focus on Select new patient."
+  ],
+  "layout_adjustments": [
+    "Demographic preview keeps its intended width so the result table receives remaining horizontal space.",
+    "The Demo lookup column is widened to accommodate its header."
+  ],
+  "limits": [
+    "No screen reader, high-DPI matrix, minimum-size resize, or exhaustive focus traversal validation.",
+    "The helper's bulk literal-text injection did not populate search; a normal native character key and accessible-value input worked. Unicode and IME entry remain unverified.",
+    "Some accessibility focus captures lagged visible focus; these observations do not establish assistive-technology compatibility."
+  ],
+  "clinical_connectivity": "No broker transport or endpoint configuration implemented; original CPRS not launched",
+  "final_executable_sha256": "67c80124f7d63d92f7105d414c3ec631947a81d68b140b29c6497bbeb9724c91"
+}

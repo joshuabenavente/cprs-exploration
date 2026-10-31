@@ -1,0 +1,81 @@
+{
+  "function": "fFrame.TfrmFrame.tabPageChange",
+  "address": "00ff1ae8",
+  "status": "decompiled",
+  "file": "fFrame.TfrmFrame.tabPageChange_00ff1ae8.c",
+  "numeric_callee_references": [
+    {
+      "address": "004093c8",
+      "map_names": [
+        "System.@AsClass"
+      ]
+    },
+    {
+      "address": "00409490",
+      "map_names": [
+        "System.@CallDynaInst"
+      ]
+    },
+    {
+      "address": "006019b0",
+      "map_names": [
+        "Vcl.Controls.TControl.SetWidth"
+      ]
+    },
+    {
+      "address": "00608594",
+      "map_names": [
+        "Vcl.Controls.TWinControl.LockDrawing"
+      ]
+    },
+    {
+      "address": "006085cc",
+      "map_names": [
+        "Vcl.Controls.TWinControl.UnlockDrawing"
+      ]
+    },
+    {
+      "address": "00668488",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTabControl.GetTabIndex"
+      ]
+    },
+    {
+      "address": "009d61a8",
+      "map_names": [
+        "VA508AccessibilityRouter.ScreenReaderSystemActive"
+      ]
+    },
+    {
+      "address": "00d110e0",
+      "map_names": [
+        "uVA508CPRSCompatibility.SpeakPatient"
+      ]
+    },
+    {
+      "address": "00fd72a8",
+      "map_names": [
+        "uPtInfoSplitView.TSplitView.GetDisplayMode"
+      ]
+    },
+    {
+      "address": "00fd7f24",
+      "map_names": [
+        "uPtInfoSplitView.TSplitView.SetDisplayMode"
+      ]
+    },
+    {
+      "address": "00ff16fc",
+      "map_names": [
+        "fFrame.TfrmFrame.SwitchToPage"
+      ]
+    },
+    {
+      "address": "00ff1dbc",
+      "map_names": [
+        "fFrame.TfrmFrame.TabToPageID"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

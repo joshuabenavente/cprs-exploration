@@ -1,0 +1,726 @@
+{
+  "function": "fFrame.TfrmFrame.FormCreate",
+  "address": "00fee504",
+  "status": "decompiled",
+  "file": "fFrame.TfrmFrame.FormCreate_00fee504.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040a734",
+      "map_names": [
+        "System.@TryFinallyExit"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b01c",
+      "map_names": [
+        "System.@WStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040bb48",
+      "map_names": [
+        "System.@WStrCat"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0041bf80",
+      "map_names": [
+        "Winapi.Windows.PostMessage"
+      ]
+    },
+    {
+      "address": "0042c1a8",
+      "map_names": [
+        "System.SysUtils.UpperCase"
+      ]
+    },
+    {
+      "address": "00438984",
+      "map_names": [
+        "System.SysUtils.FindCmdLineSwitch"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "005d5a70",
+      "map_names": [
+        "Vcl.Graphics.TBitmap.Create"
+      ]
+    },
+    {
+      "address": "005d6c2c",
+      "map_names": [
+        "Vcl.Graphics.TBitmap.LoadFromResourceName"
+      ]
+    },
+    {
+      "address": "006025b0",
+      "map_names": [
+        "Vcl.Controls.TControl.SetVisible"
+      ]
+    },
+    {
+      "address": "006026fc",
+      "map_names": [
+        "Vcl.Controls.TControl.SetText"
+      ]
+    },
+    {
+      "address": "00602888",
+      "map_names": [
+        "Vcl.Controls.TControl.SetColor"
+      ]
+    },
+    {
+      "address": "006028dc",
+      "map_names": [
+        "Vcl.Controls.TControl.SetParentColor"
+      ]
+    },
+    {
+      "address": "0060c9a4",
+      "map_names": [
+        "Vcl.Controls.TWinControl.HandleNeeded"
+      ]
+    },
+    {
+      "address": "0060ca58",
+      "map_names": [
+        "Vcl.Controls.TWinControl.GetHandle"
+      ]
+    },
+    {
+      "address": "0060cdec",
+      "map_names": [
+        "Vcl.Controls.TWinControl.SetTabStop"
+      ]
+    },
+    {
+      "address": "00709244",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetVisible"
+      ]
+    },
+    {
+      "address": "00727128",
+      "map_names": [
+        "Vcl.Forms.TCustomForm.Close"
+      ]
+    },
+    {
+      "address": "0077bc88",
+      "map_names": [
+        "Vcl.OleCtrls.TOleControl.GetWideStringProp"
+      ]
+    },
+    {
+      "address": "0077ca20",
+      "map_names": [
+        "Vcl.OleCtrls.TOleControl.SetWideStringProp"
+      ]
+    },
+    {
+      "address": "0079b0f0",
+      "map_names": [
+        "VAUtils.ShowMessage"
+      ]
+    },
+    {
+      "address": "009ace6c",
+      "map_names": [
+        "ORNet.EnsureBroker"
+      ]
+    },
+    {
+      "address": "009af2c4",
+      "map_names": [
+        "ORNet.ConnectToServer"
+      ]
+    },
+    {
+      "address": "009af6ac",
+      "map_names": [
+        "ORNet.SetRetainedRPCMax"
+      ]
+    },
+    {
+      "address": "009b2a68",
+      "map_names": [
+        "ORFn.MixedCase"
+      ]
+    },
+    {
+      "address": "009b44a8",
+      "map_names": [
+        "ORFn.InfoBox"
+      ]
+    },
+    {
+      "address": "009b6a3c",
+      "map_names": [
+        "ORFn.Get508CompliantColor"
+      ]
+    },
+    {
+      "address": "009b82b0",
+      "map_names": [
+        "ORSystem.ParamSearch"
+      ]
+    },
+    {
+      "address": "009d619c",
+      "map_names": [
+        "VA508AccessibilityRouter.ScreenReaderActive"
+      ]
+    },
+    {
+      "address": "00a02d24",
+      "map_names": [
+        "uMisc.TJSONParameters.AsType<System.Boolean>"
+      ]
+    },
+    {
+      "address": "00a02dac",
+      "map_names": [
+        "uMisc.TJSONParameters.AsTypeDef<System.Boolean>"
+      ]
+    },
+    {
+      "address": "00a64c28",
+      "map_names": [
+        "VAShared.UDataTracker.TDataTracker.AddData"
+      ]
+    },
+    {
+      "address": "00ac6a70",
+      "map_names": [
+        "U_CPTAppMonitor.TCopyApplicationMonitor.LoadTheBuffer"
+      ]
+    },
+    {
+      "address": "00ac79b4",
+      "map_names": [
+        "U_CPTAppMonitor.TCopyApplicationMonitor.LoadTheProperties"
+      ]
+    },
+    {
+      "address": "00acb15c",
+      "map_names": [
+        "rPDMP.pdmpGetParams"
+      ]
+    },
+    {
+      "address": "00aea250",
+      "map_names": [
+        "uInit.InitTimeOut"
+      ]
+    },
+    {
+      "address": "00aea2f8",
+      "map_names": [
+        "uInit.UpdateTimeOutInterval"
+      ]
+    },
+    {
+      "address": "00b0e2e0",
+      "map_names": [
+        "rSpecialAuthority.InitSpecialAuthorityTypesEx"
+      ]
+    },
+    {
+      "address": "00c0066c",
+      "map_names": [
+        "rECS.TECSReport.Create"
+      ]
+    },
+    {
+      "address": "00c7de9c",
+      "map_names": [
+        "fGraphData.GraphDataOnUser"
+      ]
+    },
+    {
+      "address": "00c93fb4",
+      "map_names": [
+        "uFormMonitor.SetFormMonitoring"
+      ]
+    },
+    {
+      "address": "00cf3244",
+      "map_names": [
+        "rSurgery.ShowSurgeryTab"
+      ]
+    },
+    {
+      "address": "00dbc268",
+      "map_names": [
+        "uReminders.NotifyWhenRemindersChange"
+      ]
+    },
+    {
+      "address": "00dc0d50",
+      "map_names": [
+        "uReminders.InteractiveRemindersActive"
+      ]
+    },
+    {
+      "address": "00e7b400",
+      "map_names": [
+        "CCOW.CCOWManager.CCOWManager"
+      ]
+    },
+    {
+      "address": "00e7bc28",
+      "map_names": [
+        "CCOW.CCOWManager.TCCOWManager.GetContextor"
+      ]
+    },
+    {
+      "address": "00fe56d8",
+      "map_names": [
+        "uVersionCheck.IsCorrectVersion"
+      ]
+    },
+    {
+      "address": "00fee090",
+      "map_names": [
+        "fFrame.TfrmFrame.RefreshFixedStatusWidth"
+      ]
+    },
+    {
+      "address": "00fee10c",
+      "map_names": [
+        "fFrame.LoadExceptionLogger"
+      ]
+    },
+    {
+      "address": "00fef794",
+      "map_names": [
+        "fFrame.TfrmFrame.StartCCOWContextor"
+      ]
+    },
+    {
+      "address": "00fefeec",
+      "map_names": [
+        "fFrame.TfrmFrame.SetUserTools"
+      ]
+    },
+    {
+      "address": "00ff0574",
+      "map_names": [
+        "fFrame.TfrmFrame.ValidECSUser"
+      ]
+    },
+    {
+      "address": "00ff09d4",
+      "map_names": [
+        "fFrame.TfrmFrame.SetDebugMenu"
+      ]
+    },
+    {
+      "address": "00ffd8d8",
+      "map_names": [
+        "fFrame.TfrmFrame.CreateTab"
+      ]
+    },
+    {
+      "address": "00ffdcd8",
+      "map_names": [
+        "fFrame.TfrmFrame.ShowHideChartTabMenus"
+      ]
+    },
+    {
+      "address": "00ffdd94",
+      "map_names": [
+        "fFrame.TfrmFrame.ReportsOnlyDisplay"
+      ]
+    },
+    {
+      "address": "01004928",
+      "map_names": [
+        "fFrame.TfrmFrame.GetExcludedFromMixed"
+      ]
+    },
+    {
+      "address": "010057e0",
+      "map_names": [
+        "fFrame.TCPRS_CCOW.Create"
+      ]
+    },
+    {
+      "address": "010068e0",
+      "map_names": [
+        "fFrame.TCPRS_CCOW.StartCCOWContextor"
+      ]
+    },
+    {
+      "address": "010072b4",
+      "map_names": [
+        "fFrame.TJSONParameters.AsTypeDef<System.Integer>"
+      ]
+    },
+    {
+      "address": "010dc1ec",
+      "map_names": [
+        "uOrders.InitialOrderVariables"
+      ]
+    },
+    {
+      "address": "0118e5bc",
+      "map_names": [
+        "rMisc.ServerHasPatch"
+      ]
+    },
+    {
+      "address": "0118e66c",
+      "map_names": [
+        "rMisc.SiteSpansIntlDateLine"
+      ]
+    },
+    {
+      "address": "0119012c",
+      "map_names": [
+        "rMisc.TSizeHolder.Create"
+      ]
+    },
+    {
+      "address": "011c5f98",
+      "map_names": [
+        "fBase508Form.TfrmBase508Form.Create"
+      ]
+    },
+    {
+      "address": "011cb2bc",
+      "map_names": [
+        "rCore.GetUserParam"
+      ]
+    },
+    {
+      "address": "011d413c",
+      "map_names": [
+        "uCore.TUser.Create"
+      ]
+    },
+    {
+      "address": "011d433c",
+      "map_names": [
+        "uCore.TPatient.Create"
+      ]
+    },
+    {
+      "address": "011d4b8c",
+      "map_names": [
+        "uCore.TEncounter.Create"
+      ]
+    },
+    {
+      "address": "011d56a0",
+      "map_names": [
+        "uCore.TChanges.Create"
+      ]
+    },
+    {
+      "address": "011d682c",
+      "map_names": [
+        "uCore.TNotifications.Create"
+      ]
+    },
+    {
+      "address": "011d7124",
+      "map_names": [
+        "uCore.TRemoteReportList.Create"
+      ]
+    },
+    {
+      "address": "011d72b4",
+      "map_names": [
+        "uCore.TRemoteSiteList.Create"
+      ]
+    },
+    {
+      "address": "011d7790",
+      "map_names": [
+        "uCore.SystemParameters"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00fef16c",
+      "file_offset": 12510572,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "OLDCCOW"
+    },
+    {
+      "address": "00fef188",
+      "file_offset": 12510600,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "CCOW"
+    },
+    {
+      "address": "00fef1a0",
+      "file_offset": 12510624,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "DISABLE"
+    },
+    {
+      "address": "00fef1bc",
+      "file_offset": 12510652,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "PATIENTONLY"
+    },
+    {
+      "address": "00fef1e0",
+      "file_offset": 12510688,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 17,
+      "text": "OR CPRS GUI CHART"
+    },
+    {
+      "address": "00fef358",
+      "file_offset": 12511064,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "User"
+    },
+    {
+      "address": "00fef370",
+      "file_offset": 12511088,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": "ResponsiveGUI"
+    },
+    {
+      "address": "00fef398",
+      "file_offset": 12511128,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "retainedRPCMax"
+    },
+    {
+      "address": "00fef3c4",
+      "file_offset": 12511172,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 15,
+      "text": "XUS PKI GET UPN"
+    },
+    {
+      "address": "00fef3f0",
+      "file_offset": 12511216,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 18,
+      "text": "Tab Access Problem"
+    },
+    {
+      "address": "00fef424",
+      "file_offset": 12511268,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 22,
+      "text": "No valid tabs assigned"
+    },
+    {
+      "address": "00fef460",
+      "file_offset": 12511328,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 30,
+      "text": "otherInfromationPanel.turnedOn"
+    },
+    {
+      "address": "00fef4ac",
+      "file_offset": 12511404,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 30,
+      "text": "otherInfromationPanel.useColor"
+    },
+    {
+      "address": "00fef4f8",
+      "file_offset": 12511480,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 33,
+      "text": "otherInfromationPanel.reportBoxOn"
+    },
+    {
+      "address": "00fef548",
+      "file_offset": 12511560,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 10,
+      "text": "OR*3.0*407"
+    },
+    {
+      "address": "00fef56c",
+      "file_offset": 12511596,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "Patient"
+    },
+    {
+      "address": "00fef588",
+      "file_offset": 12511624,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "Encounter"
+    },
+    {
+      "address": "00fef5a8",
+      "file_offset": 12511656,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 22,
+      "text": "VistA CPRS in use by: "
+    },
+    {
+      "address": "00fef608",
+      "file_offset": 12511752,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 8,
+      "text": "Problems"
+    },
+    {
+      "address": "00fef628",
+      "file_offset": 12511784,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "Meds"
+    },
+    {
+      "address": "00fef640",
+      "file_offset": 12511808,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "Orders"
+    },
+    {
+      "address": "00fef65c",
+      "file_offset": 12511836,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "Notes"
+    },
+    {
+      "address": "00fef674",
+      "file_offset": 12511860,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 8,
+      "text": "Consults"
+    },
+    {
+      "address": "00fef694",
+      "file_offset": 12511892,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "Surgery"
+    },
+    {
+      "address": "00fef6b0",
+      "file_offset": 12511920,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 8,
+      "text": "D/C Summ"
+    },
+    {
+      "address": "00fef6d0",
+      "file_offset": 12511952,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "Labs"
+    },
+    {
+      "address": "00fef6e8",
+      "file_offset": 12511976,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "Reports"
+    },
+    {
+      "address": "00fef704",
+      "file_offset": 12512004,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "Cover Sheet"
+    },
+    {
+      "address": "00fef728",
+      "file_offset": 12512040,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": "BMP_HANDRIGHT"
+    },
+    {
+      "address": "00fef750",
+      "file_offset": 12512080,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 24,
+      "text": "OR SIMILAR NAMES ENABLED"
+    },
+    {
+      "address": "00fef790",
+      "file_offset": 12512144,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "1"
+    }
+  ]
+}

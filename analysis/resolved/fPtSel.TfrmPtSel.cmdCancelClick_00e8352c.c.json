@@ -1,0 +1,44 @@
+{
+  "function": "fPtSel.TfrmPtSel.cmdCancelClick",
+  "address": "00e8352c",
+  "status": "decompiled",
+  "file": "fPtSel.TfrmPtSel.cmdCancelClick_00e8352c.c",
+  "numeric_callee_references": [
+    {
+      "address": "00727128",
+      "map_names": [
+        "Vcl.Forms.TCustomForm.Close"
+      ]
+    },
+    {
+      "address": "009b44a8",
+      "map_names": [
+        "ORFn.InfoBox"
+      ]
+    },
+    {
+      "address": "009d619c",
+      "map_names": [
+        "VA508AccessibilityRouter.ScreenReaderActive"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e83590",
+      "file_offset": 11020688,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": "Confirmation"
+    },
+    {
+      "address": "00e835b8",
+      "file_offset": 11020728,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 42,
+      "text": "No patient selected. Close CPRS Yes or No?"
+    }
+  ]
+}

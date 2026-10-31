@@ -1,0 +1,74 @@
+"""Resolve raw decompiler addresses through the MAP and bounded Delphi literals.
+
+Raw Ghidra output is preserved. Annotations are separate evidence, not Pascal types.
+"""
+import csv
+import json
+from pathlib import Path
+import re
+import struct
+from inspect_chart import PE
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def main():
+    pe = PE(ROOT / 'cprs/CPRSChart.exe')
+    by_address = {}
+    with (ROOT / 'analysis/inventory/chart-symbols.tsv').open(encoding='utf-8', newline='') as f:
+        for row in csv.DictReader(f, delimiter='\t'):
+            by_address.setdefault(row['address'], []).append(row['name'])
+
+    def literal(address):
+        try:
+            at = pe.offset(int(address, 16) - pe.image_base)
+            codepage, width, refcount, length = struct.unpack_from('<HHii', pe.data, at - 12)
+            if width not in (1, 2) or refcount != -1 or not 0 < length <= 4096:
+                return None
+            if width == 2 and codepage not in (0, 1200):
+                return None
+            encoding = 'utf-16-le' if width == 2 else ('utf-8' if codepage == 65001 else 'cp1252')
+            raw = pe.data[at:at + length * width]
+            if pe.data[at + length * width:at + (length + 1) * width] != b'\0' * width:
+                return None
+            text = raw.decode(encoding)
+            if any(ord(c) < 32 and c not in '\r\n\t' for c in text):
+                return None
+            return {'address': address, 'file_offset': at, 'codepage': codepage,
+                    'element_width': width, 'length': length, 'text': text}
+        except (ValueError, UnicodeDecodeError, struct.error):
+            return None
+
+    out = ROOT / 'analysis/resolved'
+    out.mkdir(parents=True, exist_ok=True)
+    results = []
+    with (ROOT / 'analysis/decompiled/workflow-functions.tsv').open(encoding='utf-8', newline='') as f:
+        functions = list(csv.DictReader(f, delimiter='\t'))
+    for function in functions:
+        if function['status'] != 'decompiled':
+            continue
+        text = (ROOT / 'analysis/decompiled' / function['file']).read_text(encoding='utf-8')
+        calls = []
+        for address in sorted(set(re.findall(r'func_0x([0-9a-fA-F]{8})', text))):
+            calls.append({'address': address, 'map_names': by_address.get(address, [])})
+        literals = []
+        for address in sorted(set(re.findall(r'UNK_([0-9a-fA-F]{8})', text))):
+            if value := literal(address):
+                literals.append(value)
+        resolved = {**function, 'numeric_callee_references': calls, 'delphi_string_literals': literals}
+        (out / (function['file'] + '.json')).write_text(json.dumps(resolved, indent=2, ensure_ascii=False), encoding='utf-8')
+        results.append(resolved)
+    (out / 'workflow-evidence.json').write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding='utf-8')
+    for function in results:
+        if function['function'].startswith(('fPtSel.', 'rCore.')):
+            print(function['function'])
+            for call in function['numeric_callee_references']:
+                relevant = [n for n in call['map_names'] if n.startswith(('rCore.', 'uCore.', 'fPtSel.', 'fFrame.', 'fDupPts.'))]
+                if relevant:
+                    print('  call', call['address'], ' | '.join(relevant))
+            for value in function['delphi_string_literals']:
+                print('  literal', value['address'], repr(value['text']))
+
+
+if __name__ == '__main__':
+    main()

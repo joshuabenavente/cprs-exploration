@@ -1,0 +1,152 @@
+{
+  "function": "uCore.AllowAccessToSensitivePatient",
+  "address": "011d3630",
+  "status": "decompiled",
+  "file": "uCore.AllowAccessToSensitivePatient_011d3630.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "009b2f6c",
+      "map_names": [
+        "ORFn.Piece"
+      ]
+    },
+    {
+      "address": "009b44a8",
+      "map_names": [
+        "ORFn.InfoBox"
+      ]
+    },
+    {
+      "address": "00b94a00",
+      "map_names": [
+        "fEncVitals.TJSONParameters.AsTypeDef<System.string>"
+      ]
+    },
+    {
+      "address": "011ce9f4",
+      "map_names": [
+        "rCore.LogSensitiveRecordAccess"
+      ]
+    },
+    {
+      "address": "011d6b48",
+      "map_names": [
+        "uCore.TNotifications.GetRecordID"
+      ]
+    },
+    {
+      "address": "011d6df8",
+      "map_names": [
+        "uCore.TNotifications.DeleteForCurrentUser"
+      ]
+    },
+    {
+      "address": "011d7790",
+      "map_names": [
+        "uCore.SystemParameters"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011d3848",
+      "file_offset": 14494792,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "\r\n"
+    },
+    {
+      "address": "011d385c",
+      "file_offset": 14494812,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 20,
+      "text": "NEXT NOTIFICATION:  "
+    },
+    {
+      "address": "011d3894",
+      "file_offset": 14494868,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "Error"
+    },
+    {
+      "address": "011d38ac",
+      "file_offset": 14494892,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 41,
+      "text": "Unable to perform sensitive record checks"
+    },
+    {
+      "address": "011d390c",
+      "file_offset": 14494988,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 17,
+      "text": "Restricted Record"
+    },
+    {
+      "address": "011d393c",
+      "file_offset": 14495036,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 61,
+      "text": "Do you want to continue accessing this patient record? No/Yes"
+    },
+    {
+      "address": "011d39c4",
+      "file_offset": 14495172,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 22,
+      "text": "sensitivePatientPrompt"
+    },
+    {
+      "address": "011d3a00",
+      "file_offset": 14495232,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": "Access Denied"
+    }
+  ]
+}

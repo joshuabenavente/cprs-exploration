@@ -1,0 +1,33 @@
+{
+  "function": "ORNet.CallBroker",
+  "address": "009af1ec",
+  "status": "decompiled",
+  "file": "ORNet.CallBroker_009af1ec.c",
+  "numeric_callee_references": [
+    {
+      "address": "009acd20",
+      "map_names": [
+        "ORNet.LockBroker"
+      ]
+    },
+    {
+      "address": "009acd2c",
+      "map_names": [
+        "ORNet.UnlockBroker"
+      ]
+    },
+    {
+      "address": "009ae170",
+      "map_names": [
+        "ORNet.UpdateContext"
+      ]
+    },
+    {
+      "address": "009ae314",
+      "map_names": [
+        "ORNet.CallBrokerInContext"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

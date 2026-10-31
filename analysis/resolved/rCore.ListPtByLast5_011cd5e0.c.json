@@ -1,0 +1,106 @@
+{
+  "function": "rCore.ListPtByLast5",
+  "address": "011cd5e0",
+  "status": "decompiled",
+  "file": "rCore.ListPtByLast5_011cd5e0.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0042c1a8",
+      "map_names": [
+        "System.SysUtils.UpperCase"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "0079af38",
+      "map_names": [
+        "VAUtils.SetPiece"
+      ]
+    },
+    {
+      "address": "009b1794",
+      "map_names": [
+        "ORFn.FormatFMDateTimeStr"
+      ]
+    },
+    {
+      "address": "009b2cf8",
+      "map_names": [
+        "ORFn.MixedCaseList"
+      ]
+    },
+    {
+      "address": "009b3288",
+      "map_names": [
+        "ORFn.SortByPiece"
+      ]
+    },
+    {
+      "address": "011ca4f0",
+      "map_names": [
+        "rCore.FormatSSN"
+      ]
+    },
+    {
+      "address": "011ca608",
+      "map_names": [
+        "rCore.IsSSN"
+      ]
+    },
+    {
+      "address": "011ca654",
+      "map_names": [
+        "rCore.IsFMDate"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011cd760",
+      "file_offset": 14469984,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "ORWPT LAST5"
+    },
+    {
+      "address": "011cd784",
+      "file_offset": 14470020,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "mmm d, yyyy"
+    },
+    {
+      "address": "011cd7a8",
+      "file_offset": 14470056,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "   "
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "function": "fFrame.TfrmFrame.SetupPatient",
+  "address": "00ff1f14",
+  "status": "decompiled",
+  "file": "fFrame.TfrmFrame.SetupPatient_00ff1f14.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c134",
+      "map_names": [
+        "System.@UStrCat"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0042c5fc",
+      "map_names": [
+        "System.SysUtils.Trim"
+      ]
+    },
+    {
+      "address": "0042ef18",
+      "map_names": [
+        "System.SysUtils.Format"
+      ]
+    },
+    {
+      "address": "00430914",
+      "map_names": [
+        "System.SysUtils.FloatToStr"
+      ]
+    },
+    {
+      "address": "00438098",
+      "map_names": [
+        "System.SysUtils.StringReplace"
+      ]
+    },
+    {
+      "address": "005cda30",
+      "map_names": [
+        "Vcl.Graphics.TFont.SetColor"
+      ]
+    },
+    {
+      "address": "00601944",
+      "map_names": [
+        "Vcl.Controls.TControl.SetLeft"
+      ]
+    },
+    {
+      "address": "006019b0",
+      "map_names": [
+        "Vcl.Controls.TControl.SetWidth"
+      ]
+    },
+    {
+      "address": "006025b0",
+      "map_names": [
+        "Vcl.Controls.TControl.SetVisible"
+      ]
+    },
+    {
+      "address": "006026ac",
+      "map_names": [
+        "Vcl.Controls.TControl.GetText"
+      ]
+    },
+    {
+      "address": "006026fc",
+      "map_names": [
+        "Vcl.Controls.TControl.SetText"
+      ]
+    },
+    {
+      "address": "0060ca58",
+      "map_names": [
+        "Vcl.Controls.TWinControl.GetHandle"
+      ]
+    },
+    {
+      "address": "00720c40",
+      "map_names": [
+        "Vcl.Forms.TCustomForm.SetVisible"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "009a9728",
+      "map_names": [
+        "UResponsiveGUI.TResponsiveGUI.ProcessMessages"
+      ]
+    },
+    {
+      "address": "009b2a68",
+      "map_names": [
+        "ORFn.MixedCase"
+      ]
+    },
+    {
+      "address": "009b6a3c",
+      "map_names": [
+        "ORFn.Get508CompliantColor"
+      ]
+    },
+    {
+      "address": "009d61a8",
+      "map_names": [
+        "VA508AccessibilityRouter.ScreenReaderSystemActive"
+      ]
+    },
+    {
+      "address": "00df6fa0",
+      "map_names": [
+        "uEventHooks.ProcessPatientChangeEventHook"
+      ]
+    },
+    {
+      "address": "00e6f9d8",
+      "map_names": [
+        "uOrPtf.HasActiveFlg"
+      ]
+    },
+    {
+      "address": "00e6fa3c",
+      "map_names": [
+        "uOrPtf.TriggerPRFPopUp"
+      ]
+    },
+    {
+      "address": "00e7067c",
+      "map_names": [
+        "fPatientFlagMulti.ShowFlags"
+      ]
+    },
+    {
+      "address": "00fd8b24",
+      "map_names": [
+        "fPtSelMsg.ShowPatientSelectMessages"
+      ]
+    },
+    {
+      "address": "00fed0f0",
+      "map_names": [
+        "fFrame.TfrmFrame.ClearPatient"
+      ]
+    },
+    {
+      "address": "00fede1c",
+      "map_names": [
+        "fFrame.TfrmFrame.DisplayEncounterText"
+      ]
+    },
+    {
+      "address": "00ff0a60",
+      "map_names": [
+        "fFrame.TfrmFrame.setOtherInfoPanel"
+      ]
+    },
+    {
+      "address": "00ff1e40",
+      "map_names": [
+        "fFrame.DetermineStringWidth"
+      ]
+    },
+    {
+      "address": "00ffa348",
+      "map_names": [
+        "fFrame.TfrmFrame.SetUpCIRN"
+      ]
+    },
+    {
+      "address": "00ffe4b8",
+      "map_names": [
+        "fFrame.TfrmFrame.UpdateVAAMHVButtons"
+      ]
+    },
+    {
+      "address": "00ffece8",
+      "map_names": [
+        "fFrame.TfrmFrame.pdmpAlign"
+      ]
+    },
+    {
+      "address": "00ffedf8",
+      "map_names": [
+        "fFrame.TfrmFrame.pdmpSetup"
+      ]
+    },
+    {
+      "address": "010028b8",
+      "map_names": [
+        "fFrame.TfrmFrame.updateOTHD"
+      ]
+    },
+    {
+      "address": "01004a70",
+      "map_names": [
+        "fFrame.TfrmFrame.GetPatientInfoLabelDisplay"
+      ]
+    },
+    {
+      "address": "0118edb8",
+      "map_names": [
+        "rMisc.SetShareNode"
+      ]
+    },
+    {
+      "address": "011ce880",
+      "map_names": [
+        "rCore.HasLegacyData"
+      ]
+    },
+    {
+      "address": "011ceac8",
+      "map_names": [
+        "rCore.MeansTestRequired"
+      ]
+    },
+    {
+      "address": "011d3f74",
+      "map_names": [
+        "uCore.NotifyOtherApps"
+      ]
+    },
+    {
+      "address": "011d4550",
+      "map_names": [
+        "uCore.TPatient.GetCombatVet"
+      ]
+    },
+    {
+      "address": "011d7790",
+      "map_names": [
+        "uCore.SystemParameters"
+      ]
+    },
+    {
+      "address": "01201fb8",
+      "map_names": [
+        "uConst.SigiHintLong"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00ff2c20",
+      "file_offset": 12525600,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "CV "
+    },
+    {
+      "address": "00ff2c34",
+      "file_offset": 12525620,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 35,
+      "text": "Click for more patient information."
+    },
+    {
+      "address": "00ff2c88",
+      "file_offset": 12525704,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": "%0:s\r\n\r\n%1:s"
+    },
+    {
+      "address": "00ff2cb0",
+      "file_offset": 12525744,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "%0:s %1:s"
+    },
+    {
+      "address": "00ff2cd4",
+      "file_offset": 12525780,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": " is "
+    },
+    {
+      "address": "00ff2cec",
+      "file_offset": 12525804,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "\t"
+    },
+    {
+      "address": "00ff2cfc",
+      "file_offset": 12525820,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": ". "
+    },
+    {
+      "address": "00ff2d10",
+      "file_offset": 12525840,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "\r\n"
+    },
+    {
+      "address": "00ff2d24",
+      "file_offset": 12525860,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 15,
+      "text": "%0:s %1:s %2:s."
+    },
+    {
+      "address": "00ff2d50",
+      "file_offset": 12525904,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": ":"
+    },
+    {
+      "address": "00ff2d60",
+      "file_offset": 12525920,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 8,
+      "text": "Postings"
+    },
+    {
+      "address": "00ff2d80",
+      "file_offset": 12525952,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "No Postings"
+    },
+    {
+      "address": "00ff2da4",
+      "file_offset": 12525988,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": " "
+    },
+    {
+      "address": "00ff2db4",
+      "file_offset": 12526004,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": " / "
+    },
+    {
+      "address": "00ff2dc8",
+      "file_offset": 12526024,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 24,
+      "text": "(Inpatient) Attending:  "
+    },
+    {
+      "address": "00ff2e08",
+      "file_offset": 12526088,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 25,
+      "text": " - (Inpatient) Provider: "
+    },
+    {
+      "address": "00ff2e48",
+      "file_offset": 12526152,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 26,
+      "text": "MH Treatment Coordinator: "
+    },
+    {
+      "address": "00ff2e8c",
+      "file_offset": 12526220,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "P"
+    },
+    {
+      "address": "00ff2e9c",
+      "file_offset": 12526236,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 35,
+      "text": "MH Treatment Coordinator Unassigned"
+    },
+    {
+      "address": "00ff2ef0",
+      "file_offset": 12526320,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "^"
+    },
+    {
+      "address": "00ff2f00",
+      "file_offset": 12526336,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "XPT"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+; Static instruction listing. Function bodies and indirect exception flow require review.
+011cd5e0  55  PUSH EBP
+011cd5e1  8bec  MOV EBP,ESP
+011cd5e3  b905000000  MOV ECX,0x5
+011cd5e8  6a00  PUSH 0x0
+011cd5ea  6a00  PUSH 0x0
+011cd5ec  49  DEC ECX
+011cd5ed  75f9  JNZ 0x011cd5e8
+011cd5ef  53  PUSH EBX
+011cd5f0  56  PUSH ESI
+011cd5f1  57  PUSH EDI
+011cd5f2  8bf2  MOV ESI,EDX
+011cd5f4  8bd8  MOV EBX,EAX
+011cd5f6  33c0  XOR EAX,EAX
+011cd5f8  55  PUSH EBP
+011cd5f9  6845d71c01  PUSH 0x11cd745
+011cd5fe  64ff30  PUSH dword ptr FS:[EAX]
+011cd601  648920  MOV dword ptr FS:[EAX],ESP
+011cd604  53  PUSH EBX
+011cd605  6a00  PUSH 0x0
+011cd607  8d55e4  LEA EDX,[EBP + -0x1c]
+011cd60a  8bc6  MOV EAX,ESI
+011cd60c  e897eb25ff  CALL 0x0042c1a8
+011cd611  8b45e4  MOV EAX,dword ptr [EBP + -0x1c]
+011cd614  8945e8  MOV dword ptr [EBP + -0x18],EAX
+011cd617  c645ec11  MOV byte ptr [EBP + -0x14],0x11
+011cd61b  8d55e8  LEA EDX,[EBP + -0x18]
+011cd61e  33c9  XOR ECX,ECX
+011cd620  b860d71c01  MOV EAX,0x11cd760
+011cd625  e856047eff  CALL 0x009ada80
+011cd62a  6a00  PUSH 0x0
+011cd62c  b902000000  MOV ECX,0x2
+011cd631  66ba5e00  MOV DX,0x5e
+011cd635  8bc3  MOV EAX,EBX
+011cd637  e84c5c7eff  CALL 0x009b3288
+011cd63c  8bc3  MOV EAX,EBX
+011cd63e  8b10  MOV EDX,dword ptr [EAX]
+011cd640  ff5214  CALL dword ptr [EDX + 0x14]
+011cd643  48  DEC EAX
+011cd644  85c0  TEST EAX,EAX
+011cd646  0f8cc8000000  JL 0x011cd714
+011cd64c  40  INC EAX
+011cd64d  8945f0  MOV dword ptr [EBP + -0x10],EAX
+011cd650  33f6  XOR ESI,ESI
+011cd652  8d4dfc  LEA ECX,[EBP + -0x4]
+011cd655  8bd6  MOV EDX,ESI
+011cd657  8bc3  MOV EAX,EBX
+011cd659  8b38  MOV EDI,dword ptr [EAX]
+011cd65b  ff570c  CALL dword ptr [EDI + 0xc]
+011cd65e  8d45f8  LEA EAX,[EBP + -0x8]
+011cd661  50  PUSH EAX
+011cd662  b903000000  MOV ECX,0x3
+011cd667  66ba5e00  MOV DX,0x5e
+011cd66b  8b45fc  MOV EAX,dword ptr [EBP + -0x4]
+011cd66e  e879d65cff  CALL 0x0079acec
+011cd673  8d45f4  LEA EAX,[EBP + -0xc]
+011cd676  50  PUSH EAX
+011cd677  b904000000  MOV ECX,0x4
+011cd67c  66ba5e00  MOV DX,0x5e
+011cd680  8b45fc  MOV EAX,dword ptr [EBP + -0x4]
+011cd683  e864d65cff  CALL 0x0079acec
+011cd688  8b45f8  MOV EAX,dword ptr [EBP + -0x8]
+011cd68b  e8c4cfffff  CALL 0x011ca654
+011cd690  84c0  TEST AL,AL
+011cd692  741b  JZ 0x011cd6af
+011cd694  8d4de0  LEA ECX,[EBP + -0x20]
+011cd697  8b55f8  MOV EDX,dword ptr [EBP + -0x8]
+011cd69a  b884d71c01  MOV EAX,0x11cd784
+011cd69f  e8f0407eff  CALL 0x009b1794
+011cd6a4  8b55e0  MOV EDX,dword ptr [EBP + -0x20]
+011cd6a7  8d45f8  LEA EAX,[EBP + -0x8]
+011cd6aa  e85ddd23ff  CALL 0x0040b40c
+011cd6af  8b45f4  MOV EAX,dword ptr [EBP + -0xc]
+011cd6b2  e851cfffff  CALL 0x011ca608
+011cd6b7  84c0  TEST AL,AL
+011cd6b9  7416  JZ 0x011cd6d1
+011cd6bb  8d55dc  LEA EDX,[EBP + -0x24]
+011cd6be  8b45f4  MOV EAX,dword ptr [EBP + -0xc]
+011cd6c1  e82aceffff  CALL 0x011ca4f0
+011cd6c6  8b55dc  MOV EDX,dword ptr [EBP + -0x24]
+011cd6c9  8d45f4  LEA EAX,[EBP + -0xc]
+011cd6cc  e83bdd23ff  CALL 0x0040b40c
+011cd6d1  ff75f4  PUSH dword ptr [EBP + -0xc]
+011cd6d4  68a8d71c01  PUSH 0x11cd7a8
+011cd6d9  ff75f8  PUSH dword ptr [EBP + -0x8]
+011cd6dc  8d45d8  LEA EAX,[EBP + -0x28]
+011cd6df  ba03000000  MOV EDX,0x3
+011cd6e4  e82beb23ff  CALL 0x0040c214
+011cd6e9  8b45d8  MOV EAX,dword ptr [EBP + -0x28]
+011cd6ec  50  PUSH EAX
+011cd6ed  8d45fc  LEA EAX,[EBP + -0x4]
+011cd6f0  b903000000  MOV ECX,0x3
+011cd6f5  66ba5e00  MOV DX,0x5e
+011cd6f9  e83ad85cff  CALL 0x0079af38
+011cd6fe  8b4dfc  MOV ECX,dword ptr [EBP + -0x4]
+011cd701  8bd6  MOV EDX,ESI
+011cd703  8bc3  MOV EAX,EBX
+011cd705  8b38  MOV EDI,dword ptr [EAX]
+011cd707  ff5720  CALL dword ptr [EDI + 0x20]
+011cd70a  46  INC ESI
+011cd70b  ff4df0  DEC dword ptr [EBP + -0x10]
+011cd70e  0f853effffff  JNZ 0x011cd652
+011cd714  8bc3  MOV EAX,EBX
+011cd716  e8dd557eff  CALL 0x009b2cf8
+011cd71b  33c0  XOR EAX,EAX
+011cd71d  5a  POP EDX
+011cd71e  59  POP ECX
+011cd71f  59  POP ECX
+011cd720  648910  MOV dword ptr FS:[EAX],EDX
+011cd723  684cd71c01  PUSH 0x11cd74c
+011cd728  8d45d8  LEA EAX,[EBP + -0x28]
+011cd72b  ba04000000  MOV EDX,0x4
+011cd730  e8ffd823ff  CALL 0x0040b034
+011cd735  8d45f4  LEA EAX,[EBP + -0xc]
+011cd738  ba03000000  MOV EDX,0x3
+011cd73d  e8f2d823ff  CALL 0x0040b034
+011cd742  58  POP EAX
+011cd743  ffe0  JMP EAX

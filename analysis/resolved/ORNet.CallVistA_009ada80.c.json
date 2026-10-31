@@ -1,0 +1,39 @@
+{
+  "function": "ORNet.CallVistA",
+  "address": "009ada80",
+  "status": "decompiled",
+  "file": "ORNet.CallVistA_009ada80.c",
+  "numeric_callee_references": [
+    {
+      "address": "0099f0b8",
+      "map_names": [
+        "Trpcb.TParams.Clear"
+      ]
+    },
+    {
+      "address": "009acd20",
+      "map_names": [
+        "ORNet.LockBroker"
+      ]
+    },
+    {
+      "address": "009acd2c",
+      "map_names": [
+        "ORNet.UnlockBroker"
+      ]
+    },
+    {
+      "address": "009ad030",
+      "map_names": [
+        "ORNet.SetParams"
+      ]
+    },
+    {
+      "address": "009ad744",
+      "map_names": [
+        "ORNet.AbortRPCCall"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

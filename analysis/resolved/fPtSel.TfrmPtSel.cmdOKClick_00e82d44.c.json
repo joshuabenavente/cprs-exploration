@@ -1,0 +1,138 @@
+{
+  "function": "fPtSel.TfrmPtSel.cmdOKClick",
+  "address": "00e82d44",
+  "status": "decompiled",
+  "file": "fPtSel.TfrmPtSel.cmdOKClick_00e82d44.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040d1c4",
+      "map_names": [
+        "System.@FinalizeArray"
+      ]
+    },
+    {
+      "address": "0042c5fc",
+      "map_names": [
+        "System.SysUtils.Trim"
+      ]
+    },
+    {
+      "address": "0044973c",
+      "map_names": [
+        "System.Variants.@VarToUStr"
+      ]
+    },
+    {
+      "address": "007b3b04",
+      "map_names": [
+        "ORCtrls.TORComboBox.GetItemID"
+      ]
+    },
+    {
+      "address": "009b11a0",
+      "map_names": [
+        "ORFn.FormatFMDateTime"
+      ]
+    },
+    {
+      "address": "009b44a8",
+      "map_names": [
+        "ORFn.InfoBox"
+      ]
+    },
+    {
+      "address": "00e86810",
+      "map_names": [
+        "fPtSel.TfrmPtSel.DupLastSSN"
+      ]
+    },
+    {
+      "address": "011ce34c",
+      "map_names": [
+        "rCore.DateOfDeath"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e82edc",
+      "file_offset": 11018972,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 19,
+      "text": "No Patient Selected"
+    },
+    {
+      "address": "00e82f10",
+      "file_offset": 11019024,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 32,
+      "text": "A patient has not been selected."
+    },
+    {
+      "address": "00e82f60",
+      "file_offset": 11019104,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 18,
+      "text": "This patient died "
+    },
+    {
+      "address": "00e82f94",
+      "file_offset": 11019156,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 17,
+      "text": "mmm dd,yyyy hh:nn"
+    },
+    {
+      "address": "00e82fc4",
+      "file_offset": 11019204,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "\r\n"
+    },
+    {
+      "address": "00e82fd8",
+      "file_offset": 11019224,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 24,
+      "text": "Do you wish to continue?"
+    },
+    {
+      "address": "00e83018",
+      "file_offset": 11019288,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 16,
+      "text": "Deceased Patient"
+    }
+  ]
+}

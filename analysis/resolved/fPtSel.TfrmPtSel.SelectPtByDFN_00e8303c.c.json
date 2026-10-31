@@ -1,0 +1,164 @@
+{
+  "function": "fPtSel.TfrmPtSel.SelectPtByDFN",
+  "address": "00e8303c",
+  "status": "decompiled",
+  "file": "fPtSel.TfrmPtSel.SelectPtByDFN_00e8303c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0040c35c",
+      "map_names": [
+        "System.@UStrCopy"
+      ]
+    },
+    {
+      "address": "0042d238",
+      "map_names": [
+        "System.SysUtils.StrToIntDef"
+      ]
+    },
+    {
+      "address": "00727128",
+      "map_names": [
+        "Vcl.Forms.TCustomForm.Close"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "007b3b20",
+      "map_names": [
+        "ORCtrls.TORComboBox.GetItemIEN"
+      ]
+    },
+    {
+      "address": "007b3b44",
+      "map_names": [
+        "ORCtrls.TORComboBox.GetItemIndex"
+      ]
+    },
+    {
+      "address": "009b17dc",
+      "map_names": [
+        "ORFn.IsFMDateTime"
+      ]
+    },
+    {
+      "address": "009b18cc",
+      "map_names": [
+        "ORFn.MakeFMDateTime"
+      ]
+    },
+    {
+      "address": "00e7b400",
+      "map_names": [
+        "CCOW.CCOWManager.CCOWManager"
+      ]
+    },
+    {
+      "address": "00e7bf48",
+      "map_names": [
+        "CCOW.CCOWManager.TCCOWManager.GetIsParticipating"
+      ]
+    },
+    {
+      "address": "01005830",
+      "map_names": [
+        "fFrame.TCPRS_CCOW.AllowCCOWContextChange"
+      ]
+    },
+    {
+      "address": "011cc430",
+      "map_names": [
+        "rCore.DfltPtListSrc"
+      ]
+    },
+    {
+      "address": "011d4e80",
+      "map_names": [
+        "uCore.TEncounter.Clear"
+      ]
+    },
+    {
+      "address": "011d51c8",
+      "map_names": [
+        "uCore.TEncounter.SetDateTime"
+      ]
+    },
+    {
+      "address": "011d521c",
+      "map_names": [
+        "uCore.TEncounter.SetInpatient"
+      ]
+    },
+    {
+      "address": "011d5240",
+      "map_names": [
+        "uCore.TEncounter.SetLocation"
+      ]
+    },
+    {
+      "address": "011d527c",
+      "map_names": [
+        "uCore.TEncounter.SetProvider"
+      ]
+    },
+    {
+      "address": "011d52e0",
+      "map_names": [
+        "uCore.TEncounter.SetVisitCategory"
+      ]
+    },
+    {
+      "address": "011d5ac8",
+      "map_names": [
+        "uCore.TChanges.Clear"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e83500",
+      "file_offset": 11020544,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "Combination"
+    },
+    {
+      "address": "00e83524",
+      "file_offset": 11020580,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "Cl"
+    }
+  ]
+}

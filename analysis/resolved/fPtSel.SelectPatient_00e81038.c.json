@@ -1,0 +1,114 @@
+{
+  "function": "fPtSel.SelectPatient",
+  "address": "00e81038",
+  "status": "decompiled",
+  "file": "fPtSel.SelectPatient_00e81038.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040a734",
+      "map_names": [
+        "System.@TryFinallyExit"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "00727778",
+      "map_names": [
+        "Vcl.Forms.TCustomForm.Release"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "00e81220",
+      "map_names": [
+        "fPtSel.TfrmPtSel.AdjustFormSize"
+      ]
+    },
+    {
+      "address": "00e82c44",
+      "map_names": [
+        "fPtSel.TfrmPtSel.ClearIDInfo"
+      ]
+    },
+    {
+      "address": "00e85ac4",
+      "map_names": [
+        "fPtSel.TfrmPtSel.RPLDisplay"
+      ]
+    },
+    {
+      "address": "00e85d30",
+      "map_names": [
+        "fPtSel.TfrmPtSel.AlertList"
+      ]
+    },
+    {
+      "address": "00e8b134",
+      "map_names": [
+        "mPtSelOptns.TfraPtSelOptns.SetDefaultPtList"
+      ]
+    },
+    {
+      "address": "011c5e1c",
+      "map_names": [
+        "fBase508Form.TfrmBase508Form.SetKeepBounds"
+      ]
+    },
+    {
+      "address": "011c5f98",
+      "map_names": [
+        "fBase508Form.TfrmBase508Form.Create"
+      ]
+    },
+    {
+      "address": "011cc360",
+      "map_names": [
+        "rCore.DfltPtList"
+      ]
+    },
+    {
+      "address": "011d69a4",
+      "map_names": [
+        "uCore.TNotifications.Clear"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e8121c",
+      "file_offset": 11011612,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "1"
+    }
+  ]
+}

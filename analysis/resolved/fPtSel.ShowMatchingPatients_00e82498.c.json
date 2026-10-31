@@ -1,0 +1,56 @@
+{
+  "function": "fPtSel.ShowMatchingPatients",
+  "address": "00e82498",
+  "status": "decompiled",
+  "file": "fPtSel.ShowMatchingPatients_00e82498.c",
+  "numeric_callee_references": [
+    {
+      "address": "007b3180",
+      "map_names": [
+        "ORCtrls.TORComboBox.SetItemIndex"
+      ]
+    },
+    {
+      "address": "007b36ec",
+      "map_names": [
+        "ORCtrls.TORComboBox.InitLongList"
+      ]
+    },
+    {
+      "address": "007b3c1c",
+      "map_names": [
+        "ORCtrls.TORComboBox.GetShortCount"
+      ]
+    },
+    {
+      "address": "00e82c44",
+      "map_names": [
+        "fPtSel.TfrmPtSel.ClearIDInfo"
+      ]
+    },
+    {
+      "address": "00e82c54",
+      "map_names": [
+        "fPtSel.TfrmPtSel.ShowIDInfo"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e82514",
+      "file_offset": 11016468,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 77,
+      "text": "^____________________________________________________________________________"
+    },
+    {
+      "address": "00e825bc",
+      "file_offset": 11016636,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "^ "
+    }
+  ]
+}

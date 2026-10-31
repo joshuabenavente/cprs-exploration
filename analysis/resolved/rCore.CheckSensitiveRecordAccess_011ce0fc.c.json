@@ -1,0 +1,48 @@
+{
+  "function": "rCore.CheckSensitiveRecordAccess",
+  "address": "011ce0fc",
+  "status": "decompiled",
+  "file": "rCore.CheckSensitiveRecordAccess_011ce0fc.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0042d238",
+      "map_names": [
+        "System.SysUtils.StrToIntDef"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011ce210",
+      "file_offset": 14472720,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 26,
+      "text": "DG SENSITIVE RECORD ACCESS"
+    }
+  ]
+}

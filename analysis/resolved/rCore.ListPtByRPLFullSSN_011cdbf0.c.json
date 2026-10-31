@@ -1,0 +1,132 @@
+{
+  "function": "rCore.ListPtByRPLFullSSN",
+  "address": "011cdbf0",
+  "status": "decompiled",
+  "file": "rCore.ListPtByRPLFullSSN_011cdbf0.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c35c",
+      "map_names": [
+        "System.@UStrCopy"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "0042c1a8",
+      "map_names": [
+        "System.SysUtils.UpperCase"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "0079af38",
+      "map_names": [
+        "VAUtils.SetPiece"
+      ]
+    },
+    {
+      "address": "009b1794",
+      "map_names": [
+        "ORFn.FormatFMDateTimeStr"
+      ]
+    },
+    {
+      "address": "009b2cf8",
+      "map_names": [
+        "ORFn.MixedCaseList"
+      ]
+    },
+    {
+      "address": "009b3288",
+      "map_names": [
+        "ORFn.SortByPiece"
+      ]
+    },
+    {
+      "address": "011ca4f0",
+      "map_names": [
+        "rCore.FormatSSN"
+      ]
+    },
+    {
+      "address": "011ca608",
+      "map_names": [
+        "rCore.IsSSN"
+      ]
+    },
+    {
+      "address": "011ca654",
+      "map_names": [
+        "rCore.IsFMDate"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011cddf4",
+      "file_offset": 14471668,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "-"
+    },
+    {
+      "address": "011cde04",
+      "file_offset": 14471684,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 17,
+      "text": "ORWPT FULLSSN RPL"
+    },
+    {
+      "address": "011cde34",
+      "file_offset": 14471732,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "mmm d, yyyy"
+    },
+    {
+      "address": "011cde58",
+      "file_offset": 14471768,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "   "
+    }
+  ]
+}

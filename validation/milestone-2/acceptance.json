@@ -1,0 +1,24 @@
+{
+  "scope": "Authored mock prototype acceptance cases, not original CPRS behavior",
+  "automated_receipt": "validation/milestone-2/automated.json",
+  "core_test_file": "crates/chart-core/tests/workflow.rs",
+  "callback_harness": "crates/chart-desktop/src/main.rs::callback_smoke",
+  "cases": [
+    {"id": "PS01", "status": "passed-automated", "evidence": "ps01_opening_selector_keeps_committed_chart_identity"},
+    {"id": "PS02", "status": "passed-automated", "evidence": "ps02_duplicate_names_resolve_to_exact_id_and_demographics; callback smoke checks SYNTH-004"},
+    {"id": "PS03", "status": "passed-automated", "evidence": "ps03_editing_query_invalidates_selection_and_acknowledgment"},
+    {"id": "PS04", "status": "passed-automated", "evidence": "ps04_stale_search_and_duplicate_delivery_are_ignored"},
+    {"id": "PS05", "status": "passed-automated", "evidence": "ps05_successful_zero_rows_is_empty; callback smoke checks empty UI state"},
+    {"id": "PS06", "status": "passed-automated", "evidence": "ps06_unavailable_provider_is_not_an_empty_result; callback smoke checks provider-error UI state"},
+    {"id": "PS07", "status": "passed-automated", "evidence": "ps07_malformed_fixture_rows_fail_closed; callback smoke checks malformed-result UI state"},
+    {"id": "PS08", "status": "passed-automated", "evidence": "ps08_paging_carries_explicit_scoped_cursor_and_direction"},
+    {"id": "PS09", "status": "passed-automated", "evidence": "ps09_cancel_rejects_pending_chart_and_preserves_previous_chart; callback smoke"},
+    {"id": "PS10", "status": "passed-automated", "evidence": "ps10_no_valid_selected_identifier_cannot_open_a_chart; callback smoke invalidates a negative selected row"},
+    {"id": "PS11", "status": "passed-automated", "evidence": "ps11_denied_and_unavailable_access_preserve_active_chart; callback smoke checks denial"},
+    {"id": "PS12", "status": "passed-automated", "evidence": "ps12_access_and_deceased_flags_require_explicit_acknowledgment; queued_row_selection_cannot_dismiss_an_access_prompt; callback smoke"},
+    {"id": "PS13", "status": "passed-callback-and-native-smoke", "evidence": "Shared confirmation callback smoke; native OK opened SYNTH-001; native Enter opened SYNTH-004; native double-click produced PATEL acknowledgment and RIVERA denial"},
+    {"id": "PS14", "status": "passed-automated", "evidence": "ps14_late_old_patient_data_cannot_replace_new_chart; mismatched_chart_identity_is_rejected_atomically"},
+    {"id": "PS15", "status": "passed-bounded-native-smoke", "evidence": "Native character input, Enter-to-table, arrows, confirmation, Ctrl+O, Ctrl+F, Tab focus, and Escape observed; full traversal, Unicode/IME, and screen-reader support remain unverified"},
+    {"id": "PS16", "status": "passed-automated", "evidence": "ps16_unimplemented_tabs_are_explicit_placeholders; callback smoke checks Notes placeholder"}
+  ]
+}

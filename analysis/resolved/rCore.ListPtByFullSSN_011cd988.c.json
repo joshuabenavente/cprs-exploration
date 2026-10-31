@@ -1,0 +1,132 @@
+{
+  "function": "rCore.ListPtByFullSSN",
+  "address": "011cd988",
+  "status": "decompiled",
+  "file": "rCore.ListPtByFullSSN_011cd988.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c35c",
+      "map_names": [
+        "System.@UStrCopy"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "0042c1a8",
+      "map_names": [
+        "System.SysUtils.UpperCase"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "0079af38",
+      "map_names": [
+        "VAUtils.SetPiece"
+      ]
+    },
+    {
+      "address": "009b1794",
+      "map_names": [
+        "ORFn.FormatFMDateTimeStr"
+      ]
+    },
+    {
+      "address": "009b2cf8",
+      "map_names": [
+        "ORFn.MixedCaseList"
+      ]
+    },
+    {
+      "address": "009b3288",
+      "map_names": [
+        "ORFn.SortByPiece"
+      ]
+    },
+    {
+      "address": "011ca4f0",
+      "map_names": [
+        "rCore.FormatSSN"
+      ]
+    },
+    {
+      "address": "011ca608",
+      "map_names": [
+        "rCore.IsSSN"
+      ]
+    },
+    {
+      "address": "011ca654",
+      "map_names": [
+        "rCore.IsFMDate"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011cdb8c",
+      "file_offset": 14471052,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "-"
+    },
+    {
+      "address": "011cdb9c",
+      "file_offset": 14471068,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": "ORWPT FULLSSN"
+    },
+    {
+      "address": "011cdbc4",
+      "file_offset": 14471108,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "mmm d, yyyy"
+    },
+    {
+      "address": "011cdbe8",
+      "file_offset": 14471144,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "   "
+    }
+  ]
+}

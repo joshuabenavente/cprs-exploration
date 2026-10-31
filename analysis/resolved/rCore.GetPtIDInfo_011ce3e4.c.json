@@ -1,0 +1,156 @@
+{
+  "function": "rCore.GetPtIDInfo",
+  "address": "011ce3e4",
+  "status": "decompiled",
+  "file": "rCore.GetPtIDInfo_011ce3e4.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "009b1794",
+      "map_names": [
+        "ORFn.FormatFMDateTimeStr"
+      ]
+    },
+    {
+      "address": "009b2a68",
+      "map_names": [
+        "ORFn.MixedCase"
+      ]
+    },
+    {
+      "address": "011ca4f0",
+      "map_names": [
+        "rCore.FormatSSN"
+      ]
+    },
+    {
+      "address": "011ca608",
+      "map_names": [
+        "rCore.IsSSN"
+      ]
+    },
+    {
+      "address": "011ca654",
+      "map_names": [
+        "rCore.IsFMDate"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011ce754",
+      "file_offset": 14474068,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": "ORWPT ID INFO"
+    },
+    {
+      "address": "011ce77c",
+      "file_offset": 14474108,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "mmm dd,yyyy"
+    },
+    {
+      "address": "011ce7a0",
+      "file_offset": 14474144,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "U"
+    },
+    {
+      "address": "011ce7b0",
+      "file_offset": 14474160,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "Female"
+    },
+    {
+      "address": "011ce7cc",
+      "file_offset": 14474188,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "Male"
+    },
+    {
+      "address": "011ce7e4",
+      "file_offset": 14474212,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "Unknown"
+    },
+    {
+      "address": "011ce800",
+      "file_offset": 14474240,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "Y"
+    },
+    {
+      "address": "011ce810",
+      "file_offset": 14474256,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "Veteran"
+    },
+    {
+      "address": "011ce82c",
+      "file_offset": 14474284,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 19,
+      "text": "% Service Connected"
+    },
+    {
+      "address": "011ce860",
+      "file_offset": 14474336,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "ORWPT2 ID INFO"
+    }
+  ]
+}

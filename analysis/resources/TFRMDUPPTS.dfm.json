@@ -1,0 +1,314 @@
+{
+  "class": "TfrmDupPts",
+  "name": "frmDupPts",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 160,
+    "Top": 190,
+    "HorzScrollBar.Visible": false,
+    "VertScrollBar.Visible": false,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "Similar Patients",
+    "ClientHeight": 247,
+    "ClientWidth": 642,
+    "Constraints.MinHeight": 240,
+    "Constraints.MinWidth": 320,
+    "Position": "poScreenCenter",
+    "OnCloseQuery": "FormCloseQuery",
+    "ExplicitWidth": 654,
+    "ExplicitHeight": 274,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlDupPts",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 642,
+        "Height": 203,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0,
+        "ExplicitWidth": 687,
+        "ExplicitHeight": 212
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblSelDupPts",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 155,
+            "Height": 13,
+            "Caption": "Please select the correct patient:",
+            "Visible": false
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlSelDupPt",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 642,
+        "Height": 203,
+        "Align": "alClient",
+        "TabOrder": 1,
+        "ExplicitWidth": 687,
+        "ExplicitHeight": 212
+      },
+      "children": [
+        {
+          "class": "TCaptionListView",
+          "name": "lboSelPt",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 39,
+            "Width": 640,
+            "Height": 163,
+            "Margins.Left": 8,
+            "Margins.Right": 8,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Columns": [
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "Name",
+                  "Width": 180
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "DOB",
+                  "Tag": 1,
+                  "Width": 76
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "SSN",
+                  "Tag": 2,
+                  "Width": 76
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "Location",
+                  "Width": 76
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "Physician",
+                  "Width": 76
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "Last Visit",
+                  "Width": 76
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "Last Location",
+                  "Width": 76
+                }
+              }
+            ],
+            "HideSelection": false,
+            "HoverTime": 0,
+            "IconOptions.WrapText": false,
+            "ReadOnly": true,
+            "RowSelect": true,
+            "ParentShowHint": false,
+            "ShowWorkAreas": true,
+            "ShowHint": true,
+            "TabOrder": 0,
+            "ViewStyle": "vsReport",
+            "OnCustomDrawItem": "lboSelPtCustomDrawItem",
+            "OnDblClick": "lboSelPtDblClick",
+            "AutoSize": false,
+            "Caption": "Please select the correct patient",
+            "Pieces": "2,3,4,5,6,7,8",
+            "ExplicitWidth": 685
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlHeader",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 640,
+            "Height": 38,
+            "Align": "alTop",
+            "Alignment": "taLeftJustify",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1,
+            "ExplicitWidth": 685
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 203,
+        "Width": 642,
+        "Height": 44,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 2,
+        "ExplicitTop": 212,
+        "ExplicitWidth": 687
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "Panel2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 283,
+            "Top": 0,
+            "Width": 169,
+            "Height": 44,
+            "Align": "alRight",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0,
+            "ExplicitLeft": 0
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnOK",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 3,
+                "Top": 13,
+                "Width": 75,
+                "Height": 25,
+                "Caption": "&OK",
+                "Default": true,
+                "ModalResult": 1,
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnCancel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 84,
+                "Top": 13,
+                "Width": 75,
+                "Height": 25,
+                "Caption": "&Cancel",
+                "ModalResult": 2,
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 32,
+        "Top": 96,
+        "Data": [
+          [
+            "Component = pnlDupPts",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSelDupPt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmDupPts",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lboSelPt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlHeader",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

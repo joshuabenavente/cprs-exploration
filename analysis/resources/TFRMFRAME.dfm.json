@@ -1,0 +1,3103 @@
+{
+  "class": "TfrmFrame",
+  "name": "frmFrame",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 219,
+    "Top": 102,
+    "Caption": "]=",
+    "ClientHeight": 573,
+    "ClientWidth": 966,
+    "Constraints.MinWidth": 800,
+    "FormStyle": "fsMDIForm",
+    "Menu": "mnuFrame",
+    "Visible": true,
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "OnCanResize": "ORFormCanResize",
+    "OnCloseQuery": "FormCloseQuery",
+    "OnResize": "FormResize",
+    "OldCreateOrder": true,
+    "ExplicitWidth": 982,
+    "ExplicitHeight": 632,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlNoPatientSelected",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 966,
+        "Height": 573,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Align": "alClient",
+        "Caption": "No patient is currently selected",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -23,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 1,
+        "Visible": false
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlPatientSelected",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 966,
+        "Height": 573,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Align": "alClient",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TBevel",
+          "name": "bvlPageTop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 103,
+            "Width": 964,
+            "Height": 2,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alTop",
+            "ExplicitTop": 62,
+            "ExplicitWidth": 974
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlToolbar",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 964,
+            "Height": 61,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TBevel",
+              "name": "bvlToolTop",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 964,
+                "Height": 1,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alTop",
+                "Style": "bsRaised",
+                "ExplicitWidth": 974
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlCCOW",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 1,
+                "Width": 59,
+                "Height": 60,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alLeft",
+                "BevelWidth": 2,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TImage",
+                  "name": "imgCCOW",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 2,
+                    "Top": 2,
+                    "Width": 55,
+                    "Height": 56,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Align": "alClient",
+                    "Center": true,
+                    "Picture.Data": {
+                      "binary_bytes": 862
+                    },
+                    "ExplicitWidth": 56,
+                    "ExplicitHeight": 57
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlPatient",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 59,
+                "Top": 1,
+                "Width": 283,
+                "Height": 60,
+                "Hint": "Click for more patient information.",
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alLeft",
+                "BevelWidth": 2,
+                "Color": "clInfoBk",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clInfoBk",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentBackground": false,
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 1,
+                "TabStop": true,
+                "OnClick": "pnlPatientClick",
+                "OnEnter": "pnlPrimaryCareEnter",
+                "OnExit": "pnlPrimaryCareExit",
+                "OnMouseDown": "pnlPatientMouseDown",
+                "OnMouseUp": "pnlPatientMouseUp"
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblPtName",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 6,
+                    "Width": 188,
+                    "Height": 28,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Caption": "No Patient Selected",
+                    "Font.Charset": "ANSI_CHARSET",
+                    "Font.Color": "clInfoText",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [
+                      "fsBold"
+                    ],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": false,
+                    "TabOrder": 0,
+                    "OnClick": "pnlPatientClick",
+                    "OnMouseDown": "pnlPatientMouseDown",
+                    "OnMouseUp": "pnlPatientMouseUp"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TStaticText",
+                  "name": "lblPtInfo",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 28,
+                    "Width": 106,
+                    "Height": 28,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Caption": "000-00-0000",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clInfoText",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": false,
+                    "TabOrder": 1,
+                    "OnClick": "pnlPatientClick",
+                    "OnMouseDown": "pnlPatientMouseDown",
+                    "OnMouseUp": "pnlPatientMouseUp"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlVisit",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 342,
+                "Top": 1,
+                "Width": 181,
+                "Height": 60,
+                "Hint": "Click to change provider/location.",
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alLeft",
+                "BevelWidth": 2,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clBtnFace",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 2,
+                "TabStop": true,
+                "OnClick": "pnlVisitClick",
+                "OnEnter": "pnlPrimaryCareEnter",
+                "OnExit": "pnlPrimaryCareExit",
+                "OnMouseDown": "pnlVisitMouseDown",
+                "OnMouseUp": "pnlVisitMouseUp"
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblPtLocation",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 6,
+                    "Width": 4,
+                    "Height": 4,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [
+                      "fsBold"
+                    ],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowAccelChar": false,
+                    "ShowHint": false,
+                    "TabOrder": 0,
+                    "OnClick": "pnlVisitClick",
+                    "OnMouseDown": "pnlVisitMouseDown",
+                    "OnMouseUp": "pnlVisitMouseUp"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TStaticText",
+                  "name": "lblPtProvider",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 28,
+                    "Width": 4,
+                    "Height": 4,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clBtnText",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": false,
+                    "TabOrder": 1,
+                    "OnClick": "pnlVisitClick",
+                    "OnMouseDown": "pnlVisitMouseDown",
+                    "OnMouseUp": "pnlVisitMouseUp"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlPrimaryCare",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 523,
+                "Top": 1,
+                "Width": 177,
+                "Height": 60,
+                "Hint": "Primary Care Team / Primary Care Provider",
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alClient",
+                "BevelWidth": 2,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clBtnFace",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 3,
+                "TabStop": true,
+                "OnClick": "pnlPrimaryCareClick",
+                "OnEnter": "pnlPrimaryCareEnter",
+                "OnExit": "pnlPrimaryCareExit",
+                "OnMouseDown": "pnlPrimaryCareMouseDown",
+                "OnMouseUp": "pnlPrimaryCareMouseUp"
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblPtCare",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 6,
+                    "Width": 4,
+                    "Height": 4,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clBtnText",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": false,
+                    "TabOrder": 0,
+                    "OnClick": "pnlPrimaryCareClick",
+                    "OnMouseDown": "pnlPrimaryCareMouseDown",
+                    "OnMouseUp": "pnlPrimaryCareMouseUp"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TStaticText",
+                  "name": "lblPtAttending",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 28,
+                    "Width": 4,
+                    "Height": 4,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clBtnText",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": false,
+                    "TabOrder": 1,
+                    "OnClick": "pnlPrimaryCareClick",
+                    "OnMouseDown": "pnlPrimaryCareMouseDown",
+                    "OnMouseUp": "pnlPrimaryCareMouseUp"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TStaticText",
+                  "name": "lblPtMHTC",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 52,
+                    "Width": 4,
+                    "Height": 4,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clBtnText",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "TabOrder": 2,
+                    "OnClick": "pnlPrimaryCareClick",
+                    "OnMouseDown": "pnlPrimaryCareMouseDown",
+                    "OnMouseUp": "pnlPrimaryCareMouseUp"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlReminders",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 804,
+                "Top": 1,
+                "Width": 52,
+                "Height": 60,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alRight",
+                "BevelWidth": 2,
+                "Caption": "Reminders",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clBtnFace",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 8,
+                "TabStop": true,
+                "OnClick": "pnlRemindersClick",
+                "OnEnter": "pnlPrimaryCareEnter",
+                "OnExit": "pnlPrimaryCareExit",
+                "OnMouseDown": "pnlRemindersMouseDown",
+                "OnMouseUp": "pnlRemindersMouseUp"
+              },
+              "children": [
+                {
+                  "class": "TImage",
+                  "name": "imgReminder",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 2,
+                    "Top": 2,
+                    "Width": 48,
+                    "Height": 56,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Align": "alClient",
+                    "Center": true,
+                    "OnMouseDown": "pnlRemindersMouseDown",
+                    "OnMouseUp": "pnlRemindersMouseUp",
+                    "ExplicitHeight": 57
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TAnimate",
+                  "name": "anmtRemSearch",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 2,
+                    "Top": 2,
+                    "Width": 48,
+                    "Height": 56,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Align": "alClient",
+                    "Visible": false
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlPostings",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 856,
+                "Top": 1,
+                "Width": 108,
+                "Height": 60,
+                "Hint": "Click to display patient postings.",
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alRight",
+                "BevelWidth": 2,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clBtnFace",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 9,
+                "TabStop": true,
+                "OnClick": "pnlPostingsClick",
+                "OnEnter": "pnlPrimaryCareEnter",
+                "OnExit": "pnlPrimaryCareExit",
+                "OnMouseDown": "pnlPostingsMouseDown",
+                "OnMouseUp": "pnlPostingsMouseUp"
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblPtPostings",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 7,
+                    "Top": 6,
+                    "Width": 87,
+                    "Height": 20,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Alignment": "taCenter",
+                    "AutoSize": false,
+                    "Caption": "No Postings",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clBtnText",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": false,
+                    "TabOrder": 0,
+                    "OnClick": "pnlPostingsClick",
+                    "OnMouseDown": "pnlPostingsMouseDown",
+                    "OnMouseUp": "pnlPostingsMouseUp"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TStaticText",
+                  "name": "lblPtCWAD",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 28,
+                    "Width": 87,
+                    "Height": 20,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Alignment": "taCenter",
+                    "AutoSize": false,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clMaroon",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [
+                      "fsBold"
+                    ],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": false,
+                    "TabOrder": 1,
+                    "Transparent": false,
+                    "OnClick": "pnlPostingsClick",
+                    "OnMouseDown": "pnlPostingsMouseDown",
+                    "OnMouseUp": "pnlPostingsMouseUp"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlOTHD",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 446,
+                "Top": 1,
+                "Width": 109,
+                "Height": 60,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alRight",
+                "BevelWidth": 2,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 4,
+                "TabStop": true,
+                "Visible": false,
+                "OnClick": "pnlOTHDClick",
+                "OnEnter": "pnlOTHDEnter",
+                "OnExit": "pnlOTHDExit",
+                "OnMouseDown": "pnlOTHDMouseDown",
+                "OnMouseUp": "pnlOTHDMouseUp"
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblOTHDTitle",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 7,
+                    "Top": 2,
+                    "Width": 40,
+                    "Height": 24,
+                    "Hint": "Other than Honorable",
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Alignment": "taCenter",
+                    "Caption": "OTH",
+                    "Enabled": false,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clInfoBk",
+                    "Font.Height": -16,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [
+                      "fsBold"
+                    ],
+                    "ParentFont": false,
+                    "TabOrder": 0,
+                    "OnClick": "pnlOTHDClick",
+                    "OnMouseDown": "pnlOTHDMouseDown",
+                    "OnMouseUp": "pnlOTHDMouseUp"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TStaticText",
+                  "name": "lblOTHDDtl",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 4,
+                    "Top": 27,
+                    "Width": 43,
+                    "Height": 17,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Alignment": "taCenter",
+                    "Caption": "##D,P#",
+                    "TabOrder": 1,
+                    "OnClick": "pnlOTHDClick",
+                    "OnMouseDown": "pnlOTHDMouseDown",
+                    "OnMouseUp": "pnlOTHDMouseUp"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "paVAA",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 356,
+                "Top": 1,
+                "Width": 90,
+                "Height": 60,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alRight",
+                "BevelOuter": "bvNone",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clBtnFace",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": false,
+                "TabOrder": 5,
+                "Visible": false,
+                "OnResize": "paVAAResize"
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "laVAA2",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 24,
+                    "Width": 90,
+                    "Height": 36,
+                    "Hint": "Click to display patient insurance data",
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Align": "alClient",
+                    "Caption": "Pt Insur",
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 1,
+                    "OnClick": "laVAA2Click"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "laMHV",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 90,
+                    "Height": 24,
+                    "Hint": "Click to display MHV data",
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Align": "alTop",
+                    "Caption": "MHV",
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 0,
+                    "OnClick": "laMHVClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlCVnFlag",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 555,
+                "Top": 1,
+                "Width": 138,
+                "Height": 60,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alRight",
+                "TabOrder": 6
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnCombatVet",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 1,
+                    "Top": 32,
+                    "Width": 136,
+                    "Height": 27,
+                    "Hint": "Click to display combat veteran eligibility details.",
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Align": "alBottom",
+                    "Caption": "CV JAN 30, 2008",
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 1,
+                    "OnClick": "btnCombatVetClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TKeyClickPanel",
+                  "name": "pnlFlag",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 1,
+                    "Top": 16,
+                    "Width": 136,
+                    "Height": 16,
+                    "Hint": "Click to display patient record flags.",
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Align": "alClient",
+                    "BevelWidth": 2,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 0,
+                    "TabStop": true,
+                    "OnClick": "pnlFlagClick",
+                    "OnEnter": "pnlFlagEnter",
+                    "OnExit": "pnlFlagExit",
+                    "OnMouseDown": "pnlFlagMouseDown",
+                    "OnMouseUp": "pnlFlagMouseUp"
+                  },
+                  "children": [
+                    {
+                      "class": "TLabel",
+                      "name": "lblFlag",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 2,
+                        "Top": 2,
+                        "Width": 132,
+                        "Height": 12,
+                        "Margins.Left": 4,
+                        "Margins.Top": 4,
+                        "Margins.Right": 4,
+                        "Margins.Bottom": 4,
+                        "Align": "alClient",
+                        "Alignment": "taCenter",
+                        "Caption": "Flag",
+                        "Enabled": false,
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clBtnFace",
+                        "Font.Height": -9,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [
+                          "fsBold"
+                        ],
+                        "ParentFont": false,
+                        "Layout": "tlCenter",
+                        "WordWrap": true,
+                        "OnClick": "pnlFlagClick",
+                        "OnMouseDown": "pnlFlagMouseDown",
+                        "OnMouseUp": "pnlFlagMouseUp",
+                        "ExplicitWidth": 25,
+                        "ExplicitHeight": 13
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "class": "TVA508StaticText",
+                  "name": "txtCmdFlags",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 1,
+                    "Top": 1,
+                    "Width": 136,
+                    "Height": 15,
+                    "Margins.Left": 4,
+                    "Margins.Top": 4,
+                    "Margins.Right": 4,
+                    "Margins.Bottom": 4,
+                    "Align": "alTop",
+                    "Alignment": "taCenter",
+                    "Caption": "Flags Button Disabled",
+                    "TabOrder": 2,
+                    "Visible": false,
+                    "ShowAccelChar": true,
+                    "WordWrap": false,
+                    "LabelAlignment": "taCenter",
+                    "LabelLayout": "tlTop"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlRemoteData",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 693,
+                "Top": 1,
+                "Width": 111,
+                "Height": 60,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alRight",
+                "BevelWidth": 2,
+                "Caption": "Remote Data",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clBtnFace",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 7,
+                "TabStop": true,
+                "OnClick": "pnlCIRNClick",
+                "OnEnter": "pnlPrimaryCareEnter",
+                "OnExit": "pnlPrimaryCareExit",
+                "OnMouseDown": "pnlCIRNMouseDown",
+                "OnMouseUp": "pnlCIRNMouseUp"
+              },
+              "children": [
+                {
+                  "class": "TKeyClickPanel",
+                  "name": "pnlVistaWeb",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 2,
+                    "Top": 2,
+                    "Width": 107,
+                    "Height": 29,
+                    "Hint": "Click for any external patient data",
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Align": "alTop",
+                    "BevelWidth": 2,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clBtnFace",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 0,
+                    "TabStop": true,
+                    "OnClick": "pnlVistaWebClick",
+                    "OnEnter": "pnlPrimaryCareEnter",
+                    "OnExit": "pnlPrimaryCareExit",
+                    "OnMouseDown": "pnlVistaWebMouseDown",
+                    "OnMouseUp": "pnlVistaWebMouseUp"
+                  },
+                  "children": [
+                    {
+                      "class": "TLabel",
+                      "name": "lblVistaWeb",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 2,
+                        "Top": 2,
+                        "Width": 103,
+                        "Height": 25,
+                        "Margins.Left": 4,
+                        "Margins.Top": 4,
+                        "Margins.Right": 4,
+                        "Margins.Bottom": 4,
+                        "Align": "alClient",
+                        "Alignment": "taCenter",
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clInfoText",
+                        "Font.Height": -13,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ParentFont": false,
+                        "Layout": "tlCenter",
+                        "OnClick": "pnlVistaWebClick",
+                        "OnMouseDown": "pnlVistaWebMouseDown",
+                        "OnMouseUp": "pnlVistaWebMouseUp",
+                        "ExplicitWidth": 3,
+                        "ExplicitHeight": 16
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "class": "TKeyClickPanel",
+                  "name": "pnlCIRN",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 2,
+                    "Top": 31,
+                    "Width": 107,
+                    "Height": 27,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Align": "alClient",
+                    "BevelWidth": 2,
+                    "Caption": "Remote Data",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clBtnFace",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 1,
+                    "TabStop": true,
+                    "OnClick": "pnlCIRNClick",
+                    "OnEnter": "pnlPrimaryCareEnter",
+                    "OnExit": "pnlPrimaryCareExit",
+                    "OnMouseDown": "pnlCIRNMouseDown",
+                    "OnMouseUp": "pnlCIRNMouseUp"
+                  },
+                  "children": [
+                    {
+                      "class": "TLabel",
+                      "name": "lblCIRN",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 2,
+                        "Top": 2,
+                        "Width": 103,
+                        "Height": 23,
+                        "Margins.Left": 4,
+                        "Margins.Top": 4,
+                        "Margins.Right": 4,
+                        "Margins.Bottom": 4,
+                        "Align": "alClient",
+                        "Alignment": "taCenter",
+                        "Caption": "Remote Data",
+                        "Enabled": false,
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clBtnFace",
+                        "Font.Height": -13,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ParentFont": false,
+                        "Layout": "tlCenter",
+                        "OnClick": "pnlCIRNClick",
+                        "ExplicitWidth": 80,
+                        "ExplicitHeight": 16
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TStatusBar",
+          "name": "stsArea",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 551,
+            "Width": 964,
+            "Height": 21,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Panels": [
+              {
+                "index": null,
+                "properties": {
+                  "Width": 200
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Width": 224
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Style": "psOwnerDraw",
+                  "Width": 50
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Width": 94
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Width": 38
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Width": 33
+                }
+              }
+            ],
+            "PopupMenu": "popAlerts",
+            "SizeGrip": false
+          },
+          "children": []
+        },
+        {
+          "class": "TKeyClickPanel",
+          "name": "pnlOtherInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 62,
+            "Width": 964,
+            "Height": 41,
+            "Align": "alTop",
+            "Color": "clYellow",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentBackground": false,
+            "ParentFont": false,
+            "TabOrder": 0,
+            "OnClick": "pnlOtherInfoClick",
+            "OnMouseDown": "pnlOtherInfoMouseDown",
+            "OnMouseUp": "pnlOtherInfoMouseUp"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlRight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 201,
+            "Top": 105,
+            "Width": 764,
+            "Height": 446,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlRight",
+            "ShowCaption": false,
+            "TabOrder": 4
+          },
+          "children": [
+            {
+              "class": "TTabControl",
+              "name": "tabPage",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 419,
+                "Width": 764,
+                "Height": 27,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Align": "alBottom",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 0,
+                "TabPosition": "tpBottom",
+                "OnChange": "tabPageChange",
+                "OnMouseDown": "tabPageMouseDown",
+                "OnMouseUp": "tabPageMouseUp"
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlPage",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 764,
+                "Height": 419,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TORListBox",
+                  "name": "lstCIRNLocations",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 642,
+                    "Top": 0,
+                    "Width": 317,
+                    "Height": 118,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "TabStop": false,
+                    "Style": "lbOwnerDrawFixed",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clBlue",
+                    "Font.Height": -19,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ItemHeight": 13,
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "PopupMenu": "popCIRN",
+                    "ShowHint": false,
+                    "TabOrder": 1,
+                    "Visible": false,
+                    "OnClick": "lstCIRNLocationsClick",
+                    "OnExit": "lstCIRNLocationsExit",
+                    "Caption": "Remote Data",
+                    "ItemTipColor": "clWindow",
+                    "LongList": false,
+                    "Pieces": "2,3,4",
+                    "TabPositions": "16",
+                    "RightClickSelect": true,
+                    "CheckBoxes": true,
+                    "FlatCheckBoxes": false,
+                    "CheckEntireLine": true
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TSplitView",
+          "name": "svPtInfoPanel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 105,
+            "Width": 200,
+            "Height": 446,
+            "OpenedWidth": 200,
+            "Placement": "svpLeft",
+            "TabOrder": 3,
+            "Visible": false
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "pnlPtInfoGap",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 3,
+                "Height": 446,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Caption": "pnlPtInfoGap",
+                "ShowCaption": false,
+                "TabOrder": 1
+              },
+              "children": []
+            },
+            {
+              "class": "TfraPtInfoPanel",
+              "name": "fraPtInfoPanel",
+              "inherited": false,
+              "inline": true,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 6,
+                "Top": 0,
+                "Width": 191,
+                "Height": 446,
+                "Margins.Top": 0,
+                "Margins.Bottom": 0,
+                "Align": "alClient",
+                "Color": "clBtnFace",
+                "ParentColor": false,
+                "TabOrder": 0,
+                "StyleElements": [
+                  "seFont",
+                  "seBorder"
+                ],
+                "ExplicitLeft": 6,
+                "ExplicitWidth": 191,
+                "ExplicitHeight": 446
+              },
+              "children": [
+                {
+                  "class": "TPanel",
+                  "name": "pnlMain",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Width": 191,
+                    "Height": 446,
+                    "StyleElements": [
+                      "seFont",
+                      "seBorder"
+                    ],
+                    "ExplicitWidth": 191,
+                    "ExplicitHeight": 446
+                  },
+                  "children": [
+                    {
+                      "class": "TGridPanel",
+                      "name": "gpTop",
+                      "inherited": true,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Width": 189,
+                        "ControlCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 0,
+                              "Control": "fraPtInfoPanel.pnlLeft",
+                              "Row": 0
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 1,
+                              "Control": "fraPtInfoPanel.pnlRight",
+                              "Row": 0
+                            }
+                          }
+                        ],
+                        "StyleElements": [
+                          "seFont",
+                          "seBorder"
+                        ],
+                        "ExplicitWidth": 189
+                      },
+                      "children": [
+                        {
+                          "class": "TKeyClickPanel",
+                          "name": "pnlLeft",
+                          "inherited": true,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Width": 94,
+                            "StyleElements": [
+                              "seFont",
+                              "seBorder"
+                            ],
+                            "ExplicitWidth": 94
+                          },
+                          "children": [
+                            {
+                              "class": "TORSymbolLabel",
+                              "name": "slblMain",
+                              "inherited": true,
+                              "inline": false,
+                              "child_position": null,
+                              "properties": {
+                                "Width": 11,
+                                "Height": 22,
+                                "ExplicitWidth": 11,
+                                "ExplicitHeight": 11
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "class": "TKeyClickPanel",
+                          "name": "pnlRight",
+                          "inherited": true,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 94,
+                            "Width": 95,
+                            "StyleElements": [
+                              "seFont",
+                              "seBorder"
+                            ],
+                            "ExplicitLeft": 94,
+                            "ExplicitWidth": 95
+                          },
+                          "children": [
+                            {
+                              "class": "TImage",
+                              "name": "imgRight",
+                              "inherited": true,
+                              "inline": false,
+                              "child_position": null,
+                              "properties": {
+                                "Left": 72,
+                                "ExplicitLeft": 77
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TScrollBox",
+                      "name": "sbMain",
+                      "inherited": true,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Width": 189,
+                        "Height": 422,
+                        "ExplicitWidth": 189,
+                        "ExplicitHeight": 422
+                      },
+                      "children": [
+                        {
+                          "class": "TGridPanel",
+                          "name": "gpMain",
+                          "inherited": true,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Width": 189,
+                            "Height": 278,
+                            "StyleElements": [
+                              "seFont",
+                              "seClient",
+                              "seBorder"
+                            ],
+                            "ExplicitWidth": 189,
+                            "ExplicitHeight": 278
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TGridPanel",
+                          "name": "gpDetails",
+                          "inherited": true,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Top": 278,
+                            "Width": 189,
+                            "StyleElements": [
+                              "seFont",
+                              "seClient",
+                              "seBorder"
+                            ],
+                            "ExplicitTop": 278,
+                            "ExplicitWidth": 189
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 48,
+        "Data": [
+          [
+            "Component = pnlNoPatientSelected",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPatientSelected",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlToolbar",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlCCOW",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPatient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPtName",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPtInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlVisit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPtLocation",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPtProvider",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPrimaryCare",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPtCare",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPtAttending",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlReminders",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = anmtRemSearch",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPostings",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPtPostings",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPtCWAD",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = paVAA",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = laVAA2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = laMHV",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stsArea",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tabPage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstCIRNLocations",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmFrame",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlCVnFlag",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCombatVet",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlFlag",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlRemoteData",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlVistaWeb",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlCIRN",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPtMHTC",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtCmdFlags",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblOTHDDtl",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = svPtInfoPanel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraPtInfoPanel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraPtInfoPanel.pnlMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraPtInfoPanel.gpTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraPtInfoPanel.sbMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraPtInfoPanel.gpMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraPtInfoPanel.gpDetails",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPtInfoGap",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlRight",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TMainMenu",
+      "name": "mnuFrame",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 180,
+        "Top": 128
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuFile",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&File",
+            "GroupIndex": 1
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileOpen",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Select &New Patient...",
+                "OnClick": "mnuFileOpenClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileRefresh",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Refresh Patient &Information",
+                "OnClick": "mnuFileRefreshClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileResumeContext",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Rejoin patient link"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuFileResumeContextSet",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Caption": "Set new context",
+                    "OnClick": "mnuFileResumeContextSetClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "Useexistingcontext1",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Caption": "Use existing context",
+                    "OnClick": "mnuFileResumeContextGetClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileBreakContext",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Break patient link",
+                "OnClick": "mnuFileBreakContextClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileEncounter",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Update Provider / Location...",
+                "OnClick": "mnuFileEncounterClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileReview",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Review/Sign Changes...",
+                "OnClick": "mnuFileReviewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z7",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-",
+                "Visible": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileNext",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Next Noti&fication",
+                "OnClick": "mnuFileNextClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileNotifRemove",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Remo&ve Current Notification",
+                "OnClick": "mnuFileNotifRemoveClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileViewNotifications",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "View Patient's Notifications...",
+                "OnClick": "mnuFileViewNotificationsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFilePrintSetup",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Print &Setup...",
+                "Enabled": false,
+                "OnClick": "mnuFilePrintSetupClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFilePrintSelectedItems",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Print Selected Items",
+                "Enabled": false,
+                "OnClick": "mnuFilePrintSelectedItemsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFilePrint",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Print...",
+                "Enabled": false,
+                "OnClick": "mnuFilePrintClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFileExit",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "E&xit",
+                "OnClick": "mnuFileExitClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuEdit",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Edit",
+            "GroupIndex": 2,
+            "OnClick": "mnuEditClick"
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuEditUndo",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Undo",
+                "ShortCut": 16474,
+                "OnClick": "mnuEditUndoClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuEditRedo",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Re&do",
+                "ShortCut": 16473,
+                "OnClick": "mnuEditRedoClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuEditCut",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Cu&t",
+                "ShortCut": 16472,
+                "OnClick": "mnuEditCutClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuEditCopy",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Copy",
+                "ShortCut": 16451,
+                "OnClick": "mnuEditCopyClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuEditPaste",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Paste",
+                "ShortCut": 16470,
+                "OnClick": "mnuEditPasteClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuEditPref",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "P&references"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "Prefs1",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Caption": "&Fonts"
+                  },
+                  "children": [
+                    {
+                      "class": "TMenuItem",
+                      "name": "mnu8pt",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Tag": 8,
+                        "Caption": "8 pt",
+                        "RadioItem": true,
+                        "OnClick": "mnuFontSizeClick"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TMenuItem",
+                      "name": "mnu10pt1",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Tag": 10,
+                        "Caption": "10 pt",
+                        "RadioItem": true,
+                        "OnClick": "mnuFontSizeClick"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TMenuItem",
+                      "name": "mnu12pt1",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Tag": 12,
+                        "Caption": "12 pt",
+                        "RadioItem": true,
+                        "OnClick": "mnuFontSizeClick"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TMenuItem",
+                      "name": "mnu14pt1",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Tag": 14,
+                        "Caption": "14 pt",
+                        "RadioItem": true,
+                        "OnClick": "mnuFontSizeClick"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuView",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&View",
+            "GroupIndex": 3
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewChart",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Chart &Tab"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartCover",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 1,
+                    "Caption": "Cover &Sheet",
+                    "ShortCut": 16467,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartProbs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 2,
+                    "Caption": "&Problem List",
+                    "ShortCut": 16464,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartMeds",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 3,
+                    "Caption": "&Medications",
+                    "ShortCut": 16461,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartOrders",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 4,
+                    "Caption": "&Orders",
+                    "ShortCut": 16463,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartNotes",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 6,
+                    "Caption": "Progress &Notes",
+                    "ShortCut": 16462,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartCslts",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 7,
+                    "Caption": "Consul&ts",
+                    "ShortCut": 16468,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartSurgery",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 11,
+                    "Caption": "S&urgery",
+                    "ShortCut": 16469,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartDCSumm",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 8,
+                    "Caption": "&Discharge Summaries",
+                    "ShortCut": 16452,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartLabs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 9,
+                    "Caption": "&Laboratory",
+                    "ShortCut": 16460,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartReports",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 10,
+                    "Caption": "&Reports",
+                    "ShortCut": 16466,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewInformation",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Information",
+                "OnClick": "mnuViewInformationClick"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewDemo",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 1,
+                    "Caption": "De&mographics...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewVisits",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 2,
+                    "Caption": "Visits/Pr&ovider...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewPrimaryCare",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 3,
+                    "Caption": "Primary &Care...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewMyHealtheVet",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 4,
+                    "Caption": "MyHealthe&Vet...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuInsurance",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 5,
+                    "Caption": "&Insurance...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewFlags",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 6,
+                    "Caption": "&Flags...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewRemoteData",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 7,
+                    "Caption": "Remote &Data...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewReminders",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 8,
+                    "Caption": "&Reminders...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewPostings",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 9,
+                    "Caption": "&Postings...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuTools",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Tools",
+            "GroupIndex": 8
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "Z8",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuToolsGraphing",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Graphing...",
+                "ShortCut": 16455,
+                "OnClick": "mnuToolsGraphingClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "LabInfo1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Lab Test Information...",
+                "OnClick": "LabInfo1Click"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuToolsOptions",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Options...",
+                "OnClick": "mnuToolsOptionsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "DigitalSigningSetup1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Digital Signing Setup...",
+                "OnClick": "DigitalSigningSetup1Click"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "PDMP1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "PDMP"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "RequestPDMPData1",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Action": "acPDMPRequest"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "CancelPDMPRequest1",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Action": "acPDMPCancel"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "ReviewPDMPData1",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Action": "acPDMPReview"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuHelp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Help",
+            "GroupIndex": 9
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuHelpContents",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Contents",
+                "Hint": "help\\cprs.chm",
+                "OnClick": "ToolClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuHelpTutor",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Brief Tutorial",
+                "Enabled": false,
+                "Visible": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuDebugReport",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Debug Report",
+                "OnClick": "mnuDebugReportClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "ResetParams1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Action": "acResetParams",
+                "Visible": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuWAPermissions",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Write Access Permissions",
+                "OnClick": "mnuWAPermissionsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z5",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuHelpBroker",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Last Broker Call",
+                "OnClick": "mnuHelpBrokerClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuHelpLists",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Show ListBox Data",
+                "OnClick": "mnuHelpListsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuHelpSymbols",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Symbol Table",
+                "OnClick": "mnuHelpSymbolsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuFocusChanges",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AutoCheck": true,
+                "Caption": "Show Focus Changes",
+                "OnClick": "mnuFocusChangesClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuShowActivityLog",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Show &Activity Log",
+                "OnClick": "mnuShowActivityLogClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z6",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuHelpAbout",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&About CPRS",
+                "OnClick": "mnuHelpAboutClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popCIRN",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 539,
+        "Top": 148
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "popCIRNSelectAll",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Select All",
+            "OnClick": "popCIRNSelectAllClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popCIRNSelectNone",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Select None",
+            "OnClick": "popCIRNSelectNoneClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popCIRNClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Close List",
+            "OnClick": "popCIRNCloseClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TOpenDialog",
+      "name": "OROpenDlg",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Filter": "Exe file (*.exe)|*.exe",
+        "Left": 260,
+        "Top": 257
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popAlerts",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AutoPopup": false,
+        "Left": 320,
+        "Top": 200
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuAlertContinue",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Continue",
+            "ShortCut": 16451,
+            "OnClick": "mnuFileNextClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuAlertForward",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Forward",
+            "ShortCut": 16454,
+            "OnClick": "mnuAlertForwardClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuAlertRenew",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Renew",
+            "ShortCut": 16466,
+            "OnClick": "mnuAlertRenewClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TApplicationEvents",
+      "name": "AppEvents",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnActivate": "AppEventsActivate",
+        "OnIdle": "AppEventsIdle",
+        "OnMessage": "AppEventsMessage",
+        "OnShortCut": "AppEventsShortCut",
+        "Left": 336,
+        "Top": 256
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "compAccessTabPage",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Component": "tabPage",
+        "OnCaptionQuery": "compAccessTabPageCaptionQuery",
+        "Left": 56,
+        "Top": 48
+      },
+      "children": []
+    },
+    {
+      "class": "TCopyApplicationMonitor",
+      "name": "CPAppMon",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "BreakUpLimit": 80,
+        "HighlightColor": "clYellow",
+        "LoadBuffer": "LoadBuffer",
+        "LoadProperties": "LoadProperties",
+        "MatchHighlight": true,
+        "MatchStyle": [],
+        "MonitoringApplication": "CPRS",
+        "MonitoringPackage": "OR",
+        "PolledBuffer": true,
+        "BufferEnabled": false,
+        "HashBuffer": true,
+        "SaveBuffer": "SaveBuffer",
+        "SaveCutOff": {
+          "extended80_hex": "00000000000000800040"
+        },
+        "CompareCutOff": 15,
+        "StartPollBuff": "StartPollBuff",
+        "StopPollBuff": "StopPollBuff",
+        "LCSToggle": false,
+        "LCSCharLimit": 5000,
+        "LCSUseColor": false,
+        "LCSTextColor": "clBlue",
+        "LCSTextStyle": [],
+        "UserDuz": 0,
+        "Enabled": true,
+        "Left": 24,
+        "Top": 152
+      },
+      "children": []
+    },
+    {
+      "class": "TActionList",
+      "name": "alPdmp",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 528,
+        "Top": 224
+      },
+      "children": [
+        {
+          "class": "TAction",
+          "name": "acPDMPRequest",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Request PDMP Data",
+            "OnExecute": "acPDMPRequestExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acPDMPReview",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Review PDMP Data",
+            "Enabled": false,
+            "OnExecute": "acPDMPReviewExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acPDMPCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Cancel PDMP Request",
+            "Enabled": false,
+            "OnExecute": "acPDMPCancelExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acPDMPOptions",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "PDMP Options"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acResetParams",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Reset Params",
+            "OnExecute": "acResetParamsExecute"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

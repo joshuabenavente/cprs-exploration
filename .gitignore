@@ -1,0 +1,11 @@
+.tools/
+.local/
+analysis/projects/
+analysis/logs/
+analysis/resources/*.bin
+__pycache__/
+*.pyc
+target/
+# Local application distributions and terminal profiles stay out of source control.
+cprs/
+vista/

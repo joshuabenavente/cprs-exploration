@@ -1,0 +1,118 @@
+{
+  "function": "fPtSel.TfrmPtSel.cboPatientNeedData",
+  "address": "00e82980",
+  "status": "decompiled",
+  "file": "fPtSel.TfrmPtSel.cboPatientNeedData_00e82980.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "004093c8",
+      "map_names": [
+        "System.@AsClass"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c134",
+      "map_names": [
+        "System.@UStrCat"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0040c35c",
+      "map_names": [
+        "System.@UStrCopy"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "0042c1a8",
+      "map_names": [
+        "System.SysUtils.UpperCase"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "0079af38",
+      "map_names": [
+        "VAUtils.SetPiece"
+      ]
+    },
+    {
+      "address": "007b3684",
+      "map_names": [
+        "ORCtrls.TORComboBox.ForDataUse"
+      ]
+    },
+    {
+      "address": "007b3c1c",
+      "map_names": [
+        "ORCtrls.TORComboBox.GetShortCount"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e82c10",
+      "file_offset": 11018256,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "^"
+    },
+    {
+      "address": "00e82c20",
+      "file_offset": 11018272,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": " -- ALIAS"
+    },
+    {
+      "address": "00e82c40",
+      "file_offset": 11018304,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "1"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "function": "fFrame.TfrmFrame.SetupPtInfoPanel",
+  "address": "00ff2f08",
+  "status": "decompiled",
+  "file": "fFrame.TfrmFrame.SetupPtInfoPanel_00ff2f08.c",
+  "numeric_callee_references": [
+    {
+      "address": "00668488",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTabControl.GetTabIndex"
+      ]
+    },
+    {
+      "address": "00ff1dbc",
+      "map_names": [
+        "fFrame.TfrmFrame.TabToPageID"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

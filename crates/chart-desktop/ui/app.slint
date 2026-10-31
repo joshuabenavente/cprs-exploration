@@ -1,0 +1,368 @@
+import { Button, ComboBox, LineEdit, StandardTableView, ScrollView } from "std-widgets.slint";
+
+component Field inherits VerticalLayout {
+    in property <string> label;
+    in property <string> value;
+    spacing: 5px;
+    Text { text: root.label; color: #5a6572; font-size: 12px; }
+    Text { text: root.value; color: #162b40; font-size: 15px; wrap: word-wrap; }
+}
+
+export component AppWindow inherits Window {
+    title: "CPRS Chart — Mock-only Rust prototype";
+    preferred-width: 1180px;
+    preferred-height: 800px;
+    min-width: 980px;
+    min-height: 720px;
+    default-font-family: "Segoe UI";
+    default-font-size: 14px;
+    background: #eff2f5;
+    forward-focus: search;
+
+    in property <bool> selector-open: true;
+    in property <bool> has-active: false;
+    in property <string> active-name: "No patient selected";
+    in property <string> active-detail: "Select an invented patient to open a mock chart.";
+    in property <string> active-id;
+    in property <string> active-location;
+    in property <string> active-visit;
+    in property <string> chart-summary;
+    in property <string> fixture-date;
+    in property <int> tab-index: 0;
+    in property <string> placeholder;
+    in-out property <string> query-text;
+    in property <int> mode-index: 0;
+    in property <int> simulation-index: 0;
+    in property <[[StandardListViewItem]]> patient-rows;
+    in-out property <int> selected-row: -1;
+    in property <string> page-label;
+    in property <bool> can-previous;
+    in property <bool> can-next;
+    in property <bool> search-loading;
+    in property <bool> chart-loading;
+    in property <bool> can-confirm;
+    in property <bool> has-preview;
+    in property <string> preview-name;
+    in property <string> preview-id;
+    in property <string> preview-dob;
+    in property <string> preview-lookup;
+    in property <string> preview-location;
+    in property <string> preview-access;
+    in property <string> preview-flag;
+    in property <bool> show-acknowledgment;
+    in property <string> acknowledgment;
+    in property <string> message;
+    in property <int> search-state: 0;
+
+    callback open-selection();
+    callback query-edited(string);
+    callback mode-changed(int);
+    callback simulation-changed(int);
+    callback row-selected(int);
+    callback row-released(int);
+    callback confirm-selection();
+    callback accept-acknowledgment();
+    callback decline-acknowledgment();
+    callback cancel-selection();
+    callback previous-page();
+    callback next-page();
+    callback tab-changed(int);
+
+    public function focus-search() { search.focus(); }
+    public function focus-chart() { new-patient.focus(); }
+    public function focus-acknowledgment() { continue-button.focus(); }
+
+    shortcuts := FocusScope {
+        width: parent.width;
+        height: parent.height;
+        key-pressed(event) => {
+            if event.text == Key.Escape && root.selector-open {
+                if root.show-acknowledgment { root.decline-acknowledgment(); }
+                else { root.cancel-selection(); }
+                return accept;
+            }
+            if event.text == Key.Return && root.selector-open {
+                if root.show-acknowledgment { root.accept-acknowledgment(); }
+                else { root.confirm-selection(); }
+                return accept;
+            }
+            reject
+        }
+        KeyBinding {
+            keys: @keys(Control + F);
+            activated => { if root.selector-open { search.focus(); } }
+        }
+        KeyBinding {
+            keys: @keys(Control + O);
+            activated => { if !root.selector-open { root.open-selection(); } }
+        }
+
+        VerticalLayout {
+            spacing: 0px;
+            Rectangle {
+                height: 44px;
+                background: #193950;
+                HorizontalLayout {
+                    padding-left: 20px; padding-right: 20px;
+                    Text { text: "CPRS Chart"; color: white; font-size: 21px; font-weight: 600; vertical-alignment: center; }
+                    Text { text: "Rust desktop prototype"; color: #c5d9e6; horizontal-alignment: right; vertical-alignment: center; }
+                }
+            }
+            Rectangle {
+                height: 30px;
+                background: #dcecf7;
+                Text { x: 20px; width: parent.width - 40px; height: parent.height;
+                    text: "MOCK ONLY  ·  All patient records are invented  ·  No live connection";
+                    color: #193e58; font-size: 13px; vertical-alignment: center; }
+            }
+            Rectangle {
+                height: 50px;
+                background: #f7f8fa;
+                HorizontalLayout {
+                    padding: 9px; padding-left: 18px; padding-right: 18px; spacing: 16px;
+                    new-patient := Button {
+                        text: "Select new patient…"; enabled: !root.selector-open;
+                        accessible-label: "Select new synthetic patient";
+                        clicked => { root.open-selection(); }
+                    }
+                    Text { text: "Ctrl+O  Select patient     Ctrl+F  Search"; color: #616e7a; vertical-alignment: center; }
+                    Rectangle { horizontal-stretch: 1; background: transparent; }
+                    Text { text: "Read-only demonstration"; color: #516272; vertical-alignment: center; }
+                }
+            }
+            Rectangle {
+                height: 90px;
+                background: white;
+                border-width: 1px; border-color: #d5dce3;
+                HorizontalLayout {
+                    padding: 17px; spacing: 24px;
+                    VerticalLayout {
+                        spacing: 5px;
+                        Text { text: root.active-name; color: #162e44; font-size: 22px; font-weight: 600; }
+                        Text { text: root.active-detail; color: #536576; }
+                    }
+                    Rectangle { horizontal-stretch: 1; background: transparent; }
+                    VerticalLayout {
+                        alignment: center; spacing: 5px;
+                        Text { text: root.has-active ? "CURRENT CHART" : "CHART CLOSED"; color: #5d6d7a; font-size: 11px; horizontal-alignment: right; }
+                        Text { text: root.has-active ? root.active-id : "Synthetic fixtures only"; color: #193950; font-size: 16px; horizontal-alignment: right; }
+                    }
+                }
+            }
+
+            workspace := Rectangle {
+                vertical-stretch: 1;
+                background: #eff2f5;
+                selector := Rectangle {
+                    visible: root.selector-open;
+                    width: parent.width; height: parent.height;
+                    background: #eff2f5;
+                    VerticalLayout {
+                        padding: 18px; spacing: 12px;
+                        HorizontalLayout {
+                            Text { text: "Patient selection"; font-size: 21px; font-weight: 600; color: #1a354c; }
+                            Text { text: root.has-active ? "Current chart stays open until confirmation" : "Choose a fixture to get started";
+                                horizontal-alignment: right; color: #5f6c79; vertical-alignment: center; }
+                        }
+                        HorizontalLayout {
+                            spacing: 12px;
+                            search := LineEdit {
+                                text <=> root.query-text;
+                                placeholder-text: "Name, SYNTH-001, or demo lookup x1001";
+                                accessible-label: "Search invented patients";
+                                enabled: !root.chart-loading && !root.show-acknowledgment;
+                                edited(text) => { root.query-edited(text); }
+                                accepted => { patient-table.focus(); }
+                            }
+                            ComboBox {
+                                preferred-width: 180px;
+                                model: ["All fixtures", "Demo roster"];
+                                current-index: root.mode-index;
+                                accessible-label: "Synthetic patient list";
+                                enabled: !root.chart-loading && !root.show-acknowledgment;
+                                selected(value) => { root.mode-changed(self.current-index); }
+                            }
+                            ComboBox {
+                                preferred-width: 205px;
+                                model: ["Normal simulation", "Search unavailable", "Malformed result", "Chart unavailable", "Slow search"];
+                                current-index: root.simulation-index;
+                                accessible-label: "Mock simulation scenario";
+                                enabled: !root.chart-loading && !root.show-acknowledgment;
+                                selected(value) => { root.simulation-changed(self.current-index); }
+                            }
+                        }
+                        HorizontalLayout {
+                            spacing: 16px;
+                            VerticalLayout {
+                                horizontal-stretch: 1;
+                                spacing: 8px;
+                                Rectangle {
+                                    vertical-stretch: 1; min-height: 210px;
+                                    background: white; border-width: 1px; border-color: #ccd6df;
+                                    patient-table := StandardTableView {
+                                        width: parent.width; height: parent.height;
+                                        rows: root.patient-rows;
+                                        current-row <=> root.selected-row;
+                                        columns: [
+                                            { title: "Patient", width: 210px, min-width: 150px },
+                                            { title: "Synthetic ID", width: 126px, min-width: 110px },
+                                            { title: "Fixture DOB", width: 120px, min-width: 100px },
+                                            { title: "Demo lookup", width: 136px, min-width: 120px }
+                                        ];
+                                        accessible-label: "Invented patient search results";
+                                        enabled: !root.search-loading && !root.chart-loading && !root.show-acknowledgment;
+                                        current-row-changed(index) => { root.row-selected(index); }
+                                        // Keep fixture order; headers must not imply an unapplied local sort.
+                                        sort-ascending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
+                                        sort-descending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
+                                        row-pointer-event(index, event, position) => {
+                                            if event.kind == PointerEventKind.up && event.button == PointerEventButton.left {
+                                                root.row-released(index);
+                                            }
+                                        }
+                                    }
+                                    if root.search-state == 1 || root.search-state == 3 || root.search-state == 4 || root.search-state == 5: Rectangle {
+                                        x: 1px; y: 43px; width: parent.width - 2px; height: parent.height - 44px;
+                                        background: white;
+                                        VerticalLayout {
+                                            padding: 24px; alignment: center; spacing: 12px;
+                                            Text {
+                                                text: root.search-state == 1 ? "Searching synthetic records…" : root.search-state == 3 ? "No matching fixtures" : root.search-state == 5 ? "Malformed mock result" : "Mock search unavailable";
+                                                font-size: 18px; font-weight: 600; color: root.search-state >= 4 ? #9d2934 : #4f6578;
+                                                horizontal-alignment: center; wrap: word-wrap;
+                                            }
+                                            Text { text: root.search-state == 1 ? "You can keep typing; older responses are discarded." : root.message;
+                                                color: #5b6c7a; horizontal-alignment: center; wrap: word-wrap; }
+                                        }
+                                    }
+                                }
+                                HorizontalLayout {
+                                    spacing: 8px;
+                                    Text { text: root.page-label; color: #5c6a77; vertical-alignment: center; }
+                                    Rectangle { horizontal-stretch: 1; background: transparent; }
+                                    Button { text: "Previous"; enabled: root.can-previous && !root.chart-loading && !root.show-acknowledgment; clicked => { root.previous-page(); } }
+                                    Button { text: "Next"; enabled: root.can-next && !root.chart-loading && !root.show-acknowledgment; clicked => { root.next-page(); } }
+                                }
+                            }
+                            Rectangle {
+                                preferred-width: 300px; min-width: 270px;
+                                horizontal-stretch: 0;
+                                background: white; border-width: 1px; border-color: #ccd6df;
+                                ScrollView {
+                                    width: parent.width; height: parent.height;
+                                    VerticalLayout {
+                                        padding: 18px; spacing: 16px;
+                                        Text { text: "Patient demographics"; color: #1b3b52; font-size: 17px; font-weight: 600; }
+                                        Text { text: root.has-preview ? root.preview-name : "Select a patient row"; color: #223a50; font-weight: 600; wrap: word-wrap; }
+                                        Field { label: "Synthetic identifier"; value: root.has-preview ? root.preview-id : "—"; }
+                                        Field { label: "Fixture date of birth"; value: root.has-preview ? root.preview-dob : "—"; }
+                                        Field { label: "Training location"; value: root.has-preview ? root.preview-location : "—"; }
+                                        Field { label: "Demo lookup code · not an SSN"; value: root.has-preview ? root.preview-lookup : "—"; }
+                                        Text { text: root.has-preview ? root.preview-access : "Previewing a row does not change the current chart."; color: #66501c; wrap: word-wrap; }
+                                        if root.preview-flag != "": Text { text: root.preview-flag; color: #8f343a; wrap: word-wrap; }
+                                    }
+                                }
+                            }
+                        }
+                        acknowledgment-panel := Rectangle {
+                            visible: root.show-acknowledgment;
+                            height: root.show-acknowledgment ? ack-layout.min-height : 0px;
+                            background: #fff4dc; border-width: 1px; border-color: #d9be7b;
+                            ack-layout := HorizontalLayout {
+                                padding: 14px; spacing: 14px;
+                                VerticalLayout {
+                                    Text { text: "Mock acknowledgment"; font-weight: 600; color: #634b12; }
+                                    Text { text: root.acknowledgment; color: #634b12; wrap: word-wrap; }
+                                }
+                                continue-button := Button { text: "Continue to mock chart"; clicked => { root.accept-acknowledgment(); } }
+                                Button { text: "Back"; clicked => { root.decline-acknowledgment(); } }
+                            }
+                        }
+                        HorizontalLayout {
+                            spacing: 10px;
+                            Text { text: root.chart-loading ? "Loading selected mock chart…" : "Review the synthetic ID before opening a chart."; color: #5c6b79; vertical-alignment: center; }
+                            Rectangle { horizontal-stretch: 1; background: transparent; }
+                            Button { text: root.chart-loading ? "Loading…" : "OK — Open mock chart"; primary: true;
+                                enabled: root.can-confirm && !root.show-acknowledgment;
+                                clicked => { root.confirm-selection(); } }
+                            Button { text: "Cancel"; clicked => { root.cancel-selection(); } }
+                        }
+                    }
+                }
+
+                chart := Rectangle {
+                    visible: !root.selector-open;
+                    width: parent.width; height: parent.height;
+                    background: #eff2f5;
+                    VerticalLayout {
+                        padding: 24px; spacing: 18px;
+                        if !root.has-active: VerticalLayout {
+                            alignment: center; spacing: 16px;
+                            Text { text: "No mock chart is open"; color: #304f65; font-size: 24px; horizontal-alignment: center; }
+                            Text { text: "Select an invented patient to explore the read-only shell."; color: #617180; horizontal-alignment: center; }
+                            HorizontalLayout { alignment: center; Button { text: "Select a mock patient"; clicked => { root.open-selection(); } } }
+                        }
+                        if root.has-active && root.tab-index == 0: VerticalLayout {
+                            spacing: 18px;
+                            Text { text: "Patient overview"; color: #1e3b52; font-size: 23px; font-weight: 600; }
+                            HorizontalLayout {
+                                spacing: 16px;
+                                Rectangle {
+                                    background: white; border-width: 1px; border-color: #d1dbe4;
+                                    min-height: 116px;
+                                    VerticalLayout { padding: 20px; spacing: 10px;
+                                        Text { text: "TRAINING LOCATION"; color: #687988; font-size: 12px; }
+                                        Text { text: root.active-location; color: #203d53; font-size: 19px; }
+                                        Text { text: root.active-id; color: #687988; }
+                                    }
+                                }
+                                Rectangle {
+                                    background: white; border-width: 1px; border-color: #d1dbe4;
+                                    min-height: 116px;
+                                    VerticalLayout { padding: 20px; spacing: 10px;
+                                        Text { text: "MOCK VISIT"; color: #687988; font-size: 12px; }
+                                        Text { text: root.active-visit; color: #203d53; font-size: 17px; wrap: word-wrap; }
+                                        Text { text: "Read-only fixture"; color: #687988; }
+                                    }
+                                }
+                            }
+                            Rectangle {
+                                background: white; border-width: 1px; border-color: #d1dbe4;
+                                vertical-stretch: 1;
+                                VerticalLayout { padding: 22px; spacing: 14px; alignment: start;
+                                    Text { text: "Synthetic record summary"; font-size: 18px; color: #23445b; font-weight: 600; }
+                                    Text { text: root.chart-summary; color: #536879; wrap: word-wrap; }
+                                    Text { text: "Fixed fixture date: " + root.fixture-date; color: #6b7c89; font-size: 13px; }
+                                }
+                            }
+                        }
+                        if root.has-active && root.tab-index != 0: VerticalLayout {
+                            alignment: center; spacing: 16px;
+                            Text { text: root.placeholder; font-size: 22px; color: #36546a; horizontal-alignment: center; wrap: word-wrap; }
+                            Text { text: "No chart content or actions are available on this tab."; color: #647886; horizontal-alignment: center; }
+                        }
+                    }
+                }
+            }
+            Rectangle {
+                height: 44px;
+                background: #e1e7ed;
+                HorizontalLayout {
+                    padding: 6px; padding-left: 18px; spacing: 6px;
+                    for label[index] in ["Overview", "Notes", "Orders", "Results"]: Button {
+                        text: label; checked: root.tab-index == index;
+                        enabled: root.has-active && !root.selector-open;
+                        clicked => { root.tab-changed(index); }
+                    }
+                    Rectangle { horizontal-stretch: 1; background: transparent; }
+                    Text { text: "Prototype navigation"; color: #637482; vertical-alignment: center; }
+                }
+            }
+            Rectangle {
+                height: 48px; background: #f9fafb;
+                Text { x: 18px; width: parent.width - 36px; height: parent.height;
+                    text: root.message; color: #3b5265; vertical-alignment: center; wrap: word-wrap; font-size: 13px; }
+            }
+        }
+    }
+}

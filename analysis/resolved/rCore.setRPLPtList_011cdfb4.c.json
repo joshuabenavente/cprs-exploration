@@ -1,0 +1,36 @@
+{
+  "function": "rCore.setRPLPtList",
+  "address": "011cdfb4",
+  "status": "decompiled",
+  "file": "rCore.setRPLPtList_011cdfb4.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "009b2cf8",
+      "map_names": [
+        "ORFn.MixedCaseList"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011ce050",
+      "file_offset": 14472272,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "ORQPT READ RPL"
+    }
+  ]
+}

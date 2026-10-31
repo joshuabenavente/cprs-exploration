@@ -1,0 +1,106 @@
+{
+  "function": "rCore.SelectPatient",
+  "address": "011cec4c",
+  "status": "decompiled",
+  "file": "rCore.SelectPatient_011cec4c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0042d238",
+      "map_names": [
+        "System.SysUtils.StrToIntDef"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "009b18cc",
+      "map_names": [
+        "ORFn.MakeFMDateTime"
+      ]
+    },
+    {
+      "address": "011ca4f0",
+      "map_names": [
+        "rCore.FormatSSN"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011cf0e4",
+      "file_offset": 14476516,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": "ORWPT SELECT"
+    },
+    {
+      "address": "011cf10c",
+      "file_offset": 14476556,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "1"
+    },
+    {
+      "address": "011cf11c",
+      "file_offset": 14476572,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": "ORWPT1 PRCARE"
+    },
+    {
+      "address": "011cf144",
+      "file_offset": 14476612,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": "ORWPT INPLOC"
+    },
+    {
+      "address": "011cf16c",
+      "file_offset": 14476652,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 18,
+      "text": "ORWPT GET FULL ICN"
+    },
+    {
+      "address": "011cf1a0",
+      "file_offset": 14476704,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "-1"
+    }
+  ]
+}

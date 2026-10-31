@@ -1,0 +1,1763 @@
+{
+  "checked_on": "2026-10-31",
+  "evidence": "static binary and resource analysis",
+  "passed": true,
+  "checks": [
+    {
+      "check": "official archive ghidra",
+      "passed": true
+    },
+    {
+      "check": "official archive jdk",
+      "passed": true
+    },
+    {
+      "check": "input cprs/CPRSChart.exe",
+      "passed": true
+    },
+    {
+      "check": "input cprs/CPRSChart.map",
+      "passed": true
+    },
+    {
+      "check": "MAP entry point",
+      "passed": true
+    },
+    {
+      "check": "MAP section .text",
+      "passed": true
+    },
+    {
+      "check": "MAP section .itext",
+      "passed": true
+    },
+    {
+      "check": "MAP section .data",
+      "passed": true
+    },
+    {
+      "check": "MAP section .bss",
+      "passed": true
+    },
+    {
+      "check": "TFRMDUPPTS.dfm.bin exact resource bytes",
+      "passed": true
+    },
+    {
+      "check": "TFRMFRAME.dfm.bin exact resource bytes",
+      "passed": true
+    },
+    {
+      "check": "TFRMPTSEL.dfm.bin exact resource bytes",
+      "passed": true
+    },
+    {
+      "check": "TFRMPTSELMSG.dfm.bin exact resource bytes",
+      "passed": true
+    },
+    {
+      "check": "decompilation fFrame.TfrmFrame.SetupPatient",
+      "passed": true
+    },
+    {
+      "check": "decompilation fFrame.TfrmFrame.mnuFileOpenClick",
+      "passed": true
+    },
+    {
+      "check": "decompilation fPtSel.SelectPatient",
+      "passed": true
+    },
+    {
+      "check": "decompilation fPtSel.TfrmPtSel.SelectPtByDFN",
+      "passed": true
+    },
+    {
+      "check": "decompilation fPtSel.TfrmPtSel.cboPatientNeedData",
+      "passed": true
+    },
+    {
+      "check": "decompilation fPtSel.TfrmPtSel.cmdCancelClick",
+      "passed": true
+    },
+    {
+      "check": "decompilation fPtSel.TfrmPtSel.cmdOKClick",
+      "passed": true
+    },
+    {
+      "check": "decompilation rCore.CheckSensitiveRecordAccess",
+      "passed": true
+    },
+    {
+      "check": "decompilation rCore.ListPtTop",
+      "passed": true
+    },
+    {
+      "check": "decompilation rCore.SelectPatient",
+      "passed": true
+    },
+    {
+      "check": "decompilation rCore.setRPLPtList",
+      "passed": true
+    },
+    {
+      "check": "decompilation rCore.setSubSetOfPatients",
+      "passed": true
+    },
+    {
+      "check": "decompilation uCore.AllowAccessToSensitivePatient",
+      "passed": true
+    },
+    {
+      "check": "decompilation uCore.TPatient.SetDFN",
+      "passed": true
+    },
+    {
+      "check": "Ghidra Borland Delphi compiler",
+      "passed": true
+    },
+    {
+      "check": "Ghidra executable hash",
+      "passed": true
+    },
+    {
+      "check": "Focused analysis mode recorded",
+      "passed": true
+    },
+    {
+      "check": "Ghidra MAP import count and failures",
+      "passed": true
+    },
+    {
+      "check": "Chart menu handler calls fPtSel.SelectPatient",
+      "passed": true
+    },
+    {
+      "check": "Chart menu handler calls fFrame.TfrmFrame.SetupPatient",
+      "passed": true
+    }
+  ],
+  "analysis_mode": "Focused disassembly and decompilation; automatic whole-program analysis disabled",
+  "symbols": 65610,
+  "workflow_functions": 41,
+  "decompiled_functions": 41,
+  "forms": [
+    {
+      "form": "frmDupPts",
+      "resource_sha256": "074ce161f65a4d91a264f9ebe779249b59c8d280dd5aeb0490316b27020b12ab",
+      "components": 11,
+      "events": [
+        {
+          "control": "frmDupPts",
+          "event": "OnCloseQuery",
+          "handler": "FormCloseQuery",
+          "map_symbol": "fDupPts.TfrmDupPts.FormCloseQuery",
+          "resolved": true
+        },
+        {
+          "control": "lboSelPt",
+          "event": "OnCustomDrawItem",
+          "handler": "lboSelPtCustomDrawItem",
+          "map_symbol": "fDupPts.TfrmDupPts.lboSelPtCustomDrawItem",
+          "resolved": true
+        },
+        {
+          "control": "lboSelPt",
+          "event": "OnDblClick",
+          "handler": "lboSelPtDblClick",
+          "map_symbol": "fDupPts.TfrmDupPts.lboSelPtDblClick",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "form": "frmFrame",
+      "resource_sha256": "8d14c56ab73d4892068a39f90056c427f8310a88ed88c9c4b2d9dce4f626631e",
+      "components": 158,
+      "events": [
+        {
+          "control": "frmFrame",
+          "event": "OnCanResize",
+          "handler": "ORFormCanResize",
+          "map_symbol": "fFrame.TfrmFrame.ORFormCanResize",
+          "resolved": true
+        },
+        {
+          "control": "frmFrame",
+          "event": "OnCloseQuery",
+          "handler": "FormCloseQuery",
+          "map_symbol": "fFrame.TfrmFrame.FormCloseQuery",
+          "resolved": true
+        },
+        {
+          "control": "frmFrame",
+          "event": "OnResize",
+          "handler": "FormResize",
+          "map_symbol": "fFrame.TfrmFrame.FormResize",
+          "resolved": true
+        },
+        {
+          "control": "pnlPatient",
+          "event": "OnClick",
+          "handler": "pnlPatientClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPatientClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlPatient",
+          "event": "OnEnter",
+          "handler": "pnlPrimaryCareEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlPatient",
+          "event": "OnExit",
+          "handler": "pnlPrimaryCareExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlPatient",
+          "event": "OnMouseDown",
+          "handler": "pnlPatientMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPatientMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlPatient",
+          "event": "OnMouseUp",
+          "handler": "pnlPatientMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPatientMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblPtName",
+          "event": "OnClick",
+          "handler": "pnlPatientClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPatientClick",
+          "resolved": true
+        },
+        {
+          "control": "lblPtName",
+          "event": "OnMouseDown",
+          "handler": "pnlPatientMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPatientMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblPtName",
+          "event": "OnMouseUp",
+          "handler": "pnlPatientMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPatientMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblPtInfo",
+          "event": "OnClick",
+          "handler": "pnlPatientClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPatientClick",
+          "resolved": true
+        },
+        {
+          "control": "lblPtInfo",
+          "event": "OnMouseDown",
+          "handler": "pnlPatientMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPatientMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblPtInfo",
+          "event": "OnMouseUp",
+          "handler": "pnlPatientMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPatientMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "pnlVisit",
+          "event": "OnClick",
+          "handler": "pnlVisitClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlVisitClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlVisit",
+          "event": "OnEnter",
+          "handler": "pnlPrimaryCareEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlVisit",
+          "event": "OnExit",
+          "handler": "pnlPrimaryCareExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlVisit",
+          "event": "OnMouseDown",
+          "handler": "pnlVisitMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlVisitMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlVisit",
+          "event": "OnMouseUp",
+          "handler": "pnlVisitMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlVisitMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblPtLocation",
+          "event": "OnClick",
+          "handler": "pnlVisitClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlVisitClick",
+          "resolved": true
+        },
+        {
+          "control": "lblPtLocation",
+          "event": "OnMouseDown",
+          "handler": "pnlVisitMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlVisitMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblPtLocation",
+          "event": "OnMouseUp",
+          "handler": "pnlVisitMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlVisitMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblPtProvider",
+          "event": "OnClick",
+          "handler": "pnlVisitClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlVisitClick",
+          "resolved": true
+        },
+        {
+          "control": "lblPtProvider",
+          "event": "OnMouseDown",
+          "handler": "pnlVisitMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlVisitMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblPtProvider",
+          "event": "OnMouseUp",
+          "handler": "pnlVisitMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlVisitMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "pnlPrimaryCare",
+          "event": "OnClick",
+          "handler": "pnlPrimaryCareClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlPrimaryCare",
+          "event": "OnEnter",
+          "handler": "pnlPrimaryCareEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlPrimaryCare",
+          "event": "OnExit",
+          "handler": "pnlPrimaryCareExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlPrimaryCare",
+          "event": "OnMouseDown",
+          "handler": "pnlPrimaryCareMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlPrimaryCare",
+          "event": "OnMouseUp",
+          "handler": "pnlPrimaryCareMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblPtCare",
+          "event": "OnClick",
+          "handler": "pnlPrimaryCareClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareClick",
+          "resolved": true
+        },
+        {
+          "control": "lblPtCare",
+          "event": "OnMouseDown",
+          "handler": "pnlPrimaryCareMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblPtCare",
+          "event": "OnMouseUp",
+          "handler": "pnlPrimaryCareMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblPtAttending",
+          "event": "OnClick",
+          "handler": "pnlPrimaryCareClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareClick",
+          "resolved": true
+        },
+        {
+          "control": "lblPtAttending",
+          "event": "OnMouseDown",
+          "handler": "pnlPrimaryCareMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblPtAttending",
+          "event": "OnMouseUp",
+          "handler": "pnlPrimaryCareMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblPtMHTC",
+          "event": "OnClick",
+          "handler": "pnlPrimaryCareClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareClick",
+          "resolved": true
+        },
+        {
+          "control": "lblPtMHTC",
+          "event": "OnMouseDown",
+          "handler": "pnlPrimaryCareMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblPtMHTC",
+          "event": "OnMouseUp",
+          "handler": "pnlPrimaryCareMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "pnlReminders",
+          "event": "OnClick",
+          "handler": "pnlRemindersClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlRemindersClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlReminders",
+          "event": "OnEnter",
+          "handler": "pnlPrimaryCareEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlReminders",
+          "event": "OnExit",
+          "handler": "pnlPrimaryCareExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlReminders",
+          "event": "OnMouseDown",
+          "handler": "pnlRemindersMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlRemindersMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlReminders",
+          "event": "OnMouseUp",
+          "handler": "pnlRemindersMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlRemindersMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "imgReminder",
+          "event": "OnMouseDown",
+          "handler": "pnlRemindersMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlRemindersMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "imgReminder",
+          "event": "OnMouseUp",
+          "handler": "pnlRemindersMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlRemindersMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "pnlPostings",
+          "event": "OnClick",
+          "handler": "pnlPostingsClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPostingsClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlPostings",
+          "event": "OnEnter",
+          "handler": "pnlPrimaryCareEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlPostings",
+          "event": "OnExit",
+          "handler": "pnlPrimaryCareExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlPostings",
+          "event": "OnMouseDown",
+          "handler": "pnlPostingsMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPostingsMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlPostings",
+          "event": "OnMouseUp",
+          "handler": "pnlPostingsMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPostingsMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblPtPostings",
+          "event": "OnClick",
+          "handler": "pnlPostingsClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPostingsClick",
+          "resolved": true
+        },
+        {
+          "control": "lblPtPostings",
+          "event": "OnMouseDown",
+          "handler": "pnlPostingsMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPostingsMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblPtPostings",
+          "event": "OnMouseUp",
+          "handler": "pnlPostingsMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPostingsMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblPtCWAD",
+          "event": "OnClick",
+          "handler": "pnlPostingsClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlPostingsClick",
+          "resolved": true
+        },
+        {
+          "control": "lblPtCWAD",
+          "event": "OnMouseDown",
+          "handler": "pnlPostingsMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlPostingsMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblPtCWAD",
+          "event": "OnMouseUp",
+          "handler": "pnlPostingsMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlPostingsMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "pnlOTHD",
+          "event": "OnClick",
+          "handler": "pnlOTHDClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlOTHD",
+          "event": "OnEnter",
+          "handler": "pnlOTHDEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlOTHD",
+          "event": "OnExit",
+          "handler": "pnlOTHDExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlOTHD",
+          "event": "OnMouseDown",
+          "handler": "pnlOTHDMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlOTHD",
+          "event": "OnMouseUp",
+          "handler": "pnlOTHDMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblOTHDTitle",
+          "event": "OnClick",
+          "handler": "pnlOTHDClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDClick",
+          "resolved": true
+        },
+        {
+          "control": "lblOTHDTitle",
+          "event": "OnMouseDown",
+          "handler": "pnlOTHDMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblOTHDTitle",
+          "event": "OnMouseUp",
+          "handler": "pnlOTHDMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblOTHDDtl",
+          "event": "OnClick",
+          "handler": "pnlOTHDClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDClick",
+          "resolved": true
+        },
+        {
+          "control": "lblOTHDDtl",
+          "event": "OnMouseDown",
+          "handler": "pnlOTHDMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblOTHDDtl",
+          "event": "OnMouseUp",
+          "handler": "pnlOTHDMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlOTHDMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "paVAA",
+          "event": "OnResize",
+          "handler": "paVAAResize",
+          "map_symbol": "fFrame.TfrmFrame.paVAAResize",
+          "resolved": true
+        },
+        {
+          "control": "laVAA2",
+          "event": "OnClick",
+          "handler": "laVAA2Click",
+          "map_symbol": "fFrame.TfrmFrame.laVAA2Click",
+          "resolved": true
+        },
+        {
+          "control": "laMHV",
+          "event": "OnClick",
+          "handler": "laMHVClick",
+          "map_symbol": "fFrame.TfrmFrame.laMHVClick",
+          "resolved": true
+        },
+        {
+          "control": "btnCombatVet",
+          "event": "OnClick",
+          "handler": "btnCombatVetClick",
+          "map_symbol": "fFrame.TfrmFrame.btnCombatVetClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlFlag",
+          "event": "OnClick",
+          "handler": "pnlFlagClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlFlagClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlFlag",
+          "event": "OnEnter",
+          "handler": "pnlFlagEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlFlagEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlFlag",
+          "event": "OnExit",
+          "handler": "pnlFlagExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlFlagExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlFlag",
+          "event": "OnMouseDown",
+          "handler": "pnlFlagMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlFlagMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlFlag",
+          "event": "OnMouseUp",
+          "handler": "pnlFlagMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlFlagMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblFlag",
+          "event": "OnClick",
+          "handler": "pnlFlagClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlFlagClick",
+          "resolved": true
+        },
+        {
+          "control": "lblFlag",
+          "event": "OnMouseDown",
+          "handler": "pnlFlagMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlFlagMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblFlag",
+          "event": "OnMouseUp",
+          "handler": "pnlFlagMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlFlagMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "pnlRemoteData",
+          "event": "OnClick",
+          "handler": "pnlCIRNClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlCIRNClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlRemoteData",
+          "event": "OnEnter",
+          "handler": "pnlPrimaryCareEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlRemoteData",
+          "event": "OnExit",
+          "handler": "pnlPrimaryCareExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlRemoteData",
+          "event": "OnMouseDown",
+          "handler": "pnlCIRNMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlCIRNMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlRemoteData",
+          "event": "OnMouseUp",
+          "handler": "pnlCIRNMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlCIRNMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "pnlVistaWeb",
+          "event": "OnClick",
+          "handler": "pnlVistaWebClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlVistaWebClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlVistaWeb",
+          "event": "OnEnter",
+          "handler": "pnlPrimaryCareEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlVistaWeb",
+          "event": "OnExit",
+          "handler": "pnlPrimaryCareExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlVistaWeb",
+          "event": "OnMouseDown",
+          "handler": "pnlVistaWebMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlVistaWebMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlVistaWeb",
+          "event": "OnMouseUp",
+          "handler": "pnlVistaWebMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlVistaWebMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblVistaWeb",
+          "event": "OnClick",
+          "handler": "pnlVistaWebClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlVistaWebClick",
+          "resolved": true
+        },
+        {
+          "control": "lblVistaWeb",
+          "event": "OnMouseDown",
+          "handler": "pnlVistaWebMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlVistaWebMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "lblVistaWeb",
+          "event": "OnMouseUp",
+          "handler": "pnlVistaWebMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlVistaWebMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "pnlCIRN",
+          "event": "OnClick",
+          "handler": "pnlCIRNClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlCIRNClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlCIRN",
+          "event": "OnEnter",
+          "handler": "pnlPrimaryCareEnter",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareEnter",
+          "resolved": true
+        },
+        {
+          "control": "pnlCIRN",
+          "event": "OnExit",
+          "handler": "pnlPrimaryCareExit",
+          "map_symbol": "fFrame.TfrmFrame.pnlPrimaryCareExit",
+          "resolved": true
+        },
+        {
+          "control": "pnlCIRN",
+          "event": "OnMouseDown",
+          "handler": "pnlCIRNMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlCIRNMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlCIRN",
+          "event": "OnMouseUp",
+          "handler": "pnlCIRNMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlCIRNMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lblCIRN",
+          "event": "OnClick",
+          "handler": "pnlCIRNClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlCIRNClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlOtherInfo",
+          "event": "OnClick",
+          "handler": "pnlOtherInfoClick",
+          "map_symbol": "fFrame.TfrmFrame.pnlOtherInfoClick",
+          "resolved": true
+        },
+        {
+          "control": "pnlOtherInfo",
+          "event": "OnMouseDown",
+          "handler": "pnlOtherInfoMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.pnlOtherInfoMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "pnlOtherInfo",
+          "event": "OnMouseUp",
+          "handler": "pnlOtherInfoMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.pnlOtherInfoMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "tabPage",
+          "event": "OnChange",
+          "handler": "tabPageChange",
+          "map_symbol": "fFrame.TfrmFrame.tabPageChange",
+          "resolved": true
+        },
+        {
+          "control": "tabPage",
+          "event": "OnMouseDown",
+          "handler": "tabPageMouseDown",
+          "map_symbol": "fFrame.TfrmFrame.tabPageMouseDown",
+          "resolved": true
+        },
+        {
+          "control": "tabPage",
+          "event": "OnMouseUp",
+          "handler": "tabPageMouseUp",
+          "map_symbol": "fFrame.TfrmFrame.tabPageMouseUp",
+          "resolved": true
+        },
+        {
+          "control": "lstCIRNLocations",
+          "event": "OnClick",
+          "handler": "lstCIRNLocationsClick",
+          "map_symbol": "fFrame.TfrmFrame.lstCIRNLocationsClick",
+          "resolved": true
+        },
+        {
+          "control": "lstCIRNLocations",
+          "event": "OnExit",
+          "handler": "lstCIRNLocationsExit",
+          "map_symbol": "fFrame.TfrmFrame.lstCIRNLocationsExit",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileOpen",
+          "event": "OnClick",
+          "handler": "mnuFileOpenClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileOpenClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileRefresh",
+          "event": "OnClick",
+          "handler": "mnuFileRefreshClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileRefreshClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileResumeContextSet",
+          "event": "OnClick",
+          "handler": "mnuFileResumeContextSetClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileResumeContextSetClick",
+          "resolved": true
+        },
+        {
+          "control": "Useexistingcontext1",
+          "event": "OnClick",
+          "handler": "mnuFileResumeContextGetClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileResumeContextGetClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileBreakContext",
+          "event": "OnClick",
+          "handler": "mnuFileBreakContextClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileBreakContextClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileEncounter",
+          "event": "OnClick",
+          "handler": "mnuFileEncounterClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileEncounterClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileReview",
+          "event": "OnClick",
+          "handler": "mnuFileReviewClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileReviewClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileNext",
+          "event": "OnClick",
+          "handler": "mnuFileNextClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileNextClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileNotifRemove",
+          "event": "OnClick",
+          "handler": "mnuFileNotifRemoveClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileNotifRemoveClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileViewNotifications",
+          "event": "OnClick",
+          "handler": "mnuFileViewNotificationsClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileViewNotificationsClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFilePrintSetup",
+          "event": "OnClick",
+          "handler": "mnuFilePrintSetupClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFilePrintSetupClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFilePrintSelectedItems",
+          "event": "OnClick",
+          "handler": "mnuFilePrintSelectedItemsClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFilePrintSelectedItemsClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFilePrint",
+          "event": "OnClick",
+          "handler": "mnuFilePrintClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFilePrintClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFileExit",
+          "event": "OnClick",
+          "handler": "mnuFileExitClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileExitClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuEdit",
+          "event": "OnClick",
+          "handler": "mnuEditClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuEditClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuEditUndo",
+          "event": "OnClick",
+          "handler": "mnuEditUndoClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuEditUndoClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuEditRedo",
+          "event": "OnClick",
+          "handler": "mnuEditRedoClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuEditRedoClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuEditCut",
+          "event": "OnClick",
+          "handler": "mnuEditCutClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuEditCutClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuEditCopy",
+          "event": "OnClick",
+          "handler": "mnuEditCopyClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuEditCopyClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuEditPaste",
+          "event": "OnClick",
+          "handler": "mnuEditPasteClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuEditPasteClick",
+          "resolved": true
+        },
+        {
+          "control": "mnu8pt",
+          "event": "OnClick",
+          "handler": "mnuFontSizeClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFontSizeClick",
+          "resolved": true
+        },
+        {
+          "control": "mnu10pt1",
+          "event": "OnClick",
+          "handler": "mnuFontSizeClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFontSizeClick",
+          "resolved": true
+        },
+        {
+          "control": "mnu12pt1",
+          "event": "OnClick",
+          "handler": "mnuFontSizeClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFontSizeClick",
+          "resolved": true
+        },
+        {
+          "control": "mnu14pt1",
+          "event": "OnClick",
+          "handler": "mnuFontSizeClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFontSizeClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartCover",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartProbs",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartMeds",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartOrders",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartNotes",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartCslts",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartSurgery",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartDCSumm",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartLabs",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuChartReports",
+          "event": "OnClick",
+          "handler": "mnuChartTabClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuChartTabClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuViewInformation",
+          "event": "OnClick",
+          "handler": "mnuViewInformationClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuViewInformationClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuViewDemo",
+          "event": "OnClick",
+          "handler": "ViewInfo",
+          "map_symbol": "fFrame.TfrmFrame.ViewInfo",
+          "resolved": true
+        },
+        {
+          "control": "mnuViewVisits",
+          "event": "OnClick",
+          "handler": "ViewInfo",
+          "map_symbol": "fFrame.TfrmFrame.ViewInfo",
+          "resolved": true
+        },
+        {
+          "control": "mnuViewPrimaryCare",
+          "event": "OnClick",
+          "handler": "ViewInfo",
+          "map_symbol": "fFrame.TfrmFrame.ViewInfo",
+          "resolved": true
+        },
+        {
+          "control": "mnuViewMyHealtheVet",
+          "event": "OnClick",
+          "handler": "ViewInfo",
+          "map_symbol": "fFrame.TfrmFrame.ViewInfo",
+          "resolved": true
+        },
+        {
+          "control": "mnuInsurance",
+          "event": "OnClick",
+          "handler": "ViewInfo",
+          "map_symbol": "fFrame.TfrmFrame.ViewInfo",
+          "resolved": true
+        },
+        {
+          "control": "mnuViewFlags",
+          "event": "OnClick",
+          "handler": "ViewInfo",
+          "map_symbol": "fFrame.TfrmFrame.ViewInfo",
+          "resolved": true
+        },
+        {
+          "control": "mnuViewRemoteData",
+          "event": "OnClick",
+          "handler": "ViewInfo",
+          "map_symbol": "fFrame.TfrmFrame.ViewInfo",
+          "resolved": true
+        },
+        {
+          "control": "mnuViewReminders",
+          "event": "OnClick",
+          "handler": "ViewInfo",
+          "map_symbol": "fFrame.TfrmFrame.ViewInfo",
+          "resolved": true
+        },
+        {
+          "control": "mnuViewPostings",
+          "event": "OnClick",
+          "handler": "ViewInfo",
+          "map_symbol": "fFrame.TfrmFrame.ViewInfo",
+          "resolved": true
+        },
+        {
+          "control": "mnuToolsGraphing",
+          "event": "OnClick",
+          "handler": "mnuToolsGraphingClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuToolsGraphingClick",
+          "resolved": true
+        },
+        {
+          "control": "LabInfo1",
+          "event": "OnClick",
+          "handler": "LabInfo1Click",
+          "map_symbol": "fFrame.TfrmFrame.LabInfo1Click",
+          "resolved": true
+        },
+        {
+          "control": "mnuToolsOptions",
+          "event": "OnClick",
+          "handler": "mnuToolsOptionsClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuToolsOptionsClick",
+          "resolved": true
+        },
+        {
+          "control": "DigitalSigningSetup1",
+          "event": "OnClick",
+          "handler": "DigitalSigningSetup1Click",
+          "map_symbol": "fFrame.TfrmFrame.DigitalSigningSetup1Click",
+          "resolved": true
+        },
+        {
+          "control": "mnuHelpContents",
+          "event": "OnClick",
+          "handler": "ToolClick",
+          "map_symbol": "fFrame.TfrmFrame.ToolClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuDebugReport",
+          "event": "OnClick",
+          "handler": "mnuDebugReportClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuDebugReportClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuWAPermissions",
+          "event": "OnClick",
+          "handler": "mnuWAPermissionsClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuWAPermissionsClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuHelpBroker",
+          "event": "OnClick",
+          "handler": "mnuHelpBrokerClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuHelpBrokerClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuHelpLists",
+          "event": "OnClick",
+          "handler": "mnuHelpListsClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuHelpListsClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuHelpSymbols",
+          "event": "OnClick",
+          "handler": "mnuHelpSymbolsClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuHelpSymbolsClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuFocusChanges",
+          "event": "OnClick",
+          "handler": "mnuFocusChangesClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFocusChangesClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuShowActivityLog",
+          "event": "OnClick",
+          "handler": "mnuShowActivityLogClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuShowActivityLogClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuHelpAbout",
+          "event": "OnClick",
+          "handler": "mnuHelpAboutClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuHelpAboutClick",
+          "resolved": true
+        },
+        {
+          "control": "popCIRNSelectAll",
+          "event": "OnClick",
+          "handler": "popCIRNSelectAllClick",
+          "map_symbol": "fFrame.TfrmFrame.popCIRNSelectAllClick",
+          "resolved": true
+        },
+        {
+          "control": "popCIRNSelectNone",
+          "event": "OnClick",
+          "handler": "popCIRNSelectNoneClick",
+          "map_symbol": "fFrame.TfrmFrame.popCIRNSelectNoneClick",
+          "resolved": true
+        },
+        {
+          "control": "popCIRNClose",
+          "event": "OnClick",
+          "handler": "popCIRNCloseClick",
+          "map_symbol": "fFrame.TfrmFrame.popCIRNCloseClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuAlertContinue",
+          "event": "OnClick",
+          "handler": "mnuFileNextClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuFileNextClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuAlertForward",
+          "event": "OnClick",
+          "handler": "mnuAlertForwardClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuAlertForwardClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuAlertRenew",
+          "event": "OnClick",
+          "handler": "mnuAlertRenewClick",
+          "map_symbol": "fFrame.TfrmFrame.mnuAlertRenewClick",
+          "resolved": true
+        },
+        {
+          "control": "AppEvents",
+          "event": "OnActivate",
+          "handler": "AppEventsActivate",
+          "map_symbol": "fFrame.TfrmFrame.AppEventsActivate",
+          "resolved": true
+        },
+        {
+          "control": "AppEvents",
+          "event": "OnIdle",
+          "handler": "AppEventsIdle",
+          "map_symbol": "fFrame.TfrmFrame.AppEventsIdle",
+          "resolved": true
+        },
+        {
+          "control": "AppEvents",
+          "event": "OnMessage",
+          "handler": "AppEventsMessage",
+          "map_symbol": "fFrame.TfrmFrame.AppEventsMessage",
+          "resolved": true
+        },
+        {
+          "control": "AppEvents",
+          "event": "OnShortCut",
+          "handler": "AppEventsShortCut",
+          "map_symbol": "fFrame.TfrmFrame.AppEventsShortCut",
+          "resolved": true
+        },
+        {
+          "control": "compAccessTabPage",
+          "event": "OnCaptionQuery",
+          "handler": "compAccessTabPageCaptionQuery",
+          "map_symbol": "fFrame.TfrmFrame.compAccessTabPageCaptionQuery",
+          "resolved": true
+        },
+        {
+          "control": "acPDMPRequest",
+          "event": "OnExecute",
+          "handler": "acPDMPRequestExecute",
+          "map_symbol": "fFrame.TfrmFrame.acPDMPRequestExecute",
+          "resolved": true
+        },
+        {
+          "control": "acPDMPReview",
+          "event": "OnExecute",
+          "handler": "acPDMPReviewExecute",
+          "map_symbol": "fFrame.TfrmFrame.acPDMPReviewExecute",
+          "resolved": true
+        },
+        {
+          "control": "acPDMPCancel",
+          "event": "OnExecute",
+          "handler": "acPDMPCancelExecute",
+          "map_symbol": "fFrame.TfrmFrame.acPDMPCancelExecute",
+          "resolved": true
+        },
+        {
+          "control": "acResetParams",
+          "event": "OnExecute",
+          "handler": "acResetParamsExecute",
+          "map_symbol": "fFrame.TfrmFrame.acResetParamsExecute",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "form": "frmPtSel",
+      "resource_sha256": "3abd4945c4089f6dac6b1cf70ec2b366856824aa294c67f02e3e7896b8817f64",
+      "components": 76,
+      "events": [
+        {
+          "control": "frmPtSel",
+          "event": "OnCanResize",
+          "handler": "ORFormCanResize",
+          "map_symbol": "fPtSel.TfrmPtSel.ORFormCanResize",
+          "resolved": true
+        },
+        {
+          "control": "frmPtSel",
+          "event": "OnCloseQuery",
+          "handler": "FormCloseQuery",
+          "map_symbol": "fPtSel.TfrmPtSel.FormCloseQuery",
+          "resolved": true
+        },
+        {
+          "control": "frmPtSel",
+          "event": "OnResize",
+          "handler": "FormResize",
+          "map_symbol": "fPtSel.TfrmPtSel.FormResize",
+          "resolved": true
+        },
+        {
+          "control": "sptVert",
+          "event": "OnCanResize",
+          "handler": "sptVertCanResize",
+          "map_symbol": "fPtSel.TfrmPtSel.sptVertCanResize",
+          "resolved": true
+        },
+        {
+          "control": "sptVert",
+          "event": "OnMoved",
+          "handler": "sptVertMoved",
+          "map_symbol": "fPtSel.TfrmPtSel.sptVertMoved",
+          "resolved": true
+        },
+        {
+          "control": "pcProcNoti",
+          "event": "OnChange",
+          "handler": "pcProcNotiChange",
+          "map_symbol": "fPtSel.TfrmPtSel.pcProcNotiChange",
+          "resolved": true
+        },
+        {
+          "control": "pcProcNoti",
+          "event": "OnChanging",
+          "handler": "pcProcNotiChanging",
+          "map_symbol": "fPtSel.TfrmPtSel.pcProcNotiChanging",
+          "resolved": true
+        },
+        {
+          "control": "pcProcNoti",
+          "event": "OnResize",
+          "handler": "pcProcNotiResize",
+          "map_symbol": "fPtSel.TfrmPtSel.pcProcNotiResize",
+          "resolved": true
+        },
+        {
+          "control": "lstvAlerts",
+          "event": "OnAdvancedCustomDrawItem",
+          "handler": "lstvAlertsAdvancedCustomDrawItem",
+          "map_symbol": "fPtSel.TfrmPtSel.lstvAlertsAdvancedCustomDrawItem",
+          "resolved": true
+        },
+        {
+          "control": "lstvAlerts",
+          "event": "OnColumnClick",
+          "handler": "lstvAlertsColumnClick",
+          "map_symbol": "fPtSel.TfrmPtSel.lstvAlertsColumnClick",
+          "resolved": true
+        },
+        {
+          "control": "lstvAlerts",
+          "event": "OnData",
+          "handler": "lstvAlertsData",
+          "map_symbol": "fPtSel.TfrmPtSel.lstvAlertsData",
+          "resolved": true
+        },
+        {
+          "control": "lstvAlerts",
+          "event": "OnDataStateChange",
+          "handler": "lstvAlertsDataStateChange",
+          "map_symbol": "fPtSel.TfrmPtSel.lstvAlertsDataStateChange",
+          "resolved": true
+        },
+        {
+          "control": "lstvAlerts",
+          "event": "OnDblClick",
+          "handler": "lstvAlertsDblClick",
+          "map_symbol": "fPtSel.TfrmPtSel.lstvAlertsDblClick",
+          "resolved": true
+        },
+        {
+          "control": "lstvAlerts",
+          "event": "OnInfoTip",
+          "handler": "lstvAlertsInfoTip",
+          "map_symbol": "fPtSel.TfrmPtSel.lstvAlertsInfoTip",
+          "resolved": true
+        },
+        {
+          "control": "lstvAlerts",
+          "event": "OnKeyDown",
+          "handler": "lstvAlertsKeyDown",
+          "map_symbol": "fPtSel.TfrmPtSel.lstvAlertsKeyDown",
+          "resolved": true
+        },
+        {
+          "control": "lstvAlerts",
+          "event": "OnSelectItem",
+          "handler": "lstvAlertsSelectItem",
+          "map_symbol": "fPtSel.TfrmPtSel.lstvAlertsSelectItem",
+          "resolved": true
+        },
+        {
+          "control": "btnCancelProcessing",
+          "event": "OnClick",
+          "handler": "btnCancelProcessingClick",
+          "map_symbol": "fPtSel.TfrmPtSel.btnCancelProcessingClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdRemove",
+          "event": "OnClick",
+          "handler": "cmdRemoveClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdRemoveClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdComments",
+          "event": "OnClick",
+          "handler": "cmdCommentsClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdCommentsClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdForward",
+          "event": "OnClick",
+          "handler": "cmdForwardClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdForwardClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdProcess",
+          "event": "OnClick",
+          "handler": "cmdProcessClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdProcessClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdProcessAll",
+          "event": "OnClick",
+          "handler": "cmdProcessAllClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdProcessAllClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdProcessInfo",
+          "event": "OnClick",
+          "handler": "cmdProcessInfoClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdProcessInfoClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdDefer",
+          "event": "OnClick",
+          "handler": "cmdDeferClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdDeferClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdOK",
+          "event": "OnClick",
+          "handler": "cmdOKClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdOKClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdCancel",
+          "event": "OnClick",
+          "handler": "cmdCancelClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdCancelClick",
+          "resolved": true
+        },
+        {
+          "control": "cmdSaveList",
+          "event": "OnClick",
+          "handler": "cmdSaveListClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdSaveListClick",
+          "resolved": true
+        },
+        {
+          "control": "cboPatient",
+          "event": "OnChange",
+          "handler": "cboPatientChange",
+          "map_symbol": "fPtSel.TfrmPtSel.cboPatientChange",
+          "resolved": true
+        },
+        {
+          "control": "cboPatient",
+          "event": "OnDblClick",
+          "handler": "cboPatientDblClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cboPatientDblClick",
+          "resolved": true
+        },
+        {
+          "control": "cboPatient",
+          "event": "OnEnter",
+          "handler": "cboPatientEnter",
+          "map_symbol": "fPtSel.TfrmPtSel.cboPatientEnter",
+          "resolved": true
+        },
+        {
+          "control": "cboPatient",
+          "event": "OnExit",
+          "handler": "cboPatientExit",
+          "map_symbol": "fPtSel.TfrmPtSel.cboPatientExit",
+          "resolved": true
+        },
+        {
+          "control": "cboPatient",
+          "event": "OnKeyDown",
+          "handler": "cboPatientKeyDown",
+          "map_symbol": "fPtSel.TfrmPtSel.cboPatientKeyDown",
+          "resolved": true
+        },
+        {
+          "control": "cboPatient",
+          "event": "OnKeyUp",
+          "handler": "cboPatientKeyUp",
+          "map_symbol": "fPtSel.TfrmPtSel.cboPatientKeyUp",
+          "resolved": true
+        },
+        {
+          "control": "cboPatient",
+          "event": "OnKeyPause",
+          "handler": "cboPatientKeyPause",
+          "map_symbol": "fPtSel.TfrmPtSel.cboPatientKeyPause",
+          "resolved": true
+        },
+        {
+          "control": "cboPatient",
+          "event": "OnMouseClick",
+          "handler": "cboPatientMouseClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cboPatientMouseClick",
+          "resolved": true
+        },
+        {
+          "control": "cboPatient",
+          "event": "OnNeedData",
+          "handler": "cboPatientNeedData",
+          "map_symbol": "fPtSel.TfrmPtSel.cboPatientNeedData",
+          "resolved": true
+        },
+        {
+          "control": "mnuProcess",
+          "event": "OnClick",
+          "handler": "cmdProcessClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdProcessClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuForward",
+          "event": "OnClick",
+          "handler": "cmdForwardClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdForwardClick",
+          "resolved": true
+        },
+        {
+          "control": "mnuRemove",
+          "event": "OnClick",
+          "handler": "cmdRemoveClick",
+          "map_symbol": "fPtSel.TfrmPtSel.cmdRemoveClick",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "form": "frmPtSelMsg",
+      "resource_sha256": "f1c43de5449c7d0c8ed63c8288bf1202bcbba70ed2ebee10851f7cf69560672c",
+      "components": 7,
+      "events": [
+        {
+          "control": "frmPtSelMsg",
+          "event": "OnClose",
+          "handler": "FormClose",
+          "map_symbol": "fPtSelMsg.TfrmPtSelMsg.FormClose",
+          "resolved": true
+        },
+        {
+          "control": "frmPtSelMsg",
+          "event": "OnCreate",
+          "handler": "FormCreate",
+          "map_symbol": "fPtSelMsg.TfrmPtSelMsg.FormCreate",
+          "resolved": true
+        },
+        {
+          "control": "frmPtSelMsg",
+          "event": "OnDestroy",
+          "handler": "FormDestroy",
+          "map_symbol": "fPtSelMsg.TfrmPtSelMsg.FormDestroy",
+          "resolved": true
+        },
+        {
+          "control": "cmdClose",
+          "event": "OnClick",
+          "handler": "cmdCloseClick",
+          "map_symbol": "fPtSelMsg.TfrmPtSelMsg.cmdCloseClick",
+          "resolved": true
+        },
+        {
+          "control": "timClose",
+          "event": "OnTimer",
+          "handler": "timCloseTimer",
+          "map_symbol": "fPtSelMsg.TfrmPtSelMsg.timCloseTimer",
+          "resolved": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No CPRS process launched or server contacted",
+    "No GUI, assistive-technology, or clinical behavior validation",
+    "TLS MAP address convention is excluded from imported labels",
+    "Resource event links may be inherited and need separate review",
+    "The first whole-program pass exhausted a 4 GB heap; its log is retained",
+    "Decompiled types and security return semantics need further review"
+  ]
+}

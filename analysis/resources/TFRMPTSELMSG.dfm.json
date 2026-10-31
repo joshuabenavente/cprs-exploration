@@ -1,0 +1,162 @@
+{
+  "class": "TfrmPtSelMsg",
+  "name": "frmPtSelMsg",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 375,
+    "Top": 421,
+    "Caption": "Patient Lookup Messages",
+    "ClientHeight": 147,
+    "ClientWidth": 367,
+    "FormStyle": "fsStayOnTop",
+    "Position": "poScreenCenter",
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "ExplicitWidth": 383,
+    "ExplicitHeight": 185,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 367,
+        "Height": 115,
+        "Align": "alClient",
+        "Color": "clCream",
+        "ParentBackground": false,
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TRichEdit",
+          "name": "memMessages",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 4,
+            "Width": 359,
+            "Height": 107,
+            "Align": "alClient",
+            "BevelInner": "bvNone",
+            "BorderStyle": "bsNone",
+            "Ctl3D": true,
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentColor": true,
+            "ParentCtl3D": false,
+            "ParentFont": false,
+            "ReadOnly": true,
+            "ScrollBars": "ssVertical",
+            "TabOrder": 0,
+            "WantReturns": false,
+            "Zoom": 100
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 115,
+        "Width": 367,
+        "Height": 32,
+        "Align": "alBottom",
+        "Alignment": "taLeftJustify",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 304,
+            "Top": 3,
+            "Width": 60,
+            "Height": 26,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Close",
+            "Default": true,
+            "TabOrder": 0,
+            "OnClick": "cmdCloseClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = cmdClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memMessages",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmPtSelMsg",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TTimer",
+      "name": "timClose",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnTimer": "timCloseTimer",
+        "Left": 6,
+        "Top": 54
+      },
+      "children": []
+    }
+  ]
+}

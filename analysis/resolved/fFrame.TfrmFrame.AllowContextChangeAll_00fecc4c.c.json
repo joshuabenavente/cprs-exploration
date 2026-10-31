@@ -1,0 +1,100 @@
+{
+  "function": "fFrame.TfrmFrame.AllowContextChangeAll",
+  "address": "00fecc4c",
+  "status": "decompiled",
+  "file": "fFrame.TfrmFrame.AllowContextChangeAll_00fecc4c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "00aeaae4",
+      "map_names": [
+        "uSpell.SpellCheckInProgress"
+      ]
+    },
+    {
+      "address": "00c7e104",
+      "map_names": [
+        "fGraphData.TfrmGraphData.AllowContextChange"
+      ]
+    },
+    {
+      "address": "00df72b8",
+      "map_names": [
+        "uEventHooks.COMObjectActive"
+      ]
+    },
+    {
+      "address": "00fb7f60",
+      "map_names": [
+        "fReview.ReviewChanges"
+      ]
+    },
+    {
+      "address": "00febee8",
+      "map_names": [
+        "fFrame.TfrmFrame.GetTimedOut"
+      ]
+    },
+    {
+      "address": "00fee064",
+      "map_names": [
+        "fFrame.TfrmFrame.DLLActive"
+      ]
+    },
+    {
+      "address": "01001e20",
+      "map_names": [
+        "fFrame.TfrmFrame.checkOtherForms"
+      ]
+    },
+    {
+      "address": "01004894",
+      "map_names": [
+        "fFrame.TfrmFrame.GetCCOWContextChanging"
+      ]
+    },
+    {
+      "address": "011d641c",
+      "map_names": [
+        "uCore.TChanges.RequireReview"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00fecef8",
+      "file_offset": 12501752,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 17,
+      "text": "COM_OBJECT_ACTIVE"
+    },
+    {
+      "address": "00fecf28",
+      "file_offset": 12501800,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 28,
+      "text": "Items will be left unsigned."
+    },
+    {
+      "address": "00fecf70",
+      "file_offset": 12501872,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "COMMIT"
+    }
+  ]
+}

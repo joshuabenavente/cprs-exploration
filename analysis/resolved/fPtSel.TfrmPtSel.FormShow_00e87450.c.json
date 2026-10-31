@@ -1,0 +1,92 @@
+{
+  "function": "fPtSel.TfrmPtSel.FormShow",
+  "address": "00e87450",
+  "status": "decompiled",
+  "file": "fPtSel.TfrmPtSel.FormShow_00e87450.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0067b704",
+      "map_names": [
+        "Vcl.ComCtrls.TListColumns.GetItem"
+      ]
+    },
+    {
+      "address": "0067ce80",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.GetCount"
+      ]
+    },
+    {
+      "address": "00724140",
+      "map_names": [
+        "Vcl.Forms.TCustomForm.SetActiveControl"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "00e8624c",
+      "map_names": [
+        "fPtSel.TfrmPtSel.lstvAlertsColumnClick"
+      ]
+    },
+    {
+      "address": "011cc04c",
+      "map_names": [
+        "rCore.GetSortMethod"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e875c8",
+      "file_offset": 11037128,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "D"
+    },
+    {
+      "address": "00e875d8",
+      "file_offset": 11037144,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "F"
+    }
+  ]
+}

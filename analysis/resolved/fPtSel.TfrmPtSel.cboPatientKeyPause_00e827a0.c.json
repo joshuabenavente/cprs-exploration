@@ -1,0 +1,45 @@
+{
+  "function": "fPtSel.TfrmPtSel.cboPatientKeyPause",
+  "address": "00e827a0",
+  "status": "decompiled",
+  "file": "fPtSel.TfrmPtSel.cboPatientKeyPause_00e827a0.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "00443770",
+      "map_names": [
+        "System.Variants.@VarClr"
+      ]
+    },
+    {
+      "address": "0044973c",
+      "map_names": [
+        "System.Variants.@VarToUStr"
+      ]
+    },
+    {
+      "address": "007b3b04",
+      "map_names": [
+        "ORCtrls.TORComboBox.GetItemID"
+      ]
+    },
+    {
+      "address": "00e82c44",
+      "map_names": [
+        "fPtSel.TfrmPtSel.ClearIDInfo"
+      ]
+    },
+    {
+      "address": "00e82c54",
+      "map_names": [
+        "fPtSel.TfrmPtSel.ShowIDInfo"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

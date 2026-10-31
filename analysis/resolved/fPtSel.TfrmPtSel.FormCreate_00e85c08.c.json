@@ -1,0 +1,81 @@
+{
+  "function": "fPtSel.TfrmPtSel.FormCreate",
+  "address": "00e85c08",
+  "status": "decompiled",
+  "file": "fPtSel.TfrmPtSel.FormCreate_00e85c08.c",
+  "numeric_callee_references": [
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "005cd258",
+      "map_names": [
+        "Vcl.Graphics.ColorToRGB"
+      ]
+    },
+    {
+      "address": "0060ca58",
+      "map_names": [
+        "Vcl.Controls.TWinControl.GetHandle"
+      ]
+    },
+    {
+      "address": "009d619c",
+      "map_names": [
+        "VA508AccessibilityRouter.ScreenReaderActive"
+      ]
+    },
+    {
+      "address": "00a02688",
+      "map_names": [
+        "uMisc.IncludeNonVAProviders"
+      ]
+    },
+    {
+      "address": "00d2e260",
+      "map_names": [
+        "uFormUtils.setFormParented"
+      ]
+    },
+    {
+      "address": "00e6f41c",
+      "map_names": [
+        "mPtSelDemog.TfraPtSelDemog.ToggleMemo"
+      ]
+    },
+    {
+      "address": "00e76260",
+      "map_names": [
+        "fAlertsProcessed.getProcessedAlertsList"
+      ]
+    },
+    {
+      "address": "00e859f4",
+      "map_names": [
+        "fPtSel.TfrmPtSel.ShowDisabledButtonTexts"
+      ]
+    },
+    {
+      "address": "00e86d58",
+      "map_names": [
+        "fPtSel.TfrmPtSel.EnsureDemographicsVisible"
+      ]
+    },
+    {
+      "address": "011c5e14",
+      "map_names": [
+        "fBase508Form.TfrmBase508Form.SetDefaultButton"
+      ]
+    },
+    {
+      "address": "011c674c",
+      "map_names": [
+        "fBase508Form.TfrmBase508Form.FormCreate"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

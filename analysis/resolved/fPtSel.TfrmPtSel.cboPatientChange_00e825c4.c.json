@@ -1,0 +1,66 @@
+{
+  "function": "fPtSel.TfrmPtSel.cboPatientChange",
+  "address": "00e825c4",
+  "status": "decompiled",
+  "file": "fPtSel.TfrmPtSel.cboPatientChange_00e825c4.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0040c3a4",
+      "map_names": [
+        "System.@UStrDelete"
+      ]
+    },
+    {
+      "address": "007b3d10",
+      "map_names": [
+        "ORCtrls.TORComboBox.GetText"
+      ]
+    },
+    {
+      "address": "007b41b0",
+      "map_names": [
+        "ORCtrls.TORComboBox.SetText"
+      ]
+    },
+    {
+      "address": "009a9728",
+      "map_names": [
+        "UResponsiveGUI.TResponsiveGUI.ProcessMessages"
+      ]
+    },
+    {
+      "address": "00e8908c",
+      "map_names": [
+        "mPtSelOptns.TfraPtSelOptns.IsLast5"
+      ]
+    },
+    {
+      "address": "00e89164",
+      "map_names": [
+        "mPtSelOptns.TfraPtSelOptns.IsFullSSN"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00e8279c",
+      "file_offset": 11017116,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "1"
+    }
+  ]
+}
