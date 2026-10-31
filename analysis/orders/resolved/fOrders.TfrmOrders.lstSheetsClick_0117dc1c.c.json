@@ -1,0 +1,180 @@
+{
+  "function": "fOrders.TfrmOrders.lstSheetsClick",
+  "address": "0117dc1c",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.lstSheetsClick_0117dc1c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040908c",
+      "map_names": [
+        "System.TObject.Create"
+      ]
+    },
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0042cfdc",
+      "map_names": [
+        "System.SysUtils.IntToStr"
+      ]
+    },
+    {
+      "address": "0042d238",
+      "map_names": [
+        "System.SysUtils.StrToIntDef"
+      ]
+    },
+    {
+      "address": "006026ac",
+      "map_names": [
+        "Vcl.Controls.TControl.GetText"
+      ]
+    },
+    {
+      "address": "006026fc",
+      "map_names": [
+        "Vcl.Controls.TControl.SetText"
+      ]
+    },
+    {
+      "address": "00709244",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetVisible"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "007b1014",
+      "map_names": [
+        "ORCtrls.TORListBox.GetMItems"
+      ]
+    },
+    {
+      "address": "007b10c8",
+      "map_names": [
+        "ORCtrls.TORListBox.SetCaption"
+      ]
+    },
+    {
+      "address": "009b44a8",
+      "map_names": [
+        "ORFn.InfoBox"
+      ]
+    },
+    {
+      "address": "010e36b0",
+      "map_names": [
+        "uOrders.CloseOrdering"
+      ]
+    },
+    {
+      "address": "01187cdc",
+      "map_names": [
+        "fOrders.TfrmOrders.InitOrderSheetsForEvtDelay"
+      ]
+    },
+    {
+      "address": "0118a6b4",
+      "map_names": [
+        "fOrders.TfrmOrders.ChangesUpdate"
+      ]
+    },
+    {
+      "address": "0118a80c",
+      "map_names": [
+        "fOrders.TfrmOrders.PtEvtCompleted"
+      ]
+    },
+    {
+      "address": "011e0340",
+      "map_names": [
+        "rOrders.LoadWriteOrders"
+      ]
+    },
+    {
+      "address": "011e03b0",
+      "map_names": [
+        "rOrders.LoadWriteOrdersED"
+      ]
+    },
+    {
+      "address": "011e3810",
+      "map_names": [
+        "rOrders.DeletePtEvent"
+      ]
+    },
+    {
+      "address": "011e3bc0",
+      "map_names": [
+        "rOrders.PtEvtEmpty"
+      ]
+    },
+    {
+      "address": "011e6e9c",
+      "map_names": [
+        "rOrders.DeleteEmptyEvt"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "0117e2f8",
+      "file_offset": 14145272,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "Write "
+    },
+    {
+      "address": "0117e314",
+      "file_offset": 14145300,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": "Confirmation"
+    },
+    {
+      "address": "0117e33c",
+      "file_offset": 14145340,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 68,
+      "text": "There are no orders tied to this event, would you like to cancel it?"
+    },
+    {
+      "address": "0117e3d4",
+      "file_offset": 14145492,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": "Write Orders"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "function": "fOrders.TfrmOrders.SetCannedView",
+  "address": "0117b878",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.SetCannedView_0117b878.c",
+  "numeric_callee_references": [
+    {
+      "address": "004085a0",
+      "map_names": [
+        "System.@TRUNC"
+      ]
+    },
+    {
+      "address": "0040908c",
+      "map_names": [
+        "System.TObject.Create"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "00431328",
+      "map_names": [
+        "System.SysUtils.Now"
+      ]
+    },
+    {
+      "address": "00602684",
+      "map_names": [
+        "Vcl.Controls.TControl.SetPopupMenu"
+      ]
+    },
+    {
+      "address": "00709128",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetEnabled"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "0079b0f0",
+      "map_names": [
+        "VAUtils.ShowMessage"
+      ]
+    },
+    {
+      "address": "007b1014",
+      "map_names": [
+        "ORCtrls.TORListBox.GetMItems"
+      ]
+    },
+    {
+      "address": "009b0d84",
+      "map_names": [
+        "ORFn.DateTimeToFMDateTime"
+      ]
+    },
+    {
+      "address": "009b0e14",
+      "map_names": [
+        "ORFn.FMDateTimeToDateTime"
+      ]
+    },
+    {
+      "address": "0117b608",
+      "map_names": [
+        "fOrders.TfrmOrders.UseDefaultSort"
+      ]
+    },
+    {
+      "address": "0117b678",
+      "map_names": [
+        "fOrders.TfrmOrders.CanChangeOrderView"
+      ]
+    },
+    {
+      "address": "011ca6ac",
+      "map_names": [
+        "rCore.FMNow"
+      ]
+    },
+    {
+      "address": "011ca88c",
+      "map_names": [
+        "rCore.StrToFMDateTime"
+      ]
+    },
+    {
+      "address": "011d6b48",
+      "map_names": [
+        "uCore.TNotifications.GetRecordID"
+      ]
+    },
+    {
+      "address": "011db22c",
+      "map_names": [
+        "rOrders.ExpiredOrdersStartDT"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "0117bcc0",
+      "file_offset": 14135488,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "C;0^"
+    },
+    {
+      "address": "0117bcdc",
+      "file_offset": 14135516,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 67,
+      "text": "Error searching for FM date/time to begin search for expired orders"
+    },
+    {
+      "address": "0117bd70",
+      "file_offset": 14135664,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 22,
+      "text": "Unified Action Profile"
+    },
+    {
+      "address": "0117bdac",
+      "file_offset": 14135724,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 17,
+      "text": "ORTO SET UAP FLAG"
+    }
+  ]
+}

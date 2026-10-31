@@ -1,0 +1,127 @@
+import { Button, ComboBox, LineEdit, StandardTableView, TextEdit } from "std-widgets.slint";
+
+export component OrdersView inherits Rectangle {
+    in property <[[StandardListViewItem]]> rows;
+    in-out property <int> selected-row: -1;
+    in-out property <string> query;
+    in property <int> scenario;
+    in property <bool> loading;
+    in property <bool> list-error;
+    in property <string> list-status;
+    in property <string> identity;
+    in property <string> body-status;
+    in property <string> body;
+    in property <bool> body-error;
+    in property <bool> body-ready;
+    in property <bool> detail-open;
+    in property <int> status-filter;
+    callback filter-edited(string);
+    callback scenario-changed(int);
+    callback selected(int);
+    callback released(int);
+    callback activated();
+    callback closed();
+    callback status-changed(int);
+    callback retry-list();
+    callback retry-body();
+    callback top-focused();
+    callback body-focused();
+    public function focus-filter() { root.top-focused(); filter.focus(); }
+    public function focus-list() { root.top-focused(); list.focus(); }
+    public function focus-body() { root.body-focused(); order-text.focus(); }
+    changed body => { order-text.content-x = 0px; order-text.content-y = 0px; order-text.clear-selection(); }
+    background: white; border-color: #c9d5df; border-width: 1px;
+    min-width: 800px; min-height: 450px;
+    focus := FocusScope {
+        width: parent.width; height: parent.height;
+        focus-on-tab-navigation: false; focus-on-click: false;
+        key-pressed(event) => {
+            if event.text == Key.Escape { root.closed(); root.focus-list(); return accept; }
+            if event.text == Key.Return && root.selected-row >= 0 { root.activated(); return accept; }
+            reject
+        }
+        VerticalLayout {
+            padding: 12px; spacing: 8px;
+            Text { text: "Orders · Mock read-only"; font-size: 19px; font-weight: 600; color: #23445b; }
+            HorizontalLayout {
+                spacing: 10px;
+                filter := LineEdit {
+                    text <=> root.query;
+                    placeholder-text: "Filter invented orders by service, order text, provider, status, location, or order ID";
+                    accessible-label: "Filter invented orders";
+                    edited => { root.filter-edited(self.text); }
+                    accepted => { list.focus(); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+                ComboBox {
+                    width: 170px; current-index: root.status-filter;
+                    model: ["All mock statuses", "Mock active", "Mock pending", "Mock complete"];
+                    accessible-label: "Mock order status filter";
+                    selected(value) => { root.status-changed(self.current-index); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+                ComboBox {
+                    width: 185px; current-index: root.scenario;
+                    model: ["Normal orders", "List unavailable", "Detail unavailable", "Slow order replies"];
+                    accessible-label: "Mock Orders scenario";
+                    selected(value) => { root.scenario-changed(self.current-index); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+            }
+            Text { text: root.list-status; color: root.list-error ? #9b3027 : #526879; wrap: word-wrap; font-size: 12px; }
+            list := StandardTableView {
+                height: 160px;
+                enabled: !root.loading && root.rows.length > 0;
+                accessible-label: "Invented Orders list — newest first";
+                rows: root.rows; current-row <=> root.selected-row;
+                columns: [
+                    { title: "Service", width: 125px, min-width: 100px },
+                    { title: "Order", width: 230px, min-width: 180px },
+                    { title: "Start / Stop", width: 250px, min-width: 180px },
+                    { title: "Provider", width: 135px, min-width: 120px },
+                    { title: "Status", width: 120px, min-width: 110px },
+                    { title: "Location", width: 150px, min-width: 120px }
+                ];
+                row-pointer-event(index, event, position) => {
+                    if event.kind == PointerEventKind.up && event.button == PointerEventButton.left { root.released(index); }
+                }
+                current-row-changed(index) => { root.selected(index); }
+                sort-ascending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
+                sort-descending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
+                changed has-focus => { if self.has-focus { root.top-focused(); } }
+            }
+            Text { text: root.identity; color: #23445b; font-weight: 600; wrap: word-wrap; }
+            Text { text: root.body-status; color: root.body-error ? #9b3027 : #526879; wrap: word-wrap; font-size: 12px; }
+            order-text := TextEdit {
+                min-height: 140px; vertical-stretch: 1;
+                text: root.body; read-only: true; wrap: no-wrap;
+                font-family: "Courier New"; font-size: 14px;
+                accessible-label: "Read-only invented order detail";
+                changed has-focus => { if self.has-focus { root.body-focused(); } }
+            }
+            HorizontalLayout {
+                spacing: 10px;
+                Button {
+                    text: "View order detail"; enabled: root.selected-row >= 0;
+                    accessible-label: "View selected invented order detail";
+                    clicked => { root.activated(); }
+                    changed has-focus => { if self.has-focus { root.body-focused(); } }
+                }
+                Button {
+                    text: "Close detail"; enabled: root.detail-open;
+                    accessible-label: "Close invented order detail";
+                    clicked => { root.closed(); root.focus-list(); }
+                    changed has-focus => { if self.has-focus { root.body-focused(); } }
+                }
+                Button {
+                    text: root.list-error ? "Retry mock order list" : "Retry mock order detail";
+                    visible: root.list-error || root.body-error; enabled: root.list-error || root.body-error;
+                    clicked => { if root.list-error { root.retry-list(); } else { root.retry-body(); } }
+                    changed has-focus => { if self.has-focus { root.body-focused(); } }
+                }
+                Rectangle { horizontal-stretch: 1; background: transparent; }
+                Text { text: "Enter/double-click: detail · Esc: close detail"; color: #617180; font-size: 12px; vertical-alignment: center; }
+            }
+        }
+    }
+}

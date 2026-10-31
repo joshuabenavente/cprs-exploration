@@ -1,0 +1,42 @@
+{
+  "function": "fOrders.TfrmOrders.mnuViewCurrentClick",
+  "address": "0117beb8",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.mnuViewCurrentClick_0117beb8.c",
+  "numeric_callee_references": [
+    {
+      "address": "0066bd3c",
+      "map_names": [
+        "Vcl.ComCtrls.THeaderSection.SetText"
+      ]
+    },
+    {
+      "address": "0066bfe0",
+      "map_names": [
+        "Vcl.ComCtrls.THeaderSections.GetItem"
+      ]
+    },
+    {
+      "address": "0117d7c4",
+      "map_names": [
+        "fOrders.TfrmOrders.OrderViewReset"
+      ]
+    },
+    {
+      "address": "011de93c",
+      "map_names": [
+        "rOrders.DGroupAll"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "0117bf1c",
+      "file_offset": 14136092,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 60,
+      "text": "Current Orders (Active & Pending Status Only) - ALL SERVICES"
+    }
+  ]
+}

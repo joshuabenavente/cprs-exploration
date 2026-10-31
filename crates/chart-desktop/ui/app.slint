@@ -1,6 +1,7 @@
 import { Button, ComboBox, LineEdit, StandardTableView, ScrollView, TextEdit } from "std-widgets.slint";
 import { CoverPanel } from "cover-panel.slint";
 import { NotesView } from "notes-view.slint";
+import { OrdersView } from "orders-view.slint";
 
 component Field inherits VerticalLayout {
     in property <string> label;
@@ -82,6 +83,29 @@ export component AppWindow inherits Window {
     callback note-selected(int);
     callback retry-notes-list();
     callback retry-note();
+    in property <[[StandardListViewItem]]> orders-rows;
+    in-out property <int> selected-order: -1;
+    in-out property <string> orders-query;
+    in property <int> orders-status-filter;
+    in property <int> orders-scenario;
+    in property <bool> orders-loading;
+    in property <bool> orders-list-error;
+    in property <string> orders-list-status;
+    in property <string> order-identity;
+    in property <string> order-body-status;
+    in property <string> order-body;
+    in property <bool> order-body-error;
+    in property <bool> order-body-ready;
+    in property <bool> order-detail-open;
+    callback orders-filter-edited(string);
+    callback orders-status-changed(int);
+    callback orders-scenario-changed(int);
+    callback order-selected(int);
+    callback order-released(int);
+    callback order-activated();
+    callback close-order-detail();
+    callback retry-orders-list();
+    callback retry-order();
 
     callback open-selection();
     callback query-edited(string);
@@ -109,6 +133,8 @@ export component AppWindow inherits Window {
     public function focus-cover(panel: int) { workspace-scroll.content-y = 0px; if panel == 0 { problem-panel.focus-list(); } else { allergy-panel.focus-list(); } }
     public function focus-detail() { detail-close.focus(); }
     public function focus-notes-filter() { notes-view.focus-filter(); }
+    public function focus-orders-filter() { orders-view.focus-filter(); }
+    public function focus-order-body() { orders-view.focus-body(); }
 
     shortcuts := FocusScope {
         focus-on-tab-navigation: false;
@@ -131,7 +157,7 @@ export component AppWindow inherits Window {
         }
         KeyBinding {
             keys: @keys(Control + F);
-            activated => { if root.selector-open { root.focus-search(); } else if root.has-active && root.tab-index == 1 && !root.detail-open { notes-view.focus-filter(); } }
+            activated => { if root.selector-open { root.focus-search(); } else if root.has-active && !root.detail-open { if root.tab-index == 1 { notes-view.focus-filter(); } else if root.tab-index == 2 { orders-view.focus-filter(); } } }
         }
         KeyBinding {
             keys: @keys(Control + O);
@@ -198,7 +224,7 @@ export component AppWindow inherits Window {
                 workspace-scroll := ScrollView {
                     width: parent.width; height: parent.height;
                     content-width: self.visible-width;
-                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : !root.selector-open && root.tab-index == 1 ? 600px : 440px);
+                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : !root.selector-open && (root.tab-index == 1 || root.tab-index == 2) ? 600px : 440px);
                     changed content-height => { self.content-y = min(0px, max(self.content-y, self.visible-height - self.content-height)); }
                     Rectangle {
                     width: workspace-scroll.visible-width; height: workspace-scroll.content-height;
@@ -233,7 +259,7 @@ export component AppWindow inherits Window {
                             }
                             ComboBox {
                                 preferred-width: 205px;
-                                model: ["Normal simulation", "Search unavailable", "Malformed result", "Chart unavailable", "Slow search", "Detail unavailable", "Notes list unavailable", "Note text unavailable", "Slow note replies"];
+                                model: ["Normal simulation", "Search unavailable", "Malformed result", "Chart unavailable", "Slow search", "Detail unavailable", "Notes list unavailable", "Note text unavailable", "Slow note replies", "Orders list unavailable", "Order detail unavailable", "Slow order replies"];
                                 current-index: root.simulation-index;
                                 accessible-label: "Mock simulation scenario";
                                 enabled: !root.chart-loading && !root.show-acknowledgment;
@@ -402,7 +428,27 @@ export component AppWindow inherits Window {
                             top-focused => { workspace-scroll.content-y = 0px; }
                             body-focused => { root.scroll-workspace-bottom(); }
                         }
-                        if root.has-active && root.tab-index > 1: VerticalLayout {
+                        orders-view := OrdersView {
+                            visible: root.has-active && root.tab-index == 2;
+                            min-height: 0px; max-height: root.has-active && root.tab-index == 2 ? 10000px : 0px;
+                            rows: root.orders-rows; selected-row <=> root.selected-order; query <=> root.orders-query;
+                            status-filter: root.orders-status-filter; scenario: root.orders-scenario; loading: root.orders-loading;
+                            list-error: root.orders-list-error; list-status: root.orders-list-status;
+                            identity: root.order-identity; body: root.order-body; body-status: root.order-body-status;
+                            body-error: root.order-body-error; body-ready: root.order-body-ready; detail-open: root.order-detail-open;
+                            filter-edited(query) => { root.orders-filter-edited(query); }
+                            status-changed(index) => { root.orders-status-changed(index); }
+                            scenario-changed(index) => { root.orders-scenario-changed(index); }
+                            selected(index) => { root.order-selected(index); }
+                            released(index) => { root.order-released(index); }
+                            activated => { root.order-activated(); }
+                            closed => { root.close-order-detail(); }
+                            retry-list => { root.retry-orders-list(); }
+                            retry-body => { root.retry-order(); }
+                            top-focused => { workspace-scroll.content-y = 0px; }
+                            body-focused => { root.scroll-workspace-bottom(); }
+                        }
+                        if root.has-active && root.tab-index > 2: VerticalLayout {
                             alignment: center; spacing: 16px;
                             Text { text: root.placeholder; font-size: 22px; color: #36546a; horizontal-alignment: center; wrap: word-wrap; }
                             Text { text: "No chart content or actions are available on this tab."; color: #647886; horizontal-alignment: center; }

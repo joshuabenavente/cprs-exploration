@@ -306,9 +306,7 @@ fn ps16_unimplemented_tabs_are_explicit_placeholders() {
     state.set_tab(ChartTab::Orders);
     assert_eq!(state.tab, ChartTab::CoverSheet);
     open(&mut state, &provider, "SYNTH-001");
-    for tab in [ChartTab::Orders, ChartTab::Results] {
-        state.set_tab(tab);
-        assert!(state.tab.placeholder().contains("not implemented"));
-        assert_eq!(active_id(&state), "SYNTH-001");
-    }
+    state.set_tab(ChartTab::Results);
+    assert!(state.tab.placeholder().contains("not implemented"));
+    assert_eq!(active_id(&state), "SYNTH-001");
 }

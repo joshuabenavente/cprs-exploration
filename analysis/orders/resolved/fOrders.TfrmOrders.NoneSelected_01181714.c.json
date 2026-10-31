@@ -1,0 +1,30 @@
+{
+  "function": "fOrders.TfrmOrders.NoneSelected",
+  "address": "01181714",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.NoneSelected_01181714.c",
+  "numeric_callee_references": [
+    {
+      "address": "009b44a8",
+      "map_names": [
+        "ORFn.InfoBox"
+      ]
+    },
+    {
+      "address": "0117b81c",
+      "map_names": [
+        "fOrders.TfrmOrders.SelCount"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "0118175c",
+      "file_offset": 14158684,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 18,
+      "text": "No Orders Selected"
+    }
+  ]
+}

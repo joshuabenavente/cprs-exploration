@@ -1,0 +1,176 @@
+{
+  "function": "fOrders.TfrmOrders.RefreshOrderList",
+  "address": "0117b000",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.RefreshOrderList_0117b000.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "004d2e10",
+      "map_names": [
+        "System.Classes.TList.Add"
+      ]
+    },
+    {
+      "address": "004d2ff0",
+      "map_names": [
+        "System.Classes.TList.Get"
+      ]
+    },
+    {
+      "address": "00608594",
+      "map_names": [
+        "Vcl.Controls.TWinControl.LockDrawing"
+      ]
+    },
+    {
+      "address": "006085cc",
+      "map_names": [
+        "Vcl.Controls.TWinControl.UnlockDrawing"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "009b60ec",
+      "map_names": [
+        "ORFn.StatusText"
+      ]
+    },
+    {
+      "address": "0117b878",
+      "map_names": [
+        "fOrders.TfrmOrders.SetCannedView"
+      ]
+    },
+    {
+      "address": "01187b88",
+      "map_names": [
+        "fOrders.TfrmOrders.CompressEventSection"
+      ]
+    },
+    {
+      "address": "01187c08",
+      "map_names": [
+        "fOrders.TfrmOrders.ExpandEventSection"
+      ]
+    },
+    {
+      "address": "0118a5e4",
+      "map_names": [
+        "fOrders.TfrmOrders.AddToListBox"
+      ]
+    },
+    {
+      "address": "0118d8e8",
+      "map_names": [
+        "fOrders.TfrmOrders.SetOrderRevwCol"
+      ]
+    },
+    {
+      "address": "011d6b48",
+      "map_names": [
+        "uCore.TNotifications.GetRecordID"
+      ]
+    },
+    {
+      "address": "011d6c8c",
+      "map_names": [
+        "uCore.TNotifications.GetIndOrderDisplay"
+      ]
+    },
+    {
+      "address": "011db7c0",
+      "map_names": [
+        "rOrders.ClearOrders"
+      ]
+    },
+    {
+      "address": "011dc634",
+      "map_names": [
+        "rOrders.LoadOrdersAbbr"
+      ]
+    },
+    {
+      "address": "011dcb68",
+      "map_names": [
+        "rOrders.LoadOrdersAbbr"
+      ]
+    },
+    {
+      "address": "011dccc0",
+      "map_names": [
+        "rOrders.LoadOrdersAbbr"
+      ]
+    },
+    {
+      "address": "011de8dc",
+      "map_names": [
+        "rOrders.SortOrders"
+      ]
+    },
+    {
+      "address": "011de93c",
+      "map_names": [
+        "rOrders.DGroupAll"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "0117b48c",
+      "file_offset": 14133388,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 25,
+      "text": "Retrieving orders list..."
+    },
+    {
+      "address": "0117b4cc",
+      "file_offset": 14133452,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 65,
+      "text": "Active Orders (includes Pending & Recent Activity) - ALL SERVICES"
+    },
+    {
+      "address": "0117b55c",
+      "file_offset": 14133596,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "ORTO DGROUP"
+    },
+    {
+      "address": "0117b580",
+      "file_offset": 14133632,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": "PHARMACY UAP"
+    },
+    {
+      "address": "0117b5a8",
+      "file_offset": 14133672,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "DISCHARGE MEDS"
+    }
+  ]
+}

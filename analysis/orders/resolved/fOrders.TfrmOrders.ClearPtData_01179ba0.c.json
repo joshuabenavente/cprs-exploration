@@ -1,0 +1,33 @@
+{
+  "function": "fOrders.TfrmOrders.ClearPtData",
+  "address": "01179ba0",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.ClearPtData_01179ba0.c",
+  "numeric_callee_references": [
+    {
+      "address": "00d2cff4",
+      "map_names": [
+        "uODBase.ClearFillerAppList"
+      ]
+    },
+    {
+      "address": "0117d800",
+      "map_names": [
+        "fOrders.TfrmOrders.ClearOrderSheets"
+      ]
+    },
+    {
+      "address": "011db7c0",
+      "map_names": [
+        "rOrders.ClearOrders"
+      ]
+    },
+    {
+      "address": "012034d0",
+      "map_names": [
+        "fPage.TfrmPage.ClearPtData"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

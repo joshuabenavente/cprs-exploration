@@ -22,6 +22,7 @@ struct Controller {
     immediate: bool,
     last_click: Option<(PatientId, Instant)>,
     last_cover_click: Option<(PatientId, PanelKind, String, Instant)>,
+    last_order_click: Option<(PatientId, OrderId, Instant)>,
 }
 
 type Shared = Rc<RefCell<Controller>>;
@@ -43,6 +44,9 @@ fn simulation(index: i32) -> Simulation {
         6 => Simulation::NotesListUnavailable,
         7 => Simulation::NoteBodyUnavailable,
         8 => Simulation::SlowNotes,
+        9 => Simulation::OrdersListUnavailable,
+        10 => Simulation::OrderDetailUnavailable,
+        11 => Simulation::SlowOrders,
         _ => Simulation::Normal,
     }
 }
@@ -57,6 +61,9 @@ fn simulation_index(value: Simulation) -> i32 {
         Simulation::NotesListUnavailable => 6,
         Simulation::NoteBodyUnavailable => 7,
         Simulation::SlowNotes => 8,
+        Simulation::OrdersListUnavailable => 9,
+        Simulation::OrderDetailUnavailable => 10,
+        Simulation::SlowOrders => 11,
     }
 }
 fn tab(index: i32) -> ChartTab {
@@ -65,6 +72,22 @@ fn tab(index: i32) -> ChartTab {
         2 => ChartTab::Orders,
         3 => ChartTab::Results,
         _ => ChartTab::CoverSheet,
+    }
+}
+fn order_filter(index: i32) -> OrderStatusFilter {
+    match index {
+        1 => OrderStatusFilter::Active,
+        2 => OrderStatusFilter::Pending,
+        3 => OrderStatusFilter::Complete,
+        _ => OrderStatusFilter::All,
+    }
+}
+fn order_filter_index(value: OrderStatusFilter) -> i32 {
+    match value {
+        OrderStatusFilter::All => 0,
+        OrderStatusFilter::Active => 1,
+        OrderStatusFilter::Pending => 2,
+        OrderStatusFilter::Complete => 3,
     }
 }
 
@@ -233,6 +256,86 @@ fn sync(app: &AppWindow, controller: &Controller) {
         ChartTab::Results => 3,
     });
     app.set_placeholder(state.tab.placeholder().into());
+    let o = &state.orders;
+    app.set_orders_query(o.query.clone().into());
+    app.set_orders_status_filter(order_filter_index(o.status_filter));
+    let rows = o
+        .rows
+        .iter()
+        .map(|r| {
+            vec![
+                r.service.clone(),
+                r.description.clone(),
+                r.start_stop.clone(),
+                r.provider.clone(),
+                r.status.label().into(),
+                r.location.clone(),
+            ]
+        })
+        .collect();
+    if let Some(model) = changed_rows(&app.get_orders_rows(), rows) {
+        app.set_orders_rows(model);
+    }
+    app.set_selected_order(o.selected_index().map_or(-1, |i| i as i32));
+    app.set_orders_scenario(match controller.provider.simulation {
+        Simulation::OrdersListUnavailable => 1,
+        Simulation::OrderDetailUnavailable => 2,
+        Simulation::SlowOrders => 3,
+        _ => 0,
+    });
+    app.set_orders_loading(matches!(o.list_status, OrdersListStatus::Loading));
+    app.set_orders_list_error(matches!(o.list_status, OrdersListStatus::Error(_)));
+    app.set_orders_list_status(match &o.list_status {
+        OrdersListStatus::Idle => "Open Orders to load invented records.".into(),
+        OrdersListStatus::Loading => "Loading invented order list…".into(),
+        OrdersListStatus::Ready => format!(
+            "{} invented orders · Newest first · Select a row, then open detail",
+            o.rows.len()
+        )
+        .into(),
+        OrdersListStatus::Empty => {
+            "No invented orders match this view. This is not a clinical finding.".into()
+        }
+        OrdersListStatus::Error(message) => message.clone().into(),
+    });
+    app.set_order_identity(
+        o.selected
+            .as_ref()
+            .map_or_else(
+                || "No invented order selected".into(),
+                |s| {
+                    format!(
+                        "{} · {} · {} · {}",
+                        s.patient_id,
+                        s.id.as_str(),
+                        s.status.label(),
+                        s.description
+                    )
+                },
+            )
+            .into(),
+    );
+    app.set_order_detail_open(!matches!(o.detail, OrderDetailState::Closed));
+    app.set_order_body_error(matches!(o.detail, OrderDetailState::Error(_)));
+    app.set_order_body_ready(matches!(o.detail, OrderDetailState::Ready(_)));
+    app.set_order_body_status(match &o.detail {
+        OrderDetailState::Closed => if o.selected.is_some() {
+            "Press Enter or View order detail to read this invented order."
+        } else {
+            "Select an invented order above."
+        }
+        .into(),
+        OrderDetailState::Loading(_) => "Retrieving selected synthetic order detail…".into(),
+        OrderDetailState::Ready(detail) if detail.text.is_empty() => {
+            "This invented order has an empty detail response.".into()
+        }
+        OrderDetailState::Ready(_) => "MOCK ONLY · Invented order detail · Read-only".into(),
+        OrderDetailState::Error(message) => message.clone().into(),
+    });
+    app.set_order_body(match &o.detail {
+        OrderDetailState::Ready(detail) => detail.text.clone().into(),
+        _ => "".into(),
+    });
     let n = &state.notes;
     app.set_notes_query(n.query.clone().into());
     let rows = n
@@ -570,7 +673,176 @@ fn deliver_note(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<No
     }
 }
 
+fn load_orders(
+    weak: slint::Weak<AppWindow>,
+    shared: Shared,
+    query: String,
+    filter: OrderStatusFilter,
+) {
+    let request = {
+        let mut c = shared.borrow_mut();
+        c.last_order_click = None;
+        c.state.begin_orders_list(query, filter)
+    };
+    paint(&weak, &shared);
+    let Some(request) = request else {
+        return;
+    };
+    let (provider, immediate) = {
+        let c = shared.borrow();
+        (c.provider.clone(), c.immediate)
+    };
+    let delay = if provider.simulation == Simulation::SlowOrders {
+        900
+    } else {
+        180
+    };
+    let finish = move || {
+        let result = provider.orders_list(&request);
+        if shared
+            .borrow_mut()
+            .state
+            .apply_orders_list(&request, result)
+        {
+            paint(&weak, &shared);
+        }
+    };
+    if immediate {
+        finish();
+    } else {
+        slint::Timer::single_shot(Duration::from_millis(delay), finish);
+    }
+}
+fn deliver_order(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<OrderRequest>) {
+    paint(&weak, &shared);
+    if shared.borrow().state.tab == ChartTab::Orders
+        && !shared.borrow().state.selector_open
+        && let Some(app) = weak.upgrade()
+    {
+        app.invoke_focus_order_body();
+    }
+    let Some(request) = request else {
+        return;
+    };
+    let (provider, immediate) = {
+        let c = shared.borrow();
+        (c.provider.clone(), c.immediate)
+    };
+    let delay = if provider.simulation == Simulation::SlowOrders
+        && request.order_id.as_str() == "ORDER-01"
+    {
+        1100
+    } else {
+        300
+    };
+    let finish = move || {
+        let result = provider.order_detail(&request);
+        if shared.borrow_mut().state.apply_order(&request, result) {
+            paint(&weak, &shared);
+        }
+    };
+    if immediate {
+        finish();
+    } else {
+        slint::Timer::single_shot(Duration::from_millis(delay), finish);
+    }
+}
+fn open_order(weak: slint::Weak<AppWindow>, shared: Shared) {
+    let request = shared.borrow_mut().state.begin_order_detail();
+    deliver_order(weak, shared, request);
+}
+
 fn wire(app: &AppWindow, shared: &Shared) {
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_orders_filter_edited(move |query| {
+        let filter = data.borrow().state.orders.status_filter;
+        load_orders(weak.clone(), data.clone(), query.to_string(), filter);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_orders_status_changed(move |index| {
+        let query = data.borrow().state.orders.query.clone();
+        load_orders(weak.clone(), data.clone(), query, order_filter(index));
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_orders_scenario_changed(move |index| {
+        data.borrow_mut().provider.simulation = match index {
+            1 => Simulation::OrdersListUnavailable,
+            2 => Simulation::OrderDetailUnavailable,
+            3 => Simulation::SlowOrders,
+            _ => Simulation::Normal,
+        };
+        let (query, filter) = {
+            let c = data.borrow();
+            (c.state.orders.query.clone(), c.state.orders.status_filter)
+        };
+        load_orders(weak.clone(), data.clone(), query, filter);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_retry_orders_list(move || {
+        let (query, filter) = {
+            let c = data.borrow();
+            (c.state.orders.query.clone(), c.state.orders.status_filter)
+        };
+        load_orders(weak.clone(), data.clone(), query, filter);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_order_selected(move |index| {
+        let index = usize::try_from(index).unwrap_or(usize::MAX);
+        let mut c = data.borrow_mut();
+        if c.state.orders.selected_index() != Some(index) {
+            c.last_order_click = None;
+        }
+        c.state.select_order(index);
+        drop(c);
+        paint(&weak, &data);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_order_released(move |index| {
+        let Ok(index) = usize::try_from(index) else {
+            return;
+        };
+        let activate = {
+            let mut c = data.borrow_mut();
+            if c.state.selector_open || c.state.tab != ChartTab::Orders {
+                return;
+            }
+            let Some(row) = c.state.orders.rows.get(index) else {
+                return;
+            };
+            let (patient, id) = (row.patient_id.clone(), row.id.clone());
+            let now = Instant::now();
+            let activate = c.last_order_click.as_ref().is_some_and(|(p, i, t)| {
+                *p == patient && *i == id && now.duration_since(*t) <= Duration::from_millis(450)
+            });
+            c.last_order_click = if activate {
+                None
+            } else {
+                Some((patient, id, now))
+            };
+            c.state.select_order(index);
+            activate
+        };
+        if activate {
+            open_order(weak.clone(), data.clone());
+        } else {
+            paint(&weak, &data);
+        }
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_order_activated(move || open_order(weak.clone(), data.clone()));
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_close_order_detail(move || {
+        let mut c = data.borrow_mut();
+        c.last_order_click = None;
+        c.state.close_order_detail();
+        drop(c);
+        paint(&weak, &data);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_retry_order(move || {
+        let request = data.borrow_mut().state.retry_order();
+        deliver_order(weak.clone(), data.clone(), request);
+    });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_notes_filter_edited(move |query| {
         load_notes(weak.clone(), data.clone(), query.to_string())
@@ -787,6 +1059,14 @@ fn wire(app: &AppWindow, shared: &Shared) {
         if data.borrow().state.tab == ChartTab::Notes && !data.borrow().state.selector_open {
             load_notes(weak.clone(), data.clone(), String::new());
         }
+        if data.borrow().state.tab == ChartTab::Orders && !data.borrow().state.selector_open {
+            load_orders(
+                weak.clone(),
+                data.clone(),
+                String::new(),
+                OrderStatusFilter::All,
+            );
+        }
         if let Some(app) = weak.upgrade() {
             app.invoke_focus_chart();
         }
@@ -815,6 +1095,7 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_tab_changed(move |index| {
+        data.borrow_mut().last_order_click = None;
         data.borrow_mut().state.set_tab(tab(index));
         paint(&weak, &data);
         if data.borrow().state.tab == ChartTab::Notes
@@ -828,6 +1109,26 @@ fn wire(app: &AppWindow, shared: &Shared) {
             && let Some(app) = weak.upgrade()
         {
             app.invoke_focus_notes_filter();
+        }
+        if data.borrow().state.tab == ChartTab::Orders
+            && matches!(
+                data.borrow().state.orders.list_status,
+                OrdersListStatus::Idle
+            )
+        {
+            load_orders(
+                weak.clone(),
+                data.clone(),
+                String::new(),
+                OrderStatusFilter::All,
+            );
+        }
+        if index == 2
+            && data.borrow().state.tab == ChartTab::Orders
+            && !data.borrow().state.selector_open
+            && let Some(app) = weak.upgrade()
+        {
+            app.invoke_focus_orders_filter();
         }
     });
 }
@@ -844,6 +1145,44 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_confirm_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-004");
     assert!(!app.get_selector_open());
+    app.invoke_tab_changed(2);
+    assert_eq!(app.get_orders_rows().row_count(), 4);
+    app.invoke_order_selected(1);
+    assert!(!app.get_order_detail_open());
+    assert!(app.get_order_body().is_empty());
+    app.invoke_order_activated();
+    assert!(app.get_order_body_ready());
+    assert!(app.get_order_body().contains("SYNTH-004"));
+    assert!(app.get_order_body().contains("ORDER-02"));
+    app.invoke_close_order_detail();
+    assert_eq!(app.get_selected_order(), 1);
+    assert!(app.get_order_body().is_empty());
+    app.invoke_orders_filter_edited("李".into());
+    assert_eq!(app.get_selected_order(), -1);
+    assert_eq!(app.get_orders_rows().row_count(), 1);
+    app.invoke_order_released(0);
+    assert!(!app.get_order_detail_open());
+    app.invoke_order_released(0);
+    assert!(
+        app.get_order_body()
+            .contains("END OF INVENTED ORDER DETAIL")
+    );
+    app.invoke_orders_status_changed(2);
+    assert_eq!(app.get_orders_rows().row_count(), 0);
+    assert!(app.get_order_body().is_empty());
+    app.invoke_orders_status_changed(0);
+    app.invoke_orders_scenario_changed(2);
+    app.invoke_order_selected(0);
+    app.invoke_order_activated();
+    assert!(app.get_order_body_error());
+    app.invoke_retry_order();
+    assert!(app.get_order_body_error());
+    app.invoke_orders_scenario_changed(1);
+    assert!(app.get_orders_list_error());
+    assert!(app.get_order_body().is_empty());
+    app.invoke_retry_orders_list();
+    assert!(app.get_orders_list_error());
+    app.invoke_orders_scenario_changed(0);
     app.invoke_tab_changed(1);
     assert_eq!(app.get_notes_rows().row_count(), 4);
     app.invoke_note_selected(0);
@@ -939,6 +1278,10 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_notes_rows().row_count(), 0);
     assert!(app.get_notes_list_status().contains("No invented notes"));
     assert!(app.get_note_body().is_empty());
+    app.invoke_tab_changed(2);
+    assert_eq!(app.get_orders_rows().row_count(), 0);
+    assert!(app.get_orders_list_status().contains("No invented orders"));
+    assert!(app.get_order_body().is_empty());
     app.invoke_tab_changed(0);
     app.invoke_cover_selected(0, 0);
     app.invoke_cover_activated(0);
@@ -958,7 +1301,7 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
     assert!(shared.borrow().immediate);
     println!(
-        "Mock UI callback smoke passed: patient selection, two Cover Sheet panels/details, Notes list/text/filter/error/retry, clearing, and Unicode fixture identity."
+        "Mock UI callback smoke passed: patient selection, Cover Sheet, Notes, Orders selection/detail/double-click/filter/status/close/error/retry, patient clearing, and Unicode fixture identity."
     );
 }
 
@@ -985,6 +1328,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         immediate: smoke,
         last_click: None,
         last_cover_click: None,
+        last_order_click: None,
     }));
     wire(&app, &shared);
     let request = shared.borrow_mut().state.open_selection();

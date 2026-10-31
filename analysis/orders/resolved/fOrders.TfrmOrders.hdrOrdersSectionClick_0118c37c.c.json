@@ -1,0 +1,33 @@
+{
+  "function": "fOrders.TfrmOrders.hdrOrdersSectionClick",
+  "address": "0118c37c",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.hdrOrdersSectionClick_0118c37c.c",
+  "numeric_callee_references": [
+    {
+      "address": "004d367c",
+      "map_names": [
+        "System.Classes.TList.Sort"
+      ]
+    },
+    {
+      "address": "0066bfe0",
+      "map_names": [
+        "Vcl.ComCtrls.THeaderSections.GetItem"
+      ]
+    },
+    {
+      "address": "0117adbc",
+      "map_names": [
+        "fOrders.TfrmOrders.RedrawOrderList"
+      ]
+    },
+    {
+      "address": "0118bfb0",
+      "map_names": [
+        "fOrders.TfrmOrders.mnuOptimizeFieldsClick"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

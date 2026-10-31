@@ -1,0 +1,166 @@
+{
+  "function": "rOrders.NameOfStatus",
+  "address": "011dad98",
+  "status": "decompiled",
+  "file": "rOrders.NameOfStatus_011dad98.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011daf80",
+      "file_offset": 14525312,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "error"
+    },
+    {
+      "address": "011daf98",
+      "file_offset": 14525336,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 12,
+      "text": "discontinued"
+    },
+    {
+      "address": "011dafc0",
+      "file_offset": 14525376,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 8,
+      "text": "complete"
+    },
+    {
+      "address": "011dafe0",
+      "file_offset": 14525408,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "hold"
+    },
+    {
+      "address": "011daff8",
+      "file_offset": 14525432,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "flagged"
+    },
+    {
+      "address": "011db014",
+      "file_offset": 14525460,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "pending"
+    },
+    {
+      "address": "011db030",
+      "file_offset": 14525488,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "active"
+    },
+    {
+      "address": "011db04c",
+      "file_offset": 14525516,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "expired"
+    },
+    {
+      "address": "011db068",
+      "file_offset": 14525544,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "scheduled"
+    },
+    {
+      "address": "011db088",
+      "file_offset": 14525576,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 15,
+      "text": "partial results"
+    },
+    {
+      "address": "011db0b4",
+      "file_offset": 14525620,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "delayed"
+    },
+    {
+      "address": "011db0d0",
+      "file_offset": 14525648,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 10,
+      "text": "unreleased"
+    },
+    {
+      "address": "011db0f4",
+      "file_offset": 14525684,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "dc/edit"
+    },
+    {
+      "address": "011db110",
+      "file_offset": 14525712,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "cancelled"
+    },
+    {
+      "address": "011db130",
+      "file_offset": 14525744,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "lapsed"
+    },
+    {
+      "address": "011db14c",
+      "file_offset": 14525772,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "renewed"
+    },
+    {
+      "address": "011db168",
+      "file_offset": 14525800,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "new"
+    },
+    {
+      "address": "011db17c",
+      "file_offset": 14525820,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "no status"
+    }
+  ]
+}

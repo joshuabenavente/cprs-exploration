@@ -1,0 +1,1796 @@
+{
+  "class": "TfrmOrders",
+  "name": "frmOrders",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 451,
+    "Top": 177,
+    "HelpContext": 4000,
+    "Caption": "Orders Page",
+    "ClientHeight": 591,
+    "ClientWidth": 766,
+    "HelpFile": "overvw",
+    "Menu": "mnuOrders",
+    "ExplicitWidth": 782,
+    "ExplicitHeight": 650,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TShape",
+      "name": "shpPageBottom",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 586,
+        "Width": 766,
+        "Margins.Left": 5,
+        "Margins.Top": 5,
+        "Margins.Right": 5,
+        "Margins.Bottom": 5,
+        "ExplicitTop": 586,
+        "ExplicitWidth": 766
+      },
+      "children": []
+    },
+    {
+      "class": "TSplitter",
+      "name": "sptHorz",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 117,
+        "Height": 586,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "OnMoved": "sptHorzMoved",
+        "ExplicitLeft": 95,
+        "ExplicitHeight": 457
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlLeft",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 117,
+        "Height": 586,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Constraints.MinWidth": 37,
+        "ExplicitWidth": 117,
+        "ExplicitHeight": 586
+      },
+      "children": [
+        {
+          "class": "TOROffsetLabel",
+          "name": "OROffsetLabel1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 117,
+            "Height": 19,
+            "Align": "alTop",
+            "Caption": "View Orders",
+            "HorzOffset": 2,
+            "Transparent": false,
+            "VertOffset": 6,
+            "WordWrap": false
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblWrite",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 97,
+            "Width": 117,
+            "Height": 19,
+            "Align": "alTop",
+            "AutoSize": false,
+            "Caption": "Write Orders",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "Layout": "tlBottom",
+            "OnMouseMove": "lblWriteMouseMove"
+          },
+          "children": []
+        },
+        {
+          "class": "TSplitter",
+          "name": "sptVert",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 75,
+            "Width": 117,
+            "Height": 4,
+            "Cursor": "crVSplit",
+            "Align": "alTop",
+            "OnMoved": "sptVertMoved"
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "lstSheets",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 19,
+            "Width": 117,
+            "Height": 56,
+            "Align": "alTop",
+            "Constraints.MinHeight": 30,
+            "ItemHeight": 13,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 1,
+            "OnClick": "lstSheetsClick",
+            "Caption": "View Orders",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2"
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "lstWrite",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 116,
+            "Width": 117,
+            "Height": 470,
+            "Align": "alClient",
+            "ItemHeight": 13,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 4,
+            "OnClick": "lstWriteClick",
+            "Caption": "Write Orders",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2"
+          },
+          "children": []
+        },
+        {
+          "class": "TORAlignButton",
+          "name": "btnDelayedOrder",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 79,
+            "Width": 117,
+            "Height": 18,
+            "Align": "alTop",
+            "Caption": "Write Delayed Orders",
+            "TabOrder": 2,
+            "OnClick": "btnDelayedOrderClick",
+            "Alignment": "taLeftJustify"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlRight",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 121,
+        "Width": 645,
+        "Height": 586,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Constraints.MinWidth": 30,
+        "ParentColor": true,
+        "ParentCtl3D": false,
+        "ParentFont": false,
+        "OnResize": "pnlRightResize",
+        "ExplicitLeft": 121,
+        "ExplicitWidth": 645,
+        "ExplicitHeight": 586
+      },
+      "children": [
+        {
+          "class": "TOROffsetLabel",
+          "name": "lblOrders",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 645,
+            "Height": 19,
+            "Align": "alTop",
+            "Caption": "Active Orders",
+            "HorzOffset": 2,
+            "Transparent": false,
+            "VertOffset": 6,
+            "WordWrap": false
+          },
+          "children": []
+        },
+        {
+          "class": "TImage",
+          "name": "imgHide",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 520,
+            "Top": 0,
+            "Width": 16,
+            "Height": 16,
+            "Hint": "All Active Orders not Visible",
+            "AutoSize": true,
+            "ParentShowHint": false,
+            "Picture.Data": {
+              "binary_bytes": 258
+            },
+            "ShowHint": true,
+            "Transparent": true
+          },
+          "children": []
+        },
+        {
+          "class": "THeaderControl",
+          "name": "hdrOrders",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 19,
+            "Width": 645,
+            "Height": 17,
+            "Sections": [
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 16,
+                  "Text": "Service",
+                  "Width": 50
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 20,
+                  "Text": "Order",
+                  "Width": 210
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 16,
+                  "Text": "Start / Stop",
+                  "Width": 100
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 16,
+                  "Text": "Provider",
+                  "Width": 60
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 16,
+                  "Text": "Nurse",
+                  "Width": 40
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 16,
+                  "Text": "Clerk",
+                  "Width": 35
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 16,
+                  "Text": "Chart",
+                  "Width": 35
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 16,
+                  "Text": "Status",
+                  "Width": 50
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 25,
+                  "Text": "Location",
+                  "Width": 40
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Width": 50
+                }
+              }
+            ],
+            "OnSectionClick": "hdrOrdersSectionClick",
+            "OnSectionResize": "hdrOrdersSectionResize",
+            "OnMouseDown": "hdrOrdersMouseDown",
+            "OnMouseUp": "hdrOrdersMouseUp"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionListBox",
+          "name": "lstOrders",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 36,
+            "Width": 645,
+            "Height": 550,
+            "Style": "lbOwnerDrawVariable",
+            "Align": "alClient",
+            "Color": "clCream",
+            "Ctl3D": false,
+            "ItemHeight": 32,
+            "MultiSelect": true,
+            "ParentCtl3D": false,
+            "ParentShowHint": false,
+            "PopupMenu": "popOrder",
+            "ShowHint": true,
+            "TabOrder": 1,
+            "OnDblClick": "lstOrdersDblClick",
+            "OnDrawItem": "lstOrdersDrawItem",
+            "OnMeasureItem": "lstOrdersMeasureItem",
+            "Caption": "Active Orders",
+            "OnHintShow": "lstOrdersHintShow"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lstSheets",
+            "WatchEnable = False",
+            "IgnoreWatchEnable = False",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstWrite",
+            "WatchEnable = False",
+            "IgnoreWatchEnable = False",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDelayedOrder",
+            "WatchEnable = False",
+            "IgnoreWatchEnable = False",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = hdrOrders",
+            "WatchEnable = False",
+            "IgnoreWatchEnable = False",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstOrders",
+            "WatchEnable = False",
+            "IgnoreWatchEnable = False",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlLeft",
+            "WatchEnable = False",
+            "IgnoreWatchEnable = False",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlRight",
+            "WatchEnable = False",
+            "IgnoreWatchEnable = False",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOrders",
+            "WatchEnable = False",
+            "IgnoreWatchEnable = False",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TMainMenu",
+      "name": "mnuOrders",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 200,
+        "Top": 60
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuView",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&View",
+            "GroupIndex": 3
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewChart",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Chart &Tab"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartCover",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 1,
+                    "Caption": "Cover &Sheet",
+                    "ShortCut": 16467,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartProbs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 2,
+                    "Caption": "&Problem List",
+                    "ShortCut": 16464,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartMeds",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 3,
+                    "Caption": "&Medications",
+                    "ShortCut": 16461,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartOrders",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 4,
+                    "Caption": "&Orders",
+                    "ShortCut": 16463,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartNotes",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 6,
+                    "Caption": "Progress &Notes",
+                    "ShortCut": 16462,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartCslts",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 7,
+                    "Caption": "Consul&ts",
+                    "ShortCut": 16468,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartSurgery",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 11,
+                    "Caption": "S&urgery",
+                    "ShortCut": 16469,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartDCSumm",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 8,
+                    "Caption": "&Discharge Summaries",
+                    "ShortCut": 16452,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartLabs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 9,
+                    "Caption": "&Laboratory",
+                    "ShortCut": 16460,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartReports",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 10,
+                    "Caption": "&Reports",
+                    "ShortCut": 16466,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewInformation",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Information",
+                "OnClick": "mnuViewInformationClick"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewDemo",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 1,
+                    "Caption": "De&mographics...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewVisits",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 2,
+                    "Caption": "Visits/Pr&ovider...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewPrimaryCare",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 3,
+                    "Caption": "Primary &Care...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewMyHealtheVet",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 4,
+                    "Caption": "MyHealthe&Vet...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuInsurance",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 5,
+                    "Caption": "&Insurance...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewFlags",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 6,
+                    "Caption": "&Flags...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewRemoteData",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 7,
+                    "Caption": "Remote &Data...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewReminders",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 8,
+                    "Caption": "&Reminders...",
+                    "Enabled": false,
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewPostings",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 9,
+                    "Caption": "&Postings...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewActive",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Active Orders (includes pending, recent activity)",
+                "OnClick": "mnuViewActiveClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewCurrent",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Current &Orders (active/pending status only)",
+                "OnClick": "mnuViewCurrentClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "EventRealeasedOrder1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Auto DC/Release Event Orders",
+                "OnClick": "EventRealeasedOrder1Click"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewExpiring",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Expiring Orders",
+                "OnClick": "mnuViewExpiringClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewUnsigned",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Unsigned Orders",
+                "OnClick": "mnuViewUnsignedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewExpired",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Recently Expired Orders",
+                "OnClick": "mnuViewExpiredClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewCustom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Custom Order View...",
+                "OnClick": "mnuViewCustomClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z6",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewDfltSave",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Save as Default View...",
+                "OnClick": "mnuViewDfltSaveClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewDfltShow",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Return to Default View",
+                "OnClick": "mnuViewDfltShowClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewDetail",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Details...",
+                "OnClick": "mnuViewDetailClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewResult",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Results...",
+                "OnClick": "mnuViewResultClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewResultsHistory",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Results History...",
+                "OnClick": "mnuViewResultsHistoryClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewUAP",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Unified Action Profile (UAP)",
+                "OnClick": "mnuViewUAPClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewDM",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Discharge Meds",
+                "OnClick": "mnuViewDMClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuAct",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Action",
+            "GroupIndex": 4,
+            "OnClick": "mnuActClick"
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuActChange",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Change...",
+                "OnClick": "mnuActChangeClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActCopy",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Copy to &New Order...",
+                "OnClick": "mnuActCopyClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActDC",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Discontinue / Cancel...",
+                "OnClick": "mnuActDCClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActRel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Release Delayed Orders",
+                "Visible": false,
+                "OnClick": "mnuActRelClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActChgEvnt",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Change Release Event",
+                "OnClick": "mnuActChgEvntClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActHold",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Hold...",
+                "OnClick": "mnuActHoldClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActUnhold",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Re&lease Hold...",
+                "OnClick": "mnuActUnholdClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActRenew",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Rene&w...",
+                "OnClick": "mnuActRenewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActAlert",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Alert when Results...",
+                "OnClick": "mnuActAlertClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActComplete",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Co&mplete...",
+                "OnClick": "mnuActCompleteClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActFlag",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Flag...",
+                "OnClick": "mnuActFlagClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActFlagComment",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Flag Comments",
+                "OnClick": "mnuActFlagCommentClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActUnflag",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Unflag...",
+                "OnClick": "mnuActUnflagClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActVerify",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Verify...",
+                "OnClick": "mnuActVerifyClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActChartRev",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Char&t Review...",
+                "OnClick": "mnuActChartRevClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z5",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActRelease",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "R&elease without MD Signature...",
+                "OnClick": "mnuActReleaseClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActOnChart",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Signature &On Chart...",
+                "OnClick": "mnuActOnChartClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActSign",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Si&gn Selected...",
+                "OnClick": "mnuActSignClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z7",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActOneStep",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "One Step Clinic Admin",
+                "OnClick": "mnuActOneStepClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Park1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Action": "actPark"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "UnparkGeneratesarequesttoFillRefill1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Action": "actUnpark"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuOpt",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Options",
+            "GroupIndex": 5
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuOptSaveQuick",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Save as Quick Order...",
+                "OnClick": "mnuOptSaveQuickClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuOptEditCommon",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Edit Common List...",
+                "OnClick": "mnuOptEditCommonClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popOrder",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 1,
+        "OnPopup": "popOrderPopup",
+        "Left": 213,
+        "Top": 244
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "popOrderDetail",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Detai&ls...",
+            "OnClick": "mnuViewDetailClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popOrderResult",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Results...",
+            "OnClick": "mnuViewResultClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popResultsHistory",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Results History...",
+            "OnClick": "mnuViewResultsHistoryClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popOrderChange",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "&Change...",
+            "OnClick": "mnuActChangeClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popOrderRel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "Release Delayed Orders",
+            "Visible": false,
+            "OnClick": "mnuActRelClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popChgEvnt",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "Change Release Event",
+            "OnClick": "mnuActChgEvntClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popOrderCopy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "Copy to &New Order...",
+            "OnClick": "mnuActCopyClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popOrderDC",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "&Discontinue...",
+            "OnClick": "mnuActDCClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popOrderRenew",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "Rene&w...",
+            "OnClick": "mnuActRenewClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popPark",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Action": "actPark"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popUnpark",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Action": "actUnpark"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "sepOrderVerify",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popOrderVerify",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "Caption": "&Verify...",
+            "OnClick": "mnuActVerifyClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popOrderChartRev",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "Caption": "Char&t Review",
+            "OnClick": "mnuActChartRevClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popOrderSign",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "&Sign...",
+            "OnClick": "mnuActSignClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuOptimizeFields",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Adjust Column Size",
+            "Visible": false,
+            "OnClick": "mnuOptimizeFieldsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popFlag",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "Flag...",
+            "OnClick": "mnuActFlagClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popFlagComment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "Flag Comment...",
+            "OnClick": "mnuActFlagCommentClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popUnflag",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "Unflag...",
+            "OnClick": "mnuActUnflagClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuAllowMultipleAssignment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Allow Multiple Assignment",
+            "Enabled": false,
+            "Hint": "Allow to assign the same flag comment to several order flags",
+            "OnClick": "mnuAllowMultipleAssignmentClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "PopUAPOrder",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnPopup": "PopUAPOrderPopup",
+        "Left": 216,
+        "Top": 176
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "MnuDetailsUAP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Detai&ls...",
+            "OnClick": "mnuViewDetailClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "MnuDashUAP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "MnuContinueUAP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Continue...",
+            "OnClick": "MnuContinueUAPClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "MnuChangeUAP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "&Change...",
+            "OnClick": "MnuChangeUAPClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "MnuRenewUAP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "Rene&w...",
+            "OnClick": "MnuRenewUAPClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "MnuDiscontinueUAP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "&Discontinue...",
+            "OnClick": "MnuDiscontinueUAPClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "MnuDash2UAP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "MnuSignUAP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "&Sign...",
+            "OnClick": "mnuActSignClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TActionList",
+      "name": "ActionList",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 352,
+        "Top": 111
+      },
+      "children": [
+        {
+          "class": "TAction",
+          "name": "actPark",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Park",
+            "OnExecute": "actParkExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "actUnpark",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Unpark - Generates a request to Fill/Refill",
+            "OnExecute": "actUnparkExecute"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

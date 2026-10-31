@@ -1,0 +1,48 @@
+{
+  "function": "fOrders.TfrmOrders.GetPlainText",
+  "address": "0117e4e8",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.GetPlainText_0117e4e8.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0066bfe0",
+      "map_names": [
+        "Vcl.ComCtrls.THeaderSections.GetItem"
+      ]
+    },
+    {
+      "address": "0117ea50",
+      "map_names": [
+        "fOrders.TfrmOrders.GetOrderText"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "0117e5e4",
+      "file_offset": 14146020,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "Event"
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+caller	caller_address	call_site	callee	callee_address
+fOrders.TfrmOrders.ClearPtData	01179ba0	01179baa	fPage.TfrmPage.ClearPtData	012034d0
+fOrders.TfrmOrders.ClearPtData	01179ba0	01179bba	<indirect>	
+fOrders.TfrmOrders.ClearPtData	01179ba0	01179bc3	fOrders.TfrmOrders.ClearOrderSheets	0117d800
+fOrders.TfrmOrders.ClearPtData	01179ba0	01179bcd	rOrders.ClearOrders	011db7c0
+fOrders.TfrmOrders.ClearPtData	01179ba0	01179be2	<indirect>	
+fOrders.TfrmOrders.ClearPtData	01179ba0	01179bf5	<indirect>	
+fOrders.TfrmOrders.ClearPtData	01179ba0	01179bf8	uODBase.ClearFillerAppList	00d2cff4
+fOrders.TfrmOrders.DisplayPage	01179c00	01179c0c	fPage.TfrmPage.DisplayPage	012034e8
+fOrders.TfrmOrders.DisplayPage	01179c00	01179c21	fFrame.TfrmFrame.ShowHideChartTabMenus	00ffdcd8
+fOrders.TfrmOrders.DisplayPage	01179c00	01179c49	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179c5d	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179c65	fPage.TfrmPage.GetInitPage	012035ec
+fOrders.TfrmOrders.DisplayPage	01179c00	01179ca8	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179cd6	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179d04	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179d32	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179d60	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179d8e	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179daa	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179dd8	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179df4	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179e10	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179e20	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179e30	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179e44	Vcl.Menus.TMenuItem.GetCount	007091fc
+fOrders.TfrmOrders.DisplayPage	01179c00	01179e5f	Vcl.Menus.TMenuItem.GetItem	0070920c
+fOrders.TfrmOrders.DisplayPage	01179c00	01179e70	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179e8f	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179ea6	Vcl.Menus.TMenuItem.GetCount	007091fc
+fOrders.TfrmOrders.DisplayPage	01179c00	01179ec1	Vcl.Menus.TMenuItem.GetItem	0070920c
+fOrders.TfrmOrders.DisplayPage	01179c00	01179ed2	Vcl.Menus.TMenuItem.GetItem	0070920c
+fOrders.TfrmOrders.DisplayPage	01179c00	01179ee3	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179f03	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179f1b	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179f33	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179f4b	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179f78	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.DisplayPage	01179c00	01179f95	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179fa5	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.DisplayPage	01179c00	01179fb7	fPage.TfrmPage.GetInitPatient	0120360c
+fOrders.TfrmOrders.DisplayPage	01179c00	01179fd6	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.DisplayPage	01179c00	01179fdb	rOrders.LoadWriteOrders	011e0340
+fOrders.TfrmOrders.DisplayPage	01179c00	01179fed	<indirect>	
+fOrders.TfrmOrders.DisplayPage	01179c00	01179ff6	fOrders.TfrmOrders.InitOrderSheets	0117d870
+fOrders.TfrmOrders.DisplayPage	01179c00	0117a016	fOrders.TfrmOrders.mnuViewDfltShowClick	0117c3e0
+fOrders.TfrmOrders.DisplayPage	01179c00	0117a020	fOrders.TfrmOrders.ProcessNotifications	01185e1c
+fOrders.TfrmOrders.DisplayPage	01179c00	0117a032	UResponsiveGUI.TResponsiveGUI.ProcessMessages	009a9728
+fOrders.TfrmOrders.DisplayPage	01179c00	0117a03d	fOrders.TfrmOrders.RedrawOrderList	0117adbc
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b021	System.@UStrAddRef	0040b0c8
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b05c	Vcl.Controls.TWinControl.LockDrawing	00608594
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b07a	<indirect>	
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b08f	ORFn.StatusText	009b60ec
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b0ab	uCore.TNotifications.GetIndOrderDisplay	011d6c8c
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b0cc	rOrders.DGroupAll	011de93c
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b0db	fOrders.TfrmOrders.SetCannedView	0117b878
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b0f1	rOrders.LoadOrdersAbbr	011dc634
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b109	uCore.TNotifications.GetRecordID	011d6b48
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b11a	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b134	rOrders.LoadOrdersAbbr	011dcb68
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b143	uCore.TNotifications.GetRecordID	011d6b48
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b14b	ORFn.StatusText	009b60ec
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b157	rOrders.ClearOrders	011db7c0
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b163	<indirect>	
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b16d	<indirect>	
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b188	rOrders.LoadOrdersAbbr	011dccc0
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b1e7	<indirect>	
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b200	fOrders.TfrmOrders.ExpandEventSection	01187c08
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b20a	fOrders.TfrmOrders.CompressEventSection	01187b88
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b23d	rOrders.SortOrders	011de8dc
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b26b	ORNet.CallVistA	009ad924
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b278	System.@UStrEqual	0040c324
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b287	System.@UStrEqual	0040c324
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b297	fOrders.TfrmOrders.SetOrderRevwCol	0118d8e8
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b2af	rOrders.SortOrders	011de8dc
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b2bd	fOrders.TfrmOrders.AddToListBox	0118a5e4
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b2e6	rOrders.SortOrders	011de8dc
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b30b	System.Classes.TList.Get	004d2ff0
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b317	System.Classes.TList.Add	004d2e10
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b338	rOrders.SortOrders	011de8dc
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b35d	System.Classes.TList.Get	004d2ff0
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b369	System.Classes.TList.Add	004d2e10
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b37f	fOrders.TfrmOrders.AddToListBox	0118a5e4
+fOrders.TfrmOrders.RefreshOrderList	0117b000	0117b39a	Vcl.Controls.TWinControl.UnlockDrawing	006085cc
+fOrders.TfrmOrders.SetOrderView	0117b7d4	0117b7e6	fOrders.TfrmOrders.CanChangeOrderView	0117b678
+fOrders.TfrmOrders.SetOrderView	0117b7d4	0117b804	fOrders.TfrmOrders.SetCannedView	0117b878
+fOrders.TfrmOrders.SetOrderView	0117b7d4	0117b810	fOrders.TfrmOrders.RefreshOrderList	0117b000
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b8aa	fOrders.TfrmOrders.CanChangeOrderView	0117b678
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b8c0	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b8c7	<indirect>	
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b8d7	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b8e8	System.@UStrCat3	0040c18c
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b8f3	<indirect>	
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b903	<indirect>	
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b912	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b91b	<indirect>	
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b93a	System.TObject.Create	0040908c
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b99e	uCore.TNotifications.GetRecordID	011d6b48
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b9af	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b9c0	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b9c8	rCore.StrToFMDateTime	011ca88c
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b9d4	ORFn.FMDateTimeToDateTime	009b0e14
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b9d9	System.@TRUNC	004085a0
+fOrders.TfrmOrders.SetCannedView	0117b878	0117b9fe	ORFn.DateTimeToFMDateTime	009b0d84
+fOrders.TfrmOrders.SetCannedView	0117b878	0117ba0a	rCore.FMNow	011ca6ac
+fOrders.TfrmOrders.SetCannedView	0117b878	0117ba41	ORFn.FMDateTimeToDateTime	009b0e14
+fOrders.TfrmOrders.SetCannedView	0117b878	0117ba46	System.@TRUNC	004085a0
+fOrders.TfrmOrders.SetCannedView	0117b878	0117ba5a	rCore.FMNow	011ca6ac
+fOrders.TfrmOrders.SetCannedView	0117b878	0117ba66	ORFn.FMDateTimeToDateTime	009b0e14
+fOrders.TfrmOrders.SetCannedView	0117b878	0117ba6b	System.@TRUNC	004085a0
+fOrders.TfrmOrders.SetCannedView	0117b878	0117ba89	ORFn.DateTimeToFMDateTime	009b0d84
+fOrders.TfrmOrders.SetCannedView	0117b878	0117ba95	rCore.FMNow	011ca6ac
+fOrders.TfrmOrders.SetCannedView	0117b878	0117baa6	fOrders.TfrmOrders.UseDefaultSort	0117b608
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bab1	rOrders.ExpiredOrdersStartDT	011db22c
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bad4	VAUtils.ShowMessage	0079b0f0
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bad9	rCore.FMNow	011ca6ac
+fOrders.TfrmOrders.SetCannedView	0117b878	0117baeb	System.SysUtils.Now	00431328
+fOrders.TfrmOrders.SetCannedView	0117b878	0117baf0	System.@TRUNC	004085a0
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bb17	ORFn.DateTimeToFMDateTime	009b0d84
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bb23	rCore.FMNow	011ca6ac
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bb5d	System.@UStrAsg	0040b3c4
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bb6b	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bb7f	System.@UStrCat3	0040c18c
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bb8c	<indirect>	
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bbb3	System.@UStrEqual	0040c324
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bbcc	Vcl.Controls.TControl.SetPopupMenu	00602684
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bbde	<indirect>	
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bbf1	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bc0c	ORNet.CallVistA	009ad778
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bc2d	Vcl.Controls.TControl.SetPopupMenu	00602684
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bc3f	<indirect>	
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bc59	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bc74	ORNet.CallVistA	009ad778
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bc91	System.@UStrClr	0040afd4
+fOrders.TfrmOrders.SetCannedView	0117b878	0117bc9e	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.mnuViewActiveClick	0117bdd0	0117bdf0	Vcl.ComCtrls.THeaderSections.GetItem	0066bfe0
+fOrders.TfrmOrders.mnuViewActiveClick	0117bdd0	0117bdf7	Vcl.ComCtrls.THeaderSection.SetText	0066bd3c
+fOrders.TfrmOrders.mnuViewActiveClick	0117bdd0	0117bdff	fOrders.TfrmOrders.OrderViewReset	0117d7c4
+fOrders.TfrmOrders.mnuViewActiveClick	0117bdd0	0117be0d	rOrders.DGroupAll	011de93c
+fOrders.TfrmOrders.mnuViewActiveClick	0117bdd0	0117be1c	fOrders.TfrmOrders.SetOrderView	0117b7d4
+fOrders.TfrmOrders.mnuViewCurrentClick	0117beb8	0117bed8	Vcl.ComCtrls.THeaderSections.GetItem	0066bfe0
+fOrders.TfrmOrders.mnuViewCurrentClick	0117beb8	0117bedf	Vcl.ComCtrls.THeaderSection.SetText	0066bd3c
+fOrders.TfrmOrders.mnuViewCurrentClick	0117beb8	0117bee7	fOrders.TfrmOrders.OrderViewReset	0117d7c4
+fOrders.TfrmOrders.mnuViewCurrentClick	0117beb8	0117bef5	rOrders.DGroupAll	011de93c
+fOrders.TfrmOrders.mnuViewCurrentClick	0117beb8	0117bf04	fOrders.TfrmOrders.SetOrderView	0117b7d4
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cc37	fOrders.TfrmOrders.NoneSelected	01181714
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cc4b	System.Classes.TStringList.Create	004d81f4
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cc7d	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cc9a	Vcl.StdCtrls.TCustomListBox.GetSelected	00631c70
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ccac	ORFn.StatusText	009b60ec
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ccbf	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ccc8	System.@UStrLAsg	0040b40c
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ccdd	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cceb	ORFn.StrToFloatDef	009b1b30
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd05	VAUtils.ShowMsg	0079c19c
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd15	rOrders.getDetailOrder	011dabac
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd28	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd33	System.@UStrEqual	0040c324
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd4c	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd57	System.@UStrEqual	0040c324
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd6c	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd77	System.@UStrEqual	0040c324
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd8c	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cd97	System.@UStrEqual	0040c324
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cdac	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cdb7	System.@UStrEqual	0040c324
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cdc9	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cdd8	System.StringOfChar	0040c74c
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cde5	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cdef	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cdf9	System.Classes.TStringList.Create	004d81f4
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ce15	rMeds.MedAdminHistory	00adde04
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ce20	ORFn.FastAddStrings	009b4030
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ce40	System.TObject.Free	004090bc
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ce52	rOrders.CheckOrderGroup	011db5e4
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ce5f	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ce7d	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ce86	System.SysUtils.UpperCase	0042c1a8
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ce9e	System.@UStrPos	0040c4b0
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ceca	<indirect>	
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ceda	System.@UStrCat3	0040c18c
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cee7	fRptBox.ReportBox	01007fec
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117ceee	ORFn.StatusText	009b60ec
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cefa	fFrame.TfrmFrame.GetTimedOut	00febee8
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cf0a	fFrame.TfrmFrame.GetCCOWDriveChange	010048d0
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cf13	System.@TryFinallyExit	0040a734
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cf22	Vcl.StdCtrls.TCustomListBox.SetSelected	00631cb4
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cf43	System.TObject.Free	004090bc
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cf67	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.mnuViewDetailClick	0117cc00	0117cf74	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dc40	uOrders.CloseOrdering	010e36b0
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dc62	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dc81	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dc8b	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dc93	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dca8	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dcb2	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dcbd	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dccc	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dcd6	System.SysUtils.StrToIntDef	0042d238
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dd5d	System.SysUtils.IntToStr	0042cfdc
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dda4	fOrders.TfrmOrders.PtEvtCompleted	0118a80c
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117ddce	rOrders.DeleteEmptyEvt	011e6e9c
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dddd	fOrders.TfrmOrders.ChangesUpdate	0118a6b4
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117ddef	fOrders.TfrmOrders.InitOrderSheetsForEvtDelay	01187cdc
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117de01	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117de0d	fOrders.TfrmOrders.lstSheetsClick	0117dc1c
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117de88	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117de8f	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dea6	System.@UStrCat3	0040c18c
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117deb7	Vcl.Controls.TControl.SetText	006026fc
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dec8	Vcl.Controls.TControl.GetText	006026ac
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117ded9	ORCtrls.TORListBox.SetCaption	007b10c8
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dee7	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117deee	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117defa	System.SysUtils.IntToStr	0042cfdc
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df0c	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df12	rOrders.LoadWriteOrdersED	011e03b0
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df20	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df27	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df36	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df3b	rOrders.LoadWriteOrders	011e0340
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df4f	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df5f	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df6a	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df79	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df86	fOrders.TfrmOrders.RefreshOrderList	0117b000
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117df96	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dfa6	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117dfbc	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e019	fOrders.TfrmOrders.PtEvtCompleted	0118a80c
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e035	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e045	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e050	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e05f	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e067	rOrders.PtEvtEmpty	011e3bc0
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e092	ORFn.InfoBox	009b44a8
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e0af	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e0bf	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e0ca	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e0d9	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e0e1	rOrders.DeletePtEvent	011e3810
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e0fb	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e10b	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e113	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e116	System.TObject.Free	004090bc
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e126	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e136	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e13e	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e148	System.TObject.Create	0040908c
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e163	<indirect>	
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e16f	fOrders.TfrmOrders.lstSheetsClick	0117dc1c
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e1ad	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e1bd	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e1d0	Vcl.Controls.TControl.SetText	006026fc
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e1e1	Vcl.Controls.TControl.GetText	006026ac
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e1f2	ORCtrls.TORListBox.SetCaption	007b10c8
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e200	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e205	rOrders.LoadWriteOrders	011e0340
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e211	fOrders.TfrmOrders.RefreshOrderList	0117b000
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e223	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e233	Vcl.Menus.TMenuItem.SetVisible	00709244
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e246	Vcl.Controls.TControl.SetText	006026fc
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e257	Vcl.Controls.TControl.GetText	006026ac
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e268	ORCtrls.TORListBox.SetCaption	007b10c8
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e276	ORCtrls.TORListBox.GetMItems	007b1014
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e27b	rOrders.LoadWriteOrders	011e0340
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e287	fOrders.TfrmOrders.RefreshOrderList	0117b000
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e2ab	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e2b8	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e2c0	System.@UStrClr	0040afd4
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e2cd	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.lstSheetsClick	0117dc1c	0117e2d5	System.@UStrClr	0040afd4
+fOrders.TfrmOrders.RetrieveVisibleOrders	0117e3f0	0117e403	System.TObject.Create	0040908c
+fOrders.TfrmOrders.RetrieveVisibleOrders	0117e3f0	0117e442	System.Classes.TList.Get	004d2ff0
+fOrders.TfrmOrders.RetrieveVisibleOrders	0117e3f0	0117e459	System.Classes.TList.Add	004d2e10
+fOrders.TfrmOrders.RetrieveVisibleOrders	0117e3f0	0117e484	rOrders.RetrieveOrderFields	011ddc0c
+fOrders.TfrmOrders.RetrieveVisibleOrders	0117e3f0	0117e499	System.TObject.Free	004090bc
+fOrders.TfrmOrders.GetPlainText	0117e4e8	0117e50e	System.@UStrClr	0040afd4
+fOrders.TfrmOrders.GetPlainText	0117e4e8	0117e524	Vcl.ComCtrls.THeaderSections.GetItem	0066bfe0
+fOrders.TfrmOrders.GetPlainText	0117e4e8	0117e531	System.@UStrEqual	0040c324
+fOrders.TfrmOrders.GetPlainText	0117e4e8	0117e562	fOrders.TfrmOrders.GetOrderText	0117ea50
+fOrders.TfrmOrders.GetPlainText	0117e4e8	0117e584	Vcl.ComCtrls.THeaderSections.GetItem	0066bfe0
+fOrders.TfrmOrders.GetPlainText	0117e4e8	0117e5a1	System.@UStrCatN	0040c214
+fOrders.TfrmOrders.GetPlainText	0117e4e8	0117e5bf	System.@UStrClr	0040afd4
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e86a	System.@UStrAddRef	0040b0c8
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e872	System.@UStrAddRef	0040b0c8
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e890	ORFn.FormatFMDateTimeStr	009b1794
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e898	ORFn.IsFMDateTime	009b17dc
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e8ce	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e8d9	System.@UStrAsg	0040b3c4
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e908	System.@UStrCat3	0040c18c
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e918	ORFn.FormatFMDateTimeStr	009b1794
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e920	ORFn.IsFMDateTime	009b17dc
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e954	VAUtils.Piece	0079acec
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e95f	System.@UStrLAsg	0040b40c
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e999	System.@UStrCatN	0040c214
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e9b3	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.GetStartStopText	0117e84c	0117e9c0	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.GetOrderText	0117ea50	0117ed57	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.GetOrderText	0117ea50	0117ed64	System.@UStrArrayClr	0040b034
+fOrders.TfrmOrders.lstOrdersDblClick	0117f5dc	0117f5ee	fOrders.TfrmOrders.mnuViewDetailClick	0117cc00
+fOrders.TfrmOrders.NoneSelected	01181714	01181727	fOrders.TfrmOrders.SelCount	0117b81c
+fOrders.TfrmOrders.NoneSelected	01181714	01181744	ORFn.InfoBox	009b44a8
+fOrders.TfrmOrders.hdrOrdersSectionClick	0118c37c	0118c3ab	Vcl.ComCtrls.THeaderSections.GetItem	0066bfe0
+fOrders.TfrmOrders.hdrOrdersSectionClick	0118c37c	0118c3d0	System.Classes.TList.Sort	004d367c
+fOrders.TfrmOrders.hdrOrdersSectionClick	0118c37c	0118c3df	System.Classes.TList.Sort	004d367c
+fOrders.TfrmOrders.hdrOrdersSectionClick	0118c37c	0118c3e9	fOrders.TfrmOrders.RedrawOrderList	0117adbc
+fOrders.TfrmOrders.hdrOrdersSectionClick	0118c37c	0118c3f4	fOrders.TfrmOrders.mnuOptimizeFieldsClick	0118bfb0
+rOrders.getDetailOrder	011dabac	011dabe6	ORNet.CallVistA	009ada80
+rOrders.NameOfStatus	011dad98	011daee3	System.@UStrAsg	0040b3c4
+rOrders.NameOfStatus	011dad98	011daef5	System.@UStrAsg	0040b3c4
+rOrders.NameOfStatus	011dad98	011daf04	System.@UStrAsg	0040b3c4
+rOrders.NameOfStatus	011dad98	011daf13	System.@UStrAsg	0040b3c4
+rOrders.NameOfStatus	011dad98	011daf22	System.@UStrAsg	0040b3c4
+rOrders.NameOfStatus	011dad98	011daf31	System.@UStrAsg	0040b3c4
+rOrders.NameOfStatus	011dad98	011daf40	System.@UStrAsg	0040b3c4
+rOrders.NameOfStatus	011dad98	011daf4a	System.@UStrClr	0040afd4
+rOrders.NameOfStatus	011dad98	011daf59	System.@UStrAsg	0040b3c4
+rOrders.NameOfStatus	011dad98	011daf68	System.@UStrAsg	0040b3c4
+rOrders.GetOrderStatus	011db190	011db19c	System.@UStrAddRef	0040b0c8
+rOrders.GetOrderStatus	011db190	011db1cb	ORNet.CallVistA	009ad7ec
+rOrders.GetOrderStatus	011db190	011db1e9	System.@UStrClr	0040afd4
+rOrders.ClearOrders	011db7c0	011db7e5	System.Classes.TList.Get	004d2ff0
+rOrders.ClearOrders	011db7c0	011db7f0	System.TObject.Free	004090bc
+rOrders.ClearOrders	011db7c0	011db802	<indirect>	
+rOrders.LoadOrdersAbbr	011dc634	011dc673	System.@UStrAddRef	0040b0c8
+rOrders.LoadOrdersAbbr	011dc634	011dc68f	rOrders.LoadDGroupMap	011dad28
+rOrders.LoadOrdersAbbr	011dc634	011dc69d	System.SysUtils.IntToStr	0042cfdc
+rOrders.LoadOrdersAbbr	011dc634	011dc6b3	System.SysUtils.IntToStr	0042cfdc
+rOrders.LoadOrdersAbbr	011dc634	011dc6c3	System.@UStrCatN	0040c214
+rOrders.LoadOrdersAbbr	011dc634	011dc6ee	System.Classes.TStringList.Create	004d81f4
+rOrders.LoadOrdersAbbr	011dc634	011dc781	ORNet.CallVistA	009ada80
+rOrders.LoadOrdersAbbr	011dc634	011dc78b	<indirect>	
+rOrders.LoadOrdersAbbr	011dc634	011dc795	rOrders.ClearOrders	011db7c0
+rOrders.LoadOrdersAbbr	011dc634	011dc7b3	<indirect>	
+rOrders.LoadOrdersAbbr	011dc634	011dc7c5	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dc634	011dc7d5	System.@UStrEqual	0040c324
+rOrders.LoadOrdersAbbr	011dc634	011dc7f0	<indirect>	
+rOrders.LoadOrdersAbbr	011dc634	011dc802	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dc634	011dc826	<indirect>	
+rOrders.LoadOrdersAbbr	011dc634	011dc829	rOrders.ExpiredOrdersStartDT	011db22c
+rOrders.LoadOrdersAbbr	011dc634	011dc846	VAUtils.ShowMessage	0079b0f0
+rOrders.LoadOrdersAbbr	011dc634	011dc8a9	rCore.FMNow	011ca6ac
+rOrders.LoadOrdersAbbr	011dc634	011dc8e8	ORNet.CallVistA	009ada80
+rOrders.LoadOrdersAbbr	011dc634	011dc8f6	<indirect>	
+rOrders.LoadOrdersAbbr	011dc634	011dc90f	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dc634	011dc925	System.@UStrCat3	0040c18c
+rOrders.LoadOrdersAbbr	011dc634	011dc931	System.TObject.Create	0040908c
+rOrders.LoadOrdersAbbr	011dc634	011dc950	rOrders.ConvertOrders	011dbf3c
+rOrders.LoadOrdersAbbr	011dc634	011dc95b	rOrders.RefreshOrders	011dc258
+rOrders.LoadOrdersAbbr	011dc634	011dc97b	System.TObject.Free	004090bc
+rOrders.LoadOrdersAbbr	011dc634	011dc99a	System.TObject.Free	004090bc
+rOrders.LoadOrdersAbbr	011dcb68	011dcb7a	System.@UStrAddRef	0040b0c8
+rOrders.LoadOrdersAbbr	011dcb68	011dcb82	System.@UStrAddRef	0040b0c8
+rOrders.LoadOrdersAbbr	011dcb68	011dcb9e	rOrders.LoadDGroupMap	011dad28
+rOrders.LoadOrdersAbbr	011dcb68	011dcbaa	System.Classes.TStringList.Create	004d81f4
+rOrders.LoadOrdersAbbr	011dcb68	011dcbda	ORNet.CallVistA	009ada80
+rOrders.LoadOrdersAbbr	011dcb68	011dcbe6	System.TObject.Create	0040908c
+rOrders.LoadOrdersAbbr	011dcb68	011dcc05	rOrders.ConvertOrders	011dbf3c
+rOrders.LoadOrdersAbbr	011dcb68	011dcc10	rOrders.RefreshOrders	011dc258
+rOrders.LoadOrdersAbbr	011dcb68	011dcc30	System.TObject.Free	004090bc
+rOrders.LoadOrdersAbbr	011dccc0	011dcce0	System.@UStrAddRef	0040b0c8
+rOrders.LoadOrdersAbbr	011dccc0	011dcd00	rOrders.LoadDGroupMap	011dad28
+rOrders.LoadOrdersAbbr	011dccc0	011dcd0e	System.SysUtils.IntToStr	0042cfdc
+rOrders.LoadOrdersAbbr	011dccc0	011dcd24	System.SysUtils.IntToStr	0042cfdc
+rOrders.LoadOrdersAbbr	011dccc0	011dcd34	System.@UStrCatN	0040c214
+rOrders.LoadOrdersAbbr	011dccc0	011dcd40	System.Classes.TStringList.Create	004d81f4
+rOrders.LoadOrdersAbbr	011dccc0	011dcdc9	ORNet.CallVistA	009ada80
+rOrders.LoadOrdersAbbr	011dccc0	011dcded	System.TObject.Create	0040908c
+rOrders.LoadOrdersAbbr	011dccc0	011dcdfc	System.TObject.Create	0040908c
+rOrders.LoadOrdersAbbr	011dccc0	011dce09	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dce1c	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dce2a	System.@UStrEqual	0040c324
+rOrders.LoadOrdersAbbr	011dccc0	011dce38	System.TObject.Create	0040908c
+rOrders.LoadOrdersAbbr	011dccc0	011dce4b	System.@UStrAsg	0040b3c4
+rOrders.LoadOrdersAbbr	011dccc0	011dce58	rCore.FMNow	011ca6ac
+rOrders.LoadOrdersAbbr	011dccc0	011dce79	System.@UStrAsg	0040b3c4
+rOrders.LoadOrdersAbbr	011dccc0	011dce8b	System.Classes.TList.Add	004d2e10
+rOrders.LoadOrdersAbbr	011dccc0	011dcea9	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dcebb	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dccc0	011dcec8	System.SysUtils.StrToIntDef	0042d238
+rOrders.LoadOrdersAbbr	011dccc0	011dcee7	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dcef9	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dccc0	011dcf04	ORFn.MakeFMDateTime	009b18cc
+rOrders.LoadOrdersAbbr	011dccc0	011dcf15	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dcf39	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dcf47	System.SysUtils.AnsiCompareText	0042c528
+rOrders.LoadOrdersAbbr	011dccc0	011dcf60	System.TObject.Create	0040908c
+rOrders.LoadOrdersAbbr	011dccc0	011dcf7d	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dcf8f	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dccc0	011dcfa0	System.@UStrAsg	0040b3c4
+rOrders.LoadOrdersAbbr	011dccc0	011dcfba	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dcfcc	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dccc0	011dcfd9	System.SysUtils.StrToIntDef	0042d238
+rOrders.LoadOrdersAbbr	011dccc0	011dcff9	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dd00b	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dccc0	011dd016	ORFn.MakeFMDateTime	009b18cc
+rOrders.LoadOrdersAbbr	011dccc0	011dd037	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dd049	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dccc0	011dd05a	System.@UStrAsg	0040b3c4
+rOrders.LoadOrdersAbbr	011dccc0	011dd074	<indirect>	
+rOrders.LoadOrdersAbbr	011dccc0	011dd086	VAUtils.Piece	0079acec
+rOrders.LoadOrdersAbbr	011dccc0	011dd097	System.@UStrAsg	0040b3c4
+rOrders.LoadOrdersAbbr	011dccc0	011dd0a2	rOrders.SeqOfDGroup	011db550
+rOrders.LoadOrdersAbbr	011dccc0	011dd0b9	System.Classes.TList.Add	004d2e10
+rOrders.LoadOrdersAbbr	011dccc0	011dd0c6	System.Classes.TList.Add	004d2e10
+rOrders.LoadOrdersAbbr	011dccc0	011dd0dd	rOrders.RefreshOrders	011dc258
+rOrders.LoadOrdersAbbr	011dccc0	011dd0e8	rOrders.RefreshOrders	011dc258
+rOrders.LoadOrdersAbbr	011dccc0	011dd108	System.TObject.Free	004090bc
+rOrders.LoadOrdersAbbr	011dccc0	011dd11b	System.TObject.Free	004090bc
+rOrders.RetrieveOrderFields	011ddc0c	011ddc38	System.Classes.TStringList.Create	004d81f4
+rOrders.RetrieveOrderFields	011ddc0c	011ddc55	System.Classes.TStringList.Create	004d81f4
+rOrders.RetrieveOrderFields	011ddc0c	011ddc87	System.Classes.TList.Get	004d2ff0
+rOrders.RetrieveOrderFields	011ddc0c	011ddc94	<indirect>	
+rOrders.RetrieveOrderFields	011ddc0c	011ddcd7	ORNet.CallVistA	009ada80
+rOrders.RetrieveOrderFields	011ddc0c	011ddce5	<indirect>	
+rOrders.RetrieveOrderFields	011ddc0c	011ddcf8	System.TObject.Free	004090bc
+rOrders.ListOrderFiltersAll	011df26c	011df28e	ORNet.CallVistA	009ada80
+rOrders.TextForOrder	011e3c68	011e3c7b	System.Classes.TStringList.Create	004d81f4
+rOrders.TextForOrder	011e3c68	011e3cab	ORNet.CallVistA	009ada80
+rOrders.TextForOrder	011e3c68	011e3cbc	<indirect>	
+rOrders.TextForOrder	011e3c68	011e3ccf	System.TObject.Free	004090bc

@@ -1,0 +1,30 @@
+{
+  "function": "rOrders.GetOrderStatus",
+  "address": "011db190",
+  "status": "decompiled",
+  "file": "rOrders.GetOrderStatus_011db190.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011db20c",
+      "file_offset": 14525964,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 15,
+      "text": "OREVNTX1 GETSTS"
+    }
+  ]
+}

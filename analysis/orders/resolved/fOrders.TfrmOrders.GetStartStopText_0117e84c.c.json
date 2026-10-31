@@ -1,0 +1,80 @@
+{
+  "function": "fOrders.TfrmOrders.GetStartStopText",
+  "address": "0117e84c",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.GetStartStopText_0117e84c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "009b1794",
+      "map_names": [
+        "ORFn.FormatFMDateTimeStr"
+      ]
+    },
+    {
+      "address": "009b17dc",
+      "map_names": [
+        "ORFn.IsFMDateTime"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "0117e9e4",
+      "file_offset": 14147044,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "mm/dd/yy hh:nn"
+    },
+    {
+      "address": "0117ea10",
+      "file_offset": 14147088,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "Start: "
+    }
+  ]
+}

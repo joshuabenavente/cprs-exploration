@@ -1,6 +1,6 @@
 # CPRS Chart Rust recreation research
 
-This workspace contains a mock-only Rust patient selector, two Cover Sheet panels with read-only item details, a read-only Notes browser, and static research on CPRS Chart 1.33.214.5 (executable metadata: OR*3.0*639). All nine prototype records are invented. The Rust application has no live connection or clinical-write functionality.
+This workspace contains a mock-only Rust patient selector, two Cover Sheet panels with read-only item details, read-only Notes and Orders browsers, and static research on CPRS Chart 1.33.214.5 (executable metadata: OR*3.0*639). All nine prototype records are invented. The Rust application has no live connection or clinical-write functionality.
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
@@ -10,9 +10,9 @@ Initial scope includes Chart forms, navigation, client state, and the interfaces
 .\scripts\Start-MockChart.ps1
 ```
 
-Use `-Rebuild` after source changes. Search for `MORGAN` to see duplicate-name records with distinct synthetic IDs, `PATEL` for an acknowledgment, or `RIVERA` for denied mock access. `zárate` or `李` finds the Unicode fixture. Cover Sheet contains synthetic Problem List and Allergies panels; select an item and use Enter, Space, double-click, or its detail button. Notes has an invented five-column list, filtering, and read-only document text; choose a row, then Enter to focus its text. SYNTH-002 has an empty Notes list. Scenario controls exercise failures and slow replies. Orders and Results remain placeholders.
+Use `-Rebuild` after source changes. Search for `MORGAN` to see duplicate-name records with distinct synthetic IDs, `PATEL` for an acknowledgment, or `RIVERA` for denied mock access. `zárate` or `李` finds the Unicode fixture. Cover Sheet has synthetic Problem List and Allergies panels. Notes loads a selected document automatically. Orders highlights a row first; Enter, double-click, or View order detail explicitly opens its read-only text. Both browsers support filtering, long Unicode fixtures, and error/retry simulations. SYNTH-002 has empty Notes and Orders lists. Results remains a placeholder.
 
-Run `scripts/Test-MockChart.ps1` for offline automated checks, now written under `validation/milestone-4/`. See the [current handoff](docs/milestone-4.md), [Notes specification](specifications/notes.md), and [Cover Sheet specification](specifications/cover-sheet.md). The original Ghidra analysis remains separate from the running app.
+Run `scripts/Test-MockChart.ps1` for offline automated checks, now written under `validation/milestone-5/`. See the [current handoff](docs/milestone-5.md), [Orders specification](specifications/orders.md), and [Notes specification](specifications/notes.md). The original Ghidra analysis remains separate from the running app.
 
 For a repeatable layout check, use `scripts/Start-MockChart.ps1 -MinimumSize -ScaleFactor 1.25`. Supported application scale overrides are 1, 1.25, 1.5, 1.75, and 2. They do not change Windows display settings. Close the app before rebuilding or launching another scale check.
 

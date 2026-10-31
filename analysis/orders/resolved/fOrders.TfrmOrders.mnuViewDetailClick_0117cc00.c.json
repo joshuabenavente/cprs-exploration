@@ -1,0 +1,234 @@
+{
+  "function": "fOrders.TfrmOrders.mnuViewDetailClick",
+  "address": "0117cc00",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.mnuViewDetailClick_0117cc00.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040a734",
+      "map_names": [
+        "System.@TryFinallyExit"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "0040c74c",
+      "map_names": [
+        "System.StringOfChar"
+      ]
+    },
+    {
+      "address": "0042c1a8",
+      "map_names": [
+        "System.SysUtils.UpperCase"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "00631c70",
+      "map_names": [
+        "Vcl.StdCtrls.TCustomListBox.GetSelected"
+      ]
+    },
+    {
+      "address": "00631cb4",
+      "map_names": [
+        "Vcl.StdCtrls.TCustomListBox.SetSelected"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "0079c19c",
+      "map_names": [
+        "VAUtils.ShowMsg"
+      ]
+    },
+    {
+      "address": "009b1b30",
+      "map_names": [
+        "ORFn.StrToFloatDef"
+      ]
+    },
+    {
+      "address": "009b4030",
+      "map_names": [
+        "ORFn.FastAddStrings"
+      ]
+    },
+    {
+      "address": "009b60ec",
+      "map_names": [
+        "ORFn.StatusText"
+      ]
+    },
+    {
+      "address": "00adde04",
+      "map_names": [
+        "rMeds.MedAdminHistory"
+      ]
+    },
+    {
+      "address": "00febee8",
+      "map_names": [
+        "fFrame.TfrmFrame.GetTimedOut"
+      ]
+    },
+    {
+      "address": "010048d0",
+      "map_names": [
+        "fFrame.TfrmFrame.GetCCOWDriveChange"
+      ]
+    },
+    {
+      "address": "01007fec",
+      "map_names": [
+        "fRptBox.ReportBox"
+      ]
+    },
+    {
+      "address": "01181714",
+      "map_names": [
+        "fOrders.TfrmOrders.NoneSelected"
+      ]
+    },
+    {
+      "address": "011dabac",
+      "map_names": [
+        "rOrders.getDetailOrder"
+      ]
+    },
+    {
+      "address": "011db5e4",
+      "map_names": [
+        "rOrders.CheckOrderGroup"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "0117cf94",
+      "file_offset": 14140308,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 77,
+      "text": "No orders are highlighted.  Highlight the orders\r\nyou wish to take action on."
+    },
+    {
+      "address": "0117d03c",
+      "file_offset": 14140476,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 27,
+      "text": "Retrieving order details..."
+    },
+    {
+      "address": "0117d080",
+      "file_offset": 14140544,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 48,
+      "text": "Detail view is not available for selected order."
+    },
+    {
+      "address": "0117d0f0",
+      "file_offset": 14140656,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 10,
+      "text": "Inpt. Meds"
+    },
+    {
+      "address": "0117d114",
+      "file_offset": 14140692,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "Out. Meds"
+    },
+    {
+      "address": "0117d134",
+      "file_offset": 14140724,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 16,
+      "text": "Clinic Infusions"
+    },
+    {
+      "address": "0117d164",
+      "file_offset": 14140772,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 18,
+      "text": "Clinic Medications"
+    },
+    {
+      "address": "0117d198",
+      "file_offset": 14140824,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 8,
+      "text": "Infusion"
+    },
+    {
+      "address": "0117d1b8",
+      "file_offset": 14140856,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 7,
+      "text": "PICK UP"
+    },
+    {
+      "address": "0117d1d4",
+      "file_offset": 14140884,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 16,
+      "text": "Order Details - "
+    }
+  ]
+}

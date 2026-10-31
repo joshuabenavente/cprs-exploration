@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-10-31T18:45:39.908550+00:00",
+  "scope": "Milestone 5: focused Orders workflow evidence and a mock-only read-only list/detail browser",
+  "passed": true,
+  "checkpoint": "Bounded synthetic implementation; new Orders spoken-output check recorded separately",
+  "branch": "work/milestone-5-orders",
+  "executable_sha256": "a4ed84cecd9c73159f95a9f3e6dbfd210d8c4566307f638c4fa678768747b26b",
+  "static": {
+    "receipt": "validation/milestone-5/static.json",
+    "map_names": 24,
+    "function_addresses": 26,
+    "decoded_forms": 2,
+    "automatic_analysis": false,
+    "original_executable_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "evidence_files": 85,
+    "staged_evidence_byte_hashes_verified": true
+  },
+  "automated": {
+    "receipt": "validation/milestone-5/automated.json",
+    "workflow_tests": 55,
+    "new_orders_cases": 15,
+    "prior_regressions": 40,
+    "format_clippy_build_callbacks": "passed; locked/offline"
+  },
+  "native": {
+    "receipt": "validation/milestone-5/native-ui.json",
+    "samples": [
+      {
+        "application_scale": 1,
+        "logical_client": [
+          1180,
+          800
+        ]
+      },
+      {
+        "application_scale": 2,
+        "logical_client": [
+          980,
+          680
+        ]
+      }
+    ],
+    "windows_monitor_dpi_changed": false,
+    "orders_spoken_output": "unverified pending user listening result"
+  },
+  "review": "Local code/evidence self-review; no independent reviewer or original-client runtime parity claimed",
+  "safe_boundary": {
+    "compiled_invented_records_only": true,
+    "network_transport": false,
+    "clinical_data_import": false,
+    "order_entry_modification_discontinuation_signing_printing": false,
+    "original_cprs_process_executed": false,
+    "analysis_loaded_by_runtime": false
+  },
+  "limits": [
+    "New Orders Narrator listening results remain separate from the prior Notes pass; full assistive-technology conformance and physical IME/dead keys are unverified.",
+    "Immediate UIA state/focus snapshots can lag input; settled screenshots, caret/selection, and native keyboard behavior were checked separately.",
+    "Table scrollbar dragging worked at minimum width; horizontal-wheel movement was not demonstrated. Intermediate application scales and Windows monitor DPI changes were not tested.",
+    "Original-client runtime, complete display-group/view/status semantics, RPC contracts/permissions/site behavior, and clinical compatibility are not established."
+  ]
+}

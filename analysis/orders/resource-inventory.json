@@ -1,0 +1,33 @@
+{
+  "scope": "Static Orders forms; inherited defaults and runtime behavior remain separate",
+  "executable_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+  "resources": [
+    {
+      "path": [
+        10,
+        "TFRMORDERS",
+        0
+      ],
+      "rva": 17493024,
+      "size": 12083,
+      "file_offset": 17426976,
+      "codepage": 0,
+      "sha256": "9f8b975da003004c2756b331842c276821b5c2927df3bdc0c0ef212581471e47",
+      "decoded": "analysis/orders/resources/TFRMORDERS.dfm.json"
+    },
+    {
+      "path": [
+        10,
+        "TFRMORDERVIEW",
+        0
+      ],
+      "rva": 17519848,
+      "size": 4095,
+      "file_offset": 17453800,
+      "codepage": 0,
+      "sha256": "ef02eb368873218b6bd178634500017df03596943bb8e9fc67fda37ac50f1ebe",
+      "decoded": "analysis/orders/resources/TFRMORDERVIEW.dfm.json"
+    }
+  ],
+  "not_found": []
+}

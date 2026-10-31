@@ -1,0 +1,36 @@
+{
+  "function": "rOrders.RetrieveOrderFields",
+  "address": "011ddc0c",
+  "status": "decompiled",
+  "file": "rOrders.RetrieveOrderFields_011ddc0c.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "004d2ff0",
+      "map_names": [
+        "System.Classes.TList.Get"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011de0d8",
+      "file_offset": 14537944,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "ORWORR GET4LST"
+    }
+  ]
+}

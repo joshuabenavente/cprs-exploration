@@ -1,0 +1,61 @@
+{
+  "scope": "Mock Orders visual and keyboard observations; no original-client execution",
+  "executable_sha256": "a4ed84cecd9c73159f95a9f3e6dbfd210d8c4566307f638c4fa678768747b26b",
+  "scale_method": "Process-local application scale only; no Windows display-setting changes",
+  "samples": [
+    {
+      "scale": 1,
+      "logical_client": [
+        1180,
+        800
+      ],
+      "capture_pixels": [
+        1182,
+        832
+      ]
+    },
+    {
+      "scale": 2,
+      "logical_client": [
+        980,
+        680
+      ],
+      "capture_pixels": [
+        1962,
+        1392
+      ]
+    }
+  ],
+  "observations": [
+    "Native app launch and patient double-click committed CARTER, JAMIE / SYNTH-001. Existing Cover Sheet panels and their lower actions remained inside their cards.",
+    "Orders displayed six headers and separate text, mock-status, and scenario inputs. Enter from the focused filter followed by Down selected ORDER-01 without retrieving detail; the body stayed empty and prompted explicit activation.",
+    "Enter explicitly requested ORDER-01 detail, focused the read-only pane, and scrolled lower actions into view while patient header/navigation/status stayed fixed.",
+    "Escape cleared detail and retained ORDER-01 selection. Down selected the other Training request Alpha as ORDER-02 / Mock pending, with no automatic detail retrieval.",
+    "Native double-click on the visible Unicode row opened SYNTH-001 / ORDER-03. Ctrl+A selected all 14270 exposed characters, scrolled to training section 80 and END OF INVENTED ORDER DETAIL, and a normal x key changed neither document text nor selection.",
+    "Ctrl+F restored the Orders filter/top viewport. After choosing Mock pending, the immediate UIA capture still exposed the old filter/document; a fresh capture confirmed one pending row, no selection, and no document. No exact input-to-paint timing is claimed.",
+    "With Mock pending selected, setting the text filter to 李 produced the explicit successful no-match message, no selected order, and an empty read-only detail control. Unicode input here used accessibility value replacement, not physical IME composition.",
+    "With query Alpha and Mock pending, choosing Detail unavailable retained a one-row list and cleared selection/detail. A fresh capture confirmed the scenario before native activation.",
+    "Native double-click requested SYNTH-001 / ORDER-02 detail under Detail unavailable. The settled pane showed an explicit unavailable message, an empty read-only detail control, and Retry mock order detail. Retry returned to retrieving for the same patient/order, retaining the mock failure scenario.",
+    "Switching to List unavailable cleared the selected order and detail and showed Mock order list unavailable. This is not an empty result. Tab navigation revealed the lower Retry mock order list control; retry returned to list loading with query Alpha / Mock pending retained.",
+    "After the Orders list-error/retry check, switching to Notes still loaded SYNTH-001 / NOTE-01 through Enter, Down, Enter. Its read-only pane and Read selected note action remained visible through workspace scrolling; the previous Orders error did not replace Notes status.",
+    "At 200% minimum logical size 980x680, Orders filter, mock-status selector, scenario selector, and list were usable. Enter, Down selected ORDER-01 without fetching detail; Enter explicitly requested it and focus scrolling exposed the complete detail pane plus View order detail and Close detail controls. Patient header/navigation/status stayed fixed. Location initially required horizontal table scrolling.",
+    "A settled 200% capture showed SYNTH-001 / ORDER-01 in the read-only body with the loaded status. Dragging the table horizontal scrollbar exposed the full Location values; the earlier horizontal-wheel attempt did not visibly shift the table and is not claimed as passing.",
+    "At 200%, Escape closed ORDER-01 and retained selection. Three Down keys selected ORDER-04 without retrieving intermediate details. Enter retrieved it successfully; settled status explicitly said This invented order has an empty detail response., and the read-only control had no value. This was distinct from the earlier unavailable-detail error.",
+    "At 200%, Ctrl+O from Orders detail opened patient selection with SYNTH-001 still the current chart. Escape returned to Orders, started a fresh list, and displayed no selected order; the old detail was not restored.",
+    "At 200%, patient selection searched exact SYNTH-002 while the committed header remained SYNTH-001. Native double-click committed NGUYEN, RILEY / SYNTH-002 and reset to Cover Sheet; opening Orders began a new unselected list for that patient.",
+    "Settled Orders for SYNTH-002 explicitly displayed No invented orders match this view. This is not a clinical finding., with no selected order and an empty read-only detail control; no SYNTH-001 order body was restored."
+  ],
+  "uia_limits": [
+    "Some immediate focus snapshots continued to name the filter while native list selection or text caret/selection demonstrated actual focus. This is not a full accessibility conformance result.",
+    "An immediate capture after native popup selection retained the previous filter and document; later screenshot/UIA state confirmed the transition. Reobserve before judging event completion.",
+    "Minimum-size startup exposed a 16x16 related surface as the first capture; coordinate actions used the full 1962x1392 mock-window screenshot ID after activation."
+  ],
+  "spoken_output": {
+    "status": "unverified for new Orders controls",
+    "historical": "The user passed the Milestone 4 Notes Narrator checklist; that result is not carried forward as an Orders pass."
+  },
+  "limits": [
+    "Physical IME/dead-key input, original-client runtime equivalence, server/site behavior, and clinical compatibility are unverified."
+  ],
+  "native_smoke_completed": true
+}

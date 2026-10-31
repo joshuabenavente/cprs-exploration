@@ -1,0 +1,120 @@
+{
+  "function": "fOrders.TfrmOrders.GetOrderText",
+  "address": "0117ea50",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.GetOrderText_0117ea50.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040c134",
+      "map_names": [
+        "System.@UStrCat"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0042c5fc",
+      "map_names": [
+        "System.SysUtils.Trim"
+      ]
+    },
+    {
+      "address": "0042ef18",
+      "map_names": [
+        "System.SysUtils.Format"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "007b1014",
+      "map_names": [
+        "ORCtrls.TORListBox.GetMItems"
+      ]
+    },
+    {
+      "address": "009b2a68",
+      "map_names": [
+        "ORFn.MixedCase"
+      ]
+    },
+    {
+      "address": "011dad98",
+      "map_names": [
+        "rOrders.NameOfStatus"
+      ]
+    },
+    {
+      "address": "011dd930",
+      "map_names": [
+        "rOrders.LoadFlagReasons"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "0117ed88",
+      "file_offset": 14147976,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 26,
+      "text": "C;0^Unified Action Profile"
+    },
+    {
+      "address": "0117edcc",
+      "file_offset": 14148044,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "%s\r\n%s"
+    },
+    {
+      "address": "0117ede8",
+      "file_offset": 14148072,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 11,
+      "text": "  *Flagged*"
+    },
+    {
+      "address": "0117ee0c",
+      "file_offset": 14148108,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": ","
+    }
+  ]
+}

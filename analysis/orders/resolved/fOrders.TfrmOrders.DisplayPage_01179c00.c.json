@@ -1,0 +1,99 @@
+{
+  "function": "fOrders.TfrmOrders.DisplayPage",
+  "address": "01179c00",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.DisplayPage_01179c00.c",
+  "numeric_callee_references": [
+    {
+      "address": "00709128",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetEnabled"
+      ]
+    },
+    {
+      "address": "007091fc",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.GetCount"
+      ]
+    },
+    {
+      "address": "0070920c",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.GetItem"
+      ]
+    },
+    {
+      "address": "00709244",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetVisible"
+      ]
+    },
+    {
+      "address": "007b1014",
+      "map_names": [
+        "ORCtrls.TORListBox.GetMItems"
+      ]
+    },
+    {
+      "address": "009a9728",
+      "map_names": [
+        "UResponsiveGUI.TResponsiveGUI.ProcessMessages"
+      ]
+    },
+    {
+      "address": "00ffdcd8",
+      "map_names": [
+        "fFrame.TfrmFrame.ShowHideChartTabMenus"
+      ]
+    },
+    {
+      "address": "0117adbc",
+      "map_names": [
+        "fOrders.TfrmOrders.RedrawOrderList"
+      ]
+    },
+    {
+      "address": "0117c3e0",
+      "map_names": [
+        "fOrders.TfrmOrders.mnuViewDfltShowClick"
+      ]
+    },
+    {
+      "address": "0117d870",
+      "map_names": [
+        "fOrders.TfrmOrders.InitOrderSheets"
+      ]
+    },
+    {
+      "address": "01185e1c",
+      "map_names": [
+        "fOrders.TfrmOrders.ProcessNotifications"
+      ]
+    },
+    {
+      "address": "011e0340",
+      "map_names": [
+        "rOrders.LoadWriteOrders"
+      ]
+    },
+    {
+      "address": "012034e8",
+      "map_names": [
+        "fPage.TfrmPage.DisplayPage"
+      ]
+    },
+    {
+      "address": "012035ec",
+      "map_names": [
+        "fPage.TfrmPage.GetInitPage"
+      ]
+    },
+    {
+      "address": "0120360c",
+      "map_names": [
+        "fPage.TfrmPage.GetInitPatient"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

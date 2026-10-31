@@ -1,0 +1,60 @@
+{
+  "function": "rOrders.LoadOrdersAbbr",
+  "address": "011dcb68",
+  "status": "decompiled",
+  "file": "rOrders.LoadOrdersAbbr_011dcb68.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040908c",
+      "map_names": [
+        "System.TObject.Create"
+      ]
+    },
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "011dad28",
+      "map_names": [
+        "rOrders.LoadDGroupMap"
+      ]
+    },
+    {
+      "address": "011dbf3c",
+      "map_names": [
+        "rOrders.ConvertOrders"
+      ]
+    },
+    {
+      "address": "011dc258",
+      "map_names": [
+        "rOrders.RefreshOrders"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "011dcc98",
+      "file_offset": 14532760,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 19,
+      "text": "ORB FOLLOW-UP ARRAY"
+    }
+  ]
+}

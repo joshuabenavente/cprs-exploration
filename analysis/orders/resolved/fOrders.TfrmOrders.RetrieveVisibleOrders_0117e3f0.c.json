@@ -1,0 +1,39 @@
+{
+  "function": "fOrders.TfrmOrders.RetrieveVisibleOrders",
+  "address": "0117e3f0",
+  "status": "decompiled",
+  "file": "fOrders.TfrmOrders.RetrieveVisibleOrders_0117e3f0.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040908c",
+      "map_names": [
+        "System.TObject.Create"
+      ]
+    },
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "004d2e10",
+      "map_names": [
+        "System.Classes.TList.Add"
+      ]
+    },
+    {
+      "address": "004d2ff0",
+      "map_names": [
+        "System.Classes.TList.Get"
+      ]
+    },
+    {
+      "address": "011ddc0c",
+      "map_names": [
+        "rOrders.RetrieveOrderFields"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}
