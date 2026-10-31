@@ -1,0 +1,108 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail",
+  "address": "00be279c",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail_00be279c.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0042ef18",
+      "map_names": [
+        "System.SysUtils.Format"
+      ]
+    },
+    {
+      "address": "00432550",
+      "map_names": [
+        "System.SysUtils.FormatDateTime"
+      ]
+    },
+    {
+      "address": "009b0e14",
+      "map_names": [
+        "ORFn.FMDateTimeToDateTime"
+      ]
+    },
+    {
+      "address": "00bcfa8c",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPieceAsDouble"
+      ]
+    },
+    {
+      "address": "00bcfe80",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPieceAsString"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00be2998",
+      "file_offset": 8265112,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 16,
+      "text": "Vital .........."
+    },
+    {
+      "address": "00be29c8",
+      "file_offset": 8265160,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "%s %s"
+    },
+    {
+      "address": "00be29e0",
+      "file_offset": 8265184,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 16,
+      "text": "Date/Time ......"
+    },
+    {
+      "address": "00be2a10",
+      "file_offset": 8265232,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 18,
+      "text": "MMM DD, YYYY@hh:mm"
+    },
+    {
+      "address": "00be2a44",
+      "file_offset": 8265284,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 16,
+      "text": "Value .........."
+    },
+    {
+      "address": "00be2a74",
+      "file_offset": 8265332,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 16,
+      "text": "Conv. Value ...."
+    },
+    {
+      "address": "00be2aa4",
+      "file_offset": 8265380,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 16,
+      "text": "Qualifiers ....."
+    }
+  ]
+}

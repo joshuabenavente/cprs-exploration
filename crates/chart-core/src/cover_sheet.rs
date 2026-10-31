@@ -1,4 +1,4 @@
-//! Two synthetic panels shaped by recovered Cover Sheet controls, never RPC data.
+//! Synthetic panels shaped by recovered Cover Sheet controls, never RPC data.
 use crate::{PatientId, PatientSummary, ProviderError};
 use std::collections::HashSet;
 
@@ -6,13 +6,16 @@ use std::collections::HashSet;
 pub enum PanelKind {
     ProblemList,
     Allergies,
+    Vitals,
 }
 
 impl PanelKind {
+    pub const ALL: [Self; 3] = [Self::ProblemList, Self::Allergies, Self::Vitals];
     pub fn title(self) -> &'static str {
         match self {
             Self::ProblemList => "Problem List",
             Self::Allergies => "Allergies",
+            Self::Vitals => "Vitals",
         }
     }
 }
@@ -24,6 +27,15 @@ pub struct CoverItem {
     pub label: String,
     pub severity: String,
     pub symptoms: String,
+    pub vital: Option<VitalDisplay>,
+}
+
+/// Authored display strings. Never parsed, converted, ranked or interpreted.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct VitalDisplay {
+    pub value: String,
+    pub taken: String,
+    pub qualifiers: String,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -31,6 +43,7 @@ pub struct CoverSheet {
     pub patient_id: PatientId,
     pub problems: Vec<CoverItem>,
     pub allergies: Vec<CoverItem>,
+    pub vitals: Vec<CoverItem>,
 }
 
 impl CoverSheet {
@@ -38,22 +51,22 @@ impl CoverSheet {
         match panel {
             PanelKind::ProblemList => &self.problems,
             PanelKind::Allergies => &self.allergies,
+            PanelKind::Vitals => &self.vitals,
         }
     }
 
     pub fn matches_patient(&self, patient: &PatientId) -> bool {
         &self.patient_id == patient
-            && [PanelKind::ProblemList, PanelKind::Allergies]
-                .into_iter()
-                .all(|kind| {
-                    let mut ids = HashSet::new();
-                    self.items(kind).iter().all(|item| {
-                        &item.patient_id == patient
-                            && !item.id.is_empty()
-                            && !item.label.is_empty()
-                            && ids.insert(&item.id)
-                    })
+            && PanelKind::ALL.into_iter().all(|kind| {
+                let mut ids = HashSet::new();
+                self.items(kind).iter().all(|item| {
+                    &item.patient_id == patient
+                        && !item.id.is_empty()
+                        && !item.label.is_empty()
+                        && (kind == PanelKind::Vitals) == item.vital.is_some()
+                        && ids.insert(&item.id)
                 })
+            })
     }
 }
 
@@ -111,6 +124,7 @@ pub(crate) fn mock_cover_sheet(patient: &PatientSummary) -> CoverSheet {
         label,
         severity: severity.into(),
         symptoms: symptoms.into(),
+        vital: None,
     };
     let problems = if suffix == "SYNTH-007" {
         vec![]
@@ -148,10 +162,49 @@ pub(crate) fn mock_cover_sheet(patient: &PatientSummary) -> CoverSheet {
             ),
         ]
     };
+    let vitals = if suffix == "SYNTH-002" {
+        vec![]
+    } else {
+        [
+            (
+                "VITAL-01",
+                "Temperature",
+                "36.8 °C",
+                "Oct 25, 2026@09:15",
+                "Training oral",
+            ),
+            (
+                "VITAL-02",
+                "Pulse",
+                "72 /min",
+                "Oct 25, 2026@09:14",
+                "Training seated",
+            ),
+            (
+                "VITAL-03",
+                "Blood pressure",
+                "118/76 mmHg",
+                "Oct 24, 2026@16:40",
+                "Training left arm · Zoë 李",
+            ),
+        ]
+        .into_iter()
+        .map(|(id, label, value, taken, qualifiers)| {
+            let mut row = item(id, label.into(), "", "");
+            row.vital = Some(VitalDisplay {
+                value: value.into(),
+                taken: taken.into(),
+                qualifiers: qualifiers.into(),
+            });
+            row
+        })
+        .collect()
+    };
     CoverSheet {
         patient_id: patient.id.clone(),
         problems,
         allergies,
+        vitals,
     }
 }
 
@@ -169,7 +222,12 @@ pub(crate) fn mock_detail(
         .find(|i| i.id == request.item_id)
         .ok_or(ProviderError::NotFound)?;
     let title = format!("{} Item Detail: {}", request.panel.title(), item.label);
-    let attributes = if request.panel == PanelKind::Allergies {
+    let attributes = if let Some(vital) = &item.vital {
+        format!(
+            "\nVital .......... {}\nDate/Time ...... {}\nValue .......... {}\nQualifiers ..... {}\n\nAuthored read-only display; conversion and original Vitals actions are omitted.",
+            item.label, vital.taken, vital.value, vital.qualifiers
+        )
+    } else if request.panel == PanelKind::Allergies {
         format!(
             "\nSeverity: {}\nSigns/Symptoms: {}",
             item.severity, item.symptoms
@@ -178,7 +236,7 @@ pub(crate) fn mock_detail(
         String::new()
     };
     let body = format!(
-        "MOCK ONLY — INVENTED TRAINING RECORD\n\nPatient: {}\nSynthetic ID: {}\nPanel: {}\nItem ID: {}\n\n{}\n\nThis entry exists only to demonstrate selection, detail loading, and patient-switch clearing.\nIt does not describe a real condition or allergy. No clinical interpretation is available.",
+        "MOCK ONLY — INVENTED TRAINING RECORD\n\nPatient: {}\nSynthetic ID: {}\nPanel: {}\nItem ID: {}\n\n{}\n\nThis entry exists only to demonstrate selection, detail loading, and patient-switch clearing.\nIt does not describe a real patient record. No clinical interpretation is available.",
         patient.name,
         patient.id,
         request.panel.title(),

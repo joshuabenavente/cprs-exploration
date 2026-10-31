@@ -2,7 +2,7 @@
 
 ## Scope
 
-Milestone 7 validates the existing synthetic patient selector, Cover Sheet, Notes, Orders, and Results as one application. It adds no clinical features, transport, imports, authentication, order entry/signing, interpretation, printing, or original-client execution. Static workflow evidence remains the historical, hash-pinned evidence from milestones 1–6. No new original-binary behavior is claimed.
+Milestone 8 extends validation of the synthetic patient selector, Cover Sheet, Notes, Orders, and Results as one application. It adds no clinical features, transport, imports, authentication, order entry/signing, interpretation, printing, or original-client execution. Historical static evidence from milestones 1–6 remains unchanged. Milestone 8 adds the focused, hash-pinned Vitals evidence and documents its intentional read-only departure in `vitals.md`.
 
 The opt-in `--integration-check` runs the normal desktop callbacks with `immediate=false`, the compiled mock provider, and the Slint winit/software event loop. List/search/chart/detail timers retain their normal delays, including the slower scenarios. Each actual delivery records operation, synthetic owner/key, generation, and the core's accepted/rejected decision. Normal launches do not collect this audit.
 
@@ -16,6 +16,7 @@ At each poll, exposed browser text and core rows must belong to the committed sy
 | --- | --- |
 | Duplicate patient search | Fast MORGAN reply wins over slow M; both MORGAN synthetic IDs remain distinguishable; only explicit confirmation commits SYNTH-004. |
 | Cover Sheet | Closing an in-flight detail invalidates it; the next panel detail belongs to the current patient and initially focuses the read-only reading pane. |
+| Vitals | Selection is explicit; closed requests are rejected, the close callback retains the Vitals row, failed detail retries use real timers, a late failure cannot reopen another tab, selector cancellation clears transient state, repeated item IDs stay scoped to the new patient, and empty Vitals is successful. |
 | Notes | Automatic selection loads text; a late NOTE-01 cannot replace NOTE-02. A pending old-patient note is rejected after a different MORGAN commits; the same note ID under the new patient loads only that owner's text. |
 | Cross-tab lists | Both the ordinary and slower Orders list replies must be rejected after moving to Results. No inactive list or text bindings may reappear. |
 | Results | Selection alone does not load text. Explicit opening requests it; late REPORT-01 cannot replace REPORT-02 or steal focus from the filter. Close invalidates in-flight text and retains selection. Empty REPORT-04 is successful. Filtering invalidates pending text. |
@@ -23,7 +24,7 @@ At each poll, exposed browser text and core rows must belong to the committed sy
 | Patient cancellation | Canceling while an order is pending preserves the committed patient/tab, reloads an unselected list, clears old text, and returns focus to the Orders filter. Results cancellation likewise returns to its filter. |
 | Access decisions | Acknowledgment is required before PATEL commits; decline preserves the current chart. RIVERA denial leaves the previous chart committed. |
 | Empty patient | SYNTH-002 successfully has empty Notes, Orders, and Results without carrying prior text or marking the lists unavailable. |
-| Review checkpoint | Return to SYNTH-001 and open the long Unicode REPORT-03 in Results. |
+| Review checkpoint | Return to SYNTH-001, verify long Unicode REPORT-03, then verify and close VITAL-03 in Cover Sheet, leaving its row selected after the focus-return callback. |
 
 ## Keyboard and accessibility contract
 
@@ -41,6 +42,12 @@ Notes' automatic loading and Orders/Results' explicit activation remain intentio
 
 ## Layout and listening acceptance
 
-Inspect default and minimum windows at 125%, 150%, and 175% process-local application scale. Record requested sizing, actual client pixels/scale from the review run, and full-window capture dimensions. Confirm the reading pane and lower actions remain inside their card and are reachable by scrolling/focus, with fixed patient header/navigation/status. These samples do not establish Windows monitor-DPI transition behavior.
+Inspect default and minimum windows at every supported process-local application scale: 100%, 125%, 150%, 175% and 200%. Record requested sizing, actual client pixels/scale from the review run, and full-window capture dimensions. Confirm the reading pane and lower actions remain inside their card and are reachable by scrolling/focus, with fixed patient header/navigation/status. These samples do not establish Windows monitor-DPI transition behavior.
 
-Use native keyboard checks for Ctrl+F/Ctrl+O/Enter/Escape, explicit versus automatic loading, selection retention, and Cover Sheet detail focus. Reobserve after asynchronous input before judging completion; immediate UIA focus/document state can lag. The combined Narrator checklist must be recorded separately from historical Notes/Orders/Results passes. Full assistive-technology conformance and physical IME/dead-key composition remain unverified unless separately demonstrated.
+Use native keyboard checks for Ctrl+F/Ctrl+O/Enter/Escape, explicit versus automatic loading, selection retention, and Cover Sheet detail focus. Reobserve after asynchronous input before judging completion; immediate UIA focus/document state can lag. The affected Vitals controls require a separate user listening check; the combined Milestone 7 Narrator result remains historical. Full assistive-technology conformance and physical IME/dead-key composition remain unverified unless separately demonstrated.
+
+Current protocol is `M8_CHECK` / `M8_DELIVERY` / `M8_WINDOW` / `M8_INTEGRATED_PASS`, with 51 required checkpoints verified by `verify_integrated.py`. `Test-MockChart.ps1` accepts only Milestone 8 to prevent writing current-binary logs into historical milestone paths. All new receipts/logs live in `validation/milestone-8/`.
+
+Cover Sheet table return is verified natively, because the bundled Fluent table public `has-focus` does not reflect its internal keyboard scope. The automated `keyboard-focus` probe reports Cover Sheet actions generically after closing; it does not pretend to observe a table focus target. Read-only detail and browser filter probes remain separate.
+
+At the largest supported application scale (200%), the authored default window uses 1180x700 logical pixels; the ordinary 1180x800 default would extend below the reviewed 1440-pixel desktop. Other defaults remain 1180x800 and the minimum is 980x680. The compact default is a bounded policy for the reviewed setup, not a general monitor-fit or DPI-transition guarantee.

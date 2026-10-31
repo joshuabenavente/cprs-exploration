@@ -488,7 +488,7 @@ fn sync(app: &AppWindow, controller: &Controller) {
         NoteBodyState::Ready(body) => body.text.clone().into(),
         _ => "".into(),
     });
-    for panel in [PanelKind::ProblemList, PanelKind::Allergies] {
+    for panel in PanelKind::ALL {
         let rows = state
             .active
             .as_ref()
@@ -498,7 +498,14 @@ fn sync(app: &AppWindow, controller: &Controller) {
                     .items(panel)
                     .iter()
                     .map(|item| {
-                        if panel == PanelKind::Allergies {
+                        if let Some(vital) = &item.vital {
+                            vec![
+                                item.label.clone(),
+                                vital.value.clone(),
+                                vital.taken.clone(),
+                                vital.qualifiers.clone(),
+                            ]
+                        } else if panel == PanelKind::Allergies {
                             vec![
                                 item.label.clone(),
                                 item.severity.clone(),
@@ -511,23 +518,23 @@ fn sync(app: &AppWindow, controller: &Controller) {
                     .collect::<Vec<_>>()
             })
             .unwrap_or_default();
-        let current = if panel == PanelKind::ProblemList {
-            app.get_problem_rows()
-        } else {
-            app.get_allergy_rows()
+        let current = match panel {
+            PanelKind::ProblemList => app.get_problem_rows(),
+            PanelKind::Allergies => app.get_allergy_rows(),
+            PanelKind::Vitals => app.get_vital_rows(),
         };
         if let Some(model) = changed_rows(&current, rows) {
-            if panel == PanelKind::ProblemList {
-                app.set_problem_rows(model);
-            } else {
-                app.set_allergy_rows(model);
+            match panel {
+                PanelKind::ProblemList => app.set_problem_rows(model),
+                PanelKind::Allergies => app.set_allergy_rows(model),
+                PanelKind::Vitals => app.set_vital_rows(model),
             }
         }
         let index = state.selected_cover_index(panel).map_or(-1, |i| i as i32);
-        if panel == PanelKind::ProblemList {
-            app.set_selected_problem(index);
-        } else {
-            app.set_selected_allergy(index);
+        match panel {
+            PanelKind::ProblemList => app.set_selected_problem(index),
+            PanelKind::Allergies => app.set_selected_allergy(index),
+            PanelKind::Vitals => app.set_selected_vital(index),
         }
     }
     app.set_detail_open(state.detail.is_open());
@@ -588,14 +595,18 @@ fn changed_rows(
 }
 
 fn panel(index: i32) -> PanelKind {
-    if index == 1 {
-        PanelKind::Allergies
-    } else {
-        PanelKind::ProblemList
+    match index {
+        1 => PanelKind::Allergies,
+        2 => PanelKind::Vitals,
+        _ => PanelKind::ProblemList,
     }
 }
 fn panel_index(panel: PanelKind) -> i32 {
-    i32::from(panel == PanelKind::Allergies)
+    match panel {
+        PanelKind::ProblemList => 0,
+        PanelKind::Allergies => 1,
+        PanelKind::Vitals => 2,
+    }
 }
 
 fn open_detail(weak: slint::Weak<AppWindow>, shared: Shared, panel: PanelKind) {
@@ -1618,6 +1629,19 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_tab_index(), 0);
     assert_eq!(app.get_problem_rows().row_count(), 2);
     assert_eq!(app.get_allergy_rows().row_count(), 2);
+    assert_eq!(app.get_vital_rows().row_count(), 3);
+    app.invoke_cover_selected(2, 2);
+    assert!(!app.get_detail_open());
+    app.invoke_cover_activated(2);
+    assert!(app.get_detail_body().contains("SYNTH-001"));
+    assert!(app.get_detail_body().contains("VITAL-03"));
+    assert!(app.get_detail_body().contains("118/76 mmHg"));
+    assert!(app.get_detail_body().contains("Zoë 李"));
+    app.invoke_close_detail();
+    app.invoke_cover_released(2, 0);
+    app.invoke_cover_released(2, 0);
+    assert!(app.get_detail_body().contains("36.8 °C"));
+    app.invoke_close_detail();
     app.invoke_cover_selected(0, 1);
     app.invoke_cover_activated(0);
     assert!(app.get_detail_open());
@@ -1634,12 +1658,17 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_open_selection();
     assert_eq!(app.get_selected_problem(), -1);
     assert_eq!(app.get_selected_allergy(), -1);
+    assert_eq!(app.get_selected_vital(), -1);
     app.invoke_query_edited("NGUYEN".into());
     app.invoke_simulation_changed(5);
     app.invoke_row_selected(0);
     app.invoke_confirm_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-002");
     assert_eq!(app.get_allergy_rows().row_count(), 0);
+    assert_eq!(app.get_vital_rows().row_count(), 0);
+    app.invoke_cover_selected(2, 0);
+    app.invoke_cover_activated(2);
+    assert!(!app.get_detail_open());
     app.invoke_tab_changed(1);
     assert_eq!(app.get_notes_rows().row_count(), 0);
     assert!(app.get_notes_list_status().contains("No invented notes"));
@@ -1672,6 +1701,20 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_preview_name().as_str(), "ZÁRATE, ZOË 李");
     app.invoke_confirm_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
+    app.invoke_cover_selected(2, 0);
+    app.invoke_cover_activated(2);
+    assert!(app.get_detail_body().contains("ZÁRATE, ZOË 李"));
+    app.invoke_close_detail();
+    app.invoke_open_selection();
+    app.invoke_simulation_changed(5);
+    app.invoke_cancel_selection();
+    app.invoke_cover_selected(2, 0);
+    app.invoke_cover_activated(2);
+    assert!(app.get_detail_error());
+    app.invoke_retry_detail();
+    assert!(app.get_detail_error());
+    assert!(!app.get_detail_body().contains("36.8 °C"));
+    app.invoke_close_detail();
     assert!(shared.borrow().immediate);
     println!(
         "Mock UI callback smoke passed: patient selection, Cover Sheet, Notes, Results reports and Orders selection/detail/double-click/filter/status/close/error/retry, patient clearing, and Unicode fixture identity."
@@ -1704,6 +1747,16 @@ fn main() -> Result<(), Box<dyn Error>> {
     let app = AppWindow::new()?;
     if minimum_size {
         app.window().set_size(slint::LogicalSize::new(980.0, 680.0));
+    } else if std::env::var("SLINT_SCALE_FACTOR")
+        .ok()
+        .and_then(|value| value.parse::<f32>().ok())
+        .unwrap_or_else(|| app.window().scale_factor())
+        >= 2.0
+    {
+        // Authored compact default at the largest supported application scale:
+        // 800 logical pixels would exceed the reviewed 1440-pixel desktop.
+        app.window()
+            .set_size(slint::LogicalSize::new(1180.0, 700.0));
     }
     // Keep scale-override and reproducible review launches out of OS cascade offsets.
     if minimum_size || integrated || std::env::var_os("SLINT_SCALE_FACTOR").is_some() {

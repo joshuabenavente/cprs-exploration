@@ -109,6 +109,20 @@ fn visible_owners(a: &AppWindow, s: &Shared) -> Result<(), String> {
             }
         }
         require!(
+            chart.cover_sheet.matches_patient(&chart.patient.id),
+            "foreign Cover Sheet row"
+        );
+        require!(
+            a.get_vital_rows().row_count() == chart.cover_sheet.vitals.len(),
+            "Vitals binding row count mismatch"
+        );
+        if matches!(c.state.detail, DetailState::Ready { .. }) {
+            require!(
+                a.get_detail_body().contains(owner),
+                "Cover Sheet detail lacks current owner"
+            );
+        }
+        require!(
             c.state
                 .notes
                 .rows
@@ -154,6 +168,10 @@ fn visible_owners(a: &AppWindow, s: &Shared) -> Result<(), String> {
         );
     }
     if a.get_selector_open() {
+        require!(
+            a.get_selected_vital() == -1 && !a.get_detail_open() && a.get_detail_body().is_empty(),
+            "selector retained Vitals selection/detail"
+        );
         empty_text(a, s)?;
     }
     Ok(())
@@ -227,6 +245,114 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
+        "vitals-explicit-close-race",
+        |a, _| {
+            a.invoke_close_detail();
+            a.invoke_cover_selected(2, 0);
+            require!(!a.get_detail_open(), "Vitals selection opened detail");
+            a.invoke_cover_activated(2);
+            a.invoke_close_detail();
+            a.invoke_cover_selected(2, 2);
+            a.invoke_cover_activated(2);
+            Ok(())
+        },
+        |a, s, i| {
+            !a.get_detail_loading()
+                && seen(s, i, "cover-detail", "SYNTH-004", "VITAL-01", false)
+                && seen(s, i, "cover-detail", "SYNTH-004", "VITAL-03", true)
+        },
+        |a, _| {
+            require!(
+                a.get_detail_body().contains("118/76 mmHg")
+                    && a.get_detail_body().contains("Zoë 李"),
+                "Vitals display strings changed"
+            );
+            require!(
+                a.get_keyboard_focus() == "cover-detail",
+                "Vitals initial reading focus wrong"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "vitals-close-retains-row",
+        |a, _| {
+            a.invoke_close_detail();
+            Ok(())
+        },
+        |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
+        |a, _| {
+            require!(
+                a.get_selected_vital() == 2 && a.get_detail_body().is_empty(),
+                "Vitals close lost selection or retained text"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "vitals-error",
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::DetailUnavailable;
+            a.invoke_cover_activated(2);
+            Ok(())
+        },
+        |a, _, _| a.get_detail_error(),
+        |a, _| {
+            require!(
+                !a.get_detail_body().contains("118/76"),
+                "Vitals error retained old value"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "vitals-retry-real-timer",
+        |a, _| {
+            a.invoke_retry_detail();
+            Ok(())
+        },
+        |a, s, i| a.get_detail_error() && seen(s, i, "cover-detail", "SYNTH-004", "VITAL-03", true),
+        noop,
+    ));
+    q.push_back(Step::new(
+        "vitals-late-error-tab",
+        |a, _| {
+            a.invoke_retry_detail();
+            a.invoke_tab_changed(1);
+            Ok(())
+        },
+        |_, s, i| seen(s, i, "cover-detail", "SYNTH-004", "VITAL-03", false),
+        |a, s| {
+            require!(
+                !a.get_detail_open() && a.get_detail_body().is_empty(),
+                "late Vitals failure reopened detail"
+            );
+            owned(a, s, "SYNTH-004", ChartTab::Notes)
+        },
+    ));
+    q.push_back(Step::new(
+        "vitals-selector-cancel",
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::Normal;
+            a.invoke_tab_changed(0);
+            a.invoke_cover_selected(2, 0);
+            a.invoke_cover_activated(2);
+            a.invoke_open_selection();
+            a.invoke_cancel_selection();
+            Ok(())
+        },
+        |_, s, i| seen(s, i, "cover-detail", "SYNTH-004", "VITAL-01", false),
+        |a, s| {
+            require!(
+                a.get_selected_vital() == -1
+                    && !a.get_detail_open()
+                    && a.get_detail_body().is_empty(),
+                "Vitals survived selector cancel"
+            );
+            owned(a, s, "SYNTH-004", ChartTab::CoverSheet)
+        },
+    ));
+    q.push_back(Step::new(
         "notes-list-real-delay",
         |a, _| {
             a.invoke_close_detail();
@@ -297,6 +423,29 @@ fn journey() -> VecDeque<Step> {
         |a, s| {
             owned(a, s, "SYNTH-003", ChartTab::CoverSheet)?;
             empty_text(a, s)
+        },
+    ));
+    q.push_back(Step::new(
+        "vitals-same-id-new-owner",
+        |a, _| {
+            require!(
+                a.get_selected_vital() == -1,
+                "patient switch retained Vitals selection"
+            );
+            a.invoke_cover_selected(2, 0);
+            a.invoke_cover_activated(2);
+            Ok(())
+        },
+        |a, _, _| a.get_detail_open() && !a.get_detail_loading(),
+        |a, _| {
+            require!(
+                a.get_detail_body().contains("SYNTH-003")
+                    && a.get_detail_body().contains("VITAL-01")
+                    && !a.get_detail_body().contains("SYNTH-004"),
+                "same Vitals ID has old owner"
+            );
+            a.invoke_close_detail();
+            Ok(())
         },
     ));
     q.push_back(Step::new(
@@ -687,6 +836,25 @@ fn journey() -> VecDeque<Step> {
         |a, s| owned(a, s, "SYNTH-002", ChartTab::CoverSheet),
     ));
     q.push_back(Step::new(
+        "empty-vitals",
+        |a, _| {
+            a.invoke_cover_selected(2, 0);
+            a.invoke_cover_activated(2);
+            Ok(())
+        },
+        now,
+        |a, _| {
+            require!(
+                a.get_vital_rows().row_count() == 0
+                    && a.get_selected_vital() == -1
+                    && !a.get_detail_open()
+                    && !a.get_detail_error(),
+                "empty Vitals treated as failure or retained content"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
         "empty-notes",
         |a, _| {
             a.invoke_tab_changed(1);
@@ -797,6 +965,32 @@ fn journey() -> VecDeque<Step> {
             Ok(())
         },
     ));
+    q.push_back(Step::new(
+        "review-vitals-layout",
+        |a, _| {
+            a.invoke_close_report_detail();
+            a.invoke_tab_changed(0);
+            a.invoke_cover_selected(2, 2);
+            a.invoke_cover_activated(2);
+            Ok(())
+        },
+        |a, _, _| a.get_detail_open() && !a.get_detail_loading(),
+        |a, s| {
+            owned(a, s, "SYNTH-001", ChartTab::CoverSheet)?;
+            require!(
+                a.get_detail_body().contains("VITAL-03"),
+                "review Vitals detail missing"
+            );
+            a.invoke_close_detail();
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "review-vitals-closed",
+        noop,
+        |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
+        noop,
+    ));
     q
 }
 
@@ -825,12 +1019,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M7_DELIVERY {} {} {:?} generation={} applied={}",
+                "M8_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M7_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M8_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -839,17 +1033,17 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M7_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M8_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
             );
         }
         if driver.keep_open {
-            println!("M7_REVIEW_READY SYNTH-001 Results REPORT-03; close the mock to exit.");
+            println!("M8_REVIEW_READY SYNTH-001 CoverSheet VITAL-03; close the mock to exit.");
         }
     } else if let Err(error) = &result {
-        eprintln!("M7_INTEGRATED_FAIL {error}");
+        eprintln!("M8_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -900,7 +1094,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M7_CHECK {} PASS elapsed_ms={}",
+            "M8_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );
@@ -909,8 +1103,9 @@ fn tick(d: Rc<RefCell<Driver>>) {
         finish(
             &d,
             Err(format!(
-                "{}: timeout waiting for real deliveries/UI bindings",
-                running.step.name
+                "{}: timeout waiting for real deliveries/UI bindings (focus={})",
+                running.step.name,
+                app.get_keyboard_focus()
             )),
         );
         return;

@@ -1,0 +1,531 @@
+[
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView",
+    "address": "00bd35d0",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "numeric_callee_references": [
+      {
+        "address": "0067cfe0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.Clear"
+        ]
+      },
+      {
+        "address": "0067d074",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.BeginUpdate"
+        ]
+      },
+      {
+        "address": "0067d264",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.EndUpdate"
+        ]
+      },
+      {
+        "address": "009fc628",
+        "map_names": [
+          "VA508AccessibilityManager.TVA508AccessibilityManager.SetComponentManager"
+        ]
+      },
+      {
+        "address": "009fc648",
+        "map_names": [
+          "VA508AccessibilityManager.TVA508AccessibilityManager.SetUseDefault"
+        ]
+      },
+      {
+        "address": "00a01f1c",
+        "map_names": [
+          "U508Extensions.FindControl508Manager"
+        ]
+      },
+      {
+        "address": "00a02048",
+        "map_names": [
+          "U508Extensions.Tlv508Manager.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData",
+    "address": "00bd3688",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail",
+    "address": "00bd41b4",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "numeric_callee_references": [
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "0067cb00",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.GetIndex"
+        ]
+      },
+      {
+        "address": "00bcf93c",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPiece"
+        ]
+      },
+      {
+        "address": "00bd40a4",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataEnter"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bd4354",
+        "file_offset": 8206164,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": " Item Detail: "
+      }
+    ]
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create",
+    "address": "00be2090",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create_00be2090.c",
+    "numeric_callee_references": [
+      {
+        "address": "004096ac",
+        "map_names": [
+          "System.@ClassCreate"
+        ]
+      },
+      {
+        "address": "00409704",
+        "map_names": [
+          "System.@AfterConstruction"
+        ]
+      },
+      {
+        "address": "00bd36a0",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+        ]
+      },
+      {
+        "address": "00bd3894",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.AddColumn"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00be2120",
+        "file_offset": 8262944,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 5,
+        "text": "Vital"
+      },
+      {
+        "address": "00be2138",
+        "file_offset": 8262968,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 5,
+        "text": "Value"
+      },
+      {
+        "address": "00be2150",
+        "file_offset": 8262992,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 10,
+        "text": "Date Taken"
+      },
+      {
+        "address": "00be2174",
+        "file_offset": 8263028,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 5,
+        "text": "Quals"
+      }
+    ]
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail",
+    "address": "00be22f4",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail_00be22f4.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals",
+    "address": "00be2334",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals_00be2334.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040d1c4",
+        "map_names": [
+          "System.@FinalizeArray"
+        ]
+      },
+      {
+        "address": "00682964",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.GetSelected"
+        ]
+      },
+      {
+        "address": "00ae6cb0",
+        "map_names": [
+          "uVitals.ViewPatientVitals"
+        ]
+      },
+      {
+        "address": "00bf0108",
+        "map_names": [
+          "iCoverSheetIntf.CoverSheet"
+        ]
+      },
+      {
+        "address": "01011c80",
+        "map_names": [
+          "uWriteAccess.WriteAccess"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnAddItems",
+    "address": "00be2474",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnAddItems_00be2474.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040a734",
+        "map_names": [
+          "System.@TryFinallyExit"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0042c5fc",
+        "map_names": [
+          "System.SysUtils.Trim"
+        ]
+      },
+      {
+        "address": "00432550",
+        "map_names": [
+          "System.SysUtils.FormatDateTime"
+        ]
+      },
+      {
+        "address": "004d5460",
+        "map_names": [
+          "System.Classes.TStringsEnumerator.Create"
+        ]
+      },
+      {
+        "address": "004d54a4",
+        "map_names": [
+          "System.Classes.TStringsEnumerator.GetCurrent"
+        ]
+      },
+      {
+        "address": "0067c4d8",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.SetCaption"
+        ]
+      },
+      {
+        "address": "0067c5e0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.SetData"
+        ]
+      },
+      {
+        "address": "0067cde0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.Add"
+        ]
+      },
+      {
+        "address": "0067ce80",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.GetCount"
+        ]
+      },
+      {
+        "address": "0067d074",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.BeginUpdate"
+        ]
+      },
+      {
+        "address": "00bcf770",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.Create"
+        ]
+      },
+      {
+        "address": "00bcf93c",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPiece"
+        ]
+      },
+      {
+        "address": "00bcfee8",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPieceAsTDateTime"
+        ]
+      },
+      {
+        "address": "00bd0bd4",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPieceIsNull"
+        ]
+      },
+      {
+        "address": "00bd36a0",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00be2734",
+        "file_offset": 8264500,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 17,
+        "text": "^No Vitals Found."
+      },
+      {
+        "address": "00be2764",
+        "file_offset": 8264548,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": " "
+      },
+      {
+        "address": "00be2774",
+        "file_offset": 8264564,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 18,
+        "text": "MMM DD, YYYY@hh:nn"
+      }
+    ]
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail",
+    "address": "00be279c",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail_00be279c.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0042ef18",
+        "map_names": [
+          "System.SysUtils.Format"
+        ]
+      },
+      {
+        "address": "00432550",
+        "map_names": [
+          "System.SysUtils.FormatDateTime"
+        ]
+      },
+      {
+        "address": "009b0e14",
+        "map_names": [
+          "ORFn.FMDateTimeToDateTime"
+        ]
+      },
+      {
+        "address": "00bcfa8c",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPieceAsDouble"
+        ]
+      },
+      {
+        "address": "00bcfe80",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPieceAsString"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00be2998",
+        "file_offset": 8265112,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 16,
+        "text": "Vital .........."
+      },
+      {
+        "address": "00be29c8",
+        "file_offset": 8265160,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 5,
+        "text": "%s %s"
+      },
+      {
+        "address": "00be29e0",
+        "file_offset": 8265184,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 16,
+        "text": "Date/Time ......"
+      },
+      {
+        "address": "00be2a10",
+        "file_offset": 8265232,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 18,
+        "text": "MMM DD, YYYY@hh:mm"
+      },
+      {
+        "address": "00be2a44",
+        "file_offset": 8265284,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 16,
+        "text": "Value .........."
+      },
+      {
+        "address": "00be2a74",
+        "file_offset": 8265332,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 16,
+        "text": "Conv. Value ...."
+      },
+      {
+        "address": "00be2aa4",
+        "file_offset": 8265380,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 16,
+        "text": "Qualifiers ....."
+      }
+    ]
+  },
+  {
+    "function": "oCoverSheetParam_CPRS_Vitals.TCoverSheetParam_CPRS_Vitals.NewCoverSheetControl",
+    "address": "00be2c84",
+    "status": "decompiled",
+    "file": "oCoverSheetParam_CPRS_Vitals.TCoverSheetParam_CPRS_Vitals.NewCoverSheetControl_00be2c84.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "oCoverSheet.TCoverSheet.OnClearPtData",
+    "address": "00bee374",
+    "status": "decompiled",
+    "file": "oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "numeric_callee_references": [
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "00439820",
+        "map_names": [
+          "System.SysUtils.Supports"
+        ]
+      },
+      {
+        "address": "0061782c",
+        "map_names": [
+          "Vcl.Controls.{System.Generics.Collections}TList<Vcl.Controls.TControl>.TEnumerator.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  }
+]

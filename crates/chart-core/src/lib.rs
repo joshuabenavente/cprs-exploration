@@ -537,6 +537,7 @@ pub struct AppState {
     pub tab: ChartTab,
     pub selected_problem: Option<String>,
     pub selected_allergy: Option<String>,
+    pub selected_vital: Option<String>,
     pub detail: DetailState,
     pub notes: NotesWorkspace,
     pub orders: OrdersWorkspace,
@@ -563,6 +564,7 @@ impl Default for AppState {
             tab: ChartTab::CoverSheet,
             selected_problem: None,
             selected_allergy: None,
+            selected_vital: None,
             detail: DetailState::Closed,
             notes: NotesWorkspace::default(),
             orders: OrdersWorkspace::default(),
@@ -815,6 +817,7 @@ impl AppState {
         self.detail_generation += 1;
         self.selected_problem = None;
         self.selected_allergy = None;
+        self.selected_vital = None;
         self.detail = DetailState::Closed;
     }
 
@@ -822,6 +825,7 @@ impl AppState {
         let selected = match panel {
             PanelKind::ProblemList => self.selected_problem.as_ref(),
             PanelKind::Allergies => self.selected_allergy.as_ref(),
+            PanelKind::Vitals => self.selected_vital.as_ref(),
         }?;
         self.active
             .as_ref()?
@@ -843,6 +847,7 @@ impl AppState {
         match panel {
             PanelKind::ProblemList => self.selected_problem = id,
             PanelKind::Allergies => self.selected_allergy = id,
+            PanelKind::Vitals => self.selected_vital = id,
         }
     }
 

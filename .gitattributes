@@ -6,3 +6,6 @@ analysis/orders/** -text -whitespace
 analysis/results/** -text -whitespace
 # Timed/native journey receipts hash the captured log bytes, including line endings.
 validation/milestone-7/*.log -text -whitespace
+analysis/vitals/** -text -whitespace
+validation/milestone-8/*.log -text -whitespace
+validation/milestone-8/*.json -text -whitespace

@@ -1,0 +1,47 @@
+{
+  "scope": "Bounded Vitals class pointer and four VMT slots; no DLL inspection",
+  "executable_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+  "class_pointer": {
+    "address": "00be1cf4",
+    "file_offset": 8261876,
+    "bytes": "4c1dbe00",
+    "value": "00be1d4c"
+  },
+  "slots": [
+    {
+      "address": "00be1f5c",
+      "file_offset": 8262492,
+      "bytes": "9c27be00",
+      "value": "00be279c",
+      "slot": "210",
+      "map_name": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail"
+    },
+    {
+      "address": "00be1f60",
+      "file_offset": 8262496,
+      "bytes": "f422be00",
+      "value": "00be22f4",
+      "slot": "214",
+      "map_name": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail"
+    },
+    {
+      "address": "00be1f68",
+      "file_offset": 8262504,
+      "bytes": "d035bd00",
+      "value": "00bd35d0",
+      "slot": "21c",
+      "map_name": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView"
+    },
+    {
+      "address": "00be1f84",
+      "file_offset": 8262532,
+      "bytes": "3423be00",
+      "value": "00be2334",
+      "slot": "238",
+      "map_name": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals"
+    }
+  ],
+  "limits": [
+    "MAP naming and class-table layout do not recover complete Delphi types or runtime site dispatch."
+  ]
+}

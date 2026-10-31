@@ -1,0 +1,66 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create",
+  "address": "00be2090",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create_00be2090.c",
+  "numeric_callee_references": [
+    {
+      "address": "004096ac",
+      "map_names": [
+        "System.@ClassCreate"
+      ]
+    },
+    {
+      "address": "00409704",
+      "map_names": [
+        "System.@AfterConstruction"
+      ]
+    },
+    {
+      "address": "00bd36a0",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+      ]
+    },
+    {
+      "address": "00bd3894",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.AddColumn"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00be2120",
+      "file_offset": 8262944,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "Vital"
+    },
+    {
+      "address": "00be2138",
+      "file_offset": 8262968,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "Value"
+    },
+    {
+      "address": "00be2150",
+      "file_offset": 8262992,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 10,
+      "text": "Date Taken"
+    },
+    {
+      "address": "00be2174",
+      "file_offset": 8263028,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "Quals"
+    }
+  ]
+}

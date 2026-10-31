@@ -59,8 +59,10 @@ export component AppWindow inherits Window {
     in property <int> search-state: 0;
     in property <[[StandardListViewItem]]> problem-rows;
     in property <[[StandardListViewItem]]> allergy-rows;
+    in property <[[StandardListViewItem]]> vital-rows;
     in-out property <int> selected-problem: -1;
     in-out property <int> selected-allergy: -1;
+    in-out property <int> selected-vital: -1;
     in property <bool> detail-open;
     in property <bool> detail-loading;
     in property <bool> detail-error;
@@ -150,13 +152,14 @@ export component AppWindow inherits Window {
     callback retry-detail();
 
     // Read-only test observation of actual widget focus; never displayed as product UI.
-    out property <string> keyboard-focus: root.selector-open ? (search.has-focus ? "patient-search" : continue-button.has-focus ? "acknowledgment" : "patient-actions") : root.detail-open ? (detail-text.has-focus ? "cover-detail" : "cover-actions") : root.tab-index == 1 ? "notes-" + notes-view.keyboard-focus : root.tab-index == 2 ? "orders-" + orders-view.keyboard-focus : root.tab-index == 3 ? "results-" + results-view.keyboard-focus : problem-panel.list-focused ? "cover-problems" : allergy-panel.list-focused ? "cover-allergies" : "chart-actions";
+    out property <string> keyboard-focus: root.selector-open ? (search.has-focus ? "patient-search" : continue-button.has-focus ? "acknowledgment" : "patient-actions") : root.detail-open ? (detail-text.has-focus ? "cover-detail" : "cover-actions") : root.tab-index == 1 ? "notes-" + notes-view.keyboard-focus : root.tab-index == 2 ? "orders-" + orders-view.keyboard-focus : root.tab-index == 3 ? "results-" + results-view.keyboard-focus : "chart-actions";
 
     public function scroll-workspace-bottom() { workspace-scroll.content-y = min(0px, workspace-scroll.visible-height - workspace-scroll.content-height); }
     public function focus-search() { workspace-scroll.content-y = 0px; search.focus(); }
     public function focus-chart() { workspace-scroll.content-y = 0px; new-patient.focus(); }
     public function focus-acknowledgment() { root.scroll-workspace-bottom(); continue-button.focus(); }
-    public function focus-cover(panel: int) { workspace-scroll.content-y = 0px; if panel == 0 { problem-panel.focus-list(); } else { allergy-panel.focus-list(); } }
+    public function reveal-cover(panel: int) { workspace-scroll.content-y = panel == 2 ? min(0px, workspace-scroll.visible-height - workspace-scroll.content-height) : 0px; }
+    public function focus-cover(panel: int) { root.reveal-cover(panel); if panel == 0 { problem-panel.focus-list(); } else if panel == 1 { allergy-panel.focus-list(); } else { vital-panel.focus-list(); } }
     public function focus-detail() { detail-text.focus(); }
     public function focus-notes-filter() { notes-view.focus-filter(); }
     public function focus-notes-body() { notes-view.focus-body(); }
@@ -254,7 +257,7 @@ export component AppWindow inherits Window {
                 workspace-scroll := ScrollView {
                     width: parent.width; height: parent.height;
                     content-width: self.visible-width;
-                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : !root.selector-open && (root.tab-index >= 1) ? 600px : 440px);
+                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : !root.selector-open && root.has-active && root.tab-index == 0 ? 740px : !root.selector-open && (root.tab-index >= 1) ? 600px : 440px);
                     changed content-height => { self.content-y = min(0px, max(self.content-y, self.visible-height - self.content-height)); }
                     Rectangle {
                     width: workspace-scroll.visible-width; height: workspace-scroll.content-height;
@@ -426,7 +429,8 @@ export component AppWindow inherits Window {
                                     selected(index) => { root.cover-selected(0, index); }
                                     released(index) => { root.cover-released(0, index); }
                                     activated => { root.cover-activated(0); }
-                                    footer-focused => { root.scroll-workspace-bottom(); }
+                                    footer-focused => { root.reveal-cover(0); }
+                                    list-focused-event => { root.reveal-cover(0); }
                                 }
                                 allergy-panel := CoverPanel {
                                     title: "Allergies"; patient-id: root.active-id; allergies: true; rows: root.allergy-rows;
@@ -435,10 +439,21 @@ export component AppWindow inherits Window {
                                     selected(index) => { root.cover-selected(1, index); }
                                     released(index) => { root.cover-released(1, index); }
                                     activated => { root.cover-activated(1); }
-                                    footer-focused => { root.scroll-workspace-bottom(); }
+                                    footer-focused => { root.reveal-cover(1); }
+                                    list-focused-event => { root.reveal-cover(1); }
                                 }
                             }
-                            Text { text: "Two synthetic panels · Other Cover Sheet panels are not implemented · Fixture date: " + root.fixture-date;
+                            vital-panel := CoverPanel {
+                                title: "Vitals"; patient-id: root.active-id; vitals: true; rows: root.vital-rows;
+                                enabled: !root.detail-open;
+                                selected-row <=> root.selected-vital;
+                                selected(index) => { root.cover-selected(2, index); }
+                                released(index) => { root.cover-released(2, index); }
+                                activated => { root.cover-activated(2); }
+                                footer-focused => { root.reveal-cover(2); }
+                                list-focused-event => { root.reveal-cover(2); }
+                            }
+                            Text { text: "Three synthetic panels · Values, units and dates are invented display text · Fixture date: " + root.fixture-date;
                                 color: #617180; font-size: 12px; wrap: word-wrap; }
                             }
                         }

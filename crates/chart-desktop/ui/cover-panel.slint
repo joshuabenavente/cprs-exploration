@@ -2,8 +2,8 @@ import { StandardTableView, Button } from "std-widgets.slint";
 export component CoverPanel inherits Rectangle {
     in property <string> title;
     in property <string> patient-id;
-    out property <bool> list-focused: data.has-focus;
     in property <bool> allergies;
+    in property <bool> vitals;
     in property <bool> enabled: true;
     in property <[[StandardListViewItem]]> rows;
     in-out property <int> selected-row: -1;
@@ -11,7 +11,8 @@ export component CoverPanel inherits Rectangle {
     callback released(int);
     callback activated();
     callback footer-focused();
-    public function focus-list() { data.focus(); }
+    callback list-focused-event();
+    public function focus-list() { root.list-focused-event(); data.focus(); }
     background: white; border-width: 1px; border-color: #c9d5df;
     min-width: 390px; min-height: 220px;
     focus := FocusScope {
@@ -37,12 +38,17 @@ export component CoverPanel inherits Rectangle {
                     enabled: root.enabled && root.rows.length > 0;
                     accessible-label: root.title + " synthetic items for " + root.patient-id + (root.selected-row >= 0 ? ". Selected " + root.rows[root.selected-row][0].text : ". No item selected");
                     rows: root.rows; current-row <=> root.selected-row;
-                    columns: root.allergies ? [
+                    columns: root.vitals ? [
+                        { title: "Vital", width: 165px, min-width: 135px },
+                        { title: "Value", width: 160px, min-width: 140px },
+                        { title: "Date Taken", width: 205px, min-width: 195px },
+                        { title: "Quals", width: 320px, min-width: 230px }
+                    ] : root.allergies ? [
                         { title: "Agent", width: 190px, min-width: 140px },
                         { title: "Severity", width: 100px, min-width: 90px },
                         { title: "Signs/Symptoms", width: 155px, min-width: 145px }
                     ] : [{ title: "Problem List", width: 440px, min-width: 320px }];
-                    current-row-changed(index) => { root.selected(index); }
+                    current-row-changed(index) => { root.list-focused-event(); root.selected(index); }
                     sort-ascending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
                     sort-descending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
                     row-pointer-event(index, event, position) => {

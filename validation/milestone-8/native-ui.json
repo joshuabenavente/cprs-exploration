@@ -1,0 +1,236 @@
+{
+  "scope": "Milestone 8 native keyboard/layout and separate user listening evidence",
+  "executable_sha256": "a79bebeece2d5e03fbf0f414bf4c461ffbbf588a125f4f33c00e33e98ae4202f",
+  "layout_samples": [
+    {
+      "size": "default",
+      "application_scale": 2,
+      "client_pixels": [
+        2360,
+        1400
+      ],
+      "capture_pixels": [
+        2362,
+        1432
+      ],
+      "log": "validation/milestone-8/layout-default-200.log",
+      "log_sha256": "c89f6cc4e1023025f7488d161910b16a2a282fbb9b74431adb443d390008f76f",
+      "observed": "Final executable inspected at both ends of the Cover Sheet workspace. Vitals headings, three rows and View action fit; upper panels are reachable; patient header/navigation/status stay visible. Compact 1180x700 logical default fits the reviewed desktop.",
+      "requested_logical": [
+        1180,
+        700
+      ]
+    },
+    {
+      "size": "minimum",
+      "application_scale": 2,
+      "client_pixels": [
+        1960,
+        1360
+      ],
+      "capture_pixels": [
+        1962,
+        1392
+      ],
+      "log": "validation/milestone-8/layout-minimum-200.log",
+      "log_sha256": "86cf98637bef953d6eb886ec72c742843cac7d9abd068ceac895adea674afb31",
+      "observed": "Final executable top/bottom Cover Sheet and loaded VITAL-02 detail inspected. All Vitals rows and lower actions fit through workspace scrolling; header/navigation/status stay visible; upper tables retain horizontal scrolling.",
+      "requested_logical": [
+        980,
+        680
+      ]
+    },
+    {
+      "size": "default",
+      "application_scale": 1.75,
+      "client_pixels": [
+        2065,
+        1400
+      ],
+      "capture_pixels": [
+        2067,
+        1432
+      ],
+      "log": "validation/milestone-8/layout-default-175.log",
+      "log_sha256": "1b8abb5f81d100d065b8083074423cf41a3752248827c9b9f6420af1a2581637",
+      "observed": "Final executable top/bottom Cover Sheet inspected. Four Vitals headings, all fixture rows and View action fit through workspace scrolling; upper panels remain reachable, with horizontal table scrolling at minimum width. Patient header/navigation/status stay visible.",
+      "requested_logical": [
+        1180,
+        800
+      ]
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1.75,
+      "client_pixels": [
+        1715,
+        1190
+      ],
+      "capture_pixels": [
+        1717,
+        1222
+      ],
+      "log": "validation/milestone-8/layout-minimum-175.log",
+      "log_sha256": "31618bb036331c898b35b8f36920e79f066a4de1fe33848a1f0339abd5840a8e",
+      "observed": "Final executable top/bottom Cover Sheet inspected. Four Vitals headings, all fixture rows and View action fit through workspace scrolling; upper panels remain reachable, with horizontal table scrolling at minimum width. Patient header/navigation/status stay visible.",
+      "requested_logical": [
+        980,
+        680
+      ]
+    },
+    {
+      "size": "default",
+      "application_scale": 1.5,
+      "client_pixels": [
+        1770,
+        1200
+      ],
+      "capture_pixels": [
+        1772,
+        1232
+      ],
+      "log": "validation/milestone-8/layout-default-150.log",
+      "log_sha256": "0d294462ed978afea7fc6dc415535d085cd30f4858880b7a73938d55b599c77a",
+      "observed": "Final executable top/bottom Cover Sheet inspected. Four Vitals headings, all fixture rows and View action fit through workspace scrolling; upper panels remain reachable, with horizontal table scrolling at minimum width. Patient header/navigation/status stay visible.",
+      "requested_logical": [
+        1180,
+        800
+      ]
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1.5,
+      "client_pixels": [
+        1470,
+        1020
+      ],
+      "capture_pixels": [
+        1472,
+        1052
+      ],
+      "log": "validation/milestone-8/layout-minimum-150.log",
+      "log_sha256": "fcd448f62f78567e7fe7075e91b99512b61629d573a594b9e6fd44b312bc704d",
+      "observed": "Final executable top/bottom Cover Sheet inspected. Four Vitals headings, all fixture rows and View action fit through workspace scrolling; upper panels remain reachable, with horizontal table scrolling at minimum width. Patient header/navigation/status stay visible.",
+      "requested_logical": [
+        980,
+        680
+      ]
+    },
+    {
+      "size": "default",
+      "application_scale": 1.25,
+      "client_pixels": [
+        1475,
+        1000
+      ],
+      "capture_pixels": [
+        1477,
+        1032
+      ],
+      "log": "validation/milestone-8/layout-default-125.log",
+      "log_sha256": "dfb5492128a5d71b59e814f1095613cc568ef74e2f1a750bbc801d176fc87d69",
+      "observed": "Final executable top/bottom Cover Sheet inspected. Four Vitals headings, all fixture rows and View action fit through workspace scrolling; upper panels remain reachable, with horizontal table scrolling at minimum width. Patient header/navigation/status stay visible.",
+      "requested_logical": [
+        1180,
+        800
+      ]
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1.25,
+      "client_pixels": [
+        1225,
+        850
+      ],
+      "capture_pixels": [
+        1227,
+        882
+      ],
+      "log": "validation/milestone-8/layout-minimum-125.log",
+      "log_sha256": "a5ddf16c8b5159a8b45959b1d4572b2272cbb73cab40a52e8ea52be09cebfd31",
+      "observed": "Final executable top/bottom Cover Sheet inspected. Four Vitals headings, all fixture rows and View action fit through workspace scrolling; upper panels remain reachable, with horizontal table scrolling at minimum width. Patient header/navigation/status stay visible.",
+      "requested_logical": [
+        980,
+        680
+      ]
+    },
+    {
+      "size": "default",
+      "application_scale": 1,
+      "client_pixels": [
+        1180,
+        800
+      ],
+      "capture_pixels": [
+        1182,
+        832
+      ],
+      "log": "validation/milestone-8/layout-default-100.log",
+      "log_sha256": "9b740455fd1e7a80ff66b97d50cc392d23a13b129bf06c0d731dd9e4512dac87",
+      "observed": "Final executable top/bottom Cover Sheet inspected. Four Vitals headings, all fixture rows and View action fit through workspace scrolling; upper panels remain reachable, with horizontal table scrolling at minimum width. Patient header/navigation/status stay visible.",
+      "requested_logical": [
+        1180,
+        800
+      ]
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1,
+      "client_pixels": [
+        980,
+        680
+      ],
+      "capture_pixels": [
+        982,
+        712
+      ],
+      "log": "validation/milestone-8/layout-minimum-100.log",
+      "log_sha256": "adc8b464b6add7b89d052846e0dc6a5a3a7f5e3780ee8bdf465e130477648386",
+      "observed": "Final executable top/bottom Cover Sheet inspected. Four Vitals headings, all fixture rows and View action fit through workspace scrolling; upper panels remain reachable, with horizontal table scrolling at minimum width. Patient header/navigation/status stay visible.",
+      "requested_logical": [
+        980,
+        680
+      ]
+    }
+  ],
+  "keyboard_observations": [
+    "Final executable minimum 200%: native Up selected Pulse; Enter initially focused loading read-only VITAL-02, then settled UIA text exposed SYNTH-001 / VITAL-02, 72 /min and Oct 25, 2026@09:14. Native Ctrl+A selected 501 matching characters. Escape returned to Vitals; Down immediately selected Blood pressure, independently establishing actual table return.",
+    "Native Tab reached View selected Vitals item detail; Enter activated VITAL-03 and Escape restored its table/selection. Ctrl+O opened patient search; Escape preserved SYNTH-001, closed detail and returned to Select new synthetic patient at the top of the workspace.",
+    "Final executable ordinary native-launch 100%: Tab from the chart toolbar reached Problem List, Allergies and Vitals in order. Down selected Temperature. Space focused loading read-only VITAL-01, then settled UIA text exposed SYNTH-001, 36.8 \u00b0C and Oct 25, 2026@09:15. Escape restored the Vitals table with Temperature selected. App left open in that state for separate user listening."
+  ],
+  "uia_limits": [
+    "Immediate snapshots can show the loading value before real timer delivery. Reobserve before judging loaded text.",
+    "Bundled Fluent table public has-focus does not reflect its internal keyboard scope. Native table focus/arrow behavior and UIA snapshots are separate from callback probes.",
+    "16x16 related screenshot surfaces were excluded from full-window geometry judgments."
+  ],
+  "spoken_output": {
+    "status": "pending user report",
+    "historical": "Milestone 7 combined Narrator pass is historical and does not establish a Vitals pass.",
+    "checklist": "docs/milestone-8.md#separate-vitals-listening-checklist",
+    "evidence_kind": "No new speech verified by the agent; user listening report required."
+  },
+  "native_smoke_completed": true,
+  "limits": [
+    "Process-local scale samples do not establish monitor-DPI transitions.",
+    "No physical IME/dead-key or full accessibility-conformance claim.",
+    "Normal-timer review harness first establishes fixture state; subsequent native actions are separate input evidence."
+  ],
+  "setup_observation": {
+    "preliminary_executable_sha256": "8b958d1046fd9a3ed281a4872006718aa8f72099a6481993dd6c6d2d3382f296",
+    "sample": "validation/milestone-8/preliminary-clipped-default-200.log",
+    "observed": "Initial 200% default requested 1180x800 logical; client 2360x1600 exceeded the 1440-pixel desktop. Capture was clipped to 2362x1440 and is not counted as a pass. Final startup uses 1180x700 logical at 200%, with final-binary samples rerun.",
+    "capture_pixels": [
+      2362,
+      1440
+    ],
+    "log_sha256": "62ca8719304e74cc6c4dd352d9668d936f62303e1ff58bc9066693aef80ec9aa"
+  },
+  "keyboard_launch": {
+    "method": "ordinary native app launcher without integrated callbacks",
+    "application_scale": 1,
+    "client_logical": [
+      1180,
+      800
+    ]
+  }
+}

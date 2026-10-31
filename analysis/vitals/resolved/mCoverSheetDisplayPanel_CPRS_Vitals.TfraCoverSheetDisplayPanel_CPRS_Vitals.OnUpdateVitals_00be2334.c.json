@@ -1,0 +1,45 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals",
+  "address": "00be2334",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals_00be2334.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040d1c4",
+      "map_names": [
+        "System.@FinalizeArray"
+      ]
+    },
+    {
+      "address": "00682964",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.GetSelected"
+      ]
+    },
+    {
+      "address": "00ae6cb0",
+      "map_names": [
+        "uVitals.ViewPatientVitals"
+      ]
+    },
+    {
+      "address": "00bf0108",
+      "map_names": [
+        "iCoverSheetIntf.CoverSheet"
+      ]
+    },
+    {
+      "address": "01011c80",
+      "map_names": [
+        "uWriteAccess.WriteAccess"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}
