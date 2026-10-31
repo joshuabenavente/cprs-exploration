@@ -5,6 +5,7 @@ export component CoverPanel inherits Rectangle {
     in property <bool> allergies;
     in property <bool> vitals;
     in property <bool> medications;
+    in property <bool> appointments;
     in property <bool> enabled: true;
     in property <[[StandardListViewItem]]> rows;
     in-out property <int> selected-row: -1;
@@ -39,7 +40,11 @@ export component CoverPanel inherits Rectangle {
                     enabled: root.enabled && root.rows.length > 0;
                     accessible-label: root.title + " synthetic items for " + root.patient-id + (root.selected-row >= 0 ? ". Selected " + root.rows[root.selected-row][0].text : ". No item selected");
                     rows: root.rows; current-row <=> root.selected-row;
-                    columns: root.medications ? [
+                    columns: root.appointments ? [
+                        { title: "Date/Time", width: 225px, min-width: 215px },
+                        { title: "Location", width: 620px, min-width: 560px },
+                        { title: "Action Req", width: 180px, min-width: 160px }
+                    ] : root.medications ? [
                         { title: "Medication", width: 800px, min-width: 740px },
                         { title: "Status", width: 180px, min-width: 160px }
                     ] : root.vitals ? [

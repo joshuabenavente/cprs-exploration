@@ -507,6 +507,12 @@ fn sync(app: &AppWindow, controller: &Controller) {
                             ]
                         } else if let Some(medication) = &item.medication {
                             vec![item.label.clone(), medication.status.clone()]
+                        } else if let Some(appointment) = &item.appointment {
+                            vec![
+                                item.label.clone(),
+                                appointment.location.clone(),
+                                appointment.action_req.clone(),
+                            ]
                         } else if panel == PanelKind::Allergies {
                             vec![
                                 item.label.clone(),
@@ -525,6 +531,7 @@ fn sync(app: &AppWindow, controller: &Controller) {
             PanelKind::Allergies => app.get_allergy_rows(),
             PanelKind::Vitals => app.get_vital_rows(),
             PanelKind::ActiveMedications => app.get_medication_rows(),
+            PanelKind::Appointments => app.get_appointment_rows(),
         };
         if let Some(model) = changed_rows(&current, rows) {
             match panel {
@@ -532,6 +539,7 @@ fn sync(app: &AppWindow, controller: &Controller) {
                 PanelKind::Allergies => app.set_allergy_rows(model),
                 PanelKind::Vitals => app.set_vital_rows(model),
                 PanelKind::ActiveMedications => app.set_medication_rows(model),
+                PanelKind::Appointments => app.set_appointment_rows(model),
             }
         }
         let index = state.selected_cover_index(panel).map_or(-1, |i| i as i32);
@@ -540,6 +548,7 @@ fn sync(app: &AppWindow, controller: &Controller) {
             PanelKind::Allergies => app.set_selected_allergy(index),
             PanelKind::Vitals => app.set_selected_vital(index),
             PanelKind::ActiveMedications => app.set_selected_medication(index),
+            PanelKind::Appointments => app.set_selected_appointment(index),
         }
     }
     app.set_detail_open(state.detail.is_open());
@@ -604,6 +613,7 @@ fn panel(index: i32) -> PanelKind {
         1 => PanelKind::Allergies,
         2 => PanelKind::Vitals,
         3 => PanelKind::ActiveMedications,
+        4 => PanelKind::Appointments,
         _ => PanelKind::ProblemList,
     }
 }
@@ -613,6 +623,7 @@ fn panel_index(panel: PanelKind) -> i32 {
         PanelKind::Allergies => 1,
         PanelKind::Vitals => 2,
         PanelKind::ActiveMedications => 3,
+        PanelKind::Appointments => 4,
     }
 }
 
@@ -1638,6 +1649,21 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_allergy_rows().row_count(), 2);
     assert_eq!(app.get_vital_rows().row_count(), 3);
     assert_eq!(app.get_medication_rows().row_count(), 3);
+    assert_eq!(app.get_appointment_rows().row_count(), 3);
+    app.invoke_cover_selected(4, 2);
+    assert!(!app.get_detail_open());
+    app.invoke_cover_activated(4);
+    assert!(app.get_detail_body().contains("SYNTH-001"));
+    assert!(app.get_detail_body().contains("APPT-03"));
+    assert!(app.get_detail_body().contains("Nov 04, 2026@10:15"));
+    assert!(app.get_detail_body().contains("Demo action C"));
+    assert!(app.get_detail_body().contains("Zoë 李"));
+    app.invoke_close_detail();
+    assert_eq!(app.get_selected_appointment(), 2);
+    app.invoke_cover_released(4, 0);
+    app.invoke_cover_released(4, 0);
+    assert!(app.get_detail_body().contains("APPT-01"));
+    app.invoke_close_detail();
     app.invoke_cover_selected(3, 2);
     assert!(!app.get_detail_open());
     app.invoke_cover_activated(3);
@@ -1689,6 +1715,11 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_allergy_rows().row_count(), 0);
     assert_eq!(app.get_vital_rows().row_count(), 0);
     assert_eq!(app.get_medication_rows().row_count(), 0);
+    assert_eq!(app.get_selected_appointment(), -1);
+    assert_eq!(app.get_appointment_rows().row_count(), 0);
+    app.invoke_cover_selected(4, 0);
+    app.invoke_cover_activated(4);
+    assert!(!app.get_detail_open());
     app.invoke_cover_selected(3, 0);
     app.invoke_cover_activated(3);
     assert!(!app.get_detail_open());
@@ -1727,6 +1758,11 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_preview_name().as_str(), "ZÁRATE, ZOË 李");
     app.invoke_confirm_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
+    app.invoke_cover_selected(4, 0);
+    app.invoke_cover_activated(4);
+    assert!(app.get_detail_body().contains("ZÁRATE, ZOË 李"));
+    assert!(app.get_detail_body().contains("Training location Alpha"));
+    app.invoke_close_detail();
     app.invoke_cover_selected(3, 0);
     app.invoke_cover_activated(3);
     assert!(app.get_detail_body().contains("ZÁRATE, ZOË 李"));
@@ -1754,14 +1790,24 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_retry_detail();
     assert!(!app.get_detail_error());
     assert!(app.get_detail_body().contains("MED-01"));
+    app.invoke_close_detail();
+    shared.borrow_mut().provider.simulation = Simulation::DetailUnavailable;
+    app.invoke_cover_selected(4, 0);
+    app.invoke_cover_activated(4);
+    assert!(app.get_detail_error());
+    assert!(!app.get_detail_body().contains("Demo action A"));
+    shared.borrow_mut().provider.simulation = Simulation::Normal;
+    app.invoke_retry_detail();
+    assert!(app.get_detail_body().contains("APPT-01"));
     app.invoke_open_selection();
     assert_eq!(app.get_selected_medication(), -1);
+    assert_eq!(app.get_selected_appointment(), -1);
     assert!(app.get_detail_body().is_empty());
     app.invoke_cancel_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
     assert!(shared.borrow().immediate);
     println!(
-        "Mock UI callback smoke passed: patient selection, Cover Sheet including Active Medications, Notes, Results reports and Orders selection/detail/double-click/filter/status/close/error/retry, patient clearing, and Unicode fixture identity."
+        "Mock UI callback smoke passed: patient selection, Cover Sheet including Appointments and Active Medications, Notes, Results reports and Orders selection/detail/double-click/filter/status/close/error/retry, patient clearing, and Unicode fixture identity."
     );
 }
 

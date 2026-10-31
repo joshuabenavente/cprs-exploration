@@ -22,6 +22,7 @@ def main():
     group.add_argument('--results', action='store_true')
     group.add_argument('--vitals', action='store_true')
     group.add_argument('--active-medications', action='store_true')
+    group.add_argument('--appointments', action='store_true')
     args = parser.parse_args()
     analysis = ROOT / 'analysis' / 'cover-sheet' if args.cover_sheet else ROOT / 'analysis'
     if args.notes:
@@ -34,6 +35,8 @@ def main():
         analysis = ROOT / 'analysis/vitals'
     if args.active_medications:
         analysis = ROOT / 'analysis/active-medications'
+    if args.appointments:
+        analysis = ROOT / 'analysis/appointments'
     pe = PE(ROOT / 'cprs/CPRSChart.exe')
     by_address = {}
     with (ROOT / 'analysis/inventory/chart-symbols.tsv').open(encoding='utf-8', newline='') as f:
@@ -69,11 +72,16 @@ def main():
         if function['status'] != 'decompiled':
             continue
         text = (analysis / 'decompiled' / function['file']).read_text(encoding='utf-8')
+        assembly = (analysis / 'decompiled' / function['file']).with_suffix('.asm').read_text(encoding='utf-8') if args.appointments else ''
         calls = []
-        for address in sorted(set(re.findall(r'func_0x([0-9a-fA-F]{8})', text))):
+        addresses = set(re.findall(r'func_0x([0-9a-fA-F]{8})', text))
+        addresses.update(f'{int(a, 16):08x}' for a in re.findall(r'CALL 0x([0-9a-fA-F]+)', assembly))
+        for address in sorted(addresses):
             calls.append({'address': address, 'map_names': by_address.get(address, [])})
         literals = []
-        for address in sorted(set(re.findall(r'UNK_([0-9a-fA-F]{8})', text))):
+        addresses = set(re.findall(r'UNK_([0-9a-fA-F]{8})', text))
+        addresses.update(f'{int(a, 16):08x}' for a in re.findall(r'0x([0-9a-fA-F]{6,8})', assembly))
+        for address in sorted(addresses):
             if value := literal(address):
                 literals.append(value)
         resolved = {**function, 'numeric_callee_references': calls, 'delphi_string_literals': literals}

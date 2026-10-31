@@ -1,0 +1,318 @@
+2026-10-31 15:59:17 INFO  (LoggingInitialization) Using log config file: jar:file:/C:/Users/soapo/Documents/AI-Work/projects/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-31 15:59:17 INFO  (LoggingInitialization) Using log file: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\headless.log  
+2026-10-31 15:59:17 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-31 15:59:17 INFO  (Preferences) Loading user preferences: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\appdata\ghidra\ghidra_12.2_PUBLIC\preferences  
+2026-10-31 15:59:17 INFO  (ClassSearcher) Searching for classes...  
+2026-10-31 15:59:19 INFO  (ClassSearcher) Class search complete (1222 ms)  
+2026-10-31 15:59:19 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-31 15:59:19 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-31 15:59:19 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-31 15:59:19 INFO  (DefaultTrustManagerFactory) Loaded 63 trusted CA certificates from the OS trust store.  
+2026-10-31 15:59:19 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-10-31 15:59:20 INFO  (AnalyzeHeadless) Headless startup complete (8728 ms)  
+2026-10-31 15:59:20 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-10-31 15:59:20 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BSim\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Swift\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts  
+2026-10-31 15:59:20 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-31 15:59:20 INFO  (HeadlessAnalyzer) Opening existing project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 15:59:20 INFO  (HeadlessProject) Opening project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 15:59:24 DEBUG (SleighLanguage) Took 651ms (383ms inside lock) to initialize language C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.slaspec -> C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.sla  
+2026-10-31 15:59:25 INFO  (HeadlessAnalyzer) REPORT: Processing project file: /CPRSChart.exe  
+2026-10-31 15:59:26 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportChartWorkflow.java 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\decompiled' 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\provenance\appointments-targets.txt'   
+2026-10-31 15:59:26 INFO  (HeadlessAnalyzer) SCRIPT: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra\ExportChartWorkflow.java  
+2026-10-31 15:59:28 INFO  (GhidraScript) ExportChartWorkflow.java> CPRS_EXPORT functions=12  
+2026-10-31 15:59:28 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for processed file: /CPRSChart.exe  
+2026-10-31 15:59:49 INFO  (LoggingInitialization) Using log config file: jar:file:/C:/Users/soapo/Documents/AI-Work/projects/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-31 15:59:49 INFO  (LoggingInitialization) Using log file: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\headless.log  
+2026-10-31 15:59:49 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-31 15:59:49 INFO  (Preferences) Loading user preferences: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\appdata\ghidra\ghidra_12.2_PUBLIC\preferences  
+2026-10-31 15:59:49 INFO  (ClassSearcher) Searching for classes...  
+2026-10-31 15:59:50 INFO  (ClassSearcher) Class search complete (1065 ms)  
+2026-10-31 15:59:50 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-31 15:59:50 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-31 15:59:51 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-31 15:59:51 INFO  (DefaultTrustManagerFactory) Loaded 63 trusted CA certificates from the OS trust store.  
+2026-10-31 15:59:51 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-10-31 15:59:51 INFO  (AnalyzeHeadless) Headless startup complete (2600 ms)  
+2026-10-31 15:59:51 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-10-31 15:59:51 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BSim\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Swift\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts  
+2026-10-31 15:59:51 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-31 15:59:51 INFO  (HeadlessAnalyzer) Opening existing project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 15:59:51 INFO  (HeadlessProject) Opening project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 15:59:54 DEBUG (SleighLanguage) Took 376ms (159ms inside lock) to initialize language C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.slaspec -> C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.sla  
+2026-10-31 15:59:54 INFO  (HeadlessAnalyzer) REPORT: Processing project file: /CPRSChart.exe  
+2026-10-31 15:59:55 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportChartWorkflow.java 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\decompiled' 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\provenance\appointments-targets.txt'   
+2026-10-31 15:59:57 INFO  (HeadlessAnalyzer) SCRIPT: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra\ExportChartWorkflow.java  
+2026-10-31 15:59:58 INFO  (GhidraScript) ExportChartWorkflow.java> CPRS_EXPORT functions=12  
+2026-10-31 15:59:58 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for processed file: /CPRSChart.exe  
+2026-10-31 16:00:19 INFO  (LoggingInitialization) Using log config file: jar:file:/C:/Users/soapo/Documents/AI-Work/projects/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-31 16:00:19 INFO  (LoggingInitialization) Using log file: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\headless.log  
+2026-10-31 16:00:19 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-31 16:00:19 INFO  (Preferences) Loading user preferences: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\appdata\ghidra\ghidra_12.2_PUBLIC\preferences  
+2026-10-31 16:00:19 INFO  (ClassSearcher) Searching for classes...  
+2026-10-31 16:00:20 INFO  (ClassSearcher) Class search complete (1060 ms)  
+2026-10-31 16:00:20 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-31 16:00:20 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-31 16:00:20 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-31 16:00:20 WARN  (DefaultTrustManagerFactory) OS Truststore load failed: java.security.KeyStoreException: error 5, Access is denied.
+  
+2026-10-31 16:00:21 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-10-31 16:00:26 INFO  (AnalyzeHeadless) Headless startup complete (7747 ms)  
+2026-10-31 16:00:26 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-10-31 16:00:27 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BSim\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Swift\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts  
+2026-10-31 16:00:27 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-31 16:00:27 INFO  (HeadlessAnalyzer) Opening existing project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 16:00:27 INFO  (HeadlessProject) Opening project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 16:00:35 DEBUG (SleighLanguage) Took 457ms (196ms inside lock) to initialize language C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.slaspec -> C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.sla  
+2026-10-31 16:00:36 INFO  (HeadlessAnalyzer) REPORT: Processing project file: /CPRSChart.exe  
+2026-10-31 16:00:36 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportChartWorkflow.java 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\decompiled' 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\provenance\appointments-targets.txt'   
+2026-10-31 16:00:38 ERROR (HeadlessAnalyzer) Unexpected error activating bundle: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra
+java.nio.file.AccessDeniedException: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Framework\SoftwareModeling\lib\SoftwareModeling.jar
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:96)
+	at java.base/sun.nio.fs.WindowsLinkSupport.getRealPath(WindowsLinkSupport.java:280)
+	at java.base/sun.nio.fs.WindowsPath.toRealPath(WindowsPath.java:907)
+	at java.base/sun.nio.fs.WindowsPath.toRealPath(WindowsPath.java:42)
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.removeFileSystem(ZipFileSystemProvider.java:319)
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystem.close(ZipFileSystem.java:553)
+	at jdk.compiler/com.sun.tools.javac.file.JavacFileManager$ArchiveContainer.close(JavacFileManager.java:667)
+	at jdk.compiler/com.sun.tools.javac.file.JavacFileManager.close(JavacFileManager.java:745)
+	at java.compiler@25.0.5/javax.tools.ForwardingJavaFileManager.close(ForwardingJavaFileManager.java:250)
+	at ghidra.app.plugin.core.osgi.GhidraSourceBundle.buildDefaultActivator(GhidraSourceBundle.java:1026)
+	at ghidra.app.plugin.core.osgi.GhidraSourceBundle.addActivatorClass(GhidraSourceBundle.java:947)
+	at ghidra.app.plugin.core.osgi.GhidraSourceBundle.generateManifest(GhidraSourceBundle.java:906)
+	at ghidra.app.plugin.core.osgi.GhidraSourceBundle.compileToExplodedBundle(GhidraSourceBundle.java:1093)
+	at ghidra.app.plugin.core.osgi.GhidraSourceBundle.build(GhidraSourceBundle.java:615)
+	at ghidra.app.plugin.core.osgi.BundleHost.activateAll(BundleHost.java:706)
+	at ghidra.app.script.JavaScriptProvider.loadClass(JavaScriptProvider.java:158)
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:97)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScriptsList(HeadlessAnalyzer.java:929)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1107)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileNoImport(HeadlessAnalyzer.java:1206)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFolderNoImport(HeadlessAnalyzer.java:1376)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processNoImport(HeadlessAnalyzer.java:1405)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:461)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:211)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:41)
+	Suppressed: java.nio.file.AccessDeniedException: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\lib\FileFormats.jar
+		at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+		at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:96)
+		at java.base/sun.nio.fs.WindowsLinkSupport.getRealPath(WindowsLinkSupport.java:280)
+		at java.base/sun.nio.fs.WindowsPath.toRealPath(WindowsPath.java:907)
+		at java.base/sun.nio.fs.WindowsPath.toRealPath(WindowsPath.java:42)
+		at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.removeFileSystem(ZipFileSystemProvider.java:319)
+		at jdk.zipfs/jdk.nio.zipfs.ZipFileSystem.close(ZipFileSystem.java:553)
+		at jdk.compiler/com.sun.tools.javac.file.JavacFileManager$ArchiveContainer.close(JavacFileManager.java:667)
+		at jdk.compiler/com.sun.tools.javac.file.JavacFileManager.close(JavacFileManager.java:745)
+		at ghidra.app.plugin.core.osgi.GhidraSourceBundle.buildDefaultActivator(GhidraSourceBundle.java:1006)
+		... 16 more
+	Suppressed: java.nio.file.AccessDeniedException: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Framework\SoftwareModeling\lib\SoftwareModeling.jar
+		at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+		at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:96)
+		at java.base/sun.nio.fs.WindowsLinkSupport.getRealPath(WindowsLinkSupport.java:280)
+		at java.base/sun.nio.fs.WindowsPath.toRealPath(WindowsPath.java:907)
+		at java.base/sun.nio.fs.WindowsPath.toRealPath(WindowsPath.java:42)
+		at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.removeFileSystem(ZipFileSystemProvider.java:319)
+		at jdk.zipfs/jdk.nio.zipfs.ZipFileSystem.close(ZipFileSystem.java:553)
+		at jdk.compiler/com.sun.tools.javac.file.JavacFileManager$ArchiveContainer.close(JavacFileManager.java:667)
+		at jdk.compiler/com.sun.tools.javac.file.JavacFileManager.close(JavacFileManager.java:745)
+		at ghidra.app.script.ResourceFileJavaFileManager.close(ResourceFileJavaFileManager.java:203)
+		at java.compiler@25.0.5/javax.tools.ForwardingJavaFileManager.close(ForwardingJavaFileManager.java:250)
+		at ghidra.app.plugin.core.osgi.GhidraSourceBundle.compileToExplodedBundle(GhidraSourceBundle.java:1059)
+		... 13 more
+  
+2026-10-31 16:00:38 ERROR (HeadlessAnalyzer) REPORT SCRIPT ERROR: ExportChartWorkflow.java : The class could not be found. It must be the public class of the .java file: Failed to get OSGi bundle containing script: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra\ExportChartWorkflow.java ghidra.app.script.GhidraScriptLoadException: The class could not be found. It must be the public class of the .java file: Failed to get OSGi bundle containing script: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra\ExportChartWorkflow.java
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:114)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScriptsList(HeadlessAnalyzer.java:929)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1107)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileNoImport(HeadlessAnalyzer.java:1206)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFolderNoImport(HeadlessAnalyzer.java:1376)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processNoImport(HeadlessAnalyzer.java:1405)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:461)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:211)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:41)
+Caused by: java.lang.ClassNotFoundException: Failed to get OSGi bundle containing script: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra\ExportChartWorkflow.java
+	at ghidra.app.script.JavaScriptProvider.loadClass(JavaScriptProvider.java:163)
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:97)
+	... 9 more
+ 
+2026-10-31 16:00:38 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for processed file: /CPRSChart.exe  
+2026-10-31 16:02:59 INFO  (LoggingInitialization) Using log config file: jar:file:/C:/Users/soapo/Documents/AI-Work/projects/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-31 16:02:59 INFO  (LoggingInitialization) Using log file: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\headless.log  
+2026-10-31 16:02:59 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-31 16:02:59 INFO  (Preferences) Loading user preferences: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\appdata\ghidra\ghidra_12.2_PUBLIC\preferences  
+2026-10-31 16:02:59 INFO  (ClassSearcher) Searching for classes...  
+2026-10-31 16:03:00 INFO  (ClassSearcher) Class search complete (1083 ms)  
+2026-10-31 16:03:01 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-31 16:03:01 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-31 16:03:01 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-31 16:03:01 INFO  (DefaultTrustManagerFactory) Loaded 63 trusted CA certificates from the OS trust store.  
+2026-10-31 16:03:01 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-10-31 16:03:01 INFO  (AnalyzeHeadless) Headless startup complete (3093 ms)  
+2026-10-31 16:03:01 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-10-31 16:03:02 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BSim\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Swift\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts  
+2026-10-31 16:03:02 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-31 16:03:02 INFO  (HeadlessAnalyzer) Opening existing project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 16:03:02 INFO  (HeadlessProject) Opening project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 16:03:05 DEBUG (SleighLanguage) Took 500ms (229ms inside lock) to initialize language C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.slaspec -> C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.sla  
+2026-10-31 16:03:05 INFO  (HeadlessAnalyzer) REPORT: Processing project file: /CPRSChart.exe  
+2026-10-31 16:03:07 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportChartWorkflow.java 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\decompiled' 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\provenance\appointments-targets.txt'   
+2026-10-31 16:03:07 ERROR (HeadlessAnalyzer)   
+2026-10-31 16:03:07 ERROR (HeadlessAnalyzer) REPORT SCRIPT ERROR: ExportChartWorkflow.java : The class could not be found. It must be the public class of the .java file: Failed to get OSGi bundle containing script: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra\ExportChartWorkflow.java ghidra.app.script.GhidraScriptLoadException: The class could not be found. It must be the public class of the .java file: Failed to get OSGi bundle containing script: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra\ExportChartWorkflow.java
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:114)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScriptsList(HeadlessAnalyzer.java:929)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1107)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileNoImport(HeadlessAnalyzer.java:1206)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFolderNoImport(HeadlessAnalyzer.java:1376)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processNoImport(HeadlessAnalyzer.java:1405)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:461)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:211)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:41)
+Caused by: java.lang.ClassNotFoundException: Failed to get OSGi bundle containing script: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra\ExportChartWorkflow.java
+	at ghidra.app.script.JavaScriptProvider.loadClass(JavaScriptProvider.java:163)
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:97)
+	... 9 more
+ 
+2026-10-31 16:03:07 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for processed file: /CPRSChart.exe  
+2026-10-31 16:03:43 INFO  (LoggingInitialization) Using log config file: jar:file:/C:/Users/soapo/Documents/AI-Work/projects/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-31 16:03:43 INFO  (LoggingInitialization) Using log file: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\headless.log  
+2026-10-31 16:03:43 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-31 16:03:43 INFO  (Preferences) Loading user preferences: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\appointments\appdata\ghidra\ghidra_12.2_PUBLIC\preferences  
+2026-10-31 16:03:43 INFO  (ClassSearcher) Searching for classes...  
+2026-10-31 16:03:45 INFO  (ClassSearcher) Class search complete (1416 ms)  
+2026-10-31 16:03:45 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-31 16:03:45 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-31 16:03:45 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-31 16:03:45 INFO  (DefaultTrustManagerFactory) Loaded 63 trusted CA certificates from the OS trust store.  
+2026-10-31 16:03:45 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-10-31 16:03:46 INFO  (AnalyzeHeadless) Headless startup complete (3487 ms)  
+2026-10-31 16:03:46 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-10-31 16:03:46 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BSim\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\Swift\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts  
+2026-10-31 16:03:46 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-31 16:03:46 INFO  (HeadlessAnalyzer) Opening existing project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 16:03:46 DEBUG (DefaultProjectManager) No tools found; Installing default tools  
+2026-10-31 16:03:46 DEBUG (DefaultProjectManager) 	no recent project directories found  
+2026-10-31 16:03:47 INFO  (HeadlessProject) Opening project: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\projects\CPRSChartFocused  
+2026-10-31 16:03:51 DEBUG (SleighLanguage) Took 468ms (194ms inside lock) to initialize language C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.slaspec -> C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.tools\ghidra_12.2_PUBLIC\Ghidra\Processors\x86\data\languages\x86.sla  
+2026-10-31 16:03:51 INFO  (HeadlessAnalyzer) REPORT: Processing project file: /CPRSChart.exe  
+2026-10-31 16:03:52 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportChartWorkflow.java 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\analysis\appointments\decompiled' 'C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\provenance\appointments-targets.txt'   
+2026-10-31 16:03:55 INFO  (HeadlessAnalyzer) SCRIPT: C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\scripts\ghidra\ExportChartWorkflow.java  
+2026-10-31 16:03:57 INFO  (GhidraScript) ExportChartWorkflow.java> CPRS_EXPORT functions=12  
+2026-10-31 16:03:57 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for processed file: /CPRSChart.exe  

@@ -476,6 +476,122 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
+        "appointments-explicit-close-race",
+        |a, _| {
+            a.invoke_close_detail();
+            a.invoke_cover_selected(4, 0);
+            require!(!a.get_detail_open(), "Appointments selection opened detail");
+            a.invoke_cover_activated(4);
+            a.invoke_close_detail();
+            a.invoke_cover_selected(4, 2);
+            a.invoke_cover_activated(4);
+            Ok(())
+        },
+        |a, s, i| {
+            !a.get_detail_loading()
+                && seen(s, i, "cover-detail", "SYNTH-004", "APPT-01", false)
+                && seen(s, i, "cover-detail", "SYNTH-004", "APPT-03", true)
+        },
+        |a, _| {
+            require!(
+                a.get_detail_body().contains("Demo action C")
+                    && a.get_detail_body().contains("Zoë 李"),
+                "Appointments display strings changed"
+            );
+            require!(
+                a.get_keyboard_focus() == "cover-detail",
+                "Appointments initial reading focus wrong"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "appointments-close-retains-row",
+        |a, _| {
+            a.invoke_close_detail();
+            Ok(())
+        },
+        |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
+        |a, _| {
+            require!(
+                a.get_selected_appointment() == 2 && a.get_detail_body().is_empty(),
+                "Appointments close lost selection or retained text"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "appointments-error",
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::DetailUnavailable;
+            a.invoke_cover_activated(4);
+            Ok(())
+        },
+        |a, _, _| a.get_detail_error(),
+        |a, _| {
+            require!(
+                !a.get_detail_body().contains("Demo action C"),
+                "Appointments error retained old value"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "appointments-retry-real-timer",
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::Normal;
+            a.invoke_retry_detail();
+            Ok(())
+        },
+        |a, s, i| {
+            a.get_detail_open()
+                && !a.get_detail_loading()
+                && !a.get_detail_error()
+                && seen(s, i, "cover-detail", "SYNTH-004", "APPT-03", true)
+        },
+        noop,
+    ));
+    q.push_back(Step::new(
+        "appointments-late-error-tab",
+        |a, s| {
+            a.invoke_close_detail();
+            s.borrow_mut().provider.simulation = Simulation::DetailUnavailable;
+            a.invoke_cover_activated(4);
+            a.invoke_tab_changed(1);
+            Ok(())
+        },
+        |_, s, i| seen(s, i, "cover-detail", "SYNTH-004", "APPT-03", false),
+        |a, s| {
+            require!(
+                !a.get_detail_open() && a.get_detail_body().is_empty(),
+                "late Appointments failure reopened detail"
+            );
+            owned(a, s, "SYNTH-004", ChartTab::Notes)
+        },
+    ));
+    q.push_back(Step::new(
+        "appointments-selector-cancel",
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::Normal;
+            a.invoke_tab_changed(0);
+            a.invoke_cover_selected(4, 0);
+            a.invoke_cover_activated(4);
+            a.invoke_open_selection();
+            a.invoke_cancel_selection();
+            Ok(())
+        },
+        |_, s, i| seen(s, i, "cover-detail", "SYNTH-004", "APPT-01", false),
+        |a, s| {
+            require!(
+                a.get_selected_appointment() == -1
+                    && !a.get_detail_open()
+                    && a.get_detail_body().is_empty(),
+                "Appointments survived selector cancel"
+            );
+            owned(a, s, "SYNTH-004", ChartTab::CoverSheet)
+        },
+    ));
+    q.push_back(Step::new(
         "notes-list-real-delay",
         |a, _| {
             a.invoke_close_detail();
@@ -589,6 +705,29 @@ fn journey() -> VecDeque<Step> {
                     && a.get_detail_body().contains("MED-01")
                     && !a.get_detail_body().contains("SYNTH-004"),
                 "same Active Medications ID has old owner"
+            );
+            a.invoke_close_detail();
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "appointments-same-id-new-owner",
+        |a, _| {
+            require!(
+                a.get_selected_appointment() == -1,
+                "patient switch retained Appointments selection"
+            );
+            a.invoke_cover_selected(4, 0);
+            a.invoke_cover_activated(4);
+            Ok(())
+        },
+        |a, _, _| a.get_detail_open() && !a.get_detail_loading(),
+        |a, _| {
+            require!(
+                a.get_detail_body().contains("SYNTH-003")
+                    && a.get_detail_body().contains("APPT-01")
+                    && !a.get_detail_body().contains("SYNTH-004"),
+                "same Appointments ID has old owner"
             );
             a.invoke_close_detail();
             Ok(())
@@ -1020,6 +1159,25 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
+        "empty-appointments",
+        |a, _| {
+            a.invoke_cover_selected(4, 0);
+            a.invoke_cover_activated(4);
+            Ok(())
+        },
+        now,
+        |a, _| {
+            require!(
+                a.get_appointment_rows().row_count() == 0
+                    && a.get_selected_appointment() == -1
+                    && !a.get_detail_open()
+                    && !a.get_detail_error(),
+                "empty Appointments treated as failure or retained content"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
         "empty-notes",
         |a, _| {
             a.invoke_tab_changed(1);
@@ -1182,6 +1340,32 @@ fn journey() -> VecDeque<Step> {
         |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
         noop,
     ));
+    q.push_back(Step::new(
+        "review-appointments-layout",
+        |a, _| {
+            a.invoke_close_detail();
+            a.invoke_tab_changed(0);
+            a.invoke_cover_selected(4, 2);
+            a.invoke_cover_activated(4);
+            Ok(())
+        },
+        |a, _, _| a.get_detail_open() && !a.get_detail_loading(),
+        |a, s| {
+            owned(a, s, "SYNTH-001", ChartTab::CoverSheet)?;
+            require!(
+                a.get_detail_body().contains("APPT-03"),
+                "review Appointments detail missing"
+            );
+            a.invoke_close_detail();
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "review-appointments-closed",
+        noop,
+        |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
+        noop,
+    ));
     q
 }
 
@@ -1210,12 +1394,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M9_DELIVERY {} {} {:?} generation={} applied={}",
+                "M10_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M9_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M10_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -1224,17 +1408,17 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M9_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M10_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
             );
         }
         if driver.keep_open {
-            println!("M9_REVIEW_READY SYNTH-001 CoverSheet MED-03; close the mock to exit.");
+            println!("M10_REVIEW_READY SYNTH-001 CoverSheet APPT-03; close the mock to exit.");
         }
     } else if let Err(error) = &result {
-        eprintln!("M9_INTEGRATED_FAIL {error}");
+        eprintln!("M10_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -1285,7 +1469,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M9_CHECK {} PASS elapsed_ms={}",
+            "M10_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );

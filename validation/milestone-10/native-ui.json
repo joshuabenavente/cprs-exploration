@@ -1,0 +1,237 @@
+{
+  "scope": "Milestone 10 native keyboard/layout observations; appointment speech pending",
+  "executable_sha256": "de217b49353b923172e62f7500eb20322aecec2cc0aa7c275d8c764e2d2288fd",
+  "layout_samples": [
+    {
+      "size": "default",
+      "application_scale": 1,
+      "capture_pixels": [
+        1182,
+        832
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1180,
+        800
+      ],
+      "log": "validation/milestone-10/layout-default-100.log",
+      "log_sha256": "28e58c12f1bd9bce8ccc35cccb52d60c83b250fc8a248a68aa5e3b8b8bb645c1",
+      "requested_logical": [
+        1180,
+        800
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1,
+      "capture_pixels": [
+        982,
+        712
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        980,
+        680
+      ],
+      "log": "validation/milestone-10/layout-minimum-100.log",
+      "log_sha256": "c5aa8c5949244df4d62af7f73aa09c26d6c04e8c10bae2f25f496e06962321e6",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    },
+    {
+      "size": "default",
+      "application_scale": 1.25,
+      "capture_pixels": [
+        1477,
+        1032
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1475,
+        1000
+      ],
+      "log": "validation/milestone-10/layout-default-125.log",
+      "log_sha256": "9a04403b4f4b0791deab09f4cf55c34e49a5c134cc26c617472f7fbef0feaba6",
+      "requested_logical": [
+        1180,
+        800
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1.25,
+      "capture_pixels": [
+        1227,
+        882
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1225,
+        850
+      ],
+      "log": "validation/milestone-10/layout-minimum-125.log",
+      "log_sha256": "dba2282723fa2786099411bb630421b94216fced02e19aa4fb36c2896c4bcfb4",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    },
+    {
+      "size": "default",
+      "application_scale": 1.5,
+      "capture_pixels": [
+        1772,
+        1232
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1770,
+        1200
+      ],
+      "log": "validation/milestone-10/layout-default-150.log",
+      "log_sha256": "1bb6466c2b52cc3760705fa19a8bc732dbd1b6eaf153ef83a05b57e8b0cd7118",
+      "requested_logical": [
+        1180,
+        800
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1.5,
+      "capture_pixels": [
+        1472,
+        1052
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1470,
+        1020
+      ],
+      "log": "validation/milestone-10/layout-minimum-150.log",
+      "log_sha256": "20e20c0b6f3657b9af4bded8908b2eed803017fbb6254d14e856960799a1c287",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    },
+    {
+      "size": "default",
+      "application_scale": 1.75,
+      "capture_pixels": [
+        2067,
+        1432
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        2065,
+        1400
+      ],
+      "log": "validation/milestone-10/layout-default-175.log",
+      "log_sha256": "9097d1b99137702ba12fb04846ec7a5df69c944a93586d1b1c87d9da7014a01c",
+      "requested_logical": [
+        1180,
+        800
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    },
+    {
+      "size": "minimum",
+      "application_scale": 1.75,
+      "capture_pixels": [
+        1717,
+        1222
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1715,
+        1190
+      ],
+      "log": "validation/milestone-10/layout-minimum-175.log",
+      "log_sha256": "693511837bc84bcbeff02901966933aa4058461c0ad04caa0cf08f4488750f90",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    },
+    {
+      "size": "default",
+      "application_scale": 2,
+      "capture_pixels": [
+        2362,
+        1432
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        2360,
+        1400
+      ],
+      "log": "validation/milestone-10/layout-default-200.log",
+      "log_sha256": "46f3f15d842cf8b31f40800a507337e242459177a05173596305e34aecc2a6b0",
+      "requested_logical": [
+        1180,
+        700
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    },
+    {
+      "size": "minimum",
+      "application_scale": 2,
+      "capture_pixels": [
+        1962,
+        1392
+      ],
+      "layout_passed": true,
+      "client_pixels": [
+        1960,
+        1360
+      ],
+      "log": "validation/milestone-10/layout-minimum-200.log",
+      "log_sha256": "d930a8a171eac7d47e8a63c10ccf2f70c1acdedb5f6bb4fc2e07ad6492740794",
+      "requested_logical": [
+        980,
+        680
+      ],
+      "observed": "Inspected Appointments rows, View action, help and separate fixture footer with fixed header/navigation/status. Full capture is unclipped. Minimum width retains a horizontal table scrollbar."
+    }
+  ],
+  "native_smoke_completed": true,
+  "native_checks": [
+    "Enter opens APPT-03 with initial read-only text focus and matching literal fields",
+    "Ctrl+A selects read-only text",
+    "Escape returns to originating table; native Up selects APPT-02 without opening detail",
+    "Space opens APPT-02; settled UIA text matches Beta fields",
+    "Tab reaches Appointments View; pointer activation opens APPT-02",
+    "Native double-click opens APPT-01",
+    "Ctrl+O opens selector; Escape preserves SYNTH-001; journey separately checks all five selections clear",
+    "Minimum 100% horizontal scrolling reveals full Action Req heading and values",
+    "Upper and middle panels additionally inspected at default 100% and minimum 200%"
+  ],
+  "notes": "validation/milestone-10/native-notes.md",
+  "notes_sha256": "2e57096127c2eb13f9a4d4d28446977098842841d5486462b19818da9d1fe96e",
+  "spoken_output": {
+    "status": "pending user listening",
+    "checklist": "docs/milestone-10.md#separate-appointments-listening-checklist",
+    "limits": "No audio recording or independent speech verification; earlier medication/Vitals listening stays historical."
+  },
+  "final_window": {
+    "size": "default",
+    "application_scale": 1,
+    "patient": "SYNTH-001",
+    "panel": "Appointments",
+    "selected_item": "APPT-03",
+    "detail": "closed"
+  },
+  "limits": [
+    "Native input and settled UIA are separate from callback/focus probes and speech.",
+    "No physical IME/dead-key, monitor-DPI transitions, original-client parity or clinical compatibility claimed."
+  ]
+}

@@ -539,6 +539,7 @@ pub struct AppState {
     pub selected_allergy: Option<String>,
     pub selected_vital: Option<String>,
     pub selected_medication: Option<String>,
+    pub selected_appointment: Option<String>,
     pub detail: DetailState,
     pub notes: NotesWorkspace,
     pub orders: OrdersWorkspace,
@@ -567,6 +568,7 @@ impl Default for AppState {
             selected_allergy: None,
             selected_vital: None,
             selected_medication: None,
+            selected_appointment: None,
             detail: DetailState::Closed,
             notes: NotesWorkspace::default(),
             orders: OrdersWorkspace::default(),
@@ -821,6 +823,7 @@ impl AppState {
         self.selected_allergy = None;
         self.selected_vital = None;
         self.selected_medication = None;
+        self.selected_appointment = None;
         self.detail = DetailState::Closed;
     }
 
@@ -830,6 +833,7 @@ impl AppState {
             PanelKind::Allergies => self.selected_allergy.as_ref(),
             PanelKind::Vitals => self.selected_vital.as_ref(),
             PanelKind::ActiveMedications => self.selected_medication.as_ref(),
+            PanelKind::Appointments => self.selected_appointment.as_ref(),
         }?;
         self.active
             .as_ref()?
@@ -853,6 +857,7 @@ impl AppState {
             PanelKind::Allergies => self.selected_allergy = id,
             PanelKind::Vitals => self.selected_vital = id,
             PanelKind::ActiveMedications => self.selected_medication = id,
+            PanelKind::Appointments => self.selected_appointment = id,
         }
     }
 

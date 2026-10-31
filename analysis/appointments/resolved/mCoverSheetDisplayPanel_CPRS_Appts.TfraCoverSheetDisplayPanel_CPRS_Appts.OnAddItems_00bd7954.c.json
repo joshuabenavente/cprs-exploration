@@ -1,0 +1,154 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems",
+  "address": "00bd7954",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems_00bd7954.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040a734",
+      "map_names": [
+        "System.@TryFinallyExit"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "00432550",
+      "map_names": [
+        "System.SysUtils.FormatDateTime"
+      ]
+    },
+    {
+      "address": "004d5460",
+      "map_names": [
+        "System.Classes.TStringsEnumerator.Create"
+      ]
+    },
+    {
+      "address": "004d54a4",
+      "map_names": [
+        "System.Classes.TStringsEnumerator.GetCurrent"
+      ]
+    },
+    {
+      "address": "004d5810",
+      "map_names": [
+        "System.Classes.TStrings.Append"
+      ]
+    },
+    {
+      "address": "0067c4d8",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.SetCaption"
+      ]
+    },
+    {
+      "address": "0067c5e0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.SetData"
+      ]
+    },
+    {
+      "address": "0067cde0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.Add"
+      ]
+    },
+    {
+      "address": "0067d074",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.BeginUpdate"
+      ]
+    },
+    {
+      "address": "0067d264",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.EndUpdate"
+      ]
+    },
+    {
+      "address": "009b2a68",
+      "map_names": [
+        "ORFn.MixedCase"
+      ]
+    },
+    {
+      "address": "00bcf770",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.Create"
+      ]
+    },
+    {
+      "address": "00bcf93c",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPiece"
+      ]
+    },
+    {
+      "address": "00bcfee8",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPieceAsTDateTime"
+      ]
+    },
+    {
+      "address": "00bd0bd4",
+      "map_names": [
+        "oDelimitedString.TDelimitedString.GetPieceIsNull"
+      ]
+    },
+    {
+      "address": "00bd36a0",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+      ]
+    },
+    {
+      "address": "00bd3be0",
+      "map_names": [
+        "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ExpandColumns"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bd7c38",
+      "file_offset": 8220728,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 15,
+      "text": "^No Visit Data."
+    },
+    {
+      "address": "00bd7c64",
+      "file_offset": 8220772,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "No Visit Data."
+    },
+    {
+      "address": "00bd7c90",
+      "file_offset": 8220816,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 18,
+      "text": "MMM DD, YYYY@hh:nn"
+    }
+  ]
+}

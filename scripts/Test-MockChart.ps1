@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([ValidateSet(9)][int]$Milestone = 9)
+param([ValidateSet(10)][int]$Milestone = 10)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $binaryPath = Join-Path $root 'target/debug/cprs-chart-mock.exe'
@@ -24,17 +24,22 @@ try {
     foreach ($step in $steps) {
         $arguments = $step.Arguments
         Write-Output ("Running: cargo " + ($arguments -join ' '))
-        $output = & cargo @arguments 2>&1
-        $code = $LASTEXITCODE
+        # Windows PowerShell wraps ordinary native stderr (Cargo progress) as
+        # ErrorRecord. Judge the process exit code, while still retaining stderr.
+        $ErrorActionPreference = 'Continue'
+        try {
+            $output = & cargo @arguments 2>&1
+            $code = $LASTEXITCODE
+        } finally { $ErrorActionPreference = 'Stop' }
         $output | ForEach-Object { $_.ToString() } | Set-Content -LiteralPath (Join-Path $validation ($step.Name + '.log')) -Encoding utf8
-        $output | Write-Output
+        $output | ForEach-Object { $_.ToString() } | Write-Output
         $results += [ordered]@{ name = $step.Name; command = 'cargo ' + ($arguments -join ' '); exit_code = $code; passed = ($code -eq 0) }
         if ($code -ne 0) { $failure = $step.Name; break }
     }
     $binary = Join-Path $root 'target/debug/cprs-chart-mock.exe'
     $receipt = [ordered]@{
         checked_at = [DateTimeOffset]::Now.ToString('o')
-        scope = 'Milestone 9 mock-only Active Medications and integrated chart validation'
+        scope = 'Milestone 10 mock-only Appointments and integrated chart validation'
         passed = ($null -eq $failure -and $results.Count -eq $steps.Count)
         rustc = (& rustc --version | Out-String).Trim()
         cargo = (& cargo --version | Out-String).Trim()

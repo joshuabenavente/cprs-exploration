@@ -1,0 +1,75 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create",
+  "address": "00bd34b4",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+  "numeric_callee_references": [
+    {
+      "address": "004096ac",
+      "map_names": [
+        "System.@ClassCreate"
+      ]
+    },
+    {
+      "address": "00409704",
+      "map_names": [
+        "System.@AfterConstruction"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "0067b5c0",
+      "map_names": [
+        "Vcl.ComCtrls.TListColumn.SetAutoSize"
+      ]
+    },
+    {
+      "address": "0067b720",
+      "map_names": [
+        "Vcl.ComCtrls.TListColumns.Add"
+      ]
+    },
+    {
+      "address": "0067fd4c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.SetRowSelect"
+      ]
+    },
+    {
+      "address": "0067fe24",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.SetColumnHeaders"
+      ]
+    },
+    {
+      "address": "00680278",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.SetReadOnly"
+      ]
+    },
+    {
+      "address": "006b860c",
+      "map_names": [
+        "Vcl.ExtCtrls.TTimer.SetEnabled"
+      ]
+    },
+    {
+      "address": "006b861c",
+      "map_names": [
+        "Vcl.ExtCtrls.TTimer.SetInterval"
+      ]
+    },
+    {
+      "address": "00bd2a9c",
+      "map_names": [
+        "mCoverSheetDisplayPanel.TfraCoverSheetDisplayPanel.Create"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

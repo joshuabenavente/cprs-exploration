@@ -8,14 +8,16 @@ pub enum PanelKind {
     Allergies,
     Vitals,
     ActiveMedications,
+    Appointments,
 }
 
 impl PanelKind {
-    pub const ALL: [Self; 4] = [
+    pub const ALL: [Self; 5] = [
         Self::ProblemList,
         Self::Allergies,
         Self::Vitals,
         Self::ActiveMedications,
+        Self::Appointments,
     ];
     pub fn title(self) -> &'static str {
         match self {
@@ -23,6 +25,7 @@ impl PanelKind {
             Self::Allergies => "Allergies",
             Self::Vitals => "Vitals",
             Self::ActiveMedications => "Active Medications",
+            Self::Appointments => "Appointments",
         }
     }
 }
@@ -36,6 +39,14 @@ pub struct CoverItem {
     pub symptoms: String,
     pub vital: Option<VitalDisplay>,
     pub medication: Option<MedicationDisplay>,
+    pub appointment: Option<AppointmentDisplay>,
+}
+
+/// Literal authored display strings, independent of visit context and scheduling.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct AppointmentDisplay {
+    pub location: String,
+    pub action_req: String,
 }
 
 /// Authored status text attached only to medication rows; independent of Orders.
@@ -59,6 +70,7 @@ pub struct CoverSheet {
     pub allergies: Vec<CoverItem>,
     pub vitals: Vec<CoverItem>,
     pub medications: Vec<CoverItem>,
+    pub appointments: Vec<CoverItem>,
 }
 
 impl CoverSheet {
@@ -68,6 +80,7 @@ impl CoverSheet {
             PanelKind::Allergies => &self.allergies,
             PanelKind::Vitals => &self.vitals,
             PanelKind::ActiveMedications => &self.medications,
+            PanelKind::Appointments => &self.appointments,
         }
     }
 
@@ -81,6 +94,7 @@ impl CoverSheet {
                         && !item.label.is_empty()
                         && (kind == PanelKind::Vitals) == item.vital.is_some()
                         && (kind == PanelKind::ActiveMedications) == item.medication.is_some()
+                        && (kind == PanelKind::Appointments) == item.appointment.is_some()
                         && ids.insert(&item.id)
                 })
             })
@@ -143,6 +157,7 @@ pub(crate) fn mock_cover_sheet(patient: &PatientSummary) -> CoverSheet {
         symptoms: symptoms.into(),
         vital: None,
         medication: None,
+        appointment: None,
     };
     let problems = if suffix == "SYNTH-007" {
         vec![]
@@ -231,12 +246,28 @@ pub(crate) fn mock_cover_sheet(patient: &PatientSummary) -> CoverSheet {
             row
         }).collect()
     };
+    let appointments = if suffix == "SYNTH-002" {
+        vec![]
+    } else {
+        [
+            ("APPT-01", "Nov 02, 2026@09:00", "Training location Alpha", "Demo action A"),
+            ("APPT-02", "Nov 03, 2026@14:30", "Training location Beta", "Demo action B"),
+            ("APPT-03", "Nov 04, 2026@10:15", "Training location Gamma — extended invented label for horizontal scrolling · Zoë 李", "Demo action C"),
+        ].into_iter().map(|(id, date_time, location, action_req)| {
+            let mut row = item(id, date_time.into(), "", "");
+            row.appointment = Some(AppointmentDisplay {
+                location: location.into(), action_req: action_req.into(),
+            });
+            row
+        }).collect()
+    };
     CoverSheet {
         patient_id: patient.id.clone(),
         problems,
         allergies,
         vitals,
         medications,
+        appointments,
     }
 }
 
@@ -263,6 +294,11 @@ pub(crate) fn mock_detail(
         format!(
             "\nMedication: {}\nStatus: {}\n\nAuthored read-only display. No medication instructions or dates are supplied by this fixture.",
             item.label, medication.status
+        )
+    } else if let Some(appointment) = &item.appointment {
+        format!(
+            "\nDate/Time: {}\nLocation: {}\nAction Req: {}\n\nAuthored read-only display. Action Req is invented text; no scheduling or encounter action is available.",
+            item.label, appointment.location, appointment.action_req
         )
     } else if request.panel == PanelKind::Allergies {
         format!(

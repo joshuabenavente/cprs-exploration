@@ -13,3 +13,6 @@ analysis/active-medications/** -text -whitespace
 validation/milestone-9/*.log -text -whitespace
 validation/milestone-9/*.json -text -whitespace
 validation/milestone-9/startup-handoff.md -text -whitespace
+# Preserve Milestone 10's raw exports, native logs and hashed receipts on checkout.
+analysis/appointments/** -text -whitespace
+validation/milestone-10/** -text -whitespace

@@ -64,6 +64,15 @@ public class ExportChartWorkflow extends HeadlessScript {
                 }
                 function.setBody(new AddressSet(function.getEntryPoint(), toAddr(0x00bd615bL)));
             }
+            // Appointments has the same bounded finally-continuation issue.
+            // Next MAP public is OnGetDetail at 00bd7cb8; preserve literal pools.
+            if (name.equals("mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems")) {
+                for (long at : new long[] {0x00bd7a5aL, 0x00bd7a61L, 0x00bd7bc6L, 0x00bd7bcdL, 0x00bd7bf1L,
+                        0x00bd7bf8L, 0x00bd7c1dL, 0x00bd7c24L}) {
+                    disassemble(toAddr(at));
+                }
+                function.setBody(new AddressSet(function.getEntryPoint(), toAddr(0x00bd7cb7L)));
+            }
             String filename = name.replaceAll("[^A-Za-z0-9_.-]", "_") + "_" + symbol.getAddress() + ".c";
             DecompileResults result = decomp.decompileFunction(function, 60, monitor);
             String status = result.decompileCompleted() ? "decompiled" : "failed";

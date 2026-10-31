@@ -1,6 +1,6 @@
 # CPRS Chart Rust recreation research
 
-This workspace contains a mock-only Rust patient selector, three Cover Sheet panels with read-only item details, read-only Notes, Orders, and Results browsers, and static research on CPRS Chart 1.33.214.5 (executable metadata: OR*3.0*639). All nine prototype records are invented. The Rust application has no live connection or clinical-write functionality.
+This workspace contains a mock-only Rust patient selector, five Cover Sheet panels with read-only item details, read-only Notes, Orders, and Results browsers, and static research on CPRS Chart 1.33.214.5 (executable metadata: OR*3.0*639). All nine prototype records are invented. The Rust application has no live connection or clinical-write functionality.
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
@@ -10,13 +10,13 @@ Initial scope includes Chart forms, navigation, client state, and the interfaces
 .\scripts\Start-MockChart.ps1
 ```
 
-Use `-Rebuild` after source changes. Search for `MORGAN` to see duplicate-name records with distinct synthetic IDs, `PATEL` for an acknowledgment, or `RIVERA` for denied mock access. `zárate` or `李` finds the Unicode fixture. Cover Sheet has synthetic Problem List, Allergies, Vitals and Active Medications panels. Vitals retains four recovered headings and shows invented values, units, timestamps and qualifiers; its read-only detail pane is authored policy. Active Medications retains Medication and Status headings, with independent MED identities and local read-only details. Notes loads a selected document automatically. Orders highlights a row first; Enter, double-click, or View order detail explicitly opens its read-only text. Both browsers support filtering, long Unicode fixtures, and error/retry simulations. SYNTH-002 has empty Notes, Orders, and Results lists. Results browses one invented interim-style laboratory report type with explicit opening and read-only text.
+Use `-Rebuild` after source changes. Search for `MORGAN` to see duplicate-name records with distinct synthetic IDs, `PATEL` for an acknowledgment, or `RIVERA` for denied mock access. `zárate` or `李` finds the Unicode fixture. Cover Sheet has synthetic Problem List, Allergies, Vitals, Active Medications and Appointments panels. Vitals retains four recovered headings and shows invented values, units, timestamps and qualifiers; its read-only detail pane is authored policy. Active Medications retains Medication and Status headings, with independent MED identities and local read-only details. Notes loads a selected document automatically. Orders highlights a row first; Enter, double-click, or View order detail explicitly opens its read-only text. Both browsers support filtering, long Unicode fixtures, and error/retry simulations. SYNTH-002 has empty Notes, Orders, and Results lists. Results browses one invented interim-style laboratory report type with explicit opening and read-only text.
 
-Run `scripts/Test-MockChart.ps1` for offline automated checks, now written under `validation/milestone-9/`. This includes 87 core cases, immediate callback smoke, and a separate real-timer integrated desktop journey. Run `scripts/verify_integrated.py` with the workspace Python interpreter to verify the journey log and produce its structured receipt. See the [current handoff](docs/handoff.md), [Milestone 9 results](docs/milestone-9.md), [Active Medications contract](specifications/active-medications.md), [Milestone 8 results](docs/milestone-8.md), [Vitals display contract](specifications/vitals.md), [Milestone 7 results](docs/milestone-7.md), [integrated acceptance contract](specifications/integrated-chart.md), [Results specification](specifications/results.md), [Orders specification](specifications/orders.md), and [Notes specification](specifications/notes.md). The original Ghidra analysis remains separate from the running app.
+Run `scripts/Test-MockChart.ps1` for offline automated checks, now written under `validation/milestone-10/`. This includes 96 core cases, immediate callback smoke, and a separate 71-checkpoint real-timer integrated desktop journey. Run `scripts/verify_integrated.py` with the workspace Python interpreter to verify the journey log and produce its structured receipt. See the [current handoff](docs/handoff.md), [Milestone 10 results](docs/milestone-10.md), [Appointments contract](specifications/appointments.md), [Milestone 9 results](docs/milestone-9.md), [Active Medications contract](specifications/active-medications.md), [Milestone 8 results](docs/milestone-8.md), [Vitals display contract](specifications/vitals.md), [Milestone 7 results](docs/milestone-7.md), [integrated acceptance contract](specifications/integrated-chart.md), [Results specification](specifications/results.md), [Orders specification](specifications/orders.md), and [Notes specification](specifications/notes.md). The original Ghidra analysis remains separate from the running app.
 
 For a repeatable layout check, use `scripts/Start-MockChart.ps1 -MinimumSize -ScaleFactor 1.25`. Supported application scale overrides are 1, 1.25, 1.5, 1.75, and 2. They do not change Windows display settings. Close the app before rebuilding or launching another scale check.
 
-Add `-IntegratedReview` to run the timed journey and leave SYNTH-001 / Cover Sheet / VITAL-03 selected for review. It verifies callbacks, bindings, and focus probes; native keyboard behavior and Narrator speech are assessed separately. Notes loads text on selection; Orders and Results require explicit opening. Canceling patient selection returns browser tabs to their local filter, and Cover Sheet detail starts with focus in its read-only text.
+Add `-IntegratedReview` to run the timed journey and leave SYNTH-001 / Cover Sheet / APPT-03 selected for review. It verifies callbacks, bindings, and focus probes; native keyboard behavior and Narrator speech are assessed separately. Notes loads text on selection; Orders and Results require explicit opening. Canceling patient selection returns browser tabs to their local filter, and Cover Sheet detail starts with focus in its read-only text. Appointments preserves Date/Time, Location and Action Req headings with literal invented display strings; no scheduling action is available.
 
 ## Analysis tools
 
@@ -68,7 +68,9 @@ Keep the GUI project closed during headless processing. Logs are in `analysis/lo
 
 ## Milestone documents
 
-- [Current Active Medications milestone](docs/milestone-9.md)
+- [Current Appointments milestone](docs/milestone-10.md)
+- [Appointments static recovery and authored contract](specifications/appointments.md)
+- [Accepted Active Medications milestone](docs/milestone-9.md)
 - [Active Medications static recovery and authored contract](specifications/active-medications.md)
 - [Milestone status and evidence](docs/milestone-1.md)
 - [Rust mock implementation and validation](docs/milestone-2.md)

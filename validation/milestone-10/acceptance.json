@@ -1,0 +1,26 @@
+{
+  "scope": "Milestone 10 mock-only Appointments bounded code/automated/native checkpoint",
+  "checkpoint_passed": true,
+  "milestone_acceptance_complete": false,
+  "executable_sha256": "de217b49353b923172e62f7500eb20322aecec2cc0aa7c275d8c764e2d2288fd",
+  "core_tests": 96,
+  "timed_checkpoints": 71,
+  "actual_deliveries": 92,
+  "rejected_stale_deliveries": 38,
+  "native_layout_samples": 10,
+  "spoken_output": "pending user listening",
+  "receipts_sha256": {
+    "validation/milestone-10/automated.json": "de830d28f5eba4cee2e0bab668443012b847ce3d1c3fd951a9b2ea80fb89a0eb",
+    "validation/milestone-10/integrated.json": "5e361e18f4da670cdebadf35e5d00ef696427283df6918a23d3b3da18a4aefb0",
+    "validation/milestone-10/native-ui.json": "c41cf8a85fee3127d367e9df9897cbd854112214f3f67175de7d5bdb6bb62482",
+    "validation/milestone-10/static.json": "8ec573bbfeb932e1f6fc8d3462da2411212570bfaaecf9f791697f312bfbf931",
+    "validation/milestone-10/historical-bytes.json": "89f52879f3b8bada9b402b33ef7ea8986fbac12e13dd622ebbf68db1a0f8f724",
+    "validation/milestone-10/startup-handoff.md": "7bc55ac0b6dad2203e907db194e04dd1cf3f41f733b03433aba326c0263f92e4"
+  },
+  "review": "Local self-review; no independent review or original-client runtime parity claimed",
+  "boundary": "Compiled invented records only; no server, transport, credentials, imports, original CPRS execution, DLL internals or clinical writes",
+  "limits": [
+    "User listening is separate from native input, UIA snapshots and callback/focus probes.",
+    "No full accessibility, monitor-DPI, physical IME or clinical-compatibility claim."
+  ]
+}

@@ -61,10 +61,12 @@ export component AppWindow inherits Window {
     in property <[[StandardListViewItem]]> allergy-rows;
     in property <[[StandardListViewItem]]> vital-rows;
     in property <[[StandardListViewItem]]> medication-rows;
+    in property <[[StandardListViewItem]]> appointment-rows;
     in-out property <int> selected-problem: -1;
     in-out property <int> selected-allergy: -1;
     in-out property <int> selected-vital: -1;
     in-out property <int> selected-medication: -1;
+    in-out property <int> selected-appointment: -1;
     in property <bool> detail-open;
     in property <bool> detail-loading;
     in property <bool> detail-error;
@@ -162,9 +164,9 @@ export component AppWindow inherits Window {
     public function focus-acknowledgment() { root.scroll-workspace-bottom(); continue-button.focus(); }
     public function reveal-cover(panel: int) {
         // Full-width lower rows retain their own viewport position on keyboard return.
-        workspace-scroll.content-y = panel == 3 ? min(0px, workspace-scroll.visible-height - workspace-scroll.content-height) : panel == 2 ? max(min(0px, -vital-panel.y - 24px), min(0px, workspace-scroll.visible-height - workspace-scroll.content-height)) : 0px;
+        workspace-scroll.content-y = panel == 4 ? min(0px, workspace-scroll.visible-height - workspace-scroll.content-height) : panel == 3 ? max(min(0px, -medication-panel.y - 24px), min(0px, workspace-scroll.visible-height - workspace-scroll.content-height)) : panel == 2 ? max(min(0px, -vital-panel.y - 24px), min(0px, workspace-scroll.visible-height - workspace-scroll.content-height)) : 0px;
     }
-    public function focus-cover(panel: int) { root.reveal-cover(panel); if panel == 0 { problem-panel.focus-list(); } else if panel == 1 { allergy-panel.focus-list(); } else if panel == 2 { vital-panel.focus-list(); } else { medication-panel.focus-list(); } }
+    public function focus-cover(panel: int) { root.reveal-cover(panel); if panel == 0 { problem-panel.focus-list(); } else if panel == 1 { allergy-panel.focus-list(); } else if panel == 2 { vital-panel.focus-list(); } else if panel == 3 { medication-panel.focus-list(); } else { appointment-panel.focus-list(); } }
     public function focus-detail() { detail-text.focus(); }
     public function focus-notes-filter() { notes-view.focus-filter(); }
     public function focus-notes-body() { notes-view.focus-body(); }
@@ -262,7 +264,7 @@ export component AppWindow inherits Window {
                 workspace-scroll := ScrollView {
                     width: parent.width; height: parent.height;
                     content-width: self.visible-width;
-                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : !root.selector-open && root.has-active && root.tab-index == 0 ? 1060px : !root.selector-open && (root.tab-index >= 1) ? 600px : 440px);
+                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : !root.selector-open && root.has-active && root.tab-index == 0 ? 1400px : !root.selector-open && (root.tab-index >= 1) ? 600px : 440px);
                     changed content-height => { self.content-y = min(0px, max(self.content-y, self.visible-height - self.content-height)); }
                     Rectangle {
                     width: workspace-scroll.visible-width; height: workspace-scroll.content-height;
@@ -468,7 +470,17 @@ export component AppWindow inherits Window {
                                 footer-focused => { root.reveal-cover(3); }
                                 list-focused-event => { root.reveal-cover(3); }
                             }
-                            Text { text: "Four synthetic panels · All entries are invented display text · Fixture date: " + root.fixture-date;
+                            appointment-panel := CoverPanel {
+                                title: "Appointments"; patient-id: root.active-id; appointments: true; rows: root.appointment-rows;
+                                enabled: !root.detail-open;
+                                selected-row <=> root.selected-appointment;
+                                selected(index) => { root.cover-selected(4, index); }
+                                released(index) => { root.cover-released(4, index); }
+                                activated => { root.cover-activated(4); }
+                                footer-focused => { root.reveal-cover(4); }
+                                list-focused-event => { root.reveal-cover(4); }
+                            }
+                            Text { text: "Five synthetic panels · All entries are invented display text · Fixture date: " + root.fixture-date;
                                 color: #617180; font-size: 12px; wrap: word-wrap; }
                             }
                         }

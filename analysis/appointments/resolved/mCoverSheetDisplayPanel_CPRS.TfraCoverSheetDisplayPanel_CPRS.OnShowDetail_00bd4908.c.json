@@ -1,0 +1,48 @@
+{
+  "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail",
+  "address": "00bd4908",
+  "status": "decompiled",
+  "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "00682964",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.GetSelected"
+      ]
+    },
+    {
+      "address": "01007fec",
+      "map_names": [
+        "fRptBox.ReportBox"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00bd49b8",
+      "file_offset": 8207800,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": " Item Detail: "
+    }
+  ]
+}
