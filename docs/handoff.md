@@ -1,6 +1,6 @@
 # Current handoff: CPRS Chart Rust recreation
 
-Updated 31 October 2026. **Milestone 8: mock-only, read-only Cover Sheet Vitals** is implemented and natively validated; the separate user listening result remains pending.
+Updated 31 October 2026. **Milestone 8: mock-only, read-only Cover Sheet Vitals** is implemented and validated. The user separately reported: **Vitals listening checklist passes**.
 
 ## Checkout and checkpoint
 
@@ -9,9 +9,9 @@ Updated 31 October 2026. **Milestone 8: mock-only, read-only Cover Sheet Vitals*
 - Current runtime: invented patient selection; Cover Sheet Problem List, Allergies and Vitals; Notes; Orders; interim-style Results. No original CPRS or clinical connection.
 - Milestone 8 evidence: [handoff/results](milestone-8.md), [Vitals contract](../specifications/vitals.md), [static](../validation/milestone-8/static.json), [automated](../validation/milestone-8/automated.json), [integrated](../validation/milestone-8/integrated.json), [native/listening](../validation/milestone-8/native-ui.json), [bounded acceptance](../validation/milestone-8/acceptance.json).
 - Formatting, warning-denied Clippy, all 78 core tests, locked/offline build, immediate callback smoke and 51 real-timer checkpoints passed. The journey observed 72 deliveries and rejected 30 stale replies.
-- All ten final native layout samples passed: default/minimum at 100%, 125%, 150%, 175%, 200%. At 200% the default uses compact 1180x700 logical sizing. Native minimum-200% arrows/Enter/Tab/Escape/Ctrl+O, text selection and cancellation passed. Ordinary native-launch 100% Tab/Down/Space/Escape also passed; the app is left on SYNTH-001 with Temperature selected for listening.
+- All ten final native layout samples passed: default/minimum at 100%, 125%, 150%, 175%, 200%. At 200% the default uses compact 1180x700 logical sizing. Native minimum-200% arrows/Enter/Tab/Escape/Ctrl+O, text selection and cancellation passed. Ordinary native-launch 100% Tab/Down/Space/Escape also passed; the app was left on SYNTH-001 with Temperature selected for listening; the user subsequently reported the separate checklist passing.
 - Final executable SHA256: `a79bebeece2d5e03fbf0f414bf4c461ffbbf588a125f4f33c00e33e98ae4202f`. It is an ignored build output, never a committed deliverable.
-- Authorized local checkpoint: `milestone-8-mock` on the current branch; no push/publication.
+- Implementation checkpoint: `79a4cb2`, tagged `milestone-8-mock`. A documentation/evidence follow-up records the user listening pass; the implementation tag remains unchanged. No push/publication.
 
 ## Recovery and authored policy
 
@@ -21,7 +21,7 @@ Constructor columns are Vital, Value, Date Taken and Quals. Row population and `
 
 Problem List/Allergies occupy the upper row and full-width Vitals the lower row of a scrollable workspace. Selection, explicit focus return and footer actions reveal the appropriate row. Header/navigation/status remain outside workspace scrolling. Enter/Space/View/double-click explicitly open detail; Escape closes and returns to its originating table. Preserve Notes automatic loading and Orders/Results explicit activation, browser cancellation returning to local filters, and exact synthetic identities.
 
-The bundled Fluent table's public `has-focus` does not reflect its internal keyboard scope. Cover Sheet list-focus branches were removed from the test probe rather than treated as actual focus. The integrated journey verifies read-only detail focus and closed/selection state; native arrows after Escape separately check return. UIA snapshots, actual native input, callback/widget probes and user speech reports remain distinct. Milestone 7's combined Narrator pass is historical; no new Vitals speech pass may be claimed without the user's report.
+The bundled Fluent table's public `has-focus` does not reflect its internal keyboard scope. Cover Sheet list-focus branches were removed from the test probe rather than treated as actual focus. The integrated journey verifies read-only detail focus and closed/selection state; native arrows after Escape separately check return. UIA snapshots, actual native input, callback/widget probes and user speech reports remain distinct. Milestone 7's combined Narrator pass remains historical. Milestone 8 now has its own scoped user-reported Vitals pass, without recorded audio or independent agent verification of speech.
 
 ## Reproduce and evidence handling
 
@@ -39,9 +39,9 @@ Current automated paths and protocol are Milestone 8 (`M8_*`, 51 checkpoints); t
 
 `Start-MockChart.ps1 -IntegratedReview [-MinimumSize] -ScaleFactor 1|1.25|1.5|1.75|2` uses real timers, then leaves SYNTH-001 / Cover Sheet / VITAL-03 selected and detail closed. Review/minimum/scale launches start at desktop origin. The supported native skill uses `@oai/sky` through node_repl; after a stale window cache, refresh/reset the session and select the current returned window. Full-window screenshots may accompany a 16x16 related surface; exclude the latter from geometry judgments. Do not change Windows settings.
 
-## Remaining action and boundaries
+## Acceptance and boundaries
 
-The bounded code/automated/native checkpoint is saved separately from the remaining [Vitals listening checklist](milestone-8.md#separate-vitals-listening-checklist). Do not reuse a historical Narrator pass. No full accessibility, physical IME/dead-key, monitor-DPI transition, clinical compatibility or original-runtime parity claim is supported.
+The bounded Milestone 8 scope is accepted, including the separate user-reported [Vitals listening checklist](milestone-8.md#separate-vitals-listening-checklist). The current acceptance receipt binds the same executable and automated/native evidence to that report. `staged-evidence.json` is historical byte verification for implementation commit `79a4cb2`; `listening-evidence.json` verifies the follow-up receipt bytes. No full accessibility, physical IME/dead-key, monitor-DPI transition, clinical compatibility or original-runtime parity claim is supported.
 
 Keep everything mock-only: no clinical server, transport/credentials, clinical imports, entry/editing, graphs/trends, conversions, interpretation, printing or signing; no original CPRS execution, VistA implementation or bundled DLL internals. Preserve generation/patient/panel/item ownership, stale/duplicate success/failure guards and empty/error distinctions. Continue on the current checkout and preserve later user changes. The local milestone checkpoint/tag does not authorize pushing or publishing.
 

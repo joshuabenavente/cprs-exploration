@@ -1,18 +1,18 @@
 {
   "scope": "Milestone 8 mock-only Vitals bounded code/automated/native checkpoint",
   "checkpoint_passed": true,
-  "milestone_acceptance_complete": false,
+  "milestone_acceptance_complete": true,
   "executable_sha256": "a79bebeece2d5e03fbf0f414bf4c461ffbbf588a125f4f33c00e33e98ae4202f",
   "core_tests": 78,
   "timed_checkpoints": 51,
   "actual_deliveries": 72,
   "rejected_stale_deliveries": 30,
   "native_layout_samples": 10,
-  "spoken_output": "pending user report",
+  "spoken_output": "user-reported pass",
   "receipts_sha256": {
     "validation/milestone-8/automated.json": "1e719c1c003b912e61d9d38037203390fbc7ae8e8c1935a3cec2df27f51d37e5",
     "validation/milestone-8/integrated.json": "e51f2fb9a245ead9b139471daae819f44bf6038f9d8eba6def8b9ddfbaf44661",
-    "validation/milestone-8/native-ui.json": "3f202dbca79e335c3264789a69e99418d17164a14950ffe96ce97ff34970b507",
+    "validation/milestone-8/native-ui.json": "e077d52986e8388b1f0aa17f8581f9c6375c4ccd3db65ad78531f2337e959548",
     "validation/milestone-8/static.json": "d0e66d6d2d532d3efdd2941067614fe5aeefcb7829023fd84a5f44c4c4cef3e9"
   },
   "review": "Local self-review; no independent review or original-client runtime parity claimed",

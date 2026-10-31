@@ -204,10 +204,24 @@
     "16x16 related screenshot surfaces were excluded from full-window geometry judgments."
   ],
   "spoken_output": {
-    "status": "pending user report",
+    "status": "user-reported pass",
     "historical": "Milestone 7 combined Narrator pass is historical and does not establish a Vitals pass.",
     "checklist": "docs/milestone-8.md#separate-vitals-listening-checklist",
-    "evidence_kind": "No new speech verified by the agent; user listening report required."
+    "evidence_kind": "Scoped user listening result; no recorded audio or independent agent verification of speech.",
+    "recorded_at": "2026-10-31T21:07:01.044859+00:00",
+    "report": "Vitals listening checklist passes",
+    "patients": [
+      "SYNTH-001",
+      "SYNTH-002 (synthetic empty panel)"
+    ],
+    "covered_controls": [
+      "Vitals patient and selected-item labels",
+      "Enter reads matching VITAL-01 value/unit/date; Escape returns to Vitals",
+      "Down then Space opens Pulse / VITAL-02",
+      "View action identifies Vitals",
+      "Ctrl+O / Escape clears Vitals selection/detail while preserving the committed chart",
+      "SYNTH-002 synthetic empty Vitals panel"
+    ]
   },
   "native_smoke_completed": true,
   "limits": [
