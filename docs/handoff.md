@@ -1,12 +1,14 @@
 ﻿# Current handoff: CPRS Chart Rust recreation
 
+**Next-session entry point: [Milestone 11 startup handoff](milestone-11-handoff.md).** The user requested this preparation on 31 October 2026. Milestone 11 is ready to start in a fresh session; implementation has not started. It covers shared Cover Sheet layout, accessibility and reproducibility hardening. The detailed scope, first actions, file map, evidence rules and acceptance criteria are in that handoff. Keep the pending Milestone 10 Appointments listening check open.
+
 Updated 31 October 2026. **Milestone 10: mock-only, read-only Cover Sheet Appointments** is implemented. Final automated, focused static and native layout/keyboard verification passed. The separate appointment listening check is pending. Do not mark milestone acceptance complete until that new listening result is reported.
 
 ## Checkout and preserved baseline
 
 - Workspace: `C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration`.
 - Local branch: `codex/milestone-10-appointments`, from accepted Milestone 9 commit `84b3301`. Startup checkout was clean; no running mock was found. On 31 October 2026, the user subsequently authorized committing and pushing the current work. This delivery preserves the pending appointment listening check.
-- Private GitHub destination: `https://github.com/joshuabenavente/cprs-exploration`, configured as `origin`. The checkout previously had no remote. Publish this milestone branch without merging it into another branch; use the branch log for its resulting commit ID.
+- Private GitHub destination: `https://github.com/joshuabenavente/cprs-exploration`, configured as `origin`. Milestone 10 was published on this branch in `c247c82`, followed by publication audit/next-step documentation in `61adc98`. Local and remote implementation heads matched before handoff preparation; use the branch log for the subsequent handoff checkpoint. No merge occurred.
 - [Exact incoming handoff](../validation/milestone-10/startup-handoff.md) and [historical byte manifest](../validation/milestone-10/historical-bytes.json) preserve the startup state. The manifest covers 617 previously tracked analysis/validation files, including Milestone 2-9 receipts. Do not regenerate old receipts with the current executable.
 - Historical Milestone 9 implementation, native checks and separate user-reported medication listening pass remain in [Milestone 9](milestone-9.md). They do not establish appointment speech behavior.
 
@@ -44,7 +46,7 @@ The supported [computer-use skill](C:/Users/soapo/.codex/plugins/cache/openai-bu
 
 ## Remaining acceptance and boundaries
 
-All ten default/minimum layout samples passed at 100%, 125%, 150%, 175% and 200%. Native Enter/Space/View/double-click/Escape/Tab/arrows/Ctrl+O, text selection, horizontal scrolling and selector cancellation passed. See [native receipt](../validation/milestone-10/native-ui.json) and [bounded acceptance receipt](../validation/milestone-10/acceptance.json). Upper/middle panels were also inspected at default 100% and minimum 200%; the ten scale samples focus on Appointments and fixed frame/footer geometry. The mock is left at default 100%, SYNTH-001 / Appointments, detail closed.
+All ten default/minimum layout samples passed at 100%, 125%, 150%, 175% and 200%. Native Enter/Space/View/double-click/Escape/Tab/arrows/Ctrl+O, text selection, horizontal scrolling and selector cancellation passed. See [native receipt](../validation/milestone-10/native-ui.json) and [bounded acceptance receipt](../validation/milestone-10/acceptance.json). Upper/middle panels were also inspected at default 100% and minimum 200%; the ten scale samples focus on Appointments and fixed frame/footer geometry. At native handoff the mock was left at default 100%, SYNTH-001 / Appointments, detail closed. No running mock was found during Milestone 11 handoff preparation; recheck on the next startup.
 
 The remaining user check is the new [separate Appointments listening checklist](milestone-10.md#separate-appointments-listening-checklist). Do not reuse medication speech evidence. No recorded audio, independent speech verification, full accessibility, physical IME/dead-key, monitor-DPI transition, original-client parity or clinical-compatibility claim is supported. Commit/push authorization does not establish listening acceptance.
 
