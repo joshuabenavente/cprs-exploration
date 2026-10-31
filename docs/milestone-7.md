@@ -35,7 +35,7 @@ All six final scale samples also completed the journey and were inspected native
 
 The ordinary native-launch 100% keyboard tour verified both MORGAN identities in the patient table name, Cover Sheet initial text focus and return to its originating panel, Notes automatic loading with text retained on Escape, and Orders/Results explicit opening with text cleared on Escape and selection retained. Ctrl+A demonstrated actual reading-pane text focus. Native Ctrl+O/Escape restored local filters on Notes at 100% and Results at minimum 175%; the timed journey separately verified Orders cancellation focus. Immediate UIA selected-name/document/focus snapshots sometimes retained prior state; fresh captures, native arrow navigation, caret, and text selection established the corresponding settled behavior separately.
 
-The combined listening checklist for the changed Milestone 7 labels and focus behavior remains unverified pending a separate user report. Earlier scoped Notes, Orders, and Results listening passes are preserved as historical evidence.
+The user reported that the combined Narrator checklist passes for SYNTH-001, covering the changed Results/Notes/Orders labels and reading behavior, Cover Sheet initial read-only detail focus and panel return, and browser cancellation returning to local filters. This is a scoped user listening result, without recorded audio or independent agent verification of speech; full assistive-technology conformance remains unverified. Earlier scoped Notes, Orders, and Results listening passes are preserved as historical evidence.
 
 ## Combined manual checklist
 

@@ -24,7 +24,7 @@
     "scale_layout_samples": 6,
     "layout_matrix": "default/minimum at 125%, 150%, 175%; actual geometry recorded",
     "keyboard": "ordinary native-launch 100% tour and minimum 175% patient cancellation",
-    "spoken_output": "unverified for the changed Milestone 7 labels and integrated checklist"
+    "spoken_output": "user-reported pass for the scoped combined Milestone 7 Narrator checklist"
   },
   "historical_evidence": {
     "new_original_binary_analysis": false,
@@ -44,7 +44,7 @@
     "analysis_loaded_by_runtime": false
   },
   "limits": [
-    "Combined changed-label Narrator checklist remains unverified pending user listening; prior scoped passes remain historical.",
+    "The combined changed-label Narrator checklist passed by user report; prior scoped passes remain historical. This is not full assistive-technology conformance.",
     "UIA snapshots can lag actual native input/focus/selection. Neither focus probes nor isolated snapshots establish full assistive-technology conformance.",
     "Process-local application scale samples do not establish Windows monitor-DPI transitions or physical IME/dead keys.",
     "Binding checks sample the event loop and do not prove compositor atomicity or production timing guarantees.",

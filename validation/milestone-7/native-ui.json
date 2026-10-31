@@ -107,8 +107,19 @@
     "Immediately after Notes Escape the reported focused element still named a filter; a native Down changed the selected note to NOTE-02, demonstrating actual list focus separately from that snapshot."
   ],
   "spoken_output": {
-    "status": "unverified for the changed Milestone 7 labels and integrated checklist",
-    "historical": "Earlier Notes, Orders, and Results scoped user passes are historical and remain separate."
+    "status": "user-reported pass",
+    "historical": "Earlier Notes, Orders, and Results scoped user passes are historical and remain separate.",
+    "reported_at": "2026-10-31T20:22:52.234536+00:00",
+    "report": "Combined Narrator checklist passes",
+    "patient": "SYNTH-001",
+    "checklist": [
+      "Changed Results labels identify the selected patient/report and matching read-only text; Escape closes detail and returns to the list",
+      "Notes selection loads text; Enter reads it and Escape returns to the list with text retained",
+      "Orders selection only highlights; explicit Enter opens matching text, and Escape clears text while retaining selection",
+      "Cover Sheet Enter starts focus in read-only detail; Escape restores the originating panel",
+      "Browser Ctrl+O then Escape returns to its local filter"
+    ],
+    "evidence_kind": "User listening result; no recorded audio or independent agent verification of speech"
   },
   "limits": [
     "Only process-local application scale is changed; monitor-DPI transitions are unverified.",
