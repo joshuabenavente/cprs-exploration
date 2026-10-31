@@ -1,14 +1,14 @@
 {
-  "scope": "Publication preparation review; implementation matches previously validated native checkpoint",
+  "scope": "Publication preparation review; runtime implementation matches validated native checkpoint; three Python tools have EOF whitespace cleanup only",
   "branch": "codex/milestone-10-appointments",
   "baseline": "84b3301",
   "destination": "https://github.com/joshuabenavente/cprs-exploration",
   "visibility": "private",
   "authorization": "User requested situation report, next-step recommendations, commit and push on 31 October 2026",
-  "validated_implementation_files_unchanged": 16,
+  "validated_implementation_files_unchanged": 13,
   "source_sha256": {
     "README.md": "8e6f7adece7df8fd5085be21a642da408d32f37df4a59cc6d976f70076725eaf",
-    "docs/handoff.md": "38c2a7237b02f18bebd3b888b4156972f3ebcd41b2564f5d2f4371160dd5cf03",
+    "docs/handoff.md": "e71e2930ad77e55ed571fdd4e90bde57dee9cad323acec43f809bb380bd086e7",
     "docs/milestone-10.md": "7a860b813e7c5a317514bde8a4973cbb452a32e8c636a0eb1de8c5b96dee581f",
     "specifications/appointments.md": "b9abf856ff42f5c5ab63b1b7504892a6ddf6a2e73cfdeb81101011b48cb25a0b",
     "provenance/appointments-targets.txt": "5ac3fafa87928ec8d3221037d8e0ec2e04ddf437a20f472c1c20bf056f610eee",
@@ -24,9 +24,9 @@
     "scripts/Test-MockChart.ps1": "aa6915455c6753f45711bf98675e84dd19243b749fb918db84be052194630560",
     "scripts/ghidra/ExportChartWorkflow.java": "a045d074faf5bf2cea7f14b0b088d940a6f2f803ae4405203ba856ad4529b63c",
     "scripts/resolve_workflow.py": "e7f803adfe57c99b19547942f4af502df8b0c5ef83c1409e30cb6e55aab0dc9c",
-    "scripts/inspect_appointments.py": "a2acb4dcb965a55f92234be0445c3afdeb864327cd847d01dc3a5fcc983d3dd2",
-    "scripts/verify_appointments.py": "647b6a948707121c7c36500fb82183aec4f58217f7f1dfc6605c6482e21facf0",
-    "scripts/verify_appointments_checkpoint.py": "14248153473f825473dce145b0db03b6bf4d042af0463fb3dc90e514f8493a1e",
+    "scripts/inspect_appointments.py": "7d5fe24b8b1e1f96e0d0918198b6c3308d5f27b3caf2dfc5fdcd0b36086fd55f",
+    "scripts/verify_appointments.py": "78410103a3d1504e364b0e6b1f317a761f97709b2fbe1a43173422bc8eae1eb9",
+    "scripts/verify_appointments_checkpoint.py": "50b1661ced47382e7aade6f7fe586f0118962dc70260fc9799a88b444d8c39e2",
     "scripts/verify_integrated.py": "3e8f8cea91ce8128c0b56c99007d01394cbcde3aa6cd0cbff3278105adbd09c4",
     ".gitattributes": "70e4f72913b4f4d2a4f26ec0e74d1d2da92b0ab704b1d262e50fa7aaa2eb6760",
     "specifications/integrated-chart.md": "5d312f4bf4611f53da7a77f779f63ccb5e065cce6522c9f0bd85c23535a82b87"
@@ -40,5 +40,18 @@
     "Updated integrated contract and handoff to current scope and user publication authorization"
   ],
   "listening": "pending user listening",
-  "recommended_next": "Finish Appointments listening, then content-driven Cover Sheet layout and accessibility hardening; future Consults slice remains recommendation only"
+  "recommended_next": "Finish Appointments listening, then content-driven Cover Sheet layout, accessibility and clean Windows checkout/CI hardening; future Consults slice remains recommendation only",
+  "python_tools_only_surplus_eof_whitespace_removed": [
+    "scripts/inspect_appointments.py",
+    "scripts/verify_appointments.py",
+    "scripts/verify_appointments_checkpoint.py"
+  ],
+  "byte_audit": {
+    "historical_worktree_files_verified": 617,
+    "historical_git_blobs_unchanged": 617,
+    "legacy_git_worktree_crlf_differences": 167,
+    "all_legacy_differences_crlf_only": true,
+    "new_evidence_git_bytes_verified_at_implementation_commit": 69,
+    "limits": "Historical manifest binds the preserved workstation bytes; some pre-existing Git blobs normalize CRLF. This is not a clean-clone cross-platform validation."
+  }
 }

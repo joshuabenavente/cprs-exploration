@@ -39,4 +39,3 @@ if __name__ == '__main__':
     output = ROOT / 'analysis/appointments/vmt.json'
     output.write_text(json.dumps(recover(), indent=2), encoding='utf-8')
     print('Recovered four bounded Appts VMT slots')
-
