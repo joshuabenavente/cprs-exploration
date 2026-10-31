@@ -19,12 +19,15 @@ def main():
     group.add_argument('--cover-sheet', action='store_true')
     group.add_argument('--notes', action='store_true')
     group.add_argument('--orders', action='store_true')
+    group.add_argument('--results', action='store_true')
     args = parser.parse_args()
     analysis = ROOT / 'analysis' / 'cover-sheet' if args.cover_sheet else ROOT / 'analysis'
     if args.notes:
         analysis = ROOT / 'analysis/notes'
     if args.orders:
         analysis = ROOT / 'analysis/orders'
+    if args.results:
+        analysis = ROOT / 'analysis/results'
     pe = PE(ROOT / 'cprs/CPRSChart.exe')
     by_address = {}
     with (ROOT / 'analysis/inventory/chart-symbols.tsv').open(encoding='utf-8', newline='') as f:
@@ -72,7 +75,7 @@ def main():
         results.append(resolved)
     (out / 'workflow-evidence.json').write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding='utf-8')
     for function in results:
-        if args.cover_sheet or args.notes or args.orders or function['function'].startswith(('fPtSel.', 'rCore.')):
+        if args.cover_sheet or args.notes or args.orders or args.results or function['function'].startswith(('fPtSel.', 'rCore.')):
             print(function['function'])
             for call in function['numeric_callee_references']:
                 relevant = [n for n in call['map_names'] if n.startswith(('rCore.', 'uCore.', 'fPtSel.', 'fFrame.', 'fDupPts.'))]

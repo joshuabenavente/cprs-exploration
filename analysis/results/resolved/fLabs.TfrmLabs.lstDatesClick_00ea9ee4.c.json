@@ -1,0 +1,662 @@
+{
+  "function": "fLabs.TfrmLabs.lstDatesClick",
+  "address": "00ea9ee4",
+  "status": "decompiled",
+  "file": "fLabs.TfrmLabs.lstDatesClick_00ea9ee4.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040bff4",
+      "map_names": [
+        "System.@UStrFromLStr"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0040c35c",
+      "map_names": [
+        "System.@UStrCopy"
+      ]
+    },
+    {
+      "address": "0040d1c4",
+      "map_names": [
+        "System.@FinalizeArray"
+      ]
+    },
+    {
+      "address": "0042c1a8",
+      "map_names": [
+        "System.SysUtils.UpperCase"
+      ]
+    },
+    {
+      "address": "0042cfdc",
+      "map_names": [
+        "System.SysUtils.IntToStr"
+      ]
+    },
+    {
+      "address": "0042d1fc",
+      "map_names": [
+        "System.SysUtils.StrToInt"
+      ]
+    },
+    {
+      "address": "00430914",
+      "map_names": [
+        "System.SysUtils.FloatToStr"
+      ]
+    },
+    {
+      "address": "0044973c",
+      "map_names": [
+        "System.Variants.@VarToUStr"
+      ]
+    },
+    {
+      "address": "0044a008",
+      "map_names": [
+        "System.Variants.@VarFromWChar"
+      ]
+    },
+    {
+      "address": "0044e1a0",
+      "map_names": [
+        "System.Variants.@VarAdd"
+      ]
+    },
+    {
+      "address": "0044e1b8",
+      "map_names": [
+        "System.Variants.@VarCmpEQ"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "006015e8",
+      "map_names": [
+        "Vcl.Controls.TControl.SetAlign"
+      ]
+    },
+    {
+      "address": "00601944",
+      "map_names": [
+        "Vcl.Controls.TControl.SetLeft"
+      ]
+    },
+    {
+      "address": "00601978",
+      "map_names": [
+        "Vcl.Controls.TControl.SetTop"
+      ]
+    },
+    {
+      "address": "006019e4",
+      "map_names": [
+        "Vcl.Controls.TControl.SetHeight"
+      ]
+    },
+    {
+      "address": "006025b0",
+      "map_names": [
+        "Vcl.Controls.TControl.SetVisible"
+      ]
+    },
+    {
+      "address": "006026ac",
+      "map_names": [
+        "Vcl.Controls.TControl.GetText"
+      ]
+    },
+    {
+      "address": "006026fc",
+      "map_names": [
+        "Vcl.Controls.TControl.SetText"
+      ]
+    },
+    {
+      "address": "0060cdec",
+      "map_names": [
+        "Vcl.Controls.TWinControl.SetTabStop"
+      ]
+    },
+    {
+      "address": "00668488",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTabControl.GetTabIndex"
+      ]
+    },
+    {
+      "address": "006b861c",
+      "map_names": [
+        "Vcl.ExtCtrls.TTimer.SetInterval"
+      ]
+    },
+    {
+      "address": "00729a50",
+      "map_names": [
+        "Vcl.Forms.TScreen.SetCursor"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "007ab6d8",
+      "map_names": [
+        "ORCtrls.TORListBox.GetDisplayText"
+      ]
+    },
+    {
+      "address": "007adbdc",
+      "map_names": [
+        "ORCtrls.TORListBox.GetItemIEN"
+      ]
+    },
+    {
+      "address": "007ae008",
+      "map_names": [
+        "ORCtrls.TORListBox.GetItemID"
+      ]
+    },
+    {
+      "address": "007b1014",
+      "map_names": [
+        "ORCtrls.TORListBox.GetMItems"
+      ]
+    },
+    {
+      "address": "008235c0",
+      "map_names": [
+        "VCLTee.TeEngine.TChartAxis.SetAutomatic"
+      ]
+    },
+    {
+      "address": "009b0d84",
+      "map_names": [
+        "ORFn.DateTimeToFMDateTime"
+      ]
+    },
+    {
+      "address": "009b3d64",
+      "map_names": [
+        "ORFn.QuickCopy"
+      ]
+    },
+    {
+      "address": "009b60ec",
+      "map_names": [
+        "ORFn.StatusText"
+      ]
+    },
+    {
+      "address": "00ad9eac",
+      "map_names": [
+        "ORDtTmRng.TORDateRangeDlg.Execute"
+      ]
+    },
+    {
+      "address": "00c86560",
+      "map_names": [
+        "rLabs.Cumulative"
+      ]
+    },
+    {
+      "address": "00c86a24",
+      "map_names": [
+        "rLabs.Micro"
+      ]
+    },
+    {
+      "address": "00c86d9c",
+      "map_names": [
+        "rLabs.setWorksheet"
+      ]
+    },
+    {
+      "address": "00c86e6c",
+      "map_names": [
+        "rLabs.Reports"
+      ]
+    },
+    {
+      "address": "00c87400",
+      "map_names": [
+        "rLabs.setGetChart"
+      ]
+    },
+    {
+      "address": "00ea5bd0",
+      "map_names": [
+        "fLabs.TfrmLabs.DisplayHeading"
+      ]
+    },
+    {
+      "address": "00eabd04",
+      "map_names": [
+        "fLabs.TfrmLabs.GraphList"
+      ]
+    },
+    {
+      "address": "00eac294",
+      "map_names": [
+        "fLabs.TfrmLabs.HGrid"
+      ]
+    },
+    {
+      "address": "00eaca0c",
+      "map_names": [
+        "fLabs.TfrmLabs.VGrid"
+      ]
+    },
+    {
+      "address": "00ead170",
+      "map_names": [
+        "fLabs.TfrmLabs.GridComments"
+      ]
+    },
+    {
+      "address": "00eafe78",
+      "map_names": [
+        "fLabs.TfrmLabs.FMToDateTime"
+      ]
+    },
+    {
+      "address": "00eb0104",
+      "map_names": [
+        "fLabs.TfrmLabs.GraphChart"
+      ]
+    },
+    {
+      "address": "00eb0c24",
+      "map_names": [
+        "fLabs.TfrmLabs.ragCorGClick"
+      ]
+    },
+    {
+      "address": "00eb279c",
+      "map_names": [
+        "fLabs.TfrmLabs.chkGraphZoomClick"
+      ]
+    },
+    {
+      "address": "00eb3fac",
+      "map_names": [
+        "fLabs.TfrmLabs.BeginEndDates"
+      ]
+    },
+    {
+      "address": "00eb4234",
+      "map_names": [
+        "fLabs.TfrmLabs.BlankWeb"
+      ]
+    },
+    {
+      "address": "00ebc24c",
+      "map_names": [
+        "fLabs.TfrmLabs.GoRemoteOld"
+      ]
+    },
+    {
+      "address": "00ebd410",
+      "map_names": [
+        "fLabs.TfrmLabs.ChkBrowser"
+      ]
+    },
+    {
+      "address": "011ca688",
+      "map_names": [
+        "rCore.FMToday"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00eab470",
+      "file_offset": 11184240,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": ";"
+    },
+    {
+      "address": "00eab480",
+      "file_offset": 11184256,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "^"
+    },
+    {
+      "address": "00eab490",
+      "file_offset": 11184272,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": " to "
+    },
+    {
+      "address": "00eab4b4",
+      "file_offset": 11184308,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "21"
+    },
+    {
+      "address": "00eab4c8",
+      "file_offset": 11184328,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 40,
+      "text": "Retrieving data for cumulative report..."
+    },
+    {
+      "address": "00eab528",
+      "file_offset": 11184424,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": " "
+    },
+    {
+      "address": "00eab538",
+      "file_offset": 11184440,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "3"
+    },
+    {
+      "address": "00eab548",
+      "file_offset": 11184456,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 37,
+      "text": "Retrieving data for interim report..."
+    },
+    {
+      "address": "00eab5a0",
+      "file_offset": 11184544,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 33,
+      "text": "<No results for this date range.>"
+    },
+    {
+      "address": "00eab5f0",
+      "file_offset": 11184624,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "4"
+    },
+    {
+      "address": "00eab600",
+      "file_offset": 11184640,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 37,
+      "text": "Retrieving data for selected tests..."
+    },
+    {
+      "address": "00eab658",
+      "file_offset": 11184728,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 51,
+      "text": "<No results for selected tests in this date range.>"
+    },
+    {
+      "address": "00eab6cc",
+      "file_offset": 11184844,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "5"
+    },
+    {
+      "address": "00eab6dc",
+      "file_offset": 11184860,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 32,
+      "text": "Retrieving data for worksheet..."
+    },
+    {
+      "address": "00eab72c",
+      "file_offset": 11184940,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "6"
+    },
+    {
+      "address": "00eab73c",
+      "file_offset": 11184956,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 28,
+      "text": "Retrieving data for graph..."
+    },
+    {
+      "address": "00eab784",
+      "file_offset": 11185028,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 27,
+      "text": "<No comments on specimens.>"
+    },
+    {
+      "address": "00eab7c8",
+      "file_offset": 11185096,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "0"
+    },
+    {
+      "address": "00eab7d8",
+      "file_offset": 11185112,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 31,
+      "text": "<No results can be graphed for "
+    },
+    {
+      "address": "00eab824",
+      "file_offset": 11185188,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 22,
+      "text": " in this date range.> "
+    },
+    {
+      "address": "00eab860",
+      "file_offset": 11185248,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 78,
+      "text": "Results may be available, but cannot be graphed. Please try an alternate view."
+    },
+    {
+      "address": "00eab90c",
+      "file_offset": 11185420,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": " ("
+    },
+    {
+      "address": "00eab920",
+      "file_offset": 11185440,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 23,
+      "text": ") in this date range.> "
+    },
+    {
+      "address": "00eab95c",
+      "file_offset": 11185500,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "9"
+    },
+    {
+      "address": "00eab96c",
+      "file_offset": 11185516,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 31,
+      "text": "Retrieving microbiology data..."
+    },
+    {
+      "address": "00eab9b8",
+      "file_offset": 11185592,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 46,
+      "text": "<No microbiology results for this date range.>"
+    },
+    {
+      "address": "00eaba24",
+      "file_offset": 11185700,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "10"
+    },
+    {
+      "address": "00eaba38",
+      "file_offset": 11185720,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 29,
+      "text": "Retrieving lab status data..."
+    },
+    {
+      "address": "00eaba80",
+      "file_offset": 11185792,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "L:10"
+    },
+    {
+      "address": "00eaba98",
+      "file_offset": 11185816,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 43,
+      "text": "<No laboratory orders for this date range.>"
+    },
+    {
+      "address": "00eabafc",
+      "file_offset": 11185916,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 22,
+      "text": "Retrieving lab data..."
+    },
+    {
+      "address": "00eabb38",
+      "file_offset": 11185976,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "L:"
+    },
+    {
+      "address": "00eabb4c",
+      "file_offset": 11185996,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 30,
+      "text": "<No data for this date range.>"
+    },
+    {
+      "address": "00eabb98",
+      "file_offset": 11186072,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "R"
+    },
+    {
+      "address": "00eabba8",
+      "file_offset": 11186088,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 108,
+      "text": "<html><head><style>\r\nPRE {font-size:8pt;font-family: \"Courier New\", \"monospace\"}\r\n</style></head><body><pre>"
+    },
+    {
+      "address": "00eabc90",
+      "file_offset": 11186320,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 22,
+      "text": "\r\n</pre></body></html>"
+    },
+    {
+      "address": "00eabccc",
+      "file_offset": 11186380,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": "1:MOST RECENT"
+    },
+    {
+      "address": "00eabcf4",
+      "file_offset": 11186420,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "T"
+    }
+  ]
+}

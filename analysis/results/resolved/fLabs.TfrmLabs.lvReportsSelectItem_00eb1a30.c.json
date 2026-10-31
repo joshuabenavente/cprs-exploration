@@ -1,0 +1,262 @@
+{
+  "function": "fLabs.TfrmLabs.lvReportsSelectItem",
+  "address": "00eb1a30",
+  "status": "decompiled",
+  "file": "fLabs.TfrmLabs.lvReportsSelectItem_00eb1a30.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040bf44",
+      "map_names": [
+        "System.@UStrFromWChar"
+      ]
+    },
+    {
+      "address": "0040c18c",
+      "map_names": [
+        "System.@UStrCat3"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0042d238",
+      "map_names": [
+        "System.SysUtils.StrToIntDef"
+      ]
+    },
+    {
+      "address": "004d2ff0",
+      "map_names": [
+        "System.Classes.TList.Get"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "0067c668",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.GetState"
+      ]
+    },
+    {
+      "address": "0067cc34",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.GetSubItemImage"
+      ]
+    },
+    {
+      "address": "0067ce80",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.GetCount"
+      ]
+    },
+    {
+      "address": "0067ced0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.GetItem"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "0079af38",
+      "map_names": [
+        "VAUtils.SetPiece"
+      ]
+    },
+    {
+      "address": "009b3eb4",
+      "map_names": [
+        "ORFn.FastAssign"
+      ]
+    },
+    {
+      "address": "011d3f74",
+      "map_names": [
+        "uCore.NotifyOtherApps"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00eb23b4",
+      "file_offset": 11212724,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "1"
+    },
+    {
+      "address": "00eb23c4",
+      "file_offset": 11212740,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": " "
+    },
+    {
+      "address": "00eb23d4",
+      "file_offset": 11212756,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 10,
+      "text": "Facility: "
+    },
+    {
+      "address": "00eb23f8",
+      "file_offset": 11212792,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 79,
+      "text": "==============================================================================="
+    },
+    {
+      "address": "00eb24a4",
+      "file_offset": 11212964,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "OR_R18:IMAGING"
+    },
+    {
+      "address": "00eb24d0",
+      "file_offset": 11213008,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "RA^"
+    },
+    {
+      "address": "00eb24e4",
+      "file_offset": 11213028,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "^"
+    },
+    {
+      "address": "00eb24f4",
+      "file_offset": 11213044,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "RPT"
+    },
+    {
+      "address": "00eb2508",
+      "file_offset": 11213064,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 5,
+      "text": "RA^^^"
+    },
+    {
+      "address": "00eb2520",
+      "file_offset": 11213088,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 39,
+      "text": "<Imaging links not active at this site>"
+    },
+    {
+      "address": "00eb257c",
+      "file_offset": 11213180,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 20,
+      "text": "OR_PN:PROGRESS NOTES"
+    },
+    {
+      "address": "00eb25b4",
+      "file_offset": 11213236,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "0"
+    },
+    {
+      "address": "00eb25c4",
+      "file_offset": 11213252,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "PN^"
+    },
+    {
+      "address": "00eb25d8",
+      "file_offset": 11213272,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "OR_APL"
+    },
+    {
+      "address": "00eb25f4",
+      "file_offset": 11213300,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "OR_CYL"
+    },
+    {
+      "address": "00eb2610",
+      "file_offset": 11213328,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "OR_EML"
+    },
+    {
+      "address": "00eb262c",
+      "file_offset": 11213356,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "OR_SPL"
+    },
+    {
+      "address": "00eb2648",
+      "file_offset": 11213384,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 4,
+      "text": "TIU^"
+    }
+  ]
+}

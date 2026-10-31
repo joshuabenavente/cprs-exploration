@@ -1,0 +1,38 @@
+{
+  "function": "rLabs.Interim",
+  "address": "00c867c8",
+  "status": "decompiled",
+  "file": "rLabs.Interim_00c867c8.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00c86884",
+      "file_offset": 8936580,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 52,
+      "text": "RPC is missing from report definition (file 101.24)."
+    },
+    {
+      "address": "00c868fc",
+      "file_offset": 8936700,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 33,
+      "text": "Please contact Technical Support."
+    }
+  ]
+}

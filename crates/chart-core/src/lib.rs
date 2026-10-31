@@ -9,6 +9,8 @@ mod notes;
 pub use notes::*;
 mod orders;
 pub use orders::*;
+mod results;
+pub use results::*;
 
 pub const FIXTURE_DATE: &str = "31 Oct 2026";
 pub const PAGE_SIZE: usize = 4;
@@ -134,6 +136,8 @@ pub trait PatientProvider {
     fn note_body(&self, request: &NoteRequest) -> Result<NoteBody, ProviderError>;
     fn orders_list(&self, request: &OrdersListRequest) -> Result<OrdersList, ProviderError>;
     fn order_detail(&self, request: &OrderRequest) -> Result<OrderDetail, ProviderError>;
+    fn results_list(&self, request: &ResultsListRequest) -> Result<ResultsList, ProviderError>;
+    fn report_detail(&self, request: &ReportRequest) -> Result<ReportDetail, ProviderError>;
 }
 
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
@@ -151,6 +155,9 @@ pub enum Simulation {
     OrdersListUnavailable,
     OrderDetailUnavailable,
     SlowOrders,
+    ResultsListUnavailable,
+    ReportDetailUnavailable,
+    SlowResults,
 }
 
 #[derive(Clone, Debug, Default)]
@@ -284,6 +291,35 @@ impl MockProvider {
 }
 
 impl PatientProvider for MockProvider {
+    fn results_list(&self, request: &ResultsListRequest) -> Result<ResultsList, ProviderError> {
+        if self.simulation == Simulation::ResultsListUnavailable {
+            return Err(ProviderError::Unavailable(
+                "Mock report list unavailable. This is not an empty result.".into(),
+            ));
+        }
+        if let AccessDecision::Deny(reason) | AccessDecision::Unavailable(reason) =
+            self.access(&request.patient_id)
+        {
+            return Err(ProviderError::Unavailable(reason));
+        }
+        Ok(results::mock_results(
+            &self.preview(&request.patient_id)?,
+            request,
+        ))
+    }
+    fn report_detail(&self, request: &ReportRequest) -> Result<ReportDetail, ProviderError> {
+        if self.simulation == Simulation::ReportDetailUnavailable {
+            return Err(ProviderError::Unavailable(
+                "Mock report detail unavailable. Previous detail text has been cleared.".into(),
+            ));
+        }
+        if let AccessDecision::Deny(reason) | AccessDecision::Unavailable(reason) =
+            self.access(&request.patient_id)
+        {
+            return Err(ProviderError::Unavailable(reason));
+        }
+        results::mock_report_detail(&self.preview(&request.patient_id)?, request)
+    }
     fn orders_list(&self, request: &OrdersListRequest) -> Result<OrdersList, ProviderError> {
         if self.simulation == Simulation::OrdersListUnavailable {
             return Err(ProviderError::Unavailable(
@@ -471,6 +507,9 @@ impl ChartTab {
         if self == Self::Orders {
             return "Mock-only read-only Orders browser.".into();
         }
+        if self == Self::Results {
+            return "Mock-only read-only laboratory Results browser.".into();
+        }
         format!(
             "{} is not implemented in this mock prototype.",
             self.title()
@@ -501,6 +540,7 @@ pub struct AppState {
     pub detail: DetailState,
     pub notes: NotesWorkspace,
     pub orders: OrdersWorkspace,
+    pub results: ResultsWorkspace,
     detail_generation: u64,
     search_generation: u64,
     chart_generation: u64,
@@ -526,6 +566,7 @@ impl Default for AppState {
             detail: DetailState::Closed,
             notes: NotesWorkspace::default(),
             orders: OrdersWorkspace::default(),
+            results: ResultsWorkspace::default(),
             detail_generation: 0,
             search_generation: 0,
             chart_generation: 0,
@@ -542,6 +583,7 @@ impl AppState {
 
     pub fn open_selection(&mut self) -> SearchRequest {
         self.orders.clear();
+        self.results.clear();
         self.notes.clear();
         self.clear_cover_transient();
         self.selector_open = true;
@@ -727,6 +769,7 @@ impl AppState {
                 self.clear_cover_transient();
                 self.notes.clear();
                 self.orders.clear();
+                self.results.clear();
                 self.active = Some(chart);
                 self.selector_open = false;
                 self.pending = None;
@@ -762,6 +805,7 @@ impl AppState {
                 self.close_detail();
                 self.notes.clear();
                 self.orders.clear();
+                self.results.clear();
             }
             self.tab = tab;
         }

@@ -1,0 +1,88 @@
+{
+  "function": "rReports.LoadReportText",
+  "address": "00c03f50",
+  "status": "decompiled",
+  "file": "rReports.LoadReportText_00c03f50.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b0c8",
+      "map_names": [
+        "System.@UStrAddRef"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c35c",
+      "map_names": [
+        "System.@UStrCopy"
+      ]
+    },
+    {
+      "address": "009b1bc4",
+      "map_names": [
+        "ORFn.CharAt"
+      ]
+    },
+    {
+      "address": "009b2f6c",
+      "map_names": [
+        "ORFn.Piece"
+      ]
+    },
+    {
+      "address": "009b3114",
+      "map_names": [
+        "ORFn.SetPiece"
+      ]
+    },
+    {
+      "address": "011ca88c",
+      "map_names": [
+        "rCore.StrToFMDateTime"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00c04254",
+      "file_offset": 8402516,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "~"
+    },
+    {
+      "address": "00c04264",
+      "file_offset": 8402532,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 52,
+      "text": "RPC is missing from report definition (file 101.24)."
+    },
+    {
+      "address": "00c042dc",
+      "file_offset": 8402652,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 33,
+      "text": "Please contact Technical Support."
+    }
+  ]
+}

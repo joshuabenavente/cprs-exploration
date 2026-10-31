@@ -1,0 +1,262 @@
+{
+  "function": "fLabs.TfrmLabs.LoadListView",
+  "address": "00ea4d6c",
+  "status": "decompiled",
+  "file": "fLabs.TfrmLabs.LoadListView_00ea4d6c.c",
+  "numeric_callee_references": [
+    {
+      "address": "004090bc",
+      "map_names": [
+        "System.TObject.Free"
+      ]
+    },
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "0040b40c",
+      "map_names": [
+        "System.@UStrLAsg"
+      ]
+    },
+    {
+      "address": "0040c134",
+      "map_names": [
+        "System.@UStrCat"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0040c35c",
+      "map_names": [
+        "System.@UStrCopy"
+      ]
+    },
+    {
+      "address": "0040c4b0",
+      "map_names": [
+        "System.@UStrPos"
+      ]
+    },
+    {
+      "address": "0042cfdc",
+      "map_names": [
+        "System.SysUtils.IntToStr"
+      ]
+    },
+    {
+      "address": "0042d1fc",
+      "map_names": [
+        "System.SysUtils.StrToInt"
+      ]
+    },
+    {
+      "address": "0042d238",
+      "map_names": [
+        "System.SysUtils.StrToIntDef"
+      ]
+    },
+    {
+      "address": "004d81f4",
+      "map_names": [
+        "System.Classes.TStringList.Create"
+      ]
+    },
+    {
+      "address": "0067c4d8",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.SetCaption"
+      ]
+    },
+    {
+      "address": "0067c6d8",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.SetState"
+      ]
+    },
+    {
+      "address": "0067cc40",
+      "map_names": [
+        "Vcl.ComCtrls.TListItem.SetSubItemImage"
+      ]
+    },
+    {
+      "address": "0067cde0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.Add"
+      ]
+    },
+    {
+      "address": "0067ce80",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.GetCount"
+      ]
+    },
+    {
+      "address": "0067ced0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.GetItem"
+      ]
+    },
+    {
+      "address": "0068263c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.SetSmallImages"
+      ]
+    },
+    {
+      "address": "0079acec",
+      "map_names": [
+        "VAUtils.Piece"
+      ]
+    },
+    {
+      "address": "0079c19c",
+      "map_names": [
+        "VAUtils.ShowMsg"
+      ]
+    },
+    {
+      "address": "009d8d18",
+      "map_names": [
+        "VA508ImageListLabeler.TVA508ImageListLabeler.ComponentImageListChanged"
+      ]
+    },
+    {
+      "address": "00c02470",
+      "map_names": [
+        "uReports.TLabRowObject.Add"
+      ]
+    },
+    {
+      "address": "011d431c",
+      "map_names": [
+        "uCore.TUser.HasKey"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00ea59cc",
+      "file_offset": 11161036,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 2,
+      "text": "-1"
+    },
+    {
+      "address": "00ea59e0",
+      "file_offset": 11161056,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 19,
+      "text": "<No Data Available>"
+    },
+    {
+      "address": "00ea5a14",
+      "file_offset": 11161108,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": ":"
+    },
+    {
+      "address": "00ea5a24",
+      "file_offset": 11161124,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "1"
+    },
+    {
+      "address": "00ea5a34",
+      "file_offset": 11161140,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 3,
+      "text": "..."
+    },
+    {
+      "address": "00ea5a48",
+      "file_offset": 11161160,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "^"
+    },
+    {
+      "address": "00ea5a58",
+      "file_offset": 11161176,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "OR_APL"
+    },
+    {
+      "address": "00ea5a74",
+      "file_offset": 11161204,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "OR_CYL"
+    },
+    {
+      "address": "00ea5a90",
+      "file_offset": 11161232,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "OR_EML"
+    },
+    {
+      "address": "00ea5aac",
+      "file_offset": 11161260,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 6,
+      "text": "OR_SPL"
+    },
+    {
+      "address": "00ea5ac8",
+      "file_offset": 11161288,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 10,
+      "text": "XUPROGMODE"
+    },
+    {
+      "address": "00ea5aec",
+      "file_offset": 11161324,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 101,
+      "text": "Programmer message: One or more Column ID's in file 101.24 do not match ID's coded in extract routine"
+    }
+  ]
+}

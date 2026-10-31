@@ -1,0 +1,33 @@
+{
+  "function": "fLabs.TfrmLabs.lstHeadersClick",
+  "address": "00ea67e0",
+  "status": "decompiled",
+  "file": "fLabs.TfrmLabs.lstHeadersClick_00ea67e0.c",
+  "numeric_callee_references": [
+    {
+      "address": "0041c028",
+      "map_names": [
+        "Winapi.Windows.SendMessage"
+      ]
+    },
+    {
+      "address": "006025b0",
+      "map_names": [
+        "Vcl.Controls.TControl.SetVisible"
+      ]
+    },
+    {
+      "address": "0060ca58",
+      "map_names": [
+        "Vcl.Controls.TWinControl.GetHandle"
+      ]
+    },
+    {
+      "address": "007adbdc",
+      "map_names": [
+        "ORCtrls.TORListBox.GetItemIEN"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

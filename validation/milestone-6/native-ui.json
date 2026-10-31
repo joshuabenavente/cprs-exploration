@@ -1,0 +1,57 @@
+{
+  "scope": "Native mock-only Results observations; no original-client execution",
+  "executable_sha256": "6480ce0924fe46bde15371fa58fc0d5fc7ade3cebb3c6d948c686ca7fa7a218c",
+  "samples": [
+    {
+      "application_scale": 1,
+      "logical_client": [
+        1180,
+        800
+      ],
+      "capture_pixels": [
+        1182,
+        832
+      ]
+    },
+    {
+      "application_scale": 2,
+      "logical_client": [
+        980,
+        680
+      ],
+      "capture_pixels": [
+        1962,
+        1392
+      ]
+    }
+  ],
+  "observations": [
+    "The final corrected build opened through the native app launcher. Native double-click committed CARTER, JAMIE / SYNTH-001; Cover Sheet cards and their actions fitted within the default viewport.",
+    "Results had four columns and focused its text filter. Enter then Down selected REPORT-01 without loading text. Enter explicitly requested text and scrolled to the reading pane; View report detail and Close detail fitted inside the card, with patient header/navigation/status fixed. Settled UIA text identified SYNTH-001 / REPORT-01.",
+    "Escape cleared text, retained REPORT-01, and returned to the top/list. Down selected the other duplicate title as REPORT-02 with no document loaded. Native double-click on the visible Unicode row requested REPORT-03.",
+    "Ctrl+A in REPORT-03 selected 14391 exposed characters and reached section 80 and END OF INVENTED REPORT DETAIL. A normal x key changed neither selected text nor selection length.",
+    "Ctrl+F focused the Results filter and restored the top viewport. Native-launch tool text input pasted the invented Unicode character 李; a settled capture showed one matching report, no selected report, and an empty read-only pane. This was clipboard-backed tool input, not physical IME composition.",
+    "With the Unicode filter retained, selecting Detail unavailable and native-double-clicking REPORT-03 produced an explicit report error, empty read-only text, and a visible Retry mock report detail action. Clicking Retry returned to retrieving for SYNTH-001 / REPORT-03 with no previous text restored.",
+    "List unavailable cleared selection/text and showed an explicit unavailable message rather than a successful empty list. Tab navigation exposed Retry mock report list inside the card. Native retry returned to list loading with the current Unicode query retained.",
+    "After leaving Results error/retry, Notes loaded SYNTH-001 / NOTE-01 and its read-only pane/Read selected note action fitted inside the card. Orders still required explicit activation after selection, and its reading pane/View/Close actions also fitted the corrected layout. A settled Orders text snapshot identified SYNTH-001 / ORDER-01; old Results errors did not replace either tab.",
+    "At minimum logical size 980x680 and 200% application scale, the four Results columns, filter, and scenario selector were usable. Enter then Down highlighted REPORT-01 without text. Enter explicitly opened it; focus scrolling exposed the full reading pane and View/Close actions inside the card while patient header/navigation/status stayed fixed. A settled text snapshot identified SYNTH-001 / REPORT-01.",
+    "At 200%, Escape cleared text and retained REPORT-01. Three Down keys selected REPORT-04 without retrieving intermediate reports; Enter requested that empty-text fixture.",
+    "A settled 200% snapshot of REPORT-04 explicitly said This invented report has an empty detail response., with no value in the read-only control. It was distinct from the earlier unavailable-report error. Accessible value replacement filtered to REPORT-01 for a later cancellation check; that input is not a physical typing/composition result.",
+    "At 200%, settled REPORT-01 contained nonempty SYNTH-001 text. Ctrl+O opened patient selection while the committed header remained SYNTH-001. Escape returned to Results, reloaded its list, and showed no selected report or document value; previous text was not restored.",
+    "After cancellation settled, Results showed four fresh rows with no selection or text. Reopening patient selection retained the SYNTH-001 header until a native double-click selected NGUYEN, RILEY / SYNTH-002.",
+    "Patient commit reset navigation to Cover Sheet with the SYNTH-002 header. Opening Results produced the settled successful empty-list message, no selected report, and no document value. No SYNTH-001 report text was restored."
+  ],
+  "spoken_output": {
+    "status": "unverified for new Results controls",
+    "historical": "Prior Notes and Orders user listening passes remain separate."
+  },
+  "limits": [
+    "Full assistive-technology conformance, physical IME/dead keys, original-client parity, server/site behavior, and clinical compatibility are unverified.",
+    "Only default 100% and minimum-size 200% application-scale samples were tested; intermediate scales, monitor DPI changes, and full original report/category/date-range behavior remain unverified."
+  ],
+  "native_smoke_completed": true,
+  "uia_limits": [
+    "Immediate UIA focus/document snapshots can retain prior state after native input. Settled captures and native caret/selection behavior were checked separately; no exact input-to-paint latency is claimed."
+  ],
+  "scale_method": "Process-local application scale; Windows display settings unchanged"
+}

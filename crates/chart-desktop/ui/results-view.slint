@@ -1,0 +1,116 @@
+import { Button, ComboBox, LineEdit, StandardTableView, TextEdit } from "std-widgets.slint";
+
+export component ResultsView inherits Rectangle {
+    in property <[[StandardListViewItem]]> rows;
+    in-out property <int> selected-row: -1;
+    in-out property <string> query;
+    in property <int> scenario;
+    in property <bool> loading;
+    in property <bool> list-error;
+    in property <string> list-status;
+    in property <string> identity;
+    in property <string> body-status;
+    in property <string> body;
+    in property <bool> body-error;
+    in property <bool> body-ready;
+    in property <bool> detail-open;
+    callback filter-edited(string);
+    callback scenario-changed(int);
+    callback selected(int);
+    callback released(int);
+    callback activated();
+    callback closed();
+    callback retry-list();
+    callback retry-body();
+    callback top-focused();
+    callback body-focused();
+    public function focus-filter() { root.top-focused(); filter.focus(); }
+    public function focus-list() { root.top-focused(); list.focus(); }
+    public function focus-body() { root.body-focused(); report-text.focus(); }
+    changed body => { report-text.content-x = 0px; report-text.content-y = 0px; report-text.clear-selection(); }
+    background: white; border-color: #c9d5df; border-width: 1px;
+    min-width: 800px; min-height: 450px;
+    focus := FocusScope {
+        width: parent.width; height: parent.height;
+        focus-on-tab-navigation: false; focus-on-click: false;
+        key-pressed(event) => {
+            if event.text == Key.Escape { root.closed(); root.focus-list(); return accept; }
+            if event.text == Key.Return && root.selected-row >= 0 { root.activated(); return accept; }
+            reject
+        }
+        VerticalLayout {
+            padding: 12px; spacing: 8px;
+            Text { text: "Results · Invented interim-style reports"; font-size: 19px; font-weight: 600; color: #23445b; }
+            HorizontalLayout {
+                spacing: 10px;
+                filter := LineEdit {
+                    text <=> root.query;
+                    placeholder-text: "Filter invented results by report title, specimen, location, or report ID";
+                    accessible-label: "Filter invented results";
+                    edited => { root.filter-edited(self.text); }
+                    accepted => { list.focus(); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+                ComboBox {
+                    width: 185px; current-index: root.scenario;
+                    model: ["Normal results", "List unavailable", "Detail unavailable", "Slow report replies"];
+                    accessible-label: "Mock Results scenario";
+                    selected(value) => { root.scenario-changed(self.current-index); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+            }
+            Text { text: root.list-status; color: root.list-error ? #9b3027 : #526879; wrap: word-wrap; font-size: 12px; }
+            list := StandardTableView {
+                height: 160px;
+                enabled: !root.loading && root.rows.length > 0;
+                accessible-label: "Invented Results list — newest first";
+                rows: root.rows; current-row <=> root.selected-row;
+                columns: [
+                    { title: "Date", width: 170px, min-width: 150px },
+                    { title: "Report", width: 340px, min-width: 250px },
+                    { title: "Training specimen", width: 190px, min-width: 150px },
+                    { title: "Location", width: 200px, min-width: 150px }
+                ];
+                row-pointer-event(index, event, position) => {
+                    if event.kind == PointerEventKind.up && event.button == PointerEventButton.left { root.released(index); }
+                }
+                current-row-changed(index) => { root.selected(index); }
+                sort-ascending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
+                sort-descending(column) => { self.columns[column].sort-order = SortOrder.unsorted; }
+                changed has-focus => { if self.has-focus { root.top-focused(); } }
+            }
+            Text { text: root.identity; color: #23445b; font-weight: 600; wrap: word-wrap; }
+            Text { text: root.body-status; color: root.body-error ? #9b3027 : #526879; wrap: word-wrap; font-size: 12px; }
+            report-text := TextEdit {
+                min-height: 140px; vertical-stretch: 1;
+                text: root.body; read-only: true; wrap: no-wrap;
+                font-family: "Courier New"; font-size: 14px;
+                accessible-label: "Read-only invented report detail";
+                changed has-focus => { if self.has-focus { root.body-focused(); } }
+            }
+            HorizontalLayout {
+                spacing: 10px;
+                Button {
+                    text: "View report detail"; enabled: root.selected-row >= 0;
+                    accessible-label: "View selected invented report detail";
+                    clicked => { root.activated(); }
+                    changed has-focus => { if self.has-focus { root.body-focused(); } }
+                }
+                Button {
+                    text: "Close detail"; enabled: root.detail-open;
+                    accessible-label: "Close invented report detail";
+                    clicked => { root.closed(); root.focus-list(); }
+                    changed has-focus => { if self.has-focus { root.body-focused(); } }
+                }
+                Button {
+                    text: root.list-error ? "Retry mock report list" : "Retry mock report detail";
+                    visible: root.list-error || root.body-error; enabled: root.list-error || root.body-error;
+                    clicked => { if root.list-error { root.retry-list(); } else { root.retry-body(); } }
+                    changed has-focus => { if self.has-focus { root.body-focused(); } }
+                }
+                Rectangle { horizontal-stretch: 1; background: transparent; }
+                Text { text: "Enter/double-click: detail · Esc: close detail"; color: #617180; font-size: 12px; vertical-alignment: center; }
+            }
+        }
+    }
+}

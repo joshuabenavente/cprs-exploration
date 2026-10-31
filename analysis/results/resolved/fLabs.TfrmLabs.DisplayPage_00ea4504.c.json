@@ -1,0 +1,214 @@
+{
+  "function": "fLabs.TfrmLabs.DisplayPage",
+  "address": "00ea4504",
+  "status": "decompiled",
+  "file": "fLabs.TfrmLabs.DisplayPage_00ea4504.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040ba58",
+      "map_names": [
+        "System.@LStrFromUStr"
+      ]
+    },
+    {
+      "address": "0040c214",
+      "map_names": [
+        "System.@UStrCatN"
+      ]
+    },
+    {
+      "address": "0040c324",
+      "map_names": [
+        "System.@UStrEqual"
+      ]
+    },
+    {
+      "address": "0042cfdc",
+      "map_names": [
+        "System.SysUtils.IntToStr"
+      ]
+    },
+    {
+      "address": "004d2ff0",
+      "map_names": [
+        "System.Classes.TList.Get"
+      ]
+    },
+    {
+      "address": "004d4e14",
+      "map_names": [
+        "System.Classes.TCollection.Clear"
+      ]
+    },
+    {
+      "address": "006015e8",
+      "map_names": [
+        "Vcl.Controls.TControl.SetAlign"
+      ]
+    },
+    {
+      "address": "006025b0",
+      "map_names": [
+        "Vcl.Controls.TControl.SetVisible"
+      ]
+    },
+    {
+      "address": "006026fc",
+      "map_names": [
+        "Vcl.Controls.TControl.SetText"
+      ]
+    },
+    {
+      "address": "0066f6b0",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNodes.GetCount"
+      ]
+    },
+    {
+      "address": "0066fb68",
+      "map_names": [
+        "Vcl.ComCtrls.TTreeNodes.GetFirstNode"
+      ]
+    },
+    {
+      "address": "00672184",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTreeView.SetSelected"
+      ]
+    },
+    {
+      "address": "0067cfe0",
+      "map_names": [
+        "Vcl.ComCtrls.TListItems.Clear"
+      ]
+    },
+    {
+      "address": "0068263c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.SetSmallImages"
+      ]
+    },
+    {
+      "address": "00709128",
+      "map_names": [
+        "Vcl.Menus.TMenuItem.SetEnabled"
+      ]
+    },
+    {
+      "address": "009b60ec",
+      "map_names": [
+        "ORFn.StatusText"
+      ]
+    },
+    {
+      "address": "00c87c4c",
+      "map_names": [
+        "rLabs.UseRadioButtons"
+      ]
+    },
+    {
+      "address": "00ea631c",
+      "map_names": [
+        "fLabs.TfrmLabs.LoadTreeView"
+      ]
+    },
+    {
+      "address": "00eb2ebc",
+      "map_names": [
+        "fLabs.TfrmLabs.ProcessNotifications"
+      ]
+    },
+    {
+      "address": "00ebd8f4",
+      "map_names": [
+        "fLabs.TfrmLabs.RightTopHeader"
+      ]
+    },
+    {
+      "address": "011d700c",
+      "map_names": [
+        "uCore.TRemoteSite.ReportClear"
+      ]
+    },
+    {
+      "address": "012034e8",
+      "map_names": [
+        "fPage.TfrmPage.DisplayPage"
+      ]
+    },
+    {
+      "address": "012035ec",
+      "map_names": [
+        "fPage.TfrmPage.GetInitPage"
+      ]
+    },
+    {
+      "address": "0120360c",
+      "map_names": [
+        "fPage.TfrmPage.GetInitPatient"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00ea49a0",
+      "file_offset": 11156896,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 134,
+      "text": "<DIV align left><TABLE width=\"75%\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\"><TR valign=\"bottom\" align=\"left\"><TD nowrap><B>Patient: "
+    },
+    {
+      "address": "00ea4abc",
+      "file_offset": 11157180,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 9,
+      "text": "</B></TD>"
+    },
+    {
+      "address": "00ea4adc",
+      "file_offset": 11157212,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 14,
+      "text": "<TD nowrap><B>"
+    },
+    {
+      "address": "00ea4b08",
+      "file_offset": 11157256,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 19,
+      "text": "<TD nowrap><B>Age: "
+    },
+    {
+      "address": "00ea4b3c",
+      "file_offset": 11157308,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 23,
+      "text": "</TR></TABLE></DIV><HR>"
+    },
+    {
+      "address": "00ea4b78",
+      "file_offset": 11157368,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 1,
+      "text": "M"
+    }
+  ]
+}

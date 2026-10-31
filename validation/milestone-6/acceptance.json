@@ -1,0 +1,70 @@
+{
+  "checked_at": "2026-10-31T19:32:32.313782+00:00",
+  "scope": "Milestone 6: focused laboratory report evidence and one mock-only read-only interim-style Results browser",
+  "passed": true,
+  "checkpoint": "Bounded synthetic implementation; Results spoken-output check recorded separately",
+  "branch": "work/milestone-6-results",
+  "executable_sha256": "6480ce0924fe46bde15371fa58fc0d5fc7ade3cebb3c6d948c686ca7fa7a218c",
+  "static": {
+    "receipt": "validation/milestone-6/static.json",
+    "original_executable_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "map_names": 12,
+    "function_addresses": 12,
+    "decoded_forms": 1,
+    "evidence_files": 42,
+    "automatic_analysis": false,
+    "staged_evidence_byte_hashes_verified": true
+  },
+  "automated": {
+    "receipt": "validation/milestone-6/automated.json",
+    "workflow_tests": 70,
+    "new_results_cases": 15,
+    "prior_regressions": 55,
+    "format_clippy_build_callbacks": "passed; locked/offline"
+  },
+  "native": {
+    "receipt": "validation/milestone-6/native-ui.json",
+    "samples": [
+      {
+        "application_scale": 1,
+        "logical_client": [
+          1180,
+          800
+        ],
+        "capture_pixels": [
+          1182,
+          832
+        ]
+      },
+      {
+        "application_scale": 2,
+        "logical_client": [
+          980,
+          680
+        ],
+        "capture_pixels": [
+          1962,
+          1392
+        ]
+      }
+    ],
+    "windows_monitor_dpi_changed": false,
+    "results_spoken_output": "unverified pending separate user listening result"
+  },
+  "review": "Local code/evidence self-review; no independent reviewer or original-client runtime parity claimed",
+  "safe_boundary": {
+    "compiled_invented_records_only": true,
+    "network_transport": false,
+    "clinical_data_import": false,
+    "clinical_values_or_interpretation": false,
+    "graphs_printing_export_acknowledgment_signing": false,
+    "original_cprs_process_executed": false,
+    "analysis_loaded_by_runtime": false
+  },
+  "limits": [
+    "Results speech requires a separate listening result; prior Notes/Orders passes are historical. Full assistive-technology conformance and physical IME/dead keys remain unverified.",
+    "Immediate UIA snapshots can lag native focus/document transitions; settled captures and native caret/selection behavior were assessed separately.",
+    "Only the default 100% and minimum-size 200% application-scale samples were tested; intermediate scales and monitor DPI changes remain unverified.",
+    "The list, identifiers, filtering, sorting, and explicit activation are authored prototype policy. Original report categories/date ranges, Delphi ABI, server contracts, site permissions, clinical compatibility, and runtime parity remain unverified."
+  ]
+}

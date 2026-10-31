@@ -1,0 +1,33 @@
+{
+  "function": "fLabs.TfrmLabs.Memo1Enter",
+  "address": "00ebda94",
+  "status": "decompiled",
+  "file": "fLabs.TfrmLabs.Memo1Enter_00ebda94.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "006026ac",
+      "map_names": [
+        "Vcl.Controls.TControl.GetText"
+      ]
+    },
+    {
+      "address": "009d6144",
+      "map_names": [
+        "VA508AccessibilityRouter.GetScreenReader"
+      ]
+    },
+    {
+      "address": "009d619c",
+      "map_names": [
+        "VA508AccessibilityRouter.ScreenReaderActive"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

@@ -1,0 +1,69 @@
+{
+  "function": "fLabs.TfrmLabs.ClearPtData",
+  "address": "00ea4440",
+  "status": "decompiled",
+  "file": "fLabs.TfrmLabs.ClearPtData_00ea4440.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "00669150",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomTabControl.GetTabs"
+      ]
+    },
+    {
+      "address": "0068263c",
+      "map_names": [
+        "Vcl.ComCtrls.TCustomListView.SetSmallImages"
+      ]
+    },
+    {
+      "address": "006b860c",
+      "map_names": [
+        "Vcl.ExtCtrls.TTimer.SetEnabled"
+      ]
+    },
+    {
+      "address": "00768fac",
+      "map_names": [
+        "Vcl.Grids.TCustomGrid.SetColCount"
+      ]
+    },
+    {
+      "address": "00769474",
+      "map_names": [
+        "Vcl.Grids.TCustomGrid.SetRowCount"
+      ]
+    },
+    {
+      "address": "0076d3a0",
+      "map_names": [
+        "Vcl.Grids.TStringGrid.SetCells"
+      ]
+    },
+    {
+      "address": "00eb4234",
+      "map_names": [
+        "fLabs.TfrmLabs.BlankWeb"
+      ]
+    },
+    {
+      "address": "00ebd980",
+      "map_names": [
+        "fLabs.TfrmLabs.HideTabControl"
+      ]
+    },
+    {
+      "address": "012034d0",
+      "map_names": [
+        "fPage.TfrmPage.ClearPtData"
+      ]
+    }
+  ],
+  "delphi_string_literals": []
+}

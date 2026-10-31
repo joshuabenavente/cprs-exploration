@@ -1,0 +1,42 @@
+{
+  "function": "rLabs.GetNewestOldest",
+  "address": "00c87324",
+  "status": "decompiled",
+  "file": "rLabs.GetNewestOldest_00c87324.c",
+  "numeric_callee_references": [
+    {
+      "address": "0040afd4",
+      "map_names": [
+        "System.@UStrClr"
+      ]
+    },
+    {
+      "address": "0040b034",
+      "map_names": [
+        "System.@UStrArrayClr"
+      ]
+    },
+    {
+      "address": "0040b3c4",
+      "map_names": [
+        "System.@UStrAsg"
+      ]
+    },
+    {
+      "address": "009b2f6c",
+      "map_names": [
+        "ORFn.Piece"
+      ]
+    }
+  ],
+  "delphi_string_literals": [
+    {
+      "address": "00c873e4",
+      "file_offset": 8939492,
+      "codepage": 1200,
+      "element_width": 2,
+      "length": 13,
+      "text": "ORWLRR NEWOLD"
+    }
+  ]
+}

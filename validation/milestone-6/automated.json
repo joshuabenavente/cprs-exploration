@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-10-31T13:22:53.4264780-06:00",
+  "scope": "Mock-only Rust patient selection, Cover Sheet details, Notes, read-only Orders, and Results report list/text",
+  "passed": true,
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+  "checks": [
+    {
+      "name": "format",
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "clippy",
+      "command": "cargo clippy --workspace --all-targets --locked --offline -- -D warnings",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "tests",
+      "command": "cargo test --workspace --locked --offline",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "build",
+      "command": "cargo build -p cprs-chart-mock --locked --offline",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "callbacks",
+      "command": "cargo run -p cprs-chart-mock --locked --offline -- --smoke-check",
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "executable": "target/debug/cprs-chart-mock.exe",
+  "executable_sha256": "6480ce0924fe46bde15371fa58fc0d5fc7ade3cebb3c6d948c686ca7fa7a218c",
+  "evidence_limits": [
+    "Callback smoke uses immediate in-memory responses; race handling is covered by core tests.",
+    "Visual and keyboard observations are recorded separately.",
+    "No clinical server or original CPRS process is involved."
+  ]
+}

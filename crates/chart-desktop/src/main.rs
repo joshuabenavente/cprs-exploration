@@ -23,6 +23,7 @@ struct Controller {
     last_click: Option<(PatientId, Instant)>,
     last_cover_click: Option<(PatientId, PanelKind, String, Instant)>,
     last_order_click: Option<(PatientId, OrderId, Instant)>,
+    last_report_click: Option<(PatientId, ReportId, Instant)>,
 }
 
 type Shared = Rc<RefCell<Controller>>;
@@ -47,6 +48,9 @@ fn simulation(index: i32) -> Simulation {
         9 => Simulation::OrdersListUnavailable,
         10 => Simulation::OrderDetailUnavailable,
         11 => Simulation::SlowOrders,
+        12 => Simulation::ResultsListUnavailable,
+        13 => Simulation::ReportDetailUnavailable,
+        14 => Simulation::SlowResults,
         _ => Simulation::Normal,
     }
 }
@@ -64,6 +68,9 @@ fn simulation_index(value: Simulation) -> i32 {
         Simulation::OrdersListUnavailable => 9,
         Simulation::OrderDetailUnavailable => 10,
         Simulation::SlowOrders => 11,
+        Simulation::ResultsListUnavailable => 12,
+        Simulation::ReportDetailUnavailable => 13,
+        Simulation::SlowResults => 14,
     }
 }
 fn tab(index: i32) -> ChartTab {
@@ -334,6 +341,75 @@ fn sync(app: &AppWindow, controller: &Controller) {
     });
     app.set_order_body(match &o.detail {
         OrderDetailState::Ready(detail) => detail.text.clone().into(),
+        _ => "".into(),
+    });
+    let o = &state.results;
+    app.set_results_query(o.query.clone().into());
+    let rows = o
+        .rows
+        .iter()
+        .map(|r| {
+            vec![
+                r.date.clone(),
+                r.description.clone(),
+                r.specimen.clone(),
+                r.location.clone(),
+            ]
+        })
+        .collect();
+    if let Some(model) = changed_rows(&app.get_results_rows(), rows) {
+        app.set_results_rows(model);
+    }
+    app.set_selected_report(o.selected_index().map_or(-1, |i| i as i32));
+    app.set_results_scenario(match controller.provider.simulation {
+        Simulation::ResultsListUnavailable => 1,
+        Simulation::ReportDetailUnavailable => 2,
+        Simulation::SlowResults => 3,
+        _ => 0,
+    });
+    app.set_results_loading(matches!(o.list_status, ResultsListStatus::Loading));
+    app.set_results_list_error(matches!(o.list_status, ResultsListStatus::Error(_)));
+    app.set_results_list_status(match &o.list_status {
+        ResultsListStatus::Idle => "Open Results to load invented records.".into(),
+        ResultsListStatus::Loading => "Loading invented report list…".into(),
+        ResultsListStatus::Ready => format!(
+            "{} invented reports · Newest first · Select a row, then open detail",
+            o.rows.len()
+        )
+        .into(),
+        ResultsListStatus::Empty => {
+            "No invented reports match this view. This is not a clinical finding.".into()
+        }
+        ResultsListStatus::Error(message) => message.clone().into(),
+    });
+    app.set_report_identity(
+        o.selected
+            .as_ref()
+            .map_or_else(
+                || "No invented report selected".into(),
+                |s| format!("{} · {} · {}", s.patient_id, s.id.as_str(), s.description),
+            )
+            .into(),
+    );
+    app.set_report_detail_open(!matches!(o.detail, ReportDetailState::Closed));
+    app.set_report_body_error(matches!(o.detail, ReportDetailState::Error(_)));
+    app.set_report_body_ready(matches!(o.detail, ReportDetailState::Ready(_)));
+    app.set_report_body_status(match &o.detail {
+        ReportDetailState::Closed => if o.selected.is_some() {
+            "Press Enter or View report detail to read this invented report."
+        } else {
+            "Select an invented report above."
+        }
+        .into(),
+        ReportDetailState::Loading(_) => "Retrieving selected synthetic report detail…".into(),
+        ReportDetailState::Ready(detail) if detail.text.is_empty() => {
+            "This invented report has an empty detail response.".into()
+        }
+        ReportDetailState::Ready(_) => "MOCK ONLY · Invented report detail · Read-only".into(),
+        ReportDetailState::Error(message) => message.clone().into(),
+    });
+    app.set_report_body(match &o.detail {
+        ReportDetailState::Ready(detail) => detail.text.clone().into(),
         _ => "".into(),
     });
     let n = &state.notes;
@@ -752,7 +828,159 @@ fn open_order(weak: slint::Weak<AppWindow>, shared: Shared) {
     deliver_order(weak, shared, request);
 }
 
+fn load_results(weak: slint::Weak<AppWindow>, shared: Shared, query: String) {
+    let request = {
+        let mut c = shared.borrow_mut();
+        c.last_report_click = None;
+        c.state.begin_results_list(query)
+    };
+    paint(&weak, &shared);
+    let Some(request) = request else {
+        return;
+    };
+    let (provider, immediate) = {
+        let c = shared.borrow();
+        (c.provider.clone(), c.immediate)
+    };
+    let delay = if provider.simulation == Simulation::SlowResults {
+        900
+    } else {
+        180
+    };
+    let finish = move || {
+        let result = provider.results_list(&request);
+        if shared
+            .borrow_mut()
+            .state
+            .apply_results_list(&request, result)
+        {
+            paint(&weak, &shared);
+        }
+    };
+    if immediate {
+        finish();
+    } else {
+        slint::Timer::single_shot(Duration::from_millis(delay), finish);
+    }
+}
+fn deliver_report(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<ReportRequest>) {
+    paint(&weak, &shared);
+    if shared.borrow().state.tab == ChartTab::Results
+        && !shared.borrow().state.selector_open
+        && let Some(app) = weak.upgrade()
+    {
+        app.invoke_focus_report_body();
+    }
+    let Some(request) = request else {
+        return;
+    };
+    let (provider, immediate) = {
+        let c = shared.borrow();
+        (c.provider.clone(), c.immediate)
+    };
+    let delay = if provider.simulation == Simulation::SlowResults
+        && request.report_id.as_str() == "REPORT-01"
+    {
+        1100
+    } else {
+        300
+    };
+    let finish = move || {
+        let result = provider.report_detail(&request);
+        if shared.borrow_mut().state.apply_report(&request, result) {
+            paint(&weak, &shared);
+        }
+    };
+    if immediate {
+        finish();
+    } else {
+        slint::Timer::single_shot(Duration::from_millis(delay), finish);
+    }
+}
+fn open_report(weak: slint::Weak<AppWindow>, shared: Shared) {
+    let request = shared.borrow_mut().state.begin_report_detail();
+    deliver_report(weak, shared, request);
+}
+
 fn wire(app: &AppWindow, shared: &Shared) {
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_results_filter_edited(move |query| {
+        load_results(weak.clone(), data.clone(), query.to_string());
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_results_scenario_changed(move |index| {
+        data.borrow_mut().provider.simulation = match index {
+            1 => Simulation::ResultsListUnavailable,
+            2 => Simulation::ReportDetailUnavailable,
+            3 => Simulation::SlowResults,
+            _ => Simulation::Normal,
+        };
+        let query = data.borrow().state.results.query.clone();
+        load_results(weak.clone(), data.clone(), query);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_retry_results_list(move || {
+        let query = data.borrow().state.results.query.clone();
+        load_results(weak.clone(), data.clone(), query);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_report_selected(move |index| {
+        let index = usize::try_from(index).unwrap_or(usize::MAX);
+        let mut c = data.borrow_mut();
+        if c.state.results.selected_index() != Some(index) {
+            c.last_report_click = None;
+        }
+        c.state.select_report(index);
+        drop(c);
+        paint(&weak, &data);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_report_released(move |index| {
+        let Ok(index) = usize::try_from(index) else {
+            return;
+        };
+        let activate = {
+            let mut c = data.borrow_mut();
+            if c.state.selector_open || c.state.tab != ChartTab::Results {
+                return;
+            }
+            let Some(row) = c.state.results.rows.get(index) else {
+                return;
+            };
+            let (patient, id) = (row.patient_id.clone(), row.id.clone());
+            let now = Instant::now();
+            let activate = c.last_report_click.as_ref().is_some_and(|(p, i, t)| {
+                *p == patient && *i == id && now.duration_since(*t) <= Duration::from_millis(450)
+            });
+            c.last_report_click = if activate {
+                None
+            } else {
+                Some((patient, id, now))
+            };
+            c.state.select_report(index);
+            activate
+        };
+        if activate {
+            open_report(weak.clone(), data.clone());
+        } else {
+            paint(&weak, &data);
+        }
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_report_activated(move || open_report(weak.clone(), data.clone()));
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_close_report_detail(move || {
+        let mut c = data.borrow_mut();
+        c.last_report_click = None;
+        c.state.close_report_detail();
+        drop(c);
+        paint(&weak, &data);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_retry_report(move || {
+        let request = data.borrow_mut().state.retry_report();
+        deliver_report(weak.clone(), data.clone(), request);
+    });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_orders_filter_edited(move |query| {
         let filter = data.borrow().state.orders.status_filter;
@@ -1067,6 +1295,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
                 OrderStatusFilter::All,
             );
         }
+        if data.borrow().state.tab == ChartTab::Results && !data.borrow().state.selector_open {
+            load_results(weak.clone(), data.clone(), String::new());
+        }
         if let Some(app) = weak.upgrade() {
             app.invoke_focus_chart();
         }
@@ -1096,6 +1327,7 @@ fn wire(app: &AppWindow, shared: &Shared) {
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_tab_changed(move |index| {
         data.borrow_mut().last_order_click = None;
+        data.borrow_mut().last_report_click = None;
         data.borrow_mut().state.set_tab(tab(index));
         paint(&weak, &data);
         if data.borrow().state.tab == ChartTab::Notes
@@ -1130,6 +1362,21 @@ fn wire(app: &AppWindow, shared: &Shared) {
         {
             app.invoke_focus_orders_filter();
         }
+        if data.borrow().state.tab == ChartTab::Results
+            && matches!(
+                data.borrow().state.results.list_status,
+                ResultsListStatus::Idle
+            )
+        {
+            load_results(weak.clone(), data.clone(), String::new());
+        }
+        if index == 3
+            && data.borrow().state.tab == ChartTab::Results
+            && !data.borrow().state.selector_open
+            && let Some(app) = weak.upgrade()
+        {
+            app.invoke_focus_results_filter();
+        }
     });
 }
 
@@ -1145,6 +1392,41 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_confirm_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-004");
     assert!(!app.get_selector_open());
+    app.invoke_tab_changed(3);
+    assert_eq!(app.get_results_rows().row_count(), 4);
+    app.invoke_report_selected(1);
+    assert!(!app.get_report_detail_open());
+    assert!(app.get_report_body().is_empty());
+    app.invoke_report_activated();
+    assert!(app.get_report_body_ready());
+    assert!(app.get_report_body().contains("SYNTH-004"));
+    assert!(app.get_report_body().contains("REPORT-02"));
+    app.invoke_close_report_detail();
+    assert_eq!(app.get_selected_report(), 1);
+    assert!(app.get_report_body().is_empty());
+    app.invoke_results_filter_edited("李".into());
+    assert_eq!(app.get_selected_report(), -1);
+    assert_eq!(app.get_results_rows().row_count(), 1);
+    app.invoke_report_released(0);
+    assert!(!app.get_report_detail_open());
+    app.invoke_report_released(0);
+    assert!(
+        app.get_report_body()
+            .contains("END OF INVENTED REPORT DETAIL")
+    );
+    app.invoke_results_filter_edited("".into());
+    app.invoke_results_scenario_changed(2);
+    app.invoke_report_selected(0);
+    app.invoke_report_activated();
+    assert!(app.get_report_body_error());
+    app.invoke_retry_report();
+    assert!(app.get_report_body_error());
+    app.invoke_results_scenario_changed(1);
+    assert!(app.get_results_list_error());
+    assert!(app.get_report_body().is_empty());
+    app.invoke_retry_results_list();
+    assert!(app.get_results_list_error());
+    app.invoke_results_scenario_changed(0);
     app.invoke_tab_changed(2);
     assert_eq!(app.get_orders_rows().row_count(), 4);
     app.invoke_order_selected(1);
@@ -1281,6 +1563,13 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_tab_changed(2);
     assert_eq!(app.get_orders_rows().row_count(), 0);
     assert!(app.get_orders_list_status().contains("No invented orders"));
+    app.invoke_tab_changed(3);
+    assert_eq!(app.get_results_rows().row_count(), 0);
+    assert!(
+        app.get_results_list_status()
+            .contains("No invented reports")
+    );
+    assert!(app.get_report_body().is_empty());
     assert!(app.get_order_body().is_empty());
     app.invoke_tab_changed(0);
     app.invoke_cover_selected(0, 0);
@@ -1301,7 +1590,7 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
     assert!(shared.borrow().immediate);
     println!(
-        "Mock UI callback smoke passed: patient selection, Cover Sheet, Notes, Orders selection/detail/double-click/filter/status/close/error/retry, patient clearing, and Unicode fixture identity."
+        "Mock UI callback smoke passed: patient selection, Cover Sheet, Notes, Results reports and Orders selection/detail/double-click/filter/status/close/error/retry, patient clearing, and Unicode fixture identity."
     );
 }
 
@@ -1329,6 +1618,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         last_click: None,
         last_cover_click: None,
         last_order_click: None,
+        last_report_click: None,
     }));
     wire(&app, &shared);
     let request = shared.borrow_mut().state.open_selection();
