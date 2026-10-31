@@ -1,0 +1,132 @@
+{
+  "scope": "Milestone 7 native layout/keyboard and separate listening evidence",
+  "executable_sha256": "b24609cb9598272eeaff3e5dac046a32a2d45514c40b762220e670d085b390e9",
+  "layout_samples": [
+    {
+      "log": "validation/milestone-7/layout-default-125.log",
+      "requested_size": "default 1180x800 logical",
+      "client_pixels": [
+        1475,
+        1000
+      ],
+      "application_scale": 1.25,
+      "capture_pixels": [
+        1477,
+        1032
+      ],
+      "observed": "Full window inspected on the final executable: selected Unicode report, read-only pane and View/Close actions fit inside the card through focus scrolling; patient header, navigation and status remained visible.",
+      "log_sha256": "a8b6287b4868b72c74ca52504341abfb1201dbe4860870c4a2878e993ee58cea"
+    },
+    {
+      "log": "validation/milestone-7/layout-minimum-125.log",
+      "requested_size": "minimum 980x680 logical",
+      "client_pixels": [
+        1225,
+        850
+      ],
+      "application_scale": 1.25,
+      "capture_pixels": [
+        1227,
+        882
+      ],
+      "observed": "Full window inspected on the final executable: selected Unicode report, read-only pane and View/Close actions fit inside the card through focus scrolling; patient header, navigation and status remained visible.",
+      "log_sha256": "04eaf53027d7866b5452621bceec1e0d037c3b7a6b55394cc887d6762568eb06"
+    },
+    {
+      "log": "validation/milestone-7/layout-default-150.log",
+      "requested_size": "default 1180x800 logical",
+      "client_pixels": [
+        1770,
+        1200
+      ],
+      "application_scale": 1.5,
+      "capture_pixels": [
+        1772,
+        1232
+      ],
+      "observed": "Full window inspected on the final executable: selected Unicode report, read-only pane and View/Close actions fit inside the card through focus scrolling; patient header, navigation and status remained visible.",
+      "log_sha256": "ebf8fe437e691714c451a6b3637642c983d60cabbdeade91ca64d0685b587fb3"
+    },
+    {
+      "log": "validation/milestone-7/layout-minimum-150.log",
+      "requested_size": "minimum 980x680 logical",
+      "client_pixels": [
+        1470,
+        1020
+      ],
+      "application_scale": 1.5,
+      "capture_pixels": [
+        1472,
+        1052
+      ],
+      "observed": "Full window inspected on the final executable: selected Unicode report, read-only pane and View/Close actions fit inside the card through focus scrolling; patient header, navigation and status remained visible.",
+      "log_sha256": "a83fdc60f7eaac58a4d6d41c9a3d850d25069605b1502540847826798a6a07aa"
+    },
+    {
+      "log": "validation/milestone-7/layout-default-175.log",
+      "requested_size": "default 1180x800 logical",
+      "client_pixels": [
+        2065,
+        1400
+      ],
+      "application_scale": 1.75,
+      "capture_pixels": [
+        2067,
+        1432
+      ],
+      "observed": "Full window inspected on the final executable: selected Unicode report, read-only pane and View/Close actions fit inside the card through focus scrolling; patient header, navigation and status remained visible.",
+      "log_sha256": "a05698cc651e848e0b81ab1b06870981bce04785555f5d21f850ae93495212cc"
+    },
+    {
+      "log": "validation/milestone-7/layout-minimum-175.log",
+      "requested_size": "minimum 980x680 logical",
+      "client_pixels": [
+        1715,
+        1190
+      ],
+      "application_scale": 1.75,
+      "capture_pixels": [
+        1717,
+        1222
+      ],
+      "observed": "Full window inspected on the final executable: selected Unicode report, read-only pane and View/Close actions fit inside the card through focus scrolling; patient header, navigation and status remained visible.",
+      "log_sha256": "d85f3a7cb68abd8a32cb9a8ebf95f25afa98b003679617be9b72746c41205c44"
+    }
+  ],
+  "keyboard_observations": [
+    "At minimum 175%, native Ctrl+O from nonempty REPORT-03 opened patient search while the committed header remained SYNTH-001. Native Escape returned to the Results filter with a visible caret, reloaded four rows, and left selection and document empty.",
+    "Native click selected MORGAN / SYNTH-003 and a settled UIA table name included that ID. Native Down selected the other MORGAN and the table name/preview changed to SYNTH-004 while no chart was committed. Native double-click then opened CARTER / SYNTH-001.",
+    "At ordinary native-launch 100%, native selection/Enter opened SYNTH-001 / PROB-01 with focus in the read-only Cover Sheet text (not Close). Ctrl+A selected 343 characters including the patient/item identities. Escape restored the originating Problem List table, and Down immediately selected the Beta item.",
+    "Notes: native Enter from filter and Down selected NOTE-01 and automatically requested text. Enter focused its read-only pane with SYNTH-001 / NOTE-01 in the UIA name/value. Escape retained text; a subsequent Down selected NOTE-02, demonstrating actual list focus. Ctrl+F focused the Notes filter; Ctrl+O then Escape cleared text/selection and restored the Notes filter for the same committed patient.",
+    "Orders: native Enter/Down selected ORDER-01 with an identity-bearing table/document name and no document value. A second Enter focused read-only text; Ctrl+A selected 382 characters identifying SYNTH-001 / ORDER-01. Escape cleared text while retaining the row.",
+    "Results: native Enter/Down selected REPORT-01 with no document value before activation. A second Enter focused the reading pane. After its real delayed value settled, Ctrl+A selected 422 characters identifying SYNTH-001 / REPORT-01. Escape closed it while retaining selection. An earlier Ctrl+A before the delayed value arrived did not establish text selection and was repeated only after the value was observed.",
+    "After closing Orders, a settled capture had no document value; native Down changed selection to ORDER-02 with no automatic retrieval."
+  ],
+  "uia_limits": [
+    "An immediate capture after selecting a patient still said No patient selected; a fresh capture exposed the correct selected identity. Reobserve before judging completion; this is not a complete UIA conformance result.",
+    "Immediately after Notes Escape the reported focused element still named a filter; a native Down changed the selected note to NOTE-02, demonstrating actual list focus separately from that snapshot."
+  ],
+  "spoken_output": {
+    "status": "unverified for the changed Milestone 7 labels and integrated checklist",
+    "historical": "Earlier Notes, Orders, and Results scoped user passes are historical and remain separate."
+  },
+  "limits": [
+    "Only process-local application scale is changed; monitor-DPI transitions are unverified.",
+    "The timed journey verifies callbacks/bindings/focus probes; native keyboard, UIA, and speech are separate categories.",
+    "Full assistive-technology conformance and physical IME/dead-key composition remain unverified."
+  ],
+  "native_smoke_completed": true,
+  "setup_observation": "An initial default 150% capture was clipped because of OS cascade placement. Scale-override/minimum/integrated launches now start at the desktop origin; the final matrix is rerun on the final executable.",
+  "keyboard_launch": {
+    "method": "native app launcher, ordinary mode without integration callbacks",
+    "requested_client_logical": [
+      1180,
+      800
+    ],
+    "capture_pixels": [
+      1182,
+      832
+    ],
+    "application_scale": 1
+  }
+}

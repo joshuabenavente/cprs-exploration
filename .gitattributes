@@ -4,3 +4,5 @@ analysis/cover-sheet/** -text
 analysis/notes/** -text -whitespace
 analysis/orders/** -text -whitespace
 analysis/results/** -text -whitespace
+# Timed/native journey receipts hash the captured log bytes, including line endings.
+validation/milestone-7/*.log -text -whitespace

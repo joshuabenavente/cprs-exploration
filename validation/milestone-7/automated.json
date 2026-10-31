@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-31T14:04:57.1859944-06:00",
+  "scope": "Mock-only integrated chart validation and accessibility hardening",
+  "passed": true,
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+  "checks": [
+    {
+      "name": "format",
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "clippy",
+      "command": "cargo clippy --workspace --all-targets --locked --offline -- -D warnings",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "tests",
+      "command": "cargo test --workspace --locked --offline",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "build",
+      "command": "cargo build -p cprs-chart-mock --locked --offline",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "callbacks",
+      "command": "cargo run -p cprs-chart-mock --locked --offline -- --smoke-check",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "integrated",
+      "command": "cargo run -p cprs-chart-mock --locked --offline -- --integration-check",
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "executable": "target/debug/cprs-chart-mock.exe",
+  "executable_sha256": "b24609cb9598272eeaff3e5dac046a32a2d45514c40b762220e670d085b390e9",
+  "evidence_limits": [
+    "Callback smoke uses immediate responses; the separate integrated journey uses real timers and checks accepted/rejected deliveries and UI bindings. It does not inject physical keys or verify speech.",
+    "Visual and keyboard observations are recorded separately.",
+    "No clinical server or original CPRS process is involved."
+  ]
+}

@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([ValidateRange(6, 99)][int]$Milestone = 6)
+param([ValidateRange(7, 99)][int]$Milestone = 7)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $binaryPath = Join-Path $root 'target/debug/cprs-chart-mock.exe'
@@ -12,7 +12,8 @@ $steps = @(
     @{ Name = 'clippy'; Arguments = @('clippy', '--workspace', '--all-targets', '--locked', '--offline', '--', '-D', 'warnings') },
     @{ Name = 'tests'; Arguments = @('test', '--workspace', '--locked', '--offline') },
     @{ Name = 'build'; Arguments = @('build', '-p', 'cprs-chart-mock', '--locked', '--offline') },
-    @{ Name = 'callbacks'; Arguments = @('run', '-p', 'cprs-chart-mock', '--locked', '--offline', '--', '--smoke-check') }
+    @{ Name = 'callbacks'; Arguments = @('run', '-p', 'cprs-chart-mock', '--locked', '--offline', '--', '--smoke-check') },
+    @{ Name = 'integrated'; Arguments = @('run', '-p', 'cprs-chart-mock', '--locked', '--offline', '--', '--integration-check') }
 )
 $results = @()
 $failure = $null
@@ -33,14 +34,14 @@ try {
     $binary = Join-Path $root 'target/debug/cprs-chart-mock.exe'
     $receipt = [ordered]@{
         checked_at = [DateTimeOffset]::Now.ToString('o')
-        scope = 'Mock-only Rust patient selection, Cover Sheet details, Notes, read-only Orders, and Results report list/text'
+        scope = 'Mock-only integrated chart validation and accessibility hardening'
         passed = ($null -eq $failure -and $results.Count -eq $steps.Count)
         rustc = (& rustc --version | Out-String).Trim()
         cargo = (& cargo --version | Out-String).Trim()
         checks = $results
         executable = 'target/debug/cprs-chart-mock.exe'
         executable_sha256 = if (Test-Path -LiteralPath $binary) { (Get-FileHash -LiteralPath $binary -Algorithm SHA256).Hash.ToLowerInvariant() } else { $null }
-        evidence_limits = @('Callback smoke uses immediate in-memory responses; race handling is covered by core tests.', 'Visual and keyboard observations are recorded separately.', 'No clinical server or original CPRS process is involved.')
+        evidence_limits = @('Callback smoke uses immediate responses; the separate integrated journey uses real timers and checks accepted/rejected deliveries and UI bindings. It does not inject physical keys or verify speech.', 'Visual and keyboard observations are recorded separately.', 'No clinical server or original CPRS process is involved.')
     }
     $receipt | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $validation 'automated.json') -Encoding utf8
     if ($failure) { throw "Mock validation failed at: $failure" }

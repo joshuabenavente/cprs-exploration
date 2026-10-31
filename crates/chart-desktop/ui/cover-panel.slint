@@ -1,6 +1,8 @@
 import { StandardTableView, Button } from "std-widgets.slint";
 export component CoverPanel inherits Rectangle {
     in property <string> title;
+    in property <string> patient-id;
+    out property <bool> list-focused: data.has-focus;
     in property <bool> allergies;
     in property <bool> enabled: true;
     in property <[[StandardListViewItem]]> rows;
@@ -33,7 +35,7 @@ export component CoverPanel inherits Rectangle {
                 data := StandardTableView {
                     min-height: 140px;
                     enabled: root.enabled && root.rows.length > 0;
-                    accessible-label: root.title + " synthetic items";
+                    accessible-label: root.title + " synthetic items for " + root.patient-id + (root.selected-row >= 0 ? ". Selected " + root.rows[root.selected-row][0].text : ". No item selected");
                     rows: root.rows; current-row <=> root.selected-row;
                     columns: root.allergies ? [
                         { title: "Agent", width: 190px, min-width: 140px },

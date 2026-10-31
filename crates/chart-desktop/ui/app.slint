@@ -149,13 +149,17 @@ export component AppWindow inherits Window {
     callback close-detail();
     callback retry-detail();
 
+    // Read-only test observation of actual widget focus; never displayed as product UI.
+    out property <string> keyboard-focus: root.selector-open ? (search.has-focus ? "patient-search" : continue-button.has-focus ? "acknowledgment" : "patient-actions") : root.detail-open ? (detail-text.has-focus ? "cover-detail" : "cover-actions") : root.tab-index == 1 ? "notes-" + notes-view.keyboard-focus : root.tab-index == 2 ? "orders-" + orders-view.keyboard-focus : root.tab-index == 3 ? "results-" + results-view.keyboard-focus : problem-panel.list-focused ? "cover-problems" : allergy-panel.list-focused ? "cover-allergies" : "chart-actions";
+
     public function scroll-workspace-bottom() { workspace-scroll.content-y = min(0px, workspace-scroll.visible-height - workspace-scroll.content-height); }
     public function focus-search() { workspace-scroll.content-y = 0px; search.focus(); }
     public function focus-chart() { workspace-scroll.content-y = 0px; new-patient.focus(); }
     public function focus-acknowledgment() { root.scroll-workspace-bottom(); continue-button.focus(); }
     public function focus-cover(panel: int) { workspace-scroll.content-y = 0px; if panel == 0 { problem-panel.focus-list(); } else { allergy-panel.focus-list(); } }
-    public function focus-detail() { detail-close.focus(); }
+    public function focus-detail() { detail-text.focus(); }
     public function focus-notes-filter() { notes-view.focus-filter(); }
+    public function focus-notes-body() { notes-view.focus-body(); }
     public function focus-orders-filter() { orders-view.focus-filter(); }
     public function focus-order-body() { orders-view.focus-body(); }
 
@@ -219,7 +223,7 @@ export component AppWindow inherits Window {
                         clicked => { root.open-selection(); }
                         changed has-focus => { if self.has-focus { workspace-scroll.content-y = 0px; } }
                     }
-                    Text { text: "Ctrl+O  Select patient     Ctrl+F  Search"; color: #616e7a; vertical-alignment: center; }
+                    Text { text: root.selector-open ? "Ctrl+F Patient search" : root.tab-index == 0 ? "Ctrl+O Select patient" : "Ctrl+O Select patient   Ctrl+F Filter list"; color: #616e7a; vertical-alignment: center; }
                     Rectangle { horizontal-stretch: 1; background: transparent; }
                     Text { text: "Read-only demonstration"; color: #516272; vertical-alignment: center; }
                 }
@@ -310,7 +314,7 @@ export component AppWindow inherits Window {
                                             { title: "Fixture DOB", width: 120px, min-width: 100px },
                                             { title: "Demo lookup", width: 136px, min-width: 120px }
                                         ];
-                                        accessible-label: "Invented patient search results";
+                                        accessible-label: "Invented patient search results. " + (root.has-preview ? "Selected " + root.preview-name + ", " + root.preview-id : "No patient selected");
                                         enabled: !root.search-loading && !root.chart-loading && !root.show-acknowledgment;
                                         current-row-changed(index) => { root.row-selected(index); }
                                         // Keep fixture order; headers must not imply an unapplied local sort.
@@ -416,7 +420,7 @@ export component AppWindow inherits Window {
                             HorizontalLayout {
                                 spacing: 16px;
                                 problem-panel := CoverPanel {
-                                    title: "Problem List"; rows: root.problem-rows;
+                                    title: "Problem List"; patient-id: root.active-id; rows: root.problem-rows;
                                     enabled: !root.detail-open;
                                     selected-row <=> root.selected-problem;
                                     selected(index) => { root.cover-selected(0, index); }
@@ -425,7 +429,7 @@ export component AppWindow inherits Window {
                                     footer-focused => { root.scroll-workspace-bottom(); }
                                 }
                                 allergy-panel := CoverPanel {
-                                    title: "Allergies"; allergies: true; rows: root.allergy-rows;
+                                    title: "Allergies"; patient-id: root.active-id; allergies: true; rows: root.allergy-rows;
                                     enabled: !root.detail-open;
                                     selected-row <=> root.selected-allergy;
                                     selected(index) => { root.cover-selected(1, index); }
@@ -530,10 +534,10 @@ export component AppWindow inherits Window {
                 Text { text: root.detail-title; font-size: 21px; font-weight: 600; color: #23445b; wrap: word-wrap; }
                 Text { text: root.detail-identity; color: #526879; wrap: word-wrap; }
                 Text { text: "MOCK ONLY · Invented item details · Read-only"; color: #66501c; }
-                TextEdit {
+                detail-text := TextEdit {
                     text: root.detail-body;
                     read-only: true; font-family: "Lucida Console"; font-size: 13px; wrap: no-wrap;
-                    accessible-label: root.detail-loading ? "Loading synthetic details" : root.detail-error ? "Synthetic detail error" : "Read-only synthetic item details";
+                    accessible-label: (root.detail-loading ? "Loading synthetic details. " : root.detail-error ? "Synthetic detail error. " : "Read-only synthetic item details. ") + root.detail-identity;
                 }
                 HorizontalLayout {
                     spacing: 12px;

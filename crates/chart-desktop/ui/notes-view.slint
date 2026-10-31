@@ -20,6 +20,7 @@ export component NotesView inherits Rectangle {
     callback retry-body();
     callback top-focused();
     callback body-focused();
+    out property <string> keyboard-focus: filter.has-focus ? "filter" : list.has-focus ? "list" : note-text.has-focus ? "body" : "actions";
     public function focus-filter() { root.top-focused(); filter.focus(); }
     public function focus-list() { root.top-focused(); list.focus(); }
     public function focus-body() { root.body-focused(); note-text.focus(); }
@@ -59,7 +60,7 @@ export component NotesView inherits Rectangle {
             list := StandardTableView {
                 height: 160px;
                 enabled: !root.loading && root.rows.length > 0;
-                accessible-label: "Invented Notes list — newest first";
+                accessible-label: "Invented Notes list — newest first. " + root.identity;
                 rows: root.rows; current-row <=> root.selected-row;
                 columns: [
                     { title: "Date", width: 145px, min-width: 145px },
@@ -79,7 +80,7 @@ export component NotesView inherits Rectangle {
                 min-height: 140px; vertical-stretch: 1;
                 text: root.body; read-only: true; wrap: no-wrap;
                 font-family: "Courier New"; font-size: 14px;
-                accessible-label: "Read-only invented note text";
+                accessible-label: "Read-only invented note text. " + root.identity;
                 changed has-focus => { if self.has-focus { root.body-focused(); } }
             }
             HorizontalLayout {

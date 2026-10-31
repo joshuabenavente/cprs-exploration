@@ -26,6 +26,7 @@ export component OrdersView inherits Rectangle {
     callback retry-body();
     callback top-focused();
     callback body-focused();
+    out property <string> keyboard-focus: filter.has-focus ? "filter" : list.has-focus ? "list" : order-text.has-focus ? "body" : "actions";
     public function focus-filter() { root.top-focused(); filter.focus(); }
     public function focus-list() { root.top-focused(); list.focus(); }
     public function focus-body() { root.body-focused(); order-text.focus(); }
@@ -72,7 +73,7 @@ export component OrdersView inherits Rectangle {
             list := StandardTableView {
                 height: 160px;
                 enabled: !root.loading && root.rows.length > 0;
-                accessible-label: "Invented Orders list — newest first";
+                accessible-label: "Invented Orders list — newest first. " + root.identity;
                 rows: root.rows; current-row <=> root.selected-row;
                 columns: [
                     { title: "Service", width: 125px, min-width: 100px },
@@ -96,7 +97,7 @@ export component OrdersView inherits Rectangle {
                 min-height: 140px; vertical-stretch: 1;
                 text: root.body; read-only: true; wrap: no-wrap;
                 font-family: "Courier New"; font-size: 14px;
-                accessible-label: "Read-only invented order detail";
+                accessible-label: "Read-only invented order detail. " + root.identity;
                 changed has-focus => { if self.has-focus { root.body-focused(); } }
             }
             HorizontalLayout {

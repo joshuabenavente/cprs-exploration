@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-31T20:19:14.884083+00:00",
+  "scope": "Milestone 7: mock-only integrated chart validation and accessibility hardening",
+  "passed": true,
+  "checkpoint": "Bounded code/automated/native checkpoint; changed-label spoken output remains separate",
+  "branch": "work/milestone-7-integrated-validation",
+  "executable_sha256": "b24609cb9598272eeaff3e5dac046a32a2d45514c40b762220e670d085b390e9",
+  "automated": {
+    "receipt": "validation/milestone-7/automated.json",
+    "existing_core_tests": 70,
+    "format_clippy_build_callbacks": "passed; locked/offline"
+  },
+  "integrated": {
+    "receipt": "validation/milestone-7/integrated.json",
+    "checkpoints": 41,
+    "actual_deliveries": 62,
+    "rejected_stale_deliveries": 26,
+    "normal_timers": true,
+    "sampled_ui_binding_ownership_and_focus_probes": "passed",
+    "physical_input_injected": false
+  },
+  "native": {
+    "receipt": "validation/milestone-7/native-ui.json",
+    "scale_layout_samples": 6,
+    "layout_matrix": "default/minimum at 125%, 150%, 175%; actual geometry recorded",
+    "keyboard": "ordinary native-launch 100% tour and minimum 175% patient cancellation",
+    "spoken_output": "unverified for the changed Milestone 7 labels and integrated checklist"
+  },
+  "historical_evidence": {
+    "new_original_binary_analysis": false,
+    "unchanged_static_hashes_rechecked": [
+      "validation/milestone-5/static.json",
+      "validation/milestone-6/static.json"
+    ],
+    "earlier_receipts_preserved": true
+  },
+  "review": "Local code/evidence self-review; no independent reviewer or original-client runtime parity claimed",
+  "safe_boundary": {
+    "compiled_invented_records_only": true,
+    "network_transport": false,
+    "credentials_or_clinical_imports": false,
+    "original_cprs_process_executed": false,
+    "clinical_interpretation_or_writes": false,
+    "analysis_loaded_by_runtime": false
+  },
+  "limits": [
+    "Combined changed-label Narrator checklist remains unverified pending user listening; prior scoped passes remain historical.",
+    "UIA snapshots can lag actual native input/focus/selection. Neither focus probes nor isolated snapshots establish full assistive-technology conformance.",
+    "Process-local application scale samples do not establish Windows monitor-DPI transitions or physical IME/dead keys.",
+    "Binding checks sample the event loop and do not prove compositor atomicity or production timing guarantees.",
+    "Original-client parity, server contracts/site permissions, and clinical compatibility are unverified."
+  ],
+  "staged_evidence": {
+    "hashed_journey_logs": 7,
+    "exact_staged_bytes_verified": true,
+    "historical_receipts_and_analysis_unchanged": true
+  }
+}

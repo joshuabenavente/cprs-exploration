@@ -15,11 +15,13 @@ mod ui {
     slint::include_modules!();
 }
 use ui::AppWindow;
+mod integrated_check;
 
 struct Controller {
     state: AppState,
     provider: MockProvider,
     immediate: bool,
+    delivery_audit: Option<Vec<integrated_check::Delivery>>,
     last_click: Option<(PatientId, Instant)>,
     last_cover_click: Option<(PatientId, PanelKind, String, Instant)>,
     last_order_click: Option<(PatientId, OrderId, Instant)>,
@@ -611,7 +613,16 @@ fn open_detail(weak: slint::Weak<AppWindow>, shared: Shared, panel: PanelKind) {
     };
     let finish = move || {
         let result = provider.detail(&request);
-        if shared.borrow_mut().state.apply_detail(&request, result) {
+        let applied = shared.borrow_mut().state.apply_detail(&request, result);
+        integrated_check::record(
+            &shared,
+            "cover-detail",
+            request.patient_id.as_str(),
+            request.item_id.as_str(),
+            request.generation,
+            applied,
+        );
+        if applied {
             paint(&weak, &shared);
         }
     };
@@ -644,6 +655,14 @@ fn search_request(weak: slint::Weak<AppWindow>, shared: Shared, request: SearchR
     let finish = move || {
         let result = provider.search(&request);
         let applied = shared.borrow_mut().state.apply_search(&request, result);
+        integrated_check::record(
+            &shared,
+            "search",
+            "",
+            request.query.as_str(),
+            request.generation,
+            applied,
+        );
         if applied {
             paint(&weak, &shared);
         }
@@ -677,6 +696,14 @@ fn confirm(weak: slint::Weak<AppWindow>, shared: Shared, acknowledged: bool) {
     let finish = move || {
         let result = provider.chart(&request.patient_id);
         let applied = shared.borrow_mut().state.apply_chart(&request, result);
+        integrated_check::record(
+            &shared,
+            "chart",
+            request.patient_id.as_str(),
+            request.patient_id.as_str(),
+            request.generation,
+            applied,
+        );
         if applied {
             paint(&weak, &shared);
             if !shared.borrow().state.selector_open
@@ -710,7 +737,16 @@ fn load_notes(weak: slint::Weak<AppWindow>, shared: Shared, query: String) {
     };
     let finish = move || {
         let result = provider.notes_list(&request);
-        if shared.borrow_mut().state.apply_notes_list(&request, result) {
+        let applied = shared.borrow_mut().state.apply_notes_list(&request, result);
+        integrated_check::record(
+            &shared,
+            "notes-list",
+            request.patient_id.as_str(),
+            request.query.as_str(),
+            request.generation,
+            applied,
+        );
+        if applied {
             paint(&weak, &shared);
         }
     };
@@ -738,7 +774,16 @@ fn deliver_note(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<No
         };
     let finish = move || {
         let result = provider.note_body(&request);
-        if shared.borrow_mut().state.apply_note(&request, result) {
+        let applied = shared.borrow_mut().state.apply_note(&request, result);
+        integrated_check::record(
+            &shared,
+            "note-body",
+            request.patient_id.as_str(),
+            request.note_id.as_str(),
+            request.generation,
+            applied,
+        );
+        if applied {
             paint(&weak, &shared);
         }
     };
@@ -775,11 +820,19 @@ fn load_orders(
     };
     let finish = move || {
         let result = provider.orders_list(&request);
-        if shared
+        let applied = shared
             .borrow_mut()
             .state
-            .apply_orders_list(&request, result)
-        {
+            .apply_orders_list(&request, result);
+        integrated_check::record(
+            &shared,
+            "orders-list",
+            request.patient_id.as_str(),
+            request.query.as_str(),
+            request.generation,
+            applied,
+        );
+        if applied {
             paint(&weak, &shared);
         }
     };
@@ -813,7 +866,16 @@ fn deliver_order(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<O
     };
     let finish = move || {
         let result = provider.order_detail(&request);
-        if shared.borrow_mut().state.apply_order(&request, result) {
+        let applied = shared.borrow_mut().state.apply_order(&request, result);
+        integrated_check::record(
+            &shared,
+            "order-body",
+            request.patient_id.as_str(),
+            request.order_id.as_str(),
+            request.generation,
+            applied,
+        );
+        if applied {
             paint(&weak, &shared);
         }
     };
@@ -849,11 +911,19 @@ fn load_results(weak: slint::Weak<AppWindow>, shared: Shared, query: String) {
     };
     let finish = move || {
         let result = provider.results_list(&request);
-        if shared
+        let applied = shared
             .borrow_mut()
             .state
-            .apply_results_list(&request, result)
-        {
+            .apply_results_list(&request, result);
+        integrated_check::record(
+            &shared,
+            "results-list",
+            request.patient_id.as_str(),
+            request.query.as_str(),
+            request.generation,
+            applied,
+        );
+        if applied {
             paint(&weak, &shared);
         }
     };
@@ -887,7 +957,16 @@ fn deliver_report(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<
     };
     let finish = move || {
         let result = provider.report_detail(&request);
-        if shared.borrow_mut().state.apply_report(&request, result) {
+        let applied = shared.borrow_mut().state.apply_report(&request, result);
+        integrated_check::record(
+            &shared,
+            "report-body",
+            request.patient_id.as_str(),
+            request.report_id.as_str(),
+            request.generation,
+            applied,
+        );
+        if applied {
             paint(&weak, &shared);
         }
     };
@@ -1299,7 +1378,12 @@ fn wire(app: &AppWindow, shared: &Shared) {
             load_results(weak.clone(), data.clone(), String::new());
         }
         if let Some(app) = weak.upgrade() {
-            app.invoke_focus_chart();
+            match data.borrow().state.tab {
+                ChartTab::Notes => app.invoke_focus_notes_filter(),
+                ChartTab::Orders => app.invoke_focus_orders_filter(),
+                ChartTab::Results => app.invoke_focus_results_filter(),
+                ChartTab::CoverSheet => app.invoke_focus_chart(),
+            }
         }
     });
     let (weak, data) = (app.as_weak(), shared.clone());
@@ -1597,9 +1681,21 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
 fn main() -> Result<(), Box<dyn Error>> {
     let args: Vec<_> = std::env::args().skip(1).collect();
     let smoke = args.as_slice() == ["--smoke-check"];
-    let minimum_size = args.as_slice() == ["--minimum-size"];
-    if !args.is_empty() && !smoke && !minimum_size {
-        return Err("Usage: cprs-chart-mock [--smoke-check | --minimum-size]".into());
+    let integrated = args.iter().any(|a| a == "--integration-check");
+    let keep_open = args.iter().any(|a| a == "--keep-open");
+    let minimum_size = args.iter().any(|a| a == "--minimum-size");
+    if args.iter().any(|a| {
+        ![
+            "--smoke-check",
+            "--minimum-size",
+            "--integration-check",
+            "--keep-open",
+        ]
+        .contains(&a.as_str())
+    }) || (args.iter().any(|a| a == "--smoke-check") && !smoke)
+        || (keep_open && !integrated)
+    {
+        return Err("Usage: cprs-chart-mock [--minimum-size] [--integration-check [--keep-open]] | --smoke-check".into());
     }
     slint::BackendSelector::new()
         .backend_name("winit".into())
@@ -1608,6 +1704,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let app = AppWindow::new()?;
     if minimum_size {
         app.window().set_size(slint::LogicalSize::new(980.0, 680.0));
+    }
+    // Keep scale-override and reproducible review launches out of OS cascade offsets.
+    if minimum_size || integrated || std::env::var_os("SLINT_SCALE_FACTOR").is_some() {
         app.window()
             .set_position(slint::PhysicalPosition::new(0, 0));
     }
@@ -1615,6 +1714,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         state: AppState::default(),
         provider: MockProvider::default(),
         immediate: smoke,
+        delivery_audit: integrated.then(Vec::new),
         last_click: None,
         last_cover_click: None,
         last_order_click: None,
@@ -1625,6 +1725,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     search_request(app.as_weak(), shared.clone(), request);
     if smoke {
         callback_smoke(&app, &shared);
+    } else if integrated {
+        integrated_check::run(&app, &shared, keep_open)?;
     } else {
         app.run()?;
     }
