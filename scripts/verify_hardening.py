@@ -22,7 +22,9 @@ def main():
     auto, integrated, clean, probes = [read(n) for n in
                                       ('automated.json', 'integrated.json', 'clean-checkout.json', 'probe-run.json')]
     native, ci, tooling = [read(n) for n in ('native-status.json', 'ci-status.json', 'tooling-review.json')]
+    listening = read('listening-reports.json')
     require(all(r['protocol'] == 'M12' for r in (auto, integrated, clean, probes, native, ci, tooling)), 'Receipt belongs to another protocol')
+    require(listening['protocol'] == 'M12', 'Listening report belongs to another protocol')
     require(tooling['passed'] and tooling['checks'] and all(c['passed'] for c in tooling['checks']), 'Protocol test failed')
     require(digest(ROOT / tooling['log']) == tooling['log_sha256'], 'Protocol test log changed')
     for name, expected in tooling['source_sha256'].items():
@@ -31,6 +33,11 @@ def main():
     require(hashlib.sha256(workflow).hexdigest() == ci['workflow_sha256'], 'CI status belongs to another workflow')
     binary = digest(ROOT / auto['executable'])
     require(native['executable_sha256'] == binary, 'Native/listening status belongs to another executable')
+    require(listening['reports']['12']['executable_sha256'] == binary, 'M12 listening report belongs to another executable')
+    m10 = json.loads((ROOT / 'validation/milestone-10/acceptance.json').read_text(encoding='utf-8-sig'))
+    require(listening['reports']['10']['executable_sha256'] == native['m10_executable_sha256'] == m10['executable_sha256'], 'M10 listening build differs')
+    require(listening['reports']['12']['result'] == native['m12_listening'] and
+            listening['reports']['10']['result'] == native['m10_appointments_listening'], 'Listening statuses disagree')
     require(auto['passed'] and integrated['passed'] and clean['passed'], 'Required code/build receipt failed')
     require(binary == auto['executable_sha256'] == integrated['executable_sha256'] == probes['executable_sha256'], 'Executable changed')
     require(digest(BASE / 'automated.json') == integrated['automated_receipt_sha256'], 'Automated receipt changed after journey verification')
@@ -120,13 +127,13 @@ def main():
         'clean_windows_tree_passed': True, 'probe_samples': observations,
         'native_layout_and_keyboard': native['status'],
         'm12_affected_controls_listening': native['m12_listening'],
-        'm10_appointments_listening': 'pending; historical acceptance remains unchanged',
+        'm10_appointments_listening': native['m10_appointments_listening'],
         'remote_ci': ci['status'],
         'published_windows_clone': None if published is None else {'passed': published['passed'], 'commit': published['commit']},
         'source_sha256': clean['source_sha256'],
         'build_input_sha256': build_inputs,
         'source_hash_policy': 'Raw LF Git-tree source bytes; current source compared after CRLF-to-LF normalization. Historical evidence remains byte-exact.',
-        'receipts_sha256': {n: digest(BASE / n) for n in ('automated.json', 'integrated.json', 'clean-checkout.json', 'probe-run.json', 'historical-bytes.json', 'startup-handoff.md', 'native-status.json', 'ci-status.json', 'tooling-review.json')},
+        'receipts_sha256': {n: digest(BASE / n) for n in ('automated.json', 'integrated.json', 'clean-checkout.json', 'probe-run.json', 'historical-bytes.json', 'startup-handoff.md', 'native-status.json', 'ci-status.json', 'tooling-review.json', 'listening-reports.json')},
     }
     if published is not None:
         receipt['receipts_sha256']['published-clone.json'] = digest(BASE / 'published-clone.json')

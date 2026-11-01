@@ -443,10 +443,13 @@
     }
   ],
   "native_layout_and_keyboard": "pending; supported computer-use native pipe unavailable after retry/reset",
-  "m12_affected_controls_listening": "pending user report for the M12 executable",
-  "m10_appointments_listening": "pending; historical acceptance remains unchanged",
-  "remote_ci": "pending; M12 source has not been published or run in remote CI",
-  "published_windows_clone": null,
+  "m12_affected_controls_listening": "user-reported pass",
+  "m10_appointments_listening": "user-reported pass",
+  "remote_ci": "Windows desktop code/build and Ubuntu portable-core PR CI passed on M12 implementation d0e83eb",
+  "published_windows_clone": {
+    "passed": true,
+    "commit": "d0e83ebaf5d54f5ec538d8f8f5e85ba08c51c98a"
+  },
   "source_sha256": {
     "crates/chart-core/Cargo.toml": "31387910d8499a04921ea0939980e42bdd39f1d7571a32f07f207eda68a4dbbe",
     "crates/chart-desktop/build.rs": "9d7db63aff17a776f5c76c0b7b245f5f823911af55e3202e9c6172bb60223887",
@@ -486,8 +489,10 @@
     "probe-run.json": "3d376bf5f903bad5db38ef650fc779f7d0ee79e256415c9ed38d24dad9af0ebe",
     "historical-bytes.json": "de1895f4e8d4d0fabec903d5c6af9f97784fe02b86b4531c7bb0dafb89163760",
     "startup-handoff.md": "d98aa272807264438807c6e2a020534b44adf8e98dd30adebe4c652d3a7803eb",
-    "native-status.json": "87fb239f7b791d636a28b5d1cdbfd6754579085e099325ac413b44015c039671",
-    "ci-status.json": "a58004a1d0f5e0e98173ac6549c7883d4a9221a33daf1fae61e0fefc521af808",
-    "tooling-review.json": "39c0286ca40d7a62d2b8da32e038ec997d2f65771e5695ba3f2602276557c0c4"
+    "native-status.json": "c7adbc4f0ca43f65d14b606024afbb514c2b524302bee64f34f210573ee39e78",
+    "ci-status.json": "5a13f91c6e60727c383ad27a0d60afc15860b1015e809a524d8e4bb3aa000257",
+    "tooling-review.json": "16cfadf45e18e550b7f8f1bb28b707c860fee5f37cff64dcecaa3cf4caca3e19",
+    "listening-reports.json": "dfc08aee6338f69e59ccda1c92cdcbfdf8df96bf37bcf0e797f9a8af6de5e44e",
+    "published-clone.json": "4476cfe4dd85566a9d58852f99a2b39034e2941360a0d77cd29e55e394b67ae9"
   }
 }

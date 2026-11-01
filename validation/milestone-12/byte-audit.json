@@ -2,11 +2,11 @@
   "scope": "Private Git index staging and fresh checkout; real index/branch unchanged",
   "passed": true,
   "files_sha256": {
-    "validation/milestone-12/acceptance.json": "26f7e51b290db43784fed141fa9a78ff4c28da9f854aafe45ccecc0773096fb7",
+    "validation/milestone-12/acceptance.json": "78344612a75d7a0cc299cdca2cce0a5a93731e0f35a1bd4fdc388e6e996d23c7",
     "validation/milestone-12/automated.json": "97b145e61918bfa52446aa8bd881eba249dcbc7dd5a553df52ad561ae613438c",
     "validation/milestone-12/build.log": "0465f3cf3659be637fa843c36a9056627b8f77f428a3f9897ddcf18e8f71844e",
     "validation/milestone-12/callbacks.log": "3faf93889d77be62fe534b08ddf44500244d1673a1fd7b71b6f4d3b4763bb31f",
-    "validation/milestone-12/ci-status.json": "a58004a1d0f5e0e98173ac6549c7883d4a9221a33daf1fae61e0fefc521af808",
+    "validation/milestone-12/ci-status.json": "5a13f91c6e60727c383ad27a0d60afc15860b1015e809a524d8e4bb3aa000257",
     "validation/milestone-12/clean-checkout.json": "22d8f18b4825590a023827f263f6f4e0280fc2501e4050bfb02e6d449af35908",
     "validation/milestone-12/clean-checkout.log": "83d73b92af039a61a33551fbf488c8196e2ad78ccfa8974bd8c23530996ef7fd",
     "validation/milestone-12/clippy.log": "68163a7f96a0ac4a7625e703453fb9f828998b9194a3e3cda90ca6bd26512815",
@@ -14,7 +14,8 @@
     "validation/milestone-12/historical-bytes.json": "de1895f4e8d4d0fabec903d5c6af9f97784fe02b86b4531c7bb0dafb89163760",
     "validation/milestone-12/integrated.json": "5bfb0afc491bd02bb078462aad7bbec4cb4e86acaafe14ff45399b667f8aed46",
     "validation/milestone-12/integrated.log": "0f4e8af4a213754a80fdb58bd40373ae8afb40b0536cb2ef2a9f3b31b483fc5c",
-    "validation/milestone-12/native-status.json": "87fb239f7b791d636a28b5d1cdbfd6754579085e099325ac413b44015c039671",
+    "validation/milestone-12/listening-reports.json": "dfc08aee6338f69e59ccda1c92cdcbfdf8df96bf37bcf0e797f9a8af6de5e44e",
+    "validation/milestone-12/native-status.json": "c7adbc4f0ca43f65d14b606024afbb514c2b524302bee64f34f210573ee39e78",
     "validation/milestone-12/probe-default-100.log": "c2f8532e70fb060ca617486d6ffcb75f6f9c3ba1dc9371bf3a2cea91e907beda",
     "validation/milestone-12/probe-default-125.log": "bcbaf04e3d08f72e05c9ac49fe5226d8528e9659637368f4b9c7d810017debbf",
     "validation/milestone-12/probe-default-150.log": "71f48aa8f09ba17775afd2b1a7aebb4fd85f9f3290816d20d7cc43aecec469bd",
@@ -26,11 +27,13 @@
     "validation/milestone-12/probe-minimum-175.log": "2d6bf2f6a2747b1e0a55159979c2a05128843183bfbbf4a773643813c2422d03",
     "validation/milestone-12/probe-minimum-200.log": "f3a5ffef88f5f2a962fe8a4bd927f1acbf74600226fd009efaa2bfcc01ea8bae",
     "validation/milestone-12/probe-run.json": "3d376bf5f903bad5db38ef650fc779f7d0ee79e256415c9ed38d24dad9af0ebe",
-    "validation/milestone-12/protocol-tests.log": "99ca56301b15a7a263f2d932a3e6c21c2d6ebf6bbfd1dd203ad1303a05617a67",
-    "validation/milestone-12/receipt-rejections.json": "bda9e36c5215f257a45fa117ee84e92ec57af75d0ad0c9f58f6ccfbb8b7afc96",
+    "validation/milestone-12/protocol-tests.log": "f3a84e174823b2b10eb322be60af8959e8a68ae0cf93616184908c34ef55c002",
+    "validation/milestone-12/published-clone.json": "4476cfe4dd85566a9d58852f99a2b39034e2941360a0d77cd29e55e394b67ae9",
+    "validation/milestone-12/published-clone.log": "95f286599ff53279121eae51e0de159da7b6aa3de52ba20663156cc6b72dec84",
+    "validation/milestone-12/receipt-rejections.json": "ef0aff25b30eb57af23bef211618d915107ff2e1ca45cf2556b7044526db32f3",
     "validation/milestone-12/startup-handoff.md": "d98aa272807264438807c6e2a020534b44adf8e98dd30adebe4c652d3a7803eb",
     "validation/milestone-12/tests.log": "42e774a834e944b047d800d5473a11023d285798c3d121693109ec9c5e0adfde",
-    "validation/milestone-12/tooling-review.json": "39c0286ca40d7a62d2b8da32e038ec997d2f65771e5695ba3f2602276557c0c4"
+    "validation/milestone-12/tooling-review.json": "16cfadf45e18e550b7f8f1bb28b707c860fee5f37cff64dcecaa3cf4caca3e19"
   },
   "limit": "Audit excludes its own output to avoid a self-hash cycle; no M12 commit or remote clone claimed."
 }

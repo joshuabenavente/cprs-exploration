@@ -1,0 +1,608 @@
+Running: cargo fetch --locked
+Running: cargo fmt --all -- --check
+Running: cargo clippy --workspace --all-targets --locked --offline -- -D warnings
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling autocfg v1.5.1
+   Compiling crc32fast v1.5.3
+   Compiling libm v0.2.16
+   Compiling version_check v0.9.5
+    Checking stable_deref_trait v1.2.1
+   Compiling icu_properties_data v2.4.0
+   Compiling icu_normalizer_data v2.4.0
+    Checking windows-link v0.2.1
+   Compiling icu_locale_fallback_data v2.4.0
+   Compiling serde_core v1.0.229
+   Compiling smallvec v1.16.4
+   Compiling writeable v0.6.4
+   Compiling simd-adler32 v0.3.10
+   Compiling litemap v0.8.3
+   Compiling memchr v2.8.3
+   Compiling num-traits v0.2.19
+   Compiling portable-atomic v1.15.0
+   Compiling arrayvec v0.7.8
+   Compiling icu_decimal_data v2.4.0
+   Compiling unicode-segmentation v1.13.3
+    Checking critical-section v1.2.0
+   Compiling adler2 v2.0.1
+   Compiling memoffset v0.9.1
+   Compiling unicode-xid v0.2.6
+   Compiling foldhash v0.2.0
+   Compiling pulldown-cmark v0.13.5
+   Compiling convert_case v0.10.0
+   Compiling once_cell v1.21.4
+   Compiling bitflags v2.13.2
+   Compiling cfg-if v1.0.5
+   Compiling hashbrown v0.17.1
+   Compiling miniz_oxide v0.9.1
+   Compiling windows-result v0.4.1
+   Compiling windows-strings v0.5.1
+   Compiling heck v0.5.0
+    Checking utf_types v1.0.0
+   Compiling slotmap v1.1.1
+   Compiling syn v3.0.9
+   Compiling syn v2.0.119
+    Checking utf8_iter v1.1.0
+   Compiling log v0.4.34
+   Compiling float-cmp v0.9.0
+   Compiling flate2 v1.1.10
+   Compiling miniz_oxide v0.8.9
+   Compiling polycool v0.4.0
+   Compiling strict-num v0.1.1
+   Compiling fdeflate v0.3.7
+   Compiling arrayref v0.3.9
+   Compiling kurbo v0.13.1
+   Compiling windows-threading v0.2.1
+   Compiling png v0.18.1
+   Compiling zune-core v0.5.3
+   Compiling siphasher v1.0.4
+   Compiling tinyvec v1.13.3
+   Compiling byteorder-lite v0.1.0
+   Compiling zune-jpeg v0.5.15
+   Compiling fontdb v0.24.0
+   Compiling simplecss v0.2.2
+   Compiling roxmltree v0.21.2
+   Compiling svgtypes v0.16.1
+   Compiling weezl v0.1.12
+   Compiling crossbeam-utils v0.8.23
+   Compiling unicode-script v0.5.8
+   Compiling quick-error v2.0.1
+   Compiling data-url v0.3.2
+   Compiling imagesize v0.15.0
+   Compiling unicode-vo v0.1.0
+   Compiling base64 v0.23.1
+   Compiling color_quant v1.1.0
+   Compiling xmlwriter v0.1.0
+   Compiling unicode-bidi v0.3.18
+   Compiling pico-args v0.5.0
+   Compiling gif v0.14.2
+   Compiling image-webp v0.2.4
+   Compiling winnow v1.0.4
+   Compiling parlance v0.1.1
+   Compiling crossbeam-epoch v0.9.21
+   Compiling equivalent v1.0.3
+   Compiling memmap2 v0.9.12
+   Compiling semver v1.0.28
+   Compiling cfg_aliases v0.2.2
+   Compiling linebender_resource_handle v0.1.1
+   Compiling unicase v2.10.0
+   Compiling indexmap v2.14.2
+   Compiling rustc_version v0.4.1
+   Compiling crossbeam-deque v0.8.8
+   Compiling htmlparser v0.2.1
+   Compiling synstructure v0.14.0
+    Checking allocator-api2 v0.2.21
+   Compiling toml_writer v1.1.3+spec-1.1.0
+    Checking uuid v1.29.0
+   Compiling toml_parser v1.1.5+spec-1.1.0
+   Compiling toml_datetime v1.1.2+spec-1.1.0
+    Checking hashbrown v0.16.1
+    Checking accesskit v0.24.1
+   Compiling field-offset v0.3.6
+   Compiling euclid v0.22.14
+   Compiling toml_edit v0.25.17+spec-1.1.0
+   Compiling rayon-core v1.13.0
+   Compiling icu_segmenter_data v2.4.0
+   Compiling zmij v1.0.23
+   Compiling rustversion v1.0.23
+   Compiling thiserror v2.0.21
+   Compiling windows_x86_64_msvc v0.52.6
+    Checking lyon_geom v1.0.20
+   Compiling proc-macro-crate v3.5.0
+   Compiling windows-interface v0.59.3
+   Compiling windows-implement v0.60.2
+   Compiling derive_more-impl v2.1.1
+   Compiling strum_macros v0.28.0
+   Compiling snafu-derive v0.8.9
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerovec-derive v0.11.7
+   Compiling displaydoc v0.2.7
+   Compiling bytemuck_derive v1.12.1
+   Compiling thiserror-impl v2.0.21
+   Compiling windows-core v0.62.2
+   Compiling fixed_decimal v0.7.3
+    Checking windows-collections v0.3.2
+    Checking windows-future v0.3.2
+   Compiling windows-numerics v0.3.1
+   Compiling bytemuck v1.25.2
+   Compiling zerofrom v0.1.8
+   Compiling rspolib v0.1.2
+    Checking windows v0.62.2
+    Checking yoke v0.8.4
+   Compiling font-types v0.12.7
+   Compiling tiny-skia-path v0.12.0
+   Compiling rgb v0.8.53
+   Compiling percent-encoding v2.3.2
+    Checking zerovec v0.11.9
+    Checking zerotrie v0.2.5
+   Compiling read-fonts v0.41.0
+   Compiling tiny-skia v0.12.0
+   Compiling either v1.19.0
+   Compiling unicode-width v0.2.3
+   Compiling serde_json v1.0.154
+   Compiling pxfm v0.1.30
+    Checking tinystr v0.8.5
+    Checking potential_utf v0.1.6
+    Checking icu_collections v2.4.0
+    Checking icu_locale_core v2.4.0
+    Checking chart-core v0.1.0 (C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\m12-published-d0e83eb\crates\chart-core)
+   Compiling derive_more v2.1.1
+    Checking icu_provider v2.4.0
+   Compiling form_urlencoded v1.2.2
+   Compiling snafu v0.8.9
+    Checking icu_properties v2.4.0
+    Checking icu_normalizer v2.4.0
+    Checking icu_locale_fallback v2.4.0
+   Compiling moxcms v0.8.1
+   Compiling const-field-offset-macro v0.2.1
+   Compiling icu_decimal v2.4.0
+   Compiling num_enum_derive v0.7.6
+   Compiling lyon_path v1.0.19
+   Compiling idna_adapter v1.2.2
+   Compiling zeno v0.3.3
+   Compiling idna v1.1.0
+   Compiling lazy_static v1.5.1
+   Compiling text-size v1.1.1
+   Compiling i-slint-compiler v1.18.1
+   Compiling serde v1.0.229
+   Compiling anstyle v1.0.14
+   Compiling natord v1.0.9
+   Compiling hashbrown v0.14.5
+   Compiling yazi v0.2.1
+    Checking pin-project-lite v0.2.17
+   Compiling rustc-hash v1.1.0
+   Compiling unicode-linebreak v0.1.5
+    Checking skrifa v0.44.0
+    Checking harfrust v0.12.0
+   Compiling itoa v1.0.18
+   Compiling countme v3.0.1
+    Checking tracing-core v0.1.36
+   Compiling rowan v0.17.0
+    Checking tracing v0.1.44
+   Compiling annotate-snippets v0.12.17
+   Compiling url v2.5.8
+   Compiling num_enum v0.7.6
+   Compiling fontique v0.11.1
+   Compiling image v0.25.10
+   Compiling rayon v1.12.0
+    Checking icu_segmenter v2.4.0
+   Compiling lyon_extra v1.1.0
+    Checking windows-targets v0.52.6
+    Checking usvg v0.48.1
+    Checking const-field-offset v0.2.1
+    Checking parley_data v0.11.1
+   Compiling itertools v0.15.0
+   Compiling strum v0.28.0
+   Compiling serde_derive v1.0.229
+   Compiling vtable-macro v0.5.0
+    Checking resvg v0.48.1
+   Compiling swash v0.2.10
+   Compiling pin-project-internal v1.1.13
+   Compiling winit v0.30.13
+    Checking windows-sys v0.61.2
+   Compiling by_address v1.2.1
+    Checking raw-window-handle v0.6.2
+    Checking dpi v0.1.2
+   Compiling pin-utils v0.1.1
+   Compiling smol_str v0.3.7
+   Compiling typed-index-collections v3.5.0
+    Checking pin-project v1.1.13
+   Compiling spin_on v0.1.1
+    Checking vtable v0.5.0
+    Checking windows-sys v0.52.0
+   Compiling i-slint-core-macros v1.18.1
+    Checking lyon_algorithms v1.0.22
+    Checking accesskit_consumer v0.38.0
+   Compiling i-slint-common v1.18.1
+    Checking clru v0.6.3
+    Checking taffy v0.10.1
+    Checking chrono v0.4.45
+    Checking static_assertions v1.1.0
+    Checking sys-locale v0.3.2
+    Checking error-code v3.4.0
+    Checking scopeguard v1.2.0
+    Checking cursor-icon v1.2.0
+    Checking pin-weak v1.1.0
+    Checking slab v0.4.12
+    Checking smol_str v0.2.2
+    Checking clipboard-win v5.4.3
+    Checking keyboard-types v0.7.0
+    Checking crossbeam-channel v0.5.17
+   Compiling i-slint-backend-winit v1.18.1
+    Checking imgref v1.12.3
+    Checking softbuffer v0.4.8
+    Checking arboard v3.7.0
+    Checking scoped-tls-hkt v0.1.5
+   Compiling i-slint-backend-selector v1.18.1
+    Checking webbrowser v1.2.5
+    Checking muda v0.19.3
+    Checking accesskit_windows v0.34.0
+    Checking parley v0.11.1
+    Checking accesskit_winit v0.33.2
+    Checking i-slint-core v1.18.1
+    Checking i-slint-renderer-software v1.18.1
+   Compiling slint-build v1.18.1
+   Compiling cprs-chart-mock v0.1.0 (C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\m12-published-d0e83eb\crates\chart-desktop)
+   Compiling slint-macros v1.18.1
+    Checking slint v1.18.1
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 56.78s
+Running: cargo test --workspace --locked --offline
+   Compiling stable_deref_trait v1.2.1
+   Compiling smallvec v1.16.4
+   Compiling writeable v0.6.4
+   Compiling windows-link v0.2.1
+   Compiling litemap v0.8.3
+   Compiling foldhash v0.2.0
+   Compiling simd-adler32 v0.3.10
+   Compiling adler2 v2.0.1
+   Compiling cfg-if v1.0.5
+   Compiling utf_types v1.0.0
+   Compiling zerofrom v0.1.8
+   Compiling bytemuck v1.25.2
+   Compiling crc32fast v1.5.3
+   Compiling windows-result v0.4.1
+   Compiling windows-strings v0.5.1
+   Compiling yoke v0.8.4
+   Compiling miniz_oxide v0.9.1
+   Compiling log v0.4.34
+   Compiling libm v0.2.16
+   Compiling utf8_iter v1.1.0
+   Compiling font-types v0.12.7
+   Compiling memchr v2.8.3
+   Compiling windows-core v0.62.2
+   Compiling zerovec v0.11.9
+   Compiling zerotrie v0.2.5
+   Compiling miniz_oxide v0.8.9
+   Compiling fdeflate v0.3.7
+   Compiling hashbrown v0.17.1
+   Compiling windows-threading v0.2.1
+   Compiling unicode-segmentation v1.13.3
+   Compiling flate2 v1.1.10
+   Compiling float-cmp v0.9.0
+   Compiling strict-num v0.1.1
+   Compiling windows-future v0.3.2
+   Compiling windows-numerics v0.3.1
+   Compiling windows-collections v0.3.2
+   Compiling icu_properties_data v2.4.0
+   Compiling num-traits v0.2.19
+   Compiling arrayref v0.3.9
+   Compiling serde_core v1.0.229
+   Compiling siphasher v1.0.4
+   Compiling tiny-skia-path v0.12.0
+   Compiling equivalent v1.0.3
+   Compiling tinyvec v1.13.3
+   Compiling icu_normalizer_data v2.4.0
+   Compiling byteorder-lite v0.1.0
+   Compiling tinystr v0.8.5
+   Compiling potential_utf v0.1.6
+   Compiling zune-core v0.5.3
+   Compiling icu_locale_fallback_data v2.4.0
+   Compiling icu_locale_core v2.4.0
+   Compiling icu_collections v2.4.0
+   Compiling roxmltree v0.21.2
+   Compiling simplecss v0.2.2
+   Compiling data-url v0.3.2
+   Compiling zune-jpeg v0.5.15
+   Compiling unicode-script v0.5.8
+   Compiling pico-args v0.5.0
+   Compiling xmlwriter v0.1.0
+   Compiling unicode-vo v0.1.0
+   Compiling base64 v0.23.1
+   Compiling unicode-bidi v0.3.18
+   Compiling imagesize v0.15.0
+   Compiling critical-section v1.2.0
+   Compiling euclid v0.22.14
+   Compiling convert_case v0.10.0
+   Compiling arrayvec v0.7.8
+   Compiling portable-atomic v1.15.0
+   Compiling weezl v0.1.12
+   Compiling parlance v0.1.1
+   Compiling quick-error v2.0.1
+   Compiling color_quant v1.1.0
+   Compiling memmap2 v0.9.12
+   Compiling linebender_resource_handle v0.1.1
+   Compiling icu_provider v2.4.0
+   Compiling derive_more-impl v2.1.1
+   Compiling gif v0.14.2
+   Compiling read-fonts v0.41.0
+   Compiling image-webp v0.2.4
+   Compiling rgb v0.8.53
+   Compiling unicase v2.10.0
+   Compiling icu_decimal_data v2.4.0
+   Compiling once_cell v1.21.4
+   Compiling fixed_decimal v0.7.3
+   Compiling memoffset v0.9.1
+   Compiling polycool v0.4.0
+   Compiling icu_normalizer v2.4.0
+   Compiling icu_locale_fallback v2.4.0
+   Compiling htmlparser v0.2.1
+   Compiling bitflags v2.13.2
+   Compiling icu_decimal v2.4.0
+   Compiling kurbo v0.13.1
+   Compiling png v0.18.1
+   Compiling pxfm v0.1.30
+   Compiling fontdb v0.24.0
+   Compiling yazi v0.2.1
+   Compiling zeno v0.3.3
+   Compiling percent-encoding v2.3.2
+   Compiling form_urlencoded v1.2.2
+   Compiling icu_properties v2.4.0
+   Compiling windows v0.62.2
+   Compiling unicode-linebreak v0.1.5
+   Compiling strum v0.28.0
+   Compiling svgtypes v0.16.1
+   Compiling tiny-skia v0.12.0
+   Compiling slotmap v1.1.1
+   Compiling pulldown-cmark v0.13.5
+   Compiling indexmap v2.14.2
+   Compiling allocator-api2 v0.2.21
+   Compiling uuid v1.29.0
+   Compiling hashbrown v0.16.1
+   Compiling accesskit v0.24.1
+   Compiling moxcms v0.8.1
+   Compiling toml_edit v0.25.17+spec-1.1.0
+   Compiling chart-core v0.1.0 (C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\m12-published-d0e83eb\crates\chart-core)
+   Compiling derive_more v2.1.1
+   Compiling proc-macro-crate v3.5.0
+   Compiling lyon_geom v1.0.20
+   Compiling idna_adapter v1.2.2
+   Compiling num_enum_derive v0.7.6
+   Compiling idna v1.1.0
+   Compiling lyon_path v1.0.19
+   Compiling field-offset v0.3.6
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling icu_segmenter_data v2.4.0
+   Compiling thiserror v2.0.21
+   Compiling pin-project-lite v0.2.17
+   Compiling tracing-core v0.1.36
+   Compiling serde_json v1.0.154
+   Compiling rowan v0.17.0
+   Compiling rspolib v0.1.2
+   Compiling lyon_extra v1.1.0
+   Compiling tracing v0.1.44
+   Compiling url v2.5.8
+   Compiling num_enum v0.7.6
+   Compiling skrifa v0.44.0
+   Compiling harfrust v0.12.0
+   Compiling fontique v0.11.1
+   Compiling image v0.25.10
+   Compiling const-field-offset v0.2.1
+   Compiling icu_segmenter v2.4.0
+   Compiling windows-targets v0.52.6
+   Compiling parley_data v0.11.1
+   Compiling windows-sys v0.61.2
+   Compiling raw-window-handle v0.6.2
+   Compiling swash v0.2.10
+   Compiling usvg v0.48.1
+   Compiling dpi v0.1.2
+   Compiling pin-project v1.1.13
+   Compiling serde v1.0.229
+   Compiling vtable v0.5.0
+   Compiling resvg v0.48.1
+   Compiling windows-sys v0.52.0
+   Compiling i-slint-core-macros v1.18.1
+   Compiling i-slint-common v1.18.1
+   Compiling i-slint-compiler v1.18.1
+   Compiling lyon_algorithms v1.0.22
+   Compiling crossbeam-utils v0.8.23
+   Compiling clru v0.6.3
+   Compiling accesskit_consumer v0.38.0
+   Compiling taffy v0.10.1
+   Compiling chrono v0.4.45
+   Compiling error-code v3.4.0
+   Compiling pin-weak v1.1.0
+   Compiling sys-locale v0.3.2
+   Compiling smol_str v0.2.2
+   Compiling static_assertions v1.1.0
+   Compiling slab v0.4.12
+   Compiling cursor-icon v1.2.0
+   Compiling scopeguard v1.2.0
+   Compiling clipboard-win v5.4.3
+   Compiling crossbeam-channel v0.5.17
+   Compiling keyboard-types v0.7.0
+   Compiling arboard v3.7.0
+   Compiling i-slint-backend-selector v1.18.1
+   Compiling webbrowser v1.2.5
+   Compiling softbuffer v0.4.8
+   Compiling scoped-tls-hkt v0.1.5
+   Compiling imgref v1.12.3
+   Compiling winit v0.30.13
+   Compiling muda v0.19.3
+   Compiling accesskit_windows v0.34.0
+   Compiling accesskit_winit v0.33.2
+   Compiling parley v0.11.1
+   Compiling i-slint-core v1.18.1
+   Compiling slint-build v1.18.1
+   Compiling i-slint-renderer-software v1.18.1
+   Compiling slint-macros v1.18.1
+   Compiling cprs-chart-mock v0.1.0 (C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\m12-published-d0e83eb\crates\chart-desktop)
+   Compiling i-slint-backend-winit v1.18.1
+   Compiling slint v1.18.1
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 53.24s
+     Running unittests src\lib.rs (target\debug\deps\chart_core-b70bb72368796bb7.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\active_medications.rs (target\debug\deps\active_medications-e2c0184be9fc169b.exe)
+
+running 9 tests
+test medications_activation_requires_current_cover_selection ... ok
+test medications_close_reopen_rejects_stale_and_duplicate_success_and_failure ... ok
+test medications_display_strings_and_details_preserve_identity_status_and_unicode ... ok
+test medications_patient_switch_same_item_id_rejects_previous_owner ... ok
+test medications_and_orders_have_independent_fixtures_and_requests ... ok
+test medications_empty_list_and_error_retry_remain_distinct ... ok
+test medications_selector_cancel_and_tab_changes_invalidate_pending_work ... ok
+test medications_wrong_patient_panel_or_item_response_fails_closed ... ok
+test medications_chart_rejects_foreign_duplicate_blank_and_missing_display_data ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\appointments.rs (target\debug\deps\appointments-7b3bcaeebb010050.exe)
+
+running 9 tests
+test appointments_activation_requires_current_cover_selection ... ok
+test appointments_close_reopen_rejects_stale_and_duplicate_success_and_failure ... ok
+test appointments_display_strings_and_details_preserve_identity_status_and_unicode ... ok
+test appointments_empty_list_and_error_retry_remain_distinct ... ok
+test appointments_patient_switch_same_item_id_rejects_previous_owner ... ok
+test appointments_and_orders_have_independent_fixtures_and_requests ... ok
+test appointments_selector_cancel_and_tab_changes_invalidate_pending_work ... ok
+test appointments_wrong_patient_panel_or_item_response_fails_closed ... ok
+test appointments_chart_rejects_foreign_duplicate_blank_and_missing_display_data ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\cover_sheet.rs (target\debug\deps\cover_sheet-37d15f11922f35d9.exe)
+
+running 9 tests
+test cs09_unicode_case_mapping_and_cjk_queries_preserve_fixture_identity ... ok
+test cs06_empty_panel_is_distinct_from_unavailable_detail_and_retry_is_explicit ... ok
+test cs01_two_panels_and_details_belong_to_the_committed_patient ... ok
+test cs07_opening_selector_clears_selection_and_details_cancel_preserves_chart ... ok
+test cs08_detail_activation_requires_a_valid_selection_and_cover_sheet ... ok
+test cs02_closing_and_reopening_same_item_rejects_old_and_duplicate_delivery ... ok
+test cs03_same_item_id_on_a_new_patient_does_not_accept_previous_details ... ok
+test cs04_wrong_patient_panel_or_item_in_detail_response_fails_closed ... ok
+test cs05_chart_commit_rejects_foreign_panel_owner_foreign_row_and_duplicate_ids ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\notes.rs (target\debug\deps\notes-556d8cc303024ea7.exe)
+
+running 12 tests
+test nt12_denied_and_unavailable_patient_records_cannot_be_requested_from_mock_provider ... ok
+test nt11_order_is_deterministic_even_when_provider_rows_are_reversed ... ok
+test nt10_read_only_unicode_long_body_and_selection_invalidation ... ok
+test nt09_document_owner_or_id_mismatch_fails_closed ... ok
+test nt01_duplicate_titles_select_exact_ids_and_expose_only_owned_text ... ok
+test nt02_out_of_order_and_duplicate_note_replies_never_replace_current_selection ... ok
+test nt07_list_and_body_failures_clear_text_and_support_explicit_retry ... ok
+test nt05_tab_and_selector_cancel_invalidate_requests_while_preserving_chart ... ok
+test nt08_malformed_lists_reject_owner_duplicates_titles_and_unicode_dates ... ok
+test nt06_empty_list_no_match_and_empty_document_are_distinct_from_errors ... ok
+test nt04_patient_change_rejects_same_note_id_from_previous_owner ... ok
+test nt03_filter_clears_body_and_rejects_old_list_and_old_document ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\orders.rs (target\debug\deps\orders-846cb932a9e2f74a.exe)
+
+running 15 tests
+test ot12_denied_and_unavailable_patient_records_cannot_be_requested_from_mock_provider ... ok
+test ot11_order_is_deterministic_even_when_provider_rows_are_reversed ... ok
+test ot10_read_only_unicode_long_detail_and_selection_invalidation ... ok
+test ot01_duplicate_descriptions_select_exact_ids_and_expose_only_owned_text ... ok
+test ot09_document_owner_or_id_mismatch_fails_closed ... ok
+test ot07_list_and_detail_failures_clear_text_and_support_explicit_retry ... ok
+test ot02_out_of_order_and_duplicate_order_replies_never_replace_current_selection ... ok
+test ot08_malformed_lists_reject_owner_duplicates_descriptions_and_unicode_dates ... ok
+test ot04_patient_change_rejects_same_order_id_from_previous_owner ... ok
+test ot06_empty_list_no_match_and_empty_document_are_distinct_from_errors ... ok
+test ot05_tab_and_selector_cancel_invalidate_requests_while_preserving_chart ... ok
+test ot03_filter_clears_detail_and_rejects_old_list_and_old_document ... ok
+test ot15_response_rows_must_match_requested_status_and_text_filter ... ok
+test ot14_selection_does_not_open_detail_and_close_retains_selection_but_invalidates_reply ... ok
+test ot13_status_filter_is_scoped_and_invalidates_old_detail_and_list ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\results.rs (target\debug\deps\results-4ed03da599965353.exe)
+
+running 15 tests
+test rt12_denied_and_unavailable_patient_records_cannot_be_requested_from_mock_provider ... ok
+test rt11_sort_order_is_deterministic_even_when_provider_rows_are_reversed ... ok
+test rt01_duplicate_descriptions_select_exact_ids_and_expose_only_owned_text ... ok
+test rt10_read_only_unicode_long_detail_and_selection_invalidation ... ok
+test rt09_document_owner_or_id_mismatch_fails_closed ... ok
+test rt02_out_of_order_and_duplicate_report_replies_never_replace_current_selection ... ok
+test rt07_list_and_detail_failures_clear_text_and_support_explicit_retry ... ok
+test rt05_tab_and_selector_cancel_invalidate_requests_while_preserving_chart ... ok
+test rt06_empty_list_no_match_and_empty_document_are_distinct_from_errors ... ok
+test rt08_malformed_lists_reject_owner_duplicates_descriptions_and_unicode_dates ... ok
+test rt03_filter_clears_detail_and_rejects_old_list_and_old_document ... ok
+test rt13_selection_does_not_open_detail_and_close_retains_selection_but_invalidates_reply ... ok
+test rt14_response_rows_must_match_requested_text_filter ... ok
+test rt04_patient_change_rejects_same_report_id_from_previous_owner ... ok
+test rt15_ids_and_single_report_metadata_are_bounded ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\vitals.rs (target\debug\deps\vitals-976651fd48103528.exe)
+
+running 8 tests
+test vitals_activation_requires_current_cover_selection ... ok
+test vitals_display_strings_and_details_preserve_identity_units_date_and_unicode ... ok
+test vitals_patient_switch_same_item_id_rejects_previous_owner ... ok
+test vitals_close_reopen_rejects_stale_and_duplicate_success_and_failure ... ok
+test vitals_empty_list_and_error_retry_remain_distinct ... ok
+test vitals_selector_cancel_and_tab_changes_invalidate_pending_work ... ok
+test vitals_wrong_patient_panel_or_item_response_fails_closed ... ok
+test vitals_chart_rejects_foreign_duplicate_blank_and_missing_display_data ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\workflow.rs (target\debug\deps\workflow-c3325c16b19b1437.exe)
+
+running 19 tests
+test ps07_malformed_fixture_rows_fail_closed ... ok
+test demo_roster_is_a_fixture_filter_and_does_not_override_access ... ok
+test ps03_editing_query_invalidates_selection_and_acknowledgment ... ok
+test cancel_and_reopen_rejects_old_search_generation ... ok
+test ps05_successful_zero_rows_is_empty ... ok
+test ps06_unavailable_provider_is_not_an_empty_result ... ok
+test ps02_duplicate_names_resolve_to_exact_id_and_demographics ... ok
+test ps04_stale_search_and_duplicate_delivery_are_ignored ... ok
+test failed_chart_load_preserves_previous_header_and_view ... ok
+test mismatched_chart_identity_is_rejected_atomically ... ok
+test ps08_paging_carries_explicit_scoped_cursor_and_direction ... ok
+test ps10_no_valid_selected_identifier_cannot_open_a_chart ... ok
+test ps01_opening_selector_keeps_committed_chart_identity ... ok
+test ps09_cancel_rejects_pending_chart_and_preserves_previous_chart ... ok
+test queued_row_selection_cannot_dismiss_an_access_prompt ... ok
+test ps16_implemented_tabs_require_an_active_chart ... ok
+test ps14_late_old_patient_data_cannot_replace_new_chart ... ok
+test ps12_access_and_deceased_flags_require_explicit_acknowledgment ... ok
+test ps11_denied_and_unavailable_access_preserve_active_chart ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\main.rs (target\debug\deps\cprs_chart_mock-ddb7dda1bc6c805f.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests chart_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Running: cargo build -p cprs-chart-mock --locked --offline
+   Compiling cprs-chart-mock v0.1.0 (C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\.local\m12-published-d0e83eb\crates\chart-desktop)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 10.80s

@@ -1,7 +1,7 @@
 {
   "protocol": "M12",
   "scope": "Verifier rejection checks on fresh M12 evidence; CI/native mismatches use in-memory test fixtures, not operational evidence",
-  "checked_at": "2026-11-01T01:42:40.263588+00:00",
+  "checked_at": "2026-11-01T01:57:05.847003+00:00",
   "passed": true,
   "checks": [
     {
@@ -33,11 +33,29 @@
       "passed": true,
       "expected_failure": "Native/listening status belongs to another executable",
       "actual_error": "Native/listening status belongs to another executable"
+    },
+    {
+      "name": "wrong-listening-build-12",
+      "passed": true,
+      "expected_failure": "M12 listening report belongs to another executable",
+      "actual_error": "M12 listening report belongs to another executable"
+    },
+    {
+      "name": "wrong-listening-build-10",
+      "passed": true,
+      "expected_failure": "M10 listening build differs",
+      "actual_error": "M10 listening build differs"
+    },
+    {
+      "name": "inconsistent-listening-status",
+      "passed": true,
+      "expected_failure": "Listening statuses disagree",
+      "actual_error": "Listening statuses disagree"
     }
   ],
   "restored": "All changed log/receipt bytes restored; temporary source file removed; unmodified baseline verifier passed again",
   "source_sha256": {
-    "scripts/verify_hardening.py": "bb567b680aae4b8ce241a70262f3ccc6f4d832edaae0bfaaa2e32935ef06b7ac",
+    "scripts/verify_hardening.py": "3b4d7cdd980be87cc2b76e77a64598322baed6328ffc27de6c06f27a507a7fcd",
     "scripts/verify_integrated.py": "9a67cd0dbfc1f9d07c2114a0e1b0f22a9bbeaf8e9955ed5e0acd11d7a444c4fb"
   }
 }

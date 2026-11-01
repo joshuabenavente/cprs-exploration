@@ -27,13 +27,14 @@
   ],
   "captures": [],
   "samples": [],
-  "m12_listening": "pending user report for the M12 executable",
-  "m10_appointments_listening": "pending; requires its historical executable and a separate scoped user report",
+  "m12_listening": "user-reported pass",
+  "m10_appointments_listening": "user-reported pass",
   "m10_executable_sha256": "de217b49353b923172e62f7500eb20322aecec2cc0aa7c275d8c764e2d2288fd",
   "historical_m11_listening": {
     "status": "user-reported pass on historical executable only",
     "executable_sha256": "1673037d3f1e90b671cbf910ebc53fcee08971ba997160d2275e3fbe1ccdfdd8",
     "receipt": "validation/milestone-11/native-status.json"
   },
-  "next": "Restore supported computer-use helper, then use Review-CoverSheet.ps1 -Matrix. Report current-build listening separately; do not backdate M10 or M11 results."
+  "next": "Restore the supported computer-use helper and complete the separate native visual/keyboard matrix with Review-CoverSheet.ps1 -Matrix. M10 and M12 listening were reported passed separately.",
+  "listening_reports": "validation/milestone-12/listening-reports.json"
 }
