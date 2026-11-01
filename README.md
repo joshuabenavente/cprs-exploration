@@ -4,8 +4,9 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-The development branch is `main`. The active testing phase is **functionality at
-100% scale only**, at default and minimum sizes. Keyboard/focus/navigation and
+The development branch is `main`; the policy change is merged in [PR #12](https://github.com/joshuabenavente/cprs-exploration/pull/12).
+The active testing phase is **functionality at 100% scale only**, at default and
+minimum sizes. Keyboard/focus/navigation and
 screen-reader checks are excluded; other scales are deferred until the functional
 work is finished. See [validation policy](docs/validation-policy.md), the
 [functional checklist](validation/milestone-16/functional-100/manual-checklist.md),
@@ -33,7 +34,8 @@ After automation passes, review functionality in the normal app:
 
 Close it and repeat with `-Size minimum`; both are fixed at 100%. The manual
 launcher does not run a background automatic journey. No keyboard-navigation or
-Narrator report is requested. Use the [Windows update/rebuild guide](docs/m16-windows-rebuild.md)
+Narrator report is requested. Typing query/date values is normal functional input.
+Use the [Windows update/rebuild guide](docs/m16-windows-rebuild.md)
 when moving from the old full-scale build; preserve its EXE and logs first.
 
 Nine invented patients, five Cover Sheet panels and the read-only Notes, Orders

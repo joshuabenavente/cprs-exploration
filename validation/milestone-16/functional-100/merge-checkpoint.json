@@ -1,0 +1,32 @@
+{
+  "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/12",
+  "merged": true,
+  "merge_commit": "9136af15e003c691e7c8d33b0f067ce324fa2a90",
+  "tested_head": "189d4ddf915dc2ccb6867b1fbe2d99dcf60856f8",
+  "run_id": 41357039790,
+  "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41357039790",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 124999217890,
+      "name": "portable-core",
+      "conclusion": "success"
+    },
+    {
+      "id": 124999218119,
+      "name": "windows-desktop-build",
+      "conclusion": "success"
+    }
+  ],
+  "local_topic_branch_pruned": true,
+  "remote_topic_branch_pruned": true,
+  "remaining_branches": [
+    "main"
+  ],
+  "scope": "100% functional only at default/minimum sizes",
+  "keyboard_navigation": "excluded by user",
+  "screen_readers": "excluded by user",
+  "other_scales": "deferred until functional work is finished",
+  "windows_manual_functional": "not run for new protocol/build; not implied by hosted compilation",
+  "followup_scope": "Delivery documentation only; runtime/build/policy-instruction inputs unchanged from tested head"
+}

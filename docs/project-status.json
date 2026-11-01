@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "100% functional-only validation passed locally; publication/final-head CI and delivery next; Windows functional results required for new policy/build",
+  "condition": "100% functional-only policy delivered after passing final-head portable/Windows CI; topic branch pruned; Windows functional results remain to be collected",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -194,9 +194,10 @@
     }
   ],
   "next_action": {
-    "task": "Publish/verify CI/merge/prune functional-only policy changes, then run updated Windows functionality at default/minimum 100% only",
+    "task": "After preserving prior evidence and updating Windows main, run Test-MockChart.ps1 -Matrix at 100% only, verify receipt/EXE hash, and report manual functionality at default/minimum sizes with Review-Functional.ps1",
+    "checklist": "validation/milestone-16/functional-100/manual-checklist.md",
     "standing_delivery_authorization": "docs/delivery-workflow.md",
-    "checklist": "validation/milestone-16/functional-100/manual-checklist.md"
+    "excluded": "keyboard navigation/focus and screen readers; other scales deferred until functional work is finished"
   },
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
@@ -304,7 +305,7 @@
   },
   "current_validation": {
     "protocol": "M16F100",
-    "state": "Linux functional-only validation passed",
+    "state": "Linux functional validation and hosted code/build CI passed",
     "application_scales": [
       1.0
     ],
@@ -326,13 +327,18 @@
     "deliveries": 158,
     "rejected": 70,
     "acceptance_receipt": "validation/milestone-16/functional-100/acceptance.json",
-    "historical_files_unchanged": 2554
+    "historical_files_unchanged": 2554,
+    "windows_code_build_ci": "Passed on PR #12 head 189d4ddf915dc2ccb6867b1fbe2d99dcf60856f8; run 41357039790"
   },
   "publication": {
-    "state": "functional-100 implemented and Linux verified; publication next",
+    "state": "Functional-only policy merged and topic branch pruned",
     "branch": "functional-100-validation",
     "merge_authorized": true,
-    "standing_authorization": "docs/delivery-workflow.md"
+    "standing_authorization": "docs/delivery-workflow.md",
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/12",
+    "merge_commit": "9136af15e003c691e7c8d33b0f067ce324fa2a90",
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41357039790",
+    "branch_pruned": true
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
@@ -410,9 +416,9 @@
     "ci": "Current run conclusions are tracked on PR #8; code/build checks are separate from native/listening"
   },
   "root_review": {
-    "receipt": "validation/milestone-16/technical-review.json",
-    "result": "Technical review and read-only source/executable/log/history binding checks passed",
-    "next_step": "M16 delivery complete; overview ready; fresh combined native acceptance is the next priority"
+    "receipt": "validation/milestone-16/functional-100/acceptance.json",
+    "result": "Functional-only Linux checks and final-head hosted CI passed; old receipts preserved",
+    "next_step": "Windows 100% functional receipt and manual functionality; no keyboard or screen-reader gate"
   },
   "m14_merge": {
     "recorded_at_utc": "2026-11-01T19:53:32.088963+00:00",
@@ -652,26 +658,20 @@
     "followup_scope": "Delivery records and project overview only; runtime/build files unchanged from tested PR head"
   },
   "current_windows_acceptance": {
-    "milestone": 16,
-    "evidence_level": "user-reported",
-    "receipt": "validation/milestone-16/windows/user-acceptance.json",
-    "receipt_sha256": "612326ebd4436faf4c34e9109da90ae7a8b5d7ad781131953c48cc5e3762f434",
-    "verbatim_report": "all pass",
-    "sample_count": 10,
-    "native_visual_keyboard": "user-reported pass",
-    "narrator_listening": "user-reported pass",
-    "exact_build_binding": "failed M16 attempt; full bindings and actual file-hash comparison pending",
-    "independent_native_or_listening_rerun": false,
-    "supplied_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
-    "binding_review": "validation/milestone-16/windows/build-binding-review.json",
-    "m16_acceptance_complete": false,
-    "user_reported_source_commit": "1617e03b65f2f869b4a37e99e2d41f5766cf77d9",
-    "reported_windows_matrix_receipt": "missing",
-    "source_checkpoint_review": "validation/milestone-16/windows/source-checkpoint-review.json",
-    "rebuild_instructions": "docs/m16-windows-rebuild.md",
-    "current_matrix_attempt_report": "validation/milestone-16/windows/matrix-attempt-report.json",
-    "current_matrix_status": "failed (user-pasted receipt summary)",
-    "current_matrix_receipt_executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
+    "protocol": "M16F100",
+    "functional_results": "not run for new policy/build",
+    "scales": [
+      1.0
+    ],
+    "sizes": [
+      "default",
+      "minimum"
+    ],
+    "keyboard_navigation": "excluded by user",
+    "focus_assertions": "excluded by user",
+    "screen_readers": "excluded by user",
+    "other_scales": "deferred",
+    "functional_acceptance_complete": false
   },
   "validation_policy": {
     "protocol": "M16F100",
@@ -722,5 +722,59 @@
     "windows_exact_build_binding": "new M16 receipt hash reported; full receipt/source/logs and actual file-hash comparison unavailable",
     "windows_automated_matrix": "user-reported failed: M16 protocol, matrix_requested=True; failure step/log not supplied",
     "windows_matrix_receipt_executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
+  },
+  "functional_100_delivery": {
+    "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/12",
+    "merged": true,
+    "merge_commit": "9136af15e003c691e7c8d33b0f067ce324fa2a90",
+    "tested_head": "189d4ddf915dc2ccb6867b1fbe2d99dcf60856f8",
+    "run_id": 41357039790,
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41357039790",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 124999217890,
+        "name": "portable-core",
+        "conclusion": "success"
+      },
+      {
+        "id": 124999218119,
+        "name": "windows-desktop-build",
+        "conclusion": "success"
+      }
+    ],
+    "local_topic_branch_pruned": true,
+    "remote_topic_branch_pruned": true,
+    "remaining_branches": [
+      "main"
+    ],
+    "scope": "100% functional only at default/minimum sizes",
+    "keyboard_navigation": "excluded by user",
+    "screen_readers": "excluded by user",
+    "other_scales": "deferred until functional work is finished",
+    "windows_manual_functional": "not run for new protocol/build; not implied by hosted compilation",
+    "followup_scope": "Delivery documentation only; runtime/build/policy-instruction inputs unchanged from tested head"
+  },
+  "historical_full_m16_windows_acceptance": {
+    "milestone": 16,
+    "evidence_level": "user-reported",
+    "receipt": "validation/milestone-16/windows/user-acceptance.json",
+    "receipt_sha256": "612326ebd4436faf4c34e9109da90ae7a8b5d7ad781131953c48cc5e3762f434",
+    "verbatim_report": "all pass",
+    "sample_count": 10,
+    "native_visual_keyboard": "user-reported pass",
+    "narrator_listening": "user-reported pass",
+    "exact_build_binding": "failed M16 attempt; full bindings and actual file-hash comparison pending",
+    "independent_native_or_listening_rerun": false,
+    "supplied_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
+    "binding_review": "validation/milestone-16/windows/build-binding-review.json",
+    "m16_acceptance_complete": false,
+    "user_reported_source_commit": "1617e03b65f2f869b4a37e99e2d41f5766cf77d9",
+    "reported_windows_matrix_receipt": "missing",
+    "source_checkpoint_review": "validation/milestone-16/windows/source-checkpoint-review.json",
+    "rebuild_instructions": "docs/m16-windows-rebuild.md",
+    "current_matrix_attempt_report": "validation/milestone-16/windows/matrix-attempt-report.json",
+    "current_matrix_status": "failed (user-pasted receipt summary)",
+    "current_matrix_receipt_executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
   }
 }

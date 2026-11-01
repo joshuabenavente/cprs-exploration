@@ -7,6 +7,10 @@ excluded; other scales are deferred until functional work is finished. The
 [functional checklist](../validation/milestone-16/functional-100/manual-checklist.md)
 supersede previous acceptance gates below. Application features are retained.
 
+The current policy was delivered in [PR #12](https://github.com/joshuabenavente/cprs-exploration/pull/12)
+after final-head portable/Windows code-build CI passed; topic branches are pruned.
+See [delivery receipt](../validation/milestone-16/functional-100/merge-checkpoint.json).
+
 Current Linux functional policy verification passed 148 Rust tests, 20 protocol
 checks and three 100% journeys of 109 checkpoints. Both default/minimum sizes
 passed. See the [current acceptance record](../validation/milestone-16/functional-100/acceptance.json).

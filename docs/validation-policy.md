@@ -31,3 +31,9 @@ Local verification passed: 148 Rust tests, 20 protocol/isolation tests and three
 Both window sizes passed; all 2,554 prior evidence files remain unchanged. See
 [the current acceptance record](../validation/milestone-16/functional-100/acceptance.json).
 Windows functionality for the new protocol/build still needs its own receipt.
+
+Delivery: [PR #12](https://github.com/joshuabenavente/cprs-exploration/pull/12)
+merged after final-head portable/Windows code-build CI passed; topic branches
+were pruned. See [delivery receipt](../validation/milestone-16/functional-100/merge-checkpoint.json).
+Normal typing into functional fields is allowed; keyboard navigation/focus is not
+an acceptance test. Collect new Windows functional results under M16F100 only.

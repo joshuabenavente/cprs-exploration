@@ -1,22 +1,27 @@
 # CPRS Chart recreation: current handoff
 
-Active phase: **functionality at 100% application scale only**, default/minimum
-sizes. The user excluded keyboard/focus/navigation and screen-reader/Narrator
-checks and deferred other scales until functional work is finished. These are
-not current acceptance blockers. See [policy](validation-policy.md) and the
-[functional checklist](../validation/milestone-16/functional-100/manual-checklist.md).
+Active phase: **functionality at 100% only**, default/minimum window sizes.
+Keyboard/focus/navigation and screen-reader/Narrator checks are excluded from
+current acceptance; other scales are deferred until functional work is finished.
+See [policy](validation-policy.md), [functional checklist](../validation/milestone-16/functional-100/manual-checklist.md),
+and [PR #12](https://github.com/joshuabenavente/cprs-exploration/pull/12).
 
-The active protocol M16F100 has isolated receipts under
-`validation/milestone-16/functional-100/{linux,windows}/`. Test-MockChart.ps1,
-verify_integrated.py and Review-Functional.ps1 use it; old full-scale M16 writers
-are frozen before writes. Application keyboard/scaling features remain intact.
-The functional journey retains 109 data/workflow/race checkpoints and removes
-navigation/focus/geometry probes. Linux validation passed: 148 Rust tests, 20 protocol tests, eight automated steps
-and three journeys, each 109 checkpoints / 158 deliveries / 70 rejections. Both
-window sizes were tested at 100%; all 2,554 startup evidence files remain unchanged.
-Exact next action: publish/CI/merge/prune, then obtain the new Windows
-functional receipt and manual functional results at both sizes. Do not request
-other scales or keyboard/Narrator acceptance in this phase.
+The policy change is merged after final-head portable-core and Windows code/build
+CI passed; its topic branch is pruned locally/remotely. See the
+[delivery record](../validation/milestone-16/functional-100/merge-checkpoint.json).
+The 100% Linux run passed 148 Rust tests, 20 protocol checks and eight steps;
+three journeys each passed 109 checkpoints / 158 deliveries / 70 rejections.
+Both sizes passed and all 2,554 startup evidence files remain unchanged.
+
+Exact next action: preserve old Windows evidence, update main, run the active
+Test-MockChart.ps1 -Matrix and verify_integrated.py, then review manual function
+using Review-Functional.ps1 at default/minimum 100%. Receipts use protocol M16F100
+and functional-100/{linux,windows}/. The manual launcher runs the normal app;
+it does not drive an automatic journey during user review. Normal typing into
+queries/date fields is functional input; keyboard navigation/focus checks and
+screen readers are excluded. Old full-scale M16 writers are frozen before writes.
+Application keyboard/scaling features remain intact. New Windows functional
+results remain unverified; previous pass reports are not transferred to this build.
 
 The user confirmed interaction/window switching during the historical 200% focus
 failure. The [interruption review](../validation/milestone-16/windows/focus-interruption/review.json)
