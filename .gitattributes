@@ -20,3 +20,7 @@ validation/milestone-10/** -text -whitespace
 validation/milestone-11/** -text -whitespace
 # Preserve M12's separate protocol, startup history and fresh evidence bytes.
 validation/milestone-12/** -text -whitespace
+# Follow-up tool bytes are independently hashed in the native evidence index.
+scripts/Test-CoverSheetFollowup.ps1 -text
+scripts/Review-CoverSheetFollowup.ps1 -text
+scripts/verify_cover_followup.py -text

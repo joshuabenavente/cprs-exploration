@@ -4,6 +4,7 @@ export struct CoverGeometry {
     view-top: length, help-bottom: length,
     // Actual View widget focus, for probes that move focus with key events.
     view-focused: bool,
+    table-visible-height: length, table-content-height: length,
 }
 export component CoverPanel inherits Rectangle {
     in property <string> title;
@@ -29,7 +30,8 @@ export component CoverPanel inherits Rectangle {
         return { top: root.absolute-position.y, bottom: root.absolute-position.y + root.height,
             table-top: data.absolute-position.y, table-bottom: data.absolute-position.y + data.height,
             view-top: view.absolute-position.y, help-bottom: help.absolute-position.y + help.height,
-            view-focused: view.has-focus };
+            view-focused: view.has-focus,
+            table-visible-height: data.visible-height, table-content-height: data.content-height };
     }
     background: white; border-width: 1px; border-color: #c9d5df;
     accessible-role: groupbox;
@@ -61,7 +63,9 @@ export component CoverPanel inherits Rectangle {
                 VerticalLayout {
                 padding: 0px;
                 data := StandardTableView {
-                    min-height: 140px;
+                    // Keep StandardTableView's intrinsic minimum (200px in Fluent).
+                    // 140px clips the third fixture row and puts the overlay
+                    // horizontal scrollbar across its text at minimum width.
                     enabled: root.enabled && root.rows.length > 0;
                     accessible-label: root.title + " synthetic items for " + root.patient-id + (root.selected-row >= 0 ? ". Selected " + root.rows[root.selected-row][0].text : ". No item selected");
                     rows: root.rows; current-row <=> root.selected-row;

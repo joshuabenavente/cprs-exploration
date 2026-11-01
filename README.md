@@ -8,6 +8,8 @@ Development continues on `main`, tracking `origin/main`; `main` is the GitHub de
 
 ## Run the Rust mock
 
+For the native-review table-height fix, use `scripts/Test-CoverSheetFollowup.ps1 -Matrix`, then `python scripts/verify_cover_followup.py` and `scripts/Review-CoverSheetFollowup.ps1`. These keep the new executable's evidence under `validation/milestone-12/native-followup/`. Preserve the original M12 receipts and listening reports; do not regenerate them with the changed executable using the baseline validation commands below.
+
 ```powershell
 .\scripts\Start-MockChart.ps1
 ```

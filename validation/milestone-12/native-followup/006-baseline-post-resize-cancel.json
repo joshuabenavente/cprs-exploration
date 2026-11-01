@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-01T02:45:29.774Z",
+  "label": "baseline-post-resize-cancel",
+  "window": {
+    "app": "process:C:\\Users\\soapo\\Documents\\AI-Work\\projects\\cprs-exploration\\target\\debug\\cprs-chart-mock.exe",
+    "id": 6818358,
+    "title": "CPRS Chart — Mock-only Rust prototype"
+  },
+  "accessibility": {
+    "focused_element": "10 button Select new synthetic patient",
+    "tree": "Window: \"CPRS Chart — Mock-only Rust prototype\", App: cprs-chart-mock.exe.\n\t0 region CPRS Chart — Mock-only Rust prototype Secondary Actions: Raise\n\t\t1 title bar (settable, string) Value: CPRS Chart — Mock-only Rust prototype\n\t\t\t2 menu bar System ID: MenuBar\n\t\t\t\t48 menu item System\n\t\t\t4 button Minimize\n\t\t\t5 button Restore\n\t\t\t6 button Close\n\t\t7 text CPRS Chart\n\t\t8 text Rust desktop prototype\n\t\t9 text MOCK ONLY · All patient records are invented · No live connection\n\t\t10 button Select new synthetic patient\n\t\t11 text Ctrl+O Select patient\n\t\t12 text Read-only demonstration\n\t\t13 text CARTER, JAMIE\n\t\t14 text Fixture DOB: 1980-03-14 · Training clinic A · Invented record\n\t\t15 text CURRENT CHART\n\t\t16 text SYNTH-001\n\t\t348 text Cover Sheet\n\t\t349 group Problem List for synthetic patient SYNTH-001\n\t\t\t350 text Problem List\n\t\t\t351 table Problem List synthetic items for SYNTH-001. No item selected\n\t\t\t\t352 text Problem List\n\t\t\t\t353 list\n\t\t\t\t\t354 text Training problem Alpha · SYNTH-001\n\t\t\t\t\t355 text Training problem Beta · SYNTH-001\n\t\t\t356 button (disabled) View selected Problem List item detail\n\t\t\t357 text Enter or Space opens the selected item.\n\t\t358 group Allergies for synthetic patient SYNTH-001\n\t\t\t359 text Allergies\n\t\t\t360 table Allergies synthetic items for SYNTH-001. No item selected\n\t\t\t\t361 text Agent\n\t\t\t\t362 text Severity\n\t\t\t\t363 text Signs/Symptoms\n\t\t\t\t364 list\n\t\t\t\t\t365 text Training agent 001-A\n\t\t\t\t\t366 text Demo 1\n\t\t\t\t\t367 text Invented symptom A\n\t\t\t\t\t368 text Training agent 001-B\n\t\t\t\t\t369 text Demo 2\n\t\t\t\t\t370 text Invented symptom B\n\t\t\t371 button (disabled) View selected Allergies item detail\n\t\t\t372 text Enter or Space opens the selected item.\n\t\t373 group Vitals for synthetic patient SYNTH-001\n\t\t\t374 text Vitals\n\t\t42 button Cover Sheet\n\t\t43 button Notes\n\t\t44 button Orders\n\t\t45 button Results\n\t\t46 text Prototype navigation\n\t\t47 text Patient selection canceled. The current chart is unchanged.\n\nThe focused UI element is 10 button Select new synthetic patient."
+  },
+  "screenshots": []
+}

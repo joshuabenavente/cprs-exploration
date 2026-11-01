@@ -1,0 +1,42 @@
+{
+  "protocol": "M12",
+  "scope": "Native connection recheck only; no visual/keyboard test was possible",
+  "recorded_at": "2026-11-01T02:09:56.468320+00:00",
+  "source_commit": "7880e0dc37b2b32770d5264b2a93a41a7bba0b2d",
+  "executable_sha256": "21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4",
+  "status": "blocked by unavailable native Windows connection",
+  "attempts": [
+    {
+      "operation": "sky.list_windows",
+      "at": "2026-11-01T02:07:32.235Z",
+      "passed": false,
+      "error": "Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)"
+    },
+    {
+      "operation": "sky.list_windows retry",
+      "at": "2026-11-01T02:08:21.712Z",
+      "passed": false,
+      "error": "Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)"
+    },
+    {
+      "operation": "sky.list_windows after reset/reinitialize",
+      "at": "2026-11-01T02:08:23.840Z",
+      "passed": false,
+      "error": "Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)"
+    }
+  ],
+  "fallback": {
+    "operation": "cua.getState",
+    "apps": [],
+    "browsers": [],
+    "errors": [
+      "Native apps: Error: Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)",
+      "Browsers: Error: The browser access host is unavailable"
+    ]
+  },
+  "native_actions_sent": 0,
+  "native_samples_completed": 0,
+  "required_samples": 10,
+  "captures": [],
+  "next": "Restore the native Windows Computer Use connection, then resume the already approved ten-sample matrix; no additional approval is needed."
+}
