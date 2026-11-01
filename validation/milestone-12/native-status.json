@@ -35,6 +35,14 @@
     "executable_sha256": "1673037d3f1e90b671cbf910ebc53fcee08971ba997160d2275e3fbe1ccdfdd8",
     "receipt": "validation/milestone-11/native-status.json"
   },
-  "next": "Restore the supported computer-use helper and complete the separate native visual/keyboard matrix with Review-CoverSheet.ps1 -Matrix. M10 and M12 listening were reported passed separately.",
-  "listening_reports": "validation/milestone-12/listening-reports.json"
+  "next": "Restore the native Windows Computer Use connection, then resume the already approved ten-sample matrix; no additional approval is needed.",
+  "listening_reports": "validation/milestone-12/listening-reports.json",
+  "rechecks": [
+    {
+      "receipt": "validation/milestone-12/native-recheck-20261101T020956468320.json",
+      "sha256": "5917595001270e51d568d706fcb17f067d0dc71fc7537869bfff0a6fe726502d",
+      "recorded_at": "2026-11-01T02:09:56.468320+00:00",
+      "status": "blocked by unavailable native Windows connection"
+    }
+  ]
 }
