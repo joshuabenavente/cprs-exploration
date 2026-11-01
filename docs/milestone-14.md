@@ -1,7 +1,8 @@
 # M14: read-only Results date filtering
 
-Status: implemented; Linux automated matrix passed; Windows native/listening
-acceptance pending. Work is on `m14-results-date-filters`, from merged main
+Status: merged in PR #9 at `e93c9a0`; final-head code/build CI and Linux
+automated matrix passed; Windows native/listening
+acceptance pending. Implementation used `m14-results-date-filters`, from merged main
 `62bd340501f0d7753e1807cec12d7a967f8fb403`. M13 PR #8 is merged and its local
 and remote branches pruned; final-head portable and Windows code/build CI passed.
 M13 Windows native and Narrator acceptance remain pending.
@@ -22,9 +23,9 @@ predicates. Intrinsic card height must permit keyboard scrolling. Linux virtual
 display evidence does not establish Windows visual, keyboard or Narrator results.
 All historical evidence is immutable; new receipts belong under milestone-14.
 
-Exact next action: verify final-head CI on published [PR #9](https://github.com/joshuabenavente/cprs-exploration/pull/9),
-then carry out the user's merge/prune instruction and draft M15. The separate
-Windows matrix and native/Narrator acceptance remain pending.
+M14 merge and branch cleanup are complete. The [M15 planning draft](milestone-15.md)
+records the next proposed implementation. Windows matrix and native/Narrator
+acceptance remain pending for the new M14 build.
 
 ## Implementation checkpoint
 
@@ -78,5 +79,8 @@ was created as a draft after explicit M14 publication approval. The user also
 authorized merge after checks, branch cleanup and an M15 draft. The historical
 [blocked attempt](../validation/milestone-14/publication-block.json) remains
 unchanged; the [new publication receipt](../validation/milestone-14/publication.json)
-records its resolution. Final-head CI is pending. Merge is separate from native
-Windows and Narrator acceptance.
+records its resolution. Final-head CI passed on `d934582` in
+[run 41343365509](https://github.com/joshuabenavente/cprs-exploration/actions/runs/41343365509).
+PR #9 merged at `e93c9a0`; its topic branches were pruned. See the
+[merge/cleanup receipt](../validation/milestone-15/m14-merge-checkpoint.json).
+Native Windows and Narrator acceptance remain pending.

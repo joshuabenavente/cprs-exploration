@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-11-01T19:54:12.486573+00:00",
+  "scope": "M15 planning documentation only",
+  "baseline": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+  "json_parse": "passed",
+  "diff_whitespace": "passed",
+  "new_plan_local_links_checked": 2,
+  "requirements_present": "OF01\u2013OF08",
+  "resource_names_checked": [
+    "chkDateRange",
+    "calFrom",
+    "calThru"
+  ],
+  "existing_tracked_validation_files_unchanged": 958,
+  "runtime_scripts_ci_analysis_unchanged": true,
+  "new_rust_native_or_speech_tests": "None; no runtime changes made",
+  "plan_sha256": "ea6d7da92d3ff3722f80b53b7615d7fe52466dd2aed36e443f45ac84266ceb48"
+}
