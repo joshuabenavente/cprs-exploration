@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M16F100 functional acceptance passed: supplied Windows automation/source/logs verified and default/minimum 100% manual checklist user-reported pass; keyboard/focus/navigation and screen readers excluded; other scales deferred",
+  "condition": "M17 Orders grouping implemented; Linux 100% functional checks passed; publication/CI pending and new Windows manual functional acceptance not run",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -23,6 +23,13 @@
     "ci_current_head_verified": false
   },
   "prioritized_backlog": [
+    {
+      "id": "M17",
+      "priority": "P1",
+      "task": "Read-only Orders grouping by service",
+      "status": "Implemented; local 100% functional checks pass; delivery and Windows manual acceptance pending",
+      "contract": "specifications/orders-grouping.md"
+    },
     {
       "id": "M16-WINDOWS",
       "priority": "P1",
@@ -194,21 +201,16 @@
       "mitigation": "full typed filter/generation/owner equality, response predicates and list/detail invalidation tests"
     }
   ],
-  "next_action": {
-    "task": "Plan the next bounded functional milestone under the 100%-only policy; do not start other-scale or keyboard/screen-reader testing unless the user changes scope",
-    "standing_delivery_authorization": "docs/delivery-workflow.md",
-    "policy": "docs/validation-policy.md",
-    "current_acceptance": "validation/milestone-16/functional-100/windows/user-acceptance.json"
-  },
+  "next_action": "Validate and deliver M17 Orders service grouping at 100% default/minimum; obtain new Windows functional acceptance after delivery",
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
     "traceability": "docs/traceability-2026-11-01.md",
-    "next_milestone": "docs/milestone-14.md",
+    "next_milestone": "docs/milestone-17.md",
     "review_evidence": "validation/project-review-2026-11-01/",
     "initial_review": "docs/project-review-2026-11-01.md",
     "analysis_evidence": "validation/analysis-review-2026-11-01/",
-    "implementation_contract": "specifications/results-filtering.md",
-    "implementation_evidence": "validation/milestone-14/"
+    "implementation_contract": "specifications/orders-grouping.md",
+    "implementation_evidence": "validation/milestone-17/functional-100/"
   },
   "analysis_review": {
     "workspace": "reverse-engineering/",
@@ -289,24 +291,22 @@
     ]
   },
   "implementation": {
-    "milestone": 16,
-    "branch": "m16-search-page-validation",
-    "baseline": "223fb96583bdada0a81d6ad982ccfbb33dcea30a",
-    "approval": "Go to the next step. After 16 give me an over view of the projects state",
-    "contract": "specifications/search-page-integrity.md",
+    "milestone": 17,
+    "branch": "m17-orders-service-grouping",
+    "baseline": "18f3f532d380159524430dbb69ca700be119aee7",
+    "approval": "Approved the recommended M17 Orders grouping; standing delivery authorization applies",
+    "contract": "specifications/orders-grouping.md",
     "features": [
-      "candidate metadata/filter/roster/ID checks",
-      "bounded exact page shape and scoped cursor checks",
-      "safe overflow handling and fail-closed response state",
-      "invalid typed page simulation and nine new desktop checkpoints"
+      "Flat/service-grouped projection of filtered records",
+      "Exact order identity mapping; inert headings",
+      "Grouping/filter/reset/lifecycle stale-reply invalidation"
     ],
-    "runtime_scope": "existing nine invented patients, offline/read-only; no new clinical interface",
-    "local_implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24",
-    "state": "M16 merged; no M17 implementation started"
+    "runtime_scope": "Nine invented patients, four orders per nonempty fixture; offline and read-only",
+    "state": "Implemented, locally verified; publishing next"
   },
   "current_validation": {
-    "protocol": "M16F100",
-    "state": "Linux functional checks and hosted CI passed; supplied Windows functional source/log bindings verified",
+    "protocol": "M17F100",
+    "state": "Local automated passed; hosted CI pending",
     "application_scales": [
       1.0
     ],
@@ -318,23 +318,17 @@
     "focus_assertions": "excluded by user",
     "screen_readers": "excluded by user",
     "other_scales": "deferred until functional work is finished",
-    "windows_functional": "passed automation in supplied bound receipt; manual functionality user-reported pass at default/minimum 100%",
-    "functional_acceptance_complete": true,
-    "core_tests_passed": 148,
-    "protocol_tests_passed": 20,
+    "windows_functional": "not run for new build",
+    "functional_acceptance_complete": false,
+    "core_tests_passed": 157,
+    "protocol_tests_passed": 21,
     "automated_steps": 8,
     "journeys": 3,
-    "checkpoints": 109,
-    "deliveries": 158,
-    "rejected": 70,
-    "acceptance_receipt": "validation/milestone-16/functional-100/acceptance.json",
-    "historical_files_unchanged": 2554,
-    "windows_code_build_ci": "Passed on PR #12 head 189d4ddf915dc2ccb6867b1fbe2d99dcf60856f8; run 41357039790",
-    "acceptance_evidence_level": "bound automated receipts plus user-reported manual functionality",
-    "windows_automated_steps": 9,
-    "windows_executable_sha256": "4aec71c74dfc019e33a0b120d4f4af9797a1d825d2ef52b79618bb2bc224fb81",
-    "windows_user_acceptance_receipt": "validation/milestone-16/functional-100/windows/user-acceptance.json",
-    "windows_review": "validation/milestone-16/functional-100/windows/acceptance-review.json"
+    "checkpoints": 121,
+    "deliveries": 185,
+    "rejected": 86,
+    "acceptance_receipt": "validation/milestone-17/functional-100/acceptance.json",
+    "historical_files_unchanged": 2597
   },
   "publication": {
     "state": "Functional-only policy merged and topic branch pruned",
@@ -664,28 +658,21 @@
     "followup_scope": "Delivery records and project overview only; runtime/build files unchanged from tested PR head"
   },
   "current_windows_acceptance": {
-    "protocol": "M16F100",
-    "functional_results": "passed automation; user-reported manual pass",
+    "protocol": "M17F100",
+    "functional_results": "not run for new build; M16 results retained separately",
+    "functional_acceptance_complete": false,
+    "keyboard_navigation": "excluded by user",
+    "screen_readers": "excluded by user",
     "scales": [
       1.0
     ],
     "sizes": [
       "default",
       "minimum"
-    ],
-    "keyboard_navigation": "excluded by user",
-    "focus_assertions": "excluded by user",
-    "screen_readers": "excluded by user",
-    "other_scales": "deferred",
-    "functional_acceptance_complete": true,
-    "executable_sha256": "4aec71c74dfc019e33a0b120d4f4af9797a1d825d2ef52b79618bb2bc224fb81",
-    "receipt": "validation/milestone-16/functional-100/windows/user-acceptance.json",
-    "review": "validation/milestone-16/functional-100/windows/acceptance-review.json",
-    "manual_evidence_level": "user-reported",
-    "independent_windows_executable_hashing": false
+    ]
   },
   "validation_policy": {
-    "protocol": "M16F100",
+    "protocol": "M17F100",
     "recorded_at_utc": "2026-11-01T22:22:50.844910+00:00",
     "verbatim_user_instruction": "from now on i only want to test 100% scale for functionality. also drop any keyboard navigation tests and any screen reader tests. after we finish we can go back and test different scales",
     "active_scope": {
@@ -706,7 +693,8 @@
     "historical_evidence": "Preserved; former failures and not-run statuses are not reclassified as passed",
     "runtime_features": "Keyboard and scaling capabilities retained; only validation scope changes",
     "document": "docs/validation-policy.md",
-    "instructions": "AGENTS.md"
+    "instructions": "AGENTS.md",
+    "evidence_folder": "validation/milestone-17/functional-100/"
   },
   "previous_full_m16_validation": {
     "platform": "Linux Xvfb/software renderer",
@@ -787,5 +775,74 @@
     "current_matrix_attempt_report": "validation/milestone-16/windows/matrix-attempt-report.json",
     "current_matrix_status": "failed (user-pasted receipt summary)",
     "current_matrix_receipt_executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
+  },
+  "previous_m16_implementation": {
+    "milestone": 16,
+    "branch": "m16-search-page-validation",
+    "baseline": "223fb96583bdada0a81d6ad982ccfbb33dcea30a",
+    "approval": "Go to the next step. After 16 give me an over view of the projects state",
+    "contract": "specifications/search-page-integrity.md",
+    "features": [
+      "candidate metadata/filter/roster/ID checks",
+      "bounded exact page shape and scoped cursor checks",
+      "safe overflow handling and fail-closed response state",
+      "invalid typed page simulation and nine new desktop checkpoints"
+    ],
+    "runtime_scope": "existing nine invented patients, offline/read-only; no new clinical interface",
+    "local_implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24",
+    "state": "M16 merged; no M17 implementation started"
+  },
+  "previous_m16_functional_validation": {
+    "protocol": "M16F100",
+    "state": "Linux functional checks and hosted CI passed; supplied Windows functional source/log bindings verified",
+    "application_scales": [
+      1.0
+    ],
+    "sizes": [
+      "default",
+      "minimum"
+    ],
+    "keyboard_navigation": "excluded by user",
+    "focus_assertions": "excluded by user",
+    "screen_readers": "excluded by user",
+    "other_scales": "deferred until functional work is finished",
+    "windows_functional": "passed automation in supplied bound receipt; manual functionality user-reported pass at default/minimum 100%",
+    "functional_acceptance_complete": true,
+    "core_tests_passed": 148,
+    "protocol_tests_passed": 20,
+    "automated_steps": 8,
+    "journeys": 3,
+    "checkpoints": 109,
+    "deliveries": 158,
+    "rejected": 70,
+    "acceptance_receipt": "validation/milestone-16/functional-100/acceptance.json",
+    "historical_files_unchanged": 2554,
+    "windows_code_build_ci": "Passed on PR #12 head 189d4ddf915dc2ccb6867b1fbe2d99dcf60856f8; run 41357039790",
+    "acceptance_evidence_level": "bound automated receipts plus user-reported manual functionality",
+    "windows_automated_steps": 9,
+    "windows_executable_sha256": "4aec71c74dfc019e33a0b120d4f4af9797a1d825d2ef52b79618bb2bc224fb81",
+    "windows_user_acceptance_receipt": "validation/milestone-16/functional-100/windows/user-acceptance.json",
+    "windows_review": "validation/milestone-16/functional-100/windows/acceptance-review.json"
+  },
+  "previous_m16_functional_windows_acceptance": {
+    "protocol": "M16F100",
+    "functional_results": "passed automation; user-reported manual pass",
+    "scales": [
+      1.0
+    ],
+    "sizes": [
+      "default",
+      "minimum"
+    ],
+    "keyboard_navigation": "excluded by user",
+    "focus_assertions": "excluded by user",
+    "screen_readers": "excluded by user",
+    "other_scales": "deferred",
+    "functional_acceptance_complete": true,
+    "executable_sha256": "4aec71c74dfc019e33a0b120d4f4af9797a1d825d2ef52b79618bb2bc224fb81",
+    "receipt": "validation/milestone-16/functional-100/windows/user-acceptance.json",
+    "review": "validation/milestone-16/functional-100/windows/acceptance-review.json",
+    "manual_evidence_level": "user-reported",
+    "independent_windows_executable_hashing": false
   }
 }

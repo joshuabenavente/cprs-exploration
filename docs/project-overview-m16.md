@@ -6,7 +6,8 @@ supplied Windows automation/source/log bindings verified, and default/minimum
 [current acceptance](../validation/milestone-16/functional-100/windows/user-acceptance.json)
 and [review](../validation/milestone-16/functional-100/windows/acceptance-review.json).
 Keyboard/focus/navigation and screen readers remain excluded; other scales stay
-deferred. No new feature milestone or additional-scale work has started.
+deferred. The user subsequently approved [M17 Orders grouping](milestone-17.md);
+its acceptance is separate from this M16 state snapshot.
 
 Current policy update: functional testing is now limited to 100%, at default
 and minimum sizes. Keyboard/focus/navigation and screen-reader checks are

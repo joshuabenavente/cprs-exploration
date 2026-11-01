@@ -45,7 +45,7 @@ byte-identical. See [acceptance](../validation/milestone-16/acceptance.json) and
 M16 [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11) merged
 after final-head CI passed; its topic branch is pruned locally/remotely. See the
 [delivery record](../validation/milestone-16/merge-checkpoint.json) and
-[project overview](project-overview-m16.md). No M17 implementation has started.
+[project overview](project-overview-m16.md). M17 was subsequently approved; see [Orders grouping](milestone-17.md).
 Exact next action: fresh combined-build Windows matrix and the
 [native/listening checklist](../validation/milestone-16/native-checklist.md).
 These observations remain not run; merge and code/build CI do not establish them.

@@ -221,6 +221,8 @@ class ProtocolTests(unittest.TestCase):
 
 
 def main():
+    raise SystemExit('M16F100 is frozen history; use the M17F100 entry points.')
+
     output = io.StringIO()
     result = unittest.TextTestRunner(stream=output, verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(ProtocolTests))
     runner.BASE.mkdir(parents=True, exist_ok=True)

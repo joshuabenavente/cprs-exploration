@@ -10,37 +10,20 @@ Narrator checks are excluded from current acceptance. Other scale factors are
 deferred until functional work is finished. These items are not pending blockers
 for this phase. Application keyboard/scaling capabilities remain intact.
 
-The active protocol is `M16F100`. `Test-MockChart.ps1` and `verify_integrated.py`
-now use the functional runner/verifier. New receipts live under
-`validation/milestone-16/functional-100/{linux,windows}/`. Historical full-scale
-M16 writers and review entry points fail before writing; old receipts, including
-the interrupted Windows 200% focus failure, retain their original status.
+The active protocol is `M17F100`. `Test-MockChart.ps1` and `verify_integrated.py`
+use the M17 functional runner/verifier. New receipts live under
+`validation/milestone-17/functional-100/{linux,windows}/`. The prior M16F100 and
+full-scale writers fail before writing; original receipts retain their status.
 
-The interrupted run does not demonstrate application focus stealing: the user
-reported interacting or switching windows. The new functional journey does not
-assert keyboard focus or dispatch Tab/Shift+Tab events. It retains identity,
-search/paging/filtering, selection, read-only detail, failure/empty/retry and
-stale/duplicate reply checks. No claim of a product focus fix is made.
+M16F100 acceptance is complete at supplied Windows automation plus user-reported
+manual level, with exact binding recorded in
+[the historical acceptance](../validation/milestone-16/functional-100/windows/user-acceptance.json).
+M17 must establish its own source/executable/log and manual bindings; no old
+acceptance is automatically inherited by a new binary.
 
-Follow the [functional checklist](../validation/milestone-16/functional-100/manual-checklist.md).
+Follow the [M17 functional checklist](../validation/milestone-17/functional-100/manual-checklist.md).
 The manual launcher starts the normal app after verifying current bindings;
-it does not drive an automated journey while the user is reviewing functionality.
-
-Local verification passed: 148 Rust tests, 20 protocol/isolation tests and three
-100% functional journeys, each 109 checkpoints / 158 deliveries / 70 rejections.
-Both window sizes passed; all 2,554 prior evidence files remain unchanged. See
-[the current acceptance record](../validation/milestone-16/functional-100/acceptance.json).
-The later supplied Windows receipt and manual pass report are recorded in
-[current acceptance](../validation/milestone-16/functional-100/windows/user-acceptance.json).
-
-Delivery: [PR #12](https://github.com/joshuabenavente/cprs-exploration/pull/12)
-merged after final-head portable/Windows code-build CI passed; topic branches
-were pruned. See [delivery receipt](../validation/milestone-16/functional-100/merge-checkpoint.json).
-Normal typing into functional fields is allowed; keyboard navigation/focus is not
-an acceptance test. Use M16F100 only for current functional results.
-
-Windows acceptance update: nine automated steps and three 109-checkpoint 100%
-journeys verified from supplied receipts; both manual functional samples are
-user-reported pass. Exact artifact binding uses the Windows receipt SHA256; the
-assistant did not independently hash or execute that Windows binary. Excluded
-keyboard/screen-reader checks and deferred scales are not acceptance blockers.
+it does not drive an automated journey while the user reviews functionality.
+The active journey uses callbacks and real timers without asserting keyboard
+focus or dispatching Tab/Shift+Tab events. Normal typing into functional filter
+fields remains allowed. App keyboard/scaling functionality remains available.

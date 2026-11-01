@@ -74,6 +74,13 @@ fn seen(s: &Shared, since: usize, operation: &str, owner: &str, key: &str, appli
         })
     })
 }
+fn rejected_orders_list(s: &Shared, since: usize) -> bool {
+    s.borrow().delivery_audit.as_ref().is_some_and(|audit| {
+        audit[since..]
+            .iter()
+            .any(|d| d.operation == "orders-list" && d.owner == "SYNTH-001" && !d.applied)
+    })
+}
 fn owned(a: &AppWindow, s: &Shared, id: &str, tab: ChartTab) -> Result<(), String> {
     require!(a.get_active_id() == id, "visible header owner mismatch");
     require!(s.borrow().state.tab == tab, "active tab mismatch");
@@ -2117,6 +2124,285 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
+        "orders-group-list-race",
+        |a, _| {
+            a.invoke_orders_scenario_changed(3);
+            a.invoke_orders_grouping_changed(1);
+            a.invoke_orders_grouping_changed(0);
+            a.invoke_orders_grouping_changed(1);
+            require!(
+                a.get_selected_order() == -1 && a.get_order_body().is_empty(),
+                "grouping retained selection/detail"
+            );
+            Ok(())
+        },
+        |a, s, i| !a.get_orders_loading() && rejected_orders_list(s, i),
+        |a, s| {
+            require!(
+                a.get_orders_grouping() == 1 && a.get_orders_rows().row_count() == 7,
+                "grouping table not bound"
+            );
+            let c = s.borrow();
+            let rows = c.state.orders.display_rows();
+            let ids: Vec<_> = rows
+                .iter()
+                .filter_map(|r| match r {
+                    OrdersDisplayRow::Order(r) => Some(r.id.as_str()),
+                    _ => None,
+                })
+                .collect();
+            require!(
+                ids == ["ORDER-01", "ORDER-03", "ORDER-02", "ORDER-04"],
+                "group ordering/identity mismatch"
+            );
+            require!(
+                a.get_orders_rows()
+                    .row_data(0)
+                    .unwrap()
+                    .row_data(0)
+                    .unwrap()
+                    .text
+                    == "Service: Training service A",
+                "heading missing from UI"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-heading-inert",
+        |a, _| {
+            a.invoke_order_selected(0);
+            a.invoke_order_released(0);
+            a.invoke_order_released(0);
+            a.invoke_order_activated();
+            Ok(())
+        },
+        now,
+        |a, _| {
+            require!(
+                a.get_selected_order() == -1 && !a.get_order_detail_open(),
+                "heading selected/opened detail"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-exact-detail",
+        |a, _| {
+            a.invoke_order_selected(4);
+            require!(
+                !a.get_order_detail_open(),
+                "grouped highlight opened detail"
+            );
+            a.invoke_order_activated();
+            Ok(())
+        },
+        |a, _, _| a.get_order_body_ready(),
+        |a, _| {
+            require!(
+                a.get_selected_order() == 4
+                    && a.get_order_body().contains("ORDER-02")
+                    && !a.get_order_body().contains("ORDER-01"),
+                "display offset opened wrong duplicate-title order"
+            );
+            a.invoke_order_selected(3);
+            a.invoke_order_released(3);
+            a.invoke_order_released(3);
+            require!(
+                a.get_selected_order() == 4 && a.get_order_body().contains("ORDER-02"),
+                "heading changed existing selection/detail"
+            );
+            a.invoke_close_order_detail();
+            require!(
+                a.get_selected_order() == 4 && a.get_order_body().is_empty(),
+                "close lost projected selection"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-detail-race",
+        |a, _| {
+            a.invoke_order_selected(2);
+            a.invoke_order_activated();
+            a.invoke_orders_grouping_changed(0);
+            require!(
+                a.get_selected_order() == -1 && !a.get_order_detail_open(),
+                "group toggle retained pending detail"
+            );
+            Ok(())
+        },
+        |a, s, i| {
+            !a.get_orders_loading() && seen(s, i, "order-body", "SYNTH-001", "ORDER-03", false)
+        },
+        |a, _| {
+            require!(
+                a.get_orders_rows().row_count() == 4 && a.get_order_body().is_empty(),
+                "old grouped detail reappeared"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-filter-intersection",
+        |a, _| {
+            a.invoke_orders_scenario_changed(0);
+            a.invoke_orders_grouping_changed(1);
+            a.invoke_orders_dates_edited("2026-10-28".into(), "2026-10-29".into());
+            a.invoke_orders_status_changed(1);
+            a.invoke_orders_filter_edited("zoë 李".into());
+            Ok(())
+        },
+        |a, _, _| !a.get_orders_loading(),
+        |a, s| {
+            require!(
+                a.get_orders_rows().row_count() == 2
+                    && s.borrow().state.orders.rows[0].id.as_str() == "ORDER-03",
+                "grouped combined filter mismatch"
+            );
+            a.invoke_order_released(1);
+            a.invoke_order_released(1);
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-unicode-detail",
+        noop,
+        |a, _, _| a.get_order_body_ready(),
+        |a, _| {
+            require!(
+                a.get_order_body().contains("END OF INVENTED ORDER DETAIL"),
+                "grouped double-click missed Unicode long detail"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-empty",
+        |a, _| {
+            a.invoke_orders_filter_edited("Missing".into());
+            Ok(())
+        },
+        |a, _, _| !a.get_orders_loading(),
+        |a, s| {
+            require!(
+                a.get_orders_rows().row_count() == 0
+                    && s.borrow().state.orders.list_status == OrdersListStatus::Empty
+                    && a.get_order_body().is_empty(),
+                "empty groups manufactured headings/detail"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-invalid-and-reset",
+        |a, _| {
+            a.invoke_orders_dates_edited("bad".into(), "".into());
+            a.invoke_orders_grouping_changed(0);
+            a.invoke_orders_grouping_changed(1);
+            require!(
+                a.get_orders_invalid_filter()
+                    && a.get_orders_beginning() == "bad"
+                    && a.get_orders_rows().row_count() == 0,
+                "grouping hid invalid filter"
+            );
+            a.invoke_orders_reset_filters();
+            Ok(())
+        },
+        |a, _, _| !a.get_orders_loading(),
+        |a, _| {
+            require!(
+                a.get_orders_grouping() == 0
+                    && a.get_orders_rows().row_count() == 4
+                    && a.get_orders_query().is_empty()
+                    && a.get_orders_beginning().is_empty()
+                    && a.get_orders_ending().is_empty()
+                    && a.get_orders_status_filter() == 0,
+                "reset did not restore flat/default filters"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-error-and-retry",
+        |a, _| {
+            a.invoke_orders_grouping_changed(1);
+            a.invoke_orders_filter_edited("Alpha".into());
+            a.invoke_orders_dates_edited("2026-10-29".into(), "2026-10-29".into());
+            a.invoke_orders_scenario_changed(1);
+            Ok(())
+        },
+        |a, _, _| a.get_orders_list_error(),
+        |a, _| {
+            require!(
+                a.get_orders_rows().row_count() == 0 && a.get_orders_grouping() == 1,
+                "error retained headings or lost grouping"
+            );
+            a.invoke_retry_orders_list();
+            a.invoke_orders_scenario_changed(0);
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-retry-recovery",
+        noop,
+        |a, s, i| !a.get_orders_loading() && rejected_orders_list(s, i),
+        |a, _| {
+            require!(
+                a.get_orders_grouping() == 1
+                    && a.get_orders_rows().row_count() == 2
+                    && a.get_orders_query() == "Alpha"
+                    && a.get_orders_beginning() == "2026-10-29"
+                    && a.get_orders_ending() == "2026-10-29"
+                    && !a.get_orders_list_error(),
+                "group retry tuple changed"
+            );
+            a.invoke_order_selected(1);
+            a.invoke_order_activated();
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-selector-reset",
+        |a, _| {
+            a.invoke_open_selection();
+            a.invoke_cancel_selection();
+            Ok(())
+        },
+        |a, s, i| {
+            !a.get_orders_loading() && seen(s, i, "order-body", "SYNTH-001", "ORDER-02", false)
+        },
+        |a, _| {
+            require!(
+                a.get_orders_grouping() == 0
+                    && a.get_orders_rows().row_count() == 4
+                    && a.get_selected_order() == -1
+                    && a.get_order_body().is_empty(),
+                "selector retained group state"
+            );
+            a.invoke_orders_grouping_changed(1);
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-group-tab-reset",
+        |a, _| {
+            a.invoke_tab_changed(3);
+            a.invoke_tab_changed(2);
+            Ok(())
+        },
+        |a, s, i| !a.get_orders_loading() && rejected_orders_list(s, i),
+        |a, _| {
+            require!(
+                a.get_orders_grouping() == 0
+                    && a.get_orders_rows().row_count() == 4
+                    && a.get_order_body().is_empty(),
+                "tab retained group state"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
         "orders-filter-return-results",
         |a, _| {
             a.invoke_tab_changed(3);
@@ -2281,12 +2567,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M16F100_DELIVERY {} {} {:?} generation={} applied={}",
+                "M17F100_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M16F100_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M17F100_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -2295,7 +2581,7 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M16F100_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M17F100_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
@@ -2307,11 +2593,11 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
                 app.invoke_open_selection();
             }
             println!(
-                "M16F100_REVIEW_READY SYNTH-001 patient selector; wait for candidates, then review page integrity; close the mock to exit."
+                "M17F100_REVIEW_READY SYNTH-001 patient selector; wait for candidates, then review page integrity; close the mock to exit."
             );
         }
     } else if let Err(error) = &result {
-        eprintln!("M16F100_INTEGRATED_FAIL {error}");
+        eprintln!("M17F100_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -2362,7 +2648,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M16F100_CHECK {} PASS elapsed_ms={}",
+            "M17F100_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );

@@ -4,13 +4,13 @@ param([ValidateSet('default', 'minimum')][string]$Size = 'default',
       [string]$Python = 'python')
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
-$base = Join-Path $root 'validation/milestone-16/functional-100/windows'
+$base = Join-Path $root 'validation/milestone-17/functional-100/windows'
 $receipt = Get-Content -LiteralPath (Join-Path $base 'automated.json') -Raw | ConvertFrom-Json
 if (-not $receipt.passed -or -not $receipt.matrix_requested) {
     throw 'Run Test-MockChart.ps1 -Matrix first for this new executable.'
 }
 & $Python (Join-Path $PSScriptRoot 'verify_integrated.py')
-if ($LASTEXITCODE -ne 0) { throw 'M16F100 source/executable/log binding verification failed.' }
+if ($LASTEXITCODE -ne 0) { throw 'M17F100 source/executable/log binding verification failed.' }
 $binary = Join-Path $root $receipt.executable
 if (Get-Process -Name 'cprs-chart-mock' -ErrorAction SilentlyContinue | Where-Object { $_.Path -eq $binary }) {
     throw 'Close the mock before opening another sample.'
@@ -26,9 +26,9 @@ try {
     $arguments = @()
     if ($Size -eq 'minimum') { $arguments += '--minimum-size' }
     & $binary @arguments *> $log
-    if ($LASTEXITCODE -ne 0) { throw "M16F100 functional launch failed; inspect $log" }
+    if ($LASTEXITCODE -ne 0) { throw "M17F100 functional launch failed; inspect $log" }
     [ordered]@{
-        protocol = 'M16F100'; scope = 'Functional launch preparation at 100% only'
+        protocol = 'M17F100'; scope = 'Functional launch preparation at 100% only'
         executable_sha256 = $receipt.executable_sha256
         requested_size = $Size; requested_application_scale = $ScaleFactor
         log = Split-Path -Leaf $log
