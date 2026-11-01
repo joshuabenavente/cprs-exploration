@@ -1,0 +1,24 @@
+{
+  "protocol": "M14",
+  "scope": "Independent root technical review and read-only verification after agent completion",
+  "recorded_at": "2026-11-01T19:36:08.328595+00:00",
+  "reviewed_commit": "4f1a6b98b18b54c077e58d61db21fff845896be4",
+  "branch": "m14-results-date-filters",
+  "verified": {
+    "step_source_executable_bindings": 16,
+    "journeys": 11,
+    "checkpoints_each": 100,
+    "deliveries_each": 122,
+    "rejected_each": 53,
+    "acceptance_receipt_hashes": true,
+    "diff_whitespace_check": "passed",
+    "reviewed_core_ui_contract": "No blocking finding in the inspected calendar/filter/invalidation/response/UI paths"
+  },
+  "rust_test_results": "116 passed in agent-run bound receipt; not redundantly re-executed during read-only root review",
+  "protocol_tests": 16,
+  "publication": "Blocked before push execution by automatic approval review; it requires explicit M14 code/documentation/evidence export approval to the named GitHub repository",
+  "destination": "https://github.com/joshuabenavente/cprs-exploration",
+  "requested_next_action": "Publish m14-results-date-filters and create a draft PR; then check CI",
+  "native_windows_and_narrator": "not run; separate new-build acceptance remains pending",
+  "merge_authorized": false
+}

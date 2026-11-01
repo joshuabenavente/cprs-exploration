@@ -367,5 +367,11 @@
     "branch_url": "https://github.com/joshuabenavente/cprs-exploration/tree/m13-notes-filters",
     "implementation_commit": "3ea234aa7a96bbcd986a341c27cba6c2b43c5d8d",
     "ci": "Current run conclusions are tracked on PR #8; code/build checks are separate from native/listening"
+  },
+  "root_review": {
+    "receipt": "validation/milestone-14/root-review.json",
+    "result": "read-only binding/receipt checks and scoped technical review passed",
+    "next_step": "Explicit approval to publish M14 branch/code/docs/validation evidence and open draft PR",
+    "automatic_approval_review": "Rejected M14 git push before execution; previous publication permission classified as M13-only, and move to next step was not accepted as explicit M14 export permission."
   }
 }
