@@ -41,7 +41,8 @@ try {
         } finally { $ErrorActionPreference = 'Stop' }
         $logName = $step.Name + '.log'
         $logPath = Join-Path $validation $logName
-        $output | ForEach-Object { $_.ToString() } | Set-Content -LiteralPath $logPath -Encoding utf8
+        # A successful silent step (notably cargo fmt) still needs an empty log.
+        Set-Content -LiteralPath $logPath -Value @($output | ForEach-Object { $_.ToString() }) -Encoding utf8
         $output | ForEach-Object { $_.ToString() } | Write-Output
         $results += [ordered]@{ name = $step.Name; command = 'cargo ' + ($arguments -join ' '); exit_code = $code; passed = ($code -eq 0); log = "validation/milestone-$Milestone/$logName"; log_sha256 = (Get-MockFileSha256 -LiteralPath $logPath) }
         if ($code -ne 0) { $failure = $step.Name; break }

@@ -47,7 +47,7 @@ A read-only review of `b774e9b` found validation gaps, not runtime defects. This
 
 - The layout and reveal-View checkpoints now move focus with dispatched Slint Tab/Shift+Tab events after scrolling the target out of view, so they fail if the Tab-release or View-focus reveal handlers are removed. They previously called `reveal` directly. This is synthetic window dispatch, not native OS input.
 - New checkpoint `review-final-state` restores the review selections that the layout probes disturbed (journey: 83 checkpoints; deliveries unchanged at 92/38).
-- `Test-MockChart.ps1` deletes this mode's receipt and step logs before running, and records each step log's SHA-256. The verifiers reject changed step logs, CI runs for a different commit, and `crates/` file-set drift since the clean checkout.
+- `Test-MockChart.ps1` deletes this mode's receipt and step logs before running, creates an empty log for successful silent steps such as formatting, and records each step log's SHA-256. The verifiers reject changed step logs, CI runs for a different commit, and `crates/` file-set drift since the clean checkout.
 - Clean-checkout and byte-audit checkouts enable `core.longpaths`; Python reads use extended-length paths.
 
 The longest tracked path is 147 characters. For a manual Windows clone, use a short base path or `git clone -c core.longpaths=true …`.
