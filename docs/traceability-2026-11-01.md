@@ -84,5 +84,5 @@ bounded hardening of provider/state boundary. U: original server paging/alias
 semantics and authoritative completeness. Implementation is in lib.rs
 PatientSummary/SearchRequest/SearchPage validation and apply_search; desktop
 simulation 15 and nine added timer checkpoints exercise malformed replies and
-recovery/paging. Sixteen focused Rust tests plus retained suite and isolated M16
-protocol/matrix validation are running. Native Windows/Narrator remain not run.
+recovery/paging. Sixteen focused Rust tests plus retained suite (148 total), 18 protocol tests
+and the complete ten-sample M16 matrix passed (121 checkpoints per journey). Native Windows/Narrator remain not run.

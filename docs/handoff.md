@@ -5,9 +5,11 @@ M16 [patient-search page integrity](milestone-16.md) is implemented on
 backlog C01: typed replies now validate candidate fields/query/roster membership,
 IDs, counts/offsets and scoped cursors before exposing candidates. One new mock
 simulation exercises inconsistent typed pages; nine fixtures and all readers are
-retained. Full automated validation is running. Exact next action: finish the
-matrix, verify source/EXE/history bindings, publish/verify CI/merge/prune under
-standing authorization, then deliver the requested project overview.
+retained. The full Linux matrix passed: 148 Rust tests, 18 protocol tests and eleven
+121-checkpoint journeys (158 deliveries / 70 rejections each); all ten scale
+samples passed and 2,517 startup evidence files remain unchanged. Exact next
+action: publish, verify final-head CI and merge/prune under standing authorization,
+then deliver the requested [project overview](project-overview-m16.md).
 New tools are `validate_m16.py`, `verify_m16.py` / `verify_integrated.py`,
 `test_m16_protocol.py`, `Test-MockChart.ps1`, and `Review-SearchPages.ps1`.
 M15 writers are frozen in this checkout. Native Windows/listening remain not run;

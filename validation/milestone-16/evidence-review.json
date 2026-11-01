@@ -1,0 +1,25 @@
+{
+  "protocol": "M16",
+  "scope": "Primary-agent technical review of authored search-page boundary; no new original recovery or execution",
+  "baseline": "223fb96583bdada0a81d6ad982ccfbb33dcea30a",
+  "gap": "apply_search previously guarded the active request but accepted arbitrary typed rows and paging metadata",
+  "classification": {
+    "B": "Existing patient subset/direction observations in specifications/patient-selection-chart.md; no new binary examination",
+    "P": "SP01\u2013SP08 exact row/page/cursor rules and invalid-page scenario",
+    "I": "Validation fits the current provider/state boundary",
+    "U": "Complete original server paging/alias/access behavior and authoritative dataset completeness"
+  },
+  "reviewed_paths": [
+    "crates/chart-core/src/lib.rs PatientSummary/SearchRequest/SearchPage/apply_search",
+    "crates/chart-core/tests/search_page_integrity.rs",
+    "crates/chart-desktop/src/main.rs simulation/callback smoke",
+    "crates/chart-desktop/src/integrated_check.rs search-page checkpoints"
+  ],
+  "limits": [
+    "Within-page identity/metadata/filter/structure validation cannot prove provider totals or cross-page dataset completeness",
+    "No Windows native/physical keyboard/Narrator observation performed"
+  ],
+  "new_reverse_engineering": "None needed for authored boundary hardening; five transport/save/login/DLL targets remain deferred",
+  "validation": "148 Rust/18 protocol tests and complete source-bound ten-sample matrix passed; no new native or original behavior claims",
+  "implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24"
+}

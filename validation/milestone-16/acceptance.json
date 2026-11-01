@@ -1,0 +1,39 @@
+{
+  "protocol": "M16",
+  "recorded_at_utc": "2026-11-01T21:18:18.655602+00:00",
+  "baseline": "223fb96583bdada0a81d6ad982ccfbb33dcea30a",
+  "implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24",
+  "implementation_complete": true,
+  "linux_automated_passed": true,
+  "linux_executable_sha256": "331c857c692606d0445a0b5ebc7a447cb136c763a0b4d2e55dca5a0cbf3132c5",
+  "rust_tests_passed": 148,
+  "protocol_tests_passed": 18,
+  "automated_steps": 16,
+  "journeys_verified": 11,
+  "checkpoints_each": 121,
+  "deliveries_each": 158,
+  "rejected_each": 70,
+  "default_minimum_scale_samples_passed": 10,
+  "startup_evidence_files_unchanged": 2517,
+  "receipts_sha256": {
+    "validation/milestone-16/linux/automated.json": "2e5d71562f915e0b2d6618487af72d3cbcaca710db8771efa320bd888db6e415",
+    "validation/milestone-16/linux/integrated.json": "791a0ff7ecde47f112c62c346de43bb72c77e8ae0d7751898396226e27e92cb1",
+    "validation/milestone-16/linux/tooling-review.json": "b5715f334639eb34c0ad62891802d99403d93e0a5c3b036c6516a989ebbf2950",
+    "validation/milestone-16/linux/synthetic-visual-review.json": "f8a5206b30a6489dd5c29ff64d76a71733682a0ae5554ac42823df93d4f3b72e",
+    "validation/milestone-16/evidence-review.json": "082be0bbf093c02e17d2aa930b5541a91246f304836ded89941c5ee0256fa867",
+    "validation/milestone-16/technical-review.json": "da127149642307e5dda4346c89bfc3aeb1454bd90f50973ce6176085280c2a3a",
+    "validation/milestone-16/startup-history.json": "761e628e3240dad3ac68524e71b3efddfd15247719a4df28a31e109aacb257d4",
+    "validation/milestone-16/native-checklist.md": "4699cf016800c36384b1a1f78e75e2b497d28bd8ab1d5177b8d1f459bf4bd8ea"
+  },
+  "windows_code_build_ci": "Pending publication and final-head CI",
+  "windows_native_visual_keyboard": "not run",
+  "narrator_listening": "not run",
+  "milestone_acceptance_complete": false,
+  "merge_authorized": true,
+  "authorization": "docs/delivery-workflow.md standing authorization; not an acceptance claim",
+  "limits": [
+    "Existing nine invented patients and offline/read-only scope retained.",
+    "Authored page/metadata rules are not recovered original server contracts.",
+    "No current native Windows, physical keyboard, UIA or speech pass; historical receipts remain scoped to their builds."
+  ]
+}

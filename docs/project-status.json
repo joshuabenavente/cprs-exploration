@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M16 patient-search page integrity implemented; full Linux validation running; native current-build acceptance pending",
+  "condition": "M16 implemented and complete Linux matrix passed; publication/final-head CI and authorized merge/prune next; current native acceptance pending",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -107,7 +107,7 @@
       "id": "C01",
       "priority": "P1",
       "task": "Validate patient-search reply metadata, predicates and page/cursor structure",
-      "status": "Implemented in M16 SP01\u2013SP08; full validation running",
+      "status": "Closed by M16 SP01\u2013SP08 implementation and automated validation; current native acceptance remains separate",
       "dependency": "specifications/search-page-integrity.md"
     }
   ],
@@ -191,7 +191,7 @@
     }
   ],
   "next_action": {
-    "task": "Finish M16 matrix, verify bindings/history, publish and verify CI, merge/prune, then provide the requested project overview",
+    "task": "Publish M16 draft PR, verify final-head CI, merge/prune, then deliver the requested project overview; fresh combined native Windows acceptance remains the next priority",
     "standing_delivery_authorization": "docs/delivery-workflow.md",
     "native_dependency": "Windows desktop and fresh combined M16 build"
   },
@@ -295,23 +295,37 @@
       "safe overflow handling and fail-closed response state",
       "invalid typed page simulation and nine new desktop checkpoints"
     ],
-    "runtime_scope": "existing nine invented patients, offline/read-only; no new clinical interface"
+    "runtime_scope": "existing nine invented patients, offline/read-only; no new clinical interface",
+    "local_implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24"
   },
   "current_validation": {
-    "state": "full automated matrix in progress",
-    "focused_core_precheck": "148 tests passed",
+    "platform": "Linux Xvfb/software renderer",
+    "core_tests_passed": 148,
     "protocol_tests_passed": 18,
-    "windows_code_build_ci": "not run yet for M16",
+    "workspace_format": "passed",
+    "warning_denied_workspace_clippy": "passed",
+    "desktop_build": "passed",
+    "callback_smoke": "passed",
+    "real_timer_journey": "passed",
+    "checkpoints": 121,
+    "deliveries": 158,
+    "rejected": 70,
+    "default_minimum_scale_matrix_passed": 10,
+    "startup_evidence_files_unchanged": 2517,
+    "acceptance_receipt": "validation/milestone-16/acceptance.json",
+    "synthetic_visual_review": "minimum-200 selector capture inspected; not native acceptance",
+    "windows_code_build_ci": "not run yet",
     "windows_native_visual_keyboard": "not run",
     "narrator_listening": "not run",
     "milestone_complete": false
   },
   "publication": {
-    "state": "M16 local; not yet published",
+    "state": "M16 implemented/validated locally; publication next",
     "branch": "m16-search-page-validation",
     "destination": "https://github.com/joshuabenavente/cprs-exploration",
     "merge_authorized": true,
-    "standing_authorization": "docs/delivery-workflow.md"
+    "standing_authorization": "docs/delivery-workflow.md",
+    "implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24"
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
@@ -389,9 +403,9 @@
     "ci": "Current run conclusions are tracked on PR #8; code/build checks are separate from native/listening"
   },
   "root_review": {
-    "receipt": "validation/milestone-15/technical-review.json",
-    "result": "Technical review and read-only receipt/history binding checks passed",
-    "next_step": "M15 delivery complete; fresh Windows native/listening follow-up remains"
+    "receipt": "validation/milestone-16/technical-review.json",
+    "result": "Technical review and read-only source/executable/log/history binding checks passed",
+    "next_step": "Final-head CI and authorized delivery, then project overview and current native acceptance follow-up"
   },
   "m14_merge": {
     "recorded_at_utc": "2026-11-01T19:53:32.088963+00:00",
@@ -597,5 +611,6 @@
     "branch_pruned": true,
     "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41347969241",
     "completed_action": "Published M15, verified final-head CI, merged PR #10 and pruned topic branches under explicit standing delivery authorization"
-  }
+  },
+  "project_overview": "docs/project-overview-m16.md"
 }

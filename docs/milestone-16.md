@@ -1,6 +1,6 @@
 # M16: patient-search page integrity
 
-Status: implementation in progress on `m16-search-page-validation`, from merged
+Status: implemented; complete Linux matrix passed; hosted CI and native follow-up pending on `m16-search-page-validation`, from merged
 M15 delivery `223fb96`. Standing commit/push/merge/prune authorization applies.
 
 The matching-request guard in `apply_search` currently accepts arbitrary typed
@@ -27,4 +27,15 @@ current build. This Linux environment cannot perform them. New M16 validation
 must not promote historical M13/M14/M15 receipts or reuse M12 speech acceptance.
 Keep native backlog explicit while completing the portable milestone.
 
-Exact next action: implement SP01–SP08 and focused tests before desktop wiring.
+Validation: 148 Rust tests, 18 protocol/isolation tests, format, warning-denied
+workspace Clippy, desktop build and callback smoke passed. Eleven journeys each
+passed 121 checkpoints with 158 deliveries and 70 stale replies rejected; all ten
+default/minimum size/scale samples passed. All 2,517 startup evidence files remain
+byte-identical. See [acceptance](../validation/milestone-16/acceptance.json) and
+[technical review](../validation/milestone-16/technical-review.json).
+
+Exact next action: publish, verify final-head code/build CI, merge and prune under
+standing authorization. The [project overview](project-overview-m16.md) records
+implemented features, evidence limits, fidelity gaps and recommended next work.
+No M17 implementation is started. Fresh combined native Windows/listening
+acceptance remains not run.
