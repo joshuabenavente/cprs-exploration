@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M15 published as draft PR #10 after explicit standing delivery approval; final-head CI and authorized merge/prune next",
+  "condition": "M15 merged after final-head portable and Windows code/build CI passed; topic branch pruned; standing delivery authorization recorded",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -27,7 +27,7 @@
       "id": "M15-WINDOWS",
       "priority": "P1",
       "task": "Collect fresh M15 Windows source/build matrix and separate native visual/keyboard/Narrator observations",
-      "status": "not run",
+      "status": "Final-head hosted code/build CI passed; Windows matrix/native visual/keyboard/Narrator remain not run",
       "dependency": "fresh M15 Windows executable and native session"
     },
     {
@@ -176,10 +176,10 @@
     }
   ],
   "next_action": {
-    "task": "Verify final-head CI on M15 PR #10, mark ready, merge, synchronize main and prune the merged topic branch; then fresh native Windows/listening follow-up",
-    "blocked_by": null,
-    "independent_native_followup": "Fresh M15 Windows matrix/native keyboard/visual/Narrator remain not run; M13/M14 receipts remain unchanged",
-    "merge_authorized": true
+    "task": "Collect fresh M15 Windows source/build-bound matrix and separate native visual/keyboard/Narrator observations using the M15 checklist",
+    "dependency": "Windows desktop session and fresh M15 executable",
+    "standing_delivery_authorization": "docs/delivery-workflow.md",
+    "historical_acceptance": "M13/M14 observations remain pending for their own builds; no retrospective promotion"
   },
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
@@ -284,7 +284,8 @@
       "intrinsic Orders height and filter/reading geometry"
     ],
     "runtime_scope": "nine invented patients; existing four orders/three mock statuses; offline read-only",
-    "local_implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720"
+    "local_implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720",
+    "state": "M15 merged; no next milestone implementation started"
   },
   "current_validation": {
     "platform": "Linux Xvfb/software renderer",
@@ -303,13 +304,13 @@
     "acceptance_receipt": "validation/milestone-15/acceptance.json",
     "synthetic_visual_review": "minimum-200 captured and inspected; not native acceptance",
     "first_full_attempt": "Retained assertion failure corrected; final full run passed",
-    "windows_code_build_ci": "Pending on PR #10; native and listening remain separate and not run",
+    "windows_code_build_ci": "Passed on M15 final PR head 6e575c97d2f0f1a6e1622632ff962ca10d2702d7; run 41347969241; native/speech separate",
     "windows_native_visual_keyboard": "not run",
     "narrator_listening": "not run",
     "milestone_complete": false
   },
   "publication": {
-    "state": "published as draft PR #10; historical block resolved",
+    "state": "M15 merged; topic branch pruned locally/remotely",
     "destination": "https://github.com/joshuabenavente/cprs-exploration",
     "branch": "m15-orders-date-filters",
     "branch_published": true,
@@ -317,10 +318,13 @@
     "merge_authorized": true,
     "implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720",
     "user_approval": "I approve the action and the commit push merge and prune going forward",
-    "planned_action": "Publish approved M15 implementation/code/docs/evidence and create a draft PR; no merge",
     "receipt": "validation/milestone-15/publication.json",
     "reason": "Explicit M15 publication and standing commit/push/merge/prune authorization received",
-    "historical_block_receipt": "validation/milestone-15/publication-block.json"
+    "historical_block_receipt": "validation/milestone-15/publication-block.json",
+    "merge_commit": "518a1ab890413eb678394ac65b2cf93e21f0b7aa",
+    "branch_pruned": true,
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41347969241",
+    "completed_action": "Published M15, verified final-head CI, merged PR #10 and pruned topic branches under explicit standing delivery authorization"
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
@@ -400,7 +404,7 @@
   "root_review": {
     "receipt": "validation/milestone-15/technical-review.json",
     "result": "Technical review and read-only receipt/history binding checks passed",
-    "next_step": "Final-head CI, authorized merge/prune and separate native/listening follow-up"
+    "next_step": "M15 delivery complete; fresh Windows native/listening follow-up remains"
   },
   "m14_merge": {
     "recorded_at_utc": "2026-11-01T19:53:32.088963+00:00",
@@ -450,11 +454,11 @@
     "branch": "m15-plan",
     "baseline": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
     "runtime_changes_started": true,
-    "published": false,
+    "published": true,
     "validation": "Documentation consistency checks only; no new Rust or native test claims",
     "evidence": "analysis/orders/resources/TFRMORDERVIEW.dfm.json: chkDateRange, calFrom, calThru; original date semantics unresolved",
     "next_implementation_action": "Pin baseline and historical evidence; write OF01\u2013OF08 contract on an implementation branch",
-    "state": "Approved plan implemented and Linux validated locally; capture-time planning receipt preserved",
+    "state": "Approved plan implemented, published and merged; planning receipt preserved",
     "planning_branch_pruned": true
   },
   "previous_m14_implementation": {
@@ -518,5 +522,36 @@
     "scope": "M15 publication and routine commit/push/PR/merge/prune going forward within the established synthetic offline project",
     "merge_after_appropriate_checks": true,
     "policy": "docs/delivery-workflow.md"
+  },
+  "m15_merge": {
+    "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/10",
+    "merged": true,
+    "merge_commit": "518a1ab890413eb678394ac65b2cf93e21f0b7aa",
+    "tested_head": "6e575c97d2f0f1a6e1622632ff962ca10d2702d7",
+    "run_id": 41347969241,
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41347969241",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 124971771437,
+        "name": "windows-desktop-build",
+        "conclusion": "success"
+      },
+      {
+        "id": 124971771592,
+        "name": "portable-core",
+        "conclusion": "success"
+      }
+    ],
+    "local_topic_branch_pruned": true,
+    "remote_topic_branch_pruned": true,
+    "remaining_local_branches": [
+      "main"
+    ],
+    "remaining_remote_branches": [
+      "main"
+    ],
+    "native_windows_and_narrator": "Not run for M15; CI and merge do not establish native/speech acceptance",
+    "followup_scope": "Delivery records and documentation only; source/build inputs identical to tested PR head"
   }
 }

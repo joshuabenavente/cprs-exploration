@@ -1,5 +1,31 @@
 # CPRS Chart recreation: current handoff
 
+M15 [Orders date filtering](milestone-15.md) is merged on main. Implementation
+used `m15-orders-date-filters`, from planning commit `b8e1f21` over merged M14. The
+[OF01–OF08 contract](../specifications/orders-filtering.md) adds inclusive calendar
+bounds and Reset to query/mock-status filtering. Invalid edits clear both pending
+channels without a provider request; detail activation remains explicit. All 132
+Rust tests, 17 protocol/isolation tests and sixteen automated steps passed.
+Eleven journeys each passed 112 checkpoints with 145 deliveries / 65 rejections;
+all ten scale samples passed and 2,481 startup evidence files remain unchanged.
+See the [acceptance checkpoint](../validation/milestone-15/acceptance.json).
+M15 [PR #10](https://github.com/joshuabenavente/cprs-exploration/pull/10) merged
+after portable-core and Windows code/build checks passed on final PR head
+`6e575c97d2f0f1a6e1622632ff962ca10d2702d7`. Its topic branch was pruned
+locally/remotely; only main remains.
+See the [merge checkpoint](../validation/milestone-15/merge-checkpoint.json).
+The user authorized commit/push/merge/prune going forward; the
+[standing delivery authorization](delivery-workflow.md) remains in force.
+Historical publication blocks and acceptance receipts retain capture-time status.
+Exact next action: run the fresh M15 Windows matrix and separate native keyboard/
+visual and Narrator checklist with source/build/EXE bindings. These observations
+remain not run. The delivery follow-up changes documentation only; runtime and
+build inputs are identical to the tested PR head.
+New validation uses `validate_m15.py`, `verify_m15.py` / `verify_integrated.py`,
+`test_m15_protocol.py`, `Test-MockChart.ps1`, `Review-OrdersFilters.ps1`, and
+`validation/milestone-15/`. M14 writer entry points are frozen in this checkout.
+Fresh Windows native/keyboard/Narrator acceptance remains separate and not run.
+
 M14 [PR #9](https://github.com/joshuabenavente/cprs-exploration/pull/9) merged at
 `e93c9a03c8ae802d54a7252c0ff95fedec4385b4` after portable-core and Windows
 code/build CI passed on final head `d934582`. Local main matches origin/main.
@@ -8,29 +34,6 @@ removed after verifying it had no unique commits or separate worktree. Remote
 branches now contain only main. See the
 [merge/cleanup checkpoint](../validation/milestone-15/m14-merge-checkpoint.json).
 Historical publication/blocked-attempt receipts retain their capture-time status.
-
-M15 [Orders date filtering](milestone-15.md) was approved and is implemented on
-`m15-orders-date-filters`, from planning commit `b8e1f21` over merged M14. The
-[OF01–OF08 contract](../specifications/orders-filtering.md) adds inclusive calendar
-bounds and Reset to query/mock-status filtering. Invalid edits clear both pending
-channels without a provider request; detail activation remains explicit. All 132
-Rust tests, 17 protocol/isolation tests and sixteen automated steps passed.
-Eleven journeys each passed 112 checkpoints with 145 deliveries / 65 rejections;
-all ten scale samples passed and 2,481 startup evidence files remain unchanged.
-See the [acceptance checkpoint](../validation/milestone-15/acceptance.json).
-M15 is published as [draft PR #10](https://github.com/joshuabenavente/cprs-exploration/pull/10).
-The user explicitly approved this action and commit/push/merge/prune going forward;
-[standing delivery authorization](delivery-workflow.md) applies to routine work
-within this project's established scope. The prior publication block is resolved;
-its raw receipt is retained as history. See the
-[publication receipt](../validation/milestone-15/publication.json).
-Exact next action: verify final-head CI, mark ready and merge PR #10, synchronize
-main and prune the topic branch. Fresh Windows native/keyboard/Narrator acceptance
-remains not run and is separate from merge/code-build checks.
-New validation uses `validate_m15.py`, `verify_m15.py` / `verify_integrated.py`,
-`test_m15_protocol.py`, `Test-MockChart.ps1`, `Review-OrdersFilters.ps1`, and
-`validation/milestone-15/`. M14 writer entry points are frozen in this checkout.
-Fresh Windows native/keyboard/Narrator acceptance remains separate and not run.
 
 The following M14 paragraphs retain that milestone's completed validation
 checkpoint; they do not describe results of the current M15 executable.

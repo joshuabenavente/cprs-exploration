@@ -1,0 +1,31 @@
+{
+  "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/10",
+  "merged": true,
+  "merge_commit": "518a1ab890413eb678394ac65b2cf93e21f0b7aa",
+  "tested_head": "6e575c97d2f0f1a6e1622632ff962ca10d2702d7",
+  "run_id": 41347969241,
+  "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41347969241",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 124971771437,
+      "name": "windows-desktop-build",
+      "conclusion": "success"
+    },
+    {
+      "id": 124971771592,
+      "name": "portable-core",
+      "conclusion": "success"
+    }
+  ],
+  "local_topic_branch_pruned": true,
+  "remote_topic_branch_pruned": true,
+  "remaining_local_branches": [
+    "main"
+  ],
+  "remaining_remote_branches": [
+    "main"
+  ],
+  "native_windows_and_narrator": "Not run for M15; CI and merge do not establish native/speech acceptance",
+  "followup_scope": "Delivery records and documentation only; source/build inputs identical to tested PR head"
+}

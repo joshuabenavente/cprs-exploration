@@ -1,7 +1,8 @@
 # M15: read-only Orders date filtering
 
-Status: approved and implemented; Linux automated matrix passed; Windows native/listening pending.
-Work is on `m15-orders-date-filters` from planning commit `b8e1f21`.
+Status: merged in PR #10; final-head hosted code/build CI and Linux matrix passed;
+Windows native/listening remain pending.
+Implementation used `m15-orders-date-filters` from planning commit `b8e1f21`.
 Baseline: M14 merged at `e93c9a03c8ae802d54a7252c0ff95fedec4385b4`; see the
 [handoff](handoff.md) and [merge receipt](../validation/milestone-15/m14-merge-checkpoint.json).
 
@@ -126,10 +127,10 @@ The first full run caught a wrong retained-status assertion; its raw failed rece
 and log are preserved under `linux/attempt-1`. The corrected final run passed.
 The [minimum-200 capture](../validation/milestone-15/linux/synthetic-visual-review.json)
 shows readable new controls and the fixed frame; it does not establish native keys
-or speech. M15 is now published as [draft PR #10](https://github.com/joshuabenavente/cprs-exploration/pull/10).
-The user explicitly authorized publication, commit/push, merge and pruning going
-forward; see [delivery authorization](delivery-workflow.md). The historical
-publication-block receipt is preserved. Exact next action: verify final-head CI,
-mark ready and merge, synchronize main and prune the topic branch. Then use the
-[new Windows checklist](../validation/milestone-15/native-checklist.md).
+or speech. M15 [PR #10](https://github.com/joshuabenavente/cprs-exploration/pull/10) merged
+after final-head code/build CI passed. The topic branch is pruned locally/remotely.
+See the [merge checkpoint](../validation/milestone-15/merge-checkpoint.json) and
+[standing delivery authorization](delivery-workflow.md). The earlier block receipt
+remains unchanged. Exact next action: run the fresh Windows matrix and separate
+[native/listening checklist](../validation/milestone-15/native-checklist.md).
 Native Windows/Narrator remain not run; merge does not establish acceptance.

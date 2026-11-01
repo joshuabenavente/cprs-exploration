@@ -4,12 +4,12 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-The development branch is `main`. M14 PR #9 is merged at `e93c9a0` after
-portable/Windows code-build CI passed; obsolete branches were pruned. M13/M14
-native/Narrator acceptance remains pending. Approved M15 work is on
-`m15-orders-date-filters`, based on the local planning commit `b8e1f21` and merged
-M14 runtime. See the [handoff](docs/handoff.md), [traceability](docs/traceability-2026-11-01.md)
-and [M15 Orders milestone](docs/milestone-15.md). The
+The development branch is `main`. M15 [PR #10](https://github.com/joshuabenavente/cprs-exploration/pull/10)
+is merged after final-head portable/Windows code-build CI passed; its topic branch
+is pruned. M13/M14/M15 native/Narrator observations remain pending for their own
+builds. See the [handoff](docs/handoff.md), [M15 milestone](docs/milestone-15.md),
+[traceability](docs/traceability-2026-11-01.md), and
+[standing delivery authorization](docs/delivery-workflow.md). The
 [published reverse-engineering folder](reverse-engineering/README.md) is retained.
 Original reference binaries and the Ghidra database are excluded.
 
