@@ -18,8 +18,13 @@ Rust tests, 17 protocol/isolation tests and sixteen automated steps passed.
 Eleven journeys each passed 112 checkpoints with 145 deliveries / 65 rejections;
 all ten scale samples passed and 2,481 startup evidence files remain unchanged.
 See the [acceptance checkpoint](../validation/milestone-15/acceptance.json).
-Exact next action: publish the reviewable draft PR and verify final-head code/build
-CI, then collect fresh Windows native/keyboard/Narrator observations. M15 merge
+Publication was blocked before execution: automatic approval review classified
+“Approved” as implementation-only and requires destination-specific M15 export
+approval. No M15 branch or PR was uploaded. See the
+[publication block](../validation/milestone-15/publication-block.json).
+Exact next action: obtain explicit approval to publish this M15 code/docs/evidence
+to `joshuabenavente/cprs-exploration` and open a draft PR, then verify code/build
+CI. Fresh Windows native/keyboard/Narrator observations remain not run. M15 merge
 is not authorized.
 New validation uses `validate_m15.py`, `verify_m15.py` / `verify_integrated.py`,
 `test_m15_protocol.py`, `Test-MockChart.ps1`, `Review-OrdersFilters.ps1`, and

@@ -1,0 +1,16 @@
+{
+  "protocol": "M15",
+  "recorded_at_utc": "2026-11-01T20:18:05.521809+00:00",
+  "action": "git push --set-upstream origin m15-orders-date-filters",
+  "destination": "https://github.com/joshuabenavente/cprs-exploration",
+  "local_head": "add6d5dbcf84d30a0149e3cb376bc8ef12438de1",
+  "rejected_before_execution": true,
+  "branch_uploaded": false,
+  "pull_request_created": false,
+  "automatic_review_reason": "The push would export the M15 implementation, documentation, and validation evidence to GitHub, but the user approved implementation only and no explicit M15 publication authorization is present; sensitive payload egress requires destination-specific approval.",
+  "next_action": "Obtain explicit M15 publication approval for the named destination and draft PR; no workaround attempted",
+  "implementation_and_local_validation": "Complete; 132 Rust tests, 17 protocol tests, 16 steps, 11 journeys, 10 matrix samples passed; all 2481 startup evidence files preserved",
+  "windows_code_build_ci": "not run: publication blocked before push",
+  "windows_native_and_narrator": "not run",
+  "merge_authorized": false
+}

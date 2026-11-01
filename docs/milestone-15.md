@@ -126,6 +126,11 @@ The first full run caught a wrong retained-status assertion; its raw failed rece
 and log are preserved under `linux/attempt-1`. The corrected final run passed.
 The [minimum-200 capture](../validation/milestone-15/linux/synthetic-visual-review.json)
 shows readable new controls and the fixed frame; it does not establish native keys
-or speech. Exact next action: publish the draft PR and verify code/build CI, then
-use the [new Windows checklist](../validation/milestone-15/native-checklist.md).
+or speech. Publication was rejected before push by automatic approval review,
+which classified “Approved” as implementation-only and requires explicit M15
+code/docs/evidence export approval to the named GitHub repository. The
+[block receipt](../validation/milestone-15/publication-block.json) preserves the
+reason. Exact next action: obtain M15 publication approval, then publish the draft
+PR, verify code/build CI and use the
+[new Windows checklist](../validation/milestone-15/native-checklist.md).
 Native Windows/Narrator remain not run; M15 merge is not authorized.

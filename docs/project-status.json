@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M15 implemented; complete Linux automated matrix passed and bound receipts verified; Windows code/build and native/listening follow-up pending",
+  "condition": "M15 implemented and fully Linux validated locally; publication blocked by automatic review pending explicit M15 destination-specific approval",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -176,8 +176,8 @@
     }
   ],
   "next_action": {
-    "task": "Publish the reviewable M15 draft PR under the approved M15 plan, verify final-head code/build CI, then collect fresh Windows native/listening evidence",
-    "blocked_by": null,
+    "task": "Obtain explicit approval to publish M15 code/docs/validation evidence to joshuabenavente/cprs-exploration and open a draft PR; then push and verify code/build CI",
+    "blocked_by": "Automatic approval review treated Approved as implementation-only and rejected GitHub export before execution",
     "independent_native_followup": "Fresh M15 Windows matrix/native keyboard/visual/Narrator remain not run; M13/M14 receipts remain unchanged",
     "merge_authorized": false
   },
@@ -303,13 +303,13 @@
     "acceptance_receipt": "validation/milestone-15/acceptance.json",
     "synthetic_visual_review": "minimum-200 captured and inspected; not native acceptance",
     "first_full_attempt": "Retained assertion failure corrected; final full run passed",
-    "windows_code_build_ci": "not run yet",
+    "windows_code_build_ci": "not run: M15 publication blocked before upload",
     "windows_native_visual_keyboard": "not run",
     "narrator_listening": "not run",
     "milestone_complete": false
   },
   "publication": {
-    "state": "Local implementation and validation complete; draft publication next",
+    "state": "blocked by automatic approval review before push",
     "destination": "https://github.com/joshuabenavente/cprs-exploration",
     "branch": "m15-orders-date-filters",
     "branch_published": false,
@@ -317,7 +317,9 @@
     "merge_authorized": false,
     "implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720",
     "user_approval": "Approved (M15 plan)",
-    "planned_action": "Publish approved M15 implementation/code/docs/evidence and create a draft PR; no merge"
+    "planned_action": "Publish approved M15 implementation/code/docs/evidence and create a draft PR; no merge",
+    "receipt": "validation/milestone-15/publication-block.json",
+    "reason": "The push would export the M15 implementation, documentation, and validation evidence to GitHub, but the user approved implementation only and no explicit M15 publication authorization is present; sensitive payload egress requires destination-specific approval."
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
@@ -397,7 +399,7 @@
   "root_review": {
     "receipt": "validation/milestone-15/technical-review.json",
     "result": "Technical review and read-only receipt/history binding checks passed",
-    "next_step": "Draft publication and final-head CI; separate native/listening follow-up"
+    "next_step": "Explicit M15 publication approval, draft PR and code/build CI; native/listening remain separate"
   },
   "m14_merge": {
     "recorded_at_utc": "2026-11-01T19:53:32.088963+00:00",
