@@ -1,0 +1,26 @@
+{
+  "protocol": "M13",
+  "recorded_at": "2026-11-01T17:49:35.147112+00:00",
+  "scope": "Approved Notes filtering implementation; Linux synthetic automation complete; Windows native/listening not yet recorded",
+  "automated_linux_passed": true,
+  "core_tests_passed": 106,
+  "protocol_tests_passed": 14,
+  "journey_checkpoints": 91,
+  "deliveries": 104,
+  "rejected_deliveries": 43,
+  "matrix_samples_passed": 10,
+  "linux_executable_sha256": "82bb34fe4ae46348e6b9c18604e0f1ec089c70c69c55449b25a877f4ea58660d",
+  "receipt_sha256": {
+    "linux/automated.json": "392a24cbcc2a86a1ad2302b800ddd5a1220150f73a391043878f96e79f6eab19",
+    "linux/integrated.json": "a0a567e032237aedbb4c9e81bcc26fdb98739735cd73a138415b14db6f45fb23",
+    "linux/tooling-review.json": "b390654bbffc70f265f8a8d5ce1d292d8c226f56404177ec9e8543c4eee710bc",
+    "linux/environment.json": "ec321e400738646156db968269f65aa6651c5d94b0f865437745ffb979610e9b"
+  },
+  "historical_files_verified_unchanged": 2404,
+  "historical_files_changed": [],
+  "windows_code_build": "not yet run for M13; GitHub publication/draft-PR CI pending explicit approval",
+  "windows_native_visual_keyboard": "not run in this cloud environment",
+  "narrator_listening": "not run or reported on the new build",
+  "milestone_acceptance_complete": false,
+  "next_action": "Run current Windows code/build/matrix, then affected native and Narrator checklist at ten size/scale samples; preserve old M12 reports"
+}

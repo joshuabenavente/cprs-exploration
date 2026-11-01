@@ -4,25 +4,65 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-Development continues on `main`, tracking `origin/main`; `main` is the GitHub default. Earlier milestone history, tags and evidence are preserved. See the [current handoff](docs/handoff.md).
+The documented development branch is `main`. Current M13 work is on
+`m13-notes-filters`, based on fetched `origin/main` at `6428037`;
+that baseline commit adds only the [published reverse-engineering folder](reverse-engineering/README.md).
+Earlier milestone history, receipts and uncommitted review work are preserved.
+Inspect actual Git refs before choosing a branch. See the [current handoff](docs/handoff.md),
+[analysis review](docs/analysis-review-2026-11-01.md),
+[feature traceability](docs/traceability-2026-11-01.md) and
+[proposed M13 Notes filtering milestone](docs/milestone-13.md).
+Original reference binaries and the Ghidra database are excluded from the publication.
 
-## Run the Rust mock
+## Run the current M13 Rust mock
 
-For the native-review table-height fix, use `scripts/Test-CoverSheetFollowup.ps1 -Matrix`, then `python scripts/verify_cover_followup.py` and `scripts/Review-CoverSheetFollowup.ps1`. These keep the new executable's evidence under `validation/milestone-12/native-followup/`. Preserve the original M12 receipts and listening reports; do not regenerate them with the changed executable using the baseline validation commands below.
+The approved M13 work adds read-only Notes author/date filters. Choose stable
+AUTHOR keys (equal labels can name distinct invented authors), enter optional
+inclusive YYYY-MM-DD bounds, combine them with the existing substring search,
+or Reset all filters. Invalid dates clear transient rows/text and display a
+validation message. Reading remains automatic on note selection. No signed-only
+eligibility, FileMan dates, provider lookup, editing or signing is implemented.
 
 ```powershell
-.\scripts\Start-MockChart.ps1
+.\scripts\Start-MockChart.ps1 -Rebuild
+.\scripts\Test-MockChart.ps1 -Matrix
+python scripts\verify_integrated.py
+python scripts\test_m13_protocol.py
 ```
 
-Use `-Rebuild` after source changes. Search for `MORGAN` to see duplicate-name records with distinct synthetic IDs, `PATEL` for an acknowledgment, or `RIVERA` for denied mock access. `zárate` or `李` finds the Unicode fixture. Cover Sheet has synthetic Problem List, Allergies, Vitals, Active Medications and Appointments panels. Vitals retains four recovered headings and shows invented values, units, timestamps and qualifiers; its read-only detail pane is authored policy. Active Medications retains Medication and Status headings, with independent MED identities and local read-only details. Notes loads a selected document automatically. Orders highlights a row first; Enter, double-click, or View order detail explicitly opens its read-only text. Both browsers support filtering, long Unicode fixtures, and error/retry simulations. SYNTH-002 has empty Notes, Orders, and Results lists. Results browses one invented interim-style laboratory report type with explicit opening and read-only text.
+The active runner accepts only M13 and writes platform-specific
+`validation/milestone-13/windows/` or `linux/` evidence. `-CodeOnly` omits desktop
+execution; `-Bootstrap` fetches locked dependencies before offline checks;
+`-Python` selects the installed Windows interpreter. Linux can run
+`python3 scripts/validate_m13.py --matrix` with Rust 1.99.1, native build libraries
+and an X11 display (a virtual display establishes only synthetic UI evidence).
+Unset SLINT_SCALE_FACTOR while compiling; the runner applies it only at runtime.
 
-Run `scripts/Test-MockChart.ps1` for offline automated checks, now written only under `validation/milestone-12/` with the `M12_*` protocol. This includes 96 core cases, immediate callback smoke, and a separate 83-checkpoint real-timer integrated desktop journey. Run `scripts/verify_integrated.py` with the workspace Python interpreter to verify the journey log and produce its structured receipt. See the [current handoff](docs/handoff.md), [Milestone 12 evidence protocol](docs/milestone-12.md), [Milestone 11 hardening](docs/milestone-11.md), [Milestone 10 results](docs/milestone-10.md), [Appointments contract](specifications/appointments.md), [Milestone 9 results](docs/milestone-9.md), [Active Medications contract](specifications/active-medications.md), [Milestone 8 results](docs/milestone-8.md), [Vitals display contract](specifications/vitals.md), [Milestone 7 results](docs/milestone-7.md), [integrated acceptance contract](specifications/integrated-chart.md), [Results specification](specifications/results.md), [Orders specification](specifications/orders.md), and [Notes specification](specifications/notes.md). The original Ghidra analysis remains separate from the running app.
+The journey retains all 83 previous checkpoints and adds eight Notes filtering
+checks. New source/build/executable/log bindings and ten requested size/scale
+samples are verified together. See [M13](docs/milestone-13.md), the
+[filter contract](specifications/notes-filtering.md) and
+[native/listening checklist](validation/milestone-13/native-checklist.md).
+Windows native and Narrator results must be recorded separately on the new build.
 
-Rust 1.99.1 with rustfmt and Clippy is pinned in `rust-toolchain.toml`. Use `Test-MockChart.ps1 -CodeOnly -Bootstrap` to fetch locked dependencies before cached offline code/build checks. The CI workflow runs Windows desktop code/build and Ubuntu core checks and uploads M12 paths. Current CI/native/listening status is recorded separately under `validation/milestone-12/`; historical M11 results are not current-build evidence. See M12 for the clean Windows checkout, ten-sample geometry probe matrix and historical byte audit.
+Use `scripts/Review-NotesFilters.ps1 -Size minimum -ScaleFactor 2` after the full
+Windows matrix to prepare a native sample. Repeat both sizes at 100%, 125%, 150%,
+175% and 200%. The launcher leaves Notes open and records preparation only.
+Close the app between samples. The largest-scale default remains 1180x700
+logical pixels; minimum is 980x680, other defaults 1180x800. These application
+scale overrides do not change Windows display settings.
 
-For a repeatable layout check, use `scripts/Start-MockChart.ps1 -MinimumSize -ScaleFactor 1.25`. Supported application scale overrides are 1, 1.25, 1.5, 1.75, and 2. They do not change Windows display settings. Close the app before rebuilding or launching another scale check.
+The earlier M2–M12 commands/receipts are historical. Do not run old validation
+writers or the M12 follow-up runner with the changed executable. The historical
+M12 user-reported acceptance remains bound to `a88c…`; a new M13 build needs its
+own acceptance. Earlier source-bound verifiers can be run in their historical
+checkout. All raw evidence and receipts are preserved.
 
-Add `-IntegratedReview` to run the timed journey and leave SYNTH-001 / Cover Sheet / APPT-03 selected for review. It verifies callbacks, bindings, and focus probes; native keyboard behavior and Narrator speech are assessed separately. Notes loads text on selection; Orders and Results require explicit opening. Canceling patient selection returns browser tabs to their local filter, and Cover Sheet detail starts with focus in its read-only text. Appointments preserves Date/Time, Location and Action Req headings with literal invented display strings; no scheduling action is available.
+Search MORGAN for duplicate names with distinct synthetic IDs, PATEL for an
+acknowledgment, RIVERA for denied access, and zárate or 李 for the Unicode fixture.
+SYNTH-002 has empty Notes, Orders, Results and designated Cover Sheet panels.
+Orders and Results still require explicit opening. Every record is invented;
+there is no VistA connection, credential, clinical import or clinical write API.
 
 ## Analysis tools
 
@@ -74,7 +114,8 @@ Keep the GUI project closed during headless processing. Logs are in `analysis/lo
 
 ## Milestone documents
 
-- [Current M12 evidence protocol and review checkpoint](docs/milestone-12.md)
+- [Current M13 Notes filters and validation checkpoint](docs/milestone-13.md)
+- [Historical M12 evidence protocol and review checkpoint](docs/milestone-12.md)
 - [Historical M11 shared Cover Sheet hardening](docs/milestone-11.md)
 - [Historical Appointments milestone, listening pending](docs/milestone-10.md)
 - [Appointments static recovery and authored contract](specifications/appointments.md)

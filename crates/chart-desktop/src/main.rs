@@ -416,6 +416,27 @@ fn sync(app: &AppWindow, controller: &Controller) {
     });
     let n = &state.notes;
     app.set_notes_query(n.query.clone().into());
+    app.set_notes_beginning(n.beginning_input.clone().into());
+    app.set_notes_ending(n.ending_input.clone().into());
+    app.set_notes_invalid_filter(matches!(n.list_status, NotesListStatus::Invalid(_)));
+    let authors = state.note_authors();
+    let labels: Vec<slint::SharedString> = std::iter::once("All invented authors".into())
+        .chain(
+            authors
+                .iter()
+                .map(|a| format!("{} · {}", a.id.as_str(), a.label).into()),
+        )
+        .collect();
+    if app.get_notes_authors().iter().collect::<Vec<_>>() != labels {
+        app.set_notes_authors(ModelRc::from(Rc::new(VecModel::from(labels))));
+    }
+    app.set_notes_author_index(
+        n.author
+            .as_ref()
+            .and_then(|id| authors.iter().position(|a| &a.id == id))
+            .map_or(0, |i| i as i32 + 1),
+    );
+
     let rows = n
         .rows
         .iter()
@@ -424,7 +445,7 @@ fn sync(app: &AppWindow, controller: &Controller) {
                 r.date.clone(),
                 r.title.clone(),
                 r.subject.clone(),
-                r.author.clone(),
+                format!("{} · {}", r.author_id.as_str(), r.author),
                 r.location.clone(),
             ]
         })
@@ -452,7 +473,9 @@ fn sync(app: &AppWindow, controller: &Controller) {
         NotesListStatus::Empty => {
             "No invented notes match this view. This is not a clinical finding.".into()
         }
-        NotesListStatus::Error(message) => message.clone().into(),
+        NotesListStatus::Error(message) | NotesListStatus::Invalid(message) => {
+            message.clone().into()
+        }
     });
     app.set_note_identity(
         n.selected
@@ -751,6 +774,14 @@ fn confirm(weak: slint::Weak<AppWindow>, shared: Shared, acknowledged: bool) {
 
 fn load_notes(weak: slint::Weak<AppWindow>, shared: Shared, query: String) {
     let request = shared.borrow_mut().state.begin_notes_list(query);
+    dispatch_notes_list(weak, shared, request);
+}
+
+fn dispatch_notes_list(
+    weak: slint::Weak<AppWindow>,
+    shared: Shared,
+    request: Option<NotesListRequest>,
+) {
     paint(&weak, &shared);
     let Some(request) = request else {
         return;
@@ -1182,6 +1213,51 @@ fn wire(app: &AppWindow, shared: &Shared) {
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_notes_filter_edited(move |query| {
         load_notes(weak.clone(), data.clone(), query.to_string())
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_notes_author_changed(move |index| {
+        let c = data.borrow();
+        let author = if index == 0 {
+            None
+        } else {
+            let Some(author) = usize::try_from(index - 1)
+                .ok()
+                .and_then(|i| c.state.note_authors().get(i).cloned())
+            else {
+                return;
+            };
+            Some(author.id)
+        };
+        let (query, beginning, ending) = (
+            c.state.notes.query.clone(),
+            c.state.notes.beginning_input.clone(),
+            c.state.notes.ending_input.clone(),
+        );
+        drop(c);
+        let request = data
+            .borrow_mut()
+            .state
+            .begin_notes_filter(query, author, beginning, ending);
+        dispatch_notes_list(weak.clone(), data.clone(), request);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_notes_dates_edited(move |beginning, ending| {
+        let (query, author) = {
+            let c = data.borrow();
+            (c.state.notes.query.clone(), c.state.notes.author.clone())
+        };
+        let request = data.borrow_mut().state.begin_notes_filter(
+            query,
+            author,
+            beginning.to_string(),
+            ending.to_string(),
+        );
+        dispatch_notes_list(weak.clone(), data.clone(), request);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_reset_notes_filters(move || {
+        let request = data.borrow_mut().state.reset_notes_filters();
+        dispatch_notes_list(weak.clone(), data.clone(), request);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_retry_notes_list(move || {

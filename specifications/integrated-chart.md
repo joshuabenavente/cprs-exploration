@@ -1,5 +1,17 @@
 # Integrated mock Chart acceptance contract
 
+Current M13 adds Notes author/date/reset controls and eight real-timer checks,
+bringing the journey to 91 checkpoints. Its `M13_*` protocol and platform-specific
+evidence directories supersede the historical runner instructions below. See
+[the filtering contract](notes-filtering.md) and [M13](../docs/milestone-13.md).
+
+For the previous M12 changed-build acceptance, use the
+[native follow-up report](../validation/milestone-12/native-followup/report.md)
+and [supplemental user report](../validation/milestone-12/native-followup/user-acceptance.json).
+The later M11/M12 checkpoint descriptions below retain their historical build
+scope; they do not supersede the later user-reported ten-combination passes.
+See the [current handoff](../docs/handoff.md) for active instructions.
+
 ## Scope
 
 Milestone 12 establishes separate fresh evidence for the shared-layout validation fixes merged after Milestone 11. It adds no transport, imports, authentication, scheduling actions, order entry/signing, interpretation, printing, original-client execution, domain panel or static recovery. Historical static evidence and Milestone 2–11 receipts remain unchanged. Milestone 10 added focused, hash-pinned Appointments evidence and documented its authored local read-only policy in `appointments.md`. Cover Sheet content sizing derives from intrinsic layout requirements plus padding, bounded below by the viewport. Focus reveal uses the table/heading or View/help geometry, with scroll clamping.

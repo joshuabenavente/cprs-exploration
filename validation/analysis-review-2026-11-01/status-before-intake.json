@@ -1,0 +1,82 @@
+{
+  "as_of_local_date": "2026-11-01",
+  "timezone": "America/Denver",
+  "role": "project manager and technical reviewer",
+  "reviewed_baseline": {
+    "branch": "work",
+    "commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf",
+    "initial_worktree": "clean",
+    "remote_status": "not queried in this review",
+    "review_changes": "local documentation and separate review evidence; no runtime changes or publication"
+  },
+  "condition": "Portable mock baseline verified; retained evidence consistent; new analysis review and complete Windows executable binding blocked on absent artifacts",
+  "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
+  "independently_verified": {
+    "format": "passed",
+    "core_clippy_warnings_denied": "passed",
+    "core_tests": {"passed": 96, "failed": 0},
+    "source_build_bindings": {"exact": 18, "line_endings_only": 10, "crate_file_set_matches": true},
+    "followup_log_hashes": {"matched": 16},
+    "stored_journeys": {"complete": 11, "checkpoints_each": 83, "deliveries_each": 92, "rejected_each": 38, "new_executions": false},
+    "stored_geometry_samples": {"requested_reported_match": 10, "new_native_measurements": false},
+    "followup_index_files": {"matched": 94, "report_remapping_applied": true},
+    "preserved_m12_files": {"matched": 607},
+    "static_receipt_artifact_entries": {"matched": 521, "unique_file_count_claimed": false},
+    "preexisting_analysis_validation_files_unchanged": 1424,
+    "retained_screenshots_reinspected": ["008-corrected-minimum-200-ready-1.jpg", "037-corrected-default-100-ready-1.jpg"],
+    "receipts": ["validation/project-review-2026-11-01/portable-checks.json", "validation/project-review-2026-11-01/artifact-audit.json"]
+  },
+  "inherited_validation": {
+    "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
+    "native_visual_keyboard": "user-reported pass, ten combinations; independently captured observations have targeted scope",
+    "narrator_listening": "user-reported pass, ten combinations; no audio capture or independent listening rerun",
+    "user_report_binding": "Hash named in preceding instructions; user did not repeat hash",
+    "current_build_receipt": "validation/milestone-12/native-followup/user-acceptance.json",
+    "original_m12_executable_sha256": "21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4",
+    "ci_receipt_commit": "d0e83ebaf5d54f5ec538d8f8f5e85ba08c51c98a",
+    "ci_current_head_verified": false
+  },
+  "unverified_new_analysis": {
+    "workspace": "/workspace/reverse-engineering",
+    "bundle": "/workspace/reverse-engineering/cprs-reverse-engineering.zip",
+    "availability": "absent",
+    "reported_classified_entries": 43371,
+    "reported_limited_analysis": 2245,
+    "reported_partial_analysis": 183,
+    "reported_semantically_unresolved": 40943,
+    "counts_status": "arithmetic consistent; catalog and semantic findings not inspected",
+    "specimen_and_map_status": "Absent locally; only historical locked hashes and exported evidence available"
+  },
+  "prioritized_backlog": [
+    {"id": "E01", "priority": "P0", "task": "Obtain, hash, safely inventory and inspect new analysis bundle outside Rust repository", "status": "blocked", "dependency": "accessible bundle path or link"},
+    {"id": "E02", "priority": "P1", "task": "Reconcile feature-relevant new claims, TIU query/sign distinction and Vitals dispatch against traceability matrix", "status": "partial: repository matrix delivered; new-evidence crosswalk blocked", "dependency": "E01"},
+    {"id": "E03", "priority": "P1", "task": "Recover exact accepted Windows EXE and complete source/build/evidence binding", "status": "blocked", "dependency": "exact a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3 artifact"},
+    {"id": "E04", "priority": "P2", "task": "Maintain portable review receipt, current documentation pointers and immutable historical evidence", "status": "review checkpoint delivered", "dependency": null},
+    {"id": "E05", "priority": "P2", "task": "Choose one read-only product slice with evidence and explicit authored departures", "status": "planned", "dependency": "E02"},
+    {"id": "C01", "priority": "P3", "task": "Decide provider structural/filter-validation contract before expanding fixture providers", "status": "deferred observation; no demonstrated shipped failure", "dependency": "concrete provider or feature requirement"}
+  ],
+  "decisions": [
+    {"id": "D01", "decision": "Recommend M13 evidence reconciliation and portable read-only baseline; no feature or broad refactor now", "rationale": "Missing new evidence and Windows artifact prevent stronger fidelity and binding claims"},
+    {"id": "D02", "decision": "Preserve user-reported acceptance and historical index statuses separately", "rationale": "Different evidence types and times explain 10/10 versus historical 0/10"},
+    {"id": "D03", "decision": "Defer all five prepared RE continuation targets", "rationale": "Transport/login/write/DLL behavior does not materially advance this offline milestone"},
+    {"id": "D04", "decision": "Keep Vitals local read-only detail as an explicit prototype departure", "rationale": "Historical assembly/VMT already identifies the excluded original update/write-access route"},
+    {"id": "D05", "decision": "Do not integrate missing analysis into the Rust repo by assumption", "rationale": "Keep raw external evidence separate and establish archive/receipt provenance first"}
+  ],
+  "risks": [
+    {"id": "R01", "risk": "Inventory or decompiler counts mistaken for behavioral recovery", "mitigation": "Classify every claim as bounded binary observation, prototype policy, inference or unresolved"},
+    {"id": "R02", "risk": "Source agreement mistaken for exact accepted executable identity", "mitigation": "Recover exact artifact; separate rebuilt-binary validation"},
+    {"id": "R03", "risk": "Historical receipt writers overwrite evidence", "mitigation": "Use separate review/M13 destinations and pre/post hashes"},
+    {"id": "R04", "risk": "Stale milestone prose misstates current runner or acceptance", "mitigation": "Current handoff and follow-up instructions take precedence; historical descriptions labeled"}
+  ],
+  "next_action": {
+    "task": "Obtain a path/link for cprs-reverse-engineering.zip, compute SHA256 and list entries without execution; extract safely outside Rust repo and inspect README, specification, final receipt, coverage and uncertainty catalogs",
+    "blocked_by": "missing analysis bundle",
+    "independent_followup": "Locate exact accepted Windows executable for E03; preserve original M12 evidence"
+  },
+  "artifacts": {
+    "review": "docs/project-review-2026-11-01.md",
+    "traceability": "docs/traceability-2026-11-01.md",
+    "next_milestone": "docs/milestone-13.md",
+    "review_evidence": "validation/project-review-2026-11-01/"
+  }
+}

@@ -24,3 +24,5 @@ validation/milestone-12/** -text -whitespace
 scripts/Test-CoverSheetFollowup.ps1 -text
 scripts/Review-CoverSheetFollowup.ps1 -text
 scripts/verify_cover_followup.py -text
+# M13 has fresh platform-specific logs and receipts; preserve captured bytes.
+validation/milestone-13/** -text -whitespace

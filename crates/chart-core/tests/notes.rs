@@ -242,7 +242,8 @@ fn nt12_denied_and_unavailable_patient_records_cannot_be_requested_from_mock_pro
             p.notes_list(&NotesListRequest {
                 generation: 1,
                 patient_id: patient_id.clone(),
-                query: "".into()
+                query: "".into(),
+                filter: NotesFilter::default(),
             })
             .is_err()
         );

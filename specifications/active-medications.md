@@ -1,5 +1,12 @@
 # Active Medications Cover Sheet viewing slice (Milestone 9)
 
+The validation section below describes the M9 checkpoint. The active runner now
+uses M13. The earlier M12 changed-build validation/user reports are in the
+[current handoff](../docs/handoff.md) and
+[native follow-up report](../validation/milestone-12/native-followup/report.md).
+See [M13](../docs/milestone-13.md) for current changes and fresh validation.
+Do not regenerate historical receipts with the current executable.
+
 Static recovery uses the pinned CPRS Chart 1.33.214.5 / OR*3.0*639 specimen. The original executable is never run. No clinical source, transport, credentials, imports, VistA implementation or DLL internals are used.
 
 ## Recovered structure and boundaries

@@ -1,6 +1,11 @@
 # Cover Sheet synthetic vertical slice
 
-Milestone 3 recovery and original two-panel policy are historical below. The current app adds a third Vitals panel and a two-row scroll layout; see [the Milestone 8 contract](vitals.md). Notes, Orders and Results are now implemented. Existing ownership/detail guards extend to all three panels.
+Milestone 3 recovery and original two-panel policy are historical below. The
+current app has five panels: Problems, Allergies, Vitals, Active Medications and
+Appointments; Notes, Orders and Results are implemented. Ownership/detail guards
+extend to all five panels. The two-panel layout and placeholder-tab statements
+below describe the original slice. See the [integrated contract](integrated-chart.md),
+[Appointments contract](appointments.md) and [current handoff](../docs/handoff.md).
 
 The slice extends patient selection into two read-only panels: Problem List and Allergies, then item detail. It uses the same pinned CPRS Chart 1.33.214.5 specimen as milestone 1. Original CPRS execution, server behavior, clinical data, editing, printing, and other panel types remain outside the slice.
 

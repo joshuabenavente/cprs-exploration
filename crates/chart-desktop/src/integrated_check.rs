@@ -639,6 +639,187 @@ fn journey() -> VecDeque<Step> {
         noop,
     ));
     q.push_back(Step::new(
+        "notes-filter-author-race",
+        |a, _| {
+            a.invoke_notes_author_changed(1);
+            a.invoke_notes_author_changed(2);
+            Ok(())
+        },
+        |a, s, i| {
+            a.get_notes_rows().row_count() == 1
+                && seen(s, i, "notes-list", "SYNTH-004", "", false)
+                && seen(s, i, "notes-list", "SYNTH-004", "", true)
+        },
+        |a, s| {
+            require!(
+                a.get_notes_author_index() == 2
+                    && a.get_selected_note() == -1
+                    && a.get_note_body().is_empty(),
+                "author filter leaked selection/text"
+            );
+            require!(
+                s.borrow().state.notes.rows[0].id.as_str() == "NOTE-02",
+                "equal-label author identities merged"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "notes-filter-invalid-date",
+        |a, _| {
+            a.invoke_note_selected(0);
+            a.invoke_notes_dates_edited("2026-10-29".into(), "2026-10-29".into());
+            a.invoke_notes_dates_edited("2026-02-30".into(), "".into());
+            Ok(())
+        },
+        |_, s, i| {
+            seen(s, i, "note-body", "SYNTH-004", "NOTE-02", false)
+                && seen(s, i, "notes-list", "SYNTH-004", "", false)
+        },
+        |a, _| {
+            require!(
+                a.get_notes_invalid_filter()
+                    && !a.get_notes_list_error()
+                    && !a.get_notes_loading()
+                    && a.get_notes_rows().row_count() == 0
+                    && a.get_note_body().is_empty()
+                    && a.get_notes_beginning() == "2026-02-30",
+                "invalid dates did not invalidate pending work"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "notes-filter-date-recovery",
+        |a, _| {
+            a.invoke_notes_dates_edited("2026-10-29".into(), "2026-10-29".into());
+            Ok(())
+        },
+        |a, _, _| !a.get_notes_loading() && a.get_notes_rows().row_count() == 1,
+        |a, s| {
+            require!(
+                !a.get_notes_invalid_filter()
+                    && s.borrow().state.notes.rows[0].id.as_str() == "NOTE-02",
+                "inclusive filter recovery failed"
+            );
+            a.invoke_focus_notes_filter();
+            let g = a.invoke_notes_geometry();
+            require!(
+                g.author_top >= g.top
+                    && g.dates_bottom <= g.bottom
+                    && in_viewport(a, g.author_top, g.dates_bottom),
+                "Notes author/date filters are unreachable or clipped"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "notes-filter-combined-empty",
+        |a, _| {
+            a.invoke_notes_filter_edited("Zoë 李".into());
+            Ok(())
+        },
+        |a, _, _| !a.get_notes_loading(),
+        |a, s| {
+            require!(
+                a.get_notes_rows().row_count() == 0
+                    && a.get_note_body().is_empty()
+                    && s.borrow().state.notes.list_status == NotesListStatus::Empty,
+                "combined filters are not empty success"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "notes-filter-reset-race",
+        |a, _| {
+            a.invoke_notes_filter_edited("progress".into());
+            a.invoke_reset_notes_filters();
+            Ok(())
+        },
+        |a, s, i| {
+            a.get_notes_rows().row_count() == 4
+                && seen(s, i, "notes-list", "SYNTH-004", "progress", false)
+                && seen(s, i, "notes-list", "SYNTH-004", "", true)
+        },
+        |a, _| {
+            require!(
+                a.get_notes_author_index() == 0
+                    && a.get_notes_query().is_empty()
+                    && a.get_notes_beginning().is_empty()
+                    && a.get_notes_ending().is_empty()
+                    && a.get_selected_note() == -1
+                    && a.get_note_body().is_empty(),
+                "reset retained filter state"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "notes-filter-unicode-author",
+        |a, _| {
+            a.invoke_notes_author_changed(3);
+            Ok(())
+        },
+        |a, _, _| !a.get_notes_loading() && a.get_notes_rows().row_count() == 1,
+        |a, s| {
+            require!(
+                s.borrow().state.notes.rows[0].id.as_str() == "NOTE-03"
+                    && a.get_notes_authors().iter().any(|v| v.contains("Zoë 李")),
+                "Unicode author selection failed"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "notes-filter-reading",
+        |a, _| {
+            a.invoke_note_selected(0);
+            a.invoke_focus_notes_body();
+            Ok(())
+        },
+        |a, _, _| a.get_note_body().contains("END OF INVENTED LONG NOTE"),
+        |a, _| {
+            require!(
+                a.get_note_body().contains("NOTE-03") && a.get_keyboard_focus() == "notes-body",
+                "filtered reading focus/body mismatch"
+            );
+            let g = a.invoke_notes_geometry();
+            println!("M13_NOTES_GEOMETRY card_top={} card_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.top, g.bottom, g.body_top, g.body_bottom, a.get_workspace_top(), a.get_workspace_visible_height());
+            require!(
+                g.body_top >= g.top
+                    && g.body_bottom <= g.bottom
+                    && in_viewport(a, g.body_top, g.body_bottom),
+                "filtered Notes reading pane is clipped or unreachable"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "notes-filter-selector-reset",
+        |a, _| {
+            a.invoke_notes_dates_edited("bad".into(), "".into());
+            a.invoke_open_selection();
+            a.invoke_cancel_selection();
+            Ok(())
+        },
+        |a, _, _| {
+            !a.get_selector_open() && !a.get_notes_loading() && a.get_notes_rows().row_count() == 4
+        },
+        |a, s| {
+            require!(
+                a.get_notes_author_index() == 0
+                    && a.get_notes_beginning().is_empty()
+                    && a.get_notes_ending().is_empty()
+                    && a.get_note_body().is_empty()
+                    && !a.get_notes_invalid_filter()
+                    && a.get_keyboard_focus() == "notes-filter",
+                "selector cancellation retained filters"
+            );
+            owned(a, s, "SYNTH-004", ChartTab::Notes)
+        },
+    ));
+    q.push_back(Step::new(
         "pending-note-open-selector",
         |a, _| {
             a.invoke_note_selected(0);
@@ -1427,7 +1608,7 @@ fn journey() -> VecDeque<Step> {
                     g.table_visible_height >= g.table_content_height + 14.0,
                     "fixture rows overlap the table's overlay scrollbar"
                 );
-                println!("M12_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
+                println!("M13_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
                 Ok(())
             },
         ));
@@ -1569,12 +1750,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M12_DELIVERY {} {} {:?} generation={} applied={}",
+                "M13_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M12_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M13_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -1583,17 +1764,23 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M12_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M13_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
             );
         }
+        drop(c);
         if driver.keep_open {
-            println!("M12_REVIEW_READY SYNTH-001 CoverSheet APPT-03; close the mock to exit.");
+            if let Some(app) = driver.weak.upgrade() {
+                app.invoke_tab_changed(1);
+            }
+            println!(
+                "M13_REVIEW_READY SYNTH-001 Notes; wait for the list, then review filters; close the mock to exit."
+            );
         }
     } else if let Err(error) = &result {
-        eprintln!("M12_INTEGRATED_FAIL {error}");
+        eprintln!("M13_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -1644,7 +1831,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M12_CHECK {} PASS elapsed_ms={}",
+            "M13_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );

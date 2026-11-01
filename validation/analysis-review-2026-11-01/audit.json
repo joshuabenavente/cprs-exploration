@@ -1,0 +1,567 @@
+{
+  "recorded_at": "2026-11-01T17:09:15.663088+00:00",
+  "source_commit": "64280376dfc7dc5c32679c941a542b6ef3ebf54b",
+  "audit_script_sha256": "7c0089a6d2ff8f2feb0a9f7ec28fbd97108b9defe606ffe3cad21d7c234858a1",
+  "scope": "Independent distribution hash, decompression, catalog and bounded export consistency checks; no original executable execution or fresh PE byte validation",
+  "declared_specimen_identity": {
+    "executable_hash_agrees": true,
+    "map_hash_agrees": true,
+    "new_raw_file_hashing": false
+  },
+  "publication_manifest": {
+    "files": 950,
+    "matches": 950,
+    "failures": []
+  },
+  "publication_receipt": {
+    "files": 955,
+    "matches": 955,
+    "failures": []
+  },
+  "gzip_streams": [
+    {
+      "path": "batches/discovery-targets.jsonl.gz",
+      "uncompressed_bytes": 8732390,
+      "match": true
+    },
+    {
+      "path": "catalog/function-inventory.json.gz",
+      "uncompressed_bytes": 60170683,
+      "match": true
+    },
+    {
+      "path": "catalog/function-inventory.jsonl.gz",
+      "uncompressed_bytes": 49634783,
+      "match": true
+    },
+    {
+      "path": "catalog/function-inventory.tsv.gz",
+      "uncompressed_bytes": 8204788,
+      "match": true
+    },
+    {
+      "path": "catalog/function-relationships.jsonl.gz",
+      "uncompressed_bytes": 10206200,
+      "match": true
+    },
+    {
+      "path": "catalog/literal-use-sites.jsonl.gz",
+      "uncompressed_bytes": 8178554,
+      "match": true
+    },
+    {
+      "path": "catalog/unresolved-indirect-calls.jsonl.gz",
+      "uncompressed_bytes": 4919850,
+      "match": true
+    },
+    {
+      "path": "evidence/discovery-seeds.jsonl.gz",
+      "uncompressed_bytes": 8970761,
+      "match": true
+    },
+    {
+      "path": "evidence/inventory-reviewed/calls.jsonl.gz",
+      "uncompressed_bytes": 38649078,
+      "match": true
+    },
+    {
+      "path": "evidence/inventory-reviewed/defined-strings.jsonl.gz",
+      "uncompressed_bytes": 3445092,
+      "match": true
+    },
+    {
+      "path": "evidence/inventory-reviewed/entry-xrefs.jsonl.gz",
+      "uncompressed_bytes": 27523970,
+      "match": true
+    },
+    {
+      "path": "evidence/inventory-reviewed/functions.jsonl.gz",
+      "uncompressed_bytes": 20486980,
+      "match": true
+    },
+    {
+      "path": "evidence/inventory-reviewed/instruction-xrefs.jsonl.gz",
+      "uncompressed_bytes": 47178833,
+      "match": true
+    },
+    {
+      "path": "evidence/inventory-reviewed/symbols.jsonl.gz",
+      "uncompressed_bytes": 30532922,
+      "match": true
+    },
+    {
+      "path": "evidence/static/managed-literals.jsonl.gz",
+      "uncompressed_bytes": 6770444,
+      "match": true
+    },
+    {
+      "path": "evidence/static/map-symbols.jsonl.gz",
+      "uncompressed_bytes": 12745366,
+      "match": true
+    },
+    {
+      "path": "evidence/static/map-symbols.tsv.gz",
+      "uncompressed_bytes": 4732176,
+      "match": true
+    },
+    {
+      "path": "reference-input/analysis/inventory/chart-symbols.tsv.gz",
+      "uncompressed_bytes": 4732176,
+      "match": true
+    }
+  ],
+  "original_receipt_bindings": [
+    {
+      "section": "script_hashes",
+      "path": "scripts/ApplyRecoveredMetadata.java",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/ConfigureBoundedAnalysis.java",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/ExportFunctionBatch.java",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/ExportProgramInventory.java",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/ImportChartMap.java",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/RepairReviewedFunctions.java",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/SeedEvidenceFunctions.java",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/catalog_components.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/consolidate.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/extract_static.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/leaf_semantics.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/package_results.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/prepare_discovery.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/run-ghidra.sh",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/summarize_batch.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/support/decode_dfm.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/support/inspect_chart.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/validate_deliverables.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/verify_claims.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "script_hashes",
+      "path": "scripts/write_reports.py",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "document_hashes",
+      "path": "ARCHITECTURE.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "document_hashes",
+      "path": "BEHAVIOR.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": false
+    },
+    {
+      "section": "document_hashes",
+      "path": "DATA-STRUCTURES.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": false
+    },
+    {
+      "section": "document_hashes",
+      "path": "EXTERNAL-INTERFACES.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "document_hashes",
+      "path": "FUNCTION-INVENTORY.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": false
+    },
+    {
+      "section": "document_hashes",
+      "path": "PROGRESS.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "document_hashes",
+      "path": "README.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": false
+    },
+    {
+      "section": "document_hashes",
+      "path": "REIMPLEMENTATION-PLAN.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "document_hashes",
+      "path": "REPRODUCE.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    },
+    {
+      "section": "document_hashes",
+      "path": "REVIEW-NOTES.md",
+      "matches_source_manifest": true,
+      "matches_stored_bytes": true
+    }
+  ],
+  "function_inventory": {
+    "unique_entries": 43371,
+    "counts": {
+      "analyzed": 2245,
+      "internal": 41948,
+      "unresolved": 40943,
+      "partially_analyzed": 183,
+      "external": 1423
+    },
+    "subsystems": {
+      "compiler-runtime-and-libraries": 23858,
+      "other-application-modules": 9924,
+      "shared-controls-and-accessibility": 1241,
+      "transport-authentication-and-integration": 737,
+      "documentation-encounters-and-reminders": 1434,
+      "orders-medications-and-consults": 3078,
+      "results-reports-and-graphs": 849,
+      "cover-sheet-and-vitals": 297,
+      "patient-context-and-shell": 530,
+      "external-libraries": 1423
+    },
+    "missing_fields": [],
+    "statuses_match_coverage": true,
+    "subsystems_match_coverage": true,
+    "selected_rows": 25
+  },
+  "scope_catalogs": {
+    "import_thunks": 1518,
+    "small_patterns": 727,
+    "forms": 325,
+    "events": 4371,
+    "classes": 2554,
+    "call_sites": 243857,
+    "unresolved_indirect": 38574,
+    "archived_direct_edges": 3355
+  },
+  "coverage_copies_agree": true,
+  "bounded_exports": {
+    "exports": 44,
+    "distinct_entries": 39,
+    "instructions_in_listings": 4953,
+    "recorded_instructions_checked": 4953,
+    "E8_encodings_decoded": 627,
+    "E8_mismatches": [],
+    "export_time_statuses": {
+      "unresolved": 44
+    },
+    "final_catalog_status": "selected substantive routines are partially_analyzed; raw export status unresolved is an earlier export-only label"
+  },
+  "metadata_change_kinds": [
+    {
+      "kind": "partial_class_layout",
+      "result": "applied",
+      "count": 2554
+    },
+    {
+      "kind": "managed_literal_header",
+      "result": "applied",
+      "count": 32
+    },
+    {
+      "kind": "map_function_name",
+      "result": "applied",
+      "count": 25
+    }
+  ],
+  "cleanup_repairs": [
+    {
+      "entry": "a0b3e0",
+      "handler": "a0b440",
+      "continuation": "a0b447",
+      "last_byte": "a0b44d",
+      "status": "repaired"
+    },
+    {
+      "entry": "a0c6fc",
+      "handler": "a0c7b8",
+      "continuation": "a0c7bf",
+      "last_byte": "a0c7c5",
+      "status": "repaired"
+    },
+    {
+      "entry": "9af1ec",
+      "handler": "9af234",
+      "continuation": "9af23b",
+      "last_byte": "9af243",
+      "status": "repaired"
+    },
+    {
+      "entry": "862ab4",
+      "handler": "862b5e",
+      "continuation": "862b65",
+      "last_byte": "862b6b",
+      "status": "repaired"
+    },
+    {
+      "entry": "862b6c",
+      "handler": "862c14",
+      "continuation": "862c1b",
+      "last_byte": "862c20",
+      "status": "repaired"
+    }
+  ],
+  "notes_filter_resource_bindings": [
+    {
+      "resource_address": "01444c3c",
+      "form": "TfrmNotesByAuthor",
+      "component": "frmNotesByAuthor.pnlBase.cboAuthor",
+      "event": "OnNeedData",
+      "handler": "cboAuthorNeedData",
+      "map_matches": [
+        {
+          "address": "00cf1818",
+          "name": "fNoteBA.TfrmNotesByAuthor.cboAuthorNeedData",
+          "segment": 1,
+          "map_line": 8896,
+          "file_offset": 9374744,
+          "kind": "public-symbol-not-proven-function"
+        }
+      ],
+      "source": "evidence/static/forms/0391-TFRMNOTESBYAUTHOR.json"
+    },
+    {
+      "resource_address": "01444c3c",
+      "form": "TfrmNotesByAuthor",
+      "component": "frmNotesByAuthor.pnlBase.cboAuthor",
+      "event": "OnMainCheckboxClick",
+      "handler": "cboAuthorMainCheckboxClick",
+      "map_matches": [
+        {
+          "address": "00cf1804",
+          "name": "fNoteBA.TfrmNotesByAuthor.cboAuthorMainCheckboxClick",
+          "segment": 1,
+          "map_line": 8895,
+          "file_offset": 9374724,
+          "kind": "public-symbol-not-proven-function"
+        }
+      ],
+      "source": "evidence/static/forms/0391-TFRMNOTESBYAUTHOR.json"
+    },
+    {
+      "resource_address": "01444c3c",
+      "form": "TfrmNotesByAuthor",
+      "component": "frmNotesByAuthor.pnlBase.cmdOK",
+      "event": "OnClick",
+      "handler": "cmdOKClick",
+      "map_matches": [
+        {
+          "address": "00cf1898",
+          "name": "fNoteBA.TfrmNotesByAuthor.cmdOKClick",
+          "segment": 1,
+          "map_line": 8898,
+          "file_offset": 9374872,
+          "kind": "public-symbol-not-proven-function"
+        }
+      ],
+      "source": "evidence/static/forms/0391-TFRMNOTESBYAUTHOR.json"
+    },
+    {
+      "resource_address": "01444c3c",
+      "form": "TfrmNotesByAuthor",
+      "component": "frmNotesByAuthor.pnlBase.cmdCancel",
+      "event": "OnClick",
+      "handler": "cmdCancelClick",
+      "map_matches": [
+        {
+          "address": "00cf188c",
+          "name": "fNoteBA.TfrmNotesByAuthor.cmdCancelClick",
+          "segment": 1,
+          "map_line": 8897,
+          "file_offset": 9374860,
+          "kind": "public-symbol-not-proven-function"
+        }
+      ],
+      "source": "evidence/static/forms/0391-TFRMNOTESBYAUTHOR.json"
+    },
+    {
+      "resource_address": "01445284",
+      "form": "TfrmNotesByDate",
+      "component": "frmNotesByDate.pnlBase.calBeginDate",
+      "event": "OnKeyPress",
+      "handler": "calBeginDateKeyPress",
+      "map_matches": [
+        {
+          "address": "00cf2578",
+          "name": "fNoteBD.TfrmNotesByDate.calBeginDateKeyPress",
+          "segment": 1,
+          "map_line": 8902,
+          "file_offset": 9378168,
+          "kind": "public-symbol-not-proven-function"
+        }
+      ],
+      "source": "evidence/static/forms/0392-TFRMNOTESBYDATE.json"
+    },
+    {
+      "resource_address": "01445284",
+      "form": "TfrmNotesByDate",
+      "component": "frmNotesByDate.pnlBase.calEndDate",
+      "event": "OnKeyPress",
+      "handler": "calEndDateKeyPress",
+      "map_matches": [
+        {
+          "address": "00cf258c",
+          "name": "fNoteBD.TfrmNotesByDate.calEndDateKeyPress",
+          "segment": 1,
+          "map_line": 8903,
+          "file_offset": 9378188,
+          "kind": "public-symbol-not-proven-function"
+        }
+      ],
+      "source": "evidence/static/forms/0392-TFRMNOTESBYDATE.json"
+    },
+    {
+      "resource_address": "01445284",
+      "form": "TfrmNotesByDate",
+      "component": "frmNotesByDate.pnlBase.cmdOK",
+      "event": "OnClick",
+      "handler": "cmdOKClick",
+      "map_matches": [
+        {
+          "address": "00cf235c",
+          "name": "fNoteBD.TfrmNotesByDate.cmdOKClick",
+          "segment": 1,
+          "map_line": 8905,
+          "file_offset": 9377628,
+          "kind": "public-symbol-not-proven-function"
+        }
+      ],
+      "source": "evidence/static/forms/0392-TFRMNOTESBYDATE.json"
+    },
+    {
+      "resource_address": "01445284",
+      "form": "TfrmNotesByDate",
+      "component": "frmNotesByDate.pnlBase.cmdCancel",
+      "event": "OnClick",
+      "handler": "cmdCancelClick",
+      "map_matches": [
+        {
+          "address": "00cf256c",
+          "name": "fNoteBD.TfrmNotesByDate.cmdCancelClick",
+          "segment": 1,
+          "map_line": 8904,
+          "file_offset": 9378156,
+          "kind": "public-symbol-not-proven-function"
+        }
+      ],
+      "source": "evidence/static/forms/0392-TFRMNOTESBYDATE.json"
+    }
+  ],
+  "historical_reference_copies": {
+    "files": 367,
+    "copied_hash_matches": 367,
+    "repository_exact": 367,
+    "repository_text_normalized": 367,
+    "differences": []
+  },
+  "old_1424_files_changed": [],
+  "intake_956_files_changed": [],
+  "runtime_changes_upstream": [],
+  "reused_portable_validation": {
+    "receipt_passed": true,
+    "all_log_hashes_match": true,
+    "all_recorded_runtime_source_hashes_match": true,
+    "new_execution": false,
+    "reason": "Runtime/build inputs unchanged since independent 96-test, Clippy and formatting run"
+  },
+  "limits": [
+    "Raw EXE/MAP, DLLs, original archive and Ghidra project are intentionally excluded from publication.",
+    "Full 204270-call byte verification and specimen hash assertions are inherited from original receipts, not rerun here.",
+    "Decompression validates hash identity of catalogs, not correctness of every classified semantic claim.",
+    "No Rust, native, Narrator, original-client or DLL execution was needed for this evidence-only continuation."
+  ]
+}

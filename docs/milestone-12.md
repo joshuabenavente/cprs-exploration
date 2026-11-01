@@ -1,5 +1,18 @@
 # Milestone 12: fresh validation protocol and native-review checkpoint
 
+This document retains the original M12 build/checkpoint protocol. Its later
+"current executable" and missing-native-pipe statements refer to that historical
+checkpoint. The accepted changed build and latest instructions are in the
+[native follow-up report](../validation/milestone-12/native-followup/report.md)
+and [current handoff](handoff.md). Its ten-combination native/listening acceptance
+is user-reported. Do not regenerate these original receipts with a changed build.
+See the [1 November review](project-review-2026-11-01.md) for current independent
+checks and the missing-artifact limitations.
+
+The active implementation/runner now uses [M13](milestone-13.md). Do not execute
+the historical writers below with the M13 executable. To reproduce a historical
+source-bound verifier, use its recorded checkout and exact original artifact.
+
 ## Scope and provenance
 
 The user approved a separate M12 destination after PR #3 merged the four validation findings and silent-log correction. Baseline: `d040c2e78b6103284c021d1025d194c9e91fa832` on `main`; work branch: `work/m12-evidence-and-native-review`. M12 changes validation/protocol infrastructure and documentation, with no new domain behavior or live connectivity.

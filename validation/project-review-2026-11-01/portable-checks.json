@@ -1,0 +1,74 @@
+{
+  "recorded_at": "2026-11-01T16:44:05.453891+00:00",
+  "scope": "Independent Linux portable checks; no Windows native, timer journey, or speech claim",
+  "head": "8fec66d98b969c9c91f91bf56afaddbbe49357cf",
+  "checks": [
+    {
+      "name": "rustc",
+      "command": [
+        "rustc",
+        "--version",
+        "--verbose"
+      ],
+      "exit_code": 0,
+      "log": "rustc.log",
+      "sha256": "f22d5e4e9ced367e774ce5bc140d9e6b1235c1882fec80d011044851f3ae6369"
+    },
+    {
+      "name": "cargo",
+      "command": [
+        "cargo",
+        "--version"
+      ],
+      "exit_code": 0,
+      "log": "cargo.log",
+      "sha256": "c35608815f43d0b8788a9b826fad2bb17384f49fb328dc4fe64da9db5f5ef4d6"
+    },
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "core-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "-p",
+        "chart-core",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "log": "core-clippy.log",
+      "sha256": "f591e097f22f91dd5c31fbbf7e587d80c0a4e0ed594f9c9012a544f38c52d926"
+    },
+    {
+      "name": "core-tests",
+      "command": [
+        "cargo",
+        "test",
+        "-p",
+        "chart-core",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "log": "core-tests.log",
+      "sha256": "e9348d6c3132b43f57e4fd01489f7f904a007e56310ad089a2802e9e83f775af"
+    }
+  ],
+  "passed": true
+}

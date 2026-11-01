@@ -1,5 +1,12 @@
 # Appointments Cover Sheet viewing slice (Milestone 10)
 
+The evidence section below describes the M10 checkpoint. The active runner now
+uses M13. The earlier M12 changed-build validation/user reports are in the
+[current handoff](../docs/handoff.md) and
+[native follow-up report](../validation/milestone-12/native-followup/report.md).
+See [M13](../docs/milestone-13.md) for current changes and fresh validation.
+Do not regenerate historical receipts with the current executable.
+
 This is static research on pinned CPRS Chart 1.33.214.5 / OR*3.0*639 and an authored synthetic Rust panel. The original executable is never run. No server, credentials, clinical imports, VistA implementation or DLL internals are involved.
 
 ## Recovered facts

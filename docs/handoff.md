@@ -1,5 +1,62 @@
 # CPRS Chart recreation: current handoff
 
+Approved M13 implementation checkpoint, 1 November 2026: the new Codex terminal
+is open and code is on `m13-notes-filters`, based on `6428037`, preserving earlier
+review changes. Notes now supports synthetic author keys, inclusive calendar-date
+bounds, combined text filtering, Reset, invalid-input handling and exact request
+invalidation. The [contract](../specifications/notes-filtering.md) distinguishes
+all authored rules from recovered controls. See [M13](milestone-13.md).
+New evidence is isolated under `validation/milestone-13/linux/` and `windows/`;
+the active runner accepts only M13 and the journey has 91 checkpoints. Linux
+formatting, warning-denied workspace Clippy, 106 Rust tests, desktop build,
+callbacks, 14 protocol tests and all ten synthetic geometry/timer samples pass;
+each journey has 104 deliveries and 43 stale-reply rejections. The
+[M13 receipt](../validation/milestone-13/acceptance.json) verifies all 2,404
+pre-M13 evidence files remain unchanged. New-build Windows native/Narrator acceptance is not
+yet recorded. Do not use historical M12 writers with this changed executable.
+Use `Test-MockChart.ps1 -Matrix`, `python scripts/verify_integrated.py` and
+`Review-NotesFilters.ps1` for current Windows preparation. The
+[native checklist](../validation/milestone-13/native-checklist.md) defines the
+remaining per-sample interactions and speech checks.
+
+The following analysis/repository review paragraphs retain the pre-implementation
+checkpoints and their original evidence limits.
+
+Latest checkpoint, 1 November 2026 (Mountain time): local `work` is now at
+`6428037`, fast-forwarded to the analysis-only publication commit. Prior review
+edits were preserved; runtime/build inputs are unchanged. The repo's
+`reverse-engineering/` folder is available. Independent checks verified 950
+manifest entries, 955 publication-receipt files, 18 gzip source hashes and the
+43,371-entry inventory; all 367 historical reference copies match exactly.
+Repaired published exports support the TIU query/sign distinction and corroborate
+the excluded Vitals/DLL boundary. Raw original binaries/project and the accepted
+Windows mock EXE remain unavailable, so their byte checks were not rerun.
+See the [analysis review](analysis-review-2026-11-01.md), updated
+[traceability](traceability-2026-11-01.md) and [status/backlog](project-status.json).
+Recommended next implementation milestone is [M13 read-only Notes author/date
+filtering](milestone-13.md); the initial evidence-only proposal is preserved.
+Exact next action: write the Notes filtering contract for NF01–NF08, declaring
+synthetic author IDs, inclusive calendar-date rules, filter request keys,
+invalid-input/reset/cancel behavior and exclusions before implementation.
+This continuation changes documentation/evidence only; no new Rust/native/speech
+execution, original/DLL execution, commit or remote publication occurred.
+
+The following repository-only review paragraph records the earlier missing-input
+checkpoint; the analysis availability and next action above supersede it.
+
+Review checkpoint, 1 November 2026 (Mountain time): the available repository was
+reviewed at clean `work` / `8fec66d`. Independent Linux formatting, warning-denied
+core Clippy and all 96 core tests passed. Retained follow-up logs, source/build
+inputs, index artifacts and historical snapshots were audited separately; the
+accepted Windows executable and original specimen are absent here. The requested
+`/workspace/reverse-engineering/` workspace/ZIP is also absent, so its new semantic
+claims remain unverified. See the [critical review](project-review-2026-11-01.md),
+[feature traceability](traceability-2026-11-01.md), [M13 proposal](milestone-13.md)
+and [durable status/backlog](project-status.json). Exact next action: obtain and
+hash/list the analysis bundle, extract it separately, then inspect its provenance
+and feature-relevant bounded evidence. No runtime change, new Windows/native run,
+original-client execution, commit or publication was made by this review.
+
 Current follow-up executable SHA256: `a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3`. Local code/build checks, 96 core tests, callback smoke, the 83-checkpoint journey and all ten size/scale-bound geometry samples passed. Targeted native minimum-200 and default-100 captures show clear third rows. Minimum-200 System > Size/Ctrl+O/cancellation and subsequent navigation passed after settled observation; the original anomaly's cause is unproven and no shortcut code changed. See the [follow-up report](../validation/milestone-12/native-followup/report.md) and [hashed index](../validation/milestone-12/native-followup/index.json). Native visual/keyboard and Narrator listening are now **user-reported passes across all ten size/scale combinations** (default/minimum at 100%, 125%, 150%, 175%, 200%); see the [supplemental acceptance receipt](../validation/milestone-12/native-followup/user-acceptance.json). The exact report was "everything passes", clarified as "All ten combinations". Independent native client-area measurements, audio capture and automated native matrix verification remain unavailable. The new default-100 launcher log is hashed as preparation evidence only. The index retains its capture-time 0/10 and pending-listening fields; its original report hash resolves to the [preserved report](../validation/milestone-12/native-followup/report-before-user-acceptance.md) through the supplemental receipt. Publication is tracked by the branch pull request; inspect its merge state and current Git refs.
 
 Native finding follow-up on `work/m12-native-review`: the current source restores `StandardTableView`'s intrinsic minimum instead of forcing 140px, and the geometry journey now checks clearance below fixture rows for Fluent's overlay scrollbar. Separate evidence and the later user-reported acceptance are linked above. Use `Test-CoverSheetFollowup.ps1 -Matrix`, `python scripts/verify_cover_followup.py`, and `Review-CoverSheetFollowup.ps1`; output stays in `validation/milestone-12/native-followup/`. Original M12 checkpoint receipts below remain capture-time evidence for the old build. Read the [follow-up report](../validation/milestone-12/native-followup/report.md) for the distinction between captured observations and later user-reported acceptance.

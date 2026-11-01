@@ -1,5 +1,10 @@
 # Mock-only read-only Notes
 
+The approved [M13 filter contract](notes-filtering.md) extends this historical
+slice with synthetic author keys and inclusive authored date bounds. The combined
+text/author/date request tuple is validated on provider and response paths.
+Current evidence belongs under M13; original M4/M12 receipts retain their scope.
+
 Scope: CPRS Chart only, pinned executable 1.33.214.5 / OR*3.0*639. The Rust runtime uses compiled invented records. There is no TIU transport, clinical-data import, editor, signature, addendum creation, printing, or persistence.
 
 ## Static evidence

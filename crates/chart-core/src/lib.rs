@@ -360,10 +360,14 @@ impl PatientProvider for MockProvider {
         {
             return Err(ProviderError::Unavailable(reason));
         }
-        Ok(notes::mock_notes(
-            &self.preview(&request.patient_id)?,
-            &request.query,
-        ))
+        let patient = self.preview(&request.patient_id)?;
+        if request.query != request.filter.query {
+            return Err(ProviderError::Malformed(
+                "Note query/filter mismatch.".into(),
+            ));
+        }
+        notes::validate_filter(&patient, &request.filter)?;
+        Ok(notes::mock_notes(&patient, &request.filter))
     }
     fn note_body(&self, request: &NoteRequest) -> Result<NoteBody, ProviderError> {
         if self.simulation == Simulation::NoteBodyUnavailable {
