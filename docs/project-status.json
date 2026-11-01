@@ -269,10 +269,11 @@
     "milestone_complete": false
   },
   "publication": {
-    "state": "blocked pending explicit user approval",
+    "state": "explicitly approved; publication in progress",
     "planned_destination": "https://github.com/joshuabenavente/cprs-exploration",
     "planned_branch": "m13-notes-filters",
     "planned_action": "Publish reviewed code/receipts and open a draft pull request",
-    "automatic_approval_review": "Rejected uploading repository file contents because local implementation approval did not explicitly authorize exporting these project files to that external destination. No workaround or alternative upload attempted."
+    "automatic_approval_review": "Previous upload rejection resolved by explicit user approval to publish branch and draft PR to the named repository.",
+    "user_approval": "Publish branch and draft PR"
   }
 }
