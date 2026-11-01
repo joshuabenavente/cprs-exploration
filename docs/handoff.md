@@ -1,5 +1,21 @@
 # CPRS Chart recreation: current handoff
 
+M16 [patient-search page integrity](milestone-16.md) is implemented on
+`m16-search-page-validation` from merged M15 delivery `223fb96`. SP01–SP08 closes
+backlog C01: typed replies now validate candidate fields/query/roster membership,
+IDs, counts/offsets and scoped cursors before exposing candidates. One new mock
+simulation exercises inconsistent typed pages; nine fixtures and all readers are
+retained. Full automated validation is running. Exact next action: finish the
+matrix, verify source/EXE/history bindings, publish/verify CI/merge/prune under
+standing authorization, then deliver the requested project overview.
+New tools are `validate_m16.py`, `verify_m16.py` / `verify_integrated.py`,
+`test_m16_protocol.py`, `Test-MockChart.ps1`, and `Review-SearchPages.ps1`.
+M15 writers are frozen in this checkout. Native Windows/listening remain not run;
+the [M16 checklist](../validation/milestone-16/native-checklist.md) covers this
+combined build without promoting historical receipts.
+
+The following M15 paragraphs retain its completed delivery checkpoint.
+
 M15 [Orders date filtering](milestone-15.md) is merged on main. Implementation
 used `m15-orders-date-filters`, from planning commit `b8e1f21` over merged M14. The
 [OF01–OF08 contract](../specifications/orders-filtering.md) adds inclusive calendar

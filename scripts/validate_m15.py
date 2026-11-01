@@ -35,6 +35,7 @@ def historical():
 
 
 def main(argv=None):
+    raise SystemExit("M15 is frozen history; use the M16 runner in this checkout.")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--milestone', type=int, choices=[15], default=15)
     parser.add_argument('--code-only', action='store_true')

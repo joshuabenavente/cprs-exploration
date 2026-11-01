@@ -78,3 +78,11 @@ The [Cover Sheet extension](cover-sheet.md) specifies the subsequent two-panel s
 These forms inherit base properties that have not been expanded. Virtual calls, Delphi managed values, condition flags affected by runtime helpers, exception continuations, and some record layouts remain unresolved. In particular, the menu handler's pseudocode omits some paths visible in its instruction listing; the direct call sites establish its relevant edges. Do not mechanically translate the generated C into Rust or interpret decompiler-produced constant conditions as proven application logic.
 
 Exact restricted-list selection rules, duplicate-identifier resolution, paging behavior, context cancellation, tab population, access/audit policy, and runtime appearance remain fidelity follow-ups. The authored mock state model is sufficient to implement a bounded synthetic slice while those reference questions are investigated.
+
+## M16 authored reply validation
+
+[SP01–SP08](search-page-integrity.md) requires whole-page candidate/filter/cursor
+and pagination validation before candidates can be selected. The exact active
+request guard still rejects stale/duplicate replies. PAGE_SIZE=4, strict field
+rules and the Invalid search page simulation are authored mock policy, not a
+recovered CPRS server contract. Committed charts remain unchanged on rejection.
