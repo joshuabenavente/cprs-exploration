@@ -266,14 +266,19 @@
     "acceptance_receipt": "validation/milestone-13/acceptance.json",
     "windows_native_visual_keyboard": "pending new-build evidence",
     "narrator_listening": "pending new-build evidence",
-    "milestone_complete": false
+    "milestone_complete": false,
+    "windows_ci": "Tracked separately on PR #8; native/listening still pending"
   },
   "publication": {
-    "state": "explicitly approved; publication in progress",
+    "state": "published as draft PR",
     "planned_destination": "https://github.com/joshuabenavente/cprs-exploration",
     "planned_branch": "m13-notes-filters",
     "planned_action": "Publish reviewed code/receipts and open a draft pull request",
     "automatic_approval_review": "Previous upload rejection resolved by explicit user approval to publish branch and draft PR to the named repository.",
-    "user_approval": "Publish branch and draft PR"
+    "user_approval": "Publish branch and draft PR",
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
+    "branch_url": "https://github.com/joshuabenavente/cprs-exploration/tree/m13-notes-filters",
+    "implementation_commit": "3ea234aa7a96bbcd986a341c27cba6c2b43c5d8d",
+    "ci": "Current run conclusions are tracked on PR #8; code/build checks are separate from native/listening"
   }
 }

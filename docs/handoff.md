@@ -1,5 +1,14 @@
 # CPRS Chart recreation: current handoff
 
+M13 publication checkpoint: [draft PR #8](https://github.com/joshuabenavente/cprs-exploration/pull/8) publishes
+`m13-notes-filters` with the approved code, reviews and separate M13 receipts.
+CI code/build runs are linked from the PR and remain distinct from the pending
+Windows native/Narrator checklist. The
+[publication receipt](../validation/milestone-13/publication.json) pins the
+implementation snapshot. Exact next action: confirm PR checks, then build/run the
+M13 Windows matrix and affected-controls native/listening checklist on the new
+Windows executable.
+
 Approved M13 implementation checkpoint, 1 November 2026: the new Codex terminal
 is open and code is on `m13-notes-filters`, based on `6428037`, preserving earlier
 review changes. Notes now supports synthetic author keys, inclusive calendar-date
