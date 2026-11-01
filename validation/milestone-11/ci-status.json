@@ -1,21 +1,283 @@
 {
-  "scope": "Remote CI availability/status only, not a CI pass",
-  "command": [
-    "gh",
-    "run",
-    "list",
-    "--repo",
-    "joshuabenavente/cprs-exploration",
-    "--branch",
-    "codex/milestone-11-hardening",
-    "--json",
-    "databaseId,conclusion,status,headSha"
-  ],
-  "exit_code": 0,
-  "stdout": "[]",
-  "stderr": "",
+  "scope": "Actual GitHub Actions PR code/build checks; native/listening evidence remains separate",
+  "recorded_at": "2026-11-01T00:16:49.118140+00:00",
   "workflow_sha256": "df8cbf5735bd1d7468a09c3de7102b97944811d0099d28fe6901c75736d2c748",
-  "m11_publication": "not performed",
-  "ci_passed": false,
-  "status": "No M11 run; workflow remains local"
+  "ci_passed": true,
+  "status": "Windows desktop code/build and Ubuntu portable-core CI passed on implementation 10f21c4 (PR and push runs)",
+  "runs": [
+    {
+      "conclusion": "success",
+      "databaseId": 41255145653,
+      "event": "pull_request",
+      "headSha": "10f21c4e6e57182729ccf3cfd5331c9b67e74958",
+      "jobs": [
+        {
+          "completedAt": "2026-11-01T00:14:32Z",
+          "conclusion": "success",
+          "databaseId": 124696619978,
+          "name": "windows-desktop-build",
+          "startedAt": "2026-11-01T00:04:48Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-01T00:04:51Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-01T00:04:50Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:04:59Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 2,
+              "startedAt": "2026-11-01T00:04:51Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:05:12Z",
+              "conclusion": "success",
+              "name": "Install pinned Rust toolchain",
+              "number": 3,
+              "startedAt": "2026-11-01T00:04:59Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:14:19Z",
+              "conclusion": "success",
+              "name": "Bootstrap locked dependencies, then check offline",
+              "number": 4,
+              "startedAt": "2026-11-01T00:05:12Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:14:25Z",
+              "conclusion": "success",
+              "name": "Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+              "number": 5,
+              "startedAt": "2026-11-01T00:14:19Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:14:31Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 10,
+              "startedAt": "2026-11-01T00:14:25Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:14:31Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "startedAt": "2026-11-01T00:14:31Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41255145653/job/124696619978"
+        },
+        {
+          "completedAt": "2026-11-01T00:05:11Z",
+          "conclusion": "success",
+          "databaseId": 124696620073,
+          "name": "portable-core",
+          "startedAt": "2026-11-01T00:04:48Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-01T00:04:49Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-01T00:04:48Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:04:50Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 2,
+              "startedAt": "2026-11-01T00:04:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:05:01Z",
+              "conclusion": "success",
+              "name": "Install pinned Rust toolchain",
+              "number": 3,
+              "startedAt": "2026-11-01T00:04:50Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:05:08Z",
+              "conclusion": "success",
+              "name": "Portable core checks",
+              "number": 4,
+              "startedAt": "2026-11-01T00:05:01Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:05:09Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 8,
+              "startedAt": "2026-11-01T00:05:08Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:05:09Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "startedAt": "2026-11-01T00:05:09Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41255145653/job/124696620073"
+        }
+      ],
+      "status": "completed",
+      "url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41255145653"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 41255138688,
+      "event": "push",
+      "headSha": "10f21c4e6e57182729ccf3cfd5331c9b67e74958",
+      "jobs": [
+        {
+          "completedAt": "2026-11-01T00:15:55Z",
+          "conclusion": "success",
+          "databaseId": 124696597802,
+          "name": "windows-desktop-build",
+          "startedAt": "2026-11-01T00:04:41Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-01T00:04:43Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-01T00:04:42Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:04:55Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 2,
+              "startedAt": "2026-11-01T00:04:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:05:08Z",
+              "conclusion": "success",
+              "name": "Install pinned Rust toolchain",
+              "number": 3,
+              "startedAt": "2026-11-01T00:04:55Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:15:49Z",
+              "conclusion": "success",
+              "name": "Bootstrap locked dependencies, then check offline",
+              "number": 4,
+              "startedAt": "2026-11-01T00:05:08Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:15:51Z",
+              "conclusion": "success",
+              "name": "Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+              "number": 5,
+              "startedAt": "2026-11-01T00:15:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:15:54Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 10,
+              "startedAt": "2026-11-01T00:15:51Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:15:54Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "startedAt": "2026-11-01T00:15:54Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41255138688/job/124696597802"
+        },
+        {
+          "completedAt": "2026-11-01T00:05:05Z",
+          "conclusion": "success",
+          "databaseId": 124696598211,
+          "name": "portable-core",
+          "startedAt": "2026-11-01T00:04:42Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-01T00:04:43Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-01T00:04:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:04:45Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 2,
+              "startedAt": "2026-11-01T00:04:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:04:55Z",
+              "conclusion": "success",
+              "name": "Install pinned Rust toolchain",
+              "number": 3,
+              "startedAt": "2026-11-01T00:04:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:05:03Z",
+              "conclusion": "success",
+              "name": "Portable core checks",
+              "number": 4,
+              "startedAt": "2026-11-01T00:04:55Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:05:03Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 8,
+              "startedAt": "2026-11-01T00:05:03Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T00:05:03Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "startedAt": "2026-11-01T00:05:03Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41255138688/job/124696598211"
+        }
+      ],
+      "status": "completed",
+      "url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41255138688"
+    }
+  ],
+  "limits": "Hosted CI omits desktop callbacks/timers, physical/native UI and listening. Those results remain separate.",
+  "workflow_hash_policy": "Canonical LF source bytes; source checkout CRLF is normalized. Evidence receipts remain byte-exact."
 }

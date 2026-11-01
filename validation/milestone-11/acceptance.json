@@ -444,7 +444,11 @@
   "native_layout_and_keyboard": "pending; computer-use native pipe unavailable after retry/reset",
   "m11_affected_controls_listening": "user-reported pass",
   "m10_appointments_listening": "pending; historical acceptance remains unchanged",
-  "remote_ci": "workflow authored; no M11 remote run, branch not published",
+  "remote_ci": "Windows desktop code/build and Ubuntu portable-core CI passed on implementation 10f21c4 (PR and push runs)",
+  "published_windows_clone": {
+    "passed": true,
+    "commit": "10f21c4e6e57182729ccf3cfd5331c9b67e74958"
+  },
   "source_sha256": {
     "crates/chart-core/Cargo.toml": "31387910d8499a04921ea0939980e42bdd39f1d7571a32f07f207eda68a4dbbe",
     "crates/chart-desktop/build.rs": "9d7db63aff17a776f5c76c0b7b245f5f823911af55e3202e9c6172bb60223887",
@@ -485,7 +489,8 @@
     "historical-bytes.json": "aaab309015b9487f65c55a34738ea2734518b6cc2811adef15b0017efb2d606f",
     "startup-handoff.md": "b12463109740f1075bc4029dac05377ace81a4f8479125d9ca0de061497801e0",
     "native-status.json": "a673c21dc1818b74fc04f68a6862d2b60a188be03590561d04b8abdac293f82b",
-    "ci-status.json": "e285d6232d11295526f297aadcbd998a3d5c2445373a947d662c1741459d2e58",
-    "tooling-review.json": "cea669da5020807e5fbef7e6aecba6ee6bcfb69a2ec68587388758a72cffed2e"
+    "ci-status.json": "b5e93938e3f1682a5dc6db5ee2a481baadbb6dd94c2f476b8314bfe5c60aa2d4",
+    "tooling-review.json": "cea669da5020807e5fbef7e6aecba6ee6bcfb69a2ec68587388758a72cffed2e",
+    "published-clone.json": "e1c374bd0e097326d4e072cbba0934ad9639eb62ab554364188d7840e41471bc"
   }
 }

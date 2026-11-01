@@ -23,7 +23,8 @@ def main():
                                       ('automated.json', 'integrated.json', 'clean-checkout.json', 'probe-run.json')]
     native, ci, tooling = [read(n) for n in ('native-status.json', 'ci-status.json', 'tooling-review.json')]
     require(all(c['passed'] for c in tooling['checks']), 'Historical output guard failed')
-    require(digest(ROOT / '.github/workflows/mock-checks.yml') == ci['workflow_sha256'], 'CI status belongs to another workflow')
+    workflow = (ROOT / '.github/workflows/mock-checks.yml').read_bytes().replace(b'\r\n', b'\n')
+    require(hashlib.sha256(workflow).hexdigest() == ci['workflow_sha256'], 'CI status belongs to another workflow')
     binary = digest(ROOT / auto['executable'])
     require(auto['passed'] and integrated['passed'] and clean['passed'], 'Required code/build receipt failed')
     require(binary == auto['executable_sha256'] == integrated['executable_sha256'] == probes['executable_sha256'], 'Executable changed')
@@ -52,6 +53,13 @@ def main():
         build_inputs[name] = hashlib.sha256(canonical).hexdigest()
         require(build_inputs[name] == clean['build_input_sha256'][name], 'Clean checkout build input is stale: ' + name)
     require(digest(BASE / 'clean-checkout.log') == clean['log_sha256'], 'Clean checkout log changed')
+    published = None
+    if (BASE / 'published-clone.json').exists():
+        published = read('published-clone.json')
+        require(published['passed'] and published['code_checks']['passed'], 'Published clone failed')
+        require(digest(BASE / 'published-clone.log') == published['log_sha256'], 'Published clone log changed')
+    if ci['ci_passed']:
+        require(ci['runs'] and all(r['status'] == 'completed' and r['conclusion'] == 'success' for r in ci['runs']), 'CI evidence is incomplete')
     samples = probes['samples']
     require(len(samples) == 10 and {(r['size'], float(r['scale'])) for r in samples} ==
             {(size, scale) for size in ('default', 'minimum') for scale in (1, 1.25, 1.5, 1.75, 2)}, 'Missing probe matrix sample')
@@ -93,14 +101,17 @@ def main():
         'native_layout_and_keyboard': 'pending; computer-use native pipe unavailable after retry/reset',
         'm11_affected_controls_listening': native['m11_listening'],
         'm10_appointments_listening': 'pending; historical acceptance remains unchanged',
-        'remote_ci': 'workflow authored; no M11 remote run, branch not published',
+        'remote_ci': ci['status'],
+        'published_windows_clone': None if published is None else {'passed': published['passed'], 'commit': published['commit']},
         'source_sha256': clean['source_sha256'],
         'build_input_sha256': build_inputs,
         'source_hash_policy': 'Raw LF Git-tree source bytes; current source compared after CRLF-to-LF normalization. Historical evidence remains byte-exact.',
         'receipts_sha256': {n: digest(BASE / n) for n in ('automated.json', 'integrated.json', 'clean-checkout.json', 'probe-run.json', 'historical-bytes.json', 'startup-handoff.md', 'native-status.json', 'ci-status.json', 'tooling-review.json')},
     }
+    if published is not None:
+        receipt['receipts_sha256']['published-clone.json'] = digest(BASE / 'published-clone.json')
     (BASE / 'acceptance.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
-    print(f"M11 local automated checkpoint passed; listening={native['m11_listening']}; native/remote CI acceptance remains open")
+    print(f"M11 local automated checkpoint passed; listening={native['m11_listening']}; CI={ci['status']}; native review remains open")
 
 
 if __name__ == '__main__':

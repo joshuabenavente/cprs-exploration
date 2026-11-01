@@ -1,0 +1,33 @@
+{
+  "scope": "Authorized M11 publication, merge and exact-branch pruning",
+  "recorded_at": "2026-11-01T00:16:50.673937+00:00",
+  "pull_request": {
+    "baseRefName": "codex/milestone-10-appointments",
+    "headRefOid": "10f21c4e6e57182729ccf3cfd5331c9b67e74958",
+    "mergeCommit": {
+      "oid": "be30bcda32d22ea3bf28ae68a96ad6cd0bcd9648"
+    },
+    "mergedAt": "2026-11-01T00:16:12Z",
+    "state": "MERGED",
+    "url": "https://github.com/joshuabenavente/cprs-exploration/pull/1"
+  },
+  "source_commit": "10f21c4e6e57182729ccf3cfd5331c9b67e74958",
+  "merge_commit": "be30bcda32d22ea3bf28ae68a96ad6cd0bcd9648",
+  "target": "codex/milestone-10-appointments",
+  "source_ancestor_of_target_verified": true,
+  "source_local_branch_absent": true,
+  "source_remote_branch_absent": true,
+  "pruned_branch": "codex/milestone-11-hardening",
+  "other_local_branches_preserved": [
+    "codex/milestone-10-appointments",
+    "codex/milestone-8-vitals",
+    "codex/milestone-9-active-medications",
+    "main",
+    "work/milestone-3-cover-sheet",
+    "work/milestone-4-notes",
+    "work/milestone-5-orders",
+    "work/milestone-6-results",
+    "work/milestone-7-integrated-validation"
+  ],
+  "evidence_followup": "This receipt and publication metadata are committed afterward on the merged default branch; runtime, lockfile and workflow are unchanged from the CI-validated source."
+}

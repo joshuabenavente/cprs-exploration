@@ -1,0 +1,84 @@
+{
+  "scope": "Fresh private-remote Windows clone with empty target, dependency bootstrap then offline code/build checks",
+  "commit": "10f21c4e6e57182729ccf3cfd5331c9b67e74958",
+  "clone_command": [
+    "git",
+    "clone",
+    "--single-branch",
+    "--branch",
+    "codex/milestone-11-hardening",
+    "https://github.com/joshuabenavente/cprs-exploration.git",
+    "C:\\Users\\soapo\\Documents\\AI-Work\\projects\\cprs-exploration\\.local\\m11-published-clone-20261101T000511051387"
+  ],
+  "checkout_path": "C:\\Users\\soapo\\Documents\\AI-Work\\projects\\cprs-exploration\\.local\\m11-published-clone-20261101T000511051387",
+  "build_command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "C:\\Users\\soapo\\Documents\\AI-Work\\projects\\cprs-exploration\\.local\\m11-published-clone-20261101T000511051387\\scripts\\Test-MockChart.ps1",
+    "-CodeOnly",
+    "-Bootstrap"
+  ],
+  "exit_code": 0,
+  "passed": true,
+  "historical_git_blobs_verified": 686,
+  "new_evidence_bytes_verified": 29,
+  "ignored_specimen_tools_absent": true,
+  "code_checks": {
+    "checked_at": "2026-10-31T18:07:26.4023884-06:00",
+    "scope": "Milestone 11 shared Cover Sheet hardening and integrated chart validation",
+    "passed": true,
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "rustc_verbose": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\r\nbinary: rustc\r\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\r\ncommit-date: 2026-10-13\r\nhost: x86_64-pc-windows-msvc\r\nrelease: 1.99.1\r\nLLVM version: 23.1.1",
+    "os": "Microsoft Windows NT 10.0.26300.0",
+    "architecture": "X64",
+    "powershell": "5.1.26100.9711",
+    "dependency_bootstrap_requested": true,
+    "dependency_policy": "Optional cargo fetch --locked may access the network; subsequent checks use --locked --offline. Registry caches may already be populated.",
+    "desktop_session_checks": "not run; code/build checks only",
+    "checks": [
+      {
+        "name": "bootstrap",
+        "command": "cargo fetch --locked",
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "name": "format",
+        "command": "cargo fmt --all -- --check",
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "name": "clippy",
+        "command": "cargo clippy --workspace --all-targets --locked --offline -- -D warnings",
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "name": "tests",
+        "command": "cargo test --workspace --locked --offline",
+        "exit_code": 0,
+        "passed": true
+      },
+      {
+        "name": "build",
+        "command": "cargo build -p cprs-chart-mock --locked --offline",
+        "exit_code": 0,
+        "passed": true
+      }
+    ],
+    "executable": "target/debug/cprs-chart-mock.exe",
+    "executable_sha256": "4f54536119111045a90c13d0f943207acffbd5c7698397d09a4d8997b76ab0a7",
+    "evidence_limits": [
+      "Callback smoke uses immediate responses; the separate integrated journey uses real timers and checks accepted/rejected deliveries and UI bindings. It does not inject physical keys or verify speech.",
+      "Visual and keyboard observations are recorded separately.",
+      "No clinical server or original CPRS process is involved."
+    ]
+  },
+  "log_sha256": "674ebf7eaeb3926fbf21035fb07071cc4dbf098375f564444101fcc6620a9fbe",
+  "limits": "Code/build checks only; no clone-binary native/speech validation or bit-reproducible executable claim. Existing Cargo registry reused."
+}
