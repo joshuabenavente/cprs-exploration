@@ -1,4 +1,8 @@
 import { StandardTableView, Button } from "std-widgets.slint";
+export struct CoverGeometry {
+    top: length, bottom: length, table-top: length, table-bottom: length,
+    view-top: length, help-bottom: length,
+}
 export component CoverPanel inherits Rectangle {
     in property <string> title;
     in property <string> patient-id;
@@ -14,21 +18,39 @@ export component CoverPanel inherits Rectangle {
     callback activated();
     callback footer-focused();
     callback list-focused-event();
+    callback reveal-request(length, length);
+    public function reveal-list() { root.reveal-request(root.absolute-position.y, data.absolute-position.y + data.height); }
+    public function reveal-footer() { root.reveal-request(view.absolute-position.y, help.absolute-position.y + help.height); }
     public function focus-list() { root.list-focused-event(); data.focus(); }
+    public function focus-view() { view.focus(); root.reveal-footer(); }
+    public function geometry() -> CoverGeometry {
+        return { top: root.absolute-position.y, bottom: root.absolute-position.y + root.height,
+            table-top: data.absolute-position.y, table-bottom: data.absolute-position.y + data.height,
+            view-top: view.absolute-position.y, help-bottom: help.absolute-position.y + help.height };
+    }
     background: white; border-width: 1px; border-color: #c9d5df;
-    min-width: 390px; min-height: 220px;
+    accessible-role: groupbox;
+    accessible-label: root.title + " for synthetic patient " + root.patient-id + (root.rows.length == 0 ? ". No synthetic entries in this panel. This is not a clinical finding." : "");
+    // Intrinsic layout requirements include heading, table, View, help and gaps.
+    min-width: 390px; min-height: max(220px, panel-layout.min-height);
     focus := FocusScope {
         focus-on-tab-navigation: false;
         focus-on-click: false;
         width: parent.width; height: parent.height;
         forward-focus: data;
+        // Fluent forwards focus to a private scope, so data.has-focus cannot
+        // observe Tab entry. Key release reaches the newly focused descendant.
+        capture-key-released(event) => {
+            if event.text == Key.Tab && !view.has-focus { root.list-focused-event(); }
+            reject
+        }
         key-pressed(event) => {
             if root.enabled && (event.text == Key.Return || event.text == " ") {
                 root.activated(); return accept;
             }
             reject
         }
-        VerticalLayout {
+        panel-layout := VerticalLayout {
             padding: 12px; spacing: 10px;
             Text { text: root.title; color: #23445b; font-size: 18px; font-weight: 600; }
             Rectangle {
@@ -71,13 +93,13 @@ export component CoverPanel inherits Rectangle {
                     color: #617180; wrap: word-wrap;
                 }
             }
-            Button {
+            view := Button {
                 text: "View item detail"; accessible-label: "View selected " + root.title + " item detail";
                 enabled: root.enabled && root.selected-row >= 0;
                 clicked => { root.activated(); }
                 changed has-focus => { if self.has-focus { root.footer-focused(); } }
             }
-            Text { text: "Enter or Space opens the selected item."; color: #617180; font-size: 12px; wrap: word-wrap; }
+            help := Text { text: "Enter or Space opens the selected item."; color: #617180; font-size: 12px; wrap: word-wrap; }
         }
     }
 }

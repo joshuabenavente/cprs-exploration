@@ -55,7 +55,8 @@ impl Step {
 }
 macro_rules! require {
     ($condition:expr, $message:literal) => {
-        if !$condition {
+        let condition = $condition;
+        if !condition {
             return Err($message.into());
         }
     };
@@ -114,7 +115,8 @@ fn visible_owners(a: &AppWindow, s: &Shared) -> Result<(), String> {
         );
         require!(
             a.get_vital_rows().row_count() == chart.cover_sheet.vitals.len()
-                && a.get_medication_rows().row_count() == chart.cover_sheet.medications.len(),
+                && a.get_medication_rows().row_count() == chart.cover_sheet.medications.len()
+                && a.get_appointment_rows().row_count() == chart.cover_sheet.appointments.len(),
             "Vitals binding row count mismatch"
         );
         if matches!(c.state.detail, DetailState::Ready { .. }) {
@@ -170,7 +172,10 @@ fn visible_owners(a: &AppWindow, s: &Shared) -> Result<(), String> {
     }
     if a.get_selector_open() {
         require!(
-            a.get_selected_vital() == -1
+            a.get_selected_problem() == -1
+                && a.get_selected_allergy() == -1
+                && a.get_selected_appointment() == -1
+                && a.get_selected_vital() == -1
                 && a.get_selected_medication() == -1
                 && !a.get_detail_open()
                 && a.get_detail_body().is_empty(),
@@ -348,7 +353,10 @@ fn journey() -> VecDeque<Step> {
         |_, s, i| seen(s, i, "cover-detail", "SYNTH-004", "VITAL-01", false),
         |a, s| {
             require!(
-                a.get_selected_vital() == -1
+                a.get_selected_problem() == -1
+                    && a.get_selected_allergy() == -1
+                    && a.get_selected_appointment() == -1
+                    && a.get_selected_vital() == -1
                     && !a.get_detail_open()
                     && a.get_detail_body().is_empty(),
                 "Vitals survived selector cancel"
@@ -668,7 +676,10 @@ fn journey() -> VecDeque<Step> {
         "vitals-same-id-new-owner",
         |a, _| {
             require!(
-                a.get_selected_vital() == -1,
+                a.get_selected_problem() == -1
+                    && a.get_selected_allergy() == -1
+                    && a.get_selected_appointment() == -1
+                    && a.get_selected_vital() == -1,
                 "patient switch retained Vitals selection"
             );
             a.invoke_cover_selected(2, 0);
@@ -1131,6 +1142,9 @@ fn journey() -> VecDeque<Step> {
         |a, _| {
             require!(
                 a.get_vital_rows().row_count() == 0
+                    && a.get_selected_problem() == -1
+                    && a.get_selected_allergy() == -1
+                    && a.get_selected_appointment() == -1
                     && a.get_selected_vital() == -1
                     && !a.get_detail_open()
                     && !a.get_detail_error(),
@@ -1366,6 +1380,74 @@ fn journey() -> VecDeque<Step> {
         |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
         noop,
     ));
+    for (panel, name) in [
+        (0, "layout-problems"),
+        (1, "layout-allergies"),
+        (2, "layout-vitals"),
+        (3, "layout-medications"),
+        (4, "layout-appointments"),
+    ] {
+        q.push_back(Step::new(name, move |a, _| {
+            a.invoke_cover_selected(panel, 0);
+            a.invoke_focus_cover(panel);
+            Ok(())
+        }, now, move |a, _| {
+            let g = a.invoke_cover_geometry(panel);
+            let top = a.get_workspace_top();
+            let bottom = top + a.get_workspace_visible_height();
+            require!(g.top >= top - 1.0 && g.table_bottom <= bottom + 1.0, "focused heading/table clipped by workspace");
+            require!(g.table_bottom <= g.view_top && g.help_bottom <= g.bottom, "panel controls overlap or escape card");
+            require!(a.get_cover_content_height() >= a.get_workspace_visible_height(), "content smaller than viewport");
+            println!("M11_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
+            Ok(())
+        }));
+    }
+    for (panel, name) in [
+        (4, "reveal-appointments-view"),
+        (3, "reveal-medications-view"),
+        (2, "reveal-vitals-view"),
+        (1, "reveal-allergies-view"),
+        (0, "reveal-problems-view"),
+    ] {
+        q.push_back(Step::new(
+            name,
+            move |a, _| {
+                a.invoke_focus_cover_view(panel);
+                Ok(())
+            },
+            now,
+            move |a, _| {
+                let g = a.invoke_cover_geometry(panel);
+                require!(
+                    g.view_top >= a.get_workspace_top() - 1.0
+                        && g.help_bottom
+                            <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0,
+                    "focused View/help clipped by workspace"
+                );
+                Ok(())
+            },
+        ));
+    }
+    q.push_back(Step::new(
+        "layout-fixture-footer",
+        |a, _| {
+            a.invoke_scroll_workspace_bottom();
+            Ok(())
+        },
+        now,
+        |a, _| {
+            let g = a.invoke_cover_geometry(4);
+            require!(
+                a.get_fixture_footer_top() >= g.bottom
+                    && a.get_fixture_footer_bottom()
+                        <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0,
+                "fixture footer overlaps card or is unreachable"
+            );
+            a.invoke_cover_selected(4, 2);
+            a.invoke_focus_cover(4);
+            Ok(())
+        },
+    ));
     q
 }
 
@@ -1394,12 +1476,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M10_DELIVERY {} {} {:?} generation={} applied={}",
+                "M11_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M10_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M11_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -1408,17 +1490,17 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M10_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M11_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
             );
         }
         if driver.keep_open {
-            println!("M10_REVIEW_READY SYNTH-001 CoverSheet APPT-03; close the mock to exit.");
+            println!("M11_REVIEW_READY SYNTH-001 CoverSheet APPT-03; close the mock to exit.");
         }
     } else if let Err(error) = &result {
-        eprintln!("M10_INTEGRATED_FAIL {error}");
+        eprintln!("M11_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -1469,7 +1551,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M10_CHECK {} PASS elapsed_ms={}",
+            "M11_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );

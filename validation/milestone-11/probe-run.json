@@ -1,0 +1,76 @@
+{
+  "scope": "Callback/binding/geometry probes only; no native input or visual review",
+  "executable_sha256": "1673037d3f1e90b671cbf910ebc53fcee08971ba997160d2275e3fbe1ccdfdd8",
+  "samples": [
+    {
+      "size": "default",
+      "scale": "1",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-default-100.log",
+      "log_sha256": "034a8d5a8c0da6595d524ee1616a004e616ed8ab018b0e34eb41c5584719baf8"
+    },
+    {
+      "size": "minimum",
+      "scale": "1",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-minimum-100.log",
+      "log_sha256": "13f6d104dc39ca549556f37ef18edb8209831d6df4c05b4743fabee9aa26f9f4"
+    },
+    {
+      "size": "default",
+      "scale": "1.25",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-default-125.log",
+      "log_sha256": "84b6f2064a915ce5b75847254c82cecdd16852bf410fb4689a618eb594a08a49"
+    },
+    {
+      "size": "minimum",
+      "scale": "1.25",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-minimum-125.log",
+      "log_sha256": "051d545ac68a36bbfa46c105c63dd7d9fc1467a5ecb8737852a6fa57732b9704"
+    },
+    {
+      "size": "default",
+      "scale": "1.5",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-default-150.log",
+      "log_sha256": "a4c880bc48d97a370915267c26c1077f2715acde32f6a92f2df2b1a724268579"
+    },
+    {
+      "size": "minimum",
+      "scale": "1.5",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-minimum-150.log",
+      "log_sha256": "825ff23d63c34a7d0e0faf890a6710ec0083fd4f459ee2588c3ca43054a17e5e"
+    },
+    {
+      "size": "default",
+      "scale": "1.75",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-default-175.log",
+      "log_sha256": "b1f842c0758ee73b77991eab2958c9294915db0711009ddf1d710daf7c24e412"
+    },
+    {
+      "size": "minimum",
+      "scale": "1.75",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-minimum-175.log",
+      "log_sha256": "06d0a8cb21df1d5afab754c426b144f227ef469eabae4fa15bfd12cd686cd75f"
+    },
+    {
+      "size": "default",
+      "scale": "2",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-default-200.log",
+      "log_sha256": "ac359957f765b92d50759601468ea5729d5ad956339743a3b61a11768d15219d"
+    },
+    {
+      "size": "minimum",
+      "scale": "2",
+      "exit_code": 0,
+      "log": "validation/milestone-11/probe-minimum-200.log",
+      "log_sha256": "8e5916aac804c1243e81fe0fa3c46bd8d846075eb95e9e459da89d0f8127613e"
+    }
+  ]
+}

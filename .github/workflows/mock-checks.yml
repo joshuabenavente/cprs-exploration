@@ -1,0 +1,51 @@
+name: Mock code checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  windows-desktop-build:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      CARGO_INCREMENTAL: '0'
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+      - name: Install pinned Rust toolchain
+        shell: pwsh
+        run: |
+          rustup toolchain install 1.99.1 --profile minimal --component clippy,rustfmt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Bootstrap locked dependencies, then check offline
+        shell: pwsh
+        run: ./scripts/Test-MockChart.ps1 -CodeOnly -Bootstrap
+      # Hosted code checks do not claim an interactive desktop or speech pass.
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        if: always()
+        with:
+          name: windows-code-checks
+          path: |
+            validation/milestone-11/code-checks.json
+            validation/milestone-11/bootstrap.log
+            validation/milestone-11/format.log
+            validation/milestone-11/clippy.log
+            validation/milestone-11/tests.log
+            validation/milestone-11/build.log
+  portable-core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+      - name: Install pinned Rust toolchain
+        run: rustup toolchain install 1.99.1 --profile minimal --component clippy,rustfmt
+      - name: Portable core checks
+        run: |
+          rustc --version --verbose
+          cargo --version
+          cargo fetch --locked
+          cargo fmt --all -- --check
+          cargo clippy -p chart-core --all-targets --locked --offline -- -D warnings
+          cargo test -p chart-core --locked --offline

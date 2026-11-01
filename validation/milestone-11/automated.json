@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-31T17:55:09.7766016-06:00",
+  "scope": "Milestone 11 shared Cover Sheet hardening and integrated chart validation",
+  "passed": true,
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+  "rustc_verbose": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\r\nbinary: rustc\r\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\r\ncommit-date: 2026-10-13\r\nhost: x86_64-pc-windows-msvc\r\nrelease: 1.99.1\r\nLLVM version: 23.1.1",
+  "os": "Microsoft Windows NT 10.0.26300.0",
+  "architecture": "X64",
+  "powershell": "7.6.9",
+  "dependency_bootstrap_requested": false,
+  "dependency_policy": "Optional cargo fetch --locked may access the network; subsequent checks use --locked --offline. Registry caches may already be populated.",
+  "desktop_session_checks": "immediate callbacks and real-timer journey requested in this desktop session",
+  "checks": [
+    {
+      "name": "format",
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "clippy",
+      "command": "cargo clippy --workspace --all-targets --locked --offline -- -D warnings",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "tests",
+      "command": "cargo test --workspace --locked --offline",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "build",
+      "command": "cargo build -p cprs-chart-mock --locked --offline",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "callbacks",
+      "command": "cargo run -p cprs-chart-mock --locked --offline -- --smoke-check",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "integrated",
+      "command": "cargo run -p cprs-chart-mock --locked --offline -- --integration-check",
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "executable": "target/debug/cprs-chart-mock.exe",
+  "executable_sha256": "1673037d3f1e90b671cbf910ebc53fcee08971ba997160d2275e3fbe1ccdfdd8",
+  "evidence_limits": [
+    "Callback smoke uses immediate responses; the separate integrated journey uses real timers and checks accepted/rejected deliveries and UI bindings. It does not inject physical keys or verify speech.",
+    "Visual and keyboard observations are recorded separately.",
+    "No clinical server or original CPRS process is involved."
+  ]
+}

@@ -1,5 +1,5 @@
 import { Button, ComboBox, LineEdit, StandardTableView, ScrollView, TextEdit } from "std-widgets.slint";
-import { CoverPanel } from "cover-panel.slint";
+import { CoverPanel, CoverGeometry } from "cover-panel.slint";
 import { NotesView } from "notes-view.slint";
 import { OrdersView } from "orders-view.slint";
 import { ResultsView } from "results-view.slint";
@@ -162,11 +162,34 @@ export component AppWindow inherits Window {
     public function focus-search() { workspace-scroll.content-y = 0px; search.focus(); }
     public function focus-chart() { workspace-scroll.content-y = 0px; new-patient.focus(); }
     public function focus-acknowledgment() { root.scroll-workspace-bottom(); continue-button.focus(); }
+    public function reveal-region(top: length, bottom: length) {
+        // Absolute coordinates include the current scroll offset. Move only as
+        // far as needed, then clamp; a tall region keeps its leading edge.
+        if top < workspace-scroll.absolute-position.y || bottom - top > workspace-scroll.visible-height {
+            workspace-scroll.content-y += workspace-scroll.absolute-position.y - top;
+        } else if bottom > workspace-scroll.absolute-position.y + workspace-scroll.visible-height {
+            workspace-scroll.content-y -= bottom - workspace-scroll.absolute-position.y - workspace-scroll.visible-height;
+        }
+        workspace-scroll.content-y = min(0px, max(workspace-scroll.content-y, workspace-scroll.visible-height - workspace-scroll.content-height));
+    }
     public function reveal-cover(panel: int) {
-        // Full-width lower rows retain their own viewport position on keyboard return.
-        workspace-scroll.content-y = panel == 4 ? min(0px, workspace-scroll.visible-height - workspace-scroll.content-height) : panel == 3 ? max(min(0px, -medication-panel.y - 24px), min(0px, workspace-scroll.visible-height - workspace-scroll.content-height)) : panel == 2 ? max(min(0px, -vital-panel.y - 24px), min(0px, workspace-scroll.visible-height - workspace-scroll.content-height)) : 0px;
+        if panel == 0 { problem-panel.reveal-list(); } else if panel == 1 { allergy-panel.reveal-list(); } else if panel == 2 { vital-panel.reveal-list(); } else if panel == 3 { medication-panel.reveal-list(); } else { appointment-panel.reveal-list(); }
     }
     public function focus-cover(panel: int) { root.reveal-cover(panel); if panel == 0 { problem-panel.focus-list(); } else if panel == 1 { allergy-panel.focus-list(); } else if panel == 2 { vital-panel.focus-list(); } else if panel == 3 { medication-panel.focus-list(); } else { appointment-panel.focus-list(); } }
+    // Layout probes for the opt-in timer journey; no native focus claim.
+    out property <length> workspace-top: workspace-scroll.absolute-position.y;
+    out property <length> workspace-visible-height: workspace-scroll.visible-height;
+    out property <length> cover-content-height: workspace-scroll.content-height;
+    out property <length> cover-scroll-y: workspace-scroll.content-y;
+    out property <length> fixture-footer-top: fixture-footer.absolute-position.y;
+    out property <length> fixture-footer-bottom: fixture-footer.absolute-position.y + fixture-footer.height;
+    public function cover-geometry(panel: int) -> CoverGeometry {
+        if panel == 0 { return problem-panel.geometry(); } else if panel == 1 { return allergy-panel.geometry(); } else if panel == 2 { return vital-panel.geometry(); } else if panel == 3 { return medication-panel.geometry(); }
+        return appointment-panel.geometry();
+    }
+    public function focus-cover-view(panel: int) {
+        if panel == 0 { problem-panel.focus-view(); } else if panel == 1 { allergy-panel.focus-view(); } else if panel == 2 { vital-panel.focus-view(); } else if panel == 3 { medication-panel.focus-view(); } else { appointment-panel.focus-view(); }
+    }
     public function focus-detail() { detail-text.focus(); }
     public function focus-notes-filter() { notes-view.focus-filter(); }
     public function focus-notes-body() { notes-view.focus-body(); }
@@ -264,7 +287,10 @@ export component AppWindow inherits Window {
                 workspace-scroll := ScrollView {
                     width: parent.width; height: parent.height;
                     content-width: self.visible-width;
-                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : !root.selector-open && root.has-active && root.tab-index == 0 ? 1400px : !root.selector-open && (root.tab-index >= 1) ? 600px : 440px);
+                    // Cover Sheet's intrinsic minimum is independent of the
+                    // viewport allocation. Selector/browser sizing stays separate.
+                    content-height: max(self.visible-height, root.show-acknowledgment ? 560px : !root.selector-open && root.has-active && root.tab-index == 0 ? cover-layout.min-height + 48px : !root.selector-open && (root.tab-index >= 1) ? 600px : 440px);
+                    changed visible-height => { self.content-y = min(0px, max(self.content-y, self.visible-height - self.content-height)); }
                     changed content-height => { self.content-y = min(0px, max(self.content-y, self.visible-height - self.content-height)); }
                     Rectangle {
                     width: workspace-scroll.visible-width; height: workspace-scroll.content-height;
@@ -424,7 +450,7 @@ export component AppWindow inherits Window {
                             max-height: root.has-active && root.tab-index == 0 ? 10000px : 0px;
                             vertical-stretch: root.has-active && root.tab-index == 0 ? 1 : 0;
                             background: transparent;
-                            VerticalLayout {
+                            cover-layout := VerticalLayout {
                             spacing: 18px;
                             Text { text: "Cover Sheet"; color: #1e3b52; font-size: 23px; font-weight: 600; }
                             HorizontalLayout {
@@ -436,7 +462,8 @@ export component AppWindow inherits Window {
                                     selected(index) => { root.cover-selected(0, index); }
                                     released(index) => { root.cover-released(0, index); }
                                     activated => { root.cover-activated(0); }
-                                    footer-focused => { root.reveal-cover(0); }
+                                    footer-focused => { problem-panel.reveal-footer(); }
+                                    reveal-request(top, bottom) => { root.reveal-region(top, bottom); }
                                     list-focused-event => { root.reveal-cover(0); }
                                 }
                                 allergy-panel := CoverPanel {
@@ -446,7 +473,8 @@ export component AppWindow inherits Window {
                                     selected(index) => { root.cover-selected(1, index); }
                                     released(index) => { root.cover-released(1, index); }
                                     activated => { root.cover-activated(1); }
-                                    footer-focused => { root.reveal-cover(1); }
+                                    footer-focused => { allergy-panel.reveal-footer(); }
+                                    reveal-request(top, bottom) => { root.reveal-region(top, bottom); }
                                     list-focused-event => { root.reveal-cover(1); }
                                 }
                             }
@@ -457,7 +485,8 @@ export component AppWindow inherits Window {
                                 selected(index) => { root.cover-selected(2, index); }
                                 released(index) => { root.cover-released(2, index); }
                                 activated => { root.cover-activated(2); }
-                                footer-focused => { root.reveal-cover(2); }
+                                footer-focused => { vital-panel.reveal-footer(); }
+                                reveal-request(top, bottom) => { root.reveal-region(top, bottom); }
                                 list-focused-event => { root.reveal-cover(2); }
                             }
                             medication-panel := CoverPanel {
@@ -467,7 +496,8 @@ export component AppWindow inherits Window {
                                 selected(index) => { root.cover-selected(3, index); }
                                 released(index) => { root.cover-released(3, index); }
                                 activated => { root.cover-activated(3); }
-                                footer-focused => { root.reveal-cover(3); }
+                                footer-focused => { medication-panel.reveal-footer(); }
+                                reveal-request(top, bottom) => { root.reveal-region(top, bottom); }
                                 list-focused-event => { root.reveal-cover(3); }
                             }
                             appointment-panel := CoverPanel {
@@ -477,10 +507,11 @@ export component AppWindow inherits Window {
                                 selected(index) => { root.cover-selected(4, index); }
                                 released(index) => { root.cover-released(4, index); }
                                 activated => { root.cover-activated(4); }
-                                footer-focused => { root.reveal-cover(4); }
+                                footer-focused => { appointment-panel.reveal-footer(); }
+                                reveal-request(top, bottom) => { root.reveal-region(top, bottom); }
                                 list-focused-event => { root.reveal-cover(4); }
                             }
-                            Text { text: "Five synthetic panels · All entries are invented display text · Fixture date: " + root.fixture-date;
+                            fixture-footer := Text { text: "Five synthetic panels · All entries are invented display text · Fixture date: " + root.fixture-date;
                                 color: #617180; font-size: 12px; wrap: word-wrap; }
                             }
                         }

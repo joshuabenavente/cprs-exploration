@@ -1,6 +1,7 @@
 [CmdletBinding()]
-param([ValidateSet(10)][int]$Milestone = 10)
+param([ValidateSet(11)][int]$Milestone = 11, [switch]$CodeOnly, [switch]$Bootstrap)
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'Get-MockFileSha256.ps1')
 $root = Split-Path -Parent $PSScriptRoot
 $binaryPath = Join-Path $root 'target/debug/cprs-chart-mock.exe'
 $running = Get-Process -Name 'cprs-chart-mock' -ErrorAction SilentlyContinue | Where-Object { $_.Path -eq $binaryPath }
@@ -15,6 +16,8 @@ $steps = @(
     @{ Name = 'callbacks'; Arguments = @('run', '-p', 'cprs-chart-mock', '--locked', '--offline', '--', '--smoke-check') },
     @{ Name = 'integrated'; Arguments = @('run', '-p', 'cprs-chart-mock', '--locked', '--offline', '--', '--integration-check') }
 )
+if ($CodeOnly) { $steps = @($steps | Where-Object { $_.Name -notin @('callbacks', 'integrated') }) }
+if ($Bootstrap) { $steps = @(@{ Name = 'bootstrap'; Arguments = @('fetch', '--locked') }) + $steps }
 $results = @()
 $failure = $null
 $priorIncremental = $env:CARGO_INCREMENTAL
@@ -39,16 +42,24 @@ try {
     $binary = Join-Path $root 'target/debug/cprs-chart-mock.exe'
     $receipt = [ordered]@{
         checked_at = [DateTimeOffset]::Now.ToString('o')
-        scope = 'Milestone 10 mock-only Appointments and integrated chart validation'
+        scope = 'Milestone 11 shared Cover Sheet hardening and integrated chart validation'
         passed = ($null -eq $failure -and $results.Count -eq $steps.Count)
         rustc = (& rustc --version | Out-String).Trim()
         cargo = (& cargo --version | Out-String).Trim()
+        rustc_verbose = (& rustc --version --verbose | Out-String).Trim()
+        os = [Environment]::OSVersion.VersionString
+        architecture = [Runtime.InteropServices.RuntimeInformation]::OSArchitecture.ToString()
+        powershell = $PSVersionTable.PSVersion.ToString()
+        dependency_bootstrap_requested = [bool]$Bootstrap
+        dependency_policy = 'Optional cargo fetch --locked may access the network; subsequent checks use --locked --offline. Registry caches may already be populated.'
+        desktop_session_checks = if ($CodeOnly) { 'not run; code/build checks only' } else { 'immediate callbacks and real-timer journey requested in this desktop session' }
         checks = $results
         executable = 'target/debug/cprs-chart-mock.exe'
-        executable_sha256 = if (Test-Path -LiteralPath $binary) { (Get-FileHash -LiteralPath $binary -Algorithm SHA256).Hash.ToLowerInvariant() } else { $null }
+        executable_sha256 = if (Test-Path -LiteralPath $binary) { Get-MockFileSha256 -LiteralPath $binary } else { $null }
         evidence_limits = @('Callback smoke uses immediate responses; the separate integrated journey uses real timers and checks accepted/rejected deliveries and UI bindings. It does not inject physical keys or verify speech.', 'Visual and keyboard observations are recorded separately.', 'No clinical server or original CPRS process is involved.')
     }
-    $receipt | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $validation 'automated.json') -Encoding utf8
+    $receiptName = if ($CodeOnly) { 'code-checks.json' } else { 'automated.json' }
+    $receipt | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $validation $receiptName) -Encoding utf8
     if ($failure) { throw "Mock validation failed at: $failure" }
 } finally {
     Pop-Location
