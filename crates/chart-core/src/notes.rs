@@ -1,6 +1,98 @@
 //! Invented note records and patient-scoped read-only browsing. No TIU wire types.
-use crate::{AppState, ChartTab, PatientId, PatientSummary, ProviderError, valid_date};
+use crate::{AppState, ChartTab, PatientId, PatientSummary, ProviderError};
 use std::collections::HashSet;
+
+#[derive(Clone, Debug, PartialEq, Eq, Hash)]
+pub struct NoteAuthorId(String);
+impl NoteAuthorId {
+    pub fn synthetic(value: &str) -> Result<Self, ProviderError> {
+        if !matches!(value, "AUTHOR-01" | "AUTHOR-02" | "AUTHOR-03" | "AUTHOR-04") {
+            return Err(ProviderError::Malformed(
+                "Unknown synthetic note author.".into(),
+            ));
+        }
+        Ok(Self(value.into()))
+    }
+    pub fn as_str(&self) -> &str {
+        &self.0
+    }
+}
+
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct NoteAuthor {
+    pub id: NoteAuthorId,
+    pub label: String,
+}
+
+/// Authored Gregorian calendar day; never a FileMan date or timezone conversion.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+pub struct NoteDate(String);
+impl NoteDate {
+    pub fn parse(value: &str) -> Result<Self, ProviderError> {
+        let bytes = value.as_bytes();
+        if bytes.len() != 10
+            || bytes[4] != b'-'
+            || bytes[7] != b'-'
+            || bytes
+                .iter()
+                .enumerate()
+                .any(|(i, b)| i != 4 && i != 7 && !b.is_ascii_digit())
+        {
+            return Err(ProviderError::Malformed(
+                "Use YYYY-MM-DD for note dates.".into(),
+            ));
+        }
+        let year = value[..4].parse::<u32>().unwrap_or(0);
+        let month = value[5..7].parse::<u32>().unwrap_or(0);
+        let day = value[8..].parse::<u32>().unwrap_or(0);
+        let leap =
+            year.is_multiple_of(4) && (!year.is_multiple_of(100) || year.is_multiple_of(400));
+        let days = match month {
+            2 if leap => 29,
+            2 => 28,
+            4 | 6 | 9 | 11 => 30,
+            1 | 3 | 5 | 7 | 8 | 10 | 12 => 31,
+            _ => 0,
+        };
+        if year == 0 || day == 0 || day > days {
+            return Err(ProviderError::Malformed(
+                "Enter a valid calendar date for notes.".into(),
+            ));
+        }
+        Ok(Self(value.into()))
+    }
+    pub fn as_str(&self) -> &str {
+        &self.0
+    }
+}
+
+#[derive(Clone, Debug, Default, PartialEq, Eq)]
+pub struct NotesFilter {
+    pub query: String,
+    pub author: Option<NoteAuthorId>,
+    pub beginning: Option<NoteDate>,
+    pub ending: Option<NoteDate>,
+}
+impl NotesFilter {
+    pub fn matches(&self, row: &NoteSummary) -> bool {
+        let Some(day) = row.date.get(..10) else {
+            return false;
+        };
+        self.author.as_ref().is_none_or(|id| id == &row.author_id)
+            && self.beginning.as_ref().is_none_or(|d| day >= d.as_str())
+            && self.ending.as_ref().is_none_or(|d| day <= d.as_str())
+            && format!(
+                "{} {} {} {} {}",
+                row.id.as_str(),
+                row.title,
+                row.subject,
+                row.author,
+                row.location
+            )
+            .to_lowercase()
+            .contains(&self.query.trim().to_lowercase())
+    }
+}
 
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
 pub struct NoteId(String);
@@ -27,6 +119,7 @@ pub struct NoteSummary {
     pub title: String,
     pub subject: String,
     pub author: String,
+    pub author_id: NoteAuthorId,
     pub location: String,
     pub status: String,
 }
@@ -36,6 +129,7 @@ pub struct NotesListRequest {
     pub generation: u64,
     pub patient_id: PatientId,
     pub query: String,
+    pub filter: NotesFilter,
 }
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct NotesList {
@@ -63,6 +157,7 @@ pub enum NotesListStatus {
     Ready,
     Empty,
     Error(String),
+    Invalid(String),
 }
 #[derive(Clone, Debug, Default, PartialEq, Eq)]
 pub enum NoteBodyState {
@@ -77,6 +172,9 @@ pub enum NoteBodyState {
 pub struct NotesWorkspace {
     pub patient_id: Option<PatientId>,
     pub query: String,
+    pub author: Option<NoteAuthorId>,
+    pub beginning_input: String,
+    pub ending_input: String,
     pub rows: Vec<NoteSummary>,
     pub list_status: NotesListStatus,
     pub selected: Option<NoteSummary>,
@@ -93,6 +191,9 @@ impl NotesWorkspace {
         self.body_generation += 1;
         self.patient_id = None;
         self.query.clear();
+        self.author = None;
+        self.beginning_input.clear();
+        self.ending_input.clear();
         self.rows.clear();
         self.list_status = NotesListStatus::Idle;
         self.selected = None;
@@ -117,9 +218,11 @@ impl NotesWorkspace {
 fn valid_note_date(value: &str) -> bool {
     value.is_ascii()
         && value.len() == 16
-        && valid_date(&value[..10])
+        && NoteDate::parse(&value[..10]).is_ok()
         && &value[10..11] == " "
         && &value[13..14] == ":"
+        && value[11..13].bytes().all(|b| b.is_ascii_digit())
+        && value[14..].bytes().all(|b| b.is_ascii_digit())
         && value[11..13].parse::<u8>().is_ok_and(|v| v < 24)
         && value[14..].parse::<u8>().is_ok_and(|v| v < 60)
 }
@@ -131,22 +234,78 @@ impl AppState {
             && self.tab == ChartTab::Notes
             && self.active.is_some()
     }
+    pub fn note_authors(&self) -> Vec<NoteAuthor> {
+        self.active
+            .as_ref()
+            .filter(|_| !self.selector_open)
+            .map_or_else(Vec::new, |chart| mock_note_authors(&chart.patient))
+    }
     pub fn begin_notes_list(&mut self, query: String) -> Option<NotesListRequest> {
+        self.begin_notes_filter(
+            query,
+            self.notes.author.clone(),
+            self.notes.beginning_input.clone(),
+            self.notes.ending_input.clone(),
+        )
+    }
+    pub fn reset_notes_filters(&mut self) -> Option<NotesListRequest> {
+        self.begin_notes_filter(String::new(), None, String::new(), String::new())
+    }
+    pub fn begin_notes_filter(
+        &mut self,
+        query: String,
+        author: Option<NoteAuthorId>,
+        beginning_input: String,
+        ending_input: String,
+    ) -> Option<NotesListRequest> {
         if !self.notes_allowed() {
             return None;
         }
-        let patient_id = self.active.as_ref()?.patient.id.clone();
+        let patient = self.active.as_ref()?.patient.clone();
         let n = &mut self.notes;
         n.clear_body();
         n.list_generation += 1;
-        n.patient_id = Some(patient_id.clone());
+        n.patient_id = Some(patient.id.clone());
         n.query = query.clone();
+        n.author = author.clone();
+        n.beginning_input = beginning_input.clone();
+        n.ending_input = ending_input.clone();
         n.rows.clear();
+        n.pending_list = None;
+        let parse_bound = |value: &str| {
+            if value.is_empty() {
+                Ok(None)
+            } else {
+                NoteDate::parse(value).map(Some)
+            }
+        };
+        let filter = parse_bound(&beginning_input)
+            .and_then(|beginning| {
+                parse_bound(&ending_input).map(|ending| NotesFilter {
+                    query: query.clone(),
+                    author,
+                    beginning,
+                    ending,
+                })
+            })
+            .and_then(|filter| {
+                validate_filter(&patient, &filter)?;
+                Ok(filter)
+            });
+        let filter = match filter {
+            Ok(filter) => filter,
+            Err(error) => {
+                self.message = format!("Invalid Notes filter for {}: {error}", patient.id);
+                n.list_status = NotesListStatus::Invalid(self.message.clone());
+                return None;
+            }
+        };
         n.list_status = NotesListStatus::Loading;
         let request = NotesListRequest {
             generation: n.list_generation,
-            patient_id,
+            patient_id: patient.id,
             query,
+            filter,
         };
         n.pending_list = Some(request.clone());
         self.message = "Loading invented notes…".into();
@@ -174,6 +333,10 @@ impl AppState {
                     row.patient_id == request.patient_id
                         && !row.title.trim().is_empty()
                         && valid_note_date(&row.date)
+                        && request.filter.matches(row)
+                        && mock_note_authors(&self.active.as_ref().expect("owned chart").patient)
+                            .iter()
+                            .any(|a| a.id == row.author_id && a.label == row.author)
                         && ids.insert(row.id.clone())
                 })
             {
@@ -294,7 +457,52 @@ impl AppState {
     }
 }
 
-pub(crate) fn mock_notes(patient: &PatientSummary, query: &str) -> NotesList {
+pub fn mock_note_authors(patient: &PatientSummary) -> Vec<NoteAuthor> {
+    if patient.id.as_str() == "SYNTH-002" {
+        return vec![];
+    }
+    [
+        "Demo clinician A",
+        "Demo clinician A",
+        "Demo clinician Zoë 李 — invented long author label",
+        "Demo clinician D",
+    ]
+    .into_iter()
+    .enumerate()
+    .map(|(i, label)| NoteAuthor {
+        id: NoteAuthorId::synthetic(&format!("AUTHOR-{:02}", i + 1)).expect("compiled author key"),
+        label: label.into(),
+    })
+    .collect()
+}
+
+pub(crate) fn validate_filter(
+    patient: &PatientSummary,
+    filter: &NotesFilter,
+) -> Result<(), ProviderError> {
+    if filter
+        .beginning
+        .as_ref()
+        .zip(filter.ending.as_ref())
+        .is_some_and(|(a, b)| a > b)
+    {
+        return Err(ProviderError::Malformed(
+            "Beginning date must be on or before ending date.".into(),
+        ));
+    }
+    if filter
+        .author
+        .as_ref()
+        .is_some_and(|id| !mock_note_authors(patient).iter().any(|a| &a.id == id))
+    {
+        return Err(ProviderError::Malformed(
+            "Author is not in this patient's invented Notes.".into(),
+        ));
+    }
+    Ok(())
+}
+
+pub(crate) fn mock_notes(patient: &PatientSummary, filter: &NotesFilter) -> NotesList {
     let titles = [
         "Training progress note",
         "Training progress note",
@@ -313,7 +521,7 @@ pub(crate) fn mock_notes(patient: &PatientSummary, query: &str) -> NotesList {
         "Long-text fixture",
         "Empty-text fixture",
     ];
-    let query = query.trim().to_lowercase();
+    let authors = mock_note_authors(patient);
     let rows = if patient.id.as_str() == "SYNTH-002" {
         vec![]
     } else {
@@ -325,22 +533,12 @@ pub(crate) fn mock_notes(patient: &PatientSummary, query: &str) -> NotesList {
                 date: dates[i].into(),
                 title: titles[i].into(),
                 subject: subjects[i].into(),
-                author: format!("Demo clinician {}", ['A', 'B', 'C', 'D'][i]),
+                author: authors[i].label.clone(),
+                author_id: authors[i].id.clone(),
                 location: patient.location.clone(),
                 status: ["Mock final", "Mock draft", "Mock addendum", "Mock final"][i].into(),
             })
-            .filter(|r| {
-                format!(
-                    "{} {} {} {} {}",
-                    r.id.as_str(),
-                    r.title,
-                    r.subject,
-                    r.author,
-                    r.location
-                )
-                .to_lowercase()
-                .contains(&query)
-            })
+            .filter(|r| filter.matches(r))
             .collect()
     };
     NotesList {
@@ -353,7 +551,7 @@ pub(crate) fn mock_note_body(
     patient: &PatientSummary,
     request: &NoteRequest,
 ) -> Result<NoteBody, ProviderError> {
-    let list = mock_notes(patient, "");
+    let list = mock_notes(patient, &NotesFilter::default());
     let row = list
         .rows
         .iter()

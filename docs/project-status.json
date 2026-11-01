@@ -1,0 +1,284 @@
+{
+  "as_of_local_date": "2026-11-01",
+  "timezone": "America/Denver",
+  "role": "project manager and technical reviewer",
+  "reviewed_baseline": {
+    "branch": "work",
+    "commit": "64280376dfc7dc5c32679c941a542b6ef3ebf54b",
+    "initial_worktree": "clean",
+    "remote_status": "Fetched origin/main; local work fast-forwarded to analysis-only commit 6428037; earlier review edits preserved",
+    "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
+    "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
+  },
+  "condition": "Approved M13 Notes filtering implemented; Linux code/build/synthetic matrix passed; Windows native and Narrator acceptance pending",
+  "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
+  "inherited_validation": {
+    "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
+    "native_visual_keyboard": "user-reported pass, ten combinations; independently captured observations have targeted scope",
+    "narrator_listening": "user-reported pass, ten combinations; no audio capture or independent listening rerun",
+    "user_report_binding": "Hash named in preceding instructions; user did not repeat hash",
+    "current_build_receipt": "validation/milestone-12/native-followup/user-acceptance.json",
+    "original_m12_executable_sha256": "21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4",
+    "ci_receipt_commit": "d0e83ebaf5d54f5ec538d8f8f5e85ba08c51c98a",
+    "ci_current_head_verified": false
+  },
+  "prioritized_backlog": [
+    {
+      "id": "M13-WINDOWS",
+      "priority": "P1",
+      "task": "Run new Windows source/build/matrix checks and affected native/Narrator checklist across ten combinations",
+      "status": "pending; independent of historical M12 acceptance",
+      "dependency": "new M13 Windows executable and native desktop session"
+    },
+    {
+      "id": "NF-CONTRACT",
+      "priority": "P1",
+      "task": "Write specifications/notes-filtering.md from NF01-NF08 with authored author/date/reset/error behavior and exclusions",
+      "status": "delivered with implementation",
+      "dependency": "docs/milestone-13.md proposal"
+    },
+    {
+      "id": "E01",
+      "priority": "P0",
+      "task": "Pin and independently audit published analysis distribution",
+      "status": "delivered at publication/catalog consistency scope; original archive/raw assets excluded",
+      "dependency": null
+    },
+    {
+      "id": "E02",
+      "priority": "P1",
+      "task": "Reconcile feature-relevant new claims, TIU query/sign distinction and Vitals dispatch against traceability matrix",
+      "status": "delivered: documents, counts, feature crosswalk and bounded TIU/Vitals findings reviewed",
+      "dependency": null
+    },
+    {
+      "id": "E03",
+      "priority": "P2",
+      "task": "Recover exact accepted Windows EXE and complete source/build/evidence binding",
+      "status": "archival follow-up blocked on exact artifact; not a dependency for new mock build validation",
+      "dependency": "exact a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3 artifact"
+    },
+    {
+      "id": "E04",
+      "priority": "P2",
+      "task": "Maintain portable review receipt, current documentation pointers and immutable historical evidence",
+      "status": "review checkpoint delivered",
+      "dependency": null
+    },
+    {
+      "id": "E05",
+      "priority": "P2",
+      "task": "Recommend M13 read-only Notes author/date filtering",
+      "status": "approved and implemented; new-build Windows native/listening pending",
+      "dependency": null
+    },
+    {
+      "id": "C01",
+      "priority": "P3",
+      "task": "Notes filter-tuple response validation in M13 NF03; search-page structural validation stays deferred",
+      "status": "Notes full-filter response validation implemented/tested; generic search-page changes remain deferred",
+      "dependency": "M13 filter contract"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D02",
+      "decision": "Preserve user-reported acceptance and historical index statuses separately",
+      "rationale": "Different evidence types and times explain 10/10 versus historical 0/10"
+    },
+    {
+      "id": "D03",
+      "decision": "Defer all five prepared RE continuation targets",
+      "rationale": "Transport/login/write/DLL behavior does not materially advance this offline milestone"
+    },
+    {
+      "id": "D04",
+      "decision": "Keep Vitals local read-only detail as an explicit prototype departure",
+      "rationale": "Historical assembly/VMT already identifies the excluded original update/write-access route"
+    },
+    {
+      "id": "D06",
+      "decision": "Published intake resolves the missing-analysis blocker; preserve original missing-input review as history",
+      "rationale": "950 manifest entries, 955 receipt files, 18 gzip streams and inventory counts independently reconcile"
+    },
+    {
+      "id": "D07",
+      "decision": "Recommend M13 read-only Notes author/date filtering; supersede initial evidence-only proposal",
+      "rationale": "Decoded forms support a bounded existing-reader extension; exact filtering semantics remain prototype policy"
+    },
+    {
+      "id": "D08",
+      "decision": "Keep excluded raw-reference and accepted old Windows EXE recovery as archival work",
+      "rationale": "Their absence limits fresh historical verification but does not block a new authored feature with its own new-build evidence"
+    }
+  ],
+  "risks": [
+    {
+      "id": "R01",
+      "risk": "Inventory or decompiler counts mistaken for behavioral recovery",
+      "mitigation": "Classify every claim as bounded binary observation, prototype policy, inference or unresolved"
+    },
+    {
+      "id": "R02",
+      "risk": "Source agreement mistaken for exact accepted executable identity",
+      "mitigation": "Recover exact artifact; separate rebuilt-binary validation"
+    },
+    {
+      "id": "R03",
+      "risk": "Historical receipt writers overwrite evidence",
+      "mitigation": "Use separate review/M13 destinations and pre/post hashes"
+    },
+    {
+      "id": "R04",
+      "risk": "Stale milestone prose misstates current runner or acceptance",
+      "mitigation": "Current handoff and follow-up instructions take precedence; historical descriptions labeled"
+    },
+    {
+      "id": "R05",
+      "risk": "Copying signed-note captions, date-time controls or author labels as recovered mock semantics",
+      "mitigation": "NF01-NF08 declare synthetic identities/date policies and exclude original permissions, FileMan and timezones"
+    }
+  ],
+  "next_action": {
+    "task": "Verify current Windows code/build/matrix then perform validation/milestone-13/native-checklist.md using Review-NotesFilters.ps1, binding results to the new Windows EXE at ten size/scale combinations",
+    "blocked_by": "Windows native desktop/Narrator not available in Linux cloud",
+    "implementation_state": "M13 code and Linux automated evidence delivered",
+    "independent_followup": "Exact old accepted Windows EXE remains archival E03; never overwrite old evidence"
+  },
+  "artifacts": {
+    "review": "docs/analysis-review-2026-11-01.md",
+    "traceability": "docs/traceability-2026-11-01.md",
+    "next_milestone": "docs/milestone-13.md",
+    "review_evidence": "validation/project-review-2026-11-01/",
+    "initial_review": "docs/project-review-2026-11-01.md",
+    "analysis_evidence": "validation/analysis-review-2026-11-01/",
+    "implementation_contract": "specifications/notes-filtering.md",
+    "implementation_evidence": "validation/milestone-13/"
+  },
+  "analysis_review": {
+    "workspace": "reverse-engineering/",
+    "source_commit": "64280376dfc7dc5c32679c941a542b6ef3ebf54b",
+    "availability": "published evidence present; raw ZIP/EXE/MAP/DLL/Ghidra database intentionally excluded",
+    "files_pinned": 956,
+    "publication_manifest_matches": 950,
+    "publication_receipt_matches": 955,
+    "gzip_streams_verified": 18,
+    "function_entries": 43371,
+    "internal_functions": 41948,
+    "external_functions": 1423,
+    "limited_analysis": 2245,
+    "partial_analysis": 183,
+    "semantically_unresolved": 40943,
+    "forms": 325,
+    "events": 4371,
+    "classes": 2554,
+    "bounded_exports": 44,
+    "distinct_reviewed_functions": 39,
+    "exported_instructions_counted": 4953,
+    "exported_E8_encodings_decoded": 627,
+    "exported_E8_mismatches": 0,
+    "historical_reference_copies_exact": 367,
+    "new_raw_specimen_hashing": false,
+    "full_204270_call_PE_byte_check_rerun": false,
+    "TIU_query_sign_distinction": "supported from repaired published ASM and literal annotations; full server effects unresolved",
+    "receipts": [
+      "validation/analysis-review-2026-11-01/intake.json",
+      "validation/analysis-review-2026-11-01/audit.json"
+    ]
+  },
+  "review_checkpoint_verification": {
+    "format": "passed",
+    "core_clippy_warnings_denied": "passed",
+    "core_tests": {
+      "passed": 96,
+      "failed": 0
+    },
+    "source_build_bindings": {
+      "exact": 18,
+      "line_endings_only": 10,
+      "crate_file_set_matches": true
+    },
+    "followup_log_hashes": {
+      "matched": 16
+    },
+    "stored_journeys": {
+      "complete": 11,
+      "checkpoints_each": 83,
+      "deliveries_each": 92,
+      "rejected_each": 38,
+      "new_executions": false
+    },
+    "stored_geometry_samples": {
+      "requested_reported_match": 10,
+      "new_native_measurements": false
+    },
+    "followup_index_files": {
+      "matched": 94,
+      "report_remapping_applied": true
+    },
+    "preserved_m12_files": {
+      "matched": 607
+    },
+    "static_receipt_artifact_entries": {
+      "matched": 521,
+      "unique_file_count_claimed": false
+    },
+    "preexisting_analysis_validation_files_unchanged": 1424,
+    "retained_screenshots_reinspected": [
+      "008-corrected-minimum-200-ready-1.jpg",
+      "037-corrected-default-100-ready-1.jpg"
+    ],
+    "receipts": [
+      "validation/project-review-2026-11-01/portable-checks.json",
+      "validation/project-review-2026-11-01/artifact-audit.json"
+    ]
+  },
+  "implementation": {
+    "milestone": 13,
+    "branch": "m13-notes-filters",
+    "baseline": "64280376dfc7dc5c32679c941a542b6ef3ebf54b",
+    "approval": "approved - do it as a new terminal in codex.",
+    "contract": "specifications/notes-filtering.md",
+    "features": [
+      "stable synthetic author keys including duplicate labels",
+      "strict inclusive authored calendar dates and open bounds",
+      "combined text/author/date response predicates",
+      "invalid-input clearing and generation invalidation",
+      "reset and selector/tab/patient defaults",
+      "intrinsic Notes card height and filter/reading geometry checks"
+    ],
+    "runtime_scope": "synthetic offline read-only; no clinical writes, credentials, transport or original/DLL execution"
+  },
+  "current_validation": {
+    "platform": "Linux Xvfb/software renderer",
+    "core_tests_passed": 106,
+    "protocol_tests_passed": 14,
+    "workspace_format": "passed",
+    "warning_denied_workspace_clippy": "passed",
+    "desktop_build": "passed",
+    "callback_smoke": "passed",
+    "real_timer_journey": "passed",
+    "checkpoints": 91,
+    "deliveries": 104,
+    "rejected": 43,
+    "default_minimum_scale_matrix_passed": 10,
+    "historical_files_unchanged": 2404,
+    "acceptance_receipt": "validation/milestone-13/acceptance.json",
+    "windows_native_visual_keyboard": "pending new-build evidence",
+    "narrator_listening": "pending new-build evidence",
+    "milestone_complete": false,
+    "windows_ci": "Tracked separately on PR #8; native/listening still pending"
+  },
+  "publication": {
+    "state": "published as draft PR",
+    "planned_destination": "https://github.com/joshuabenavente/cprs-exploration",
+    "planned_branch": "m13-notes-filters",
+    "planned_action": "Publish reviewed code/receipts and open a draft pull request",
+    "automatic_approval_review": "Previous upload rejection resolved by explicit user approval to publish branch and draft PR to the named repository.",
+    "user_approval": "Publish branch and draft PR",
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
+    "branch_url": "https://github.com/joshuabenavente/cprs-exploration/tree/m13-notes-filters",
+    "implementation_commit": "3ea234aa7a96bbcd986a341c27cba6c2b43c5d8d",
+    "ci": "Current run conclusions are tracked on PR #8; code/build checks are separate from native/listening"
+  }
+}

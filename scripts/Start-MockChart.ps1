@@ -8,9 +8,11 @@ Push-Location $root
 $priorScale = $env:SLINT_SCALE_FACTOR
 try {
     if ($Rebuild -or -not (Test-Path -LiteralPath $binary)) {
+        $env:SLINT_SCALE_FACTOR = $null
         & cargo build -p cprs-chart-mock --locked --offline
         if ($LASTEXITCODE -ne 0) { throw 'The mock-only desktop build failed.' }
     }
+    $env:SLINT_SCALE_FACTOR = $priorScale
     if ($ScaleFactor) { $env:SLINT_SCALE_FACTOR = $ScaleFactor }
     [string[]]$mockArguments = if ($MinimumSize) { @('--minimum-size') } else { @() }
     if ($IntegratedReview) { $mockArguments += @("--integration-check", "--keep-open") }

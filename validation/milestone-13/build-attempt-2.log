@@ -1,0 +1,38 @@
+   Compiling rustix v0.38.44
+   Compiling thiserror v1.0.69
+   Compiling yeslogic-fontconfig-sys v6.0.1
+   Compiling kurbo v0.13.1
+error: failed to run custom build command for `yeslogic-fontconfig-sys v6.0.1`
+
+Caused by:
+  process didn't exit successfully: `/workspace/cprs-exploration/target/debug/build/yeslogic-fontconfig-sys-70caa0fc90fe2d2e/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-env-changed=RUST_FONTCONFIG_DLOPEN
+  cargo:rerun-if-env-changed=FONTCONFIG_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=FONTCONFIG_STATIC
+  cargo:rerun-if-env-changed=FONTCONFIG_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+
+  thread 'main' (8519) panicked at /workspace/.cloud-setup/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/yeslogic-fontconfig-sys-6.0.1/build.rs:8:48:
+  called `Result::unwrap()` on an `Err` value: "\npkg-config exited with status code 1\n> PKG_CONFIG_PATH=/workspace/.cloud-setup/m13-sysroot/usr/lib/x86_64-linux-gnu/pkgconfig PKG_CONFIG_SYSROOT_DIR=/workspace/.cloud-setup/m13-sysroot PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags fontconfig\n\npkg-config output:\n  Package bzip2 was not found in the pkg-config search path.\n  Perhaps you should add the directory containing `bzip2.pc'\n  to the PKG_CONFIG_PATH environment variable\n  Package 'bzip2', required by 'freetype2', not found\n\nThe system library `fontconfig` required by crate `yeslogic-fontconfig-sys` was not found.\nThe file `fontconfig.pc` needs to be installed and the PKG_CONFIG_PATH environment variable must contain its parent directory.\nPKG_CONFIG_PATH contains the following:\n    - /workspace/.cloud-setup/m13-sysroot/usr/lib/x86_64-linux-gnu/pkgconfig\n\nHINT: you may need to install a package such as fontconfig, fontconfig-dev or fontconfig-devel.\n"
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...

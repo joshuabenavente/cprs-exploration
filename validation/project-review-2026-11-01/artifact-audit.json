@@ -1,0 +1,5093 @@
+{
+  "recorded_at": "2026-11-01T16:52:13.525980+00:00",
+  "head": "8fec66d98b969c9c91f91bf56afaddbbe49357cf",
+  "audit_script_sha256": "ae15f8e8bba88375e18eaf203efc3bb4490678f0db51308dec1a9b988fb2b0eb",
+  "reviewed_source_sha256": {
+    "Cargo.lock": "148635ccb084d5b5ecde4dc54886bea0e39c66bf7bfa421e75814340a9f3a98c",
+    "Cargo.toml": "0bd568b6e3adb95eb26e8bfbeb3a2d34a4182107ab6f0a91b5e0fad0a1fd6bb0",
+    "crates/chart-core/Cargo.toml": "31387910d8499a04921ea0939980e42bdd39f1d7571a32f07f207eda68a4dbbe",
+    "crates/chart-core/src/cover_sheet.rs": "0d8c71728c25fab6617bfe46d3f55cf76883bc042dbe3d330c03eee473c4af9b",
+    "crates/chart-core/src/fixtures/patients.txt": "4a6b847f00a0d3dacf4eba18d562a7261eac3d3e9690b961b9d95a4212c16cd1",
+    "crates/chart-core/src/lib.rs": "1e8e9ba35cbef8c42f2da3bcd527462bba6c097c2ed95642cfc5e1b56faf8269",
+    "crates/chart-core/src/notes.rs": "08a96847ac0a1fb15b0e680b326ad8c406ebed89f508defc436380fddcb3daa2",
+    "crates/chart-core/src/orders.rs": "84cd800e8b22d07871bfab65ae5e71e8a8d533c1187e0e0b1455e59f60b49568",
+    "crates/chart-core/src/results.rs": "71fb07f3cc7b2fa391a9c7c6d3721d9db1c5832b5382016d39a79e71b785f692",
+    "crates/chart-core/tests/active_medications.rs": "5a1e36a870e7c642b12a11c492ee36efd7c8312ef460bf276c9a15999e428fdc",
+    "crates/chart-core/tests/appointments.rs": "36698364e0641d70a628c9f5a0fcb4a732ea4e45ed13082469d84d86ece207ec",
+    "crates/chart-core/tests/cover_sheet.rs": "186e0fb2627bda7dffd0315761b3337e52debcfaf525123cf3768d54cead644b",
+    "crates/chart-core/tests/notes.rs": "2e93a3576f461a17284ce7197def87225bf7a84ce087bfc349754ed5e21b12fd",
+    "crates/chart-core/tests/orders.rs": "bc1eb920b2b8630d9cc57461d840c4d4d0340b5f72fa93762c59875cc6542464",
+    "crates/chart-core/tests/results.rs": "ca0b429dd991b948d33d1339bc5c7c8bb1c0e656686dacc975eb2f1b5d9e61c0",
+    "crates/chart-core/tests/vitals.rs": "82183b458477d0181a5827c31758ae059ca79d18ba49d3dd293a07673c27fd15",
+    "crates/chart-core/tests/workflow.rs": "dda338e1935ddc37e950fdf1f9526b7637dbfb929fd9e89ea3b527335766f9f9",
+    "crates/chart-desktop/Cargo.toml": "753966e777d214688a656381a15f7d70822186e68d1dfa0a738090c50d6cfc67",
+    "crates/chart-desktop/build.rs": "9d7db63aff17a776f5c76c0b7b245f5f823911af55e3202e9c6172bb60223887",
+    "crates/chart-desktop/src/integrated_check.rs": "ab333248cca673d4ba69d302064741f30f4852ac92dde5b355855f7b332ff9ed",
+    "crates/chart-desktop/src/main.rs": "067d58cb09eeb53bc263ce342379fe070a124f4c60a3453fb2caa954871dff2c",
+    "crates/chart-desktop/ui/app.slint": "ded3611d76ea10ea4a422180389e0c7e9edf85390fea244d67fb8643866a22ca",
+    "crates/chart-desktop/ui/cover-panel.slint": "3b20990239161857340fd97686ec2f90a68d91fc97876275da6be76ab777de44",
+    "crates/chart-desktop/ui/notes-view.slint": "206c071938fa96e7842f1b0c9788a79f4830fce7183277243fb12119a9ecdfe8",
+    "crates/chart-desktop/ui/orders-view.slint": "d48337af4fe2202321464136484906bc508e99aba9e416d7fa63547277673c03",
+    "crates/chart-desktop/ui/results-view.slint": "2a7492a4ad564374152a46aa8316df29e3904539f54068debf4869a5a02c76af",
+    "rust-toolchain.toml": "f715f440167e20fd8ea9afa0498c3d1ab80174cfcb8cbc895f106a34d907a1e1"
+  },
+  "scope": "Independent read-only artifact audit; no original-client execution, Windows rebuild, native input, or listening rerun",
+  "new_analysis_workspace_present": false,
+  "new_analysis_bundle_present": false,
+  "specimen": [
+    {
+      "path": "cprs/CPRSChart.exe",
+      "status": "missing"
+    },
+    {
+      "path": "cprs/CPRSChart.map",
+      "status": "missing"
+    }
+  ],
+  "reviewed_windows_executable": {
+    "path": "target/debug/cprs-chart-mock.exe",
+    "status": "missing"
+  },
+  "source_bindings": {
+    "summary": {
+      "line_endings_only": 10,
+      "exact": 18
+    },
+    "files": [
+      {
+        "path": "crates/chart-desktop/ui/results-view.slint",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "crates/chart-desktop/ui/cover-panel.slint",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "crates/chart-core/src/notes.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-desktop/src/main.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-desktop/ui/orders-view.slint",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "Cargo.lock",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/src/fixtures/patients.txt",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/src/results.rs",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "crates/chart-desktop/ui/app.slint",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "rust-toolchain.toml",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "crates/chart-core/src/orders.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/tests/notes.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/Cargo.toml",
+        "status": "exact"
+      },
+      {
+        "path": "Cargo.toml",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/tests/cover_sheet.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-desktop/build.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/tests/appointments.rs",
+        "status": "exact"
+      },
+      {
+        "path": "scripts/Test-CoverSheetFollowup.ps1",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/tests/orders.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/tests/vitals.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/tests/workflow.rs",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "crates/chart-desktop/Cargo.toml",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-desktop/src/integrated_check.rs",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "crates/chart-core/tests/results.rs",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "crates/chart-desktop/ui/notes-view.slint",
+        "status": "line_endings_only"
+      },
+      {
+        "path": "crates/chart-core/tests/active_medications.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/src/cover_sheet.rs",
+        "status": "exact"
+      },
+      {
+        "path": "crates/chart-core/src/lib.rs",
+        "status": "exact"
+      }
+    ],
+    "crate_file_set_matches": true
+  },
+  "followup_logs": [
+    {
+      "name": "format",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "clippy",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "tests",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "build",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "callbacks",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "integrated",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-default-100",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-minimum-100",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-default-125",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-minimum-125",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-default-150",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-minimum-150",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-default-175",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-minimum-175",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-default-200",
+      "status": "exact",
+      "recorded_exit_code": 0
+    },
+    {
+      "name": "probe-minimum-200",
+      "status": "exact",
+      "recorded_exit_code": 0
+    }
+  ],
+  "recorded_journeys": [
+    {
+      "name": "integrated",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "1180",
+          "800",
+          "1"
+        ]
+      ],
+      "requested_geometry_matches": null
+    },
+    {
+      "name": "probe-default-100",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "1180",
+          "800",
+          "1"
+        ]
+      ],
+      "requested_geometry_matches": true
+    },
+    {
+      "name": "probe-minimum-100",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "980",
+          "680",
+          "1"
+        ]
+      ],
+      "requested_geometry_matches": true
+    },
+    {
+      "name": "probe-default-125",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "1475",
+          "1000",
+          "1.25"
+        ]
+      ],
+      "requested_geometry_matches": true
+    },
+    {
+      "name": "probe-minimum-125",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "1225",
+          "850",
+          "1.25"
+        ]
+      ],
+      "requested_geometry_matches": true
+    },
+    {
+      "name": "probe-default-150",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "1770",
+          "1200",
+          "1.5"
+        ]
+      ],
+      "requested_geometry_matches": true
+    },
+    {
+      "name": "probe-minimum-150",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "1470",
+          "1020",
+          "1.5"
+        ]
+      ],
+      "requested_geometry_matches": true
+    },
+    {
+      "name": "probe-default-175",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "2065",
+          "1400",
+          "1.75"
+        ]
+      ],
+      "requested_geometry_matches": true
+    },
+    {
+      "name": "probe-minimum-175",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "1715",
+          "1190",
+          "1.75"
+        ]
+      ],
+      "requested_geometry_matches": true
+    },
+    {
+      "name": "probe-default-200",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "2360",
+          "1400",
+          "2"
+        ]
+      ],
+      "requested_geometry_matches": true
+    },
+    {
+      "name": "probe-minimum-200",
+      "checkpoints": 83,
+      "complete_checkpoint_set": true,
+      "pass_83_deliveries_92_rejected_38": true,
+      "window": [
+        [
+          "1960",
+          "1360",
+          "2"
+        ]
+      ],
+      "requested_geometry_matches": true
+    }
+  ],
+  "followup_index": {
+    "summary": {
+      "exact": 94
+    },
+    "files": [
+      {
+        "indexed_path": "001-baseline-minimum-200-ready-1.jpg",
+        "verified_path": "001-baseline-minimum-200-ready-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "001-baseline-minimum-200-ready.json",
+        "verified_path": "001-baseline-minimum-200-ready.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "002-baseline-maximize.json",
+        "verified_path": "002-baseline-maximize.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "003-baseline-maximize-settled-1.jpg",
+        "verified_path": "003-baseline-maximize-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "003-baseline-maximize-settled.json",
+        "verified_path": "003-baseline-maximize-settled.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "004-baseline-maximize-coordinate-1.jpg",
+        "verified_path": "004-baseline-maximize-coordinate-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "004-baseline-maximize-coordinate.json",
+        "verified_path": "004-baseline-maximize-coordinate.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "005-baseline-post-resize-ctrl-o.json",
+        "verified_path": "005-baseline-post-resize-ctrl-o.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "006-baseline-post-resize-cancel.json",
+        "verified_path": "006-baseline-post-resize-cancel.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "007-fixed-minimum-200-ready-1.jpg",
+        "verified_path": "007-fixed-minimum-200-ready-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "007-fixed-minimum-200-ready.json",
+        "verified_path": "007-fixed-minimum-200-ready.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "008-corrected-minimum-200-ready-1.jpg",
+        "verified_path": "008-corrected-minimum-200-ready-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "008-corrected-minimum-200-ready.json",
+        "verified_path": "008-corrected-minimum-200-ready.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "009-corrected-minimum-200-horizontal-scroll-1.jpg",
+        "verified_path": "009-corrected-minimum-200-horizontal-scroll-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "009-corrected-minimum-200-horizontal-scroll.json",
+        "verified_path": "009-corrected-minimum-200-horizontal-scroll.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "010-corrected-minimum-200-open-appointment.json",
+        "verified_path": "010-corrected-minimum-200-open-appointment.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "011-corrected-minimum-200-appointment-settled.json",
+        "verified_path": "011-corrected-minimum-200-appointment-settled.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "012-corrected-minimum-200-detail-select-all.json",
+        "verified_path": "012-corrected-minimum-200-detail-select-all.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "013-corrected-minimum-200-detail-edit-rejected.json",
+        "verified_path": "013-corrected-minimum-200-detail-edit-rejected.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "014-corrected-minimum-200-escape-retains-appointment.json",
+        "verified_path": "014-corrected-minimum-200-escape-retains-appointment.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "015-corrected-minimum-200-system-menu.json",
+        "verified_path": "015-corrected-minimum-200-system-menu.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "016-corrected-minimum-200-system-size.json",
+        "verified_path": "016-corrected-minimum-200-system-size.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "017-corrected-minimum-200-size-right-1.json",
+        "verified_path": "017-corrected-minimum-200-size-right-1.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "018-corrected-minimum-200-size-right-2.json",
+        "verified_path": "018-corrected-minimum-200-size-right-2.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "019-corrected-minimum-200-finish-native-size.json",
+        "verified_path": "019-corrected-minimum-200-finish-native-size.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "020-corrected-minimum-200-close-size-return-detail.json",
+        "verified_path": "020-corrected-minimum-200-close-size-return-detail.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "021-corrected-minimum-200-post-system-size-ctrl-o.json",
+        "verified_path": "021-corrected-minimum-200-post-system-size-ctrl-o.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "022-corrected-minimum-200-post-size-settled-1.jpg",
+        "verified_path": "022-corrected-minimum-200-post-size-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "022-corrected-minimum-200-post-size-settled.json",
+        "verified_path": "022-corrected-minimum-200-post-size-settled.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "023-corrected-minimum-200-post-size-cancel.json",
+        "verified_path": "023-corrected-minimum-200-post-size-cancel.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "024-corrected-minimum-200-post-size-tab.json",
+        "verified_path": "024-corrected-minimum-200-post-size-tab.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "025-corrected-minimum-200-post-size-arrow.json",
+        "verified_path": "025-corrected-minimum-200-post-size-arrow.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "026-corrected-minimum-200-post-size-space.json",
+        "verified_path": "026-corrected-minimum-200-post-size-space.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "027-corrected-minimum-200-post-size-problem-settled.json",
+        "verified_path": "027-corrected-minimum-200-post-size-problem-settled.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "028-corrected-minimum-200-post-size-problem-escape.json",
+        "verified_path": "028-corrected-minimum-200-post-size-problem-escape.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "029-corrected-minimum-200-upper-1.jpg",
+        "verified_path": "029-corrected-minimum-200-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "029-corrected-minimum-200-upper.json",
+        "verified_path": "029-corrected-minimum-200-upper.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "030-corrected-minimum-200-problem-double-click.json",
+        "verified_path": "030-corrected-minimum-200-problem-double-click.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "031-corrected-minimum-200-problem-double-click-settled.json",
+        "verified_path": "031-corrected-minimum-200-problem-double-click-settled.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "032-corrected-minimum-200-double-click-escape.json",
+        "verified_path": "032-corrected-minimum-200-double-click-escape.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "033-corrected-minimum-200-problem-view-focus.json",
+        "verified_path": "033-corrected-minimum-200-problem-view-focus.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "034-corrected-minimum-200-problem-view-activate.json",
+        "verified_path": "034-corrected-minimum-200-problem-view-activate.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "035-corrected-minimum-200-view-detail-settled.json",
+        "verified_path": "035-corrected-minimum-200-view-detail-settled.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "036-corrected-minimum-200-final-detail-escape.json",
+        "verified_path": "036-corrected-minimum-200-final-detail-escape.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "037-corrected-default-100-ready-1.jpg",
+        "verified_path": "037-corrected-default-100-ready-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "037-corrected-default-100-ready.json",
+        "verified_path": "037-corrected-default-100-ready.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "038-corrected-default-100-reverse-to-medication-view.json",
+        "verified_path": "038-corrected-default-100-reverse-to-medication-view.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "039-corrected-default-100-reverse-to-medication-table.json",
+        "verified_path": "039-corrected-default-100-reverse-to-medication-table.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "040-corrected-default-100-medication-settled-1.jpg",
+        "verified_path": "040-corrected-default-100-medication-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "040-corrected-default-100-medication-settled.json",
+        "verified_path": "040-corrected-default-100-medication-settled.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "041-corrected-default-100-medication-enter.json",
+        "verified_path": "041-corrected-default-100-medication-enter.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "042-corrected-default-100-medication-detail-settled.json",
+        "verified_path": "042-corrected-default-100-medication-detail-settled.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "043-corrected-default-100-medication-escape.json",
+        "verified_path": "043-corrected-default-100-medication-escape.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/build.log",
+        "verified_path": "attempt-1-compile-scale/build.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/callbacks.log",
+        "verified_path": "attempt-1-compile-scale/callbacks.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/checks.json",
+        "verified_path": "attempt-1-compile-scale/checks.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/clippy.log",
+        "verified_path": "attempt-1-compile-scale/clippy.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/format.log",
+        "verified_path": "attempt-1-compile-scale/format.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/integrated.log",
+        "verified_path": "attempt-1-compile-scale/integrated.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-default-100.log",
+        "verified_path": "attempt-1-compile-scale/probe-default-100.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-default-125.log",
+        "verified_path": "attempt-1-compile-scale/probe-default-125.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-default-150.log",
+        "verified_path": "attempt-1-compile-scale/probe-default-150.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-default-175.log",
+        "verified_path": "attempt-1-compile-scale/probe-default-175.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-default-200.log",
+        "verified_path": "attempt-1-compile-scale/probe-default-200.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-minimum-100.log",
+        "verified_path": "attempt-1-compile-scale/probe-minimum-100.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-minimum-125.log",
+        "verified_path": "attempt-1-compile-scale/probe-minimum-125.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-minimum-150.log",
+        "verified_path": "attempt-1-compile-scale/probe-minimum-150.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-minimum-175.log",
+        "verified_path": "attempt-1-compile-scale/probe-minimum-175.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/probe-minimum-200.log",
+        "verified_path": "attempt-1-compile-scale/probe-minimum-200.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/README.md",
+        "verified_path": "attempt-1-compile-scale/README.md",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/Test-CoverSheetFollowup.ps1",
+        "verified_path": "attempt-1-compile-scale/Test-CoverSheetFollowup.ps1",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "attempt-1-compile-scale/tests.log",
+        "verified_path": "attempt-1-compile-scale/tests.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "build.log",
+        "verified_path": "build.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "callbacks.log",
+        "verified_path": "callbacks.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "checks.json",
+        "verified_path": "checks.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "clippy.log",
+        "verified_path": "clippy.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "format.log",
+        "verified_path": "format.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "integrated.log",
+        "verified_path": "integrated.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "native-default-100-20261101T0302499437495Z.log",
+        "verified_path": "native-default-100-20261101T0302499437495Z.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "native-minimum-200-20261101T0252391447965Z.log",
+        "verified_path": "native-minimum-200-20261101T0252391447965Z.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "native-minimum-200-20261101T0300099737852Z.log",
+        "verified_path": "native-minimum-200-20261101T0300099737852Z.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "preparation-log-correction.json",
+        "verified_path": "preparation-log-correction.json",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-default-100.log",
+        "verified_path": "probe-default-100.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-default-125.log",
+        "verified_path": "probe-default-125.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-default-150.log",
+        "verified_path": "probe-default-150.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-default-175.log",
+        "verified_path": "probe-default-175.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-default-200.log",
+        "verified_path": "probe-default-200.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-minimum-100.log",
+        "verified_path": "probe-minimum-100.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-minimum-125.log",
+        "verified_path": "probe-minimum-125.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-minimum-150.log",
+        "verified_path": "probe-minimum-150.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-minimum-175.log",
+        "verified_path": "probe-minimum-175.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "probe-minimum-200.log",
+        "verified_path": "probe-minimum-200.log",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "report.md",
+        "verified_path": "report-before-user-acceptance.md",
+        "status": "exact"
+      },
+      {
+        "indexed_path": "tests.log",
+        "verified_path": "tests.log",
+        "status": "exact"
+      }
+    ]
+  },
+  "preserved_m12": {
+    "summary": {
+      "exact": 607
+    },
+    "files": [
+      {
+        "path": "native-review/minimum-150-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-020-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "historical-bytes.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-020-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-018-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-035-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-004-Escape-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-016-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-044-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-011-space-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-019-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-003-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-015-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-019-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-039-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-009-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-068-empty-lower-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-recheck-20261101T020956468320.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-005-Up.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-033-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-038-middle-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-012-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-016-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-023-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-037-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-037-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-018-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-002-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-002-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-015-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-028-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-006-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-006-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-059-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "build.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-016-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-048-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-042-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-026-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-068-empty-lower-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-036-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-043-upper-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-017-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-022-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-039-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-025-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-017-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-047-Right.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-019-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-025-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-031-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-035-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-053-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-014-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-033-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-007-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-015-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "layout-minimum-100.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-026-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-043-upper.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-041-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-041-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-023-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-011-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-018-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-038-middle-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-055-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-011-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-007-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-031-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-038-middle-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-016-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-016-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-043-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-017-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-003-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-005-Up.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-020-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-033-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-031-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-009-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-028-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-032-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-044-resize-system-menu-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-007-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-041-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-007-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-014-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/report.md",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-043-upper-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-022-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "startup-handoff.md",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-005-Up.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-038-middle-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-029-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-046-Right.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-022-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-043-upper-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-043-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "probe-default-200.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-034-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-051-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-038-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-034-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "probe-default-175.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-024-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-046-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-007-Shift_L-Tab-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-011-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-037-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-022-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-043-upper-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-041-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-014-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-006-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-015-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-026-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-014-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-017-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-039-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-038-middle.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-002-enter.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-035-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-012-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "layout-minimum-200.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-056-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "layout-default-175.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-065-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-027-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-040-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-027-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-022-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-003-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-024-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-028-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-017-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-043-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-020-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-061-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-033-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-021-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-023-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-022-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-062-empty-open-actual.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/index.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-029-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-014-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-036-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-009-Shift_L-Tab-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-017-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-016-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-011-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-006-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-026-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-030-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-010-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-062-empty-open-actual-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-010-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-034-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "probe-default-125.log",
+        "status": "exact"
+      },
+      {
+        "path": "probe-minimum-200.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-018-problem-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "clean-checkout.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-011-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-019-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-005-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-020-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "probe-minimum-125.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-010-Down-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-043-upper.json",
+        "status": "exact"
+      },
+      {
+        "path": "clean-checkout.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-021-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-037-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "format.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-004-Escape-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-027-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "tests.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-016-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-023-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-006-Shift_L-Tab-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-005-Up.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-027-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-020-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-041-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-026-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-032-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-038-middle.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-043-upper.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-036-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-039-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-056-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-038-middle-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-011-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-010-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-034-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-068-empty-lower.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-040-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-006-Shift_L-Tab-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-042-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-007-Shift_L-Tab-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "layout-minimum-150.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-037-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-040-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-038-middle-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-052-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-021-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-028-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-049-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-019-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-043-upper.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-status.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-023-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-034-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-025-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-010-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-017-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-012-allergy-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-009-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "probe-minimum-150.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-010-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-015-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "integrated.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-024-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-039-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-006-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-024-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-038-middle-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-002-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-022-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-053-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-049-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-035-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-023-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-043-upper-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-021-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-058-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-003-detail-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-022-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-025-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-027-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-060-resized-cancel-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-010-Down-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-062-empty-open-actual-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-028-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "probe-run.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-017-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-043-upper-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-015-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "receipt-rejections.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-025-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-037-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-066-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-030-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-038-middle-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-026-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-047-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-010-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-061-empty-open.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-054-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-027-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-002-enter-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-018-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "protocol-tests.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-039-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-003-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-009-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "probe-default-100.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-033-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-015-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-005-Shift_L-Tab-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-031-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-036-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-050-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-028-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-018-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-031-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-009-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-032-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-007-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-043-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-008-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "layout-default-200.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-005-Up.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-008-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-036-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "published-clone.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-018-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-003-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-035-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-039-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-026-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-030-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-038-middle.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-057-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-039-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-042-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-023-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-035-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-012-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-044-resize-system-menu.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-026-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-017-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "layout-minimum-175.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-020-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-041-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-008-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-002-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-032-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-026-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-025-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-032-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-041-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-033-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-016-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-021-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-024-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-042-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-006-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-008-Shift_L-Tab-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-032-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-019-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-006-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "clippy.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-037-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-042-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-009-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-008-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-038-middle.json",
+        "status": "exact"
+      },
+      {
+        "path": "probe-minimum-175.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-022-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-034-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-005-Shift_L-Tab-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-030-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-035-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-007-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-024-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-057-after-resize-attempt-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-029-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-010-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-002-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-042-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-009-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-007-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-009-Shift_L-Tab-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-036-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-063-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-027-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-021-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-035-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-017-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-030-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-019-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "probe-minimum-100.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-034-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-024-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-036-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-002-enter-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-008-Shift_L-Tab-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-014-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-038-middle-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-040-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-048-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-025-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-030-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-022-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-008-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-005-Up.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-020-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-043-upper.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-012-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "automated.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-036-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-002-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "layout-minimum-125.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-002-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-031-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-027-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-002-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-064-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-008-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-042-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-032-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-007-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-043-upper.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-038-middle-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-019-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-003-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-038-middle.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-040-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-051-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "published-clone.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-011-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-040-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-038-middle-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-043-upper-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-012-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-045-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-018-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-043-upper.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-025-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-003-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-011-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-031-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-015-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-050-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-038-middle-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-023-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-003-detail-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-011-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-023-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-059-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-024-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-029-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-014-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-029-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-011-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-036-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-006-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-035-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-030-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-027-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-007-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-043-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-037-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-015-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "ci-status.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-031-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-060-empty-search.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-008-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-040-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-052-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-060-resized-cancel-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-054-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-043-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-008-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "listening-reports.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-041-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-038-middle.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-041-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-033-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-001-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-003-detail-settled-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-009-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-062-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-028-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-003-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-010-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-009-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-010-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-024-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-035-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-018-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "tooling-review.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-028-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-041-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-007-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-032-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-006-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-038-middle-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-032-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-006-space.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-010-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "layout-default-150.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-039-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-042-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-012-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-012-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-019-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-057-after-resize-attempt.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-043-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-014-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "probe-default-150.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-029-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-031-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-030-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-021-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "layout-default-125.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-030-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-027-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-032-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-029-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-011-space-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "integrated.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-008-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-024-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-015-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-055-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-044-resize-system-menu-2.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-058-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-008-Control_L-o.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-029-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-060-resized-cancel.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-028-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-043-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-012-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-038-middle.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-001-settled.json",
+        "status": "exact"
+      },
+      {
+        "path": "byte-audit.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-038-middle-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-067-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-019-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-036-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-038-middle.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-043-upper.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-038-middle.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-014-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-038-middle-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-020-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-016-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-034-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-005-Up.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-014-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-033-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-034-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-028-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-045-s.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-003-Control_L-a.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-038-middle-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-039-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-038-middle-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-057-after-resize-attempt-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "layout-default-100.log",
+        "status": "exact"
+      },
+      {
+        "path": "acceptance.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-004-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-025-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-020-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-043-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-026-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-023-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-037-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-018-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-005-Up.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-016-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-033-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-034-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-043-upper.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-009-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-042-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-001-settled-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-037-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-043-upper-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-040-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-125-021-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-038-middle-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-021-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-012-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-043-upper-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-031-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-029-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-100-021-Down.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-150-033-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-002-Return.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-025-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-175-030-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-100-013-Escape.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/default-200-042-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-044-resize-system-menu-1.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-005-Up.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-150-043-upper-0.jpg",
+        "status": "exact"
+      },
+      {
+        "path": "callbacks.log",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-175-040-Shift_L-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-125-029-Tab.json",
+        "status": "exact"
+      },
+      {
+        "path": "native-review/minimum-200-040-Shift_L-Tab.json",
+        "status": "exact"
+      }
+    ]
+  },
+  "static_receipt_artifacts": [
+    {
+      "receipt": "validation/milestone-10/static.json",
+      "summary": {
+        "exact": 43
+      },
+      "files": [
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.Create_00bd787c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.Create_00bd787c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems_00bd7954.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems_00bd7954.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnGetDetail_00bd7cb8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnGetDetail_00bd7cb8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/oCoverSheetParam_CPRS_Appts.TCoverSheetParam_CPRS_Appts.NewCoverSheetControl_00bd7f30.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/oCoverSheetParam_CPRS_Appts.TCoverSheetParam_CPRS_Appts.NewCoverSheetControl_00bd7f30.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/program.txt",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/workflow-calls.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/decompiled/workflow-functions.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/headless.log",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.Create_00bd787c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems_00bd7954.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnGetDetail_00bd7cb8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/oCoverSheetParam_CPRS_Appts.TCoverSheetParam_CPRS_Appts.NewCoverSheetControl_00bd7f30.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/resolved/workflow-evidence.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/scripts.log",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/appointments/vmt.json",
+          "status": "exact"
+        }
+      ]
+    },
+    {
+      "receipt": "validation/milestone-3/static.json",
+      "summary": {
+        "exact": 104
+      },
+      "files": [
+        {
+          "path": "analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.Create_00fd92b4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.Create_00fd92b4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnClearPtData_00fd9450.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnClearPtData_00fd9450.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnDisplayPage_00fd94a8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnDisplayPage_00fd94a8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnFocusFirstControl_00fd9308.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnFocusFirstControl_00fd9308.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataKeyDown_00bd4180.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataKeyDown_00bd4180.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataMouseDown_00bd4384.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataMouseDown_00bd4384.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataSelectItem_00bd43c4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataSelectItem_00bd43c4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems_00bd391c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems_00bd391c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnGetDetail_00bd3dd8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnGetDetail_00bd3dd8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create_00bd67fc.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create_00bd67fc.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems_00bd6b7c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems_00bd6b7c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnGetDetail_00bd6d88.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnGetDetail_00bd6d88.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create_00bda47c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create_00bda47c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail_00bda4f8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail_00bda4f8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.Create_00bee1d8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.Create_00bee1d8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnDisplay_00bee478.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnDisplay_00bee478.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnInitCoverSheet_00bef608.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnInitCoverSheet_00bef608.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnSwitchToPatient_00bef080.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnSwitchToPatient_00bef080.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.getPanelXY_00bcdb70.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.getPanelXY_00bcdb70.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.setPanelCount_00bcdba0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.setPanelCount_00bcdba0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_Allergies.TCoverSheetParam_CPRS_Allergies.NewCoverSheetControl_00bd750c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_Allergies.TCoverSheetParam_CPRS_Allergies.NewCoverSheetControl_00bd750c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_ProblemList.TCoverSheetParam_CPRS_ProblemList.NewCoverSheetControl_00bdaad8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_ProblemList.TCoverSheetParam_CPRS_ProblemList.NewCoverSheetControl_00bdaad8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/program.txt",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/rCover.DetailAllergy_00bf0374.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/rCover.DetailAllergy_00bf0374.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/rCover.DetailProblem_00bf026c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/rCover.DetailProblem_00bf026c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/rCover.ListAllergies_00bf05e8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/rCover.ListAllergies_00bf05e8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/workflow-calls.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/decompiled/workflow-functions.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/fCoverSheet.TfrmCoverSheet.Create_00fd92b4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/fCoverSheet.TfrmCoverSheet.OnClearPtData_00fd9450.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/fCoverSheet.TfrmCoverSheet.OnDisplayPage_00fd94a8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/fCoverSheet.TfrmCoverSheet.OnFocusFirstControl_00fd9308.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataKeyDown_00bd4180.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataMouseDown_00bd4384.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataSelectItem_00bd43c4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems_00bd391c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnGetDetail_00bd3dd8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create_00bd67fc.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems_00bd6b7c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnGetDetail_00bd6d88.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create_00bda47c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail_00bda4f8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/oCoverSheet.TCoverSheet.Create_00bee1d8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/oCoverSheet.TCoverSheet.OnDisplay_00bee478.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/oCoverSheet.TCoverSheet.OnInitCoverSheet_00bef608.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/oCoverSheet.TCoverSheet.OnSwitchToPatient_00bef080.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/oCoverSheetGrid.TCoverSheetGrid.getPanelXY_00bcdb70.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/oCoverSheetGrid.TCoverSheetGrid.setPanelCount_00bcdba0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/oCoverSheetParam_CPRS_Allergies.TCoverSheetParam_CPRS_Allergies.NewCoverSheetControl_00bd750c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/oCoverSheetParam_CPRS_ProblemList.TCoverSheetParam_CPRS_ProblemList.NewCoverSheetControl_00bdaad8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/rCover.DetailAllergy_00bf0374.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/rCover.DetailProblem_00bf026c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/rCover.ListAllergies_00bf05e8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resolved/workflow-evidence.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resource-inventory.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resources/TFRACOVERSHEETDISPLAYPANEL.dfm.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resources/TFRACOVERSHEETDISPLAYPANEL_CPRS.dfm.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resources/TFRACOVERSHEETDISPLAYPANEL_CPRS_ALLERGIES.dfm.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resources/TFRACOVERSHEETDISPLAYPANEL_CPRS_PROBLEMLIST.dfm.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resources/TFRMCOVERSHEET.dfm.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/cover-sheet/resources/TFRMCOVERSHEETDETAILDISPLAY.dfm.json",
+          "status": "exact"
+        }
+      ]
+    },
+    {
+      "receipt": "validation/milestone-4/static.json",
+      "summary": {
+        "exact": 68
+      },
+      "files": [
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.ClearPtData_00e14524.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.ClearPtData_00e14524.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.ClearTVNotes_00e14ec4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.ClearTVNotes_00e14ec4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.DisplayPage_00e146cc.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.DisplayPage_00e146cc.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.DoSelect_00e2307c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.DoSelect_00e2307c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.GetTitleText_00e15850.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.GetTitleText_00e15850.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.LoadNotes_00e21f14.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.LoadNotes_00e21f14.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lstNotesClick_00e19480.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lstNotesClick_00e19480.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesClick_00e1fc84.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesClick_00e1fc84.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesColumnClick_00e1fe30.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesColumnClick_00e1fe30.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesDblClick_00e20188.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesDblClick_00e20188.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesKeyDown_00e20234.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesKeyDown_00e20234.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesSelectItem_00e202f8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesSelectItem_00e202f8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.ReadToFront_00e1c0f8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.ReadToFront_00e1c0f8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.SetViewContext_00e1df9c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.SetViewContext_00e1df9c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesChange_00e1e870.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesChange_00e1e870.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesKeyDown_00e1f8e8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesKeyDown_00e1f8e8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/program.txt",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/rTIU.GetTIUListItem_00a0c248.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/rTIU.GetTIUListItem_00a0c248.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/rTIU.ListNotesForTree_00a0b640.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/rTIU.ListNotesForTree_00a0b640.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/rTIU.LoadDetailText_00a0b8cc.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/rTIU.LoadDetailText_00a0b8cc.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/rTIU.LoadDocumentText_00a0b870.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/rTIU.LoadDocumentText_00a0b870.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/workflow-calls.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/decompiled/workflow-functions.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.ClearPtData_00e14524.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.ClearTVNotes_00e14ec4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.DisplayPage_00e146cc.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.DoSelect_00e2307c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.GetTitleText_00e15850.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.LoadNotes_00e21f14.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.lstNotesClick_00e19480.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.lvNotesClick_00e1fc84.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.lvNotesColumnClick_00e1fe30.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.lvNotesDblClick_00e20188.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.lvNotesKeyDown_00e20234.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.lvNotesSelectItem_00e202f8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.ReadToFront_00e1c0f8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.SetViewContext_00e1df9c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.tvNotesChange_00e1e870.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/fNotes.TfrmNotes.tvNotesKeyDown_00e1f8e8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/rTIU.GetTIUListItem_00a0c248.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/rTIU.ListNotesForTree_00a0b640.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/rTIU.LoadDetailText_00a0b8cc.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/rTIU.LoadDocumentText_00a0b870.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resolved/workflow-evidence.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resource-inventory.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resources/TFRMNOTES.dfm.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resources/TFRMNOTESBYAUTHOR.dfm.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/notes/resources/TFRMNOTESBYDATE.dfm.json",
+          "status": "exact"
+        }
+      ]
+    },
+    {
+      "receipt": "validation/milestone-5/static.json",
+      "summary": {
+        "exact": 85
+      },
+      "files": [
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.ClearPtData_01179ba0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.ClearPtData_01179ba0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.DisplayPage_01179c00.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.DisplayPage_01179c00.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.GetOrderText_0117ea50.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.GetOrderText_0117ea50.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.GetPlainText_0117e4e8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.GetPlainText_0117e4e8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.GetStartStopText_0117e84c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.GetStartStopText_0117e84c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.hdrOrdersSectionClick_0118c37c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.hdrOrdersSectionClick_0118c37c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.lstOrdersDblClick_0117f5dc.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.lstOrdersDblClick_0117f5dc.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.lstSheetsClick_0117dc1c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.lstSheetsClick_0117dc1c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewActiveClick_0117bdd0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewActiveClick_0117bdd0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewCurrentClick_0117beb8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewCurrentClick_0117beb8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewDetailClick_0117cc00.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewDetailClick_0117cc00.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.NoneSelected_01181714.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.NoneSelected_01181714.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.RefreshOrderList_0117b000.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.RefreshOrderList_0117b000.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.RetrieveVisibleOrders_0117e3f0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.RetrieveVisibleOrders_0117e3f0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.SetCannedView_0117b878.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.SetCannedView_0117b878.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.SetOrderView_0117b7d4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/fOrders.TfrmOrders.SetOrderView_0117b7d4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/program.txt",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.ClearOrders_011db7c0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.ClearOrders_011db7c0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.getDetailOrder_011dabac.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.getDetailOrder_011dabac.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.GetOrderStatus_011db190.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.GetOrderStatus_011db190.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.ListOrderFiltersAll_011df26c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.ListOrderFiltersAll_011df26c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dc634.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dc634.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dcb68.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dcb68.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dccc0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dccc0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.NameOfStatus_011dad98.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.NameOfStatus_011dad98.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.RetrieveOrderFields_011ddc0c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.RetrieveOrderFields_011ddc0c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.TextForOrder_011e3c68.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/rOrders.TextForOrder_011e3c68.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/workflow-calls.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/decompiled/workflow-functions.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.ClearPtData_01179ba0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.DisplayPage_01179c00.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.GetOrderText_0117ea50.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.GetPlainText_0117e4e8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.GetStartStopText_0117e84c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.hdrOrdersSectionClick_0118c37c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.lstOrdersDblClick_0117f5dc.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.lstSheetsClick_0117dc1c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.mnuViewActiveClick_0117bdd0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.mnuViewCurrentClick_0117beb8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.mnuViewDetailClick_0117cc00.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.NoneSelected_01181714.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.RefreshOrderList_0117b000.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.RetrieveVisibleOrders_0117e3f0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.SetCannedView_0117b878.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/fOrders.TfrmOrders.SetOrderView_0117b7d4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.ClearOrders_011db7c0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.getDetailOrder_011dabac.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.GetOrderStatus_011db190.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.ListOrderFiltersAll_011df26c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.LoadOrdersAbbr_011dc634.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.LoadOrdersAbbr_011dcb68.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.LoadOrdersAbbr_011dccc0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.NameOfStatus_011dad98.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.RetrieveOrderFields_011ddc0c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/rOrders.TextForOrder_011e3c68.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resolved/workflow-evidence.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resource-inventory.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resources/TFRMORDERS.dfm.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/orders/resources/TFRMORDERVIEW.dfm.json",
+          "status": "exact"
+        }
+      ]
+    },
+    {
+      "receipt": "validation/milestone-6/static.json",
+      "summary": {
+        "exact": 42
+      },
+      "files": [
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.ClearPtData_00ea4440.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.ClearPtData_00ea4440.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.DisplayPage_00ea4504.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.DisplayPage_00ea4504.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.LoadListView_00ea4d6c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.LoadListView_00ea4d6c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.lstDatesClick_00ea9ee4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.lstDatesClick_00ea9ee4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.lstHeadersClick_00ea67e0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.lstHeadersClick_00ea67e0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.lvReportsSelectItem_00eb1a30.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.lvReportsSelectItem_00eb1a30.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.Memo1Enter_00ebda94.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.Memo1Enter_00ebda94.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.tvReportsClick_00eb4c1c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/fLabs.TfrmLabs.tvReportsClick_00eb4c1c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/program.txt",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/rLabs.GetNewestOldest_00c87324.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/rLabs.GetNewestOldest_00c87324.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/rLabs.Interim_00c867c8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/rLabs.Interim_00c867c8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/rLabs.setInterimSelect_00c86c80.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/rLabs.setInterimSelect_00c86c80.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/rReports.LoadReportText_00c03f50.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/rReports.LoadReportText_00c03f50.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/workflow-calls.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/decompiled/workflow-functions.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/fLabs.TfrmLabs.ClearPtData_00ea4440.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/fLabs.TfrmLabs.DisplayPage_00ea4504.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/fLabs.TfrmLabs.LoadListView_00ea4d6c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/fLabs.TfrmLabs.lstDatesClick_00ea9ee4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/fLabs.TfrmLabs.lstHeadersClick_00ea67e0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/fLabs.TfrmLabs.lvReportsSelectItem_00eb1a30.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/fLabs.TfrmLabs.Memo1Enter_00ebda94.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/fLabs.TfrmLabs.tvReportsClick_00eb4c1c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/rLabs.GetNewestOldest_00c87324.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/rLabs.Interim_00c867c8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/rLabs.setInterimSelect_00c86c80.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/rReports.LoadReportText_00c03f50.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resolved/workflow-evidence.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resource-inventory.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/results/resources/TFRMLABS.dfm.json",
+          "status": "exact"
+        }
+      ]
+    },
+    {
+      "receipt": "validation/milestone-8/static.json",
+      "summary": {
+        "exact": 35
+      },
+      "files": [
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create_00be2090.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create_00be2090.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnAddItems_00be2474.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnAddItems_00be2474.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail_00be279c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail_00be279c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail_00be22f4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail_00be22f4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals_00be2334.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals_00be2334.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/oCoverSheetParam_CPRS_Vitals.TCoverSheetParam_CPRS_Vitals.NewCoverSheetControl_00be2c84.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/oCoverSheetParam_CPRS_Vitals.TCoverSheetParam_CPRS_Vitals.NewCoverSheetControl_00be2c84.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/program.txt",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/workflow-calls.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/decompiled/workflow-functions.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create_00be2090.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnAddItems_00be2474.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail_00be279c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail_00be22f4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals_00be2334.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/oCoverSheetParam_CPRS_Vitals.TCoverSheetParam_CPRS_Vitals.NewCoverSheetControl_00be2c84.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/resolved/workflow-evidence.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/vitals/vmt.json",
+          "status": "exact"
+        }
+      ]
+    },
+    {
+      "receipt": "validation/milestone-9/static.json",
+      "summary": {
+        "exact": 44
+      },
+      "files": [
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.Create_00bd5e48.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.Create_00bd5e48.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnAddItems_00bd5eec.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnAddItems_00bd5eec.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnGetDetail_00bd615c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnGetDetail_00bd615c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/oCoverSheetParam_CPRS_ActiveMeds.TCoverSheetParam_CPRS_ActiveMeds.NewCoverSheetControl_00bd63d8.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/oCoverSheetParam_CPRS_ActiveMeds.TCoverSheetParam_CPRS_ActiveMeds.NewCoverSheetControl_00bd63d8.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/program.txt",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/rMeds.ExtractActiveMeds_00add94c.asm",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/rMeds.ExtractActiveMeds_00add94c.c",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/workflow-calls.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/decompiled/workflow-functions.tsv",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.Create_00bd5e48.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnAddItems_00bd5eec.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnGetDetail_00bd615c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/oCoverSheetParam_CPRS_ActiveMeds.TCoverSheetParam_CPRS_ActiveMeds.NewCoverSheetControl_00bd63d8.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/rMeds.ExtractActiveMeds_00add94c.c.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/resolved/workflow-evidence.json",
+          "status": "exact"
+        },
+        {
+          "path": "analysis/active-medications/vmt.json",
+          "status": "exact"
+        }
+      ]
+    }
+  ],
+  "user_report_receipt": {
+    "receipt": "validation/milestone-12/native-followup/user-acceptance.json",
+    "executable_hash_agrees_with_checks_and_index": true,
+    "complete_unique_sample_set": true,
+    "preparation_log": "exact",
+    "preserved_report": "exact",
+    "classification": "user-reported; build reference inherited from preceding instructions, not independently repeated by user"
+  },
+  "map_symbols_only": {
+    "fNotes.TfrmNotes.SaveEditedNote": "00e19034",
+    "ORNet.SetParams": "009ad030",
+    "rMisc.LoadDll": "01192018",
+    "RpcSLogin.StartProgSLogin": "00996390",
+    "rTIU.CosignDocument": "00a0b3e0",
+    "rTIU.SignDocument": "00a0c6fc",
+    "Wsockc.TXWBWinsock.NetStart": "009916c8"
+  },
+  "historical_preservation": {
+    "summary": {
+      "exact": 1424
+    },
+    "changed": []
+  },
+  "limits": [
+    "Missing executable prevents complete verification by verify_cover_followup.py.",
+    "Existing assembly, resource, and VMT exports were inspected; absent specimen prevents new byte-level verification.",
+    "No new reverse-engineering inventory, call-destination, metadata, or TIU semantic claim was verified.",
+    "Matching log hashes and parsing stored journeys are not new executions of those journeys."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "Bounded Linux Xvfb software-rendered mock review preparation and retained visual inspection; not Windows native or speech acceptance",
+  "executable_sha256": "82bb34fe4ae46348e6b9c18604e0f1ec089c70c69c55449b25a877f4ea58660d",
+  "requested_geometry": "default, scale 1",
+  "observed_X11_window_geometry": "1180x800+0+0",
+  "observations": [
+    "M13_REVIEW_READY reached and Notes list loaded; no RefCell error in keep-open route",
+    "Author/date/Reset controls and four-note count visible; unselected reading pane is below viewport and reachable by tested focus/scroll path",
+    "Linux font/window appearance is not a Windows rendering oracle"
+  ],
+  "termination": "Interrupted with Ctrl+C after capture; not a native user sign-off",
+  "files_sha256": {
+    "review-preparation.log": "cae592d41714335a2d0cca53b1e396940b5bc68e08b6f95dbe00f3eb578c212f",
+    "review-default-100.png": "355d62a90e9fe4657a9f07de5a45f19cc7efd5d16880938c2c160efa13351d4a",
+    "review-window-default-100.png": "1492a74732ba0a03d8d65a0dfdda3d196d99582dcfa04a70aa4288813fd0a633"
+  }
+}

@@ -1,9 +1,19 @@
 import { Button, ComboBox, LineEdit, StandardTableView, TextEdit } from "std-widgets.slint";
 
+export struct NoteFilterGeometry {
+    top: length, bottom: length, author-top: length, author-bottom: length,
+    dates-top: length, dates-bottom: length, body-top: length, body-bottom: length,
+}
 export component NotesView inherits Rectangle {
     in property <[[StandardListViewItem]]> rows;
     in-out property <int> selected-row: -1;
     in-out property <string> query;
+    in property <[string]> authors;
+    in property <int> author-index;
+    in-out property <string> beginning;
+    in-out property <string> ending;
+    in property <string> patient-id;
+    in property <bool> invalid-filter;
     in property <int> scenario;
     in property <bool> loading;
     in property <bool> list-error;
@@ -13,7 +23,11 @@ export component NotesView inherits Rectangle {
     in property <string> body;
     in property <bool> body-error;
     in property <bool> body-ready;
+    out property <length> required-height: max(450px, notes-layout.min-height);
     callback filter-edited(string);
+    callback author-changed(int);
+    callback dates-edited(string, string);
+    callback reset-filters();
     callback scenario-changed(int);
     callback selected(int);
     callback retry-list();
@@ -24,9 +38,15 @@ export component NotesView inherits Rectangle {
     public function focus-filter() { root.top-focused(); filter.focus(); }
     public function focus-list() { root.top-focused(); list.focus(); }
     public function focus-body() { root.body-focused(); note-text.focus(); }
+    public function geometry() -> NoteFilterGeometry {
+        return { top: root.absolute-position.y, bottom: root.absolute-position.y + root.height,
+            author-top: author-row.absolute-position.y, author-bottom: author-row.absolute-position.y + author-row.height,
+            dates-top: date-row.absolute-position.y, dates-bottom: date-row.absolute-position.y + date-row.height,
+            body-top: note-text.absolute-position.y, body-bottom: note-text.absolute-position.y + note-text.height };
+    }
     changed body => { note-text.content-x = 0px; note-text.content-y = 0px; note-text.clear-selection(); }
     background: white; border-color: #c9d5df; border-width: 1px;
-    min-width: 800px; min-height: 450px;
+    min-width: 800px; min-height: root.required-height;
     focus := FocusScope {
         width: parent.width; height: parent.height;
         focus-on-tab-navigation: false; focus-on-click: false;
@@ -35,7 +55,7 @@ export component NotesView inherits Rectangle {
             if event.text == Key.Return && root.selected-row >= 0 { root.focus-body(); return accept; }
             reject
         }
-        VerticalLayout {
+        notes-layout := VerticalLayout {
             padding: 12px; spacing: 8px;
             Text { text: "Notes · Mock read-only"; font-size: 19px; font-weight: 600; color: #23445b; }
             HorizontalLayout {
@@ -43,7 +63,7 @@ export component NotesView inherits Rectangle {
                 filter := LineEdit {
                     text <=> root.query;
                     placeholder-text: "Filter invented notes by title, subject, author, location, or note ID";
-                    accessible-label: "Filter invented notes";
+                    accessible-label: "Filter invented notes for " + root.patient-id;
                     edited => { root.filter-edited(self.text); }
                     accepted => { list.focus(); }
                     changed has-focus => { if self.has-focus { root.top-focused(); } }
@@ -56,7 +76,42 @@ export component NotesView inherits Rectangle {
                     changed has-focus => { if self.has-focus { root.top-focused(); } }
                 }
             }
-            Text { text: root.list-status; color: root.list-error ? #9b3027 : #526879; wrap: word-wrap; font-size: 12px; }
+            author-row := HorizontalLayout {
+                spacing: 8px;
+                Text { text: "Author"; vertical-alignment: center; }
+                ComboBox {
+                    horizontal-stretch: 1; min-width: 260px;
+                    model: root.authors; current-index: root.author-index;
+                    accessible-label: "Synthetic note author for " + root.patient-id;
+                    selected(value) => { root.author-changed(self.current-index); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+                Button {
+                    text: "Reset filters";
+                    accessible-label: "Reset all Notes filters for " + root.patient-id;
+                    clicked => { root.reset-filters(); root.focus-filter(); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+            }
+            date-row := HorizontalLayout {
+                spacing: 8px;
+                Text { text: "Beginning date"; vertical-alignment: center; }
+                LineEdit {
+                    text <=> root.beginning; placeholder-text: "YYYY-MM-DD";
+                    accessible-label: "Beginning Notes date, inclusive, YYYY-MM-DD, for " + root.patient-id;
+                    edited => { root.dates-edited(self.text, root.ending); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+                Text { text: "Ending date"; vertical-alignment: center; }
+                LineEdit {
+                    text <=> root.ending; placeholder-text: "YYYY-MM-DD";
+                    accessible-label: "Ending Notes date, inclusive, YYYY-MM-DD, for " + root.patient-id;
+                    edited => { root.dates-edited(root.beginning, self.text); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+            }
+            Text { text: "Blank dates include all days. Dates and authors are invented fixture data."; color: #526879; wrap: word-wrap; font-size: 12px; }
+            Text { text: root.list-status; accessible-label: "Notes filter status for " + root.patient-id + ": " + root.list-status; color: root.list-error || root.invalid-filter ? #9b3027 : #526879; wrap: word-wrap; font-size: 12px; }
             list := StandardTableView {
                 height: 160px;
                 enabled: !root.loading && root.rows.length > 0;

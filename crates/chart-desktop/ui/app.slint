@@ -1,6 +1,6 @@
 import { Button, ComboBox, LineEdit, StandardTableView, ScrollView, TextEdit } from "std-widgets.slint";
 import { CoverPanel, CoverGeometry } from "cover-panel.slint";
-import { NotesView } from "notes-view.slint";
+import { NotesView, NoteFilterGeometry } from "notes-view.slint";
 import { OrdersView } from "orders-view.slint";
 import { ResultsView } from "results-view.slint";
 
@@ -76,6 +76,11 @@ export component AppWindow inherits Window {
     in property <[[StandardListViewItem]]> notes-rows;
     in-out property <int> selected-note: -1;
     in-out property <string> notes-query;
+    in property <[string]> notes-authors;
+    in property <int> notes-author-index;
+    in-out property <string> notes-beginning;
+    in-out property <string> notes-ending;
+    in property <bool> notes-invalid-filter;
     in property <int> notes-scenario;
     in property <bool> notes-loading;
     in property <bool> notes-list-error;
@@ -86,6 +91,9 @@ export component AppWindow inherits Window {
     in property <bool> note-body-error;
     in property <bool> note-body-ready;
     callback notes-filter-edited(string);
+    callback notes-author-changed(int);
+    callback notes-dates-edited(string, string);
+    callback reset-notes-filters();
     callback notes-scenario-changed(int);
     callback note-selected(int);
     callback retry-notes-list();
@@ -197,6 +205,7 @@ export component AppWindow inherits Window {
     public function focus-detail() { detail-text.focus(); }
     public function focus-notes-filter() { notes-view.focus-filter(); }
     public function focus-notes-body() { notes-view.focus-body(); }
+    public function notes-geometry() -> NoteFilterGeometry { return notes-view.geometry(); }
     public function focus-orders-filter() { orders-view.focus-filter(); }
     public function focus-order-body() { orders-view.focus-body(); }
 
@@ -521,13 +530,19 @@ export component AppWindow inherits Window {
                         }
                         notes-view := NotesView {
                             visible: root.has-active && root.tab-index == 1;
-                            min-height: 0px; max-height: root.has-active && root.tab-index == 1 ? 10000px : 0px;
+                            min-height: root.has-active && root.tab-index == 1 ? self.required-height : 0px; max-height: root.has-active && root.tab-index == 1 ? 10000px : 0px;
                             rows: root.notes-rows; selected-row <=> root.selected-note; query <=> root.notes-query;
+                            authors: root.notes-authors; author-index: root.notes-author-index;
+                            beginning <=> root.notes-beginning; ending <=> root.notes-ending;
+                            patient-id: root.active-id; invalid-filter: root.notes-invalid-filter;
                             scenario: root.notes-scenario; loading: root.notes-loading;
                             list-error: root.notes-list-error; list-status: root.notes-list-status;
                             identity: root.note-identity; body: root.note-body; body-status: root.note-body-status;
                             body-error: root.note-body-error; body-ready: root.note-body-ready;
                             filter-edited(query) => { root.notes-filter-edited(query); }
+                            author-changed(index) => { root.notes-author-changed(index); }
+                            dates-edited(beginning, ending) => { root.notes-dates-edited(beginning, ending); }
+                            reset-filters => { root.reset-notes-filters(); }
                             scenario-changed(index) => { root.notes-scenario-changed(index); }
                             selected(index) => { root.note-selected(index); }
                             retry-list => { root.retry-notes-list(); }
