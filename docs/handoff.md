@@ -1,32 +1,37 @@
 # CPRS Chart recreation: current handoff
 
-M13 publication checkpoint: [draft PR #8](https://github.com/joshuabenavente/cprs-exploration/pull/8) publishes
-`m13-notes-filters` with the approved code, reviews and separate M13 receipts.
-CI code/build runs are linked from the PR and remain distinct from the pending
-Windows native/Narrator checklist. The
-[publication receipt](../validation/milestone-13/publication.json) pins the
-implementation snapshot. Exact next action: confirm PR checks, then build/run the
-M13 Windows matrix and affected-controls native/listening checklist on the new
-Windows executable.
+M14 is active on `m14-results-date-filters`, from merged `main`
+`62bd340501f0d7753e1807cec12d7a967f8fb403`. [M13 PR #8](https://github.com/joshuabenavente/cprs-exploration/pull/8)
+merged after both final-head portable-core and Windows desktop code/build CI jobs
+passed; local/remote M13 branches are pruned. See the new
+[merge checkpoint](../validation/milestone-14/m13-merge-checkpoint.json).
+M13 Windows native/Narrator acceptance remains pending; merging did not promote it.
 
-Approved M13 implementation checkpoint, 1 November 2026: the new Codex terminal
-is open and code is on `m13-notes-filters`, based on `6428037`, preserving earlier
-review changes. Notes now supports synthetic author keys, inclusive calendar-date
-bounds, combined text filtering, Reset, invalid-input handling and exact request
-invalidation. The [contract](../specifications/notes-filtering.md) distinguishes
-all authored rules from recovered controls. See [M13](milestone-13.md).
-New evidence is isolated under `validation/milestone-13/linux/` and `windows/`;
-the active runner accepts only M13 and the journey has 91 checkpoints. Linux
-formatting, warning-denied workspace Clippy, 106 Rust tests, desktop build,
-callbacks, 14 protocol tests and all ten synthetic geometry/timer samples pass;
-each journey has 104 deliveries and 43 stale-reply rejections. The
-[M13 receipt](../validation/milestone-13/acceptance.json) verifies all 2,404
-pre-M13 evidence files remain unchanged. New-build Windows native/Narrator acceptance is not
-yet recorded. Do not use historical M12 writers with this changed executable.
-Use `Test-MockChart.ps1 -Matrix`, `python scripts/verify_integrated.py` and
-`Review-NotesFilters.ps1` for current Windows preparation. The
-[native checklist](../validation/milestone-13/native-checklist.md) defines the
-remaining per-sample interactions and speech checks.
+M14 adds query plus optional inclusive beginning/ending strict calendar bounds,
+Reset, invalid-input clearing and full owned filter/generation validation to the
+existing read-only Results reader. Highlighting remains separate from report
+activation. Nine invented patients and one invented report family remain unchanged.
+See [plan](milestone-14.md) and [contract](../specifications/results-filtering.md).
+Current code passed format, warning-denied workspace Clippy, 116 Rust tests,
+16 protocol tests, build/callback smoke and the complete ten-sample Linux matrix.
+Each journey has 100 checkpoints, 122 deliveries and 53 stale-reply rejections.
+All 2,447 pre-M14 evidence files remain byte-identical. See the
+[acceptance checkpoint](../validation/milestone-14/acceptance.json) and
+[targeted synthetic visual review](../validation/milestone-14/linux/synthetic-visual-review.json).
+Exact next action: publish the draft PR, verify code/build CI, then perform the
+fresh Windows matrix and separate native/Narrator checks. M14 merge is not authorized.
+New validation uses `validate_m14.py`, `verify_m14.py` (also available through
+`verify_integrated.py`), `Test-MockChart.ps1`, `Review-ResultsFilters.ps1`, and
+`validation/milestone-14/`. Historical M13 writers now fail before writing.
+Windows native/listening checks require a fresh Windows build and the
+[M14 checklist](../validation/milestone-14/native-checklist.md); Linux synthetic
+geometry does not establish those results.
+
+M13 implementation delivered author keys, dates/reset, invalidation and layout
+with 106 Rust tests, 14 protocol tests and ten Linux samples, each 91 checkpoints,
+104 deliveries and 43 rejections. Its [acceptance receipt](../validation/milestone-13/acceptance.json)
+and all prior evidence retain their capture-time bytes/statuses. Revisit M13
+native work only from the M13 source/build with separate new evidence.
 
 The following analysis/repository review paragraphs retain the pre-implementation
 checkpoints and their original evidence limits.

@@ -1,0 +1,27 @@
+{
+  "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
+  "merged": true,
+  "merge_commit": "62bd340501f0d7753e1807cec12d7a967f8fb403",
+  "merged_head": "af512fa3b4242aa49eb80f16bb2138c905de5bc7",
+  "main": "62bd340501f0d7753e1807cec12d7a967f8fb403",
+  "local_branch_pruned": true,
+  "remote_branch_pruned": true,
+  "ci_run": 41336042182,
+  "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41336042182",
+  "ci_head": "af512fa3b4242aa49eb80f16bb2138c905de5bc7",
+  "jobs": [
+    {
+      "id": 124935965651,
+      "name": "portable-core",
+      "conclusion": "success"
+    },
+    {
+      "id": 124935965868,
+      "name": "windows-desktop-build",
+      "conclusion": "success"
+    }
+  ],
+  "native_windows_and_narrator": "still pending new-build acceptance; merge is not a native/speech pass",
+  "next_agent": "m14_results_date_filters",
+  "m14_scope": "Read-only Results inclusive authored date bounds and Reset over invented reports"
+}

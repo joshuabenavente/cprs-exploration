@@ -347,6 +347,9 @@ fn sync(app: &AppWindow, controller: &Controller) {
     });
     let o = &state.results;
     app.set_results_query(o.query.clone().into());
+    app.set_results_beginning(o.beginning_input.clone().into());
+    app.set_results_ending(o.ending_input.clone().into());
+    app.set_results_invalid_filter(matches!(o.list_status, ResultsListStatus::Invalid(_)));
     let rows = o
         .rows
         .iter()
@@ -382,7 +385,9 @@ fn sync(app: &AppWindow, controller: &Controller) {
         ResultsListStatus::Empty => {
             "No invented reports match this view. This is not a clinical finding.".into()
         }
-        ResultsListStatus::Error(message) => message.clone().into(),
+        ResultsListStatus::Error(message) | ResultsListStatus::Invalid(message) => {
+            message.clone().into()
+        }
     });
     app.set_report_identity(
         o.selected
@@ -956,6 +961,13 @@ fn load_results(weak: slint::Weak<AppWindow>, shared: Shared, query: String) {
         c.last_report_click = None;
         c.state.begin_results_list(query)
     };
+    deliver_results_list(weak, shared, request);
+}
+fn deliver_results_list(
+    weak: slint::Weak<AppWindow>,
+    shared: Shared,
+    request: Option<ResultsListRequest>,
+) {
     paint(&weak, &shared);
     let Some(request) = request else {
         return;
@@ -979,7 +991,7 @@ fn load_results(weak: slint::Weak<AppWindow>, shared: Shared, query: String) {
             &shared,
             "results-list",
             request.patient_id.as_str(),
-            request.query.as_str(),
+            &format!("{:?}", request.filter),
             request.generation,
             applied,
         );
@@ -1045,6 +1057,26 @@ fn wire(app: &AppWindow, shared: &Shared) {
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_results_filter_edited(move |query| {
         load_results(weak.clone(), data.clone(), query.to_string());
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_results_dates_edited(move |beginning, ending| {
+        let request = {
+            let mut c = data.borrow_mut();
+            c.last_report_click = None;
+            let query = c.state.results.query.clone();
+            c.state
+                .begin_results_filter(query, beginning.to_string(), ending.to_string())
+        };
+        deliver_results_list(weak.clone(), data.clone(), request);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_results_reset_filters(move || {
+        let request = {
+            let mut c = data.borrow_mut();
+            c.last_report_click = None;
+            c.state.reset_results_filters()
+        };
+        deliver_results_list(weak.clone(), data.clone(), request);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_results_scenario_changed(move |index| {

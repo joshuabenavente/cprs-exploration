@@ -1,5 +1,5 @@
 //! One invented interim-style laboratory report browser. No broker wire types.
-use crate::{AppState, ChartTab, PatientId, PatientSummary, ProviderError, valid_date};
+use crate::{AppState, CalendarDay, ChartTab, PatientId, PatientSummary, ProviderError};
 use std::collections::HashSet;
 
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
@@ -44,11 +44,43 @@ impl ReportSummary {
     }
 }
 
+/// Authored inclusive calendar bounds, independent of FileMan/timezones.
+#[derive(Clone, Debug, Default, PartialEq, Eq)]
+pub struct ResultsFilter {
+    pub query: String,
+    pub beginning: Option<CalendarDay>,
+    pub ending: Option<CalendarDay>,
+}
+impl ResultsFilter {
+    pub fn validate(&self) -> Result<(), ProviderError> {
+        if self
+            .beginning
+            .as_ref()
+            .zip(self.ending.as_ref())
+            .is_some_and(|(a, b)| a > b)
+        {
+            return Err(ProviderError::Malformed(
+                "Beginning Results date must be on or before ending date.".into(),
+            ));
+        }
+        Ok(())
+    }
+    pub fn matches(&self, row: &ReportSummary) -> bool {
+        let Some(day) = row.date.get(..10) else {
+            return false;
+        };
+        self.beginning.as_ref().is_none_or(|d| day >= d.as_str())
+            && self.ending.as_ref().is_none_or(|d| day <= d.as_str())
+            && row.matches_query(&self.query)
+    }
+}
+
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct ResultsListRequest {
     pub generation: u64,
     pub patient_id: PatientId,
     pub query: String,
+    pub filter: ResultsFilter,
 }
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct ResultsList {
@@ -76,6 +108,7 @@ pub enum ResultsListStatus {
     Ready,
     Empty,
     Error(String),
+    Invalid(String),
 }
 #[derive(Clone, Debug, Default, PartialEq, Eq)]
 pub enum ReportDetailState {
@@ -90,7 +123,8 @@ pub enum ReportDetailState {
 pub struct ResultsWorkspace {
     pub patient_id: Option<PatientId>,
     pub query: String,
-
+    pub beginning_input: String,
+    pub ending_input: String,
     pub rows: Vec<ReportSummary>,
     pub list_status: ResultsListStatus,
     pub selected: Option<ReportSummary>,
@@ -107,6 +141,8 @@ impl ResultsWorkspace {
         self.detail_generation += 1;
         self.patient_id = None;
         self.query.clear();
+        self.beginning_input.clear();
+        self.ending_input.clear();
 
         self.rows.clear();
         self.list_status = ResultsListStatus::Idle;
@@ -131,9 +167,11 @@ impl ResultsWorkspace {
 fn valid_report_date(value: &str) -> bool {
     value.is_ascii()
         && value.len() == 16
-        && valid_date(&value[..10])
+        && CalendarDay::parse(&value[..10]).is_ok()
         && &value[10..11] == " "
         && &value[13..14] == ":"
+        && value[11..13].bytes().all(|b| b.is_ascii_digit())
+        && value[14..].bytes().all(|b| b.is_ascii_digit())
         && value[11..13].parse::<u8>().is_ok_and(|v| v < 24)
         && value[14..].parse::<u8>().is_ok_and(|v| v < 60)
 }
@@ -146,6 +184,21 @@ impl AppState {
             && self.active.is_some()
     }
     pub fn begin_results_list(&mut self, query: String) -> Option<ResultsListRequest> {
+        self.begin_results_filter(
+            query,
+            self.results.beginning_input.clone(),
+            self.results.ending_input.clone(),
+        )
+    }
+    pub fn reset_results_filters(&mut self) -> Option<ResultsListRequest> {
+        self.begin_results_filter(String::new(), String::new(), String::new())
+    }
+    pub fn begin_results_filter(
+        &mut self,
+        query: String,
+        beginning_input: String,
+        ending_input: String,
+    ) -> Option<ResultsListRequest> {
         if !self.results_allowed() {
             return None;
         }
@@ -155,14 +208,44 @@ impl AppState {
         n.list_generation += 1;
         n.patient_id = Some(patient_id.clone());
         n.query = query.clone();
-
+        n.beginning_input = beginning_input.clone();
+        n.ending_input = ending_input.clone();
         n.selected = None;
         n.rows.clear();
+        n.pending_list = None;
+        let parse_bound = |value: &str| {
+            if value.is_empty() {
+                Ok(None)
+            } else {
+                CalendarDay::parse(value).map(Some)
+            }
+        };
+        let filter = parse_bound(&beginning_input)
+            .and_then(|beginning| {
+                parse_bound(&ending_input).map(|ending| ResultsFilter {
+                    query: query.clone(),
+                    beginning,
+                    ending,
+                })
+            })
+            .and_then(|filter| {
+                filter.validate()?;
+                Ok(filter)
+            });
+        let filter = match filter {
+            Ok(filter) => filter,
+            Err(error) => {
+                self.message = format!("Invalid Results filter for {patient_id}: {error}");
+                n.list_status = ResultsListStatus::Invalid(self.message.clone());
+                return None;
+            }
+        };
         n.list_status = ResultsListStatus::Loading;
         let request = ResultsListRequest {
             generation: n.list_generation,
             patient_id,
             query,
+            filter,
         };
         n.pending_list = Some(request.clone());
         self.message = "Loading invented reports…".into();
@@ -193,7 +276,7 @@ impl AppState {
                         && row.report_type == "Invented interim-style text"
                         && !row.specimen.trim().is_empty()
                         && !row.location.trim().is_empty()
-                        && row.matches_query(&request.query)
+                        && request.filter.matches(row)
                         && ids.insert(row.id.clone())
                 })
             {
@@ -360,7 +443,7 @@ pub(crate) fn mock_results(patient: &PatientSummary, request: &ResultsListReques
                 specimen: format!("Training specimen {}", ['A', 'B', 'C', 'D'][i]),
                 location: patient.location.clone(),
             })
-            .filter(|r| r.matches_query(&request.query))
+            .filter(|r| request.filter.matches(r))
             .collect()
     };
     ResultsList {
@@ -379,6 +462,7 @@ pub(crate) fn mock_report_detail(
             generation: 0,
             patient_id: patient.id.clone(),
             query: String::new(),
+            filter: ResultsFilter::default(),
         },
     );
     let row = list
