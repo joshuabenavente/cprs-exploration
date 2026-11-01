@@ -187,6 +187,10 @@ export component AppWindow inherits Window {
         if panel == 0 { return problem-panel.geometry(); } else if panel == 1 { return allergy-panel.geometry(); } else if panel == 2 { return vital-panel.geometry(); } else if panel == 3 { return medication-panel.geometry(); }
         return appointment-panel.geometry();
     }
+    // Probe setup only: place content without moving focus, clamped like reveal.
+    public function set-cover-scroll(y: length) {
+        workspace-scroll.content-y = min(0px, max(y, workspace-scroll.visible-height - workspace-scroll.content-height));
+    }
     public function focus-cover-view(panel: int) {
         if panel == 0 { problem-panel.focus-view(); } else if panel == 1 { allergy-panel.focus-view(); } else if panel == 2 { vital-panel.focus-view(); } else if panel == 3 { medication-panel.focus-view(); } else { appointment-panel.focus-view(); }
     }

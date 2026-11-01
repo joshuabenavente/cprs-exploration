@@ -9,6 +9,7 @@ BASE = ROOT / 'validation/milestone-11'
 REQUIRED = {
     'layout-problems', 'layout-allergies', 'layout-vitals', 'layout-medications', 'layout-appointments',
     'reveal-appointments-view', 'reveal-medications-view', 'reveal-vitals-view', 'reveal-allergies-view', 'reveal-problems-view', 'layout-fixture-footer',
+    'review-final-state',
     'appointments-explicit-close-race', 'appointments-close-retains-row',
     'appointments-error', 'appointments-retry-real-timer',
     'appointments-late-error-tab', 'appointments-selector-cancel',
@@ -51,6 +52,12 @@ def main():
     require(automated['passed'], 'Automated checks did not pass')
     require({c['name'] for c in automated['checks'] if c['passed']} ==
             {'format', 'clippy', 'tests', 'build', 'callbacks', 'integrated'}, 'Missing automated check')
+    for check in automated['checks']:
+        # Step logs are rewritten in place by later runs; trust only the bytes
+        # this receipt recorded.
+        log = ROOT / check['log']
+        require(log.exists() and hashlib.sha256(log.read_bytes()).hexdigest() == check['log_sha256'],
+                'Step log missing or changed since receipt: ' + check['name'])
     digest = hashlib.sha256((ROOT / automated['executable']).read_bytes()).hexdigest()
     require(digest == automated['executable_sha256'], 'Executable differs from automated receipt')
     path = BASE / 'integrated.log'

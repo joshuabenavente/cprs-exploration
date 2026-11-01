@@ -28,10 +28,12 @@ def main():
     binary = digest(ROOT / auto['executable'])
     require(auto['passed'] and integrated['passed'] and clean['passed'], 'Required code/build receipt failed')
     require(binary == auto['executable_sha256'] == integrated['executable_sha256'] == probes['executable_sha256'], 'Executable changed')
-    require(len(REQUIRED) == 82 and {c['name'] for c in integrated['checkpoints']} == REQUIRED, 'Wrong journey version')
+    require(len(REQUIRED) == 83 and {c['name'] for c in integrated['checkpoints']} == REQUIRED, 'Wrong journey version')
     require(integrated['delivery_count'] == 92 and integrated['rejected_deliveries'] == 38, 'Delivery baseline changed')
     require(digest(ROOT / integrated['log']) == integrated['log_sha256'], 'Integrated log changed')
-    tests = (BASE / 'tests.log').read_text(encoding='utf-8-sig')
+    tests_check = next(c for c in auto['checks'] if c['name'] == 'tests')
+    require(digest(ROOT / tests_check['log']) == tests_check['log_sha256'], 'tests.log is not from the receipt run')
+    tests = (ROOT / tests_check['log']).read_text(encoding='utf-8-sig')
     require(sum(map(int, re.findall(r'^test result: ok\. (\d+) passed;', tests, re.M))) == 96, 'Core coverage changed')
     history = read('historical-bytes.json')
     git_blobs = dict(line.split(maxsplit=3)[2:][::-1] for line in subprocess.check_output(
@@ -45,6 +47,12 @@ def main():
         # checkout text may be CRLF; evidence files above still require exact bytes.
         canonical = hashlib.sha256((ROOT / name).read_bytes().replace(b'\r\n', b'\n')).hexdigest()
         require(canonical == expected, 'Clean checkout source is stale: ' + name)
+    # Hashing only receipt entries would miss files added later (e.g. a new
+    # integration test Cargo discovers automatically); compare the file set too.
+    current = set(subprocess.check_output(
+        ['git', 'ls-files', '--cached', '--others', '--exclude-standard', '--', 'crates'],
+        cwd=ROOT, text=True).splitlines())
+    require(current == set(clean['source_sha256']), 'Clean checkout source set differs from current crates/')
     build_inputs = {}
     for name in ('Cargo.toml', 'Cargo.lock', 'rust-toolchain.toml'):
         # Uncommitted snapshot trees are workstation-local objects. Bind the
@@ -60,6 +68,9 @@ def main():
         require(digest(BASE / 'published-clone.log') == published['log_sha256'], 'Published clone log changed')
     if ci['ci_passed']:
         require(ci['runs'] and all(r['status'] == 'completed' and r['conclusion'] == 'success' for r in ci['runs']), 'CI evidence is incomplete')
+        # A matching workflow hash alone could describe CI on another commit.
+        expected_commit = published['commit'] if published is not None else ci['commit']
+        require({r['headSha'] for r in ci['runs']} == {expected_commit}, 'CI runs belong to another commit')
     samples = probes['samples']
     require(len(samples) == 10 and {(r['size'], float(r['scale'])) for r in samples} ==
             {(size, scale) for size in ('default', 'minimum') for scale in (1, 1.25, 1.5, 1.75, 2)}, 'Missing probe matrix sample')
@@ -70,7 +81,7 @@ def main():
         log = path.read_text(encoding='utf-8-sig')
         checks = re.findall(r'^M11_CHECK ([a-z-]+) PASS elapsed_ms=\d+\s*$', log, re.M)
         require(len(checks) == len(REQUIRED) and set(checks) == REQUIRED and 'M11_INTEGRATED_FAIL' not in log, 'Incomplete probe journey')
-        require('M11_INTEGRATED_PASS cases=82 deliveries=92 rejected=38' in log, 'Probe summary changed')
+        require(f'M11_INTEGRATED_PASS cases={len(REQUIRED)} deliveries=92 rejected=38' in log, 'Probe summary changed')
         rows = re.findall(r'^M11_LAYOUT panel=(\d) top=([\d.-]+) bottom=([\d.-]+) table_bottom=([\d.-]+) view_top=([\d.-]+) help_bottom=([\d.-]+) viewport_top=([\d.-]+) viewport_bottom=([\d.-]+) content_height=([\d.-]+) scroll_y=([\d.-]+)\s*$', log, re.M)
         require(len(rows) == 5 and {int(r[0]) for r in rows} == set(range(5)), 'Missing panel geometry')
         geometry = []
@@ -94,7 +105,7 @@ def main():
     receipt = {
         'scope': 'M11 local code/build/timer/geometry checkpoint; separate native/listening/remote CI statuses below',
         'local_automated_checkpoint_passed': True, 'milestone_acceptance_complete': False,
-        'executable_sha256': binary, 'core_tests': 96, 'timed_checkpoints': 82,
+        'executable_sha256': binary, 'core_tests': 96, 'timed_checkpoints': len(REQUIRED),
         'actual_deliveries': 92, 'rejected_stale_deliveries': 38,
         'historical_worktree_and_git_files_verified': len(history['files']),
         'clean_windows_tree_passed': True, 'probe_samples': observations,

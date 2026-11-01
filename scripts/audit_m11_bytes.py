@@ -28,7 +28,7 @@ def main():
         meta, name = line.split('\t', 1)
         staged[name] = meta.split()[1]
     algorithm = git('rev-parse', '--show-object-format').decode().strip()
-    git('checkout-index', '--prefix=' + (local / 'checkout').as_posix() + '/', '--stdin',
+    git('-c', 'core.longpaths=true', 'checkout-index', '--prefix=' + (local / 'checkout').as_posix() + '/', '--stdin',
         env=env, input=('\n'.join(paths) + '\n').encode())
     verified = {}
     for name in paths:

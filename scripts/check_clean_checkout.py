@@ -18,8 +18,14 @@ def git(*args, env=None):
     return subprocess.check_output(['git', *args], cwd=ROOT, env=env).decode().strip()
 
 
+def long_path(path):
+    # Historical analysis paths reach 147 characters; under a deep checkout
+    # root they exceed Windows MAX_PATH unless the extended prefix is used.
+    return Path('\\\\?\\' + str(Path(path).resolve())) if os.name == 'nt' else Path(path)
+
+
 def digest(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(long_path(path).read_bytes()).hexdigest()
 
 
 def main():
@@ -44,18 +50,18 @@ def main():
         'validation/milestone-11/historical-bytes.json',
         'validation/milestone-11/startup-handoff.md', env=env)
     tree = git('write-tree', env=env)
-    git('-c', 'core.autocrlf=false', 'checkout-index', '--all',
+    git('-c', 'core.autocrlf=false', '-c', 'core.longpaths=true', 'checkout-index', '--all',
         '--prefix=' + destination.as_posix() + '/', env=env)
     history = json.loads((BASE / 'historical-bytes.json').read_text(encoding='utf-8'))
     object_format = git('rev-parse', '--show-object-format')
     normalized = []
     for name, entry in history['files'].items():
-        data = (destination / name).read_bytes()
+        data = long_path(destination / name).read_bytes()
         actual_blob = hashlib.new(object_format, b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
         if actual_blob != entry['git_blob']:
             raise ValueError('Historical Git blob changed: ' + name)
         if hashlib.sha256(data).hexdigest() != entry['worktree_sha256']:
-            original = (ROOT / name).read_bytes()
+            original = long_path(ROOT / name).read_bytes()
             if data.replace(b'\r\n', b'\n') != original.replace(b'\r\n', b'\n'):
                 raise ValueError('Non-line-ending historical difference: ' + name)
             normalized.append(name)
