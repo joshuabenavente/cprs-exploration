@@ -84,21 +84,30 @@ recover overwritten bytes.
 
 ## Acceptance
 
-M12 native acceptance remains incomplete. No speech/listening report exists for
-the changed executable. No new CI or fresh remote-clone validation is claimed.
-Original M10/M12 listening reports remain scoped to their original builds.
-The runtime remains synthetic and mock-only.
+Native visual/keyboard checks and Narrator listening are **user-reported passes
+across all ten size/scale combinations** on executable SHA256
+`a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3`.
+The user reported "everything passes" and clarified "All ten combinations":
+default and minimum sizes at 100%, 125%, 150%, 175% and 200%, including both
+native checks and Narrator listening. See the separate results and complete
+sample list in the [supplemental acceptance receipt](user-acceptance.json).
+These later reports close the user-reported native and listening checklists.
+The targeted native observations above retain their narrower independent scope.
 
-Next acceptance work: complete all requested activation methods, upper/middle/
-lower content and footer review, forward/reverse traversal, read-only scrolling,
-empty SYNTH-002 panels, and resize/cancellation repetition for every sample on
-this new executable. The two targeted samples above are not full sample
-sign-offs; the other eight have new synthetic geometry coverage only. Independent
-native client-area measurements and a new-build listening report remain absent.
-Use `Review-CoverSheetFollowup.ps1 -Size minimum -ScaleFactor 2` (or the other
-supported size/scale combinations), never the original receipt-bound launcher
-for this build. Start a new appended evidence range rather than replacing these
-native records.
+Independent native client-area measurements, audio capture and automated native
+matrix verification remain unavailable. The retained
+[default-100 launcher log](native-default-100-20261101T0324349586880Z.log) is
+hashed in the supplemental receipt as synthetic preparation evidence only; it
+does not independently prove all ten passes. No runtime change, rebuild or
+repeated listening session was performed for this documentation update. No new
+CI or fresh remote-clone validation is claimed. Original listening reports
+remain scoped to their original builds. The runtime remains synthetic and mock-only.
+
+The existing index and its capture-time status fields remain unchanged. Its
+`report.md` hash is verifiable against the byte-exact
+[preserved pre-acceptance report](report-before-user-acceptance.md); the
+supplemental receipt explicitly records this path mapping. The overwritten-log
+correction above remains in effect.
 
 ## Publication verification
 
