@@ -1,5 +1,14 @@
 # CPRS Chart recreation: current handoff
 
+M14 implementation and Linux validation are complete locally at `d00d534` on
+`m14-results-date-filters`. Publication is blocked: automatic approval review
+rejected the push because it limited prior publication authorization to M13.
+No M14 branch or draft PR was uploaded/created. See the
+[publication-block receipt](../validation/milestone-14/publication-block.json).
+Exact next action: obtain explicit approval to publish M14 code, documentation
+and validation evidence to `joshuabenavente/cprs-exploration` and open a draft PR;
+then push and check code/build CI. M14 merge remains unauthorized.
+
 M14 is active on `m14-results-date-filters`, from merged `main`
 `62bd340501f0d7753e1807cec12d7a967f8fb403`. [M13 PR #8](https://github.com/joshuabenavente/cprs-exploration/pull/8)
 merged after both final-head portable-core and Windows desktop code/build CI jobs
@@ -18,8 +27,9 @@ Each journey has 100 checkpoints, 122 deliveries and 53 stale-reply rejections.
 All 2,447 pre-M14 evidence files remain byte-identical. See the
 [acceptance checkpoint](../validation/milestone-14/acceptance.json) and
 [targeted synthetic visual review](../validation/milestone-14/linux/synthetic-visual-review.json).
-Exact next action: publish the draft PR, verify code/build CI, then perform the
-fresh Windows matrix and separate native/Narrator checks. M14 merge is not authorized.
+After explicit M14 publication approval: publish the draft PR, verify code/build
+CI, then perform the fresh Windows matrix and separate native/Narrator checks.
+M14 merge is not authorized.
 New validation uses `validate_m14.py`, `verify_m14.py` (also available through
 `verify_integrated.py`), `Test-MockChart.ps1`, `Review-ResultsFilters.ps1`, and
 `validation/milestone-14/`. Historical M13 writers now fail before writing.

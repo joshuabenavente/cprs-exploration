@@ -1,0 +1,17 @@
+{
+  "protocol": "M14",
+  "scope": "New local publication checkpoint after completed implementation/validation",
+  "local_implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
+  "branch": "m14-results-date-filters",
+  "destination": "https://github.com/joshuabenavente/cprs-exploration",
+  "requested_action": "git push -u origin m14-results-date-filters, then create draft PR targeting main",
+  "status": "blocked by automatic approval review before process execution",
+  "branch_published": false,
+  "pull_request_created": false,
+  "code_build_ci": "not run for M14: branch was not uploaded",
+  "automatic_review_reason": "This pushes the new M14 branch and its project/evidence files to GitHub, but the user\u2019s explicit publication approval covered only M13; sensitive repository egress to an unverified destination is therefore unauthorized.",
+  "response": "No bypass or indirect upload attempted. Completed local work and saved reviewable handoff; explicit approval to publish M14 code/docs/validation evidence and open a draft PR is the next dependency.",
+  "local_validation": "validation/milestone-14/acceptance.json",
+  "acceptance_receipt_sha256": "37464f1cad4dc9fcafb9cc42bdd5f1c8edff0e599b7da5c4600bdddcc0df5c30",
+  "merge_authorized": false
+}

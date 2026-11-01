@@ -22,7 +22,8 @@ predicates. Intrinsic card height must permit keyboard scrolling. Linux virtual
 display evidence does not establish Windows visual, keyboard or Narrator results.
 All historical evidence is immutable; new receipts belong under milestone-14.
 
-Exact next action: publish a draft PR and verify code/build CI, then perform the
+Exact next action: obtain explicit M14 publication approval after automatic review
+blocked the push, then publish a draft PR and verify code/build CI. Perform the
 M14 Windows matrix and affected-controls native/Narrator checklist. Do not merge
 M14 without further instruction.
 
@@ -71,3 +72,13 @@ native work must use the new Windows executable, source/build-bound matrix and
 [Results checklist](../validation/milestone-14/native-checklist.md). M13 remains
 merged with its own native/listening acceptance pending; older M12 acceptance
 remains bound to its historical build. No acceptance was inherited.
+
+
+Publication checkpoint: local implementation commit `d00d534`; Git push was
+rejected before execution by automatic approval review, which interpreted prior
+publication approval as M13-only. No M14 PR exists and M14 CI has not run. The
+[block receipt](../validation/milestone-14/publication-block.json) records the
+exact action and reason. All implementation/validation work is concrete and
+reviewable locally; the remaining upload needs explicit approval for this M14
+branch and its code/documentation/validation evidence. Do not merge without a
+separate instruction.
