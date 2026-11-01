@@ -32,5 +32,8 @@ startup evidence files remain byte-identical. See
 [PR #13](https://github.com/joshuabenavente/cprs-exploration/pull/13) is merged
 after final-head portable/Windows code-build CI passed. The topic is pruned
 locally/remotely; see [delivery receipt](../validation/milestone-17/functional-100/merge-checkpoint.json).
-Windows manual functionality is not run
-for M17; keyboard/screen-reader checks remain excluded and other scales deferred.
+The user subsequently reported **“all passes”** for the default/minimum 100%
+manual checklist. [The report](../validation/milestone-17/functional-100/windows/user-acceptance.json)
+records this user-reported pass separately from exact Windows build/receipt
+binding, which remains pending. Keyboard/screen-reader checks remain excluded
+and other scales deferred.

@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M17 Orders grouping merged after local 100% functional checks and final-head hosted CI passed; branch pruned; new Windows manual functional acceptance not run",
+  "condition": "M17 merged and pruned; local/hosted checks pass; default/minimum 100% manual checklist user-reported pass; exact Windows build/receipt binding pending",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -27,7 +27,7 @@
       "id": "M17",
       "priority": "P1",
       "task": "Read-only Orders grouping by service",
-      "status": "Merged and pruned; local/hosted checks pass; new Windows manual functional acceptance pending",
+      "status": "Merged/pruned; local and hosted checks pass; user reports all manual functional checks pass; Windows build binding pending",
       "contract": "specifications/orders-grouping.md"
     },
     {
@@ -201,7 +201,7 @@
       "mitigation": "full typed filter/generation/owner equality, response predicates and list/detail invalidation tests"
     }
   ],
-  "next_action": "Run M17 Windows automation, then manual functional checklist at default/minimum 100%",
+  "next_action": "Bind M17 all-passes report to Windows verifier, tested source and M17F100 receipt/executable hash; manual checklist does not need repeating",
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
     "traceability": "docs/traceability-2026-11-01.md",
@@ -307,7 +307,7 @@
   },
   "current_validation": {
     "protocol": "M17F100",
-    "state": "Linux automated and final-head portable/Windows code-build CI passed; new Windows manual functional acceptance not run",
+    "state": "Linux automated and hosted CI passed; M17 Windows manual checklist user-reported pass; exact Windows build binding pending",
     "application_scales": [
       1.0
     ],
@@ -319,7 +319,7 @@
     "focus_assertions": "excluded by user",
     "screen_readers": "excluded by user",
     "other_scales": "deferred until functional work is finished",
-    "windows_functional": "not run for new build",
+    "windows_functional": "user-reported manual pass at both 100% sizes; Windows receipt/build binding pending",
     "functional_acceptance_complete": false,
     "core_tests_passed": 157,
     "protocol_tests_passed": 21,
@@ -330,7 +330,9 @@
     "rejected": 86,
     "acceptance_receipt": "validation/milestone-17/functional-100/acceptance.json",
     "historical_files_unchanged": 2597,
-    "windows_code_build_ci": "Passed on PR #13 head a7a021425dfc88392384234d83b434713e6a0908; run 41361147627"
+    "windows_code_build_ci": "Passed on PR #13 head a7a021425dfc88392384234d83b434713e6a0908; run 41361147627",
+    "manual_functional_user_report_complete": true,
+    "windows_user_acceptance_receipt": "validation/milestone-17/functional-100/windows/user-acceptance.json"
   },
   "publication": {
     "state": "Functional-only policy merged and topic branch pruned",
@@ -661,7 +663,7 @@
   },
   "current_windows_acceptance": {
     "protocol": "M17F100",
-    "functional_results": "not run for new build; M16 results retained separately",
+    "functional_results": "user-reported manual checklist pass at default/minimum 100%; exact Windows build binding pending",
     "functional_acceptance_complete": false,
     "keyboard_navigation": "excluded by user",
     "screen_readers": "excluded by user",
@@ -671,7 +673,13 @@
     "sizes": [
       "default",
       "minimum"
-    ]
+    ],
+    "manual_functional_user_report_complete": true,
+    "evidence_level": "user-reported",
+    "receipt": "validation/milestone-17/functional-100/windows/user-acceptance.json",
+    "executable_sha256": null,
+    "tested_source_commit": null,
+    "build_binding": "pending supplied Windows outputs; no M16 or Linux identity inherited"
   },
   "validation_policy": {
     "protocol": "M17F100",

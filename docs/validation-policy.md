@@ -27,3 +27,9 @@ it does not drive an automated journey while the user reviews functionality.
 The active journey uses callbacks and real timers without asserting keyboard
 focus or dispatching Tab/Shift+Tab events. Normal typing into functional filter
 fields remains allowed. App keyboard/scaling functionality remains available.
+
+M17 update: the user reports **“all passes”** for the scoped manual checklist.
+The [M17 report](../validation/milestone-17/functional-100/windows/user-acceptance.json)
+records both 100% sizes as user-reported pass; exact Windows source/executable
+and receipt binding is pending. No manual rerun is requested to collect those
+read-only bindings.

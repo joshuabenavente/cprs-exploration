@@ -7,8 +7,9 @@ Initial scope includes Chart forms, navigation, client state, and the interfaces
 M17 [PR #13](https://github.com/joshuabenavente/cprs-exploration/pull/13) is merged
 and pruned after local checks and final-head CI passed. It adds read-only
 [Orders grouping by service](docs/milestone-17.md), with
-[authored grouping rules](specifications/orders-grouping.md). Current Windows
-manual acceptance is pending for the new binary; prior
+[authored grouping rules](specifications/orders-grouping.md). The user reports
+all M17 manual functional checks passed at default/minimum 100%; exact Windows
+build binding is pending. See the [report](validation/milestone-17/functional-100/windows/user-acceptance.json). Prior
 [M16 acceptance](validation/milestone-16/functional-100/windows/user-acceptance.json)
 is preserved without transferring its passes.
 

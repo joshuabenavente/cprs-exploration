@@ -1,0 +1,52 @@
+{
+  "protocol": "M17F100",
+  "recorded_at_utc": "2026-11-01T23:27:00.730641+00:00",
+  "scope": "M17 manual functionality at default/minimum 100%; keyboard/focus/navigation and screen readers excluded",
+  "verbatim_manual_report": "all passes",
+  "sample_scope_basis": "Reply to the delivered M17 instructions and seven-item checklist for default-100 and minimum-100",
+  "checklist": "validation/milestone-17/functional-100/manual-checklist.md",
+  "checklist_sha256": "a444b14d3b9eb7b4e895284bb3951e63722e33262e79102d939388acac3692dd",
+  "checklist_items": 7,
+  "samples": [
+    {
+      "sample": "default-100",
+      "size": "default",
+      "application_scale": 1.0,
+      "manual_functional": "user-reported pass"
+    },
+    {
+      "sample": "minimum-100",
+      "size": "minimum",
+      "application_scale": 1.0,
+      "manual_functional": "user-reported pass"
+    }
+  ],
+  "manual_functional": "user-reported pass for the scoped checklist",
+  "manual_checklist_report_complete": true,
+  "functional_acceptance_complete": false,
+  "executable_sha256": null,
+  "tested_windows_source_commit": null,
+  "build_binding": {
+    "state": "pending Windows verifier/receipt summary and tested source/executable identity",
+    "delivered_reference_commit": "f770a197d996a4ace021681b7167c56d74b4a59b",
+    "delivered_reference_is_not_a_claim_of_tested_source": true,
+    "windows_automated_receipt_supplied": false,
+    "windows_logs_independently_verified": false,
+    "windows_binary_independently_hashed": false,
+    "requested_read_only_outputs": [
+      "python scripts/verify_integrated.py",
+      "git rev-parse HEAD",
+      "M17 Windows automated.json protocol/passed/matrix_requested/executable_sha256"
+    ]
+  },
+  "automated_functional": "No Windows console/receipt/logs supplied with this message; broad report follows automated and manual instructions",
+  "keyboard_navigation": "excluded by user",
+  "focus_checks": "excluded by user",
+  "screen_readers": "excluded by user",
+  "other_scales": "deferred until functional work is finished",
+  "limits": [
+    "Manual pass is the user report, not an independent assistant Windows rerun.",
+    "No Windows executable hash or tested source was supplied; do not copy Linux or M16 artifact identities.",
+    "This report does not reclassify any historical failures or acceptance records."
+  ]
+}
