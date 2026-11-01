@@ -18,6 +18,11 @@ $steps = @(
 )
 if ($CodeOnly) { $steps = @($steps | Where-Object { $_.Name -notin @('callbacks', 'integrated') }) }
 if ($Bootstrap) { $steps = @(@{ Name = 'bootstrap'; Arguments = @('fetch', '--locked') }) + $steps }
+$receiptName = if ($CodeOnly) { 'code-checks.json' } else { 'automated.json' }
+# Remove this mode's receipt and every step log first, so a failed or partial
+# run can never leave an earlier passing log beside its new receipt.
+$staleNames = @($receiptName) + @($steps | ForEach-Object { $_.Name + '.log' })
+foreach ($name in $staleNames) { Remove-Item -LiteralPath (Join-Path $validation $name) -Force -ErrorAction SilentlyContinue }
 $results = @()
 $failure = $null
 $priorIncremental = $env:CARGO_INCREMENTAL
@@ -34,9 +39,12 @@ try {
             $output = & cargo @arguments 2>&1
             $code = $LASTEXITCODE
         } finally { $ErrorActionPreference = 'Stop' }
-        $output | ForEach-Object { $_.ToString() } | Set-Content -LiteralPath (Join-Path $validation ($step.Name + '.log')) -Encoding utf8
+        $logName = $step.Name + '.log'
+        $logPath = Join-Path $validation $logName
+        # A successful silent step (notably cargo fmt) still needs an empty log.
+        Set-Content -LiteralPath $logPath -Value @($output | ForEach-Object { $_.ToString() }) -Encoding utf8
         $output | ForEach-Object { $_.ToString() } | Write-Output
-        $results += [ordered]@{ name = $step.Name; command = 'cargo ' + ($arguments -join ' '); exit_code = $code; passed = ($code -eq 0) }
+        $results += [ordered]@{ name = $step.Name; command = 'cargo ' + ($arguments -join ' '); exit_code = $code; passed = ($code -eq 0); log = "validation/milestone-$Milestone/$logName"; log_sha256 = (Get-MockFileSha256 -LiteralPath $logPath) }
         if ($code -ne 0) { $failure = $step.Name; break }
     }
     $binary = Join-Path $root 'target/debug/cprs-chart-mock.exe'
@@ -58,7 +66,6 @@ try {
         executable_sha256 = if (Test-Path -LiteralPath $binary) { Get-MockFileSha256 -LiteralPath $binary } else { $null }
         evidence_limits = @('Callback smoke uses immediate responses; the separate integrated journey uses real timers and checks accepted/rejected deliveries and UI bindings. It does not inject physical keys or verify speech.', 'Visual and keyboard observations are recorded separately.', 'No clinical server or original CPRS process is involved.')
     }
-    $receiptName = if ($CodeOnly) { 'code-checks.json' } else { 'automated.json' }
     $receipt | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $validation $receiptName) -Encoding utf8
     if ($failure) { throw "Mock validation failed at: $failure" }
 } finally {

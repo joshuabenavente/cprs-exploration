@@ -1380,6 +1380,10 @@ fn journey() -> VecDeque<Step> {
         |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
         noop,
     ));
+    // Reveal probes: focus placement and scrolling are setup only. Each target
+    // region is first moved out of the viewport, then a dispatched Tab or
+    // Shift+Tab moves focus, so only the panels' own focus handlers can bring
+    // it back. Removing those handlers must fail these checkpoints.
     for (panel, name) in [
         (0, "layout-problems"),
         (1, "layout-allergies"),
@@ -1387,20 +1391,39 @@ fn journey() -> VecDeque<Step> {
         (3, "layout-medications"),
         (4, "layout-appointments"),
     ] {
-        q.push_back(Step::new(name, move |a, _| {
-            a.invoke_cover_selected(panel, 0);
-            a.invoke_focus_cover(panel);
-            Ok(())
-        }, now, move |a, _| {
-            let g = a.invoke_cover_geometry(panel);
-            let top = a.get_workspace_top();
-            let bottom = top + a.get_workspace_visible_height();
-            require!(g.top >= top - 1.0 && g.table_bottom <= bottom + 1.0, "focused heading/table clipped by workspace");
-            require!(g.table_bottom <= g.view_top && g.help_bottom <= g.bottom, "panel controls overlap or escape card");
-            require!(a.get_cover_content_height() >= a.get_workspace_visible_height(), "content smaller than viewport");
-            println!("M11_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
-            Ok(())
-        }));
+        q.push_back(Step::new(
+            name,
+            move |a, _| {
+                a.invoke_cover_selected(panel, 0);
+                a.invoke_focus_cover_view(panel);
+                require!(
+                    a.invoke_cover_geometry(panel).view_focused,
+                    "setup could not focus View"
+                );
+                // Put View at the viewport top so the heading/table sit above it.
+                let view_top = content_y(a, a.invoke_cover_geometry(panel).view_top);
+                a.invoke_set_cover_scroll(-view_top);
+                dispatch_tab(a, true);
+                Ok(())
+            },
+            now,
+            move |a, _| {
+                let g = a.invoke_cover_geometry(panel);
+                let top = a.get_workspace_top();
+                let bottom = top + a.get_workspace_visible_height();
+                require!(!g.view_focused, "Shift+Tab did not leave View");
+                require!(
+                    in_viewport(a, g.top, g.table_bottom),
+                    "Shift+Tab table entry left heading/table clipped"
+                );
+                require!(
+                    g.table_bottom <= g.view_top && g.help_bottom <= g.bottom,
+                    "panel controls overlap or escape card"
+                );
+                println!("M11_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
+                Ok(())
+            },
+        ));
     }
     for (panel, name) in [
         (4, "reveal-appointments-view"),
@@ -1412,17 +1435,20 @@ fn journey() -> VecDeque<Step> {
         q.push_back(Step::new(
             name,
             move |a, _| {
-                a.invoke_focus_cover_view(panel);
+                a.invoke_focus_cover(panel);
+                // Put the table bottom at the viewport bottom so View/help sit below it.
+                let table_bottom = content_y(a, a.invoke_cover_geometry(panel).table_bottom);
+                a.invoke_set_cover_scroll(a.get_workspace_visible_height() - table_bottom);
+                dispatch_tab(a, false);
                 Ok(())
             },
             now,
             move |a, _| {
                 let g = a.invoke_cover_geometry(panel);
+                require!(g.view_focused, "Tab from table did not focus View");
                 require!(
-                    g.view_top >= a.get_workspace_top() - 1.0
-                        && g.help_bottom
-                            <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0,
-                    "focused View/help clipped by workspace"
+                    in_viewport(a, g.view_top, g.help_bottom),
+                    "Tab-focused View/help clipped by workspace"
                 );
                 Ok(())
             },
@@ -1443,12 +1469,72 @@ fn journey() -> VecDeque<Step> {
                         <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0,
                 "fixture footer overlaps card or is unreachable"
             );
-            a.invoke_cover_selected(4, 2);
+            Ok(())
+        },
+    ));
+    // Restore the documented review state that the layout probes disturbed:
+    // only the review checkpoint's VITAL-03, MED-03 and APPT-03 selections.
+    q.push_back(Step::new(
+        "review-final-state",
+        |a, _| {
+            for (panel, index) in [(0, -1), (1, -1), (2, 2), (3, 2), (4, 2)] {
+                a.invoke_cover_selected(panel, index);
+            }
             a.invoke_focus_cover(4);
+            Ok(())
+        },
+        now,
+        |a, s| {
+            owned(a, s, "SYNTH-001", ChartTab::CoverSheet)?;
+            // Pin every panel: native review starts from exactly this state.
+            // Table focus is not asserted; the Cover Sheet focus probe is generic.
+            require!(
+                a.get_selected_problem() == -1
+                    && a.get_selected_allergy() == -1
+                    && a.get_selected_vital() == 2
+                    && a.get_selected_medication() == 2
+                    && a.get_selected_appointment() == 2,
+                "review selections not restored to VITAL-03/MED-03/APPT-03"
+            );
+            require!(
+                !a.get_detail_open() && a.get_detail_body().is_empty(),
+                "review detail not closed"
+            );
             Ok(())
         },
     ));
     q
+}
+
+/// Synthetic Slint key events through the normal window dispatch path. This
+/// exercises focus traversal and key handlers; it is not native OS input.
+fn dispatch_tab(a: &AppWindow, reverse: bool) {
+    use slint::platform::{Key, WindowEvent};
+    let window = a.window();
+    if reverse {
+        window.dispatch_event(WindowEvent::KeyPressed {
+            text: Key::Shift.into(),
+        });
+    }
+    window.dispatch_event(WindowEvent::KeyPressed {
+        text: Key::Tab.into(),
+    });
+    window.dispatch_event(WindowEvent::KeyReleased {
+        text: Key::Tab.into(),
+    });
+    if reverse {
+        window.dispatch_event(WindowEvent::KeyReleased {
+            text: Key::Shift.into(),
+        });
+    }
+}
+/// Converts an absolute y into workspace content coordinates.
+fn content_y(a: &AppWindow, absolute: f32) -> f32 {
+    absolute - a.get_workspace_top() - a.get_cover_scroll_y()
+}
+fn in_viewport(a: &AppWindow, top: f32, bottom: f32) -> bool {
+    let viewport_top = a.get_workspace_top();
+    top >= viewport_top - 1.0 && bottom <= viewport_top + a.get_workspace_visible_height() + 1.0
 }
 
 struct Running {

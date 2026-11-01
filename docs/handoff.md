@@ -41,6 +41,17 @@ The clean checkout checker exports the current uncommitted Git tree through a pr
 
 New M11 receipts have byte-preserving Git attributes and a separate private-index staging/checkout audit. No historical receipts should be regenerated with the new executable. Do not use `verify_appointments_checkpoint.py` for M11.
 
+## Post-M11 review fixes (branch `review/m11-validation-fixes`)
+
+A read-only review of `b774e9b` found validation gaps, not runtime defects. This branch changes test/validation code only; **no committed receipt was regenerated**, so `validation/milestone-11/` still describes the `10f21c4` executable and its 82-checkpoint journey. Fresh evidence for this branch needs a separate protocol decision (for example an M12 path) before running `Test-MockChart.ps1` here, because the runner writes into `validation/milestone-11/`.
+
+- The layout and reveal-View checkpoints now move focus with dispatched Slint Tab/Shift+Tab events after scrolling the target out of view, so they fail if the Tab-release or View-focus reveal handlers are removed. They previously called `reveal` directly. This is synthetic window dispatch, not native OS input.
+- New checkpoint `review-final-state` restores the review selections that the layout probes disturbed (journey: 83 checkpoints; deliveries unchanged at 92/38).
+- `Test-MockChart.ps1` deletes this mode's receipt and step logs before running, creates an empty log for successful silent steps such as formatting, and records each step log's SHA-256. The verifiers reject changed step logs, CI runs for a different commit, and `crates/` file-set drift since the clean checkout.
+- Clean-checkout and byte-audit checkouts enable `core.longpaths`; Python reads use extended-length paths.
+
+The longest tracked path is 147 characters. For a manual Windows clone, use a short base path or `git clone -c core.longpaths=true …`.
+
 ## Remaining work
 
 1. Restore the supported computer-use helper and run `Review-CoverSheet.ps1 -Matrix`. The exact availability failure is in [native status](../validation/milestone-11/native-status.json). Inspect all five panels, upper/middle/lower content and fixed frame at default/minimum sizes, 100%, 125%, 150%, 175% and 200%. Native forward/reverse Tab, arrows, explicit activation, initial reading focus, Escape return, Ctrl+O cancellation, resize repetition, Unicode/empty panels and read-only scrolling/selection remain required.
