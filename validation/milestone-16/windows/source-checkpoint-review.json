@@ -1,0 +1,21 @@
+{
+  "protocol": "M16",
+  "recorded_at_utc": "2026-11-01T21:59:32.970011+00:00",
+  "scope": "Supplemental user-reported Windows source/missing-receipt checkpoint; previous reports and hash review retained",
+  "user_reported_git_head": "1617e03b65f2f869b4a37e99e2d41f5766cf77d9",
+  "user_reported_receipt_path": "validation/milestone-16/windows/automated.json",
+  "user_reported_receipt_result": "Get-Content ObjectNotFound / PathNotFound; file does not exist",
+  "local_repository_verification": {
+    "checked_ci_pr_head": "34019be9aa7a867f9d4d3022c125e26e704db73e",
+    "tracked_runtime_build_inputs_identical": true,
+    "method": "git diff --exit-code between reported commit and tested PR head for crates/scripts/.github/Cargo.toml/Cargo.lock/rust-toolchain.toml",
+    "windows_worktree_or_executable_independently_inspected": false
+  },
+  "binding_review": "validation/milestone-16/windows/build-binding-review.json",
+  "binding_review_sha256": "8035d77a1aabd5458e4f6c3eeb25956a95dc12ec3c3b6386e1767eb2be70bae8",
+  "conclusion": "Reported Git commit contains M16 runtime/build inputs, while supplied executable hash matches historical M12 and completed M16 Windows matrix receipt is absent. Current tested artifact/native acceptance remains unresolved.",
+  "recovery_guide": "docs/m16-windows-rebuild.md",
+  "recovery_executed_by_assistant": false,
+  "next_action": "Preserve existing Windows executable/evidence outside repo, clear generated desktop-package artifacts, run fresh M16 matrix and verifier, return receipt/hash, then repeat native/listening samples on verified build",
+  "current_m16_native_acceptance_complete": false
+}

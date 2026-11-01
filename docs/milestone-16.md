@@ -51,6 +51,9 @@ Narrator checklist. The [raw report](../validation/milestone-16/windows/user-acc
 retains those user-reported passes. The subsequently supplied Windows EXE SHA256
 exactly matches the historical M12 acceptance record; the
 [binding review](../validation/milestone-16/windows/build-binding-review.json)
-records this conflict. M16 applicability and acceptance remain unresolved pending
-Windows Git HEAD and the current M16 automated receipt. No independent native
+records this conflict. The user then reported Windows Git HEAD `1617e03` and
+confirmed the M16 matrix receipt is missing. The source has checked M16 runtime/
+build inputs, but executable/native applicability remains unresolved. Use the
+[rebuild guide](m16-windows-rebuild.md) and
+[source checkpoint](../validation/milestone-16/windows/source-checkpoint-review.json). No independent native
 or speech rerun is claimed; original raw receipts/checklists remain unchanged.

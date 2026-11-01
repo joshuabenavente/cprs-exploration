@@ -50,7 +50,10 @@ checklist. See the [supplemental report](../validation/milestone-16/windows/user
 The supplied Windows SHA256 exactly matches the historical M12 acceptance
 record. The [binding review](../validation/milestone-16/windows/build-binding-review.json)
 records this conflict; M16 acceptance is not established by the supplied identity.
-Windows Git HEAD and the current M16 matrix receipt have been requested. No raw
+The user reports Windows Git HEAD `1617e03` (same tracked runtime/build inputs
+as the checked M16 head) and confirms the M16 Windows automated receipt is
+missing. The [source checkpoint](../validation/milestone-16/windows/source-checkpoint-review.json)
+records this. A fresh build/matrix binding is needed. No raw
 Windows source/build receipts, screenshots or independent listening rerun were
 inspected here. M12's historical user-reported acceptance stays bound to its old executable;
 M13/M14/M15 receipts retain their capture-time status. The M16 checklist can
@@ -74,10 +77,11 @@ writes and DLL/original execution remain outside this project's runtime scope.
 
 ## Recommended next work
 
-1. Resolve the reported Windows build identity: its supplied hash matches the
-   historical M12 record. Obtain Windows Git HEAD and the current M16 automated
-   receipt; verify or rebuild M16 and reconcile the report before treating it as
-   current-build acceptance. Retain user reports and raw evidence separately.
+1. Use the [Windows rebuild guide](m16-windows-rebuild.md) to preserve the existing
+   executable/evidence and produce a fresh M16 matrix receipt and matching EXE
+   hash. Then repeat the native/listening samples on the verified build. The
+   reported source is M16, but the matrix receipt is absent and supplied hash
+   matches historical M12. Retain prior reports and raw evidence separately.
 2. Choose the next bounded read-only feature from the remaining fidelity gaps,
    with an authored contract and supporting static evidence where available.
    Keep the five transport/save/login/DLL investigation targets deferred while

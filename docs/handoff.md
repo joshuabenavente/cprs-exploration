@@ -7,9 +7,14 @@ The subsequent Windows EXE SHA256 is `a88cddab73f0d9978587c1ad211e1f93783acd31f1
 which exactly matches the historical M12 acceptance record. See the
 [build-binding review](../validation/milestone-16/windows/build-binding-review.json).
 M16 applicability is unresolved; do not promote current-build acceptance yet.
-Exact next action: obtain Windows Git HEAD and current M16 automated receipt
-protocol/pass/executable hash fields, then verify or rebuild the intended M16
-source and reconcile the report. No independent Windows or speech rerun occurred.
+The user subsequently reported Git HEAD `1617e03` and a missing M16 Windows
+matrix receipt. That commit has the same tracked runtime/build inputs as the
+checked M16 PR head. The [source checkpoint](../validation/milestone-16/windows/source-checkpoint-review.json)
+records the evidence. Exact next action: follow the
+[Windows rebuild guide](m16-windows-rebuild.md), preserving the old EXE/evidence
+before forcing a fresh desktop-package build and matrix/verifier run. Return
+matching receipt/hash, then repeat native/listening checks on the verified build.
+No independent Windows or speech rerun occurred.
 All original receipts and checklists remain unchanged.
 
 M16 [patient-search page integrity](milestone-16.md) is merged in
