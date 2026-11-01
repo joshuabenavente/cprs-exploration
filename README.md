@@ -4,6 +4,8 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
+Development continues on `main`, tracking `origin/main`; `main` is the GitHub default. Earlier milestone history, tags and evidence are preserved. See the [current handoff](docs/handoff.md).
+
 ## Run the Rust mock
 
 ```powershell

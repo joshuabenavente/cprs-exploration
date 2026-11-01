@@ -1,8 +1,10 @@
 # Milestone 11: shared Cover Sheet hardening
 
-Implementation `10f21c4` was merged as `be30bcd` through [PR #1](https://github.com/joshuabenavente/cprs-exploration/pull/1) from the subsequently pruned `codex/milestone-11-hardening` branch into default `codex/milestone-10-appointments`, from handoff commit `da4298807b9e24017352bd247f382315cc4c8d9d`. The runtime remains compiled, invented, mock-only and read-only. No domain panel, original-client execution, recovery work or connectivity was added. Milestone acceptance remains open for native review; actual remote CI results are recorded in `ci-status.json`. The user reported the separate final-build M11 listening checklist passed (reply: "checks pass"). M10 Appointments listening is still pending.
+Implementation `10f21c4` was merged as `be30bcd` through [PR #1](https://github.com/joshuabenavente/cprs-exploration/pull/1) from the subsequently pruned `codex/milestone-11-hardening` branch into then-default `codex/milestone-10-appointments`, from handoff commit `da4298807b9e24017352bd247f382315cc4c8d9d`. The runtime remains compiled, invented, mock-only and read-only. No domain panel, original-client execution, recovery work or connectivity was added. Milestone acceptance remains open for native review; actual remote CI results are recorded in `ci-status.json`. The user reported the separate final-build M11 listening checklist passed (reply: "checks pass"). M10 Appointments listening is still pending.
 
 Local validation passed formatting, warning-denied Clippy, 96 core tests, desktop compilation, immediate callback smoke, 82 timed checkpoints, all ten default/minimum geometry probe samples, and the corrected fresh Windows checkout/build. All 686 historical worktree files and Git identities were verified; new M11 evidence passed exact staging/checkout byte checks. See [the bounded receipt](../validation/milestone-11/acceptance.json). These automated results leave native review open; M11 listening is a separate user-reported pass.
+
+Development now continues on `main`; all obsolete milestone branches were confirmed as ancestors before pruning. The [main consolidation receipt](../validation/milestone-11/main-consolidation.json) records passing CI on the promoted published head, preserved tags and evidence, and updated branch/default tracking.
 
 ## Layout and focus changes
 
