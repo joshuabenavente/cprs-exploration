@@ -1,5 +1,13 @@
 # Project state after M16
 
+Current functional-only acceptance is complete at the user-reported manual level:
+supplied Windows automation/source/log bindings verified, and default/minimum
+100% manual checklists reported passed. See
+[current acceptance](../validation/milestone-16/functional-100/windows/user-acceptance.json)
+and [review](../validation/milestone-16/functional-100/windows/acceptance-review.json).
+Keyboard/focus/navigation and screen readers remain excluded; other scales stay
+deferred. No new feature milestone or additional-scale work has started.
+
 Current policy update: functional testing is now limited to 100%, at default
 and minimum sizes. Keyboard/focus/navigation and screen-reader checks are
 excluded; other scales are deferred until functional work is finished. The
@@ -14,8 +22,8 @@ See [delivery receipt](../validation/milestone-16/functional-100/merge-checkpoin
 Current Linux functional policy verification passed 148 Rust tests, 20 protocol
 checks and three 100% journeys of 109 checkpoints. Both default/minimum sizes
 passed. See the [current acceptance record](../validation/milestone-16/functional-100/acceptance.json).
-Windows functional results for the new policy/build remain to be collected;
-excluded keyboard/screen-reader checks do not block this phase.
+The later Windows acceptance update above supersedes this policy-delivery
+checkpoint. Excluded keyboard/screen-reader checks do not block this phase.
 
 The following sections retain the earlier M16 delivery/evidence context.
 
@@ -102,9 +110,8 @@ writes and DLL/original execution remain outside this project's runtime scope.
 
 ## Recommended next work
 
-1. Complete and verify the new Windows M16F100 functional receipt, then report
-   manual functional results for default-100 and minimum-100. Preserve previous
-   attempts and use the [update/rebuild guide](m16-windows-rebuild.md).
+1. Current Windows M16F100 functionality is accepted at the supplied-automation
+   and user-reported manual level; retain its exact-build receipts and earlier attempts.
 2. Continue the next bounded read-only feature after functional acceptance.
    Keyboard navigation/focus and screen readers are excluded from this phase;
    revisit other scales only after functional work is finished.

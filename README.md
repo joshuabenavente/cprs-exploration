@@ -12,6 +12,11 @@ work is finished. See [validation policy](docs/validation-policy.md), the
 [functional checklist](validation/milestone-16/functional-100/manual-checklist.md),
 [current handoff](docs/handoff.md) and [delivery approval](docs/delivery-workflow.md).
 
+Current functional acceptance passed: Windows automation has verified source/log
+bindings, and both 100% manual checklists are user-reported pass. See
+[acceptance](validation/milestone-16/functional-100/windows/user-acceptance.json).
+Keyboard/focus/navigation and screen readers remain excluded; other scales stay deferred.
+
 ## Run and validate the current mock
 
 ```powershell

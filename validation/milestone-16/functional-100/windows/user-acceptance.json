@@ -1,0 +1,43 @@
+{
+  "protocol": "M16F100",
+  "recorded_at_utc": "2026-11-01T22:41:20.000198+00:00",
+  "scope": "Current Windows functional-only acceptance at 100%; no keyboard/navigation/focus or screen-reader acceptance",
+  "verbatim_console_report": "M16F100 receipt verified: 9 steps; 3 journeys; 109 required checkpoints per journey\nM16F100 functional checks passed at 100%; keyboard/focus/navigation and screen readers excluded.",
+  "verbatim_manual_report": "checklist all passes",
+  "sample_scope_basis": "Reply to the simplified functional checklist for default/minimum at 100% after the successful M16F100 matrix",
+  "samples": [
+    {
+      "sample": "default-100",
+      "size": "default",
+      "application_scale": 1.0,
+      "manual_functional": "user-reported pass"
+    },
+    {
+      "sample": "minimum-100",
+      "size": "minimum",
+      "application_scale": 1.0,
+      "manual_functional": "user-reported pass"
+    }
+  ],
+  "executable_sha256": "4aec71c74dfc019e33a0b120d4f4af9797a1d825d2ef52b79618bb2bc224fb81",
+  "build_binding": {
+    "source": "Supplied Windows automated/integrated receipts and locally reported verifier success; all 43 source/build hashes and all nine step logs independently checked in cloud",
+    "automated_receipt": "validation/milestone-16/functional-100/windows/automated.json",
+    "automated_receipt_sha256": "99940c870c95137b671f1511050ca244255a8072a66f73c4bdd6268bac120160",
+    "review": "validation/milestone-16/functional-100/windows/acceptance-review.json",
+    "review_sha256": "13928fd9d4ec5361d4d9dce2636df3343636816c8fb6c373157c35dc16fb18b1",
+    "windows_binary_independently_hashed": false
+  },
+  "automated_functional": "passed in supplied bound Windows receipts",
+  "manual_functional": "user-reported pass at both 100% sizes",
+  "functional_acceptance_complete_at_user_reported_level": true,
+  "keyboard_navigation": "excluded by user",
+  "focus_checks": "excluded by user",
+  "screen_readers": "excluded by user",
+  "other_scales": "deferred until functional work is finished",
+  "limits": [
+    "No independent Windows manual functional rerun or Windows executable byte hashing by the assistant.",
+    "Historical full-scale/focus failures and old M12 hash/pass reports remain unchanged and are not acceptance of this new build.",
+    "The archive-manifest comparison has the non-runtime limitations recorded in acceptance-review.json."
+  ]
+}

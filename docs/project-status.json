@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "100% functional-only policy delivered after passing final-head portable/Windows CI; topic branch pruned; Windows functional results remain to be collected",
+  "condition": "M16F100 functional acceptance passed: supplied Windows automation/source/logs verified and default/minimum 100% manual checklist user-reported pass; keyboard/focus/navigation and screen readers excluded; other scales deferred",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -27,8 +27,9 @@
       "id": "M16-WINDOWS",
       "priority": "P1",
       "task": "Verify current Windows functional workflows at default/minimum 100% only",
-      "status": "new M16F100 source/receipt required; former focus failure excluded from active gates",
-      "dependency": "Updated functional-only Windows executable and source-bound M16F100 receipt; no keyboard/Narrator gate"
+      "status": "Closed at current functional-only scope: supplied Windows automation verified and both 100% manual samples user-reported pass",
+      "dependency": null,
+      "evidence": "validation/milestone-16/functional-100/windows/user-acceptance.json"
     },
     {
       "id": "M15-WINDOWS",
@@ -194,10 +195,10 @@
     }
   ],
   "next_action": {
-    "task": "After preserving prior evidence and updating Windows main, run Test-MockChart.ps1 -Matrix at 100% only, verify receipt/EXE hash, and report manual functionality at default/minimum sizes with Review-Functional.ps1",
-    "checklist": "validation/milestone-16/functional-100/manual-checklist.md",
+    "task": "Plan the next bounded functional milestone under the 100%-only policy; do not start other-scale or keyboard/screen-reader testing unless the user changes scope",
     "standing_delivery_authorization": "docs/delivery-workflow.md",
-    "excluded": "keyboard navigation/focus and screen readers; other scales deferred until functional work is finished"
+    "policy": "docs/validation-policy.md",
+    "current_acceptance": "validation/milestone-16/functional-100/windows/user-acceptance.json"
   },
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
@@ -305,7 +306,7 @@
   },
   "current_validation": {
     "protocol": "M16F100",
-    "state": "Linux functional validation and hosted code/build CI passed",
+    "state": "Linux functional checks and hosted CI passed; supplied Windows functional source/log bindings verified",
     "application_scales": [
       1.0
     ],
@@ -317,8 +318,8 @@
     "focus_assertions": "excluded by user",
     "screen_readers": "excluded by user",
     "other_scales": "deferred until functional work is finished",
-    "windows_functional": "not run for new policy/build",
-    "functional_acceptance_complete": false,
+    "windows_functional": "passed automation in supplied bound receipt; manual functionality user-reported pass at default/minimum 100%",
+    "functional_acceptance_complete": true,
     "core_tests_passed": 148,
     "protocol_tests_passed": 20,
     "automated_steps": 8,
@@ -328,7 +329,12 @@
     "rejected": 70,
     "acceptance_receipt": "validation/milestone-16/functional-100/acceptance.json",
     "historical_files_unchanged": 2554,
-    "windows_code_build_ci": "Passed on PR #12 head 189d4ddf915dc2ccb6867b1fbe2d99dcf60856f8; run 41357039790"
+    "windows_code_build_ci": "Passed on PR #12 head 189d4ddf915dc2ccb6867b1fbe2d99dcf60856f8; run 41357039790",
+    "acceptance_evidence_level": "bound automated receipts plus user-reported manual functionality",
+    "windows_automated_steps": 9,
+    "windows_executable_sha256": "4aec71c74dfc019e33a0b120d4f4af9797a1d825d2ef52b79618bb2bc224fb81",
+    "windows_user_acceptance_receipt": "validation/milestone-16/functional-100/windows/user-acceptance.json",
+    "windows_review": "validation/milestone-16/functional-100/windows/acceptance-review.json"
   },
   "publication": {
     "state": "Functional-only policy merged and topic branch pruned",
@@ -659,7 +665,7 @@
   },
   "current_windows_acceptance": {
     "protocol": "M16F100",
-    "functional_results": "not run for new policy/build",
+    "functional_results": "passed automation; user-reported manual pass",
     "scales": [
       1.0
     ],
@@ -671,7 +677,12 @@
     "focus_assertions": "excluded by user",
     "screen_readers": "excluded by user",
     "other_scales": "deferred",
-    "functional_acceptance_complete": false
+    "functional_acceptance_complete": true,
+    "executable_sha256": "4aec71c74dfc019e33a0b120d4f4af9797a1d825d2ef52b79618bb2bc224fb81",
+    "receipt": "validation/milestone-16/functional-100/windows/user-acceptance.json",
+    "review": "validation/milestone-16/functional-100/windows/acceptance-review.json",
+    "manual_evidence_level": "user-reported",
+    "independent_windows_executable_hashing": false
   },
   "validation_policy": {
     "protocol": "M16F100",

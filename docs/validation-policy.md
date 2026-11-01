@@ -30,10 +30,17 @@ Local verification passed: 148 Rust tests, 20 protocol/isolation tests and three
 100% functional journeys, each 109 checkpoints / 158 deliveries / 70 rejections.
 Both window sizes passed; all 2,554 prior evidence files remain unchanged. See
 [the current acceptance record](../validation/milestone-16/functional-100/acceptance.json).
-Windows functionality for the new protocol/build still needs its own receipt.
+The later supplied Windows receipt and manual pass report are recorded in
+[current acceptance](../validation/milestone-16/functional-100/windows/user-acceptance.json).
 
 Delivery: [PR #12](https://github.com/joshuabenavente/cprs-exploration/pull/12)
 merged after final-head portable/Windows code-build CI passed; topic branches
 were pruned. See [delivery receipt](../validation/milestone-16/functional-100/merge-checkpoint.json).
 Normal typing into functional fields is allowed; keyboard navigation/focus is not
-an acceptance test. Collect new Windows functional results under M16F100 only.
+an acceptance test. Use M16F100 only for current functional results.
+
+Windows acceptance update: nine automated steps and three 109-checkpoint 100%
+journeys verified from supplied receipts; both manual functional samples are
+user-reported pass. Exact artifact binding uses the Windows receipt SHA256; the
+assistant did not independently hash or execute that Windows binary. Excluded
+keyboard/screen-reader checks and deferred scales are not acceptance blockers.

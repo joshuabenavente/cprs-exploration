@@ -1,5 +1,18 @@
 # CPRS Chart recreation: current handoff
 
+Current functional acceptance: supplied Windows M16F100 automation passed nine
+steps and three 109-checkpoint journeys at 100%. All 43 source/build hashes and
+nine step-log hashes match; parsed journey/verifier receipts agree. The user then
+reported **“checklist all passes”** for default/minimum 100% manual functionality.
+See the [user acceptance](../validation/milestone-16/functional-100/windows/user-acceptance.json)
+and [binding review](../validation/milestone-16/functional-100/windows/acceptance-review.json).
+The tested Windows SHA256 is
+`4aec71c74dfc019e33a0b120d4f4af9797a1d825d2ef52b79618bb2bc224fb81`.
+Manual acceptance is user-reported; the binary and manual session were not
+independently tested in cloud. The review records archival manifest limitations.
+Keyboard/focus/navigation and screen readers stay excluded; other scales remain
+deferred. Next action: plan the next bounded functional milestone at 100%.
+
 Active phase: **functionality at 100% only**, default/minimum window sizes.
 Keyboard/focus/navigation and screen-reader/Narrator checks are excluded from
 current acceptance; other scales are deferred until functional work is finished.
@@ -13,22 +26,25 @@ The 100% Linux run passed 148 Rust tests, 20 protocol checks and eight steps;
 three journeys each passed 109 checkpoints / 158 deliveries / 70 rejections.
 Both sizes passed and all 2,554 startup evidence files remain unchanged.
 
-Exact next action: preserve old Windows evidence, update main, run the active
+At the original policy-delivery checkpoint, the next action was to preserve old
+Windows evidence, update main, run the active
 Test-MockChart.ps1 -Matrix and verify_integrated.py, then review manual function
 using Review-Functional.ps1 at default/minimum 100%. Receipts use protocol M16F100
 and functional-100/{linux,windows}/. The manual launcher runs the normal app;
 it does not drive an automatic journey during user review. Normal typing into
 queries/date fields is functional input; keyboard navigation/focus checks and
 screen readers are excluded. Old full-scale M16 writers are frozen before writes.
-Application keyboard/scaling features remain intact. New Windows functional
-results remain unverified; previous pass reports are not transferred to this build.
+Application keyboard/scaling features remain intact. The later acceptance update
+above supersedes this original delivery status;
+previous pass reports are not transferred to the new build.
 
 The user confirmed interaction/window switching during the historical 200% focus
 failure. The [interruption review](../validation/milestone-16/windows/focus-interruption/review.json)
 preserves that fact and the pasted tail. It is not an application bug fix or a
 retroactive pass. The remaining paragraphs retain earlier scope checkpoints.
 
-Latest Windows update: a new M16 matrix receipt summary reports passed=False,
+Historical full-scope Windows update: an earlier M16 matrix receipt summary
+reported passed=False,
 matrix_requested=True and executable SHA256
 `0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758`.
 See the [attempt report](../validation/milestone-16/windows/matrix-attempt-report.json).
