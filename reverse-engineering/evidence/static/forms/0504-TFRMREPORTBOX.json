@@ -1,0 +1,219 @@
+{
+  "class": "TfrmReportBox",
+  "name": "frmReportBox",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 512,
+    "Top": 214,
+    "HorzScrollBar.Visible": false,
+    "VertScrollBar.Visible": false,
+    "Anchors": [],
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "frmReportBox",
+    "ClientHeight": 319,
+    "ClientWidth": 348,
+    "Constraints.MinHeight": 200,
+    "Constraints.MinWidth": 350,
+    "DoubleBuffered": true,
+    "Font.Charset": "ANSI_CHARSET",
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "OnClose": "FormClose",
+    "OnResize": "FormResize",
+    "ExplicitHeight": 346,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TRichEdit",
+      "name": "memReport",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 348,
+        "Height": 287,
+        "Align": "alClient",
+        "Color": "clCream",
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "Courier New",
+        "Font.Style": [],
+        "HideScrollBars": false,
+        "Lines.Strings": [
+          "memReport"
+        ],
+        "ParentFont": false,
+        "PlainText": true,
+        "PopupMenu": "pmnu",
+        "ReadOnly": true,
+        "ScrollBars": "ssBoth",
+        "TabOrder": 0,
+        "WantReturns": false,
+        "WordWrap": false,
+        "Zoom": 100
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlButton",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 287,
+        "Width": 348,
+        "Height": 32,
+        "Align": "alBottom",
+        "Anchors": [],
+        "BevelOuter": "bvNone",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdPrint",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 189,
+            "Top": 3,
+            "Width": 75,
+            "Height": 26,
+            "Align": "alRight",
+            "Caption": "Print",
+            "TabOrder": 0,
+            "OnClick": "cmdPrintClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 270,
+            "Top": 3,
+            "Width": 75,
+            "Height": 26,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Close",
+            "Default": true,
+            "TabOrder": 1,
+            "OnClick": "cmdCloseClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = memReport",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButton",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdPrint",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmReportBox",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPrintDialog",
+      "name": "dlgPrintReport",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 318,
+        "Top": 41
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "pmnu",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AutoPopup": false,
+        "Left": 216,
+        "Top": 24
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuCopy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Copy",
+            "ShortCut": 16451,
+            "OnClick": "mnuCopyClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TCopyEditMonitor",
+      "name": "CPRptBox",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "CopyMonitor": "frmFrame.CPAppMon",
+        "OnCopyToMonitor": "CPRptBoxCopyToMonitor",
+        "TrackOnlyEdits": [
+          {
+            "index": null,
+            "properties": {
+              "TrackObject": "memReport"
+            }
+          }
+        ],
+        "Left": 312,
+        "Top": 96
+      },
+      "children": []
+    }
+  ]
+}

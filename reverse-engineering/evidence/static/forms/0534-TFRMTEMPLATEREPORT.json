@@ -1,0 +1,162 @@
+{
+  "class": "TfrmTemplateReport",
+  "name": "frmTemplateReport",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Caption": "-)",
+    "ClientHeight": 545,
+    "ClientWidth": 789,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -13,
+    "Font.Name": "Tahoma",
+    "Font.Style": [],
+    "OldCreateOrder": false,
+    "OnCreate": "FormCreate",
+    "OnShow": "FormShow",
+    "PixelsPerInch": 120,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 504,
+        "Width": 789,
+        "Height": 41,
+        "Align": "alBottom",
+        "TabOrder": 1,
+        "ExplicitWidth": 795,
+        "DesignSize": [
+          789,
+          41
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnCopy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 6,
+            "Width": 185,
+            "Height": 25,
+            "Caption": "Copy Report to Clipboard",
+            "TabOrder": 0,
+            "OnClick": "btnCopyClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 706,
+            "Top": 6,
+            "Width": 75,
+            "Height": 25,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Caption": "Cancel",
+            "TabOrder": 1,
+            "OnClick": "btnCancelClick",
+            "ExplicitLeft": 712
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TRichEdit",
+      "name": "reReport",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 789,
+        "Height": 448,
+        "Align": "alClient",
+        "Color": "clCream",
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -13,
+        "Font.Name": "Tahoma",
+        "Font.Style": [],
+        "ParentFont": false,
+        "ReadOnly": true,
+        "TabOrder": 0,
+        "Zoom": 100,
+        "ExplicitWidth": 795
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlStatusBar",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 448,
+        "Width": 789,
+        "Height": 56,
+        "Align": "alBottom",
+        "TabOrder": 2,
+        "ExplicitWidth": 795
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblCurrent",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 6,
+            "Width": 56,
+            "Height": 16,
+            "Caption": "lblCurrent"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblCount",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 28,
+            "Width": 46,
+            "Height": 16,
+            "Caption": "lblCount"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

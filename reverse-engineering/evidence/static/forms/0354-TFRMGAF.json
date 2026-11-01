@@ -1,0 +1,488 @@
+{
+  "class": "TfrmGAF",
+  "name": "frmGAF",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 255,
+    "Top": 178,
+    "ActiveControl": "edtScore",
+    "Caption": "frmGAF",
+    "ClientHeight": 591,
+    "ClientWidth": 556,
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "ScaleMethod": "smManual",
+    "ExplicitWidth": 572,
+    "ExplicitHeight": 630,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottomAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 564,
+        "Width": 556,
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ],
+        "ExplicitTop": 564,
+        "ExplicitWidth": 556
+      },
+      "children": [
+        {
+          "class": "TBitBtn",
+          "name": "btnOK",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 397,
+            "TabOrder": 1,
+            "ExplicitLeft": 397
+          },
+          "children": []
+        },
+        {
+          "class": "TBitBtn",
+          "name": "btnCancel",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 478,
+            "TabOrder": 2,
+            "ExplicitLeft": 478
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnURL",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 134,
+            "Height": 21,
+            "Hint": "GAF Scale Rating Form",
+            "Align": "alLeft",
+            "Caption": "Reference Information",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 0,
+            "OnClick": "btnURLClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMainAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 556,
+        "Height": 564,
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ],
+        "ExplicitWidth": 556,
+        "ExplicitHeight": 564
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": 0,
+          "properties": {
+            "Left": 0,
+            "Top": 321,
+            "Width": 556,
+            "Height": 243,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "TabOrder": 2,
+            "DesignSize": [
+              556,
+              243
+            ]
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblScore",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 4,
+                "Top": 47,
+                "Width": 31,
+                "Height": 13,
+                "Caption": "Score:"
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblDate",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 4,
+                "Top": 74,
+                "Width": 83,
+                "Height": 13,
+                "Caption": "Date Determined:"
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblDeterminedBy",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 4,
+                "Top": 101,
+                "Width": 72,
+                "Height": 13,
+                "Caption": "Determined By:"
+              },
+              "children": []
+            },
+            {
+              "class": "TORCheckComboBox",
+              "name": "cboGAFProvider",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 93,
+                "Top": 98,
+                "Width": 460,
+                "Height": 142,
+                "Anchors": [
+                  "akLeft",
+                  "akTop",
+                  "akRight",
+                  "akBottom"
+                ],
+                "Style": "orcsSimple",
+                "AutoSelect": true,
+                "Caption": "Determined By",
+                "Color": "clWindow",
+                "DropDownCount": 8,
+                "ItemHeight": 13,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": false,
+                "LongList": true,
+                "LookupPiece": 2,
+                "MaxLength": 0,
+                "Pieces": "2,3",
+                "Sorted": false,
+                "SynonymChars": "<>",
+                "TabOrder": 4,
+                "Text": "",
+                "FlatCheckBoxes": false,
+                "OnExit": "cboGAFProviderExit",
+                "OnNeedData": "cboGAFProviderNeedData",
+                "OnResize": "pnlGAFProviderResize",
+                "CharsNeedMatch": 1,
+                "UniqueAutoComplete": true,
+                "MainCheckBoxCaption": "Include Non-VA Providers",
+                "MainCheckBoxVisible": true,
+                "MainCheckBoxAlignment": "calBottom",
+                "OnMainCheckboxClick": "cboGAFProviderMainCheckboxClick",
+                "DropdownStyle": "ddsControl"
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblEntry",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 13,
+                "Width": 550,
+                "Height": 17,
+                "Margins.Top": 13,
+                "Margins.Bottom": 13,
+                "Align": "alTop",
+                "Alignment": "taCenter",
+                "Caption": "Global Assessment of Functioning (GAF) score entry:",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [
+                  "fsBold"
+                ],
+                "ParentFont": false,
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TCaptionEdit",
+              "name": "edtScore",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 93,
+                "Top": 44,
+                "Width": 33,
+                "Height": 21,
+                "TabOrder": 1,
+                "Text": "0",
+                "OnChange": "edtScoreChange",
+                "Caption": "Score"
+              },
+              "children": []
+            },
+            {
+              "class": "TUpDown",
+              "name": "udScore",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 126,
+                "Top": 44,
+                "Width": 15,
+                "Height": 21,
+                "Associate": "edtScore",
+                "TabOrder": 2
+              },
+              "children": []
+            },
+            {
+              "class": "TORDateBox",
+              "name": "dteGAF",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 93,
+                "Top": 71,
+                "Width": 121,
+                "Height": 21,
+                "TabOrder": 3,
+                "OnExit": "dteGAFExit",
+                "DateOnly": true,
+                "RequireTime": false,
+                "Caption": "Date Determined:"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlGrid",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Top": 35,
+            "Width": 556,
+            "Height": 286,
+            "TabOrder": 1,
+            "StyleElements": [
+              "seFont",
+              "seClient",
+              "seBorder"
+            ],
+            "ExplicitLeft": 0,
+            "ExplicitTop": 35,
+            "ExplicitWidth": 556,
+            "ExplicitHeight": 286
+          },
+          "children": [
+            {
+              "class": "TCaptionListView",
+              "name": "lstCaptionList",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 550,
+                "Height": 280,
+                "Columns": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "GAF Score",
+                      "Width": 80
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "Date Determined",
+                      "Tag": 1,
+                      "Width": 120
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "Determined By",
+                      "Width": 100
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "Comment",
+                      "Width": 80
+                    }
+                  }
+                ],
+                "Caption": "Most recent Global Assessment of Functioning (GAF) scores",
+                "Pieces": "1,2,3,4",
+                "ExplicitLeft": 3,
+                "ExplicitWidth": 550,
+                "ExplicitHeight": 280
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlTop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 556,
+            "Height": 35,
+            "Align": "alTop",
+            "AutoSize": true,
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TStaticText",
+              "name": "lblGAF",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 13,
+                "Width": 550,
+                "Height": 17,
+                "Margins.Top": 13,
+                "Margins.Bottom": 5,
+                "Align": "alTop",
+                "Alignment": "taCenter",
+                "Caption": "Most recent Global Assessment of Functioning (GAF) scores:",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [
+                  "fsBold"
+                ],
+                "ParentFont": false,
+                "TabOrder": 0
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lblGAF",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblEntry",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtScore",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = udScore",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = dteGAF",
+            "Text = Determined Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cboGAFProvider",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnURL",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmGAF",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

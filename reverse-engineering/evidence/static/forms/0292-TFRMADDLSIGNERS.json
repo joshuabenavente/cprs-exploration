@@ -1,0 +1,477 @@
+{
+  "class": "TfrmAddlSigners",
+  "name": "frmAddlSigners",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 275,
+    "Top": 164,
+    "BorderStyle": "bsDialog",
+    "Caption": "Identify Additional Signers",
+    "ClientHeight": 388,
+    "ClientWidth": 520,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 532,
+    "ExplicitHeight": 392,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBase",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 520,
+        "Height": 388,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0,
+        "ExplicitWidth": 516,
+        "ExplicitHeight": 353
+      },
+      "children": [
+        {
+          "class": "TORAutoPanel",
+          "name": "pnlButtons",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 353,
+            "Width": 520,
+            "Height": 35,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "TabOrder": 2,
+            "ExplicitTop": 318,
+            "ExplicitWidth": 516
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "cmdOK",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 356,
+                "Top": 3,
+                "Width": 75,
+                "Height": 29,
+                "Align": "alRight",
+                "Caption": "&OK",
+                "TabOrder": 0,
+                "OnClick": "cmdOKClick",
+                "ExplicitLeft": 352
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "cmdCancel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 437,
+                "Top": 3,
+                "Width": 75,
+                "Height": 29,
+                "Margins.Right": 8,
+                "Align": "alRight",
+                "Cancel": true,
+                "Caption": "&Cancel",
+                "TabOrder": 1,
+                "OnClick": "cmdCancelClick",
+                "ExplicitLeft": 433
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TORAutoPanel",
+          "name": "pnlAdditional",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 99,
+            "Width": 520,
+            "Height": 254,
+            "Align": "alClient",
+            "TabOrder": 1,
+            "ExplicitTop": 77,
+            "ExplicitWidth": 516,
+            "ExplicitHeight": 241
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "SrcLabel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 8,
+                "Top": 6,
+                "Width": 153,
+                "Height": 13,
+                "Caption": "Select or enter additional signers"
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "DstLabel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 299,
+                "Top": 6,
+                "Width": 118,
+                "Height": 13,
+                "Caption": "Current additional signers"
+              },
+              "children": []
+            },
+            {
+              "class": "TORCheckComboBox",
+              "name": "cboSrcList",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 8,
+                "Top": 25,
+                "Width": 202,
+                "Height": 216,
+                "Style": "orcsSimple",
+                "AutoSelect": true,
+                "Caption": "Select or enter additional signers",
+                "Color": "clWindow",
+                "DropDownCount": 8,
+                "ItemHeight": 13,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": false,
+                "LongList": true,
+                "LookupPiece": 2,
+                "MaxLength": 0,
+                "Pieces": "2,3",
+                "Sorted": false,
+                "SynonymChars": "<>",
+                "TabOrder": 0,
+                "TabStop": true,
+                "Text": "",
+                "OnChange": "cboSrcListChange",
+                "OnDblClick": "btnAddSignersClick",
+                "OnKeyDown": "cboSrcListKeyDown",
+                "OnNeedData": "NewPersonNeedData",
+                "CharsNeedMatch": 1,
+                "UniqueAutoComplete": true,
+                "MainCheckBoxCaption": "Include Non-VA Providers",
+                "MainCheckBoxVisible": true,
+                "MainCheckBoxAlignment": "calBottom",
+                "OnMainCheckboxClick": "cboSrcListMainCheckboxClick",
+                "DropdownStyle": "ddsControl"
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "DstList",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 299,
+                "Top": 21,
+                "Width": 216,
+                "Height": 220,
+                "ItemHeight": 13,
+                "MultiSelect": true,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "Sorted": true,
+                "TabOrder": 1,
+                "OnClick": "DstListChange",
+                "OnDblClick": "btnRemoveSignersClick",
+                "Caption": "Current additional signers",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2",
+                "OnChange": "DstListChange"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnRemoveSigners",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 216,
+                "Top": 108,
+                "Width": 77,
+                "Height": 25,
+                "Caption": "&Remove",
+                "Enabled": false,
+                "TabOrder": 3,
+                "OnClick": "btnRemoveSignersClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnAddSigners",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 216,
+                "Top": 77,
+                "Width": 76,
+                "Height": 25,
+                "Caption": "&Add",
+                "Enabled": false,
+                "TabOrder": 2,
+                "OnClick": "btnAddSignersClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnRemoveAllSigners",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 216,
+                "Top": 139,
+                "Width": 77,
+                "Height": 25,
+                "Caption": "R&emove All",
+                "Enabled": false,
+                "TabOrder": 5,
+                "OnClick": "btnRemoveAllSignersClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlTop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 520,
+            "Height": 99,
+            "Align": "alTop",
+            "AutoSize": true,
+            "BevelOuter": "bvNone",
+            "Padding.Top": 6,
+            "Padding.Bottom": 8,
+            "TabOrder": 0,
+            "DesignSize": [
+              520,
+              93
+            ]
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblAuthor",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 8,
+                "Top": 36,
+                "Width": 95,
+                "Height": 13,
+                "Caption": "Author (not editable)",
+                "Transparent": false
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblCosigner",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 299,
+                "Top": 36,
+                "Width": 168,
+                "Height": 13,
+                "Caption": "Expected Cosigner (not editable)     ",
+                "Transparent": false
+              },
+              "children": []
+            },
+            {
+              "class": "TCaptionEdit",
+              "name": "txtAuthor",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 8,
+                "Top": 51,
+                "Width": 180,
+                "Height": 21,
+                "TabStop": false,
+                "Anchors": [
+                  "akLeft",
+                  "akTop",
+                  "akRight"
+                ],
+                "Color": "clCream",
+                "ReadOnly": true,
+                "TabOrder": 0,
+                "Caption": "Author (not editable)"
+              },
+              "children": []
+            },
+            {
+              "class": "TORCheckComboBox",
+              "name": "cboCosigner",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 299,
+                "Top": 51,
+                "Width": 194,
+                "Height": 40,
+                "Anchors": [
+                  "akLeft",
+                  "akTop",
+                  "akRight"
+                ],
+                "Style": "orcsDropDown",
+                "AutoSelect": true,
+                "Caption": "object lblCosigner: TOROffsetLabel",
+                "Color": "clCream",
+                "DropDownCount": 8,
+                "Enabled": false,
+                "ItemHeight": 13,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": true,
+                "LongList": true,
+                "LookupPiece": 0,
+                "MaxLength": 0,
+                "Pieces": "2,3",
+                "Sorted": false,
+                "SynonymChars": "<>",
+                "TabOrder": 1,
+                "TabStop": true,
+                "Text": "",
+                "OnChange": "cboCosignerChange",
+                "OnExit": "cboCosignerExit",
+                "OnNeedData": "cboCosignerNeedData",
+                "CharsNeedMatch": 1,
+                "MainCheckBoxCaption": "Include Non-VA Providers",
+                "MainCheckBoxVisible": true,
+                "MainCheckBoxAlignment": "calBottom",
+                "OnMainCheckboxClick": "cboCosignerMainCheckboxClick",
+                "DropdownStyle": "ddsControl"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 112,
+        "Top": 80,
+        "Data": [
+          [
+            "Component = pnlBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlAdditional",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSrcList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = DstList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemoveSigners",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAddSigners",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmAddlSigners",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemoveAllSigners",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtAuthor",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboCosigner",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "scope": "Bounded ActiveMeds class pointer and four display/clear VMT slots",
+  "executable_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+  "class_pointer": {
+    "address": "00bd5adc",
+    "file_offset": 8212188,
+    "bytes": "345bbd00",
+    "value": "00bd5b34"
+  },
+  "slots": [
+    {
+      "address": "00bd5d40",
+      "file_offset": 8212800,
+      "bytes": "ec5ebd00",
+      "value": "00bd5eec",
+      "slot": "20c",
+      "map_name": "mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnAddItems"
+    },
+    {
+      "address": "00bd5d44",
+      "file_offset": 8212804,
+      "bytes": "5c61bd00",
+      "value": "00bd615c",
+      "slot": "210",
+      "map_name": "mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnGetDetail"
+    },
+    {
+      "address": "00bd5d48",
+      "file_offset": 8212808,
+      "bytes": "0849bd00",
+      "value": "00bd4908",
+      "slot": "214",
+      "map_name": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail"
+    },
+    {
+      "address": "00bd5d50",
+      "file_offset": 8212816,
+      "bytes": "d035bd00",
+      "value": "00bd35d0",
+      "slot": "21c",
+      "map_name": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView"
+    }
+  ],
+  "limits": [
+    "Does not establish complete Delphi types, effective permissions or runtime site dispatch."
+  ]
+}

@@ -1,0 +1,727 @@
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e903000000", "address": "00408b14", "target_address": "00408b1c"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset -52, using EAX, then returns", "bytes": "8b40ccc3", "address": "00408fa4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": -52, "value_register": "EAX"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b8ffff0080c3", "address": "004094d8", "constant_u32": 2147549183}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004094f4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004094f8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004094fc"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9d3ffffff", "address": "0040b460", "target_address": "0040b438"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e973ffffff", "address": "0040b598", "target_address": "0040b510"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9afffffff", "address": "0040b5a0", "target_address": "0040b554"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e963ffffff", "address": "0040b5a8", "target_address": "0040b510"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 0, using DL, then returns", "bytes": "8810c3", "address": "0040b6cc", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 0, "value_register": "DL"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e977ffffff", "address": "0040bcfc", "target_address": "0040bc78"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9b7000000", "address": "0040cb38", "target_address": "0040cbf4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e907f6ffff", "address": "0040dbb8", "target_address": "0040d1c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9c3f1ffff", "address": "0040dbc0", "target_address": "0040cd88"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b860000000c3", "address": "00412d44", "constant_u32": 96}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00412e20"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b882d74100c3", "address": "0041d77c", "constant_u32": 4315010}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00438064"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0043d954"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 16, using EAX, then returns", "bytes": "8b4010c3", "address": "0043f5c4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 16, "value_register": "EAX"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "0043f610"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "0043f908"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b8b0040000c3", "address": "0043fb7c", "constant_u32": 1200}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b8b1040000c3", "address": "0043fd0c", "constant_u32": 1201}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9c7ffffff", "address": "0044448c", "target_address": "00444458"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0044dbe0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0045f4c4"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b003c3", "address": "0045f4c8", "constant_u8": 3}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00460954"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00460964"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 0, using EAX, then returns", "bytes": "8b00c3", "address": "00472d60", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 0, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "8b4004c3", "address": "0047e8f8", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "8b4004c3", "address": "0047ed54", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0047edec"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0047edf0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0047edf4"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "0047ef30", "constant_u32": 4}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0047efd4"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "8b4004c3", "address": "0047fe00", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "8b4004c3", "address": "00482074", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b808000000c3", "address": "004822cc", "constant_u32": 8}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00487604"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b808000000c3", "address": "004886fc", "constant_u32": 8}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0048ab34"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0048ab38"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0048ab3c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0048acb4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0048acb8"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 32, using EAX, then returns", "bytes": "8b4020c3", "address": "0048b44c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 32, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 16, using EAX, then returns", "bytes": "8b4010c3", "address": "0048b450", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 16, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b002c3", "address": "0048b454", "constant_u8": 2}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0048b65c"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0048b660", "constant_u8": 1}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0048b664", "constant_u8": 1}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b800000080c3", "address": "0048b668", "constant_u32": 2147483648}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0048c474", "constant_u8": 1}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 2 byte(s) at incoming EAX plus signed offset 40, using EAX, then returns", "bytes": "0fb74028c3", "address": "0048c478", "access": "read-zero-extend", "width_bytes": 2, "base_register": "EAX", "offset": 40, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b004c3", "address": "0048c480", "constant_u8": 4}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0048c6e8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0048cdf4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d376c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d4774"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004d4814"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "8b4004c3", "address": "004d4b9c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d5334"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d5388"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d53ec"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d53f0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004d62ec"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d69a4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d6ba8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d6ebc"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 40, using EAX, then returns", "bytes": "8b4028c3", "address": "004d79ac", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 40, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 36, using EAX, then returns", "bytes": "8b4024c3", "address": "004d79b0", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 36, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004d8618"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004d883c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004d8840"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 24, using EDX, then returns", "bytes": "895018c3", "address": "004dc1b4", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EDX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004e72b4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004e95ac"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004eaeb8"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004eaef8"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004ebd38"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004ebd3c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004ec020"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "004ec194", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004ec290"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004ec294"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004ec298"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004ec334"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004ede2c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "004edf44"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "004f11b4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00537f08"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00537f0c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00537f10"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005381a4"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 77, using EAX, then returns", "bytes": "0fb6404dc3", "address": "00539394", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 77, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0053ae84"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0053b6f8"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b80a000000c3", "address": "0053b708", "constant_u32": 10}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0053b930"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0053ba6c", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0053c98c"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 88, using EAX, then returns", "bytes": "8b4058c3", "address": "0053cbfc", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 88, "value_register": "EAX"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "0053e630", "constant_u32": 4}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "0053e638", "constant_u32": 4}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "0053ec20", "constant_u32": 4}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b802000000c3", "address": "0053f150", "constant_u32": 2}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b801000000c3", "address": "0053f1b0", "constant_u32": 1}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b801000000c3", "address": "0053f244", "constant_u32": 1}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b808000000c3", "address": "0053f46c", "constant_u32": 8}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b80f000000c3", "address": "0053f474", "constant_u32": 15}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b802000000c3", "address": "0053f7b0", "constant_u32": 2}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b808000000c3", "address": "0053f998", "constant_u32": 8}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "0053fef8", "constant_u32": 4}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b80a000000c3", "address": "005404a0", "constant_u32": 10}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b802000000c3", "address": "00540970", "constant_u32": 2}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b808000000c3", "address": "00540d8c", "constant_u32": 8}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b808000000c3", "address": "00540d94", "constant_u32": 8}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b810000000c3", "address": "00541200", "constant_u32": 16}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b814000000c3", "address": "00541544", "constant_u32": 20}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "005417a0", "constant_u32": 4}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "005417ec", "constant_u32": 4}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b822000000c3", "address": "005422e8", "constant_u32": 34}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b822000000c3", "address": "00542a90", "constant_u32": 34}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005436f0"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 80, using EAX, then returns", "bytes": "0fb64050c3", "address": "005436f4", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 80, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0054399c", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00544b80"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 248, using EAX, then returns", "bytes": "8b80f8000000c3", "address": "00544bcc", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 248, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 264, using DL, then returns", "bytes": "889008010000c3", "address": "00544f98", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 264, "value_register": "DL"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b80f000000c3", "address": "00545508", "constant_u32": 15}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054557c"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b810000000c3", "address": "00545580", "constant_u32": 16}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00545d54"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "00545d58", "constant_u32": 4}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b826000000c3", "address": "00546088", "constant_u32": 38}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005471dc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005471e0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005471f4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00547220"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054722c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00547258"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "8b400cc3", "address": "00547284", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005472a4"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 28, using EAX, then returns", "bytes": "8b401cc3", "address": "00547410", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 28, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 177, using EAX, then returns", "bytes": "0fb680b1000000c3", "address": "0054c764", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 177, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054cea4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054cea8"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0054ceb4", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054ceb8"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0054db58"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0054dc48"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054df9c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054e3f0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0054e3f4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0054ecd0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054ecd4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0054ecd8"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0054f288"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054f28c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0054fa5c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054fc00"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054fd78"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0054fd7c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005500b4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550bc0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550bc4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550bc8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550bcc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550bd8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550bdc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550be0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550be4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550f78"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550fa8"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00550fac"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00550fb0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0055100c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0055101c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00551080"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0055116c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00551170"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "005511d8", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00551380"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00551384"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00551388", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0055138c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00551620"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0055177c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0055178c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00551790"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00551800"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005519a8"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005519d0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005519d4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005519d8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005519dc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005519e0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005519e4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005519e8"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005519ec"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "0fb6400cc3", "address": "00551bc0", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 12, using DL, then returns", "bytes": "88500cc3", "address": "00551be0", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 12, "value_register": "DL"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9538feaff", "address": "005650f4", "target_address": "0040e04c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "558bec5dc3", "address": "00565807"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e98cd3fcff", "address": "00597d33", "target_address": "005650c4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005adc1c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aece8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aecec"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aecf0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aecf4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aecf8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aecfc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aed00"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aed04"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aed08"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aed0c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aed10"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aed14"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005aed18"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "005be494", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9b31de4ff", "address": "005c680c", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9ab1de4ff", "address": "005c6814", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9a31de4ff", "address": "005c681c", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e99b1de4ff", "address": "005c6824", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9931de4ff", "address": "005c682c", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9831de4ff", "address": "005c683c", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e96b1de4ff", "address": "005c6854", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9631de4ff", "address": "005c685c", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e95b1de4ff", "address": "005c6864", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9531de4ff", "address": "005c686c", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e94b1de4ff", "address": "005c6874", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9431de4ff", "address": "005c687c", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9331de4ff", "address": "005c688c", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e92b1de4ff", "address": "005c6894", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9231de4ff", "address": "005c689c", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e91b1de4ff", "address": "005c68a4", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9131de4ff", "address": "005c68ac", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e90b1de4ff", "address": "005c68b4", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9fb1ce4ff", "address": "005c68c4", "target_address": "004085c4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005cd064"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005cf8b8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005d0e78"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005d1364"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005d1368"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 33, using EAX, then returns", "bytes": "0fb64021c3", "address": "005d136c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 33, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005d1374"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005d1378"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005d1460"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005d23d8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005d36b0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005d44d0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005d8960"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 52, using EAX, then returns", "bytes": "8b4034c3", "address": "005d9340", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 52, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 48, using EAX, then returns", "bytes": "8b4030c3", "address": "005d9344", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 48, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 108, using EAX, then returns", "bytes": "8b406cc3", "address": "005e2400", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 108, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "005e27d8", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005e27dc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005e9fa8"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e917e2e0ff", "address": "005fa3a8", "target_address": "004085c4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "005ff0cc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005ff0e8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "005ff0f4"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "005ff480", "constant_u8": 1}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "005ff484", "constant_u32": 4}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00600d00"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00600d28"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "006011d0"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 106, using EAX, then returns", "bytes": "0fb6406ac3", "address": "006011d4", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 106, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "006011dc"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 64, using EAX, then returns", "bytes": "8b4040c3", "address": "006011e8", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 64, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 110, using DL, then returns", "bytes": "88506ec3", "address": "00601470", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 110, "value_register": "DL"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 110, using EAX, then returns", "bytes": "0fb6406ec3", "address": "0060148c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 110, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00602e0c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00602fa4"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00603950", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00603cbc"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 140, using EAX, then returns", "bytes": "8b808c000000c3", "address": "0060468c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 140, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 184, using EAX, then returns", "bytes": "8b80b8000000c3", "address": "00605530", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 184, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00605efc"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00606084"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00608934"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0060ab48"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0060adac"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 688, using EAX, then returns", "bytes": "8b80b0020000c3", "address": "0060cd3c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 688, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0060ee7c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0060f300"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0060fb5c", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0060ffb4"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 32, using EDX, then returns", "bytes": "895020c3", "address": "0061059c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 32, "value_register": "EDX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00613220"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "006141a4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "006147f0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "006167f8"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 724, using EAX, then returns", "bytes": "0fb680d4020000c3", "address": "00629324", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 724, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0062e8e0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0062e904"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0062f124"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 721, using EAX, then returns", "bytes": "0fb680d1020000c3", "address": "00630c58", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 721, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 716, using EAX, then returns", "bytes": "8b80cc020000c3", "address": "0063e480", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 716, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0063e7cc", "constant_u8": 1}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00645028", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00645228"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00645850"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "006459b0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "006479fc"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00647a00", "constant_u8": 1}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 216, using EAX, then returns", "bytes": "8b80d8000000c3", "address": "00647b40", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 216, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 216, using EAX, then returns", "bytes": "8b80d8000000c3", "address": "00647cac", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 216, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00647ce4", "constant_u8": 1}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "006681c0", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00668594"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0066922c"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "0066aba0", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "0066bff4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "0067b73c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "0067b740", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "8b400cc3", "address": "0067c75c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "0067c760", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 28, using EAX, then returns", "bytes": "8b401cc3", "address": "0067c764", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 28, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0068aaa8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0068ce2c"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "0068fac4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "0068fb5c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "006946d8"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 72, using EAX, then returns", "bytes": "8b4048c3", "address": "006a33f8", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 72, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 156, using EAX, then returns", "bytes": "8b809c000000c3", "address": "006a4790", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 156, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 92, using EAX, then returns", "bytes": "8b405cc3", "address": "006a763c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 92, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 720, using EAX, then returns", "bytes": "0fb680d0020000c3", "address": "006b8e0c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 720, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "006bdaf8", "constant_u8": 1}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "006bea48", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "006e4a24"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 56, using EAX, then returns", "bytes": "0fb64038c3", "address": "006e6964", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 56, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "006ecc0c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "006ecc10"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "006ecc48"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "006ed23c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "006ed394"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "006ed398"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 40, using EAX, then returns", "bytes": "8b4028c3", "address": "006ee574", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 40, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 28, using EAX, then returns", "bytes": "8b401cc3", "address": "006ee578", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 28, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "006ee5d4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "006ee758"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "006ee968"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 140, using EAX, then returns", "bytes": "0fb6808c000000c3", "address": "00701a8c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 140, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "007023b4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0071b264"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0071b6bc"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "8b4004c3", "address": "0071c0a8", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 688, using EAX, then returns", "bytes": "8b80b0020000c3", "address": "0071fa58", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 688, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00720d24"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 768, using EAX, then returns", "bytes": "8b8000030000c3", "address": "00722550", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 768, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 804, using EAX, then returns", "bytes": "0fb68024030000c3", "address": "00722ce0", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 804, "value_register": "EAX"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b860000000c3", "address": "00729290", "constant_u32": 96}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0073071c", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00736190"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 8, using EAX, then returns", "bytes": "8b4008c3", "address": "00737600", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 8, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0073d0d4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007446d4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007446d8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00744700"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00752a78"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "0fb6400cc3", "address": "00754b60", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00756a28", "constant_u8": 1}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b804000000c3", "address": "00756a2c", "constant_u32": 4}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 816, using EDX, then returns", "bytes": "899030030000c3", "address": "007618cc", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 816, "value_register": "EDX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00763174", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0076478c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "007706f8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00777de4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00778108"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0077c04c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0077e6f8"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 88, using DL, then returns", "bytes": "885058c3", "address": "0077e890", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 88, "value_register": "DL"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 760, using EAX, then returns", "bytes": "0fb680f8020000c3", "address": "007aed3c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 760, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 712, using EAX, then returns", "bytes": "0fb680c8020000c3", "address": "007b0eb0", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 712, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 1501, using DL, then returns", "bytes": "8890dd050000c3", "address": "007b10c0", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 1501, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 892, using DL, then returns", "bytes": "88907c030000c3", "address": "007b9060", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 892, "value_register": "DL"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9e726c4ff", "address": "007c5ed8", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9bf26c4ff", "address": "007c5f00", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e937cbc3ff", "address": "007cba88", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e92fcbc3ff", "address": "007cba90", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e927cbc3ff", "address": "007cba98", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e90fcbc3ff", "address": "007cbab0", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e907cbc3ff", "address": "007cbab8", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9ffcac3ff", "address": "007cbac0", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9efcac3ff", "address": "007cbad0", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9e7cac3ff", "address": "007cbad8", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9dfcac3ff", "address": "007cbae0", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9d7cac3ff", "address": "007cbae8", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9afcac3ff", "address": "007cbb10", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e99fcac3ff", "address": "007cbb20", "target_address": "004085c4"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e98fcac3ff", "address": "007cbb30", "target_address": "004085c4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007d48a0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007d4948"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "007d4984", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "007d4b00"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007d4b10"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007d4eb8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007d4ec4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "007d5dd0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007d5dd4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "007d71f0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "007db5b0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "007df18c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "007df190"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "007df194"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "007df198", "constant_u8": 1}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 272, using EAX, then returns", "bytes": "0fb68010010000c3", "address": "007df1b0", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 272, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 232, using EAX, then returns", "bytes": "0fb680e8000000c3", "address": "007df224", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 232, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 228, using EDX, then returns", "bytes": "8990e4000000c3", "address": "007df22c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 228, "value_register": "EDX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "0fb64018c3", "address": "007e10ec", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007f6248"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "007f624c"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 8, using EDX, then returns", "bytes": "895008c3", "address": "007fa0b0", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 8, "value_register": "EDX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 152, using EAX, then returns", "bytes": "0fb68098000000c3", "address": "0082cb58", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 152, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0082dc8c"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 84, using EDX, then returns", "bytes": "895054c3", "address": "0082de38", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 84, "value_register": "EDX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0082e1b0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0082f320"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0082f57c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00830740"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0083197c"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "00831cdc"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "00831ce0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00832570"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00832574"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "008325c8"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b819000000c3", "address": "00833c38", "constant_u32": 25}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00835754", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "008358e8"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00835af4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "008361a0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "008361a4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00836270"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00836274"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0083a690"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "0083a6c4", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0083a6d4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0083a738"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 72, using DL, then returns", "bytes": "885048c3", "address": "0083b12c", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 72, "value_register": "DL"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "8b400cc3", "address": "0085442c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 128, using EAX, then returns", "bytes": "8b8080000000c3", "address": "00859c9c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 128, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 132, using EAX, then returns", "bytes": "8b8084000000c3", "address": "00859ca4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 132, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "008702d4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00870448"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00872d30"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00872d34"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0087e79c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "008984b4"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 108, using DL, then returns", "bytes": "88506cc3", "address": "008a71e0", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 108, "value_register": "DL"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "008a75c8"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "008aa3f0", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "008d5574"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 0, using EDX, then returns", "bytes": "8910c3", "address": "008e8b88", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 0, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 0, using EDX, then returns", "bytes": "8910c3", "address": "008e8bbc", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 0, "value_register": "EDX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "008ea7a4", "constant_u8": 1}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 72, using EDX, then returns", "bytes": "895048c3", "address": "0090a888", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 72, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 80, using EDX, then returns", "bytes": "895050c3", "address": "0090a9f8", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 80, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 76, using EDX, then returns", "bytes": "89504cc3", "address": "0090a9fc", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 76, "value_register": "EDX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 92, using EAX, then returns", "bytes": "8b405cc3", "address": "0090ad38", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 92, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 12, using EDX, then returns", "bytes": "89500cc3", "address": "0090ad74", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 20, using EDX, then returns", "bytes": "895014c3", "address": "0090ae6c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 20, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 92, using EDX, then returns", "bytes": "89505cc3", "address": "0090ae90", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 92, "value_register": "EDX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 96, using EAX, then returns", "bytes": "0fb64060c3", "address": "0090aee0", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 96, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0090aee8"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0091584c"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9c3bfaeff", "address": "0091c5fc", "target_address": "004085c4"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "0092226c"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 168, using EAX, then returns", "bytes": "8b80a8000000c3", "address": "00923488", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 168, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 168, using EDX, then returns", "bytes": "8990a8000000c3", "address": "0092791c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 168, "value_register": "EDX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00929424"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 76, using EAX, then returns", "bytes": "8b404cc3", "address": "009299bc", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 76, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 84, using EAX, then returns", "bytes": "8b4054c3", "address": "009622b0", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 84, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 84, using EDX, then returns", "bytes": "895054c3", "address": "009622b4", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 84, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 128, using EDX, then returns", "bytes": "899080000000c3", "address": "0096247c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 128, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 44, using DL, then returns", "bytes": "88502cc3", "address": "0097db84", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 44, "value_register": "DL"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 40, using EAX, then returns", "bytes": "8b4028c3", "address": "0097fff0", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 40, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 40, using EDX, then returns", "bytes": "895028c3", "address": "0097fff4", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 40, "value_register": "EDX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "009846fc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0098c5f0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0098ca08"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00999824"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00999828"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0099982c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "0099b03c"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 116, using EAX, then returns", "bytes": "8b4074c3", "address": "009a0b90", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 116, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 128, using DL, then returns", "bytes": "889080000000c3", "address": "009a1994", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 128, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 136, using EDX, then returns", "bytes": "899088000000c3", "address": "009a199c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 136, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 24, using DL, then returns", "bytes": "885018c3", "address": "009a1aa8", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 24, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 40, using DL, then returns", "bytes": "885028c3", "address": "009a1aac", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 40, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 52, using DL, then returns", "bytes": "885034c3", "address": "009a1ac4", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 52, "value_register": "DL"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 208, using EAX, then returns", "bytes": "0fb680d0000000c3", "address": "009a1cd4", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 208, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "009bccb0"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "009d99d8", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "009dadc0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "009dadc4"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 172, using EAX, then returns", "bytes": "0fb680ac000000c3", "address": "009e1e0c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 172, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "009e4958"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "009e4bb0"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "009eb13c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "009eb2a0"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "8b4004c3", "address": "009fa8b4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 28, using EAX, then returns", "bytes": "8b401cc3", "address": "009fad68", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 28, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 68, using EAX, then returns", "bytes": "8b4044c3", "address": "009fb3f8", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 68, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "009fed30"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00a0e38c", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00a22b68"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00a22b6c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00a22b70"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00a29f18", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00a34e3c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00a34ffc"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "0fb6400cc3", "address": "00a35130", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00a354d4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00a355e0"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 8, using EAX, then returns", "bytes": "8b4008c3", "address": "00a50090", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 8, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "0fb6400cc3", "address": "00a50094", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 13, using EAX, then returns", "bytes": "0fb6400dc3", "address": "00a5009c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 13, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 14, using EAX, then returns", "bytes": "0fb6400ec3", "address": "00a500a4", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 14, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 15, using EAX, then returns", "bytes": "0fb6400fc3", "address": "00a500ac", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 15, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 16, using EAX, then returns", "bytes": "0fb64010c3", "address": "00a500b4", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 16, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 20, using EAX, then returns", "bytes": "8b4014c3", "address": "00a500bc", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 20, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "0fb64018c3", "address": "00a500c0", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 25, using EAX, then returns", "bytes": "0fb64019c3", "address": "00a500c8", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 25, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 32, using EAX, then returns", "bytes": "0fb64020c3", "address": "00a500e4", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 32, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 12, using DL, then returns", "bytes": "88500cc3", "address": "00a502c4", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 12, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 13, using DL, then returns", "bytes": "88500dc3", "address": "00a502c8", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 13, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 14, using DL, then returns", "bytes": "88500ec3", "address": "00a502cc", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 14, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 15, using DL, then returns", "bytes": "88500fc3", "address": "00a502d0", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 15, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 16, using DL, then returns", "bytes": "885010c3", "address": "00a502d4", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 16, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 20, using EDX, then returns", "bytes": "895014c3", "address": "00a502d8", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 20, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 24, using DL, then returns", "bytes": "885018c3", "address": "00a502dc", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 24, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 25, using DL, then returns", "bytes": "885019c3", "address": "00a502e0", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 25, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 32, using DL, then returns", "bytes": "885020c3", "address": "00a502f8", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 32, "value_register": "DL"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00a50bf4", "constant_u8": 1}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00a50bf8", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00a74c18"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00a7c500"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 32, using EAX, then returns", "bytes": "8b4020c3", "address": "00a7d310", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 32, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "00a7d318", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 28, using EAX, then returns", "bytes": "8b401cc3", "address": "00a7d31c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 28, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 24, using EAX, then returns", "bytes": "8b4018c3", "address": "00aa61a8", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 24, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00aa61fc"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "00aa9aac"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "00aa9c10"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "00aa9eec"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "00aa9ef0"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "00aa9fb8"}
+{"kind": "copy-edx-to-eax", "effect": "Copies EDX into EAX and returns", "bytes": "8bc2c3", "address": "00aa9fbc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00aaa50c"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00abfe18", "constant_u8": 1}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00ac0dd4", "constant_u8": 1}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e9b23394ff", "address": "00ac70e5", "target_address": "0040a49c"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 1181, using DL, then returns", "bytes": "88909d040000c3", "address": "00acc958", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 1181, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 1180, using DL, then returns", "bytes": "88909c040000c3", "address": "00acc960", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 1180, "value_register": "DL"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00af16bc"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "0fb6400cc3", "address": "00b16640", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 32, using EDX, then returns", "bytes": "895020c3", "address": "00b16670", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 32, "value_register": "EDX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00b22c3c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00b23648"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 32, using EAX, then returns", "bytes": "8b4020c3", "address": "00b2b60c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 32, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 88, using EAX, then returns", "bytes": "8b4058c3", "address": "00b44710", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 88, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 12, using EDX, then returns", "bytes": "89500cc3", "address": "00b63d08", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 28, using EDX, then returns", "bytes": "89501cc3", "address": "00b63ebc", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 28, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 60, using EDX, then returns", "bytes": "89503cc3", "address": "00b68774", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 60, "value_register": "EDX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00b8cf88"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00b8d7a4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bac038"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 88, using EDX, then returns", "bytes": "895058c3", "address": "00bac174", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 88, "value_register": "EDX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bac200"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bac20c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00bac52c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00baefe4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00baefe8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00baf110"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00baf114"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00baf118"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 64, using EAX, then returns", "bytes": "8b4040c3", "address": "00bafa54", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 64, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 64, using EAX, then returns", "bytes": "8b4040c3", "address": "00bb001c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 64, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 640, using EAX, then returns", "bytes": "8b8080020000c3", "address": "00bbeb30", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 640, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 2 byte(s) at incoming EAX plus signed offset 664, using EAX, then returns", "bytes": "0fb78098020000c3", "address": "00bc0f04", "access": "read-zero-extend", "width_bytes": 2, "base_register": "EAX", "offset": 664, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 624, using EAX, then returns", "bytes": "8b8070020000c3", "address": "00bc3c20", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 624, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00bc4c50"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00bc7bcc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bd1874"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bd1c48"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bd1d0c"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 801, using EAX, then returns", "bytes": "0fb68021030000c3", "address": "00bd213c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 801, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 803, using EAX, then returns", "bytes": "0fb68023030000c3", "address": "00bd2144", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 803, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 802, using EAX, then returns", "bytes": "0fb68022030000c3", "address": "00bd214c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 802, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 800, using EAX, then returns", "bytes": "0fb68020030000c3", "address": "00bd2160", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 800, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 803, using DL, then returns", "bytes": "889023030000c3", "address": "00bd234c", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 803, "value_register": "DL"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bd2b00"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bd2b04"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bd2b08"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00bd2b0c", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bd369c"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 32, using EAX, then returns", "bytes": "0fb64020c3", "address": "00bd59b4", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 32, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 73, using EAX, then returns", "bytes": "0fb64049c3", "address": "00bd59bc", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 73, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 40, using EAX, then returns", "bytes": "8b4028c3", "address": "00bd59dc", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 40, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 72, using EAX, then returns", "bytes": "0fb64048c3", "address": "00bd59f8", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 72, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 48, using EAX, then returns", "bytes": "0fb64030c3", "address": "00bd5a00", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 48, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 64, using EAX, then returns", "bytes": "0fb64040c3", "address": "00bd5a74", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 64, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00bd5a7c", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00be1bd4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00be425c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bee470"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bee474"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bf9fd8"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bfa970"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00bfa974"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00bffb78"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00c00390"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 72, using EAX, then returns", "bytes": "8b4048c3", "address": "00c145f4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 72, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00c15a24"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00c1ba00", "constant_u8": 1}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00c1cd00"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00c1cd04"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00c1d4dc"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 68, using EAX, then returns", "bytes": "8b4044c3", "address": "00c1d95c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 68, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 72, using EAX, then returns", "bytes": "8b4048c3", "address": "00c1d960", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 72, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00c1ea48", "constant_u8": 1}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 208, using EAX, then returns", "bytes": "8b80d0000000c3", "address": "00c22818", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 208, "value_register": "EAX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00c23c24"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c69e5c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c6a404", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c6bc18", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c6bee0", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c6c6f0", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c6c820", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c6dd0c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c70f3c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c7181c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 4, using EDX, then returns", "bytes": "895004c3", "address": "00c72c7c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EDX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 2468, using EAX, then returns", "bytes": "8b80a4090000c3", "address": "00c78e68", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 2468, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 2472, using EAX, then returns", "bytes": "0fb680a8090000c3", "address": "00c78e70", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 2472, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 2476, using EAX, then returns", "bytes": "8b80ac090000c3", "address": "00c78e78", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 2476, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 2484, using EAX, then returns", "bytes": "0fb680b4090000c3", "address": "00c78e80", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 2484, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00c78e88", "constant_u8": 1}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 2468, using EDX, then returns", "bytes": "8990a4090000c3", "address": "00c78eb0", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 2468, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 2472, using DL, then returns", "bytes": "8890a8090000c3", "address": "00c78eb8", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 2472, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 2480, using EDX, then returns", "bytes": "8990b0090000c3", "address": "00c78ec0", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 2480, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 2476, using EDX, then returns", "bytes": "8990ac090000c3", "address": "00c78ec8", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 2476, "value_register": "EDX"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00c7bbb8"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00c7bbbc", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00c7d3d0"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00c7e104", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00c99df4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00d02554"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00d036cc"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00d0ca3c"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 1756, using EDX, then returns", "bytes": "8990dc060000c3", "address": "00d1fb7c", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 1756, "value_register": "EDX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00d22248"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00d3754c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00d3cd14"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 4, using DL, then returns", "bytes": "885004c3", "address": "00d67e04", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 4, "value_register": "DL"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00da9608"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00dee734"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00df2db0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00df3094"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00df30f8"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 1860, using EAX, then returns", "bytes": "8b8044070000c3", "address": "00e0fe7c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 1860, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "0fb64004c3", "address": "00e58f00", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "8b400cc3", "address": "00e7bc28", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "8b4004c3", "address": "00e7d158", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00e86d98"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00e89158"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00e8915c"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00e89160"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00e899f0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00e95578"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00edafd0"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00ee33b4"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00ee6f4c"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "8b400cc3", "address": "00f115e8", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 16, using EAX, then returns", "bytes": "8b4010c3", "address": "00f1cac0", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 16, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 20, using EAX, then returns", "bytes": "8b4014c3", "address": "00f1cac4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 20, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 20, using EAX, then returns", "bytes": "8b4014c3", "address": "00f1d808", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 20, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "0fb6400cc3", "address": "00f1d920", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 64, using EAX, then returns", "bytes": "0fb64040c3", "address": "00f3bcc0", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 64, "value_register": "EAX"}
+{"kind": "direct-tail-transfer", "effect": "Unconditional relative jump; delegates remaining behavior", "bytes": "e963174cff", "address": "00f46e5c", "target_address": "004085c4"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 52, using EDX, then returns", "bytes": "895034c3", "address": "00f4cb04", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 52, "value_register": "EDX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 52, using EAX, then returns", "bytes": "8b4034c3", "address": "00f4ccb0", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 52, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 60, using EAX, then returns", "bytes": "8b403cc3", "address": "00f4ccb4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 60, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 56, using EAX, then returns", "bytes": "8b4038c3", "address": "00f4ccdc", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 56, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 52, using EAX, then returns", "bytes": "8b4034c3", "address": "00f4cce0", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 52, "value_register": "EAX"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "00f4d928", "constant_u8": 1}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "8b400cc3", "address": "00f4eb9c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 88, using EAX, then returns", "bytes": "8b4058c3", "address": "00f4f7f8", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 88, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "8b400cc3", "address": "00f50b0c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00f90f18"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00f90f1c"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "00f91400"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "00fa2a8c"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 752, using EAX, then returns", "bytes": "0fb680f0020000c3", "address": "00fd72a8", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 752, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 889, using EAX, then returns", "bytes": "0fb68079030000c3", "address": "00fd7334", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 889, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 756, using EAX, then returns", "bytes": "8b80f4020000c3", "address": "00fd734c", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 756, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "01011480"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "010332ac"}
+{"kind": "constant-al", "effect": "Sets AL to an 8-bit immediate and returns; upper EAX bits are unchanged", "bytes": "b001c3", "address": "01056ff8", "constant_u8": 1}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "010b8840"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "010d9c54"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "010da538"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 8, using EAX, then returns", "bytes": "0fb64008c3", "address": "01158230", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 8, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "01169578"}
+{"kind": "constant-eax", "effect": "Sets EAX to a 32-bit immediate and returns", "bytes": "b817000000c3", "address": "01196344", "constant_u32": 23}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 12, using EAX, then returns", "bytes": "8b400cc3", "address": "011a8218", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 12, "value_register": "EAX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "011ae274"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "011ae278"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "011ae480"}
+{"kind": "zero-eax", "effect": "XOR EAX,EAX then returns; arithmetic flags are changed", "bytes": "33c0c3", "address": "011ae484"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 5, using EAX, then returns", "bytes": "0fb64005c3", "address": "011c31e8", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 5, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 8, using EAX, then returns", "bytes": "8b4008c3", "address": "011c31f0", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 8, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "0fb64004c3", "address": "011c31f4", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 5, using DL, then returns", "bytes": "885005c3", "address": "011c31fc", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 5, "value_register": "DL"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 8, using EDX, then returns", "bytes": "895008c3", "address": "011c3200", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 8, "value_register": "EDX"}
+{"kind": "scalar-field-write", "effect": "write 1 byte(s) at incoming EAX plus signed offset 4, using DL, then returns", "bytes": "885004c3", "address": "011c3204", "access": "write", "width_bytes": 1, "base_register": "EAX", "offset": 4, "value_register": "DL"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 4, using EAX, then returns", "bytes": "8b4004c3", "address": "011c32c0", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 4, "value_register": "EAX"}
+{"kind": "scalar-field-read", "effect": "read 4 byte(s) at incoming EAX plus signed offset 8, using EAX, then returns", "bytes": "8b4008c3", "address": "011c32c4", "access": "read", "width_bytes": 4, "base_register": "EAX", "offset": 8, "value_register": "EAX"}
+{"kind": "scalar-field-read-zero-extend", "effect": "read-zero-extend 1 byte(s) at incoming EAX plus signed offset 1100, using EAX, then returns", "bytes": "0fb6804c040000c3", "address": "011c5d6c", "access": "read-zero-extend", "width_bytes": 1, "base_register": "EAX", "offset": 1100, "value_register": "EAX"}
+{"kind": "scalar-field-write", "effect": "write 4 byte(s) at incoming EAX plus signed offset 1128, using EDX, then returns", "bytes": "899068040000c3", "address": "011c5e14", "access": "write", "width_bytes": 4, "base_register": "EAX", "offset": 1128, "value_register": "EDX"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "011c5e84"}
+{"kind": "return-only", "effect": "Returns to caller; no net general-register change from these instructions", "bytes": "c3", "address": "011ccb28"}

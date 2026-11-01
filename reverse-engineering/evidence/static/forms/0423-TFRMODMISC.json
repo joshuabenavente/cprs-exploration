@@ -1,0 +1,266 @@
+{
+  "class": "TfrmODMisc",
+  "name": "frmODMisc",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 404,
+    "Top": 453,
+    "Caption": "Patient Care Order",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblStart",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 6,
+        "Top": 100,
+        "Width": 76,
+        "Height": 13,
+        "Caption": "Start Date/Time"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblStop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 158,
+        "Top": 100,
+        "Width": 76,
+        "Height": 13,
+        "Caption": "Stop Date/Time"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblCare",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 6,
+        "Top": 6,
+        "Width": 58,
+        "Height": 13,
+        "Caption": "Patient Care"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblComment",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 6,
+        "Top": 53,
+        "Width": 54,
+        "Height": 13,
+        "Caption": "Instructions"
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionMemo",
+      "name": "memOrder",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "TabStop": false,
+        "TabOrder": 5
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdAccept",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "TabOrder": 6
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboCare",
+      "inherited": false,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 8,
+        "Top": 25,
+        "Width": 292,
+        "Height": 21,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Patient Care",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 0,
+        "Text": "",
+        "OnExit": "ControlChange",
+        "OnMouseClick": "ControlChange",
+        "OnNeedData": "cboCareNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORDateBox",
+      "name": "calStart",
+      "inherited": false,
+      "inline": false,
+      "child_position": 7,
+      "properties": {
+        "Left": 6,
+        "Top": 114,
+        "Width": 140,
+        "Height": 21,
+        "TabOrder": 3,
+        "Text": "Now",
+        "OnChange": "ControlChange",
+        "DateOnly": false,
+        "RequireTime": false,
+        "Caption": "Start Date/Time"
+      },
+      "children": []
+    },
+    {
+      "class": "TORDateBox",
+      "name": "calStop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 8,
+      "properties": {
+        "Left": 158,
+        "Top": 114,
+        "Width": 140,
+        "Height": 21,
+        "TabOrder": 4,
+        "OnChange": "ControlChange",
+        "DateOnly": false,
+        "RequireTime": false,
+        "Caption": "Stop Date/Time"
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionEdit",
+      "name": "txtComment",
+      "inherited": false,
+      "inline": false,
+      "child_position": 9,
+      "properties": {
+        "Left": 6,
+        "Top": 67,
+        "Width": 508,
+        "Height": 21,
+        "TabOrder": 2,
+        "OnChange": "ControlChange",
+        "Caption": "Instructions"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdQuit",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "TabOrder": 7
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMessage",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = cboCare",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calStart",
+            "Text = Start Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = calStop",
+            "Text = Stop Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = txtComment",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memOrder",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdQuit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODMisc",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

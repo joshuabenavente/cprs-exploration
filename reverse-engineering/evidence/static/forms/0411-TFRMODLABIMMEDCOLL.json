@@ -1,0 +1,179 @@
+{
+  "class": "TfrmODLabImmedColl",
+  "name": "frmODLabImmedColl",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 146,
+    "Top": 150,
+    "Caption": "Immediate Collection Times",
+    "ClientHeight": 259,
+    "ClientWidth": 516,
+    "OldCreateOrder": true,
+    "OnShow": "FormShow",
+    "ExplicitWidth": 532,
+    "ExplicitHeight": 297,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlBase",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 516,
+        "Height": 259,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TOROffsetLabel",
+          "name": "lblImmedColl",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 26,
+            "Top": 202,
+            "Width": 149,
+            "Height": 15,
+            "Caption": "Enter or select a collection time",
+            "HorzOffset": 2,
+            "Transparent": false,
+            "VertOffset": 2,
+            "WordWrap": false
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionMemo",
+          "name": "memImmedCollect",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 516,
+            "Height": 193,
+            "Align": "alTop",
+            "Color": "clBtnFace",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "Courier New",
+            "Font.Style": [],
+            "Lines.Strings": [
+              "Collection times"
+            ],
+            "ParentFont": false,
+            "ReadOnly": true,
+            "TabOrder": 0,
+            "WantReturns": false,
+            "Caption": "Collection times"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "calImmedCollect",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 26,
+            "Top": 216,
+            "Width": 219,
+            "Height": 21,
+            "TabOrder": 1,
+            "OnKeyUp": "calImmedCollectKeyUp",
+            "DateOnly": false,
+            "RequireTime": false,
+            "Caption": "Enter or select a collection time"
+          },
+          "children": []
+        },
+        {
+          "class": "TORAlignButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 309,
+            "Top": 213,
+            "Width": 75,
+            "Height": 25,
+            "Caption": "OK",
+            "TabOrder": 2,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TORAlignButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 405,
+            "Top": 213,
+            "Width": 75,
+            "Height": 25,
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 3,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memImmedCollect",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calImmedCollect",
+            "Text = Collection time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODLabImmedColl",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

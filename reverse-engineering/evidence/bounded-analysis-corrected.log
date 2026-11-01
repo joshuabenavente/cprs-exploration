@@ -1,0 +1,99 @@
+2026-11-01 15:16:21 INFO  (LoggingInitialization) Using log config file: jar:file:/workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-11-01 15:16:21 INFO  (LoggingInitialization) Using log file: /workspace/reverse-engineering/evidence/bounded-analysis-corrected.log  
+2026-11-01 15:16:21 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-11-01 15:16:21 INFO  (Preferences) Loading user preferences: /workspace/reverse-engineering/.ghidra-settings/agent-ghidra/ghidra_12.2_PUBLIC/preferences  
+2026-11-01 15:16:21 INFO  (ClassSearcher) Searching for classes...  
+2026-11-01 15:16:22 INFO  (ClassSearcher) Class search complete (1058 ms)  
+2026-11-01 15:16:23 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-11-01 15:16:23 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-11-01 15:16:23 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-11-01 15:16:23 INFO  (UnixSystemTrustKeyStoreUtil) Loaded 154 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt  
+2026-11-01 15:16:23 INFO  (DefaultTrustManagerFactory) Loaded 154 trusted CA certificates from the OS trust store.  
+2026-11-01 15:16:23 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-11-01 15:16:23 INFO  (AnalyzeHeadless) Headless startup complete (2324 ms)  
+2026-11-01 15:16:23 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-11-01 15:16:23 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /workspace/reverse-engineering/scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts  
+2026-11-01 15:16:23 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-11-01 15:16:23 INFO  (HeadlessAnalyzer) Opening existing project: /workspace/reverse-engineering/projects/CPRSChart  
+2026-11-01 15:16:24 INFO  (HeadlessProject) Opening project: /workspace/reverse-engineering/projects/CPRSChart  
+2026-11-01 15:16:24 DEBUG (SleighLanguage) Took 376ms (143ms inside lock) to initialize language /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86.slaspec -> /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86.sla  
+2026-11-01 15:16:25 INFO  (HeadlessAnalyzer) REPORT: Processing project file: /CPRSChart.exe  
+2026-11-01 15:16:25 INFO  (HeadlessAnalyzer) REPORT: Execute script: ConfigureBoundedAnalysis.java '/workspace/reverse-engineering/evidence/analysis-options.json'   
+2026-11-01 15:16:26 INFO  (HeadlessAnalyzer) SCRIPT: /workspace/reverse-engineering/scripts/ConfigureBoundedAnalysis.java  
+2026-11-01 15:16:26 INFO  (GhidraScript) ConfigureBoundedAnalysis.java> BOUNDED_ANALYSIS disabled=[Aggressive Instruction Finder, Create Address Tables, Data Reference.Create Address Tables, Decompiler Parameter ID, Decompiler Switch Analysis, Reference.Create Address Tables, Stack]  
+2026-11-01 15:16:26 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: /CPRSChart.exe  
+2026-11-01 15:16:26 WARN  (NoReturnFunctionAnalyzer) Ignoring leading '_' chars on no-return name '___raise_securityfailure' specified in file: /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn  
+2026-11-01 15:16:26 WARN  (NoReturnFunctionAnalyzer) Ignoring leading '_' chars on no-return name '___report_rangecheckfailure' specified in file: /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn  
+2026-11-01 15:16:27 INFO  (DWARFAnalyzer) Unable to find DWARF information, skipping DWARF analysis  
+2026-11-01 15:16:27 INFO  (PdbUniversalAnalyzer) Skipping PDB processing: missing PDB information in program metadata  
+2026-11-01 15:16:36 ERROR (PngDataType) Invalid PNG data at 0122e251  
+2026-11-01 15:16:36 ERROR (PngDataType) Invalid PNG data at 012352f8  
+2026-11-01 15:18:26 DEBUG (FidAnalyzer) No FID Libraries apply for language x86:LE:32:default  
+2026-11-01 15:18:26 INFO  (PackedDatabaseCache) Packed database cache: /workspace/reverse-engineering/.cache/agent-ghidra/packed-db-cache  
+2026-11-01 15:18:26 DEBUG (PackedDatabaseCache) Using cached packed database: /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/data/typeinfo/win32/windows_vs12_32.gdt  
+2026-11-01 15:18:28 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: windows_vs12_32  
+2026-11-01 15:18:44 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              1.810 secs
+    Apply Data Archives                        1.762 secs
+    Call Convention ID                         0.297 secs
+    Call-Fixup Installer                       0.578 secs
+    Create Function                            5.892 secs
+    DWARF                                      0.002 secs
+    Data Reference                             8.866 secs
+    Demangler GNU                              3.730 secs
+    Demangler Microsoft                        1.393 secs
+    Disassemble                                5.651 secs
+    Disassemble Entry Points                   9.450 secs
+    Disassemble Entry Points - One Time       10.322 secs
+    Embedded Media                             0.122 secs
+    External Entry References                  0.001 secs
+    Function ID                                0.023 secs
+    Function Start Search                      0.486 secs
+    Function Start Search After Code           0.413 secs
+    Non-Returning Functions - Discovered       5.885 secs
+    Non-Returning Functions - Known            0.382 secs
+    PDB Universal                              0.003 secs
+    Reference                                 15.330 secs
+    Scalar Operand References                  8.684 secs
+    Shared Return Calls                        4.007 secs
+    Source Language Support                    0.013 secs
+    Subroutine References                      3.352 secs
+    Subroutine References - One Time           0.001 secs
+    Variadic Function Signature Override       3.182 secs
+    WindowsResourceReference                   4.898 secs
+    X86 Function Callee Purge                  3.689 secs
+    x86 Constant Reference Analyzer           37.358 secs
+-----------------------------------------------------
+     Total Time   137 secs
+-----------------------------------------------------
+  
+2026-11-01 15:18:44 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: /CPRSChart.exe  
+2026-11-01 15:18:44 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportProgramInventory.java '/workspace/reverse-engineering/evidence/inventory-final' '7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544'   
+2026-11-01 15:18:44 INFO  (HeadlessAnalyzer) SCRIPT: /workspace/reverse-engineering/scripts/ExportProgramInventory.java  
+2026-11-01 15:18:52 INFO  (GhidraScript) ExportProgramInventory.java> INVENTORY internal=41948 external=1423 calls=243852  
+2026-11-01 15:18:52 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: /CPRSChart.exe  
+2026-11-01 15:18:52 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: /CPRSChart.exe  
+2026-11-01 15:18:53 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for processed file: /CPRSChart.exe  

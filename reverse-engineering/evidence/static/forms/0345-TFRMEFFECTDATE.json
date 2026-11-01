@@ -1,0 +1,163 @@
+{
+  "class": "TfrmEffectDate",
+  "name": "frmEffectDate",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 335,
+    "Top": 133,
+    "BorderIcons": [],
+    "BorderStyle": "bsDialog",
+    "Caption": "Discharge Date",
+    "ClientHeight": 127,
+    "ClientWidth": 254,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 260,
+    "ExplicitHeight": 155,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "Label2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 68,
+        "Top": 48,
+        "Width": 68,
+        "Height": 13,
+        "Caption": "Effective Date"
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "Label3",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 8,
+        "Top": 8,
+        "Width": 244,
+        "Height": 17,
+        "Caption": "Enter the date this discharge will become effective.",
+        "TabOrder": 3
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "Label4",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 8,
+        "Top": 22,
+        "Width": 224,
+        "Height": 17,
+        "Caption": "(This aids pharmacy in preparing prescriptions.)",
+        "TabOrder": 4
+      },
+      "children": []
+    },
+    {
+      "class": "TORDateBox",
+      "name": "calEffective",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 68,
+        "Top": 62,
+        "Width": 120,
+        "Height": 21,
+        "TabOrder": 0,
+        "Text": "Today",
+        "DateOnly": true,
+        "RequireTime": false,
+        "Caption": "Effective Date"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 51,
+        "Top": 95,
+        "Width": 72,
+        "Height": 21,
+        "Caption": "OK",
+        "Default": true,
+        "TabOrder": 1,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 133,
+        "Top": 95,
+        "Width": 72,
+        "Height": 21,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 2,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = Label3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Label4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calEffective",
+            "Text = Effective Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmEffectDate",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

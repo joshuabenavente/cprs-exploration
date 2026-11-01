@@ -1,0 +1,337 @@
+[
+  {
+    "caller_subsystem": "compiler-runtime-and-libraries",
+    "callee_subsystem": "compiler-runtime-and-libraries",
+    "static_call_edges": 79889
+  },
+  {
+    "caller_subsystem": "compiler-runtime-and-libraries",
+    "callee_subsystem": "other-application-modules",
+    "static_call_edges": 1
+  },
+  {
+    "caller_subsystem": "compiler-runtime-and-libraries",
+    "callee_subsystem": "shared-controls-and-accessibility",
+    "static_call_edges": 2
+  },
+  {
+    "caller_subsystem": "cover-sheet-and-vitals",
+    "callee_subsystem": "compiler-runtime-and-libraries",
+    "static_call_edges": 1301
+  },
+  {
+    "caller_subsystem": "cover-sheet-and-vitals",
+    "callee_subsystem": "cover-sheet-and-vitals",
+    "static_call_edges": 270
+  },
+  {
+    "caller_subsystem": "cover-sheet-and-vitals",
+    "callee_subsystem": "documentation-encounters-and-reminders",
+    "static_call_edges": 10
+  },
+  {
+    "caller_subsystem": "cover-sheet-and-vitals",
+    "callee_subsystem": "orders-medications-and-consults",
+    "static_call_edges": 19
+  },
+  {
+    "caller_subsystem": "cover-sheet-and-vitals",
+    "callee_subsystem": "other-application-modules",
+    "static_call_edges": 244
+  },
+  {
+    "caller_subsystem": "cover-sheet-and-vitals",
+    "callee_subsystem": "patient-context-and-shell",
+    "static_call_edges": 6
+  },
+  {
+    "caller_subsystem": "cover-sheet-and-vitals",
+    "callee_subsystem": "results-reports-and-graphs",
+    "static_call_edges": 1
+  },
+  {
+    "caller_subsystem": "cover-sheet-and-vitals",
+    "callee_subsystem": "shared-controls-and-accessibility",
+    "static_call_edges": 97
+  },
+  {
+    "caller_subsystem": "cover-sheet-and-vitals",
+    "callee_subsystem": "transport-authentication-and-integration",
+    "static_call_edges": 30
+  },
+  {
+    "caller_subsystem": "documentation-encounters-and-reminders",
+    "callee_subsystem": "compiler-runtime-and-libraries",
+    "static_call_edges": 7078
+  },
+  {
+    "caller_subsystem": "documentation-encounters-and-reminders",
+    "callee_subsystem": "cover-sheet-and-vitals",
+    "static_call_edges": 12
+  },
+  {
+    "caller_subsystem": "documentation-encounters-and-reminders",
+    "callee_subsystem": "documentation-encounters-and-reminders",
+    "static_call_edges": 2224
+  },
+  {
+    "caller_subsystem": "documentation-encounters-and-reminders",
+    "callee_subsystem": "orders-medications-and-consults",
+    "static_call_edges": 30
+  },
+  {
+    "caller_subsystem": "documentation-encounters-and-reminders",
+    "callee_subsystem": "other-application-modules",
+    "static_call_edges": 1049
+  },
+  {
+    "caller_subsystem": "documentation-encounters-and-reminders",
+    "callee_subsystem": "patient-context-and-shell",
+    "static_call_edges": 200
+  },
+  {
+    "caller_subsystem": "documentation-encounters-and-reminders",
+    "callee_subsystem": "results-reports-and-graphs",
+    "static_call_edges": 8
+  },
+  {
+    "caller_subsystem": "documentation-encounters-and-reminders",
+    "callee_subsystem": "shared-controls-and-accessibility",
+    "static_call_edges": 1706
+  },
+  {
+    "caller_subsystem": "documentation-encounters-and-reminders",
+    "callee_subsystem": "transport-authentication-and-integration",
+    "static_call_edges": 217
+  },
+  {
+    "caller_subsystem": "orders-medications-and-consults",
+    "callee_subsystem": "compiler-runtime-and-libraries",
+    "static_call_edges": 16927
+  },
+  {
+    "caller_subsystem": "orders-medications-and-consults",
+    "callee_subsystem": "cover-sheet-and-vitals",
+    "static_call_edges": 1
+  },
+  {
+    "caller_subsystem": "orders-medications-and-consults",
+    "callee_subsystem": "documentation-encounters-and-reminders",
+    "static_call_edges": 220
+  },
+  {
+    "caller_subsystem": "orders-medications-and-consults",
+    "callee_subsystem": "orders-medications-and-consults",
+    "static_call_edges": 5212
+  },
+  {
+    "caller_subsystem": "orders-medications-and-consults",
+    "callee_subsystem": "other-application-modules",
+    "static_call_edges": 1867
+  },
+  {
+    "caller_subsystem": "orders-medications-and-consults",
+    "callee_subsystem": "patient-context-and-shell",
+    "static_call_edges": 423
+  },
+  {
+    "caller_subsystem": "orders-medications-and-consults",
+    "callee_subsystem": "results-reports-and-graphs",
+    "static_call_edges": 24
+  },
+  {
+    "caller_subsystem": "orders-medications-and-consults",
+    "callee_subsystem": "shared-controls-and-accessibility",
+    "static_call_edges": 4612
+  },
+  {
+    "caller_subsystem": "orders-medications-and-consults",
+    "callee_subsystem": "transport-authentication-and-integration",
+    "static_call_edges": 313
+  },
+  {
+    "caller_subsystem": "other-application-modules",
+    "callee_subsystem": "compiler-runtime-and-libraries",
+    "static_call_edges": 33747
+  },
+  {
+    "caller_subsystem": "other-application-modules",
+    "callee_subsystem": "cover-sheet-and-vitals",
+    "static_call_edges": 13
+  },
+  {
+    "caller_subsystem": "other-application-modules",
+    "callee_subsystem": "documentation-encounters-and-reminders",
+    "static_call_edges": 241
+  },
+  {
+    "caller_subsystem": "other-application-modules",
+    "callee_subsystem": "orders-medications-and-consults",
+    "static_call_edges": 177
+  },
+  {
+    "caller_subsystem": "other-application-modules",
+    "callee_subsystem": "other-application-modules",
+    "static_call_edges": 15971
+  },
+  {
+    "caller_subsystem": "other-application-modules",
+    "callee_subsystem": "patient-context-and-shell",
+    "static_call_edges": 304
+  },
+  {
+    "caller_subsystem": "other-application-modules",
+    "callee_subsystem": "results-reports-and-graphs",
+    "static_call_edges": 61
+  },
+  {
+    "caller_subsystem": "other-application-modules",
+    "callee_subsystem": "shared-controls-and-accessibility",
+    "static_call_edges": 3745
+  },
+  {
+    "caller_subsystem": "other-application-modules",
+    "callee_subsystem": "transport-authentication-and-integration",
+    "static_call_edges": 580
+  },
+  {
+    "caller_subsystem": "patient-context-and-shell",
+    "callee_subsystem": "compiler-runtime-and-libraries",
+    "static_call_edges": 2634
+  },
+  {
+    "caller_subsystem": "patient-context-and-shell",
+    "callee_subsystem": "cover-sheet-and-vitals",
+    "static_call_edges": 6
+  },
+  {
+    "caller_subsystem": "patient-context-and-shell",
+    "callee_subsystem": "documentation-encounters-and-reminders",
+    "static_call_edges": 35
+  },
+  {
+    "caller_subsystem": "patient-context-and-shell",
+    "callee_subsystem": "orders-medications-and-consults",
+    "static_call_edges": 19
+  },
+  {
+    "caller_subsystem": "patient-context-and-shell",
+    "callee_subsystem": "other-application-modules",
+    "static_call_edges": 423
+  },
+  {
+    "caller_subsystem": "patient-context-and-shell",
+    "callee_subsystem": "patient-context-and-shell",
+    "static_call_edges": 701
+  },
+  {
+    "caller_subsystem": "patient-context-and-shell",
+    "callee_subsystem": "results-reports-and-graphs",
+    "static_call_edges": 23
+  },
+  {
+    "caller_subsystem": "patient-context-and-shell",
+    "callee_subsystem": "shared-controls-and-accessibility",
+    "static_call_edges": 358
+  },
+  {
+    "caller_subsystem": "patient-context-and-shell",
+    "callee_subsystem": "transport-authentication-and-integration",
+    "static_call_edges": 176
+  },
+  {
+    "caller_subsystem": "results-reports-and-graphs",
+    "callee_subsystem": "compiler-runtime-and-libraries",
+    "static_call_edges": 8137
+  },
+  {
+    "caller_subsystem": "results-reports-and-graphs",
+    "callee_subsystem": "orders-medications-and-consults",
+    "static_call_edges": 2
+  },
+  {
+    "caller_subsystem": "results-reports-and-graphs",
+    "callee_subsystem": "other-application-modules",
+    "static_call_edges": 1849
+  },
+  {
+    "caller_subsystem": "results-reports-and-graphs",
+    "callee_subsystem": "patient-context-and-shell",
+    "static_call_edges": 103
+  },
+  {
+    "caller_subsystem": "results-reports-and-graphs",
+    "callee_subsystem": "results-reports-and-graphs",
+    "static_call_edges": 1397
+  },
+  {
+    "caller_subsystem": "results-reports-and-graphs",
+    "callee_subsystem": "shared-controls-and-accessibility",
+    "static_call_edges": 1165
+  },
+  {
+    "caller_subsystem": "results-reports-and-graphs",
+    "callee_subsystem": "transport-authentication-and-integration",
+    "static_call_edges": 121
+  },
+  {
+    "caller_subsystem": "shared-controls-and-accessibility",
+    "callee_subsystem": "compiler-runtime-and-libraries",
+    "static_call_edges": 3972
+  },
+  {
+    "caller_subsystem": "shared-controls-and-accessibility",
+    "callee_subsystem": "other-application-modules",
+    "static_call_edges": 97
+  },
+  {
+    "caller_subsystem": "shared-controls-and-accessibility",
+    "callee_subsystem": "patient-context-and-shell",
+    "static_call_edges": 1
+  },
+  {
+    "caller_subsystem": "shared-controls-and-accessibility",
+    "callee_subsystem": "shared-controls-and-accessibility",
+    "static_call_edges": 1468
+  },
+  {
+    "caller_subsystem": "shared-controls-and-accessibility",
+    "callee_subsystem": "transport-authentication-and-integration",
+    "static_call_edges": 13
+  },
+  {
+    "caller_subsystem": "transport-authentication-and-integration",
+    "callee_subsystem": "compiler-runtime-and-libraries",
+    "static_call_edges": 2606
+  },
+  {
+    "caller_subsystem": "transport-authentication-and-integration",
+    "callee_subsystem": "cover-sheet-and-vitals",
+    "static_call_edges": 1
+  },
+  {
+    "caller_subsystem": "transport-authentication-and-integration",
+    "callee_subsystem": "documentation-encounters-and-reminders",
+    "static_call_edges": 9
+  },
+  {
+    "caller_subsystem": "transport-authentication-and-integration",
+    "callee_subsystem": "other-application-modules",
+    "static_call_edges": 192
+  },
+  {
+    "caller_subsystem": "transport-authentication-and-integration",
+    "callee_subsystem": "patient-context-and-shell",
+    "static_call_edges": 8
+  },
+  {
+    "caller_subsystem": "transport-authentication-and-integration",
+    "callee_subsystem": "shared-controls-and-accessibility",
+    "static_call_edges": 33
+  },
+  {
+    "caller_subsystem": "transport-authentication-and-integration",
+    "callee_subsystem": "transport-authentication-and-integration",
+    "static_call_edges": 903
+  }
+]

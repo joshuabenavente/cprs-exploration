@@ -1,0 +1,201 @@
+{
+  "class": "TfrmChgEvent",
+  "name": "frmChgEvent",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 256,
+    "Top": 148,
+    "Caption": "Change Release Event",
+    "ClientHeight": 401,
+    "ClientWidth": 554,
+    "OldCreateOrder": false,
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 562,
+    "ExplicitHeight": 428,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 554,
+        "Height": 38,
+        "Align": "alTop",
+        "AutoSize": true,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblPtInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 3,
+            "Height": 36,
+            "Align": "alTop",
+            "Color": "clBtnFace",
+            "Constraints.MinHeight": 36,
+            "ParentColor": false,
+            "Layout": "tlCenter"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 38,
+        "Width": 554,
+        "Height": 363,
+        "Align": "alClient",
+        "TabOrder": 1,
+        "ExplicitHeight": 362,
+        "DesignSize": [
+          554,
+          363
+        ]
+      },
+      "children": [
+        {
+          "class": "TORComboBox",
+          "name": "cboSpecialty",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 12,
+            "Top": 8,
+            "Width": 443,
+            "Height": 344,
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akRight",
+              "akBottom"
+            ],
+            "Style": "orcsSimple",
+            "AutoSelect": true,
+            "Caption": "",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": false,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "9",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "Text": "",
+            "OnChange": "cboSpecialtyChange",
+            "OnDblClick": "cboSpecialtyDblClick",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 466,
+            "Top": 331,
+            "Width": 75,
+            "Height": 20,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 1,
+            "OnClick": "btnCancelClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnAction",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 466,
+            "Top": 303,
+            "Width": 75,
+            "Height": 20,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "TabOrder": 2,
+            "Visible": false,
+            "OnClick": "btnActionClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSpecialty",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAction",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmChgEvent",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

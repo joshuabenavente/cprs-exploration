@@ -1,0 +1,117 @@
+{
+  "class": "TfrmUnholdOrders",
+  "name": "frmUnholdOrders",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 269,
+    "Top": 192,
+    "Caption": "Release Orders from Hold",
+    "ClientHeight": 243,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 320,
+    "ExplicitHeight": 270,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "Label1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 8,
+        "Top": 8,
+        "Width": 222,
+        "Height": 13,
+        "Caption": "The following orders will be released from hold -"
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionListBox",
+      "name": "lstOrders",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 8,
+        "Top": 22,
+        "Width": 411,
+        "Height": 176,
+        "ItemHeight": 13,
+        "TabOrder": 0,
+        "Caption": "The following orders will be released from hold "
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 267,
+        "Top": 214,
+        "Width": 72,
+        "Height": 21,
+        "Caption": "OK",
+        "Default": true,
+        "TabOrder": 1,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 347,
+        "Top": 214,
+        "Width": 72,
+        "Height": 21,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 2,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lstOrders",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmUnholdOrders",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

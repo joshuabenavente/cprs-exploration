@@ -1,0 +1,509 @@
+{
+  "class": "TfrmNewAllergyCheck",
+  "name": "frmNewAllergyCheck",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 545,
+    "Top": 470,
+    "BorderIcons": [],
+    "Caption": "Existing Medication Allergy",
+    "ClientHeight": 426,
+    "ClientWidth": 573,
+    "Constraints.MinHeight": 433,
+    "Constraints.MinWidth": 589,
+    "Font.Charset": "ANSI_CHARSET",
+    "OldCreateOrder": false,
+    "Position": "poMainFormCenter",
+    "ExplicitWidth": 589,
+    "ExplicitHeight": 464,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlCheck",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 567,
+        "Height": 113,
+        "Align": "alTop",
+        "AutoSize": true,
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TMemo",
+          "name": "Check",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 567,
+            "Height": 113,
+            "TabStop": false,
+            "Align": "alClient",
+            "Color": "clBtnFace",
+            "Constraints.MinHeight": 70,
+            "ReadOnly": true,
+            "ScrollBars": "ssVertical",
+            "TabOrder": 0
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlOptRecipients",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 210,
+        "Width": 567,
+        "Height": 173,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblRecipients",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 0,
+            "Top": 3,
+            "Width": 564,
+            "Height": 13,
+            "Margins.Left": 0,
+            "Align": "alTop",
+            "Caption": " Optional Recipients",
+            "WordWrap": true,
+            "ExplicitWidth": 95
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlOptRecipientsSub",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 19,
+            "Width": 567,
+            "Height": 154,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TORCheckComboBox",
+              "name": "OptRecip",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 241,
+                "Height": 148,
+                "Style": "orcsSimple",
+                "Align": "alLeft",
+                "AutoSelect": true,
+                "Caption": "Encounter Provider",
+                "Color": "clWindow",
+                "DropDownCount": 8,
+                "ItemHeight": 13,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": false,
+                "LongList": true,
+                "LookupPiece": 2,
+                "MaxLength": 0,
+                "Pieces": "2,3",
+                "Sorted": false,
+                "SynonymChars": "<>",
+                "TabOrder": 0,
+                "TabStop": true,
+                "Text": "",
+                "OnChange": "OptRecipChange",
+                "OnDblClick": "OptRecipDblClick",
+                "OnEnter": "OptRecipEnter",
+                "OnKeyDown": "OptRecipKeyDown",
+                "OnMouseClick": "OptRecipMouseClick",
+                "OnNeedData": "OptRecipNeedData",
+                "CharsNeedMatch": 1,
+                "UniqueAutoComplete": true,
+                "MainCheckBoxCaption": "Include Non-VA Provides",
+                "MainCheckBoxVisible": true,
+                "MainCheckBoxAlignment": "calBottom",
+                "OnMainCheckboxClick": "OptRecipMainCheckboxClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlOptRecipientsButtons",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 247,
+                "Top": 0,
+                "Width": 84,
+                "Height": 154,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnRemove",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 34,
+                    "Width": 78,
+                    "Height": 25,
+                    "Action": "actRemove",
+                    "Align": "alTop",
+                    "TabOrder": 1
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnAdd",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 78,
+                    "Height": 25,
+                    "Action": "actAdd",
+                    "Align": "alTop",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnRemoveAll",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 65,
+                    "Width": 78,
+                    "Height": 25,
+                    "Action": "actRemoveAll",
+                    "Align": "alTop",
+                    "TabOrder": 2
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TORListBox",
+              "name": "SelRecip",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 334,
+                "Top": 3,
+                "Width": 225,
+                "Height": 148,
+                "Margins.Right": 8,
+                "Align": "alClient",
+                "ItemHeight": 13,
+                "MultiSelect": true,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 2,
+                "OnClick": "SelRecipClick",
+                "OnDblClick": "SelRecipDblClick",
+                "OnEnter": "SelRecipEnter",
+                "OnKeyPress": "SelRecipKeyPress",
+                "Caption": "",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlButton",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 389,
+        "Width": 567,
+        "Height": 34,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 3
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnSendAlertBtn",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 492,
+            "Top": 3,
+            "Width": 72,
+            "Height": 28,
+            "Action": "actOK",
+            "Align": "alRight",
+            "Cancel": true,
+            "ModalResult": 1,
+            "TabOrder": 0
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlRecipients",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 122,
+        "Width": 567,
+        "Height": 82,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblSent",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 561,
+            "Height": 13,
+            "Margins.Bottom": 0,
+            "Align": "alTop",
+            "Caption": "An alert will be sent to:",
+            "ExplicitWidth": 106
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "Recipients",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 19,
+            "Width": 561,
+            "Height": 60,
+            "Align": "alClient",
+            "ItemHeight": 13,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 0,
+            "Caption": "",
+            "ItemTipColor": "clWindow",
+            "LongList": false
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 16,
+        "Data": [
+          [
+            "Component = pnlCheck",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Check",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlOptRecipients",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Recipients",
+            "Label = lblSent",
+            "Status = stsOK"
+          ],
+          [
+            "Component = pnlButton",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmNewAllergyCheck",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnSendAlertBtn",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlOptRecipientsSub",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = OptRecip",
+            "Label = lblRecipients",
+            "Status = stsOK"
+          ],
+          [
+            "Component = pnlOptRecipientsButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAdd",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemoveAll",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlRecipients",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = SelRecip",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TActionList",
+      "name": "ActionList1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 67,
+        "Top": 3
+      },
+      "children": [
+        {
+          "class": "TAction",
+          "name": "actAdd",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Add",
+            "OnExecute": "actAddExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "actRemove",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Remove",
+            "OnExecute": "actRemoveExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "actRemoveAll",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Remove &All",
+            "OnExecute": "actRemoveAllExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "actOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&OK",
+            "OnExecute": "actOKExecute"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

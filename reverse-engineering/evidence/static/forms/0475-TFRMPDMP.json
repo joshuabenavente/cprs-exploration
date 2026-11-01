@@ -1,0 +1,169 @@
+{
+  "class": "TfrmPDMP",
+  "name": "frmPDMP",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "BorderStyle": "bsNone",
+    "Caption": "PDMP",
+    "ClientHeight": 65,
+    "ClientWidth": 99,
+    "Color": "clWindow",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -19,
+    "Font.Name": "MS Sans Serif",
+    "Font.Style": [],
+    "OldCreateOrder": false,
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "PixelsPerInch": 96,
+    "TextHeight": 24
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlPdmp",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 99,
+        "Height": 65,
+        "Align": "alClient",
+        "BevelWidth": 2,
+        "Caption": "Requested...",
+        "ParentBackground": false,
+        "ParentColor": true,
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "bbCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 97,
+            "Height": 63,
+            "Action": "acCancel",
+            "Align": "alClient",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 2,
+            "Visible": false,
+            "WordWrap": true
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "bbResults",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 97,
+            "Height": 63,
+            "Action": "acResults",
+            "Align": "alClient",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 1,
+            "WordWrap": true
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "bbStart",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 97,
+            "Height": 63,
+            "Action": "acPDMPRequest",
+            "Align": "alClient",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 0,
+            "Visible": false,
+            "WordWrap": true
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TActionList",
+      "name": "alPdmp",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 64,
+        "Top": 8
+      },
+      "children": [
+        {
+          "class": "TAction",
+          "name": "acResults",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "PDMP Results",
+            "Hint": "Show PDMP Results",
+            "ImageIndex": 0,
+            "Visible": false,
+            "OnExecute": "acResultsExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acPDMPRequest",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "PDMP Query",
+            "Hint": "Request PDMP data",
+            "ImageIndex": 0,
+            "OnExecute": "acPDMPRequestExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "PDMP Cancel",
+            "Hint": "Cancel PDMP request",
+            "ImageIndex": 1,
+            "OnExecute": "acCancelExecute"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

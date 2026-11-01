@@ -1,0 +1,226 @@
+00862ab4 XWBHash.Encrypt instructions 57
+ CALL 00862b1f 008617bc MFunStr.Translate
+00862b6c XWBHash.Decrypt instructions 58
+ CALL 00862bef 008617bc MFunStr.Translate
+0099f5dc Trpcb.TRPCBroker.CreateContext instructions 128
+ CALL 0099f635 0099f1d0 Trpcb.TRPCBroker.Create
+ CALL 0099f6a5 0099f124 Trpcb.TParams.GetParameter
+ CALL 0099f6b6 0099f124 Trpcb.TParams.GetParameter
+ CALL 0099f6c5 00862ab4 XWBHash.Encrypt
+ LITERAL 0099f693 0099f7f8 'XWB CREATE CONTEXT'
+0099f884 Trpcb.TRPCBroker.Call instructions 40
+0099f938 Trpcb.TRPCBroker.SetConnected instructions 421
+ CALL 0099f976 009a1a80 Trpcb.TVistaLogin.SetErrorText
+ CALL 0099fa4a 009a0b90 Trpcb.ExistingSocket
+ CALL 0099face 009a2b7c Trpcb.TRPCBroker.CheckSSH
+ CALL 0099fae8 009a2e38 Trpcb.TRPCBroker.StartSecureConnection
+ CALL 0099fb39 0099094c Wsockc.TXWBWinsock.NetworkConnect
+ CALL 0099fb47 009a0b94 Trpcb.AuthenticateUser
+ CALL 0099fb4f 009a0934 Trpcb.StoreConnection
+ CALL 0099fb8e 009a1e10 Trpcb.TRPCBroker.GetCCOWHandle
+ CALL 0099fc0a 008638a8 VERGENCECONTEXTORLib_TLB.TContextorControl.Run
+ CALL 0099fc33 009a1f84 Trpcb.TRPCBroker.CCOWsetUser
+ CALL 0099fd26 009a0934 Trpcb.StoreConnection
+ CALL 0099febd 009a0aa8 Trpcb.RemoveConnection
+ CALL 0099fee6 00990a00 Wsockc.TXWBWinsock.NetworkDisconnect
+ LITERAL 0099fa9d 009a0268 '4. Connect the client application using the port number entered in Step #3.'
+ LITERAL 0099fc40 009a0340 'user.id.logon.vistalogon'
+ LITERAL 0099fc65 009a0380 'user.id.logon.vistaname'
+ LITERAL 0099fca9 009a03bc 'user.id.logon.vpid'
+ LITERAL 0099fd7c 009a0434 '(SSH Secure connection)'
+ LITERAL 0099fd97 009a0470 ' (SSH Secure connection)'
+ LITERAL 0099ff3e 009a0434 '(SSH Secure connection)'
+009a2e38 Trpcb.TRPCBroker.StartSecureConnection instructions 146
+ CALL 009a2ead 009a2dc8 Trpcb.TRPCBroker.getSSHUsername
+ CALL 009a2f7d 009a2e00 Trpcb.TRPCBroker.getSSHPassWord
+ CALL 009a2ffc 00996390 RpcSLogin.StartProgSLogin
+ CALL 009a300d 00996390 RpcSLogin.StartProgSLogin
+ LITERAL 009a2f46 009a3124 ' -o "StrictHostKeyChecking no" -o "connectionReuse no" '
+009ae314 ORNet.CallBrokerInContext instructions 153
+ CALL 009ae33e 009acd20 ORNet.LockBroker
+ CALL 009ae38c 009b0784 ORUnitTesting.FindMockRPC
+ CALL 009ae3b6 009b0450 ORUnitTesting.ParamToStr
+ CALL 009ae465 009b60ec ORFn.StatusText
+ CALL 009ae495 009b00e8 ORNet.TCallList.Lock
+ CALL 009ae4b1 009aff74 ORNet.TCallList.Delete
+ CALL 009ae4bb 009b0020 ORNet.TCallList.GetCount
+ CALL 009ae4da 009b00f4 ORNet.TCallList.Unlock
+ LITERAL 009ae44a 009aec64 ' (CallBroker begin)'
+009af1ec ORNet.CallBroker instructions 28
+ CALL 009af1f6 009acd20 ORNet.LockBroker
+ CALL 009af20e 009ae170 ORNet.UpdateContext
+ CALL 009af217 009ae314 ORNet.CallBrokerInContext
+ CALL 009af22c 009acd2c ORNet.UnlockBroker
+009af2c4 ORNet.ConnectToServer instructions 161
+ CALL 009af3b1 009b2f6c ORFn.Piece
+ CALL 009af3ee 009b2f6c ORFn.Piece
+ CALL 009af42b 009b2f6c ORFn.Piece
+ CALL 009af44a 0099916c Rpcconf1.GetServerInfo
+ CALL 009af466 009ace6c ORNet.EnsureBroker
+ CALL 009af48d 009af244 ORNet.SetBrokerServer
+ CALL 009af495 009af288 ORNet.AuthorizedOption
+00a0b3e0 rTIU.CosignDocument instructions 35
+ CALL 00a0b413 009ad924 ORNet.CallVistA
+ LITERAL 00a0b40e 00a0b45c 'TIU WHICH SIGNATURE ACTION'
+ LITERAL 00a0b41b 00a0b4a0 'COSIGNATURE'
+00a0c6fc rTIU.SignDocument instructions 63
+ CALL 00a0c747 009ad924 ORNet.CallVistA
+ CALL 00a0c75c 009b2f6c ORFn.Piece
+ CALL 00a0c783 009b2f6c ORFn.Piece
+ LITERAL 00a0c742 00a0c7d4 'TIU SIGN RECORD'
+00a0d360 rTIU.Submit instructions 86
+ CALL 00a0d3fd 009ada80 ORNet.CallVistA
+ CALL 00a0d428 009b2f6c ORFn.Piece
+ LITERAL 00a0d3f8 00a0d48c 'TIU SET DOCUMENT TEXT'
+ LITERAL 00a0d431 00a0d4c4 'An error occurred on the server.'
+00ae6cb0 uVitals.ViewPatientVitals instructions 237
+ CALL 00ae6d09 00ae6bd4 uVitals.LoadVitalsDLL
+ CALL 00ae6dd7 009a1744 Trpcb.GetAppHandle
+ CALL 00ae6e15 0079acec VAUtils.Piece
+ CALL 00ae6e5a 011d4f18 uCore.TEncounter.GetLocationName
+ CALL 00ae6fdd 00ae6c90 uVitals.UnloadVitalsDLL
+00cf2a44 fSignItem.TfrmSignItem.cmdOKClick instructions 54
+ CALL 00cf2a6f 011cb4d8 rCore.ValidESCode
+ CALL 00cf2a84 009b44a8 ORFn.InfoBox
+ CALL 00cf2ab8 00862ab4 XWBHash.Encrypt
+ LITERAL 00cf2a7a 00cf2b14 'Unrecognized Signature Code'
+ LITERAL 00cf2a7f 00cf2b58 'Not a valid electronic signature code.  Enter a valid code or press Cancel.'
+00e13350 fNotes.TfrmNotes.acSaveNoSigExecute instructions 70
+ CALL 00e13382 007b1014 ORCtrls.TORListBox.GetMItems
+ CALL 00e133a1 0079acec VAUtils.Piece
+ CALL 00e133b9 00e1946c fNotes.TfrmNotes.SaveCurrentNote
+ CALL 00e133da 00e21f14 fNotes.TfrmNotes.LoadNotes
+ CALL 00e133fa 007b5f00 ORCtrls.TORTreeView.FindPieceNode
+ CALL 00e13418 009b44a8 ORFn.InfoBox
+00e134e4 fNotes.TfrmNotes.acSignExecute instructions 407
+ CALL 00e1352c 007ae008 ORCtrls.TORListBox.GetItemID
+ CALL 00e1356e 00e1946c fNotes.TfrmNotes.SaveCurrentNote
+ CALL 00e13595 007b1014 ORCtrls.TORListBox.GetMItems
+ CALL 00e135b8 0079acec VAUtils.Piece
+ CALL 00e135c3 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e135c8 00a0ed10 rTIU.NoteHasText
+ CALL 00e135df 009b44a8 ORFn.InfoBox
+ CALL 00e135ef 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e135f6 00a0c188 rTIU.LastSaveClean
+ CALL 00e1360d 009b44a8 ORFn.InfoBox
+ CALL 00e13621 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e13626 00a0b3e0 rTIU.CosignDocument
+ CALL 00e1366b 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e13674 00e16210 fNotes.TfrmNotes.LockConsultRequestAndNote
+ CALL 00e1368d 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e1369a 00a0b1e8 rTIU.ActOnDocument
+ CALL 00e136af 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e136bb 011f3bfc uPCE.IsOK2Sign
+ CALL 00e136ef 00e19480 fNotes.TfrmNotes.lstNotesClick
+ CALL 00e136fa 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e136ff 00a0b304 rTIU.AuthorSignedDocument
+ CALL 00e1371d 00e15850 fNotes.TfrmNotes.GetTitleText
+ CALL 00e1373e 009b44a8 ORFn.InfoBox
+ CALL 00e1376f 007b1014 ORCtrls.TORListBox.GetMItems
+ CALL 00e13783 00a14ad8 uTIU.MakeNoteDisplayText
+ CALL 00e13798 00cf29a4 fSignItem.SignatureForItem
+ CALL 00e137b5 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e137c2 00a0c6fc rTIU.SignDocument
+ CALL 00e137cd 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e137d8 00e1c124 fNotes.TfrmNotes.RemovePCEFromChanges
+ CALL 00e137e6 007ae008 ORCtrls.TORListBox.GetItemID
+ CALL 00e13805 011d5c38 uCore.TChanges.Exist
+ CALL 00e13816 007ae008 ORCtrls.TORListBox.GetItemID
+ CALL 00e13835 011d5ee8 uCore.TChanges.Remove
+ CALL 00e1386f 00e19480 fNotes.TfrmNotes.lstNotesClick
+ CALL 00e13880 009b44a8 ORFn.InfoBox
+ CALL 00e13893 007ae008 ORCtrls.TORListBox.GetItemID
+ CALL 00e138b5 011d5c38 uCore.TChanges.Exist
+ CALL 00e138cb 009b44a8 ORFn.InfoBox
+ CALL 00e138dc 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e138e3 00a0c130 rTIU.UnlockDocument
+ CALL 00e138ee 007adbdc ORCtrls.TORListBox.GetItemIEN
+ CALL 00e138f9 00e1644c fNotes.TfrmNotes.UnlockConsultRequest
+ CALL 00e1390a 00e21f14 fNotes.TfrmNotes.LoadNotes
+ CALL 00e1391f 007b1014 ORCtrls.TORListBox.GetMItems
+ CALL 00e13933 00a125bc uDocTree.MakeNoteTreeObject
+ CALL 00e13963 007b5794 ORCtrls.TORTreeNode.SetStringData
+ CALL 00e13974 00a125bc uDocTree.MakeNoteTreeObject
+ CALL 00e13983 00a14ad8 uTIU.MakeNoteDisplayText
+ CALL 00e139aa 007b5794 ORCtrls.TORTreeNode.SetStringData
+ CALL 00e139bc 00a10e14 uDocTree.SetTreeNodeImagesAndFormatting
+ CALL 00e139ca 007ae0d4 ORCtrls.TORListBox.SelectByID
+ CALL 00e139d3 00e1e48c fNotes.TfrmNotes.SetEditingIndex
+ CALL 00e139f6 007b5f00 ORCtrls.TORTreeView.FindPieceNode
+ CALL 00e13a24 00e1e870 fNotes.TfrmNotes.tvNotesChange
+ CALL 00e13a60 00e23934 fNotes.TfrmNotes.UpdateNotesCaption
+ LITERAL 00e1363f 00e13d38 'COSIGNATURE'
+ LITERAL 00e1365b 00e13d7c 'SIGNATURE'
+01011c80 uWriteAccess.WriteAccess instructions 31
+ CALL 01011cb4 01011280 uWriteAccess.TWriteAccess.WriteAccess
+01011ce4 uWriteAccess.WriteAccess instructions 33
+ CALL 01011d1b 010112e4 uWriteAccess.TWriteAccess.WriteAccess
+010f2488 fODBase.TResponses.SaveOrder instructions 486
+ CALL 010f24f4 011db684 rOrders.CheckQOGroup
+ CALL 010f25da 011e8bf8 rOrders.IsValidIMOLoc
+ CALL 010f2724 011e8a04 rOrders.EventExist
+ CALL 010f2741 011e8a04 rOrders.EventExist
+ CALL 010f2765 010eb48c rODBase.PutNewOrder
+ CALL 010f2797 011db390 rOrders.EventInfo
+ CALL 010f27ab 0079acec VAUtils.Piece
+ CALL 010f27be 009b2a68 ORFn.MixedCase
+ CALL 010f27ec 010eb48c rODBase.PutNewOrder
+ CALL 010f2830 011e8930 rOrders.SaveEvtForOrder
+ CALL 010f2845 011e8a04 rOrders.EventExist
+ CALL 010f288f 011db390 rOrders.EventInfo
+ CALL 010f28a3 0079acec VAUtils.Piece
+ CALL 010f28b6 009b2a68 ORFn.MixedCase
+ CALL 010f28e5 011e8930 rOrders.SaveEvtForOrder
+ CALL 010f28fa 011e8a04 rOrders.EventExist
+ CALL 010f2939 011e8930 rOrders.SaveEvtForOrder
+ CALL 010f294e 011e8a04 rOrders.EventExist
+ CALL 010f2998 011db390 rOrders.EventInfo
+ CALL 010f29ac 0079acec VAUtils.Piece
+ CALL 010f29bf 009b2a68 ORFn.MixedCase
+ CALL 010f29f6 007b1014 ORCtrls.TORListBox.GetMItems
+ CALL 010f2a2e 007b1014 ORCtrls.TORListBox.GetMItems
+ CALL 010f2a50 0079acec VAUtils.Piece
+ CALL 010f2a64 0079acec VAUtils.Piece
+ CALL 010f2aad 007b1014 ORCtrls.TORListBox.GetMItems
+ CALL 010f2acf 0079acec VAUtils.Piece
+ CALL 010f2afe 007b1014 ORCtrls.TORListBox.GetMItems
+ CALL 010f2b4d 00d82fdc UBACore.rpcGetBAMasterSwStatus
+ LITERAL 010f25eb 010f2bd8 'OR GXTEXT WORD PROCESSING ORDER'
+ LITERAL 010f260d 010f2c24 'OR GXMISC GENERAL'
+ LITERAL 010f2628 010f2c54 'OR GXTEXT TEXT ONLY ORDER'
+011e0544 rOrders.SendOrders instructions 122
+ CALL 011e05f7 009ada80 ORNet.CallVistA
+ CALL 011e063e 0079acec VAUtils.Piece
+ CALL 011e0670 0079acec VAUtils.Piece
+ CALL 011e0699 009b3eb4 ORFn.FastAssign
+ LITERAL 011e05f2 011e0704 'ORWDX SEND'
+ LITERAL 011e0646 011e0728 'This order requires a signature.'
+011e076c rOrders.SendReleaseOrders instructions 79
+ CALL 011e079f 011e6418 rOrders.GetCurrentSpec
+ CALL 011e07b0 0079acec VAUtils.Piece
+ CALL 011e0822 009ada80 ORNet.CallVistA
+ CALL 011e0841 009b3eb4 ORFn.FastAssign
+ LITERAL 011e081d 011e08a4 'ORWDX SENDED'
+011e0df4 rOrders.LockPatient instructions 82
+ CALL 011e0e36 009ad924 ORNet.CallVistA
+ CALL 011e0e5e 0079acec VAUtils.Piece
+ CALL 011e0e8e 0079acec VAUtils.Piece
+ CALL 011e0ece 011e95c0 rOrders.TLockList.AddLock
+ LITERAL 011e0e31 011e0f08 'ORWDX LOCK'
+ LITERAL 011e0e42 011e0f2c '3^Error caling "ORWDX LOC"'
+011e0fe0 rOrders.LockOrder instructions 85
+ CALL 011e102a 009ad924 ORNet.CallVistA
+ CALL 011e1052 0079acec VAUtils.Piece
+ CALL 011e1082 0079acec VAUtils.Piece
+ CALL 011e10bc 011e95c0 rOrders.TLockList.AddLock
+ LITERAL 011e1025 011e1100 'ORWDX LOCK ORDER'
+ LITERAL 011e1036 011e1130 '3^Error caling "ORWDX LOCK ORDER"'
+011e12a0 rOrders.ValidateOrderAction instructions 43
+ CALL 011e1319 009ad924 ORNet.CallVistA
+ LITERAL 011e1314 011e1344 'ORWDXA VALID'
+01224034 CPRSChart.CPRSChart instructions 97
+ CALL 01224061 009b8440 ORSystem.BorlandDLLVersionOK
+ CALL 0122406e 00df6cc4 uEventHooks.RegisterCPRSTypeLibrary
+ CALL 01224078 009bd230 ORRedirect.TORRedirect.Start
+ CALL 01224095 009b82b0 ORSystem.ParamSearch
+ CALL 012240b2 011c5f98 fBase508Form.TfrmBase508Form.Create

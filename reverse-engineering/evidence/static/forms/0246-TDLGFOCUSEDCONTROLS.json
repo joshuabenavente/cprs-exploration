@@ -1,0 +1,94 @@
+{
+  "class": "TdlgFocusedControls",
+  "name": "dlgFocusedControls",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Caption": "Focused Controls",
+    "ClientHeight": 348,
+    "ClientWidth": 643,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Tahoma",
+    "Font.Style": [],
+    "OldCreateOrder": false,
+    "Position": "poDefault",
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TStatusBar",
+      "name": "sbar",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 329,
+        "Width": 643,
+        "Height": 19,
+        "Panels": []
+      },
+      "children": []
+    },
+    {
+      "class": "TListView",
+      "name": "lv",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 643,
+        "Height": 329,
+        "Align": "alClient",
+        "Color": "clBtnFace",
+        "Columns": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "#"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "From",
+              "Width": 200
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "To",
+              "Width": 200
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Direction",
+              "Width": 100
+            }
+          }
+        ],
+        "Items.ItemData": {
+          "binary_bytes": 91
+        },
+        "TabOrder": 1,
+        "ViewStyle": "vsReport",
+        "ExplicitTop": -6
+      },
+      "children": []
+    }
+  ]
+}

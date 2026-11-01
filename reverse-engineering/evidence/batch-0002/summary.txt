@@ -1,0 +1,78 @@
+008617bc MFunStr.Translate instructions 85
+0099094c Wsockc.TXWBWinsock.NetworkConnect instructions 50
+ CALL 0099099d 009916c8 Wsockc.TXWBWinsock.NetStart
+009a0b94 Trpcb.AuthenticateUser instructions 462
+ CALL 009a0bc9 0099ef9c Trpcb.TParams.Create
+ CALL 009a0c82 008618c0 MFunStr.Piece
+ CALL 009a0c8c 009a1a44 Trpcb.TVistaLogin.SetAccessCode
+ CALL 009a0ca7 008618c0 MFunStr.Piece
+ CALL 009a0cb8 009a1ac8 Trpcb.TVistaLogin.SetVerifyCode
+ CALL 009a0cc8 009a1aa8 Trpcb.TVistaLogin.SetMode
+ CALL 009a0cfe 009a2370 Trpcb.TRPCBroker.GetCCOWtoken
+ CALL 009a0d2f 009a1a94 Trpcb.TVistaLogin.SetLogInHandle
+ CALL 009a0d3f 009a1aa8 Trpcb.TVistaLogin.SetMode
+ CALL 009a0d69 00995ed4 RpcSLogin.SilentLogIn
+ CALL 009a0d8c 009a1aa8 Trpcb.TVistaLogin.SetMode
+ CALL 009a0da1 009a1578 Trpcb.GetBrokerInfo
+ CALL 009a0e0e 00982f30 XWBSSOi.TXWBSSOiToken.Create
+ CALL 009a0e9f 009a1a94 Trpcb.TVistaLogin.SetLogInHandle
+ CALL 009a0eaf 009a1aa8 Trpcb.TVistaLogin.SetMode
+ CALL 009a1055 009a1aa8 Trpcb.TVistaLogin.SetMode
+ CALL 009a1086 00982f30 XWBSSOi.TXWBSSOiToken.Create
+ CALL 009a1117 009a1a94 Trpcb.TVistaLogin.SetLogInHandle
+ CALL 009a1127 009a1aa8 Trpcb.TVistaLogin.SetMode
+ CALL 009a1326 009a1b80 Trpcb.ShowApplicationAndFocusOK
+ CALL 009a1348 0099a568 Loginfrm.PrepareSignonForm
+ CALL 009a134d 0099a570 Loginfrm.SetUpSignOn
+ CALL 009a1385 009a1578 Trpcb.GetBrokerInfo
+ CALL 009a138f 00994b7c SelDiv.ChooseDiv
+ CALL 009a13aa 009a1a80 Trpcb.TVistaLogin.SetErrorText
+ CALL 009a13e2 009a1b80 Trpcb.ShowApplicationAndFocusOK
+009ada80 ORNet.CallVistA instructions 74
+ CALL 009ada93 009ad744 ORNet.AbortRPCCall
+ CALL 009adab0 009acd20 ORNet.LockBroker
+ CALL 009adaca 009ad030 ORNet.SetParams
+ CALL 009adae0 009af1ec ORNet.CallBroker
+ CALL 009adb18 0099f0b8 Trpcb.TParams.Clear
+ CALL 009adb2a 009acd2c ORNet.UnlockBroker
+009ae170 ORNet.UpdateContext instructions 109
+ CALL 009ae1f7 0099ef9c Trpcb.TParams.Create
+009b8440 ORSystem.BorlandDLLVersionOK instructions 81
+ CALL 009b8499 009b44a8 ORFn.InfoBox
+ CALL 009b84db 009b7f2c ORSystem.ClientVersion
+ CALL 009b84f3 009b2f6c ORFn.Piece
+ CALL 009b855c 009b44a8 ORFn.InfoBox
+ LITERAL 009b848f 009b85c4 'ERROR - BORLNDMM.DLL'
+ LITERAL 009b8494 009b85fc "This version of CPRS is unable to run because\r\nno copy of BORLNDMM.DLL can be found\r\nin your workstation's current PATH.\r\n\r\nPlease contact IRM for assistance."
+ LITERAL 009b850a 009b8748 'This version of CPRS is unable to run because\r\nthe copy of BORLNDMM.DLL located at:\r\n\r\n   '
+ LITERAL 009b8557 009b85c4 'ERROR - BORLNDMM.DLL'
+009bd230 ORRedirect.TORRedirect.Start instructions 28
+ CALL 009bd258 009bcf3c ORRedirect.StartIntercepting
+00ae6bd4 uVitals.LoadVitalsDLL instructions 42
+ CALL 00ae6c23 01192018 rMisc.LoadDll
+ LITERAL 00ae6c1e 00ae6c60 'GMV_VitalsViewEnter.dll'
+00ae6c90 uVitals.UnloadVitalsDLL instructions 11
+00e1946c fNotes.TfrmNotes.SaveCurrentNote instructions 7
+ CALL 00e19478 00e19034 fNotes.TfrmNotes.SaveEditedNote
+01011280 uWriteAccess.TWriteAccess.WriteAccess instructions 34
+ CALL 010112b2 010112e4 uWriteAccess.TWriteAccess.WriteAccess
+010112e4 uWriteAccess.TWriteAccess.WriteAccess instructions 69
+ CALL 0101133d 011d7790 uCore.SystemParameters
+ CALL 0101134e 00b94a00 fEncVitals.TJSONParameters.AsTypeDef<System.string>
+ CALL 0101138c 0100f6bc uWriteAccess.TWriteAccess.Error
+010eb48c rODBase.PutNewOrder instructions 376
+ CALL 010eb4e0 009a9470 ORNetIntf.NewORNetMult
+ CALL 010eb513 010e9444 rODBase.SetupORDIALOG
+ CALL 010eb522 010e9444 rODBase.SetupORDIALOG
+ CALL 010eb528 010eaf0c rODBase.setListParam
+ CALL 010eb6a5 009ada80 ORNet.CallVistA
+ CALL 010eb7d4 009b1bc4 ORFn.CharAt
+ CALL 010eb7fd 009b1bc4 ORFn.CharAt
+ CALL 010eb965 009b1bc4 ORFn.CharAt
+ CALL 010eb98e 009b1bc4 ORFn.CharAt
+ CALL 010eb9b2 011db878 rOrders.SetOrderFields
+ LITERAL 010eb6a0 010eba80 'ORWDX SAVE'
+011cb4d8 rCore.ValidESCode instructions 49
+ CALL 011cb504 00862ab4 XWBHash.Encrypt
+ CALL 011cb51d 009ad924 ORNet.CallVistA
+ LITERAL 011cb518 011cb578 'ORWU VALIDSIG'

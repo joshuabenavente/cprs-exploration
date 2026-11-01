@@ -1,0 +1,121 @@
+{
+  "class": "TfraTemplateFieldButton",
+  "name": "fraTemplateFieldButton",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 136,
+    "Height": 14,
+    "AutoScroll": true,
+    "Font.Charset": "ANSI_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Courier New",
+    "Font.Style": [],
+    "ParentFont": false,
+    "TabOrder": 0,
+    "TabStop": true,
+    "OnEnter": "FrameEnter",
+    "OnExit": "FrameExit"
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBtn",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 136,
+        "Height": 14,
+        "Align": "alClient",
+        "TabOrder": 0,
+        "OnExit": "FrameExit",
+        "OnMouseDown": "pnlBtnMouseDown",
+        "OnMouseUp": "pnlBtnMouseUp",
+        "ExplicitLeft": 14,
+        "ExplicitWidth": 122,
+        "DesignSize": [
+          136,
+          14
+        ]
+      },
+      "children": [
+        {
+          "class": "TShape",
+          "name": "spRequired",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 4,
+            "Width": 128,
+            "Height": 6,
+            "Align": "alClient",
+            "Brush.Color": "clBtnFace",
+            "Pen.Color": "clBtnFace",
+            "Shape": "stRoundRect",
+            "ExplicitLeft": 0,
+            "ExplicitTop": 0,
+            "ExplicitWidth": 14,
+            "ExplicitHeight": 14
+          },
+          "children": []
+        },
+        {
+          "class": "TPaintBox",
+          "name": "pbFocus",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 134,
+            "Height": 12,
+            "Align": "alClient",
+            "OnMouseDown": "pnlBtnMouseDown",
+            "OnMouseUp": "pnlBtnMouseUp",
+            "OnPaint": "pbFocusPaint",
+            "ExplicitWidth": 107
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblText",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 2,
+            "Top": -1,
+            "Width": 132,
+            "Height": 14,
+            "Alignment": "taCenter",
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akRight",
+              "akBottom"
+            ],
+            "AutoSize": false,
+            "Transparent": true,
+            "Layout": "tlCenter",
+            "OnMouseDown": "pnlBtnMouseDown",
+            "OnMouseUp": "pnlBtnMouseUp",
+            "ExplicitWidth": 105
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

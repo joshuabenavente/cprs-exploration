@@ -1,0 +1,128 @@
+{
+  "class": "TfrmEncounterFrame",
+  "name": "frmEncounterFrame",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 290,
+    "Top": 108,
+    "Caption": "Encounter Frame",
+    "ClientHeight": 561,
+    "ClientWidth": 784,
+    "Constraints.MinHeight": 600,
+    "Constraints.MinWidth": 800,
+    "FormStyle": "fsMDIForm",
+    "Position": "poMainFormCenter",
+    "OnCanResize": "FormCanResize",
+    "OnCloseQuery": "FormCloseQuery",
+    "OnResize": "FormResize",
+    "OldCreateOrder": true,
+    "ExplicitWidth": 800,
+    "ExplicitHeight": 600,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TBevel",
+      "name": "Bevel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 784,
+        "Height": 2,
+        "Align": "alTop",
+        "ExplicitWidth": 632
+      },
+      "children": []
+    },
+    {
+      "class": "TStatusBar",
+      "name": "StatusBar1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 561,
+        "Width": 784,
+        "Height": 0,
+        "Panels": []
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlPage",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 24,
+        "Width": 784,
+        "Height": 537,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TTabControl",
+      "name": "TabControl",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 0,
+        "Top": 2,
+        "Width": 784,
+        "Height": 22,
+        "Align": "alTop",
+        "TabOrder": 2,
+        "OnChange": "TabControlChange",
+        "OnChanging": "TabControlChanging",
+        "OnEnter": "TabControlEnter"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = StatusBar1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = TabControl",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmEncounterFrame",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

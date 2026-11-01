@@ -1,0 +1,75 @@
+openjdk version "25.0.5" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode)
+INFO  Using log config file: jar:file:/workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /workspace/reverse-engineering/evidence/seed-analysis.log (LoggingInitialization)  
+INFO  Loading user preferences: /workspace/reverse-engineering/.ghidra-settings/agent-ghidra/ghidra_12.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1148 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Loaded 154 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt (UnixSystemTrustKeyStoreUtil)  
+INFO  Loaded 154 trusted CA certificates from the OS trust store. (DefaultTrustManagerFactory)  
+INFO  Loaded 118 trusted CA certificates from the Java default trust store. (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (2401 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 60 extension points (19 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /workspace/reverse-engineering/scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /workspace/reverse-engineering/projects/CPRSChart (HeadlessAnalyzer)  
+INFO  Opening project: /workspace/reverse-engineering/projects/CPRSChart (HeadlessProject)  
+INFO  REPORT: Processing project file: /CPRSChart.exe (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: SeedEvidenceFunctions.java '/workspace/reverse-engineering'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /workspace/reverse-engineering/scripts/SeedEvidenceFunctions.java (HeadlessAnalyzer)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=500 created=500 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=1000 created=1000 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=1500 created=1500 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=2000 created=2000 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=2500 created=2500 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=3000 created=3000 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=3500 created=3500 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=4000 created=4000 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=4500 created=4498 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=5000 created=4983 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=5500 created=5480 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=6000 created=5979 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=6500 created=6479 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=7000 created=6979 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=7500 created=7478 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=8000 created=7978 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=8500 created=8464 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=9000 created=8964 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=9500 created=9458 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=10000 created=9955 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS processed=10500 created=10454 conflicts=0 (GhidraScript)  
+INFO  SeedEvidenceFunctions.java> SEEDS complete=10641 created=10577 conflicts=0 (GhidraScript)  
+INFO  REPORT: Execute script: ExportProgramInventory.java '/workspace/reverse-engineering/evidence/inventory-seeded' '7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /workspace/reverse-engineering/scripts/ExportProgramInventory.java (HeadlessAnalyzer)  
+INFO  ExportProgramInventory.java> INVENTORY internal=11280 external=1 calls=73825 (GhidraScript)  
+INFO  REPORT: Execute script: ExportFunctionBatch.java '/workspace/reverse-engineering/evidence/batch-0001' '/workspace/reverse-engineering/batches/0001-addresses.txt' '7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /workspace/reverse-engineering/scripts/ExportFunctionBatch.java (HeadlessAnalyzer)  
+INFO  ExportFunctionBatch.java> BATCH exported_entries=25 (GhidraScript)  
+INFO  REPORT: Save succeeded for processed file: /CPRSChart.exe (HeadlessAnalyzer)  

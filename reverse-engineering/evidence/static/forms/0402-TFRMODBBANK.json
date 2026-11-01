@@ -1,0 +1,1555 @@
+{
+  "class": "TfrmODBBank",
+  "name": "frmODBBank",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 409,
+    "Top": 244,
+    "Width": 700,
+    "Height": 647,
+    "AutoScroll": true,
+    "Caption": "Blood Component and Diagnostic Test Order Form",
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 700,
+    "ExplicitHeight": 647,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TSplitter",
+      "name": "Splitter1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 684,
+        "Height": 2,
+        "Cursor": "crVSplit",
+        "Align": "alTop",
+        "ExplicitWidth": 537
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlComments",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 12,
+        "Top": 25,
+        "Width": 534,
+        "Height": 368,
+        "TabOrder": 5,
+        "Visible": false
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblOrdComment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 25,
+            "Top": 3,
+            "Width": 87,
+            "Height": 13,
+            "Caption": "Order Comment",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -12,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnUpdateComments",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 372,
+            "Top": 174,
+            "Width": 115,
+            "Height": 25,
+            "Caption": "Update Comments",
+            "TabOrder": 0,
+            "OnClick": "btnUpdateCommentsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancelComment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 279,
+            "Top": 174,
+            "Width": 75,
+            "Height": 25,
+            "Caption": "Cancel",
+            "TabOrder": 1,
+            "OnClick": "btnCancelCommentClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TCaptionMemo",
+      "name": "memOrder",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 545,
+        "Width": 449,
+        "Height": 59,
+        "Visible": false,
+        "ExplicitTop": 545,
+        "ExplicitWidth": 449,
+        "ExplicitHeight": 59
+      },
+      "children": []
+    },
+    {
+      "class": "TPageControl",
+      "name": "pgeProduct",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 0,
+        "Top": 2,
+        "Width": 684,
+        "Height": 536,
+        "ActivePage": "TabDiag",
+        "Align": "alTop",
+        "TabOrder": 4,
+        "OnChange": "pgeProductChange"
+      },
+      "children": [
+        {
+          "class": "TTabSheet",
+          "name": "TabInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Patient Information",
+            "ImageIndex": 3
+          },
+          "children": [
+            {
+              "class": "TCaptionRichEdit",
+              "name": "edtInfo",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 676,
+                "Height": 508,
+                "Align": "alClient",
+                "BevelInner": "bvNone",
+                "BevelOuter": "bvNone",
+                "Font.Charset": "ANSI_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -12,
+                "Font.Name": "Courier New",
+                "Font.Style": [],
+                "ParentFont": false,
+                "ReadOnly": true,
+                "ScrollBars": "ssBoth",
+                "TabOrder": 0,
+                "WordWrap": false,
+                "Zoom": 100,
+                "Caption": "Patient Info"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TTabSheet",
+          "name": "TabDiag",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Blood Bank Orders",
+            "ImageIndex": 2
+          },
+          "children": [
+            {
+              "class": "TOROffsetLabel",
+              "name": "lblReqComment",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 300,
+                "Top": 25,
+                "Width": 108,
+                "Height": 37,
+                "HorzOffset": 2,
+                "Transparent": false,
+                "VertOffset": 2,
+                "WordWrap": false
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlFields",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 145,
+                "Width": 676,
+                "Height": 250,
+                "Hint": "Data entered into these fields apply to the entire order.",
+                "Align": "alTop",
+                "BevelEdges": [],
+                "BevelOuter": "bvNone",
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 2
+              },
+              "children": [
+                {
+                  "class": "TOROffsetLabel",
+                  "name": "lblDiagComment",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 8,
+                    "Top": 173,
+                    "Width": 46,
+                    "Height": 15,
+                    "Caption": "Comment",
+                    "Color": "clBtnFace",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "HorzOffset": 2,
+                    "ParentColor": false,
+                    "ParentFont": false,
+                    "Transparent": false,
+                    "VertOffset": 2,
+                    "WordWrap": true
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblUrgency",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 8,
+                    "Top": 39,
+                    "Width": 44,
+                    "Height": 13,
+                    "Caption": "Urgency*",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblReason",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 8,
+                    "Top": 77,
+                    "Width": 95,
+                    "Height": 13,
+                    "Caption": "Reason for Request",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblSurgery",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 125,
+                    "Top": 40,
+                    "Width": 36,
+                    "Height": 13,
+                    "Hint": "Enter the name of the surgical procedure that this request is for.",
+                    "Caption": "Surgery",
+                    "Enabled": false,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblRequiredField",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 400,
+                    "Top": 59,
+                    "Width": 122,
+                    "Height": 13,
+                    "Caption": "* Indicates a required field"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblTNS",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 282,
+                    "Top": -1,
+                    "Width": 14,
+                    "Height": 13,
+                    "Caption": "tns",
+                    "Color": "clActiveBorder",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clMaroon",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentColor": false,
+                    "ParentFont": false,
+                    "Visible": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblNoBloodReq",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 346,
+                    "Top": 19,
+                    "Width": 176,
+                    "Height": 13,
+                    "Caption": "No Blood Required for this Procedure",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clMaroon",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "Visible": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblWanted",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 8,
+                    "Top": 2,
+                    "Width": 195,
+                    "Height": 13,
+                    "Caption": "For All Components -- Date/Time Wanted",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboUrgency",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 12,
+                    "Top": 54,
+                    "Width": 98,
+                    "Height": 21,
+                    "Style": "orcsDropDown",
+                    "AutoSelect": true,
+                    "Caption": "Urgency",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": true,
+                    "LongList": false,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "ParentFont": false,
+                    "Pieces": "2",
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 1,
+                    "Text": "",
+                    "OnChange": "cboUrgencyChange",
+                    "OnExit": "cboUrgencyExit",
+                    "CharsNeedMatch": 1
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCheckBox",
+                  "name": "chkConsent",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 543,
+                    "Top": 132,
+                    "Width": 112,
+                    "Height": 17,
+                    "Hint": "Informed Consent Signed On Chart?",
+                    "Alignment": "taLeftJustify",
+                    "Caption": "Informed Consent?",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 4,
+                    "Visible": false,
+                    "OnClick": "chkConsentClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboSurgery",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 125,
+                    "Top": 54,
+                    "Width": 218,
+                    "Height": 21,
+                    "Style": "orcsDropDown",
+                    "AutoSelect": true,
+                    "Caption": "Surgery",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "Enabled": false,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": false,
+                    "LongList": false,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "ParentFont": false,
+                    "Pieces": "2",
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 2,
+                    "Text": "",
+                    "OnChange": "cboSurgeryChange",
+                    "OnClick": "cboSurgeryClick",
+                    "CharsNeedMatch": 1
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboReasons",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 12,
+                    "Top": 90,
+                    "Width": 525,
+                    "Height": 80,
+                    "Style": "orcsSimple",
+                    "AutoSelect": true,
+                    "Caption": "",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": false,
+                    "LongList": false,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 3,
+                    "Text": "",
+                    "OnChange": "cboReasonsChange",
+                    "OnEnter": "cboReasonsEnter",
+                    "OnExit": "cboReasonsExit",
+                    "CharsNeedMatch": 1
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TRichEdit",
+                  "name": "memDiagComment",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 12,
+                    "Top": 189,
+                    "Width": 525,
+                    "Height": 60,
+                    "Font.Charset": "ANSI_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "TabOrder": 5,
+                    "Zoom": 100,
+                    "OnChange": "memDiagCommentChange"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORDateBox",
+                  "name": "calWantTime",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 12,
+                    "Top": 16,
+                    "Width": 181,
+                    "Height": 21,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "TabOrder": 0,
+                    "OnChange": "calWantTimeChange",
+                    "OnEnter": "calWantTimeEnter",
+                    "DateOnly": false,
+                    "RequireTime": false,
+                    "Caption": ""
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlSelect",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 35,
+                "Width": 676,
+                "Height": 110,
+                "Align": "alTop",
+                "BevelEdges": [],
+                "BevelOuter": "bvNone",
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TGroupBox",
+                  "name": "pnlDiagnosticTests",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 270,
+                    "Top": 0,
+                    "Width": 260,
+                    "Height": 110,
+                    "Caption": "Diagnostic Tests",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [
+                      "fsBold"
+                    ],
+                    "ParentFont": false,
+                    "TabOrder": 1,
+                    "OnClick": "pnlDiagnosticTestsClick",
+                    "OnEnter": "pnlDiagnosticTestsEnter",
+                    "OnExit": "pnlDiagnosticTestsExit"
+                  },
+                  "children": [
+                    {
+                      "class": "TLabel",
+                      "name": "lblCollType",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 13,
+                        "Top": 33,
+                        "Width": 77,
+                        "Height": 13,
+                        "Caption": "Collection Type*",
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ParentFont": false
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TLabel",
+                      "name": "lblCollTime",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 12,
+                        "Top": 69,
+                        "Width": 100,
+                        "Height": 13,
+                        "Caption": "Collection Date/Time",
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ParentFont": false
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TORComboBox",
+                      "name": "cboAvailTest",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 13,
+                        "Top": 13,
+                        "Width": 244,
+                        "Height": 21,
+                        "Style": "orcsDropDown",
+                        "AutoSelect": true,
+                        "Caption": "Diagnostic Tests",
+                        "Color": "clWindow",
+                        "DropDownCount": 8,
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ItemHeight": 13,
+                        "ItemTipColor": "clWindow",
+                        "ItemTipEnable": true,
+                        "ListItemsOnly": false,
+                        "LongList": false,
+                        "LookupPiece": 0,
+                        "MaxLength": 0,
+                        "ParentFont": false,
+                        "Pieces": "2",
+                        "Sorted": false,
+                        "SynonymChars": "<>",
+                        "TabOrder": 0,
+                        "TabStop": true,
+                        "Text": "",
+                        "OnClick": "cboAvailTestSelect",
+                        "OnEnter": "cboAvailTestEnter",
+                        "OnExit": "cboAvailTestExit",
+                        "OnNeedData": "cboAvailTestNeedData",
+                        "CharsNeedMatch": 1
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TORComboBox",
+                      "name": "cboCollType",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 12,
+                        "Top": 46,
+                        "Width": 221,
+                        "Height": 21,
+                        "Style": "orcsDropDown",
+                        "AutoSelect": true,
+                        "Caption": "Collection Type",
+                        "Color": "clWindow",
+                        "DropDownCount": 8,
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ItemHeight": 13,
+                        "ItemTipColor": "clWindow",
+                        "ItemTipEnable": true,
+                        "ListItemsOnly": true,
+                        "LongList": false,
+                        "LookupPiece": 0,
+                        "MaxLength": 0,
+                        "ParentFont": false,
+                        "Pieces": "2",
+                        "Sorted": false,
+                        "SynonymChars": "<>",
+                        "TabOrder": 1,
+                        "Text": "",
+                        "OnChange": "cboCollTypeChange",
+                        "OnClick": "cboCollTypeClick",
+                        "OnEnter": "cboCollTypeEnter",
+                        "CharsNeedMatch": 1
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TORComboBox",
+                      "name": "cboCollTime",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 13,
+                        "Top": 82,
+                        "Width": 140,
+                        "Height": 21,
+                        "Style": "orcsDropDown",
+                        "AutoSelect": true,
+                        "Caption": "Collection Date/Time",
+                        "Color": "clWindow",
+                        "DropDownCount": 8,
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ItemHeight": 13,
+                        "ItemTipColor": "clWindow",
+                        "ItemTipEnable": true,
+                        "ListItemsOnly": false,
+                        "LongList": false,
+                        "LookupPiece": 0,
+                        "MaxLength": 0,
+                        "ParentFont": false,
+                        "Pieces": "2",
+                        "Sorted": false,
+                        "SynonymChars": "<>",
+                        "TabOrder": 2,
+                        "Text": "",
+                        "OnChange": "cboCollTimeChange",
+                        "OnEnter": "cboCollTimeEnter",
+                        "CharsNeedMatch": 1
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TCaptionEdit",
+                      "name": "txtImmedColl",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 13,
+                        "Top": 82,
+                        "Width": 140,
+                        "Height": 21,
+                        "ReadOnly": true,
+                        "TabOrder": 3,
+                        "OnEnter": "txtImmedCollEnter",
+                        "Caption": ""
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TORDateBox",
+                      "name": "calCollectTime",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 12,
+                        "Top": 82,
+                        "Width": 221,
+                        "Height": 21,
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ParentFont": false,
+                        "TabOrder": 5,
+                        "OnChange": "calCollectTimeChange",
+                        "OnEnter": "calCollectTimeEnter",
+                        "DateOnly": false,
+                        "RequireTime": false,
+                        "Caption": ""
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "class": "TGroupBox",
+                  "name": "pnlBloodComponents",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 4,
+                    "Top": 0,
+                    "Width": 260,
+                    "Height": 110,
+                    "Caption": "Blood Components",
+                    "Color": "clBtnFace",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [
+                      "fsBold"
+                    ],
+                    "ParentColor": false,
+                    "ParentFont": false,
+                    "TabOrder": 0,
+                    "OnClick": "pnlBloodComponentsClick",
+                    "OnEnter": "pnlBloodComponentsEnter",
+                    "OnExit": "pnlBloodComponentsExit"
+                  },
+                  "children": [
+                    {
+                      "class": "TLabel",
+                      "name": "lblQuantity",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 218,
+                        "Top": 0,
+                        "Width": 39,
+                        "Height": 13,
+                        "Caption": "Quantity",
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ParentFont": false
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TLabel",
+                      "name": "lblModifiers",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 7,
+                        "Top": 33,
+                        "Width": 42,
+                        "Height": 13,
+                        "Caption": "Modifiers",
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ParentFont": false
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TORComboBox",
+                      "name": "cboAvailComp",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 11,
+                        "Top": 13,
+                        "Width": 201,
+                        "Height": 21,
+                        "Style": "orcsDropDown",
+                        "AutoSelect": true,
+                        "Caption": "Blood Components",
+                        "Color": "clWindow",
+                        "DropDownCount": 8,
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ItemHeight": 13,
+                        "ItemTipColor": "clWindow",
+                        "ItemTipEnable": true,
+                        "ListItemsOnly": false,
+                        "LongList": false,
+                        "LookupPiece": 0,
+                        "MaxLength": 0,
+                        "ParentFont": false,
+                        "Pieces": "2",
+                        "Sorted": false,
+                        "SynonymChars": "<>",
+                        "TabOrder": 0,
+                        "TabStop": true,
+                        "Text": "",
+                        "OnEnter": "cboAvailCompEnter",
+                        "OnExit": "cboAvailCompExit",
+                        "OnMouseClick": "cboAvailCompSelect",
+                        "OnNeedData": "cboAvailCompNeedData",
+                        "CharsNeedMatch": 1
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TEdit",
+                      "name": "tQuantity",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 218,
+                        "Top": 13,
+                        "Width": 25,
+                        "Height": 21,
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ParentFont": false,
+                        "TabOrder": 1,
+                        "OnChange": "tQuantityChange",
+                        "OnClick": "tQuantityClick",
+                        "OnEnter": "tQuantityEnter"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TORComboBox",
+                      "name": "cboModifiers",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 11,
+                        "Top": 46,
+                        "Width": 201,
+                        "Height": 21,
+                        "Style": "orcsDropDown",
+                        "AutoSelect": true,
+                        "Caption": "Modifier",
+                        "Color": "clWindow",
+                        "DropDownCount": 8,
+                        "Font.Charset": "DEFAULT_CHARSET",
+                        "Font.Color": "clWindowText",
+                        "Font.Height": -11,
+                        "Font.Name": "MS Sans Serif",
+                        "Font.Style": [],
+                        "ItemHeight": 13,
+                        "ItemTipColor": "clWindow",
+                        "ItemTipEnable": true,
+                        "ListItemsOnly": true,
+                        "LongList": false,
+                        "LookupPiece": 0,
+                        "MaxLength": 0,
+                        "ParentFont": false,
+                        "Sorted": false,
+                        "SynonymChars": "<>",
+                        "TabOrder": 2,
+                        "Text": "",
+                        "OnChange": "cboModifiersChange",
+                        "OnEnter": "cboModifiersEnter",
+                        "CharsNeedMatch": 1
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TGroupBox",
+              "name": "GroupBox1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 676,
+                "Height": 35,
+                "Align": "alTop",
+                "Caption": " Personal Quick Orders",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TORComboBox",
+                  "name": "cboQuick",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 15,
+                    "Top": 11,
+                    "Width": 508,
+                    "Height": 21,
+                    "Style": "orcsDropDown",
+                    "AutoSelect": true,
+                    "Caption": "",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": false,
+                    "LongList": true,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "Pieces": "2",
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 0,
+                    "Text": "",
+                    "OnClick": "cboQuickClick",
+                    "CharsNeedMatch": 1
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TGroupBox",
+              "name": "pnlSelectedTests",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 395,
+                "Width": 676,
+                "Height": 109,
+                "Align": "alTop",
+                "Caption": "Selected Components and Tests",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [
+                  "fsBold"
+                ],
+                "ParentFont": false,
+                "TabOrder": 3,
+                "Visible": false
+              },
+              "children": [
+                {
+                  "class": "TCaptionListView",
+                  "name": "lvSelectionList",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 5,
+                    "Top": 15,
+                    "Width": 430,
+                    "Height": 91,
+                    "Columns": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "AutoSize": true,
+                          "Caption": "Test/Component"
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "AutoSize": true,
+                          "Caption": "Qty"
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "AutoSize": true,
+                          "Caption": "Modifiers"
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Caption": "ModifierItemIndex",
+                          "MaxWidth": 1,
+                          "MinWidth": 1,
+                          "Width": 1
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Caption": "TestIEN",
+                          "MaxWidth": 1,
+                          "MinWidth": 1,
+                          "Width": 1
+                        }
+                      }
+                    ],
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ReadOnly": true,
+                    "RowSelect": true,
+                    "ParentFont": false,
+                    "TabOrder": 0,
+                    "TabStop": false,
+                    "ViewStyle": "vsReport",
+                    "OnClick": "lvSelectionListClick",
+                    "AutoSize": false,
+                    "Caption": "lvSelectionList",
+                    "HideTinyColumns": true
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnRemove",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 450,
+                    "Top": 37,
+                    "Width": 75,
+                    "Height": 21,
+                    "Caption": "Remove",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "TabOrder": 1,
+                    "OnClick": "btnRemoveClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnRemoveAll",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 450,
+                    "Top": 64,
+                    "Width": 75,
+                    "Height": 21,
+                    "Caption": "Remove All",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "TabOrder": 2,
+                    "OnClick": "btnRemoveAllClick"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TTabSheet",
+          "name": "TabResults",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Lab Results"
+          },
+          "children": [
+            {
+              "class": "TCaptionRichEdit",
+              "name": "edtResults",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 676,
+                "Height": 508,
+                "Align": "alClient",
+                "Font.Charset": "ANSI_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -12,
+                "Font.Name": "Courier New",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 0,
+                "Zoom": 100,
+                "Caption": ""
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TButton",
+      "name": "cmdAccept",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 457,
+        "Top": 545,
+        "Width": 75,
+        "TabOrder": 2,
+        "Visible": false,
+        "ExplicitLeft": 457,
+        "ExplicitTop": 545,
+        "ExplicitWidth": 75
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdQuit",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 457,
+        "Top": 583,
+        "Width": 52,
+        "TabOrder": 3,
+        "ExplicitLeft": 457,
+        "ExplicitTop": 583,
+        "ExplicitWidth": 52
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMessage",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 9,
+        "Top": 551,
+        "Width": 416,
+        "Height": 49,
+        "TabOrder": 1,
+        "ExplicitLeft": 9,
+        "ExplicitTop": 551,
+        "ExplicitWidth": 416,
+        "ExplicitHeight": 49
+      },
+      "children": [
+        {
+          "class": "TRichEdit",
+          "name": "memMessage",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 44,
+            "Top": 5,
+            "Width": 360,
+            "Font.Height": -11,
+            "ExplicitLeft": 44,
+            "ExplicitTop": 5,
+            "ExplicitWidth": 360
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = memOrder",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdQuit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODBBank",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlComments",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnUpdateComments",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancelComment",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pgeProduct",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = TabInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = TabDiag",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = TabResults",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtResults",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlFields",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboUrgency",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkConsent",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSurgery",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSelect",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDiagnosticTests",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboAvailTest",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBloodComponents",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboAvailComp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tQuantity",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboModifiers",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = GroupBox1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboQuick",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSelectedTests",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lvSelectionList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemoveAll",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboReasons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memDiagComment",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboCollType",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboCollTime",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtImmedColl",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calWantTime",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calCollectTime",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TORDateTimeDlg",
+      "name": "dlgLabCollTime",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "FMDateTime": {
+          "extended80_hex": "0000000000ecf0b51440"
+        },
+        "DateOnly": false,
+        "RequireTime": true,
+        "Left": 435,
+        "Top": 72
+      },
+      "children": []
+    },
+    {
+      "class": "TORDateTimeDlg",
+      "name": "ORWanted",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "FMDateTime": {
+          "extended80_hex": "0000000000ecf0b51440"
+        },
+        "DateOnly": false,
+        "RequireTime": true,
+        "Left": 343,
+        "Top": 72
+      },
+      "children": []
+    }
+  ]
+}

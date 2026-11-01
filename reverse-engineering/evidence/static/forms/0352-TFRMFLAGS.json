@@ -1,0 +1,490 @@
+{
+  "class": "TfrmFlags",
+  "name": "frmFlags",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 380,
+    "Top": 122,
+    "Width": 589,
+    "Height": 607,
+    "VertScrollBar.Range": 179,
+    "Caption": "Patient Record Flags",
+    "Position": "poMainFormCenter",
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 589,
+    "ExplicitHeight": 607,
+    "PixelsPerInch": 120,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 571,
+        "Height": 562,
+        "Margins.Left": 5,
+        "Margins.Top": 5,
+        "Margins.Right": 5,
+        "Margins.Bottom": 5,
+        "Align": "alClient",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TSplitter",
+          "name": "Splitter3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 113,
+            "Width": 569,
+            "Height": 6,
+            "Cursor": "crVSplit",
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alTop",
+            "ExplicitWidth": 714
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblFlags",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 119,
+            "Width": 569,
+            "Height": 16,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alTop",
+            "Caption": "Category II Flags",
+            "Layout": "tlCenter",
+            "ExplicitWidth": 101
+          },
+          "children": []
+        },
+        {
+          "class": "TSplitter",
+          "name": "Splitter1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 231,
+            "Width": 569,
+            "Height": 6,
+            "Cursor": "crVSplit",
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alTop",
+            "ExplicitTop": 235,
+            "ExplicitWidth": 714
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblCat1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 569,
+            "Height": 20,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alTop",
+            "Caption": "Category I Flags",
+            "Color": "clBtnFace",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -16,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentColor": false,
+            "ParentFont": false,
+            "Transparent": false,
+            "Layout": "tlCenter",
+            "ExplicitWidth": 137
+          },
+          "children": []
+        },
+        {
+          "class": "TSplitter",
+          "name": "Splitter2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 321,
+            "Width": 569,
+            "Height": 6,
+            "Cursor": "crVSplit",
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alBottom",
+            "MinSize": 45,
+            "ExplicitTop": 470,
+            "ExplicitWidth": 714
+          },
+          "children": []
+        },
+        {
+          "class": "TRichEdit",
+          "name": "memFlags",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 237,
+            "Width": 569,
+            "Height": 84,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alClient",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -16,
+            "Font.Name": "Courier New",
+            "Font.Style": [],
+            "HideScrollBars": false,
+            "Constraints.MinHeight": 46,
+            "Lines.Strings": [
+              ""
+            ],
+            "ParentFont": false,
+            "ReadOnly": true,
+            "ScrollBars": "ssBoth",
+            "TabOrder": 0,
+            "WantReturns": false,
+            "WordWrap": false,
+            "Zoom": 100
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "lstFlagsCat2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 135,
+            "Width": 569,
+            "Height": 96,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alTop",
+            "Constraints.MinHeight": 46,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 3,
+            "OnClick": "lstFlagsCat2Click",
+            "Caption": "",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2"
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "lstFlagsCat1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 21,
+            "Width": 569,
+            "Height": 92,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alTop",
+            "BevelKind": "bkTile",
+            "BevelOuter": "bvRaised",
+            "Constraints.MinHeight": 46,
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -16,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ItemHeight": 20,
+            "ParentFont": false,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 2,
+            "OnClick": "lstFlagsCat1Click",
+            "Caption": "",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlNotes",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 327,
+            "Width": 569,
+            "Height": 234,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alBottom",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblNoteTitle",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 567,
+                "Height": 16,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alTop",
+                "Caption": "lblNoteTitle",
+                "ExplicitWidth": 69
+              },
+              "children": []
+            },
+            {
+              "class": "TCaptionListView",
+              "name": "lvPRF",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 17,
+                "Width": 567,
+                "Height": 168,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alClient",
+                "Columns": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "Used For Screen Readers",
+                      "Width": 1
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "AutoSize": true,
+                      "Caption": "Date"
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "AutoSize": true,
+                      "Caption": "Action"
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "AutoSize": true,
+                      "Caption": "Author"
+                    }
+                  }
+                ],
+                "Constraints.MinHeight": 78,
+                "HideSelection": false,
+                "ReadOnly": true,
+                "RowSelect": true,
+                "TabOrder": 0,
+                "ViewStyle": "vsReport",
+                "OnClick": "lvPRFClick",
+                "OnKeyDown": "lvPRFKeyDown",
+                "AutoSize": false,
+                "HideTinyColumns": true
+              },
+              "children": []
+            },
+            {
+              "class": "TORAutoPanel",
+              "name": "pnlBottom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 185,
+                "Width": 567,
+                "Height": 48,
+                "Margins.Left": 5,
+                "Margins.Top": 5,
+                "Margins.Right": 5,
+                "Margins.Bottom": 5,
+                "Align": "alBottom",
+                "TabOrder": 1,
+                "DesignSize": [
+                  567,
+                  48
+                ]
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnClose",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 439,
+                    "Top": 8,
+                    "Width": 119,
+                    "Height": 32,
+                    "Margins.Left": 5,
+                    "Margins.Top": 5,
+                    "Margins.Right": 5,
+                    "Margins.Bottom": 5,
+                    "Anchors": [
+                      "akRight",
+                      "akBottom"
+                    ],
+                    "Cancel": true,
+                    "Caption": "Close",
+                    "Default": true,
+                    "ModalResult": 2,
+                    "TabOrder": 0
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = frmFlags",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memFlags",
+            "Text = Selected Flag's Information",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lstFlagsCat2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstFlagsCat1",
+            "Text = Category One Flags",
+            "Status = stsOK"
+          ],
+          [
+            "Component = pnlNotes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lvPRF",
+            "Label = lblNoteTitle",
+            "Status = stsOK"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TTimer",
+      "name": "TimerTextFlash",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Enabled": false,
+        "Interval": 750,
+        "OnTimer": "TimerTextFlashTimer",
+        "Left": 376,
+        "Top": 464
+      },
+      "children": []
+    }
+  ]
+}

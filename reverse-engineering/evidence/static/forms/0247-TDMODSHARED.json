@@ -1,0 +1,1059 @@
+{
+  "class": "TdmodShared",
+  "name": "dmodShared",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "OldCreateOrder": false,
+    "OnCreate": "dmodSharedCreate",
+    "OnDestroy": "dmodSharedDestroy",
+    "Height": 479,
+    "Width": 439
+  },
+  "children": [
+    {
+      "class": "TImageList",
+      "name": "imgTemplates",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "BkColor": "clWhite",
+        "AllocBy": 6,
+        "Left": 32,
+        "Top": 16,
+        "Bitmap": {
+          "binary_bytes": 33958
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TImageList",
+      "name": "imgReminders",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "BkColor": "clWhite",
+        "AllocBy": 6,
+        "Width": 20,
+        "Left": 28,
+        "Top": 72,
+        "Bitmap": {
+          "binary_bytes": 16102
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TImageList",
+      "name": "imgNotes",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 30,
+        "Top": 136,
+        "Bitmap": {
+          "binary_bytes": 21286
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TImageList",
+      "name": "imgImages",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 32,
+        "Top": 202,
+        "Bitmap": {
+          "binary_bytes": 8614
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TImageList",
+      "name": "imgReminders2",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 32,
+        "Left": 224,
+        "Top": 72,
+        "Bitmap": {
+          "binary_bytes": 25510
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TImageList",
+      "name": "imgConsults",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 32,
+        "Top": 258,
+        "Bitmap": {
+          "binary_bytes": 12838
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TImageList",
+      "name": "imgSurgery",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 29,
+        "Top": 321,
+        "Bitmap": {
+          "binary_bytes": 17062
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblReminders",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [],
+        "ImageList": "imgReminders",
+        "Labels": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Category",
+              "ImageIndex": 0,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Category",
+              "ImageIndex": 1,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Due Reminder",
+              "ImageIndex": 2,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Applicable Reminder",
+              "ImageIndex": 3,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Not Applicable Reminder",
+              "ImageIndex": 4,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Unevaluated Reminder",
+              "ImageIndex": 5,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "With Dialog",
+              "ImageIndex": 6,
+              "OverlayIndex": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "With Processed Dialog",
+              "ImageIndex": 7,
+              "OverlayIndex": 1
+            }
+          }
+        ],
+        "Left": 120,
+        "Top": 80
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblHealthFactorLabels",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [],
+        "ImageList": "imgTemplates",
+        "Labels": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Root",
+              "ImageIndex": 0,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Root",
+              "ImageIndex": 1,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Category",
+              "ImageIndex": 2,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Category",
+              "ImageIndex": 3,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Personal Template",
+              "ImageIndex": 4,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Group Template",
+              "ImageIndex": 5,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Group Template",
+              "ImageIndex": 6,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Personal Template *",
+              "ImageIndex": 7,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Group Template *",
+              "ImageIndex": 8,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Group Template *",
+              "ImageIndex": 9,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Shared Template",
+              "ImageIndex": 10,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Group Template",
+              "ImageIndex": 11,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Group Template",
+              "ImageIndex": 12,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Shared Template *",
+              "ImageIndex": 13,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Group Template *",
+              "ImageIndex": 14,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Group Template *",
+              "ImageIndex": 15,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Folder",
+              "ImageIndex": 16,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Folder",
+              "ImageIndex": 17,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Dialog",
+              "ImageIndex": 18,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Dialog",
+              "ImageIndex": 19,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Dialog *",
+              "ImageIndex": 20,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Dialog *",
+              "ImageIndex": 21,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Dialog",
+              "ImageIndex": 22,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Dialog",
+              "ImageIndex": 23,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Dialog *",
+              "ImageIndex": 24,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Template Dialog *",
+              "ImageIndex": 25,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Dialog",
+              "ImageIndex": 26,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Dialog",
+              "ImageIndex": 27,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "COM Object Template",
+              "ImageIndex": 28,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "COM Object Template not installed",
+              "ImageIndex": 29,
+              "OverlayIndex": -1
+            }
+          }
+        ],
+        "Left": 120,
+        "Top": 16
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblNotes",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [],
+        "ImageList": "imgNotes",
+        "Labels": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Top Grouping",
+              "ImageIndex": 0,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Subgrouping",
+              "ImageIndex": 1,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Subgrouping",
+              "ImageIndex": 2,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Note",
+              "ImageIndex": 3,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Note with Addenda",
+              "ImageIndex": 4,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Interdisciplanary Note",
+              "ImageIndex": 5,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Interdisciplanary Note",
+              "ImageIndex": 6,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Interdisciplanary Note with Addenda",
+              "ImageIndex": 7,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Interdisciplanary Note with Addenda",
+              "ImageIndex": 8,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Interdisciplanary entry",
+              "ImageIndex": 9,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Interdisciplanary entry with addenda",
+              "ImageIndex": 10,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Addendum",
+              "ImageIndex": 11,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 12,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 13,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 14,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 15,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Double click to see more documents",
+              "ImageIndex": 16,
+              "OverlayIndex": -1
+            }
+          }
+        ],
+        "Left": 120,
+        "Top": 144
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblImages",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [],
+        "ImageList": "imgNotes",
+        "Labels": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Top Grouping",
+              "ImageIndex": 0,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Subgrouping",
+              "ImageIndex": 1,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Subgrouping",
+              "ImageIndex": 2,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Document",
+              "ImageIndex": 3,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Document with Addenda",
+              "ImageIndex": 4,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Folder",
+              "ImageIndex": 5,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Folder",
+              "ImageIndex": 6,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Folder Plus",
+              "ImageIndex": 7,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Folder Plus",
+              "ImageIndex": 8,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Entry",
+              "ImageIndex": 9,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Entry with Addenda",
+              "ImageIndex": 10,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Addendum",
+              "ImageIndex": 11,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 12,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 13,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 14,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 15,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Double click to see more documents",
+              "ImageIndex": 16,
+              "OverlayIndex": -1
+            }
+          }
+        ],
+        "Left": 120,
+        "Top": 200
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblConsults",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [],
+        "ImageList": "imgConsults",
+        "Labels": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Top Grouping",
+              "ImageIndex": 0,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Subgrouping",
+              "ImageIndex": 1,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Subgrouping",
+              "ImageIndex": 2,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Consult request",
+              "ImageIndex": 3,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 4,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 5,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Procedure Request",
+              "ImageIndex": 6,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Interfacility Consult Request",
+              "ImageIndex": 7,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Interfacility Procedure",
+              "ImageIndex": 8,
+              "OverlayIndex": -1
+            }
+          }
+        ],
+        "Left": 120,
+        "Top": 264
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblSurgery",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [],
+        "ImageList": "imgSurgery",
+        "Labels": [
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 0,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Top Grouping",
+              "ImageIndex": 1,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Subgrouping",
+              "ImageIndex": 2,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Subgrouping",
+              "ImageIndex": 3,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "OR Case no attached reports",
+              "ImageIndex": 4,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "OR case attached reports",
+              "ImageIndex": 5,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "OR case attached reports",
+              "ImageIndex": 6,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Report",
+              "ImageIndex": 7,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Report with Addenda",
+              "ImageIndex": 8,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Addendum",
+              "ImageIndex": 9,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Non-OR case without attached reports",
+              "ImageIndex": 10,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Non-OR case with attached report",
+              "ImageIndex": 11,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Non-OR case with attached report",
+              "ImageIndex": 12,
+              "OverlayIndex": -1
+            }
+          }
+        ],
+        "Left": 120,
+        "Top": 320
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblReminders2",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [],
+        "ImageList": "imgReminders2",
+        "Labels": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Due",
+              "ImageIndex": 0,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Due Check",
+              "ImageIndex": 1,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Applicable",
+              "ImageIndex": 2,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Applicable Check",
+              "ImageIndex": 3,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Not Applicable",
+              "ImageIndex": 4,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Not Applicable Check",
+              "ImageIndex": 5,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "ImageIndex": 6,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Check",
+              "ImageIndex": 7,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Category",
+              "ImageIndex": 8,
+              "OverlayIndex": -1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Reminder Category Check",
+              "ImageIndex": 9,
+              "OverlayIndex": -1
+            }
+          }
+        ],
+        "Left": 320,
+        "Top": 72
+      },
+      "children": []
+    }
+  ]
+}

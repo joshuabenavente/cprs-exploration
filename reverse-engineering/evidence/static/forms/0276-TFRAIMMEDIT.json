@@ -1,0 +1,69 @@
+{
+  "class": "TfraImmEdit",
+  "name": "fraImmEdit",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Width": 1198,
+    "Height": 747,
+    "ExplicitWidth": 1198,
+    "ExplicitHeight": 747
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlHeader",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 1198,
+        "ExplicitWidth": 1198
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblHeader",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 156,
+            "Width": 94,
+            "Caption": "Editor/Detail Viewer",
+            "ExplicitLeft": 156,
+            "ExplicitWidth": 94
+          },
+          "children": []
+        },
+        {
+          "class": "TSpeedButton",
+          "name": "spBtnExpandCollapse",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 13,
+            "ExplicitLeft": 13
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlWorkspace",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 1198,
+        "Height": 718,
+        "ExplicitWidth": 1198,
+        "ExplicitHeight": 718
+      },
+      "children": []
+    }
+  ]
+}

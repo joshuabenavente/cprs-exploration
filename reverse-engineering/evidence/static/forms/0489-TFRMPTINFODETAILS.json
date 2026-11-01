@@ -1,0 +1,427 @@
+{
+  "class": "TfrmPtInfoDetails",
+  "name": "frmPtInfoDetails",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "frmPtInfoDetails",
+    "ClientHeight": 257,
+    "ClientWidth": 358,
+    "ParentFont": true,
+    "FormStyle": "fsStayOnTop",
+    "Position": "poDefault",
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "ExplicitWidth": 374,
+    "ExplicitHeight": 296,
+    "TextHeight": 15
+  },
+  "children": [
+    {
+      "class": "TRichEdit",
+      "name": "memDetails",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 68,
+        "Width": 358,
+        "Height": 45,
+        "Align": "alTop",
+        "Color": "clCream",
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "Courier New",
+        "Font.Style": [],
+        "ParentFont": false,
+        "PlainText": true,
+        "ReadOnly": true,
+        "ScrollBars": "ssBoth",
+        "TabOrder": 0,
+        "WantReturns": false,
+        "WordWrap": false,
+        "OnKeyDown": "memDetailsKeyDown"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 223,
+        "Width": 358,
+        "Height": 34,
+        "Align": "alBottom",
+        "TabOrder": 5,
+        "TabStop": true
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 279,
+            "Top": 4,
+            "Width": 75,
+            "Height": 26,
+            "Align": "alRight",
+            "Caption": "Close",
+            "ModalResult": 8,
+            "TabOrder": 0,
+            "OnClick": "btnCloseClick",
+            "OnKeyDown": "btnCloseKeyDown"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnPrint",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 198,
+            "Top": 4,
+            "Width": 75,
+            "Height": 26,
+            "Align": "alRight",
+            "Caption": "Print",
+            "TabOrder": 1,
+            "OnClick": "btnPrintClick",
+            "OnKeyDown": "btnCloseKeyDown"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlHeader",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 358,
+        "Height": 31,
+        "Align": "alTop",
+        "TabOrder": 1,
+        "OnResize": "pnlHeaderResize"
+      },
+      "children": [
+        {
+          "class": "TSpeedButton",
+          "name": "sbClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 328,
+            "Top": 1,
+            "Width": 29,
+            "Height": 29,
+            "Align": "alRight",
+            "Flat": true,
+            "Glyph.Data": {
+              "binary_bytes": 826
+            },
+            "Layout": "blGlyphRight",
+            "Transparent": false,
+            "OnClick": "btnCloseClick",
+            "ExplicitLeft": 472
+          },
+          "children": []
+        },
+        {
+          "class": "TVA508StaticText",
+          "name": "lblHeader",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 327,
+            "Height": 29,
+            "Align": "alClient",
+            "Alignment": "taCenter",
+            "Caption": "",
+            "TabOrder": 0,
+            "ShowAccelChar": true,
+            "WordWrap": false,
+            "LabelAlignment": "taCenter",
+            "LabelLayout": "tlCenter"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TEdgeBrowser",
+      "name": "wbEdgeBrowser",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 0,
+        "Top": 31,
+        "Width": 358,
+        "Height": 37,
+        "Align": "alTop",
+        "TabOrder": 2,
+        "TabStop": true,
+        "AllowSingleSignOnUsingOSPrimaryAccount": false,
+        "TargetCompatibleBrowserVersion": "117.0.2045.28",
+        "UserDataFolder": "%LOCALAPPDATA%\\bds.exe.WebView2"
+      },
+      "children": []
+    },
+    {
+      "class": "TfraEditGridBase",
+      "name": "fraEditGrid",
+      "inherited": false,
+      "inline": true,
+      "child_position": 4,
+      "properties": {
+        "Left": 0,
+        "Top": 152,
+        "Width": 358,
+        "Height": 71,
+        "Align": "alClient",
+        "Color": "clWindow",
+        "ParentBackground": false,
+        "ParentColor": false,
+        "TabOrder": 3,
+        "ExplicitTop": 152,
+        "ExplicitWidth": 358,
+        "ExplicitHeight": 71
+      },
+      "children": [
+        {
+          "class": "TScrollBox",
+          "name": "ScrollBox1",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Width": 358,
+            "Height": 71,
+            "ExplicitWidth": 358,
+            "ExplicitHeight": 71
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "pnlForm",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 354,
+                "Height": 67,
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitWidth": 354,
+                "ExplicitHeight": 67
+              },
+              "children": [
+                {
+                  "class": "TGridPanel",
+                  "name": "grdEditPanel",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Width": 354,
+                    "Height": 36,
+                    "StyleElements": [
+                      "seFont",
+                      "seClient",
+                      "seBorder"
+                    ],
+                    "ExplicitWidth": 354,
+                    "ExplicitHeight": 36
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TPanel",
+                  "name": "pnlButtons",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Top": 36,
+                    "Width": 354,
+                    "Height": 31,
+                    "StyleElements": [
+                      "seFont",
+                      "seClient",
+                      "seBorder"
+                    ],
+                    "OnResize": "fraEditGridpnlButtonsResize",
+                    "ExplicitTop": 36,
+                    "ExplicitWidth": 354,
+                    "ExplicitHeight": 31
+                  },
+                  "children": [
+                    {
+                      "class": "TButton",
+                      "name": "btnSave",
+                      "inherited": true,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 195,
+                        "Top": 3,
+                        "Align": "alRight",
+                        "OnClick": "fraEditGridBtnSaveClick",
+                        "ExplicitLeft": 195,
+                        "ExplicitTop": 6
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TButton",
+                      "name": "btnCancel",
+                      "inherited": true,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 276,
+                        "Top": 3,
+                        "Align": "alRight",
+                        "OnClick": "btnCloseClick",
+                        "ExplicitLeft": 276,
+                        "ExplicitTop": 3
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TScrollBox",
+      "name": "sbCustom",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 113,
+        "Width": 358,
+        "Height": 39,
+        "Align": "alTop",
+        "TabOrder": 4
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = memDetails",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = wbEdgeBrowser",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmPtInfoDetails",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlHeader",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEditGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEditGrid.ScrollBox1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEditGrid.pnlForm",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEditGrid.grdEditPanel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEditGrid.pnlButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEditGrid.btnSave",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEditGrid.btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = sbCustom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblHeader",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnPrint",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "class": "Tfrm513Print",
+  "name": "frm513Print",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 116,
+    "Top": 375,
+    "Caption": "Print SF 513",
+    "ClientHeight": 337,
+    "ClientWidth": 433,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 449,
+    "ExplicitHeight": 375,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblPrintTo",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 7,
+        "Top": 265,
+        "Width": 3,
+        "Height": 16
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBUttons",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 304,
+        "Width": 433,
+        "Height": 33,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 280,
+            "Top": 3,
+            "Width": 72,
+            "Height": 27,
+            "Align": "alRight",
+            "Caption": "OK",
+            "Default": true,
+            "TabOrder": 1,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 358,
+            "Top": 3,
+            "Width": 72,
+            "Height": 27,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 2,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TCheckBox",
+          "name": "chkDefault",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 197,
+            "Height": 27,
+            "Align": "alLeft",
+            "Caption": "Save as user's default printer",
+            "TabOrder": 0
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 433,
+        "Height": 304,
+        "Align": "alClient",
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "Panel2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 431,
+            "Height": 80,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel2",
+            "ShowCaption": false,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TMemo",
+              "name": "lblConsultTitle",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 305,
+                "Height": 74,
+                "Align": "alClient",
+                "BorderStyle": "bsNone",
+                "Color": "clBtnFace",
+                "Lines.Strings": [
+                  "Consult Title, Date/Time of Consult, Location"
+                ],
+                "ReadOnly": true,
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TGroupBox",
+              "name": "grpChooseCopy",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 314,
+                "Top": 3,
+                "Width": 114,
+                "Height": 74,
+                "Align": "alRight",
+                "Caption": "Print",
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TRadioButton",
+                  "name": "radChartCopy",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 21,
+                    "Width": 104,
+                    "Height": 17,
+                    "Align": "alTop",
+                    "Caption": "&Chart Copy",
+                    "Checked": true,
+                    "TabOrder": 0,
+                    "TabStop": true,
+                    "OnClick": "radChartCopyClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TRadioButton",
+                  "name": "radWorkCopy",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 44,
+                    "Width": 104,
+                    "Height": 17,
+                    "Align": "alTop",
+                    "Caption": "&Work Copy",
+                    "TabOrder": 1,
+                    "OnClick": "radWorkCopyClick"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TGroupBox",
+          "name": "grpDevice",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 84,
+            "Width": 425,
+            "Height": 216,
+            "Align": "alClient",
+            "Caption": "Device",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TORComboBox",
+              "name": "cboDevice",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 5,
+                "Top": 21,
+                "Width": 415,
+                "Height": 161,
+                "Style": "orcsSimple",
+                "Align": "alClient",
+                "AutoSelect": true,
+                "Caption": "Device",
+                "Color": "clWindow",
+                "DropDownCount": 8,
+                "ItemHeight": 16,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": true,
+                "LongList": true,
+                "LookupPiece": 0,
+                "MaxLength": 0,
+                "ParentShowHint": false,
+                "Pieces": "2,4",
+                "ShowHint": true,
+                "Sorted": false,
+                "SynonymChars": "<>",
+                "TabPositions": "30",
+                "TabOrder": 0,
+                "Text": "",
+                "OnChange": "cboDeviceChange",
+                "OnNeedData": "cboDeviceNeedData",
+                "CharsNeedMatch": 1
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 2,
+                "Top": 185,
+                "Width": 421,
+                "Height": 29,
+                "Align": "alBottom",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel3",
+                "ShowCaption": false,
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblMargin",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 75,
+                    "Height": 23,
+                    "Align": "alLeft",
+                    "Caption": "Right Margin",
+                    "ExplicitHeight": 16
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblLength",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 122,
+                    "Top": 3,
+                    "Width": 76,
+                    "Height": 23,
+                    "Align": "alLeft",
+                    "Caption": "Page Length",
+                    "ExplicitHeight": 16
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMaskEdit",
+                  "name": "txtRightMargin",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 84,
+                    "Top": 3,
+                    "Width": 32,
+                    "Height": 23,
+                    "Align": "alLeft",
+                    "AutoSize": false,
+                    "EditMask": "99999;0; ",
+                    "MaxLength": 5,
+                    "TabOrder": 0,
+                    "Text": ""
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMaskEdit",
+                  "name": "txtPageLength",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 204,
+                    "Top": 3,
+                    "Width": 34,
+                    "Height": 23,
+                    "Align": "alLeft",
+                    "AutoSize": false,
+                    "EditMask": "99999;0; ",
+                    "MaxLength": 5,
+                    "TabOrder": 1,
+                    "Text": ""
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 272,
+        "Top": 144,
+        "Data": [
+          [
+            "Component = lblConsultTitle",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grpChooseCopy",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radChartCopy",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radWorkCopy",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grpDevice",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtRightMargin",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtPageLength",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboDevice",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkDefault",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frm513Print",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBUttons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPrintDialog",
+      "name": "dlgWinPrinter",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 332,
+        "Top": 138
+      },
+      "children": []
+    }
+  ]
+}

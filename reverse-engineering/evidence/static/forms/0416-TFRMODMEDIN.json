@@ -1,0 +1,551 @@
+{
+  "class": "TfrmODMedIn",
+  "name": "frmODMedIn",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 220,
+    "Top": 416,
+    "Caption": "Inpatient Medication Order",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblMedication",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 6,
+        "Top": 4,
+        "Width": 52,
+        "Height": 13,
+        "Caption": "Medication"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblDosage",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 224,
+        "Top": 4,
+        "Width": 37,
+        "Height": 13,
+        "Caption": "Dosage"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblRoute",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 364,
+        "Top": 4,
+        "Width": 29,
+        "Height": 13,
+        "Caption": "Route"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblSchedule",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 442,
+        "Top": 4,
+        "Width": 45,
+        "Height": 13,
+        "Caption": "Schedule"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "Label5",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 6,
+        "Top": 45,
+        "Width": 70,
+        "Height": 13,
+        "Caption": "Dispense Drug"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblComments",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 223,
+        "Top": 114,
+        "Width": 49,
+        "Height": 13,
+        "Caption": "Comments"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblPriority",
+      "inherited": false,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 442,
+        "Top": 114,
+        "Width": 31,
+        "Height": 13,
+        "Caption": "Priority"
+      },
+      "children": []
+    },
+    {
+      "class": "TBevel",
+      "name": "Bevel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 7,
+      "properties": {
+        "Left": 214,
+        "Top": 0,
+        "Width": 4,
+        "Height": 186
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblIndications",
+      "inherited": false,
+      "inline": false,
+      "child_position": 8,
+      "properties": {
+        "Left": 6,
+        "Top": 192,
+        "Width": 54,
+        "Height": 16,
+        "AutoSize": false,
+        "Caption": "Indication"
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboDispense",
+      "inherited": false,
+      "inline": false,
+      "child_position": 9,
+      "properties": {
+        "Left": 6,
+        "Top": 59,
+        "Width": 202,
+        "Height": 127,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "ParentShowHint": false,
+        "Pieces": "2,4,3",
+        "ShowHint": true,
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabPositions": "30,33",
+        "TabOrder": 2,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "OnExit": "cboDispenseExit",
+        "OnMouseClick": "cboDispenseMouseClick",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboMedication",
+      "inherited": false,
+      "inline": false,
+      "child_position": 10,
+      "properties": {
+        "Left": 6,
+        "Top": 21,
+        "Width": 202,
+        "Height": 167,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 11,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 1,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "OnExit": "cboMedicationSelect",
+        "OnMouseClick": "cboMedicationSelect",
+        "OnNeedData": "cboMedicationNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionMemo",
+      "name": "memOrder",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "TabOrder": 10
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboRoute",
+      "inherited": false,
+      "inline": false,
+      "child_position": 12,
+      "properties": {
+        "Left": 364,
+        "Top": 18,
+        "Width": 72,
+        "Height": 90,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 4,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboSchedule",
+      "inherited": false,
+      "inline": false,
+      "child_position": 13,
+      "properties": {
+        "Left": 442,
+        "Top": 18,
+        "Width": 72,
+        "Height": 90,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 5,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "memComments",
+      "inherited": false,
+      "inline": false,
+      "child_position": 14,
+      "properties": {
+        "Left": 223,
+        "Top": 128,
+        "Width": 212,
+        "Height": 58,
+        "ScrollBars": "ssVertical",
+        "TabOrder": 6,
+        "OnChange": "ControlChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboPriority",
+      "inherited": false,
+      "inline": false,
+      "child_position": 15,
+      "properties": {
+        "Left": 442,
+        "Top": 128,
+        "Width": 72,
+        "Height": 58,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 7,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionEdit",
+      "name": "txtDosage",
+      "inherited": false,
+      "inline": false,
+      "child_position": 16,
+      "properties": {
+        "Left": 224,
+        "Top": 18,
+        "Width": 134,
+        "Height": 21,
+        "MaxLength": 20,
+        "TabOrder": 3,
+        "OnChange": "ControlChange",
+        "Caption": "Dosage"
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboMedAlt",
+      "inherited": false,
+      "inline": false,
+      "child_position": 17,
+      "properties": {
+        "Left": 6,
+        "Top": 18,
+        "Width": 202,
+        "Height": 21,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 11,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 0,
+        "Text": "",
+        "Visible": false,
+        "OnChange": "ControlChange",
+        "OnExit": "cboMedicationSelect",
+        "OnMouseClick": "cboMedicationSelect",
+        "OnNeedData": "cboMedicationNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboIndication",
+      "inherited": false,
+      "inline": false,
+      "child_position": 18,
+      "properties": {
+        "Left": 6,
+        "Top": 207,
+        "Width": 212,
+        "Height": 21,
+        "Style": "orcsDropDown",
+        "AutoSelect": false,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 14,
+        "Text": "",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdAccept",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 435,
+        "Top": 250,
+        "TabOrder": 8,
+        "ExplicitLeft": 435,
+        "ExplicitTop": 250
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdQuit",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 435,
+        "Top": 277,
+        "TabOrder": 9,
+        "ExplicitLeft": 435,
+        "ExplicitTop": 277
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMessage",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "TabOrder": 11
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = cboDispense",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboMedication",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboRoute",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSchedule",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memComments",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboPriority",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtDosage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboMedAlt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memOrder",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdQuit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODMedIn",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboIndication",
+            "Text = Indications for use",
+            "Status = stsOK"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

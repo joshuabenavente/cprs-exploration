@@ -1,0 +1,295 @@
+{
+  "class": "TfrmCombatVet",
+  "name": "frmCombatVet",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 22,
+    "Top": 101,
+    "BorderStyle": "bsDialog",
+    "Caption": "Combat Veteran Details",
+    "ClientHeight": 248,
+    "ClientWidth": 294,
+    "Position": "poMainFormCenter",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 300,
+    "ExplicitHeight": 273,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 294,
+        "Height": 209,
+        "Align": "alTop",
+        "Anchors": [
+          "akLeft",
+          "akTop",
+          "akRight",
+          "akBottom"
+        ],
+        "BevelInner": "bvLowered",
+        "BevelWidth": 2,
+        "BorderWidth": 1,
+        "TabOrder": 0,
+        "DesignSize": [
+          294,
+          209
+        ]
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblServiceBranch",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 36,
+            "Top": 18,
+            "Width": 76,
+            "Height": 13,
+            "Anchors": [],
+            "Caption": "Service Branch:",
+            "ExplicitLeft": 35
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblStatus",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 79,
+            "Top": 55,
+            "Width": 33,
+            "Height": 13,
+            "Anchors": [],
+            "Caption": "Status:",
+            "ExplicitLeft": 78,
+            "ExplicitTop": 54
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblSepDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 32,
+            "Top": 91,
+            "Width": 80,
+            "Height": 13,
+            "Anchors": [],
+            "Caption": "Separation Date:"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblExpireDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 37,
+            "Top": 129,
+            "Width": 75,
+            "Height": 13,
+            "Anchors": [],
+            "Caption": "Expiration Date:",
+            "ExplicitLeft": 36,
+            "ExplicitTop": 126
+          },
+          "children": []
+        },
+        {
+          "class": "TEdit",
+          "name": "edtServiceBranch",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 120,
+            "Top": 18,
+            "Width": 166,
+            "Height": 21,
+            "Anchors": [],
+            "BorderStyle": "bsNone",
+            "Color": "clBtnFace",
+            "ReadOnly": true,
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TEdit",
+          "name": "edtStatus",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 120,
+            "Top": 55,
+            "Width": 166,
+            "Height": 21,
+            "Anchors": [],
+            "BorderStyle": "bsNone",
+            "Color": "clBtnFace",
+            "ReadOnly": true,
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TEdit",
+          "name": "edtSeparationDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 120,
+            "Top": 91,
+            "Width": 166,
+            "Height": 21,
+            "Anchors": [],
+            "BorderStyle": "bsNone",
+            "Color": "clBtnFace",
+            "ReadOnly": true,
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TEdit",
+          "name": "edtExpireDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 120,
+            "Top": 129,
+            "Width": 166,
+            "Height": 21,
+            "Anchors": [],
+            "BorderStyle": "bsNone",
+            "Color": "clBtnFace",
+            "ReadOnly": true,
+            "TabOrder": 3
+          },
+          "children": []
+        },
+        {
+          "class": "TEdit",
+          "name": "edtOEF_OIF",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 120,
+            "Top": 166,
+            "Width": 166,
+            "Height": 21,
+            "Anchors": [],
+            "BorderStyle": "bsNone",
+            "Color": "clBtnFace",
+            "ReadOnly": true,
+            "TabOrder": 4
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TBitBtn",
+      "name": "BitBtn1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 104,
+        "Top": 215,
+        "Width": 75,
+        "Height": 25,
+        "Anchors": [],
+        "Cancel": true,
+        "Caption": "OK",
+        "Default": true,
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ModalResult": 1,
+        "ParentFont": false,
+        "TabOrder": 1,
+        "Glyph.Data": {
+          "binary_bytes": 482
+        },
+        "NumGlyphs": 2
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = frmCombatVet",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = BitBtn1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtServiceBranch",
+            "Label = lblServiceBranch",
+            "Status = stsOK"
+          ],
+          [
+            "Component = edtStatus",
+            "Label = lblStatus",
+            "Status = stsOK"
+          ],
+          [
+            "Component = edtSeparationDate",
+            "Label = lblSepDate",
+            "Status = stsOK"
+          ],
+          [
+            "Component = edtExpireDate",
+            "Label = lblExpireDate",
+            "Status = stsOK"
+          ],
+          [
+            "Component = edtOEF_OIF",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

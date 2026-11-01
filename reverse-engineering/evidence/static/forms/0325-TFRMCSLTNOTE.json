@@ -1,0 +1,191 @@
+{
+  "class": "TfrmCsltNote",
+  "name": "frmCsltNote",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 147,
+    "Top": 206,
+    "BorderStyle": "bsDialog",
+    "Caption": "Select Progress Note",
+    "ClientHeight": 203,
+    "ClientWidth": 314,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 320,
+    "ExplicitHeight": 236,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlBase",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 314,
+        "Height": 170,
+        "Align": "alClient",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblAction",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 4,
+            "Width": 306,
+            "Height": 16,
+            "Align": "alTop",
+            "Caption": "Select a note for this action:",
+            "ExplicitWidth": 161
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboCsltNote",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 26,
+            "Width": 306,
+            "Height": 140,
+            "Style": "orcsSimple",
+            "Align": "alClient",
+            "AutoSelect": true,
+            "Caption": "Select a note for this action",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 16,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": false,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "2,3",
+            "Sorted": true,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "Text": "",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 170,
+        "Width": 314,
+        "Height": 33,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 155,
+            "Top": 3,
+            "Width": 75,
+            "Height": 27,
+            "Align": "alRight",
+            "Caption": "OK",
+            "Default": true,
+            "ModalResult": 1,
+            "TabOrder": 0,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 236,
+            "Top": 3,
+            "Width": 75,
+            "Height": 27,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 1,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 16,
+        "Top": 64,
+        "Data": [
+          [
+            "Component = pnlBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboCsltNote",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmCsltNote",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

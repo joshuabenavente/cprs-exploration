@@ -1,0 +1,339 @@
+{
+  "class": "TfrmSplash",
+  "name": "frmSplash",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 260,
+    "Top": 126,
+    "BorderIcons": [],
+    "BorderStyle": "bsNone",
+    "Caption": "CPRS Splash Screen",
+    "ClientHeight": 520,
+    "ClientWidth": 371,
+    "OldCreateOrder": true,
+    "Position": "poMainFormCenter",
+    "ExplicitWidth": 371,
+    "ExplicitHeight": 520,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 371,
+        "Height": 520,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Align": "alClient",
+        "BevelWidth": 3,
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clGrayText",
+        "Font.Height": -12,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TStaticText",
+          "name": "lblVersion",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 6,
+            "Top": 251,
+            "Width": 359,
+            "Height": 17,
+            "Align": "alTop",
+            "Alignment": "taCenter",
+            "Caption": "version main",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clDefault",
+            "Font.Height": -12,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentFont": false,
+            "TabOrder": 0,
+            "ExplicitWidth": 63
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblCopyright",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 6,
+            "Top": 274,
+            "Width": 359,
+            "Height": 17,
+            "Align": "alTop",
+            "Alignment": "taCenter",
+            "Caption": "Department of Veterans Affairs",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clDefault",
+            "Font.Height": -12,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentFont": false,
+            "TabOrder": 1,
+            "ExplicitWidth": 148
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlImage",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 27,
+            "Top": 27,
+            "Width": 317,
+            "Height": 171,
+            "Margins.Left": 24,
+            "Margins.Top": 24,
+            "Margins.Right": 24,
+            "Margins.Bottom": 24,
+            "Align": "alTop",
+            "BevelInner": "bvLowered",
+            "BevelOuter": "bvNone",
+            "BevelWidth": 3,
+            "Caption": "pnlImage",
+            "TabOrder": 2
+          },
+          "children": [
+            {
+              "class": "TImage",
+              "name": "Image1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 3,
+                "Top": 3,
+                "Width": 300,
+                "Height": 159,
+                "Margins.Left": 2,
+                "Margins.Top": 2,
+                "Margins.Right": 2,
+                "Margins.Bottom": 2,
+                "Align": "alClient",
+                "AutoSize": true,
+                "Center": true,
+                "Picture.Data": {
+                  "binary_bytes": 48790
+                },
+                "Proportional": true,
+                "Stretch": true,
+                "ExplicitWidth": 311
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnl508Disclaimer",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 27,
+            "Top": 306,
+            "Width": 317,
+            "Height": 177,
+            "Margins.Left": 24,
+            "Margins.Top": 12,
+            "Margins.Right": 24,
+            "Margins.Bottom": 24,
+            "Align": "alClient",
+            "BevelKind": "bkTile",
+            "BevelOuter": "bvNone",
+            "Locked": true,
+            "TabOrder": 3
+          },
+          "children": [
+            {
+              "class": "TMemo",
+              "name": "mm",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 313,
+                "Height": 173,
+                "Margins.Top": 6,
+                "Margins.Bottom": 6,
+                "Align": "alClient",
+                "Alignment": "taCenter",
+                "BevelEdges": [],
+                "BevelInner": "bvNone",
+                "BevelOuter": "bvNone",
+                "BorderStyle": "bsNone",
+                "Color": "clBtnFace",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clDefault",
+                "Font.Height": -12,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "Lines.Strings": [
+                  "",
+                  "Department of Veterans Affairs staff",
+                  "have made every effort during the design, ",
+                  "development and testing of this application ",
+                  "to ensure full accessibility to all users in compliance ",
+                  "with Section 508 of the Rehabilitation Act of 1973. ",
+                  "If any issues are encountered ",
+                  "while running this application, please ",
+                  "contact your local help desk for support."
+                ],
+                "ParentFont": false,
+                "ReadOnly": true,
+                "TabOrder": 0,
+                "OnChange": "mmChange",
+                "ExplicitLeft": 1,
+                "ExplicitTop": -8
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblSplash",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 6,
+            "Top": 225,
+            "Width": 359,
+            "Height": 20,
+            "Align": "alTop",
+            "Alignment": "taCenter",
+            "Caption": "Computerized Patient Record System",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clDefault",
+            "Font.Height": -14,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false,
+            "TabOrder": 4,
+            "TabStop": true,
+            "ExplicitWidth": 261
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblCRC",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 6,
+            "Top": 510,
+            "Width": 356,
+            "Height": 4,
+            "Margins.Right": 6,
+            "Align": "alBottom",
+            "Alignment": "taCenter",
+            "TabOrder": 5,
+            "ExplicitWidth": 4
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 8,
+        "Data": [
+          [
+            "Component = pnlMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblVersion",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblCopyright",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlImage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmSplash",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblSplash",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnl508Disclaimer",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = mm",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblCRC",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TApplicationEvents",
+      "name": "ae",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnIdle": "aeIdle",
+        "Left": 69,
+        "Top": 10
+      },
+      "children": []
+    }
+  ]
+}

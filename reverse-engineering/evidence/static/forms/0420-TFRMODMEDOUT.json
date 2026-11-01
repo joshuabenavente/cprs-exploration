@@ -1,0 +1,936 @@
+{
+  "class": "TfrmODMedOut",
+  "name": "frmODMedOut",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 427,
+    "Top": 145,
+    "Width": 546,
+    "Height": 384,
+    "Caption": "Outpatient Medication Order",
+    "ExplicitWidth": 546,
+    "ExplicitHeight": 384,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblMedication",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 6,
+        "Top": 4,
+        "Width": 52,
+        "Height": 13,
+        "Caption": "Medication"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblDosage",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 202,
+        "Top": 45,
+        "Width": 28,
+        "Height": 13,
+        "Caption": "TAKE"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblRoute",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 314,
+        "Top": 45,
+        "Width": 29,
+        "Height": 13,
+        "Caption": "Route"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblSchedule",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 392,
+        "Top": 45,
+        "Width": 45,
+        "Height": 13,
+        "Caption": "Schedule"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblDispense",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 6,
+        "Top": 45,
+        "Width": 70,
+        "Height": 13,
+        "Caption": "Dispense Drug"
+      },
+      "children": []
+    },
+    {
+      "class": "TBevel",
+      "name": "Bevel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 192,
+        "Top": 0,
+        "Width": 4,
+        "Height": 227
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblQuantity",
+      "inherited": false,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 470,
+        "Top": 45,
+        "Width": 39,
+        "Height": 13,
+        "Caption": "Quantity"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblPickup",
+      "inherited": false,
+      "inline": false,
+      "child_position": 7,
+      "properties": {
+        "Left": 202,
+        "Top": 142,
+        "Width": 38,
+        "Height": 13,
+        "Caption": "Pick Up"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblSC",
+      "inherited": false,
+      "inline": false,
+      "child_position": 8,
+      "properties": {
+        "Left": 314,
+        "Top": 142,
+        "Width": 43,
+        "Height": 13,
+        "Caption": "SC? Y/N",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -12,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblRefills",
+      "inherited": false,
+      "inline": false,
+      "child_position": 9,
+      "properties": {
+        "Left": 470,
+        "Top": 91,
+        "Width": 28,
+        "Height": 13,
+        "Caption": "Refills"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblComment",
+      "inherited": false,
+      "inline": false,
+      "child_position": 10,
+      "properties": {
+        "Left": 202,
+        "Top": 183,
+        "Width": 49,
+        "Height": 13,
+        "Caption": "Comments"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblPriority",
+      "inherited": false,
+      "inline": false,
+      "child_position": 11,
+      "properties": {
+        "Left": 392,
+        "Top": 142,
+        "Width": 31,
+        "Height": 13,
+        "Caption": "Priority"
+      },
+      "children": []
+    },
+    {
+      "class": "TSpeedButton",
+      "name": "btnUnits",
+      "inherited": false,
+      "inline": false,
+      "child_position": 12,
+      "properties": {
+        "Left": 248,
+        "Top": 61,
+        "Width": 63,
+        "Height": 15,
+        "Caption": "TABLET(S)",
+        "Flat": true,
+        "Glyph.Data": {
+          "binary_bytes": 178
+        },
+        "Layout": "blGlyphRight",
+        "NumGlyphs": 2,
+        "Spacing": 0,
+        "OnClick": "btnUnitsClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblSIG",
+      "inherited": false,
+      "inline": false,
+      "child_position": 13,
+      "properties": {
+        "Left": 314,
+        "Top": 4,
+        "Width": 18,
+        "Height": 13,
+        "Caption": "SIG",
+        "Visible": false
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "memComplex",
+      "inherited": false,
+      "inline": false,
+      "child_position": 14,
+      "properties": {
+        "Left": 202,
+        "Top": 45,
+        "Width": 262,
+        "Height": 91,
+        "Color": "clBtnFace",
+        "TabOrder": 19,
+        "Visible": false
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionEdit",
+      "name": "txtSIG",
+      "inherited": false,
+      "inline": false,
+      "child_position": 15,
+      "properties": {
+        "Left": 314,
+        "Top": 18,
+        "Width": 200,
+        "Height": 21,
+        "Color": "clInfoBk",
+        "TabOrder": 18,
+        "Visible": false,
+        "Caption": "SIG"
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboDispense",
+      "inherited": false,
+      "inline": false,
+      "child_position": 16,
+      "properties": {
+        "Left": 6,
+        "Top": 59,
+        "Width": 180,
+        "Height": 168,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "ParentShowHint": false,
+        "Pieces": "2,4,3",
+        "ShowHint": true,
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabPositions": "30,33",
+        "TabOrder": 2,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "OnExit": "cboDispenseExit",
+        "OnMouseClick": "cboDispenseMouseClick",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboMedication",
+      "inherited": false,
+      "inline": false,
+      "child_position": 17,
+      "properties": {
+        "Left": 6,
+        "Top": 18,
+        "Width": 180,
+        "Height": 208,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 11,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 0,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "OnExit": "cboMedicationSelect",
+        "OnMouseClick": "cboMedicationSelect",
+        "OnNeedData": "cboMedicationNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionMemo",
+      "name": "memOrder",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 289,
+        "TabOrder": 15,
+        "ExplicitTop": 289
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboRoute",
+      "inherited": false,
+      "inline": false,
+      "child_position": 19,
+      "properties": {
+        "Left": 314,
+        "Top": 59,
+        "Width": 72,
+        "Height": 77,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 4,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboSchedule",
+      "inherited": false,
+      "inline": false,
+      "child_position": 20,
+      "properties": {
+        "Left": 392,
+        "Top": 59,
+        "Width": 72,
+        "Height": 77,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 5,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "memComments",
+      "inherited": false,
+      "inline": false,
+      "child_position": 21,
+      "properties": {
+        "Left": 202,
+        "Top": 197,
+        "Width": 311,
+        "Height": 32,
+        "ScrollBars": "ssVertical",
+        "TabOrder": 12,
+        "OnChange": "ControlChange",
+        "OnEnter": "memCommentsEnter"
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboPriority",
+      "inherited": false,
+      "inline": false,
+      "child_position": 22,
+      "properties": {
+        "Left": 392,
+        "Top": 156,
+        "Width": 72,
+        "Height": 21,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 11,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboMedAlt",
+      "inherited": false,
+      "inline": false,
+      "child_position": 23,
+      "properties": {
+        "Left": 6,
+        "Top": 18,
+        "Width": 180,
+        "Height": 21,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 11,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 1,
+        "Text": "",
+        "Visible": false,
+        "OnChange": "ControlChange",
+        "OnExit": "cboMedicationSelect",
+        "OnMouseClick": "cboMedicationSelect",
+        "OnNeedData": "cboMedicationNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboInstructions",
+      "inherited": false,
+      "inline": false,
+      "child_position": 24,
+      "properties": {
+        "Left": 203,
+        "Top": 59,
+        "Width": 45,
+        "Height": 77,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 80,
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 3,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboPickup",
+      "inherited": false,
+      "inline": false,
+      "child_position": 25,
+      "properties": {
+        "Left": 202,
+        "Top": 156,
+        "Width": 106,
+        "Height": 21,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 9,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboSC",
+      "inherited": false,
+      "inline": false,
+      "child_position": 26,
+      "properties": {
+        "Left": 314,
+        "Top": 156,
+        "Width": 72,
+        "Height": 21,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 10,
+        "Text": "",
+        "OnChange": "ControlChange",
+        "OnEnter": "cboSCEnter",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionEdit",
+      "name": "txtQuantity",
+      "inherited": false,
+      "inline": false,
+      "child_position": 27,
+      "properties": {
+        "Left": 470,
+        "Top": 59,
+        "Width": 44,
+        "Height": 21,
+        "TabOrder": 6,
+        "OnChange": "ControlChange",
+        "OnEnter": "txtQuantityEnter",
+        "Caption": "Quantity"
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionEdit",
+      "name": "txtRefills",
+      "inherited": false,
+      "inline": false,
+      "child_position": 28,
+      "properties": {
+        "Left": 470,
+        "Top": 105,
+        "Width": 31,
+        "Height": 21,
+        "TabOrder": 7,
+        "Text": "0",
+        "OnChange": "ControlChange",
+        "Caption": "Refills"
+      },
+      "children": []
+    },
+    {
+      "class": "TUpDown",
+      "name": "spnRefills",
+      "inherited": false,
+      "inline": false,
+      "child_position": 29,
+      "properties": {
+        "Left": 501,
+        "Top": 105,
+        "Width": 15,
+        "Height": 21,
+        "Associate": "txtRefills",
+        "Max": 11,
+        "TabOrder": 8
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdComplex",
+      "inherited": false,
+      "inline": false,
+      "child_position": 30,
+      "properties": {
+        "Left": 202,
+        "Top": 18,
+        "Width": 106,
+        "Height": 21,
+        "Caption": "Complex Dose...",
+        "TabOrder": 17,
+        "OnClick": "cmdComplexClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlIndications",
+      "inherited": false,
+      "inline": false,
+      "child_position": 31,
+      "properties": {
+        "Left": 8,
+        "Top": 384,
+        "Width": 349,
+        "Height": 71,
+        "TabOrder": 24
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 32,
+      "properties": {
+        "Left": 6,
+        "Top": 234,
+        "Width": 516,
+        "Height": 47,
+        "TabOrder": 25
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblIndications",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 5,
+            "Top": 2,
+            "Width": 54,
+            "Height": 16,
+            "AutoSize": false,
+            "Caption": "Indication:"
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboIndication",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 5,
+            "Top": 18,
+            "Width": 205,
+            "Height": 21,
+            "Style": "orcsDropDown",
+            "AutoSelect": true,
+            "Caption": "",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": false,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "Text": "",
+            "OnChange": "cboIndicationChange",
+            "OnKeyDown": "cboIndicationKeyDown",
+            "OnKeyUp": "cboIndicationKeyUp",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TButton",
+      "name": "cmdAccept",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 289,
+        "TabOrder": 13,
+        "ExplicitTop": 289
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdQuit",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 316,
+        "TabOrder": 14,
+        "ExplicitTop": 316
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMessage",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 42,
+        "Top": 168,
+        "TabOrder": 16,
+        "ExplicitLeft": 42,
+        "ExplicitTop": 168
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = memComplex",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtSIG",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboDispense",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboMedication",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboRoute",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSchedule",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memComments",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboPriority",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboMedAlt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboInstructions",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboPickup",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSC",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtQuantity",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtRefills",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = spnRefills",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdComplex",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memOrder",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdQuit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODMedOut",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlIndications",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboIndication",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popUnits",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AutoHotkeys": "maManual",
+        "AutoPopup": false,
+        "Left": 271,
+        "Top": 76
+      },
+      "children": []
+    }
+  ]
+}

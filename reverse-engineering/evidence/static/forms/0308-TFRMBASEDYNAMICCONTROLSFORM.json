@@ -1,0 +1,39 @@
+{
+  "class": "TfrmBaseDynamicControlsForm",
+  "name": "frmBaseDynamicControlsForm",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Caption": "frmBaseDynamicControlsForm",
+    "ClientHeight": 222,
+    "ClientWidth": 316,
+    "Font.Name": "Tahoma",
+    "ExplicitWidth": 332,
+    "ExplicitHeight": 261,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = frmBaseDynamicControlsForm",
+            "WatchEnable = False",
+            "IgnoreWatchEnable = False",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

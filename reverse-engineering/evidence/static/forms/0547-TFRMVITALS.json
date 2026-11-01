@@ -1,0 +1,729 @@
+{
+  "class": "TfrmVitals",
+  "name": "frmVitals",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 224,
+    "Top": 211,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "Vitals",
+    "ClientHeight": 375,
+    "ClientWidth": 514,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "OnKeyUp": "FormKeyUp",
+    "OnShow": "FormShow",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 514,
+        "Height": 221,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TStaticText",
+          "name": "lblNoResults",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 196,
+            "Top": 58,
+            "Width": 217,
+            "Height": 17,
+            "Caption": "No measurement to graph for this date range.",
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TChart",
+          "name": "chtChart",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 95,
+            "Top": 0,
+            "Width": 419,
+            "Height": 221,
+            "AllowPanning": "pmNone",
+            "BackWall.Brush.Color": "clWhite",
+            "BackWall.Brush.Style": "bsClear",
+            "Legend.Alignment": "laTop",
+            "Legend.Inverted": true,
+            "Legend.Shadow.HorizSize": 2,
+            "Legend.Shadow.VertSize": 2,
+            "Title.Text.Strings": [
+              "test name"
+            ],
+            "Title.Visible": false,
+            "OnClickLegend": "chtChartClickLegend",
+            "OnClickSeries": "chtChartClickSeries",
+            "OnUndoZoom": "chtChartUndoZoom",
+            "LeftAxis.Title.Caption": "units",
+            "View3D": false,
+            "Zoom.Allow": false,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "PopupMenu": "popChart",
+            "TabOrder": 1,
+            "OnMouseDown": "chtChartMouseDown",
+            "ColorPaletteIndex": 13
+          },
+          "children": [
+            {
+              "class": "TLineSeries",
+              "name": "serTestY",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Marks.Arrow.Visible": true,
+                "Marks.Callout.Brush.Color": "clBlack",
+                "Marks.Callout.Arrow.Visible": true,
+                "Marks.Visible": false,
+                "SeriesColor": "clBlue",
+                "Title": "Mean",
+                "Brush.BackColor": "clDefault",
+                "Pointer.Brush.Color": "clBlue",
+                "Pointer.Brush.Gradient.EndColor": "clBlue",
+                "Pointer.Draw3D": false,
+                "Pointer.Gradient.EndColor": "clBlue",
+                "Pointer.InflateMargins": true,
+                "Pointer.Style": "psDiamond",
+                "Pointer.Visible": true,
+                "XValues.DateTime": true,
+                "XValues.Name": "X",
+                "XValues.Order": "loAscending",
+                "YValues.Name": "Y",
+                "YValues.Order": "loNone"
+              },
+              "children": []
+            },
+            {
+              "class": "TLineSeries",
+              "name": "serTestX",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Marks.Arrow.Visible": true,
+                "Marks.Callout.Brush.Color": "clBlack",
+                "Marks.Callout.Arrow.Visible": true,
+                "Marks.Visible": false,
+                "SeriesColor": "clBlue",
+                "Title": "Dialstolic",
+                "Brush.BackColor": "clDefault",
+                "Pointer.Brush.Color": "clBlue",
+                "Pointer.Brush.Gradient.EndColor": "clBlue",
+                "Pointer.Draw3D": false,
+                "Pointer.Gradient.EndColor": "clBlue",
+                "Pointer.HorizSize": 3,
+                "Pointer.InflateMargins": true,
+                "Pointer.Style": "psRectangle",
+                "Pointer.VertSize": 3,
+                "Pointer.Visible": true,
+                "XValues.DateTime": true,
+                "XValues.Name": "X",
+                "XValues.Order": "loAscending",
+                "YValues.Name": "Y",
+                "YValues.Order": "loNone"
+              },
+              "children": []
+            },
+            {
+              "class": "TLineSeries",
+              "name": "serTest",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Marks.Arrow.Visible": true,
+                "Marks.Callout.Brush.Color": "clBlack",
+                "Marks.Callout.Arrow.Visible": true,
+                "Marks.Visible": false,
+                "SeriesColor": "clBlue",
+                "Title": "Systolic",
+                "Brush.BackColor": "clDefault",
+                "Pointer.Brush.Gradient.EndColor": "clBlue",
+                "Pointer.Gradient.EndColor": "clBlue",
+                "Pointer.InflateMargins": true,
+                "Pointer.Style": "psCircle",
+                "Pointer.Visible": true,
+                "XValues.DateTime": true,
+                "XValues.Name": "X",
+                "XValues.Order": "loAscending",
+                "YValues.Name": "Y",
+                "YValues.Order": "loNone"
+              },
+              "children": []
+            },
+            {
+              "class": "TPointSeries",
+              "name": "serTime",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Marks.Arrow.Visible": true,
+                "Marks.Callout.Brush.Color": "clBlack",
+                "Marks.Callout.Arrow.Visible": true,
+                "Marks.Callout.Length": 8,
+                "Marks.Visible": false,
+                "SeriesColor": "clSilver",
+                "ShowInLegend": false,
+                "Title": "Time",
+                "ClickableLine": false,
+                "Pointer.Draw3D": false,
+                "Pointer.HorizSize": 3,
+                "Pointer.InflateMargins": true,
+                "Pointer.Style": "psCircle",
+                "Pointer.VertSize": 3,
+                "Pointer.Visible": false,
+                "XValues.Name": "X",
+                "XValues.Order": "loAscending",
+                "YValues.Name": "Y",
+                "YValues.Order": "loNone"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TORAutoPanel",
+          "name": "pnlLeft",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 95,
+            "Height": 221,
+            "Align": "alLeft",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TORListBox",
+              "name": "lstDates",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 25,
+                "Width": 93,
+                "Height": 132,
+                "Align": "alTop",
+                "ItemHeight": 13,
+                "Items.Strings": [
+                  "1^Today",
+                  "8^One Week",
+                  "15^Two Weeks",
+                  "31^One Month",
+                  "183^Six Months",
+                  "366^One Year",
+                  "732^Two Years",
+                  "66666^All Results",
+                  "S^Date Range"
+                ],
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 1,
+                "OnClick": "lstDatesClick",
+                "Caption": "Select Vitals from:",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2"
+              },
+              "children": []
+            },
+            {
+              "class": "TORAutoPanel",
+              "name": "pnlLeftClient",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 157,
+                "Width": 93,
+                "Height": 68,
+                "BevelOuter": "bvNone",
+                "TabOrder": 2
+              },
+              "children": [
+                {
+                  "class": "TCheckBox",
+                  "name": "chkValues",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 8,
+                    "Width": 76,
+                    "Height": 17,
+                    "Caption": "Values",
+                    "TabOrder": 0,
+                    "OnClick": "chkValuesClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCheckBox",
+                  "name": "chk3D",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 42,
+                    "Width": 76,
+                    "Height": 17,
+                    "Caption": "3D",
+                    "TabOrder": 2,
+                    "OnClick": "chk3DClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCheckBox",
+                  "name": "chkZoom",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 9,
+                    "Top": 25,
+                    "Width": 76,
+                    "Height": 17,
+                    "Caption": "Zoom",
+                    "TabOrder": 1,
+                    "OnClick": "chkZoomClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlEnterVitals",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 93,
+                "Height": 24,
+                "Align": "alTop",
+                "Caption": "pnlEnterVitals",
+                "TabOrder": 0,
+                "OnResize": "pnlEnterVitalsResize"
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnEnterVitals",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 8,
+                    "Top": 0,
+                    "Width": 75,
+                    "Height": 25,
+                    "Caption": "Enter Vitals",
+                    "TabOrder": 0,
+                    "OnClick": "btnEnterVitalsClick"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 221,
+        "Width": 514,
+        "Height": 154,
+        "Align": "alBottom",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TCaptionStringGrid",
+          "name": "grdVitals",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 96,
+            "Top": 1,
+            "Width": 417,
+            "Height": 152,
+            "Align": "alClient",
+            "Color": "clCream",
+            "ColCount": 6,
+            "Ctl3D": true,
+            "DefaultRowHeight": 15,
+            "FixedCols": 0,
+            "RowCount": 8,
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -12,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "Options": [
+              "goFixedVertLine",
+              "goFixedHorzLine",
+              "goVertLine",
+              "goHorzLine",
+              "goColSizing"
+            ],
+            "ParentCtl3D": false,
+            "ParentFont": false,
+            "TabOrder": 1,
+            "OnSelectCell": "grdVitalsSelectCell",
+            "Caption": "Vitals Data",
+            "ExplicitWidth": 418,
+            "ExplicitHeight": 153,
+            "ColWidths": [
+              64,
+              64,
+              64,
+              64,
+              64,
+              64
+            ]
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlButtons",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 95,
+            "Height": 152,
+            "Align": "alLeft",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0,
+            "ExplicitHeight": 153,
+            "DesignSize": [
+              95,
+              152
+            ]
+          },
+          "children": [
+            {
+              "class": "TCaptionListBox",
+              "name": "lstVitals",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 16,
+                "Width": 95,
+                "Height": 119,
+                "Style": "lbOwnerDrawFixed",
+                "Anchors": [
+                  "akLeft",
+                  "akTop",
+                  "akRight",
+                  "akBottom"
+                ],
+                "Items.Strings": [
+                  "Temperature",
+                  "Pulse",
+                  "Respiration",
+                  "Blood Pressure",
+                  "Height",
+                  "Weight",
+                  "Pain"
+                ],
+                "TabOrder": 0,
+                "OnClick": "lstVitalsClick",
+                "Caption": "Vitals"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblNoResults",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chtChart",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlLeft",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstDates",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlLeftClient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkValues",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chk3D",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkZoom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlEnterVitals",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnEnterVitals",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grdVitals",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstVitals",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmVitals",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popChart",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnPopup": "popChartPopup",
+        "Left": 37,
+        "Top": 317
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "popValues",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Values",
+            "OnClick": "popValuesClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "pop3D",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "3D",
+            "OnClick": "pop3DClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popZoom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Zoom Enabled",
+            "OnClick": "popZoomClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popZoomBack",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Zoom Back",
+            "OnClick": "popZoomBackClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popCopy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Copy",
+            "OnClick": "popCopyClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popDetails",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Details",
+            "OnClick": "popDetailsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popPrint",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Print",
+            "OnClick": "popPrintClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TORDateRangeDlg",
+      "name": "calVitalsRange",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "DateOnly": true,
+        "Instruction": "Enter a date range -",
+        "LabelStart": "Begin Date",
+        "LabelStop": "End Date",
+        "RequireTime": false,
+        "Format": "mmm d,yy",
+        "Left": 74,
+        "Top": 320
+      },
+      "children": []
+    },
+    {
+      "class": "TPrintDialog",
+      "name": "dlgWinPrint",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 146,
+        "Top": 324
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "class": "TfraIce",
+  "name": "fraIce",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {},
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlWorkspace",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {},
+      "children": [
+        {
+          "class": "TSplitter",
+          "name": "Splitter1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 577,
+            "Top": 1,
+            "Height": 148,
+            "ExplicitLeft": 584,
+            "ExplicitTop": 80,
+            "ExplicitHeight": 100
+          },
+          "children": []
+        },
+        {
+          "class": "TListView",
+          "name": "lstICE",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 576,
+            "Height": 148,
+            "Align": "alLeft",
+            "Columns": [
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "data",
+                  "Width": 8
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "AutoSize": true,
+                  "Caption": "Type"
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "AutoSize": true,
+                  "Caption": "Name"
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "AutoSize": true,
+                  "Caption": "Recommendation"
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "AutoSize": true,
+                  "Caption": "Earliest Date"
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "AutoSize": true,
+                  "Caption": "Overdue Date"
+                }
+              }
+            ],
+            "RowSelect": true,
+            "PopupMenu": "mnuActions",
+            "TabOrder": 0,
+            "ViewStyle": "vsReport"
+          },
+          "children": []
+        },
+        {
+          "class": "TListView",
+          "name": "lstHistory",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 580,
+            "Top": 1,
+            "Width": 228,
+            "Height": 148,
+            "Align": "alClient",
+            "Columns": [
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "Name",
+                  "Width": -1,
+                  "WidthType": [
+                    -1
+                  ]
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "Administration Date",
+                  "Width": -2,
+                  "WidthType": [
+                    -2
+                  ]
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "Reason",
+                  "Width": -2,
+                  "WidthType": [
+                    -2
+                  ]
+                }
+              }
+            ],
+            "TabOrder": 1,
+            "ViewStyle": "vsReport"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TImageList",
+      "name": "imgLst",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Bitmap": {
+          "binary_bytes": 4390
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "mnuActions",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnPopup": "mnuActionsPopup",
+        "Left": 296,
+        "Top": 8
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "AddImmunization1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Add Immunization",
+            "OnClick": "addImmunization"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "ViewHistory1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "View History",
+            "OnClick": "viewHistory"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

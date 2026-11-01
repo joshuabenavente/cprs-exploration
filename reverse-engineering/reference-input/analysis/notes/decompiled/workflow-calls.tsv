@@ -1,0 +1,389 @@
+caller	caller_address	call_site	callee	callee_address
+rTIU.ListNotesForTree	00a0b640	00a0b66d	System.@UStrAddRef	0040b0c8
+rTIU.ListNotesForTree	00a0b640	00a0b683	System.@UStrClr	0040afd4
+rTIU.ListNotesForTree	00a0b640	00a0b736	ORNet.CallVistA	009ada80
+rTIU.ListNotesForTree	00a0b640	00a0b73f	<indirect>	
+rTIU.ListNotesForTree	00a0b640	00a0b75a	<indirect>	
+rTIU.ListNotesForTree	00a0b640	00a0b766	System.SysUtils.Trim	0042c5fc
+rTIU.ListNotesForTree	00a0b640	00a0b777	<indirect>	
+rTIU.ListNotesForTree	00a0b640	00a0b788	<indirect>	
+rTIU.ListNotesForTree	00a0b640	00a0b796	System.SysUtils.AnsiPos	00437d28
+rTIU.ListNotesForTree	00a0b640	00a0b7af	<indirect>	
+rTIU.ListNotesForTree	00a0b640	00a0b7c1	ORFn.Piece	009b2f6c
+rTIU.ListNotesForTree	00a0b640	00a0b7cb	<indirect>	
+rTIU.ListNotesForTree	00a0b640	00a0b7ee	System.@UStrArrayClr	0040b034
+rTIU.ListNotesForTree	00a0b640	00a0b7f6	System.@UStrClr	0040afd4
+rTIU.LoadDocumentText	00a0b870	00a0b88c	ORNet.CallVistA	009ada80
+rTIU.LoadDetailText	00a0b8cc	00a0b8e8	ORNet.CallVistA	009ada80
+rTIU.GetTIUListItem	00a0c248	00a0c267	ORNet.CallVistA	009ad924
+fNotes.TfrmNotes.ClearPtData	00e14524	00e14530	fPage.TfrmPage.ClearPtData	012034d0
+fNotes.TfrmNotes.ClearPtData	00e14524	00e14538	fNotes.TfrmNotes.ClearEditControls	00e14f58
+fNotes.TfrmNotes.ClearPtData	00e14524	00e14553	Vcl.ComCtrls.TTreeNodes.BeginUpdate	0066fcb4
+fNotes.TfrmNotes.ClearPtData	00e14524	00e14569	fNotes.TfrmNotes.ClearTVNotes	00e14ec4
+fNotes.TfrmNotes.ClearPtData	00e14524	00e1458a	Vcl.ComCtrls.TTreeNodes.EndUpdate	0066fd00
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e146f0	Vcl.Controls.TWinControl.LockDrawing	00608594
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14706	fPage.TfrmPage.DisplayPage	012034e8
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14728	fFrame.TfrmFrame.ShowHideChartTabMenus	00ffdcd8
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14743	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14757	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e1476b	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14773	fPage.TfrmPage.GetInitPage	012035ec
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14783	fNotes.TfrmNotes.EnableDisableIDNotes	00e20548
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e1478b	rTIU.GetCurrentTIUContext	00a0ddb0
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e147a1	System.@CopyRecord	0040d52c
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e147bd	System.@CopyRecord	0040d52c
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e147c2	uSpell.SpellCheckAvailable	00aeac0c
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e147d2	Vcl.Menus.TMenuItem.SetVisible	00709244
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e147ed	Vcl.Menus.TMenuItem.SetVisible	00709244
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14808	Vcl.Menus.TMenuItem.SetVisible	00709244
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14824	Vcl.ExtCtrls.TTimer.SetInterval	006b861c
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14837	ORFn.SetEqualTabStops	009b5ff4
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e1483f	fPage.TfrmPage.GetInitPatient	0120360c
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14860	fNotes.TfrmNotes.SetViewContext	00e1df9c
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14879	fPage.TfrmPage.GetInitPatient	0120360c
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e1488e	fNotes.TfrmNotes.SetViewContext	00e1df9c
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e14898	fNotes.TfrmNotes.ProcessNotifications	00e1d328
+fNotes.TfrmNotes.DisplayPage	00e146cc	00e148ad	Vcl.Controls.TWinControl.UnlockDrawing	006085cc
+fNotes.TfrmNotes.ClearTVNotes	00e14ec4	00e14ef0	uDocTree.KillDocTreeObjects	00a12110
+fNotes.TfrmNotes.ClearTVNotes	00e14ec4	00e14f04	Vcl.ComCtrls.TTreeNodes.Clear	0066f6f4
+fNotes.TfrmNotes.GetTitleText	00e15850	00e15881	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.GetTitleText	00e15850	00e15888	<indirect>	
+fNotes.TfrmNotes.GetTitleText	00e15850	00e1589d	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.GetTitleText	00e15850	00e158a9	<indirect>	
+fNotes.TfrmNotes.GetTitleText	00e15850	00e158b8	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.GetTitleText	00e15850	00e158c0	ORFn.MakeFMDateTime	009b18cc
+fNotes.TfrmNotes.GetTitleText	00e15850	00e158d4	ORFn.FormatFMDateTime	009b11a0
+fNotes.TfrmNotes.GetTitleText	00e15850	00e158eb	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.GetTitleText	00e15850	00e158f7	<indirect>	
+fNotes.TfrmNotes.GetTitleText	00e15850	00e15906	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.GetTitleText	00e15850	00e1591d	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.GetTitleText	00e15850	00e15929	<indirect>	
+fNotes.TfrmNotes.GetTitleText	00e15850	00e15938	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.GetTitleText	00e15850	00e15953	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.GetTitleText	00e15850	00e1595f	<indirect>	
+fNotes.TfrmNotes.GetTitleText	00e15850	00e1596e	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.GetTitleText	00e15850	00e1597f	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.GetTitleText	00e15850	00e1598f	System.@UStrCatN	0040c214
+fNotes.TfrmNotes.GetTitleText	00e15850	00e15999	System.@UStrClr	0040afd4
+fNotes.TfrmNotes.GetTitleText	00e15850	00e159b3	System.@UStrArrayClr	0040b034
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e194ad	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e194bf	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e194d1	fNotes.TfrmNotes.SetReadVisible	00e0fe84
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e194de	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e194e9	uWriteAccess.WriteAccess	01011c80
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19510	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1951b	uWriteAccess.WriteAccess	01011c80
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19528	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1952d	fReminderDialog.UpdateReminderFinish	00d8f7f8
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19538	U_CPTPasteDetails.TCopyPasteDetails.LoadPasteText	00a95d0c
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19547	ORFn.StatusText	009b60ec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19557	Vcl.Forms.TScreen.SetCursor	00729a50
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19560	fNotes.TfrmNotes.SetReadVisible	00e0fe84
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19565	fReminderDialog.UpdateReminderFinish	00d8f7f8
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19576	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1957f	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1958a	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19599	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e195aa	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e195bf	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e195c8	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e195d3	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e195e2	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e195f7	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19600	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1960b	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1961a	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19633	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1963c	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19647	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19656	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19667	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1967c	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19685	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19690	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1969f	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e196a7	ORFn.MakeFMDateTime	009b18cc
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e196bb	ORFn.FormatFMDateTime	009b11a0
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e196d0	System.@UStrCatN	0040c214
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e196de	VA508AccessibilityManager.TVA508StaticText.SetLabelCaption	009fffc4
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e196e5	ORCtrls.TORListBox.GetItemIEN	007adbdc
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e196f8	rTIU.LoadDocumentText	00a0b870
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19707	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19715	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19722	Vcl.Menus.TMenuItem.SetChecked	007090d4
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1972f	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1973c	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1974a	Vcl.Forms.TScreen.SetCursor	00729a50
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19751	ORFn.StatusText	009b60ec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1976b	Vcl.Dialogs.TFindDialog.SetFindText	006a60c4
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19798	dShared.TdmodShared.FindRichEditTextAll	00e05190
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e197a3	U_CPTPasteDetails.TCopyPasteDetails.LoadPasteText	00a95d0c
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e197b9	fReminderTree.TfrmReminderTree.EnableActions	00d4b324
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e197c0	fNotes.TfrmNotes.DisplayPCE	00e152c4
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e197cd	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e197db	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e197e3	fNotes.TfrmNotes.GetReadVisible	00e0ff00
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e197ee	fNotes.TfrmNotes.LimitEditableNote	00e14f40
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e197fb	System.Variants.@VarFromUStr	00449fdc
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1980d	ORCtrls.TORListBox.GetItemID	007ae008
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19816	System.Variants.@VarAdd	0044e1a0
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19821	System.Variants.@VarToUStr	0044973c
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19832	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1983f	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1984a	<indirect>	
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19859	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1986e	VAUtils.SetPiece	0079af38
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e1987b	uCore.NotifyOtherApps	011d3f74
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e19895	System.@UStrArrayClr	0040b034
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e198a8	System.@FinalizeArray	0040d1c4
+fNotes.TfrmNotes.lstNotesClick	00e19480	00e198b5	System.@UStrArrayClr	0040b034
+fNotes.TfrmNotes.ReadToFront	00e1c0f8	00e1c104	Vcl.Controls.TControl.BringToFront	0060297c
+fNotes.TfrmNotes.ReadToFront	00e1c0f8	00e1c10f	Vcl.Controls.TControl.BringToFront	0060297c
+fNotes.TfrmNotes.ReadToFront	00e1c0f8	00e1c11a	Vcl.Controls.TControl.BringToFront	0060297c
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1dfbc	System.@AddRefRecord	0040d3f0
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1dfe2	fNotes.TfrmNotes.SaveCurrentNote	00e1946c
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e000	System.@CopyRecord	0040d52c
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e00a	fNotes.TfrmNotes.SetEditingIndex	00e1e48c
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e019	<indirect>	
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e021	fNotes.TfrmNotes.ReadToFront	00e1c0f8
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e03c	System.@UStrAsg	0040b3c4
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e04a	System.@UStrAsg	0040b3c4
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e07c	System.@UStrAsg	0040b3c4
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e0af	System.@UStrAsg	0040b3c4
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e0bd	System.@UStrAsg	0040b3c4
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e0df	System.@UStrAsg	0040b3c4
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e0ed	System.@UStrAsg	0040b3c4
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e103	fNotes.TfrmNotes.acSignedExecute	00e16624
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e115	fNotes.TfrmNotes.acSignedExecute	00e16624
+fNotes.TfrmNotes.SetViewContext	00e1df9c	00e1e130	System.@FinalizeRecord	0040cd88
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e897	fNotes.TfrmNotes.UpdateActMenu	00e216c0
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e8a3	uDocTree.ShowMoreNode	00a13b8c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e8ae	fNotes.TfrmNotes.SaveTreePosition	00e23d48
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e8b9	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e8c8	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e8d0	uDocTree.ShowMoreNode	00a13b8c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e8db	fNotes.TfrmNotes.DoSelect	00e2307c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e8ef	Vcl.Controls.TWinControl.GetHandle	0060ca58
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e8f5	Winapi.Windows.SendMessage	0041c028
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e903	fNotes.TfrmNotes.SetLvNotesVisible	00e238f8
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e910	VA508AccessibilityManager.TVA508StaticText.SetLabelCaption	009fffc4
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e91b	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e92a	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e93e	System.@UStrPos	0040c4b0
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e961	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e970	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e994	System.@UStrCatN	0040c214
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e9a3	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e9b9	<indirect>	
+fNotes.TfrmNotes.tvNotesChange	00e1e870	00e1e9cc	System.@UStrClr	0040afd4
+fNotes.TfrmNotes.tvNotesKeyDown	00e1f8e8	00e1f8fd	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.tvNotesKeyDown	00e1f8e8	00e1f90c	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.tvNotesKeyDown	00e1f8e8	00e1f919	System.SysUtils.AnsiPos	00437d28
+fNotes.TfrmNotes.tvNotesKeyDown	00e1f8e8	00e1f926	fNotes.TfrmNotes.GetMoreDocuments	00e23618
+fNotes.TfrmNotes.lvNotesClick	00e1fc84	00e1fd86	System.@UStrClr	0040afd4
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1fe44	System.Classes.TCollectionItem.GetIndex	004d4aac
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1fe59	System.Classes.TCollectionItem.GetIndex	004d4aac
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1feab	Vcl.ComCtrls.TListColumns.GetItem	0067b704
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1feb3	Vcl.ComCtrls.TListColumn.SetImageIndex	0067b5f4
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1fec8	System.Classes.TCollectionItem.GetIndex	004d4aac
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1fedb	Vcl.ComCtrls.TListColumns.GetItem	0067b704
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1fee5	Vcl.ComCtrls.TListColumn.SetImageIndex	0067b5f4
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1feef	System.Classes.TCollectionItem.GetIndex	004d4aac
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1ff02	Vcl.ComCtrls.TListColumns.GetItem	0067b704
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1ff0c	Vcl.ComCtrls.TListColumn.SetImageIndex	0067b5f4
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1ffa7	System.@UStrAsg	0040b3c4
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1ffc2	System.@AsClass	004093c8
+fNotes.TfrmNotes.lvNotesColumnClick	00e1fe30	00e1ffc7	Vcl.ComCtrls.TCustomListView.AlphaSort	00682410
+fNotes.TfrmNotes.lvNotesDblClick	00e20188	00e201ae	Vcl.ComCtrls.TCustomListView.GetSelected	00682964
+fNotes.TfrmNotes.lvNotesDblClick	00e20188	00e201bd	Vcl.ComCtrls.TCustomListView.GetSelected	00682964
+fNotes.TfrmNotes.lvNotesDblClick	00e20188	00e201cc	<indirect>	
+fNotes.TfrmNotes.lvNotesDblClick	00e20188	00e201d7	System.SysUtils.AnsiPos	00437d28
+fNotes.TfrmNotes.lvNotesDblClick	00e20188	00e201e8	fNotes.TfrmNotes.GetMoreDocuments	00e23618
+fNotes.TfrmNotes.lvNotesDblClick	00e20188	00e201fd	System.@UStrClr	0040afd4
+fNotes.TfrmNotes.lvNotesKeyDown	00e20234	00e20257	Vcl.ComCtrls.TCustomListView.GetSelected	00682964
+fNotes.TfrmNotes.lvNotesKeyDown	00e20234	00e20266	Vcl.ComCtrls.TCustomListView.GetSelected	00682964
+fNotes.TfrmNotes.lvNotesKeyDown	00e20234	00e20270	<indirect>	
+fNotes.TfrmNotes.lvNotesKeyDown	00e20234	00e2027c	Vcl.ComCtrls.TCustomListView.GetSelected	00682964
+fNotes.TfrmNotes.lvNotesKeyDown	00e20234	00e2028b	<indirect>	
+fNotes.TfrmNotes.lvNotesKeyDown	00e20234	00e2029d	System.@UStrPos	0040c4b0
+fNotes.TfrmNotes.lvNotesKeyDown	00e20234	00e202ad	fNotes.TfrmNotes.GetMoreDocuments	00e23618
+fNotes.TfrmNotes.lvNotesKeyDown	00e20234	00e202c2	System.@UStrClr	0040afd4
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e20333	fNotes.TfrmNotes.UpdateActMenu	00e216c0
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e20348	<indirect>	
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e2035a	<indirect>	
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e20365	System.SysUtils.AnsiPos	00437d28
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e20381	<indirect>	
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e2038c	VA508AccessibilityManager.TVA508StaticText.SetLabelCaption	009fffc4
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e20399	<indirect>	
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e203a6	ORFn.StatusText	009b60ec
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e203b8	<indirect>	
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e203c4	ORCtrls.TORListBox.SelectByID	007ae0d4
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e203cf	ORCtrls.TORListBox.GetItemIEN	007adbdc
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e203d9	System.SysUtils.IntToStr	0042cff8
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e203e9	fNotes.TfrmNotes.UpdateActMenu	00e216c0
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e203f2	fNotes.TfrmNotes.lstNotesClick	00e19480
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e20406	Vcl.Controls.TWinControl.GetHandle	0060ca58
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e2040c	Winapi.Windows.SendMessage	0041c028
+fNotes.TfrmNotes.lvNotesSelectItem	00e202f8	00e2042d	System.@UStrArrayClr	0040b034
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e21f63	System.SysUtils.Exception.Create	00435fa0
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e21f68	System.@RaiseExcept	0040a640
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e21f79	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e21fc0	System.@UStrClr	0040afd4
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e21fcc	System.Classes.TStringList.Create	004d81f4
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e21fed	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e21ff9	Vcl.Controls.TWinControl.LockDrawing	00608594
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22007	Vcl.Controls.TWinControl.LockDrawing	00608594
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22038	Vcl.ComCtrls.TTreeNodes.BeginUpdate	0066fcb4
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22054	ORCtrls.TORListBox.GetMItems	007b1014
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2205b	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22061	fNotes.TfrmNotes.ClearTVNotes	00e14ec4
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22075	Vcl.ComCtrls.TListItems.Clear	0067cfe0
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22085	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22096	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e220a7	VA508AccessibilityManager.TVA508StaticText.SetLabelCaption	009fffc4
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e220be	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e220cb	System.SysUtils.IntToStr	0042cfdc
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e220dc	System.@UStrEqual	0040c324
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22120	rTIU.ListNotesForTree	00a0b640
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2212a	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22159	uDocTree.CreateListItemsForDocumentTree	00a0f8dc
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22172	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2218b	fNotes.SearchDocListforString	00e21a04
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e221a6	fNotes.TfrmNotes.UpdateTreeView	00e1e6c8
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e221b0	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e221c9	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e221e1	fNotes.TfrmNotes.UpdateTreeView	00e1e6c8
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e221f1	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e221fc	System.SysUtils.IntToStr	0042cfdc
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2220d	System.@UStrEqual	0040c324
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2224b	rTIU.ListNotesForTree	00a0b640
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22255	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22284	uDocTree.CreateListItemsForDocumentTree	00a0f8dc
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2229d	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e222b6	fNotes.SearchDocListforString	00e21a04
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e222d1	fNotes.TfrmNotes.UpdateTreeView	00e1e6c8
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e222db	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e222f4	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2230c	fNotes.TfrmNotes.UpdateTreeView	00e1e6c8
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22316	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22324	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2233f	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22391	System.SysUtils.StrToIntDef	0042d238
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e223a4	rTIU.ListNotesForTree	00a0b640
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e223af	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e223d6	System.SysUtils.StrToIntDef	0042d238
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e223e9	uDocTree.CreateListItemsForDocumentTree	00a0f8dc
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22400	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2241b	fNotes.SearchDocListforString	00e21a04
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22432	fNotes.TfrmNotes.SetNoteTreeLabel	00e20ce4
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22443	VA508AccessibilityManager.TVA508StaticText.SetLabelCaption	009fffc4
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22462	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22479	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22492	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2249e	uDocTree.RemoveDuplicates	00a13394
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e224ae	System.Classes.TStringList.SetSorted	004d811c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e224c5	uDocTree.adjustOrder	00a13484
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e224df	fNotes.TfrmNotes.UpdateTreeView	00e1e6c8
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22504	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2251f	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22525	uDocTree.ShowMoreNode	00a13b8c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2253b	<indirect>	
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22563	uDocTree.RemoveParentsWithNoChildren	00a12328
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e225a1	ORCtrls.TORTreeView.FindPieceNode	007b5f64
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e225aa	Vcl.ComCtrls.TCustomTreeView.SetSelected	00672184
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e225c2	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e225f6	Vcl.ComCtrls.TTreeNodes.GetFirstNode	0066fb68
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22609	Vcl.ComCtrls.TTreeNode.Expand	0066e014
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22619	Vcl.ComCtrls.TCustomTreeView.SetSelected	00672184
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22620	Vcl.ComCtrls.TTreeNode.getNextSibling	0066e290
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22655	ORCtrls.TORTreeView.FindPieceNode	007b5f64
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22664	Vcl.ComCtrls.TTreeNode.Expand	0066e014
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22675	System.SysUtils.IntToStr	0042cfdc
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2268b	ORCtrls.TORTreeView.FindPieceNode	007b5f64
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e226a2	System.SysUtils.IntToStr	0042cfdc
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e226b8	ORCtrls.TORTreeView.FindPieceNode	007b5f64
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e226de	ORCtrls.TORTreeView.FindPieceNode	007b5f64
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e226eb	Vcl.ComCtrls.TTreeNode.getFirstChild	0066e3b0
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e226fe	Vcl.ComCtrls.TCustomTreeView.SetSelected	00672184
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22710	Vcl.ComCtrls.TCustomTreeView.SetSelected	00672184
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22729	Vcl.ComCtrls.TCustomListView.SetSelected	0068297c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2274d	System.@UStrPos	0040c4b0
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2276f	Vcl.ComCtrls.TListColumns.GetItem	0067b704
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2278d	Vcl.ComCtrls.TListColumn.SetWidth	0067b548
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e2279d	Vcl.ComCtrls.TListColumns.GetItem	0067b704
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e227a4	Vcl.ComCtrls.TListColumn.SetWidth	0067b548
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e227b6	Vcl.ComCtrls.TListColumns.GetItem	0067b704
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e227d0	Vcl.ComCtrls.TListColumn.SetWidth	0067b548
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e227e0	Vcl.ComCtrls.TListColumns.GetItem	0067b704
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e227e5	Vcl.ComCtrls.TListColumn.GetWidth	0067b46c
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e227f6	Vcl.ComCtrls.TListColumns.GetItem	0067b704
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e227fc	Vcl.ComCtrls.TListColumn.SetWidth	0067b548
+fNotes.TfrmNotes.LoadNotes	00e21f14	00e22823	Vcl.ComCtrls.TTreeNodes.EndUpdate	0066fd00
+fNotes.TfrmNotes.DoSelect	00e2307c	00e230a8	Vcl.Controls.TWinControl.HandleAllocated	0060cec0
+fNotes.TfrmNotes.DoSelect	00e2307c	00e230be	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e230d2	fNotes.TfrmNotes.UpdateActMenu	00e216c0
+fNotes.TfrmNotes.DoSelect	00e2307c	00e230f0	Vcl.Forms.TScreen.SetCursor	00729a50
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2310c	UResponsiveGUI.TResponsiveGUI.ProcessMessages	009a9728
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23122	Vcl.Controls.TWinControl.HandleAllocated	0060cec0
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2312d	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23136	System.@TryFinallyExit	0040a734
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23142	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2314f	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23165	fNotes.TfrmNotes.UpdateActMenu	00e216c0
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23173	Vcl.Controls.TWinControl.LockDrawing	00608594
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23181	Vcl.Controls.TWinControl.LockDrawing	00608594
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2318f	Vcl.Controls.TWinControl.LockDrawing	00608594
+fNotes.TfrmNotes.DoSelect	00e2307c	00e231a4	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e231a9	Vcl.ComCtrls.TTreeNode.GetChildren	0066e1a0
+fNotes.TfrmNotes.DoSelect	00e2307c	00e231b9	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.DoSelect	00e2307c	00e231c0	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e231c5	Vcl.ComCtrls.TTreeNode.GetChildren	0066e1a0
+fNotes.TfrmNotes.DoSelect	00e2307c	00e231d5	Vcl.Menus.TMenuItem.SetEnabled	00709128
+fNotes.TfrmNotes.DoSelect	00e2307c	00e231dc	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e231e7	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e231ee	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23202	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2320a	fNotes.lvNotesInitView	00e22cb8
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23214	fNotes.getMyNodeID	00e22bc8
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23220	System.@UStrLAsg	0040b40c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2323b	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23240	Vcl.ComCtrls.TTreeNode.getFirstChild	0066e3b0
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23259	uDocTree.TraverseTree	00a115b0
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2325f	fNotes.lvNotesUpdateView	00e22f70
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23274	Vcl.ComCtrls.TListItems.GetCount	0067ce80
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23285	Vcl.ComCtrls.TListItems.GetItem	0067ced0
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2328e	Vcl.ComCtrls.TCustomListView.SetSelected	0068297c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2329e	Vcl.ComCtrls.TCustomListView.GetSelected	00682964
+fNotes.TfrmNotes.DoSelect	00e2307c	00e232ab	fNotes.TfrmNotes.lvNotesSelectItem	00e202f8
+fNotes.TfrmNotes.DoSelect	00e2307c	00e232b6	Vcl.ComCtrls.TCustomListView.SetSelected	0068297c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e232c9	<indirect>	
+fNotes.TfrmNotes.DoSelect	00e2307c	00e232d8	ORCtrls.TORListBox.GetItemIEN	007adbdc
+fNotes.TfrmNotes.DoSelect	00e2307c	00e232ee	U_CPTEditMonitor.TCopyEditMonitor.SetItemIEN	00aa27b8
+fNotes.TfrmNotes.DoSelect	00e2307c	00e232f6	fNotes.TfrmNotes.ClearPCE	00e1529c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23300	fNotes.TfrmNotes.ShowPCEControls	00e15068
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23311	fNotes.TfrmNotes.SetReadVisible	00e0fe84
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23316	fReminderDialog.UpdateReminderFinish	00d8f7f8
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23320	fNotes.TfrmNotes.ShowPCEControls	00e15068
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2333b	uWriteAccess.WriteAccess	01011c80
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23344	fNotes.TfrmNotes.GetDrawers	00e0fe7c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23354	fNotes.TfrmNotes.GetDrawers	00e0fe7c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2335b	mDrawers.TfraDrawers.DisplayDrawers	00d9a560
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23365	fNotes.TfrmNotes.ShowPCEButtons	00e205dc
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2337f	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23389	System.SysUtils.StrToIntDef	0042d238
+fNotes.TfrmNotes.DoSelect	00e2307c	00e2339d	<indirect>	
+fNotes.TfrmNotes.DoSelect	00e2307c	00e233a8	fNotes.TfrmNotes.SetLvNotesVisible	00e238f8
+fNotes.TfrmNotes.DoSelect	00e2307c	00e233bd	VAUtils.Piece	0079acec
+fNotes.TfrmNotes.DoSelect	00e2307c	00e233ce	ORCtrls.TORListBox.SelectByID	007ae0d4
+fNotes.TfrmNotes.DoSelect	00e2307c	00e233d9	fNotes.TfrmNotes.lstNotesClick	00e19480
+fNotes.TfrmNotes.DoSelect	00e2307c	00e233f0	Vcl.Controls.TWinControl.GetHandle	0060ca58
+fNotes.TfrmNotes.DoSelect	00e2307c	00e233f6	Winapi.Windows.SendMessage	0041c028
+fNotes.TfrmNotes.DoSelect	00e2307c	00e233fd	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23408	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23415	Vcl.ComCtrls.TCustomTreeView.GetSelected	0067213c
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23439	Vcl.Dialogs.MessageDlgPosHelp	006aa580
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23454	Vcl.Controls.TWinControl.UnlockDrawing	006085cc
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23462	Vcl.Controls.TWinControl.UnlockDrawing	006085cc
+fNotes.TfrmNotes.DoSelect	00e2307c	00e23470	Vcl.Controls.TWinControl.UnlockDrawing	006085cc
+fNotes.TfrmNotes.DoSelect	00e2307c	00e234bb	System.@UStrArrayClr	0040b034
+fNotes.TfrmNotes.DoSelect	00e2307c	00e234c8	System.@UStrArrayClr	0040b034

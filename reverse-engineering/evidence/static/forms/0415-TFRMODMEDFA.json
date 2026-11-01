@@ -1,0 +1,145 @@
+{
+  "class": "TfrmODMedFA",
+  "name": "frmODMedFA",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 333,
+    "Top": 258,
+    "Caption": "Formulary Alternatives",
+    "ClientHeight": 178,
+    "ClientWidth": 308,
+    "FormStyle": "fsStayOnTop",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 316,
+    "ExplicitHeight": 205,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "Label1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 8,
+        "Top": 8,
+        "Width": 273,
+        "Height": 13,
+        "Caption": "The selected drug is not in the formulary.  Alternatives are:"
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "Label2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 8,
+        "Top": 127,
+        "Width": 250,
+        "Height": 17,
+        "Caption": "Do you wish to use the selected alternative instead?",
+        "TabOrder": 3
+      },
+      "children": []
+    },
+    {
+      "class": "TORListBox",
+      "name": "lstFormAlt",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 8,
+        "Top": 22,
+        "Width": 292,
+        "Height": 97,
+        "ItemHeight": 13,
+        "ParentShowHint": false,
+        "ShowHint": true,
+        "TabOrder": 0,
+        "OnClick": "lstFormAltClick",
+        "Caption": "The selected drug is not in the formulary.  Alternatives are:",
+        "ItemTipColor": "clWindow",
+        "LongList": false,
+        "Pieces": "2"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdYes",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 74,
+        "Top": 148,
+        "Width": 72,
+        "Height": 21,
+        "Caption": "Yes",
+        "Default": true,
+        "Enabled": false,
+        "TabOrder": 1,
+        "OnClick": "cmdYesClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdNo",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 162,
+        "Top": 148,
+        "Width": 72,
+        "Height": 21,
+        "Cancel": true,
+        "Caption": "No",
+        "TabOrder": 2,
+        "OnClick": "cmdNoClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = Label2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstFormAlt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdYes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdNo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODMedFA",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "class": "TfrmPKIPINPrompt",
+  "name": "frmPKIPINPrompt",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 192,
+    "Top": 114,
+    "BorderStyle": "bsDialog",
+    "Caption": "PIV card PIN entry",
+    "ClientHeight": 153,
+    "ClientWidth": 356,
+    "Color": "clBtnFace",
+    "DefaultMonitor": "dmMainForm",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "MS Sans Serif",
+    "Font.Style": [],
+    "FormStyle": "fsStayOnTop",
+    "OldCreateOrder": false,
+    "Position": "poOwnerFormCenter",
+    "OnCreate": "FormCreate",
+    "OnShow": "FormShow",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "Panel3",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 55,
+        "Width": 356,
+        "Height": 4,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "Color": 4227327,
+        "ParentBackground": false,
+        "TabOrder": 2
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 59,
+        "Width": 356,
+        "Height": 94,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0,
+        "DesignSize": [
+          356,
+          94
+        ]
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblInstructions",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 8,
+            "Width": 126,
+            "Height": 13,
+            "Caption": "Please enter your PIV PIN."
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblPIN",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 33,
+            "Width": 18,
+            "Height": 13,
+            "Margins.Left": 2,
+            "Margins.Top": 2,
+            "Margins.Right": 2,
+            "Margins.Bottom": 2,
+            "Caption": "PIN"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 220,
+            "Top": 67,
+            "Width": 61,
+            "Height": 20,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "Caption": "&OK",
+            "Default": true,
+            "ModalResult": 1,
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 288,
+            "Top": 67,
+            "Width": 61,
+            "Height": 20,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "Caption": "&Cancel",
+            "ModalResult": 2,
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TEdit",
+          "name": "edtPINValue",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 85,
+            "Top": 30,
+            "Width": 195,
+            "Height": 24,
+            "PasswordChar": "*",
+            "TabOrder": 2
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel2",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 356,
+        "Height": 55,
+        "Align": "alClient",
+        "BevelEdges": [],
+        "BevelOuter": "bvNone",
+        "Color": "clGray",
+        "DoubleBuffered": true,
+        "ParentBackground": false,
+        "ParentDoubleBuffered": false,
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "Label2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 28,
+            "Width": 116,
+            "Height": 16,
+            "Margins.Left": 2,
+            "Margins.Top": 2,
+            "Margins.Right": 2,
+            "Margins.Bottom": 2,
+            "Caption": "PIV Card Access",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWhite",
+            "Font.Height": -13,
+            "Font.Name": "Lucida Sans Unicode",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "Label1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 11,
+            "Width": 167,
+            "Height": 15,
+            "Margins.Left": 2,
+            "Margins.Top": 2,
+            "Margins.Right": 2,
+            "Margins.Bottom": 2,
+            "Caption": "Department of Veterans Affairs",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWhite",
+            "Font.Height": -11,
+            "Font.Name": "Lucida Sans Unicode",
+            "Font.Style": [],
+            "ParentFont": false
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

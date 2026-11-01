@@ -1,0 +1,388 @@
+{
+  "class": "TfrmOptionsReportsDefault",
+  "name": "frmOptionsReportsDefault",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 773,
+    "Top": 334,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Default Settings For Available CPRS Reports",
+    "ClientHeight": 178,
+    "ClientWidth": 314,
+    "OnCreate": "FormCreate",
+    "ExplicitHeight": 206,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TBevel",
+      "name": "Bevel2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 135,
+        "Width": 308,
+        "Height": 2,
+        "Align": "alBottom",
+        "ExplicitTop": 173,
+        "ExplicitWidth": 384
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 137,
+        "Width": 308,
+        "Height": 32,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 4
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 198,
+            "Top": 3,
+            "Width": 50,
+            "Height": 26,
+            "Hint": "Click to save the new setting.",
+            "Align": "alRight",
+            "Caption": "OK",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 1,
+            "OnClick": "btnOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnReset",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 94,
+            "Height": 26,
+            "Hint": "Click to keep original setting",
+            "Align": "alLeft",
+            "Caption": "Use Defaults",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 0,
+            "OnClick": "btnResetClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 254,
+            "Top": 3,
+            "Width": 57,
+            "Height": 26,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 2,
+            "OnClick": "btnCancelClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 107,
+        "Width": 308,
+        "Height": 30,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 3
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "Label2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 107,
+            "Height": 16,
+            "Align": "alLeft",
+            "Caption": "Max Occurrences:"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "edtDefaultMax",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 116,
+            "Top": 3,
+            "Width": 195,
+            "Height": 24,
+            "Align": "alClient",
+            "TabOrder": 0,
+            "OnExit": "edtDefaultMaxExit",
+            "OnKeyPress": "odcDfStartKeyPress",
+            "Caption": "Max Occurrences",
+            "ExplicitLeft": 37
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TMemo",
+      "name": "lblDefaultText",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 302,
+        "Height": 41,
+        "TabStop": false,
+        "Align": "alTop",
+        "Alignment": "taCenter",
+        "BorderStyle": "bsNone",
+        "Color": "clBtnFace",
+        "Lines.Strings": [
+          "Click dots in boxes to set start and end dates. ",
+          "You can also input values directly."
+        ],
+        "ReadOnly": true,
+        "TabOrder": 2
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel3",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 0,
+        "Top": 77,
+        "Width": 308,
+        "Height": 30,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "Label4",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 63,
+            "Height": 16,
+            "Align": "alLeft",
+            "Caption": "Stop Date:"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "odcDfStop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 72,
+            "Top": 3,
+            "Width": 239,
+            "Height": 24,
+            "Align": "alClient",
+            "TabOrder": 0,
+            "OnEnter": "odcDfStartEnter",
+            "OnExit": "odcDfStopExit",
+            "OnKeyPress": "odcDfStartKeyPress",
+            "DateOnly": true,
+            "RequireTime": false,
+            "Caption": ""
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel4",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 0,
+        "Top": 47,
+        "Width": 308,
+        "Height": 30,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "Label3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 62,
+            "Height": 16,
+            "Align": "alLeft",
+            "Caption": "Start Date:"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "odcDfStart",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 71,
+            "Top": 3,
+            "Width": 240,
+            "Height": 24,
+            "Align": "alClient",
+            "TabOrder": 0,
+            "OnEnter": "odcDfStartEnter",
+            "OnExit": "odcDfStartExit",
+            "OnKeyPress": "odcDfStartKeyPress",
+            "DateOnly": true,
+            "RequireTime": false,
+            "Caption": ""
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 8,
+        "Data": [
+          [
+            "Component = lblDefaultText",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtDefaultMax",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnReset",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = odcDfStart",
+            "Text = Start Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = odcDfStop",
+            "Text = Stop Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = frmOptionsReportsDefault",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel4",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

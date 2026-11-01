@@ -1,0 +1,90 @@
+{
+  "class": "TfrmHSplit",
+  "name": "frmHSplit",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 344,
+    "Top": 228,
+    "Caption": "Basic Splitter Page",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TSplitter",
+      "name": "sptHorz",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 97,
+        "Top": 0,
+        "Width": 4,
+        "Height": 356
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlLeft",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 97,
+        "Height": 356,
+        "Align": "alLeft",
+        "BevelOuter": "bvNone",
+        "Constraints.MinWidth": 30,
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlRight",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 101,
+        "Top": 0,
+        "Width": 539,
+        "Height": 356,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "Constraints.MinWidth": 24,
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlLeft",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlRight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmHSplit",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

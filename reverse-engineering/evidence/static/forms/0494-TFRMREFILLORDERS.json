@@ -1,0 +1,235 @@
+{
+  "class": "TfrmRefillOrders",
+  "name": "frmRefillOrders",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 181,
+    "Top": 267,
+    "Caption": "Refill Orders",
+    "ClientHeight": 289,
+    "Position": "poDesigned",
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 443,
+    "ExplicitHeight": 327,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 221,
+        "Width": 427,
+        "Height": 68,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0,
+        "ExplicitTop": 205
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 234,
+            "Top": 40,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "OK",
+            "Default": true,
+            "TabOrder": 0,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 314,
+            "Top": 40,
+            "Width": 72,
+            "Height": 21,
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 1,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TGroupBox",
+          "name": "grbPickUp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 42,
+            "Top": 5,
+            "Width": 136,
+            "Height": 60,
+            "Caption": " Pick Up ",
+            "TabOrder": 2
+          },
+          "children": [
+            {
+              "class": "TRadioButton",
+              "name": "radWindow",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 12,
+                "Top": 17,
+                "Width": 113,
+                "Height": 17,
+                "Caption": "at &Window",
+                "Checked": true,
+                "TabOrder": 0,
+                "TabStop": true
+              },
+              "children": []
+            },
+            {
+              "class": "TRadioButton",
+              "name": "radMail",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 12,
+                "Top": 36,
+                "Width": 113,
+                "Height": 17,
+                "Caption": "by &Mail",
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlClient",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 427,
+        "Height": 221,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "ExplicitHeight": 200
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblOrders",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 427,
+            "Height": 13,
+            "Align": "alTop",
+            "Caption": "Request refills for the following orders -",
+            "ExplicitWidth": 181
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionListBox",
+          "name": "lstOrders",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 13,
+            "Width": 427,
+            "Height": 208,
+            "Style": "lbOwnerDrawVariable",
+            "Align": "alClient",
+            "ItemHeight": 13,
+            "TabOrder": 0,
+            "OnDrawItem": "lstOrdersDrawItem",
+            "OnMeasureItem": "lstOrdersMeasureItem",
+            "Caption": "Request refills for the following orders ",
+            "ExplicitHeight": 187
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grbPickUp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radWindow",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radMail",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlClient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstOrders",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmRefillOrders",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

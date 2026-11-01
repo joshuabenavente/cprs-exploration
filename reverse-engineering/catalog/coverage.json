@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "target_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+  "inventory_source": "evidence/inventory-reviewed",
+  "internal_functions": 41948,
+  "external_functions": 1423,
+  "total_functions": 43371,
+  "statuses": {
+    "analyzed": 2245,
+    "unresolved": 40943,
+    "partially_analyzed": 183
+  },
+  "all_inventory_entries_classified": true,
+  "full_behavioral_recovery_complete": false,
+  "discovery_complete_for_executable": false,
+  "analysis_timeout": false,
+  "automatic_analysis_enabled": true,
+  "final_snapshot_analysis_enabled": false,
+  "static_call_sites": 243857,
+  "unresolved_indirect_call_sites": 38574,
+  "verified_import_thunks": 1518,
+  "verified_small_function_semantics": 727,
+  "literal_use_sites": 27151,
+  "rpc_literal_use_sites": 1097,
+  "verified_archived_direct_call_sites": 3355,
+  "historical_entries_absent_from_current_function_inventory": 0,
+  "subsystems": {
+    "compiler-runtime-and-libraries": {
+      "functions": 23858,
+      "status": {
+        "analyzed": 1977,
+        "unresolved": 21881
+      }
+    },
+    "other-application-modules": {
+      "functions": 9924,
+      "status": {
+        "unresolved": 9756,
+        "analyzed": 159,
+        "partially_analyzed": 9
+      }
+    },
+    "shared-controls-and-accessibility": {
+      "functions": 1241,
+      "status": {
+        "unresolved": 1228,
+        "analyzed": 13
+      }
+    },
+    "transport-authentication-and-integration": {
+      "functions": 737,
+      "status": {
+        "unresolved": 657,
+        "partially_analyzed": 20,
+        "analyzed": 60
+      }
+    },
+    "documentation-encounters-and-reminders": {
+      "functions": 1434,
+      "status": {
+        "unresolved": 1399,
+        "partially_analyzed": 27,
+        "analyzed": 8
+      }
+    },
+    "orders-medications-and-consults": {
+      "functions": 3078,
+      "status": {
+        "unresolved": 3037,
+        "partially_analyzed": 33,
+        "analyzed": 8
+      }
+    },
+    "results-reports-and-graphs": {
+      "functions": 849,
+      "status": {
+        "unresolved": 834,
+        "partially_analyzed": 12,
+        "analyzed": 3
+      }
+    },
+    "cover-sheet-and-vitals": {
+      "functions": 297,
+      "status": {
+        "unresolved": 232,
+        "partially_analyzed": 50,
+        "analyzed": 15
+      }
+    },
+    "patient-context-and-shell": {
+      "functions": 530,
+      "status": {
+        "unresolved": 496,
+        "partially_analyzed": 32,
+        "analyzed": 2
+      }
+    },
+    "external-libraries": {
+      "functions": 1423,
+      "status": {
+        "unresolved": 1423
+      }
+    }
+  },
+  "limits": [
+    "Classification is not behavioral recovery",
+    "Automatic discovery may include false functions and miss code",
+    "A direct call/reference is a static edge, not proof of runtime reachability",
+    "MAP labels include data, RTTI and literals; only function manager entries counted as functions"
+  ]
+}

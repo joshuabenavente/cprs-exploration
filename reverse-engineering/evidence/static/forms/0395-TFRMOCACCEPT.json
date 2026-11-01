@@ -1,0 +1,325 @@
+{
+  "class": "TfrmOCAccept",
+  "name": "frmOCAccept",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 249,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "Order Checking",
+    "ClientHeight": 300,
+    "ClientWidth": 598,
+    "Constraints.MinHeight": 200,
+    "Constraints.MinWidth": 604,
+    "FormStyle": "fsStayOnTop",
+    "KeyPreview": false,
+    "OldCreateOrder": false,
+    "Position": "poScreenCenter",
+    "Scaled": false,
+    "ExplicitWidth": 604,
+    "ExplicitHeight": 329,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TRichEdit",
+      "name": "memChecks",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 592,
+        "Height": 160,
+        "Align": "alClient",
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -12,
+        "Font.Name": "Courier New",
+        "Font.Style": [],
+        "ParentFont": false,
+        "ReadOnly": true,
+        "ScrollBars": "ssVertical",
+        "TabOrder": 0,
+        "WantReturns": false,
+        "Zoom": 100,
+        "ExplicitWidth": 655
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 267,
+        "Width": 598,
+        "Height": 33,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 2,
+        "ExplicitWidth": 661,
+        "DesignSize": [
+          598,
+          33
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdAccept",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 395,
+            "Top": 6,
+            "Width": 96,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight",
+              "akBottom"
+            ],
+            "Caption": "Accept Order",
+            "Default": true,
+            "ModalResult": 6,
+            "TabOrder": 1,
+            "OnClick": "cmdAcceptClick",
+            "ExplicitLeft": 458
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 497,
+            "Top": 6,
+            "Width": 97,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight",
+              "akBottom"
+            ],
+            "Cancel": true,
+            "Caption": "Cancel Order",
+            "ModalResult": 7,
+            "TabOrder": 2,
+            "OnClick": "cmdCancelClick",
+            "ExplicitLeft": 560
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnDrugMono",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 196,
+            "Top": 6,
+            "Width": 193,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight",
+              "akBottom"
+            ],
+            "Caption": "Drug Interaction Monograph",
+            "Enabled": false,
+            "TabOrder": 3,
+            "OnClick": "btnDrugMonoClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "AllergyAssessmentBtn",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 4,
+            "Top": 6,
+            "Width": 185,
+            "Height": 21,
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akBottom"
+            ],
+            "Caption": "Perform Allergy Assessment",
+            "Default": true,
+            "TabOrder": 0,
+            "OnClick": "AllergyAssessmentBtnClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlOverrideReason",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 166,
+        "Width": 598,
+        "Height": 101,
+        "Align": "alBottom",
+        "TabOrder": 1,
+        "Visible": false,
+        "ExplicitWidth": 661
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblOverride",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 4,
+            "Width": 590,
+            "Height": 13,
+            "Align": "alTop",
+            "Caption": "Reason for overriding order checks:",
+            "ExplicitWidth": 169
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblComment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 50,
+            "Width": 590,
+            "Height": 13,
+            "Align": "alTop",
+            "Caption": "Local Comment on Remote-Facility Allergy:",
+            "Visible": false,
+            "ExplicitWidth": 200
+          },
+          "children": []
+        },
+        {
+          "class": "TComboBox",
+          "name": "cbAllergyReason",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 23,
+            "Width": 590,
+            "Height": 21,
+            "Align": "alTop",
+            "TabOrder": 0,
+            "OnChange": "cbAllergyReasonChange",
+            "ExplicitWidth": 653
+          },
+          "children": []
+        },
+        {
+          "class": "TComboBox",
+          "name": "cbComment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 69,
+            "Width": 590,
+            "Height": 21,
+            "Align": "alTop",
+            "TabOrder": 1,
+            "Visible": false,
+            "OnChange": "cbAllergyReasonChange",
+            "ExplicitLeft": 3,
+            "ExplicitWidth": 593
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = memChecks",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOCAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDrugMono",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = AllergyAssessmentBtn",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlOverrideReason",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbAllergyReason",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbComment",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

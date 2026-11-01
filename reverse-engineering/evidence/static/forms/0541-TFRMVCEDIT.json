@@ -1,0 +1,270 @@
+{
+  "class": "TfrmVCEdit",
+  "name": "frmVCEdit",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 197,
+    "Top": 197,
+    "Anchors": [
+      "akTop"
+    ],
+    "Caption": "Change VistA Verify Code",
+    "ClientHeight": 126,
+    "ClientWidth": 406,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "MS Sans Serif",
+    "Font.Style": [],
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblOldVC",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 12,
+        "Width": 110,
+        "Height": 16,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "&Old verify code:",
+        "FocusControl": "edtOldVC",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -13,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentFont": false
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblNewVC",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 7,
+        "Top": 48,
+        "Width": 116,
+        "Height": 16,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "&New verify code:",
+        "FocusControl": "edtNewVC",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -13,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentFont": false
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblConfirmVC",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 84,
+        "Width": 169,
+        "Height": 16,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "Con&firm new verify code:",
+        "FocusControl": "edtConfirmVC",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -13,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentFont": false
+      },
+      "children": []
+    },
+    {
+      "class": "TEdit",
+      "name": "edtOldVC",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 184,
+        "Top": 12,
+        "Width": 110,
+        "Height": 24,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Ctl3D": true,
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -13,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentCtl3D": false,
+        "ParentFont": false,
+        "PasswordChar": "*",
+        "TabOrder": 0,
+        "OnChange": "edtOldVCChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TEdit",
+      "name": "edtNewVC",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 184,
+        "Top": 48,
+        "Width": 110,
+        "Height": 24,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -13,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentFont": false,
+        "PasswordChar": "*",
+        "TabOrder": 1,
+        "OnChange": "edtOldVCChange",
+        "OnExit": "edtNewVCExit"
+      },
+      "children": []
+    },
+    {
+      "class": "TEdit",
+      "name": "edtConfirmVC",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 184,
+        "Top": 83,
+        "Width": 110,
+        "Height": 24,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -13,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentFont": false,
+        "PasswordChar": "*",
+        "TabOrder": 2,
+        "OnChange": "edtOldVCChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "btnOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 298,
+        "Top": 7,
+        "Width": 85,
+        "Height": 26,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "&OK",
+        "Glyph.Data": {
+          "binary_bytes": 1730
+        },
+        "NumGlyphs": 2,
+        "TabOrder": 3,
+        "OnClick": "btnOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "btnCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 298,
+        "Top": 48,
+        "Width": 85,
+        "Height": 26,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "&Cancel",
+        "Kind": "bkCancel",
+        "NumGlyphs": 2,
+        "TabOrder": 4,
+        "OnClick": "btnCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "btnHelp",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 298,
+        "Top": 84,
+        "Width": 85,
+        "Height": 26,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Kind": "bkHelp",
+        "NumGlyphs": 2,
+        "TabOrder": 5,
+        "OnClick": "btnHelpClick"
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+{
+  "class": "TAppExcept",
+  "name": "AppExcept",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "AutoSize": true,
+    "BorderIcons": [],
+    "BorderStyle": "bsDialog",
+    "Caption": "Error Dialog",
+    "ClientHeight": 506,
+    "ClientWidth": 470,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Tahoma",
+    "Font.Style": [],
+    "Position": "poMainFormCenter",
+    "OnCreate": "FormCreate",
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 10,
+        "Top": 468,
+        "Width": 450,
+        "Height": 38,
+        "Margins.Left": 10,
+        "Margins.Top": 10,
+        "Margins.Right": 10,
+        "Margins.Bottom": 0,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "TabOrder": 5
+      },
+      "children": [
+        {
+          "class": "TGridPanel",
+          "name": "pnlBtns",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 450,
+            "Height": 38,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "ColumnCollection": [
+              {
+                "index": null,
+                "properties": {}
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "0eb3e6ac19dc118c0440"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "94be1def800d05f40340"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "eb788adb259deb890440"
+                  }
+                }
+              }
+            ],
+            "ControlCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Column": 0,
+                  "Control": "btnLogFile",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 1,
+                  "Control": "btnClose",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 2,
+                  "Control": "btnLogEMail",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 3,
+                  "Control": "btnCustom",
+                  "Row": 0
+                }
+              }
+            ],
+            "RowCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "00000000000000c80540"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "SizeStyle": "ssAuto"
+                }
+              }
+            ],
+            "TabOrder": 0,
+            "DesignSize": [
+              450,
+              38
+            ]
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnLogFile",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 6,
+                "Width": 0,
+                "Height": 25,
+                "Anchors": [],
+                "Caption": "Log to file",
+                "Enabled": false,
+                "ImageIndex": 1,
+                "Images": "ImageList1",
+                "ModalResult": 6,
+                "TabOrder": 0,
+                "Visible": false
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnClose",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 41,
+                "Top": 6,
+                "Width": 75,
+                "Height": 25,
+                "Anchors": [],
+                "Caption": "Close",
+                "ImageIndex": 3,
+                "Images": "ImageList1",
+                "ModalResult": 8,
+                "TabOrder": 1
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnLogEMail",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 182,
+                "Top": 6,
+                "Width": 89,
+                "Height": 25,
+                "Anchors": [],
+                "Caption": "Log to email",
+                "ImageIndex": 0,
+                "Images": "ImageList1",
+                "ModalResult": 7,
+                "TabOrder": 2,
+                "OnClick": "btnLogEMailClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnCustom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 335,
+                "Top": 6,
+                "Width": 75,
+                "Height": 25,
+                "Anchors": [],
+                "Caption": "Custom",
+                "ImageIndex": 4,
+                "Images": "ImageList1",
+                "TabOrder": 3
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 470,
+        "Height": 73,
+        "Align": "alTop",
+        "AutoSize": true,
+        "BorderWidth": 10,
+        "BorderStyle": "bsSingle",
+        "Color": "clWhite",
+        "ParentBackground": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TImage",
+          "name": "imgAV",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 414,
+            "Top": 11,
+            "Width": 41,
+            "Height": 47,
+            "Align": "alRight",
+            "Picture.Data": {
+              "binary_bytes": 904
+            },
+            "ExplicitLeft": 404,
+            "ExplicitTop": 9,
+            "ExplicitHeight": 32
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblAVHeading",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 11,
+            "Top": 11,
+            "Width": 403,
+            "Height": 47,
+            "Align": "alClient",
+            "Caption": "The application has encountered a problem. We are sorry for the inconvenience.",
+            "Color": "clWindow",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -19,
+            "Font.Name": "Tahoma",
+            "Font.Style": [],
+            "ParentColor": false,
+            "ParentFont": false,
+            "WordWrap": true,
+            "ExplicitWidth": 378,
+            "ExplicitHeight": 46
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlDetails",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 10,
+        "Top": 247,
+        "Width": 450,
+        "Height": 211,
+        "Margins.Left": 10,
+        "Margins.Top": 5,
+        "Margins.Right": 10,
+        "Margins.Bottom": 0,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "TabOrder": 4,
+        "Visible": false
+      },
+      "children": [
+        {
+          "class": "TMemo",
+          "name": "LogDetails",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 450,
+            "Height": 211,
+            "Margins.Bottom": 0,
+            "Align": "alClient",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "Courier New",
+            "Font.Style": [],
+            "ParentFont": false,
+            "ReadOnly": true,
+            "ScrollBars": "ssBoth",
+            "TabOrder": 0,
+            "OnChange": "LogDetailsChange"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "PnlDetailsMsg",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 10,
+        "Top": 227,
+        "Width": 450,
+        "Height": 15,
+        "Margins.Left": 10,
+        "Margins.Top": 10,
+        "Margins.Right": 10,
+        "Margins.Bottom": 0,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "TabOrder": 3,
+        "TabStop": true,
+        "OnClick": "lblDeatailTxt1Click"
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblDeatailTxt1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 46,
+            "Height": 15,
+            "Cursor": "crHandPoint",
+            "Align": "alLeft",
+            "Caption": "Click here",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clBlue",
+            "Font.Height": -11,
+            "Font.Name": "Tahoma",
+            "Font.Style": [],
+            "ParentFont": false,
+            "OnClick": "lblDeatailTxt1Click",
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblDeatailTxt2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 46,
+            "Top": 0,
+            "Width": 404,
+            "Height": 15,
+            "Align": "alClient",
+            "Caption": " to see what data the error log contains",
+            "ExplicitWidth": 191,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508StaticText",
+      "name": "lblAVText",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Name": "lblAVText",
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 76,
+        "Width": 464,
+        "Height": 25,
+        "Align": "alTop",
+        "Alignment": "taLeftJustify",
+        "AutoSize": true,
+        "Caption": "Access violation at address 006FDBRK in module 'MyApp.exe'. Read of address 0000569",
+        "Padding.Left": 10,
+        "Padding.Top": 10,
+        "Padding.Right": 10,
+        "TabOrder": 1,
+        "ShowAccelChar": true,
+        "WordWrap": true,
+        "LabelAlignment": "taLeftJustify",
+        "LabelLayout": "tlTop"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlFeedback",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 10,
+        "Top": 109,
+        "Width": 450,
+        "Height": 108,
+        "Margins.Left": 10,
+        "Margins.Top": 5,
+        "Margins.Right": 10,
+        "Margins.Bottom": 0,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblFeedback",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 450,
+            "Height": 26,
+            "Align": "alTop",
+            "Caption": "Please provide any feedback that you think will be helpful to support staff. Please do not include any PII in this description.",
+            "WordWrap": true,
+            "ExplicitWidth": 429
+          },
+          "children": []
+        },
+        {
+          "class": "TMemo",
+          "name": "memFeedback",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 0,
+            "Top": 29,
+            "Width": 450,
+            "Height": 79,
+            "Margins.Left": 0,
+            "Margins.Right": 0,
+            "Margins.Bottom": 0,
+            "Align": "alClient",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "Courier New",
+            "Font.Style": [],
+            "ParentFont": false,
+            "ScrollBars": "ssBoth",
+            "TabOrder": 0,
+            "ExplicitTop": 16,
+            "ExplicitHeight": 92
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TImageList",
+      "name": "ImageList1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "ColorDepth": "cd32Bit",
+        "Left": 8,
+        "Bitmap": {
+          "binary_bytes": 8614
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "VA508Man",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 40,
+        "Data": [
+          [
+            "Component = AppExcept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBtns",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnLogFile",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnLogEMail",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCustom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDetails",
+            "Text = Press the space bar to hear what this log will contain",
+            "Status = stsOK"
+          ],
+          [
+            "Component = LogDetails",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = PnlDetailsMsg",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblAVText",
+            "Label = lblAVHeading",
+            "Status = stsOK"
+          ],
+          [
+            "Component = pnlFeedback",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memFeedback",
+            "Label = lblFeedback",
+            "Status = stsOK"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

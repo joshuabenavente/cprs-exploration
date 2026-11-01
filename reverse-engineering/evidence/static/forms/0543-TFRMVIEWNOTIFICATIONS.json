@@ -1,0 +1,477 @@
+{
+  "class": "TfrmViewNotifications",
+  "name": "frmViewNotifications",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Caption": "All Current Notifications for Patient",
+    "ClientHeight": 362,
+    "ClientWidth": 722,
+    "Constraints.MinHeight": 150,
+    "Constraints.MinWidth": 734,
+    "OnResize": "FormResize",
+    "ExplicitWidth": 734,
+    "ExplicitHeight": 400,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TCaptionListView",
+      "name": "clvNotifications",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 716,
+        "Height": 325,
+        "Align": "alClient",
+        "Columns": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "My To Do"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Info"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Location",
+              "Width": 64
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Urgency",
+              "Width": 64
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Alert Date/Time",
+              "Width": 96
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Message"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Ordering Provider"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Forwarded By/When"
+            }
+          }
+        ],
+        "MultiSelect": true,
+        "ReadOnly": true,
+        "RowSelect": true,
+        "TabOrder": 0,
+        "ViewStyle": "vsReport",
+        "OnColumnClick": "clvNotificationsColumnClick",
+        "OnDblClick": "acProcessExecute",
+        "AutoSize": false,
+        "Caption": "clvNotifications",
+        "ExplicitWidth": 712,
+        "ExplicitHeight": 324
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 331,
+        "Width": 722,
+        "Height": 31,
+        "Align": "alBottom",
+        "AutoSize": true,
+        "BevelEdges": [],
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "ExplicitTop": 330,
+        "ExplicitWidth": 718
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlBottomRight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 401,
+            "Top": 0,
+            "Width": 321,
+            "Height": 31,
+            "Align": "alRight",
+            "AutoSize": true,
+            "BevelEdges": [],
+            "BevelOuter": "bvNone",
+            "TabOrder": 1,
+            "ExplicitLeft": 397
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnClose",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 245,
+                "Top": 3,
+                "Width": 73,
+                "Height": 25,
+                "Action": "acClose",
+                "Align": "alRight",
+                "TabOrder": 3
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnDefer",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 165,
+                "Top": 3,
+                "Width": 74,
+                "Height": 25,
+                "Action": "acDefer",
+                "Align": "alRight",
+                "TabOrder": 2
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnProcess",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 84,
+                "Top": 3,
+                "Width": 75,
+                "Height": 25,
+                "Action": "acProcess",
+                "Align": "alRight",
+                "TabOrder": 1
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnDetails",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 75,
+                "Height": 25,
+                "Action": "acDetails",
+                "Align": "alRight",
+                "TabOrder": 0
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlBottomLeft",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 401,
+            "Height": 31,
+            "Align": "alLeft",
+            "BevelEdges": [],
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblFrom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 3,
+                "Top": 9,
+                "Width": 26,
+                "Height": 13,
+                "Alignment": "taRightJustify",
+                "Caption": "From:"
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblTo",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 162,
+                "Top": 9,
+                "Width": 16,
+                "Height": 13,
+                "Alignment": "taRightJustify",
+                "Caption": "To:"
+              },
+              "children": []
+            },
+            {
+              "class": "TORDateBox",
+              "name": "ordbFrom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 32,
+                "Top": 6,
+                "Width": 121,
+                "Height": 21,
+                "TabOrder": 0,
+                "Text": "ordbFrom",
+                "OnChange": "ordbFromChange",
+                "DateOnly": true,
+                "RequireTime": false,
+                "Caption": ""
+              },
+              "children": []
+            },
+            {
+              "class": "TORDateBox",
+              "name": "ordbTo",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 181,
+                "Top": 6,
+                "Width": 121,
+                "Height": 21,
+                "TabOrder": 2,
+                "Text": "ordbTo",
+                "OnChange": "ordbToChange",
+                "DateOnly": true,
+                "RequireTime": false,
+                "Caption": ""
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnUpdate",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 320,
+                "Top": 3,
+                "Width": 78,
+                "Height": 25,
+                "Align": "alRight",
+                "Caption": "&Update List",
+                "TabOrder": 4,
+                "OnClick": "btnUpdateClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 16,
+        "Top": 16,
+        "Data": [
+          [
+            "Component = clvNotifications",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmViewNotifications",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottomRight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDefer",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnProcess",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDetails",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottomLeft",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ordbFrom",
+            "Label = lblFrom",
+            "Status = stsOK"
+          ],
+          [
+            "Component = ordbTo",
+            "Label = lblTo",
+            "Status = stsOK"
+          ],
+          [
+            "Component = btnUpdate",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TActionList",
+      "name": "acList",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnUpdate": "acListUpdate",
+        "Left": 80,
+        "Top": 16
+      },
+      "children": [
+        {
+          "class": "TAction",
+          "name": "acProcess",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Process",
+            "OnExecute": "acProcessExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acDefer",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Defer",
+            "OnExecute": "acDeferExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Close",
+            "OnExecute": "acCloseExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acClearList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "acClearList",
+            "OnExecute": "acClearListExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acSortByColumn",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "acSortByColumn",
+            "OnExecute": "acSortByColumnExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acDetails",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Det&ails",
+            "OnExecute": "acDetailsExecute"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

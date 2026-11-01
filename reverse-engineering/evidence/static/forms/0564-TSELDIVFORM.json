@@ -1,0 +1,212 @@
+{
+  "class": "TSelDivForm",
+  "name": "SelDivForm",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 368,
+    "Top": 193,
+    "Anchors": [
+      "akTop"
+    ],
+    "Caption": "Select Division",
+    "ClientHeight": 173,
+    "ClientWidth": 360,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -8,
+    "Font.Name": "MS Sans Serif",
+    "Font.Style": [
+      "fsBold"
+    ],
+    "OnCreate": "FormCreate",
+    "DesignSize": [
+      360,
+      173
+    ],
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "DivLabel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 4,
+        "Width": 268,
+        "Height": 16,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "Must Select Division To Continue Signon!",
+        "Color": "clBtnFace",
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -6,
+        "Font.Name": "System",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentColor": false,
+        "ParentFont": false
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "btnOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 7,
+        "Top": 136,
+        "Width": 80,
+        "Height": 30,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "&OK",
+        "Default": true,
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -6,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "Glyph.Data": {
+          "binary_bytes": 1730
+        },
+        "NumGlyphs": 2,
+        "ParentFont": false,
+        "TabOrder": 1,
+        "OnClick": "btnOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "btnCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 139,
+        "Top": 136,
+        "Width": 80,
+        "Height": 30,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Anchors": [
+          "akRight"
+        ],
+        "Caption": "&Cancel",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -6,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "Kind": "bkCancel",
+        "NumGlyphs": 2,
+        "ParentFont": false,
+        "TabOrder": 2,
+        "OnClick": "btnCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "btnHelp",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 273,
+        "Top": 136,
+        "Width": 80,
+        "Height": 30,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Anchors": [
+          "akRight"
+        ],
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -6,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "Kind": "bkHelp",
+        "NumGlyphs": 2,
+        "ParentFont": false,
+        "TabOrder": 3,
+        "OnClick": "btnHelpClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TListBox",
+      "name": "DivListBox",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 7,
+        "Top": 24,
+        "Width": 346,
+        "Height": 105,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Anchors": [
+          "akTop",
+          "akRight"
+        ],
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -6,
+        "Font.Name": "System",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentFont": false,
+        "TabOrder": 0,
+        "OnDblClick": "btnOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TListBox",
+      "name": "ListBox1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 196,
+        "Top": 89,
+        "Width": 156,
+        "Height": 40,
+        "ItemHeight": 13,
+        "TabOrder": 4,
+        "Visible": false
+      },
+      "children": []
+    }
+  ]
+}

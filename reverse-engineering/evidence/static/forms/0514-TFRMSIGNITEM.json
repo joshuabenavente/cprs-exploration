@@ -1,0 +1,145 @@
+{
+  "class": "TfrmSignItem",
+  "name": "frmSignItem",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 320,
+    "Top": 440,
+    "BorderIcons": [],
+    "BorderStyle": "bsDialog",
+    "Caption": "Electronic Signature",
+    "ClientHeight": 124,
+    "ClientWidth": 405,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 411,
+    "ExplicitHeight": 153,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblESCode",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 8,
+        "Top": 81,
+        "Width": 73,
+        "Height": 13,
+        "Caption": "Signature Code"
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "lblText",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 8,
+        "Top": 8,
+        "Width": 389,
+        "Height": 65,
+        "BorderStyle": "bsNone",
+        "Color": "clBtnFace",
+        "Lines.Strings": [
+          "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        ],
+        "ReadOnly": true,
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionEdit",
+      "name": "txtESCode",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 8,
+        "Top": 95,
+        "Width": 141,
+        "Height": 21,
+        "PasswordChar": "*",
+        "TabOrder": 0,
+        "Caption": "Signature Code"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 239,
+        "Top": 95,
+        "Width": 72,
+        "Height": 21,
+        "Caption": "OK",
+        "Default": true,
+        "TabOrder": 2,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 325,
+        "Top": 95,
+        "Width": 72,
+        "Height": 21,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 3,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lblText",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtESCode",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmSignItem",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "class": "TfrmHP",
+  "name": "frmHP",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Caption": "History and Physical Exam Page",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "Label1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 640,
+        "Height": 13,
+        "Align": "alTop",
+        "Alignment": "taCenter",
+        "Caption": "History and Physical Exam (inherit directly from fPage)",
+        "ExplicitWidth": 251
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = frmHP",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

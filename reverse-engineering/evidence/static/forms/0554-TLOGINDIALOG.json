@@ -1,0 +1,205 @@
+{
+  "class": "TLoginDialog",
+  "name": "LoginDialog",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 307,
+    "Top": 131,
+    "ActiveControl": "Password",
+    "BorderStyle": "bsDialog",
+    "Caption": "Database Login",
+    "ClientHeight": 147,
+    "ClientWidth": 283,
+    "Color": "clBtnFace",
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "OnShow": "FormShow",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TButton",
+      "name": "OKButton",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 119,
+        "Top": 114,
+        "Width": 75,
+        "Height": 25,
+        "Caption": "&OK",
+        "Default": true,
+        "ModalResult": 1,
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "CancelButton",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 200,
+        "Top": 114,
+        "Width": 75,
+        "Height": 25,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "ModalResult": 2,
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 7,
+        "Width": 267,
+        "Height": 98,
+        "BevelInner": "bvRaised",
+        "BevelOuter": "bvLowered",
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "Label3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 10,
+            "Top": 6,
+            "Width": 50,
+            "Height": 13,
+            "Caption": "Database:"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "DatabaseName",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 106,
+            "Top": 6,
+            "Width": 3,
+            "Height": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TBevel",
+          "name": "Bevel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 24,
+            "Width": 264,
+            "Height": 9,
+            "Shape": "bsTopLine"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 2,
+            "Top": 31,
+            "Width": 263,
+            "Height": 65,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "Label1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 8,
+                "Top": 8,
+                "Width": 56,
+                "Height": 13,
+                "Caption": "&User Name:",
+                "FocusControl": "UserName"
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "Label2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 8,
+                "Top": 36,
+                "Width": 50,
+                "Height": 13,
+                "Caption": "&Password:",
+                "FocusControl": "Password"
+              },
+              "children": []
+            },
+            {
+              "class": "TEdit",
+              "name": "UserName",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 101,
+                "Top": 5,
+                "Width": 153,
+                "Height": 21,
+                "MaxLength": 31,
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TEdit",
+              "name": "Password",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 101,
+                "Top": 33,
+                "Width": 153,
+                "Height": 21,
+                "MaxLength": 31,
+                "PasswordChar": "*",
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

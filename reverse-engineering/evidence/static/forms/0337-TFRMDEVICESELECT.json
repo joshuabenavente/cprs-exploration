@@ -1,0 +1,332 @@
+{
+  "class": "TfrmDeviceSelect",
+  "name": "frmDeviceSelect",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 378,
+    "Top": 340,
+    "Caption": "Orders Print Device Selection",
+    "ClientHeight": 235,
+    "ClientWidth": 415,
+    "Position": "poScreenCenter",
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 423,
+    "ExplicitHeight": 262,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TGroupBox",
+      "name": "grpDevice",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 415,
+        "Height": 203,
+        "Align": "alClient",
+        "Caption": "Device",
+        "TabOrder": 0,
+        "ExplicitHeight": 194
+      },
+      "children": [
+        {
+          "class": "TORComboBox",
+          "name": "cboDevice",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 5,
+            "Top": 21,
+            "Width": 405,
+            "Height": 143,
+            "Style": "orcsSimple",
+            "Align": "alClient",
+            "AutoSelect": true,
+            "Caption": "Device",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 16,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": true,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "ParentShowHint": false,
+            "Pieces": "2,4",
+            "ShowHint": true,
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabPositions": "30",
+            "TabOrder": 0,
+            "Text": "",
+            "OnChange": "cboDeviceChange",
+            "OnNeedData": "cboDeviceNeedData",
+            "CharsNeedMatch": 1,
+            "ExplicitLeft": 2,
+            "ExplicitTop": 18,
+            "ExplicitWidth": 411,
+            "ExplicitHeight": 142
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlGBBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 5,
+            "Top": 170,
+            "Width": 405,
+            "Height": 28,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1,
+            "ExplicitLeft": 2,
+            "ExplicitTop": 173,
+            "ExplicitWidth": 411
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblMargin",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 75,
+                "Height": 22,
+                "Align": "alLeft",
+                "Caption": "Right Margin",
+                "ExplicitLeft": 8,
+                "ExplicitTop": 12,
+                "ExplicitHeight": 16
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblLength",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 123,
+                "Top": 3,
+                "Width": 76,
+                "Height": 22,
+                "Align": "alLeft",
+                "Caption": "Page Length",
+                "ExplicitLeft": 120,
+                "ExplicitTop": 12,
+                "ExplicitHeight": 16
+              },
+              "children": []
+            },
+            {
+              "class": "TMaskEdit",
+              "name": "txtRightMargin",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 84,
+                "Top": 3,
+                "Width": 33,
+                "Height": 22,
+                "Align": "alLeft",
+                "AutoSize": false,
+                "EditMask": "99999;0; ",
+                "MaxLength": 5,
+                "TabOrder": 0,
+                "Text": "",
+                "ExplicitLeft": 72,
+                "ExplicitTop": 6,
+                "ExplicitHeight": 19
+              },
+              "children": []
+            },
+            {
+              "class": "TMaskEdit",
+              "name": "txtPageLength",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 205,
+                "Top": 3,
+                "Width": 34,
+                "Height": 22,
+                "Align": "alLeft",
+                "AutoSize": false,
+                "EditMask": "99999;0; ",
+                "MaxLength": 5,
+                "TabOrder": 1,
+                "Text": "",
+                "ExplicitLeft": 184,
+                "ExplicitTop": 6,
+                "ExplicitHeight": 19
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 203,
+        "Width": 415,
+        "Height": 32,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "ExplicitTop": 194
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 262,
+            "Top": 3,
+            "Width": 72,
+            "Height": 26,
+            "Align": "alRight",
+            "Caption": "OK",
+            "Default": true,
+            "TabOrder": 0,
+            "OnClick": "cmdOKClick",
+            "ExplicitLeft": 257,
+            "ExplicitTop": 11,
+            "ExplicitHeight": 22
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 340,
+            "Top": 3,
+            "Width": 72,
+            "Height": 26,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 1,
+            "OnClick": "cmdCancelClick",
+            "ExplicitLeft": 337,
+            "ExplicitTop": 11,
+            "ExplicitHeight": 22
+          },
+          "children": []
+        },
+        {
+          "class": "TCheckBox",
+          "name": "chkDefault",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 217,
+            "Height": 26,
+            "Align": "alLeft",
+            "Caption": "Save as user's default printer",
+            "TabOrder": 2
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 24,
+        "Top": 56,
+        "Data": [
+          [
+            "Component = grpDevice",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboDevice",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlGBBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtRightMargin",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtPageLength",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkDefault",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmDeviceSelect",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

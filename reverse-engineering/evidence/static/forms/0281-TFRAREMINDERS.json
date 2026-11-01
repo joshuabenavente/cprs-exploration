@@ -1,0 +1,263 @@
+{
+  "class": "TfraReminders",
+  "name": "fraReminders",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {},
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlHeader",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {},
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblHeader",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Width": 772,
+            "Height": 21,
+            "Caption": "Immunization Statuses",
+            "ExplicitWidth": 132
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlWorkspace",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {},
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlItems",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 807,
+            "Height": 148,
+            "Align": "alClient",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TSplitter",
+              "name": "Splitter1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 481,
+                "Top": 1,
+                "Width": 2,
+                "Height": 146
+              },
+              "children": []
+            },
+            {
+              "class": "TListView",
+              "name": "remList",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 480,
+                "Height": 146,
+                "Align": "alLeft",
+                "Columns": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "id",
+                      "Width": 0
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "AutoSize": true,
+                      "Caption": "Reminder Name"
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "AutoSize": true,
+                      "Caption": "Status"
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "AutoSize": true,
+                      "Caption": "Date Done"
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "AutoSize": true,
+                      "Caption": "Date Due"
+                    }
+                  }
+                ],
+                "ReadOnly": true,
+                "RowSelect": true,
+                "PopupMenu": "mnuAction",
+                "TabOrder": 0,
+                "ViewStyle": "vsReport"
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlDetails",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 483,
+                "Top": 1,
+                "Width": 323,
+                "Height": 146,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentColor": true,
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TSplitter",
+                  "name": "Splitter2",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 97,
+                    "Width": 323,
+                    "Height": 3,
+                    "Cursor": "crVSplit",
+                    "Align": "alBottom",
+                    "ExplicitWidth": 49
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TListView",
+                  "name": "lstHistory",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 323,
+                    "Height": 97,
+                    "Align": "alClient",
+                    "Columns": [],
+                    "TabOrder": 0,
+                    "ViewStyle": "vsReport"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TRichEdit",
+                  "name": "remDetails",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 100,
+                    "Width": 323,
+                    "Height": 46,
+                    "Align": "alBottom",
+                    "Color": "clCream",
+                    "Font.Charset": "ANSI_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "Tahoma",
+                    "Font.Style": [],
+                    "Lines.Strings": [
+                      ""
+                    ],
+                    "ParentFont": false,
+                    "ScrollBars": "ssBoth",
+                    "TabOrder": 1,
+                    "Zoom": 100
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "mnuAction",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 400,
+        "Top": 8
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "AddImmunization1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Add Immunization",
+            "OnClick": "AddImmunization1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "ViewInformation1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "View Information",
+            "OnClick": "ViewInformation1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "acClinMaint",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Clinical Maintenance",
+            "OnClick": "acClinMaintClick"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

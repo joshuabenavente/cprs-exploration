@@ -1,0 +1,1104 @@
+{
+  "class": "TfrmTIUView",
+  "name": "frmTIUView",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 357,
+    "Top": 111,
+    "BorderIcons": [],
+    "Caption": "List Selected Documents",
+    "ClientHeight": 526,
+    "ClientWidth": 393,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 409,
+    "ExplicitHeight": 564,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlBase",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 393,
+        "Height": 487,
+        "Align": "alClient",
+        "TabOrder": 0,
+        "ExplicitTop": -3,
+        "ExplicitHeight": 647
+      },
+      "children": [
+        {
+          "class": "TBevel",
+          "name": "Bevel2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 241,
+            "Width": 385,
+            "Height": 4,
+            "Align": "alTop",
+            "ExplicitLeft": 9,
+            "ExplicitTop": 205,
+            "ExplicitWidth": 343
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlStatus",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 4,
+            "Width": 385,
+            "Height": 99,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlStatus",
+            "ShowCaption": false,
+            "TabOrder": 5,
+            "ExplicitTop": 544,
+            "ExplicitWidth": 417
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "Panel2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 201,
+                "Top": 0,
+                "Width": 184,
+                "Height": 99,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel2",
+                "ShowCaption": false,
+                "TabOrder": 0,
+                "ExplicitLeft": 136,
+                "ExplicitTop": 56,
+                "ExplicitWidth": 185,
+                "ExplicitHeight": 41
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblMaxDocs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 178,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Max Number to Return",
+                    "ExplicitLeft": 119,
+                    "ExplicitTop": 5,
+                    "ExplicitWidth": 132
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCaptionEdit",
+                  "name": "edMaxDocs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 25,
+                    "Width": 178,
+                    "Height": 24,
+                    "Align": "alTop",
+                    "MaxLength": 6,
+                    "TabOrder": 0,
+                    "Caption": "Max Number to Return",
+                    "ExplicitLeft": 95,
+                    "ExplicitTop": 18,
+                    "ExplicitWidth": 156
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 201,
+                "Height": 99,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel2",
+                "ShowCaption": false,
+                "TabOrder": 1,
+                "ExplicitLeft": -6,
+                "ExplicitTop": -2,
+                "ExplicitHeight": 150
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblStatus",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 195,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Status",
+                    "ExplicitLeft": 10,
+                    "ExplicitTop": 5,
+                    "ExplicitWidth": 37
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORListBox",
+                  "name": "lstStatus",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 25,
+                    "Width": 195,
+                    "Height": 71,
+                    "Align": "alClient",
+                    "ExtendedSelect": false,
+                    "Items.Strings": [
+                      "1^Signed documents (all)",
+                      "2^Unsigned documents  ",
+                      "3^Uncosigned documents",
+                      "4^Signed documents/author",
+                      "5^Signed documents/date range"
+                    ],
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 0,
+                    "Caption": "Status",
+                    "ItemTipColor": "clWindow",
+                    "LongList": false,
+                    "Pieces": "2",
+                    "OnChange": "lstStatusSelect",
+                    "ExplicitLeft": 10,
+                    "ExplicitTop": 18,
+                    "ExplicitWidth": 168,
+                    "ExplicitHeight": 74
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlAuthor",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 109,
+            "Width": 385,
+            "Height": 126,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel2",
+            "ShowCaption": false,
+            "TabOrder": 6,
+            "ExplicitTop": 517,
+            "ExplicitWidth": 417
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "Panel3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 201,
+                "Height": 126,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel2",
+                "ShowCaption": false,
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblAuthor",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 195,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Author",
+                    "ExplicitLeft": 10,
+                    "ExplicitTop": 97,
+                    "ExplicitWidth": 38
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboAuthor",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 25,
+                    "Width": 195,
+                    "Height": 98,
+                    "Style": "orcsSimple",
+                    "Align": "alClient",
+                    "AutoSelect": true,
+                    "Caption": "Author",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "ItemHeight": 16,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": true,
+                    "LongList": true,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "Pieces": "2",
+                    "Sorted": true,
+                    "SynonymChars": "<>",
+                    "TabOrder": 0,
+                    "Text": "",
+                    "OnNeedData": "cboAuthorNeedData",
+                    "CharsNeedMatch": 1,
+                    "ExplicitLeft": 16,
+                    "ExplicitTop": 38,
+                    "ExplicitWidth": 169,
+                    "ExplicitHeight": 88
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 201,
+                "Top": 0,
+                "Width": 184,
+                "Height": 126,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel2",
+                "ShowCaption": false,
+                "TabOrder": 1,
+                "ExplicitLeft": 8,
+                "ExplicitWidth": 185
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblBeginDate",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 178,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Beginning Date",
+                    "ExplicitLeft": 140,
+                    "ExplicitTop": 100,
+                    "ExplicitWidth": 92
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblEndDate",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 55,
+                    "Width": 178,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Ending Date",
+                    "ExplicitLeft": 158,
+                    "ExplicitTop": 110,
+                    "ExplicitWidth": 74
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORDateBox",
+                  "name": "calBeginDate",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 25,
+                    "Width": 178,
+                    "Height": 24,
+                    "Align": "alTop",
+                    "TabOrder": 0,
+                    "DateOnly": false,
+                    "RequireTime": false,
+                    "Caption": "Beginning Date",
+                    "ExplicitLeft": 76,
+                    "ExplicitTop": 102,
+                    "ExplicitWidth": 156
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORDateBox",
+                  "name": "calEndDate",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 74,
+                    "Width": 184,
+                    "Height": 24,
+                    "Align": "alTop",
+                    "TabOrder": 1,
+                    "DateOnly": false,
+                    "RequireTime": false,
+                    "Caption": "Ending Date",
+                    "ExplicitLeft": 76,
+                    "ExplicitTop": 102,
+                    "ExplicitWidth": 156
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlOptions",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 251,
+            "Width": 385,
+            "Height": 171,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlOptions",
+            "ShowCaption": false,
+            "TabOrder": 7,
+            "ExplicitTop": 472
+          },
+          "children": [
+            {
+              "class": "TGroupBox",
+              "name": "grpTreeView",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 195,
+                "Height": 165,
+                "Align": "alLeft",
+                "Caption": "Note Tree View",
+                "TabOrder": 0,
+                "ExplicitHeight": 112
+              },
+              "children": [
+                {
+                  "class": "TOROffsetLabel",
+                  "name": "lblGroupBy",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 87,
+                    "Width": 185,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Group By:",
+                    "HorzOffset": 2,
+                    "Transparent": false,
+                    "VertOffset": 2,
+                    "WordWrap": false,
+                    "ExplicitTop": 105
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboGroupBy",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 109,
+                    "Width": 185,
+                    "Height": 24,
+                    "Style": "orcsDropDown",
+                    "Align": "alTop",
+                    "AutoSelect": true,
+                    "Caption": "Group By",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "Items.Strings": [
+                      "D^Visit Date",
+                      "L^Location",
+                      "T^Title",
+                      "A^Author"
+                    ],
+                    "ItemHeight": 16,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": true,
+                    "LongList": false,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "Pieces": "2",
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 1,
+                    "Text": "",
+                    "CharsNeedMatch": 1,
+                    "ExplicitLeft": 7,
+                    "ExplicitTop": 130
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TRadioGroup",
+                  "name": "radTreeSort",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 21,
+                    "Width": 185,
+                    "Height": 60,
+                    "Align": "alTop",
+                    "Caption": "Note Tree View Sort Order",
+                    "Items.Strings": [
+                      "&Chronological",
+                      "&Reverse chronological"
+                    ],
+                    "TabOrder": 0
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TGroupBox",
+              "name": "grpListView",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 204,
+                "Top": 3,
+                "Width": 178,
+                "Height": 165,
+                "Align": "alClient",
+                "Caption": "Sort Note List",
+                "TabOrder": 1,
+                "ExplicitLeft": 194,
+                "ExplicitTop": 17,
+                "ExplicitWidth": 158,
+                "ExplicitHeight": 130
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblSortBy",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 87,
+                    "Width": 168,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Sort By:",
+                    "ExplicitLeft": 3,
+                    "ExplicitTop": 75,
+                    "ExplicitWidth": 46
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TRadioGroup",
+                  "name": "radListSort",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 21,
+                    "Width": 168,
+                    "Height": 60,
+                    "Align": "alTop",
+                    "Caption": "Note List Sort Order",
+                    "Items.Strings": [
+                      "&Ascending",
+                      "&Descending"
+                    ],
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboSortBy",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 109,
+                    "Width": 168,
+                    "Height": 24,
+                    "Style": "orcsDropDown",
+                    "Align": "alTop",
+                    "AutoSelect": true,
+                    "Caption": "Sort By",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "Items.Strings": [
+                      "R^Date of Note",
+                      "D^Title",
+                      "S^Subject",
+                      "A^Author",
+                      "L^Location"
+                    ],
+                    "ItemHeight": 16,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": true,
+                    "LongList": false,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "Pieces": "2",
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 1,
+                    "Text": "",
+                    "CharsNeedMatch": 1,
+                    "ExplicitLeft": 11,
+                    "ExplicitTop": 85,
+                    "ExplicitWidth": 137
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCheckBox",
+                  "name": "ckShowSubject",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 143,
+                    "Width": 168,
+                    "Height": 17,
+                    "Align": "alBottom",
+                    "Caption": "Show subject in list",
+                    "TabOrder": 2,
+                    "ExplicitLeft": 11,
+                    "ExplicitTop": 110,
+                    "ExplicitWidth": 131
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlOp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 425,
+            "Width": 391,
+            "Height": 62,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlOptions2",
+            "ShowCaption": false,
+            "TabOrder": 8,
+            "ExplicitTop": 592
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "Panel5",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 204,
+                "Height": 56,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel5",
+                "ShowCaption": false,
+                "TabOrder": 0,
+                "ExplicitLeft": 0,
+                "ExplicitTop": -2,
+                "ExplicitHeight": 110
+              },
+              "children": [
+                {
+                  "class": "TGroupBox",
+                  "name": "grpWhereEitherOf",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 198,
+                    "Height": 49,
+                    "Align": "alTop",
+                    "Caption": "Where either of:",
+                    "Ctl3D": true,
+                    "ParentCtl3D": false,
+                    "TabOrder": 0,
+                    "ExplicitLeft": 0,
+                    "ExplicitTop": 0,
+                    "ExplicitWidth": 204
+                  },
+                  "children": [
+                    {
+                      "class": "TCheckBox",
+                      "name": "ckTitle",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 5,
+                        "Top": 21,
+                        "Width": 50,
+                        "Height": 23,
+                        "Align": "alLeft",
+                        "Caption": "Title",
+                        "TabOrder": 0,
+                        "ExplicitLeft": 49,
+                        "ExplicitTop": 16,
+                        "ExplicitHeight": 17
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TCheckBox",
+                      "name": "ckSubject",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 61,
+                        "Top": 21,
+                        "Width": 65,
+                        "Height": 23,
+                        "Align": "alLeft",
+                        "Caption": "Subject",
+                        "TabOrder": 1,
+                        "ExplicitLeft": 102,
+                        "ExplicitTop": 16,
+                        "ExplicitHeight": 17
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel6",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 210,
+                "Top": 0,
+                "Width": 181,
+                "Height": 62,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel6",
+                "ShowCaption": false,
+                "TabOrder": 1,
+                "ExplicitTop": -2,
+                "ExplicitHeight": 110
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblContains",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 175,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Contains:",
+                    "ExplicitLeft": 126,
+                    "ExplicitTop": 94,
+                    "ExplicitWidth": 55
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCaptionEdit",
+                  "name": "txtKeyword",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 25,
+                    "Width": 175,
+                    "Height": 24,
+                    "Align": "alTop",
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 0,
+                    "Caption": "Contains",
+                    "ExplicitLeft": 36,
+                    "ExplicitTop": 86,
+                    "ExplicitWidth": 145
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 487,
+        "Width": 393,
+        "Height": 39,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 1,
+        "ExplicitTop": 470,
+        "ExplicitWidth": 454
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdClear",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 182,
+            "Height": 33,
+            "Align": "alLeft",
+            "Caption": "Clear Sort/Group/Search",
+            "TabOrder": 0,
+            "OnClick": "cmdClearClick",
+            "ExplicitTop": 6,
+            "ExplicitHeight": 35
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 240,
+            "Top": 3,
+            "Width": 72,
+            "Height": 33,
+            "Align": "alRight",
+            "Caption": "OK",
+            "Default": true,
+            "TabOrder": 1,
+            "OnClick": "cmdOKClick",
+            "ExplicitLeft": 196,
+            "ExplicitTop": 20,
+            "ExplicitHeight": 21
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 318,
+            "Top": 3,
+            "Width": 72,
+            "Height": 33,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 2,
+            "OnClick": "cmdCancelClick",
+            "ExplicitLeft": 278,
+            "ExplicitTop": 20,
+            "ExplicitHeight": 21
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 328,
+        "Top": 40,
+        "Data": [
+          [
+            "Component = pnlBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calBeginDate",
+            "Text = Beginning Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = calEndDate",
+            "Text = Ending Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lstStatus",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboAuthor",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edMaxDocs",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtKeyword",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grpListView",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radListSort",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSortBy",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ckShowSubject",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grpTreeView",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboGroupBy",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radTreeSort",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdClear",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grpWhereEitherOf",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ckTitle",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ckSubject",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmTIUView",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlStatus",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlAuthor",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlOptions",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlOp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel5",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel6",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

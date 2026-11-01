@@ -1,0 +1,2248 @@
+{
+  "class": "TfrmODAnatPath",
+  "name": "frmODAnatPath",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Tag": 121,
+    "Left": 245,
+    "Top": 263,
+    "Width": 800,
+    "Height": 724,
+    "ActiveControl": "cbxAvailTest",
+    "BorderIcons": [
+      "biSystemMenu",
+      "biMaximize"
+    ],
+    "Caption": "Anatomic Pathology Ordering",
+    "Constraints.MinHeight": 600,
+    "Constraints.MinWidth": 800,
+    "ExplicitWidth": 800,
+    "ExplicitHeight": 724,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TGridPanel",
+      "name": "gpMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 784,
+        "Height": 685,
+        "Align": "alClient",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000e00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000900340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000900340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000900340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000900340"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "ColumnSpan": 5,
+              "Control": "pgctrlText",
+              "Row": 13
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "lvwSpecimen",
+              "Row": 11,
+              "RowSpan": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "ColumnSpan": 4,
+              "Control": "pgctrlSpecimen",
+              "Row": 11
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "ColumnSpan": 5,
+              "Control": "lblAvailTest",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "cbxAvailTest",
+              "Row": 1,
+              "RowSpan": 9
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblUrgency",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "cbxUrgency",
+              "Row": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "lblORDateBox",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "calCollTime",
+              "Row": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 3,
+              "Control": "lblSubmittedBy",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 3,
+              "Control": "edtSubmittedBy",
+              "Row": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 4,
+              "Control": "lblEmpry",
+              "Row": 1,
+              "RowSpan": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblCollectionType",
+              "Row": 3
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "cbxCollType",
+              "Row": 4
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 3,
+              "Control": "lblHowLong",
+              "Row": 3
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 3,
+              "Control": "edtDays",
+              "Row": 4
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "lblOften",
+              "Row": 3
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "cbxFrequency",
+              "Row": 4
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 4,
+              "Control": "lblSurgeon",
+              "Row": 3
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 4,
+              "Control": "cbxPtProvider",
+              "Row": 4
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "ColumnSpan": 4,
+              "Control": "pnlAntiCoagulation",
+              "Row": 5
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "ColumnSpan": 4,
+              "Control": "pnlDoseDraw",
+              "Row": 6
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "ColumnSpan": 4,
+              "Control": "pnlOrderComment",
+              "Row": 7
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "ColumnSpan": 4,
+              "Control": "pnlPeakTrough",
+              "Row": 8
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "ColumnSpan": 4,
+              "Control": "pnlUrineVolume",
+              "Row": 9
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "pnlTabs",
+              "Row": 10
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "ColumnSpan": 4,
+              "Control": "pnlTotal",
+              "Row": 10
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "ColumnSpan": 4,
+              "Control": "pnlSpecMessage",
+              "Row": 12
+            }
+          }
+        ],
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000d00240"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a40440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000e80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000e80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000e80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000e80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000e80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000e80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000e80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000cc0440"
+              }
+            }
+          }
+        ],
+        "TabOrder": 5
+      },
+      "children": [
+        {
+          "class": "TPageControl",
+          "name": "pgctrlText",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 429,
+            "Width": 782,
+            "Height": 146,
+            "Align": "alClient",
+            "TabOrder": 19
+          },
+          "children": []
+        },
+        {
+          "class": "TListView",
+          "name": "lvwSpecimen",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 284,
+            "Width": 219,
+            "Height": 145,
+            "Align": "alClient",
+            "Anchors": [],
+            "Columns": [
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "#",
+                  "MinWidth": 30,
+                  "Width": 30
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "AutoSize": true,
+                  "Caption": "Specimen Description",
+                  "MinWidth": 183
+                }
+              }
+            ],
+            "ColumnClick": false,
+            "DoubleBuffered": true,
+            "GridLines": true,
+            "ReadOnly": true,
+            "RowSelect": true,
+            "ParentDoubleBuffered": false,
+            "TabOrder": 14,
+            "ViewStyle": "vsReport",
+            "OnChange": "lvwSpecimenChange",
+            "OnClick": "lvwSpecimenClick",
+            "OnDblClick": "lvwSpecimenDblClick",
+            "OnKeyDown": "lvwSpecimenKeyDown"
+          },
+          "children": []
+        },
+        {
+          "class": "TPageControl",
+          "name": "pgctrlSpecimen",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 220,
+            "Top": 284,
+            "Width": 563,
+            "Height": 73,
+            "Align": "alClient",
+            "ParentShowHint": false,
+            "ShowHint": false,
+            "TabOrder": 16,
+            "OnEnter": "pgctrlSpecimenEnter"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblAvailTest",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 782,
+            "Height": 13,
+            "Align": "alClient",
+            "Caption": "*Available Orders",
+            "OnClick": "lblAvailTestClick",
+            "ExplicitWidth": 81
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cbxAvailTest",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 1,
+            "Top": 14,
+            "Width": 216,
+            "Height": 249,
+            "Margins.Left": 0,
+            "Margins.Top": 0,
+            "Margins.Bottom": 0,
+            "Style": "orcsSimple",
+            "Align": "alClient",
+            "AutoSelect": true,
+            "Caption": "Available Anatomic Pathology Orders",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": false,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "Text": "",
+            "OnChange": "cbxAvailTestChange",
+            "OnEnter": "cbxAvailTestEnter",
+            "OnExit": "cbxAvailTestExit",
+            "OnKeyDown": "cbxAvailTestKeyDown",
+            "OnMouseClick": "cbxAvailTestClick",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblUrgency",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 223,
+            "Top": 17,
+            "Width": 135,
+            "Height": 15,
+            "Align": "alClient",
+            "Caption": "Urgency",
+            "Transparent": false,
+            "Layout": "tlBottom",
+            "ExplicitWidth": 40,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cbxUrgency",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 223,
+            "Top": 35,
+            "Width": 135,
+            "Height": 21,
+            "Margins.Top": 0,
+            "Margins.Bottom": 0,
+            "Style": "orcsDropDown",
+            "Align": "alClient",
+            "AutoSelect": false,
+            "Caption": "Urgency",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": false,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 1,
+            "Text": "",
+            "OnChange": "cbxUrgencyChange",
+            "OnExit": "LegacyExit",
+            "OnKeyDown": "LegacyKeyDown",
+            "OnKeyUp": "LegacyKeyUp",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblORDateBox",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 3,
+            "AlignWithMargins": true,
+            "Left": 364,
+            "Top": 17,
+            "Width": 134,
+            "Height": 15,
+            "Align": "alClient",
+            "Caption": "Collection Date/Time",
+            "Transparent": false,
+            "Layout": "tlBottom",
+            "ExplicitWidth": 100,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "calCollTime",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 364,
+            "Top": 35,
+            "Width": 134,
+            "Height": 21,
+            "Margins.Top": 0,
+            "Margins.Bottom": 0,
+            "Align": "alClient",
+            "CharCase": "ecUpperCase",
+            "TabOrder": 2,
+            "OnExit": "calCollTimeExit",
+            "DateOnly": false,
+            "RequireTime": false,
+            "Caption": "Collection Date Time",
+            "OnDateDialogClosed": "calCollTimeDateDialogClosed"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblSubmittedBy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 4,
+            "AlignWithMargins": true,
+            "Left": 504,
+            "Top": 17,
+            "Width": 135,
+            "Height": 15,
+            "Align": "alClient",
+            "Caption": "Specimen Submitted By",
+            "Layout": "tlBottom",
+            "ExplicitWidth": 112,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TEdit",
+          "name": "edtSubmittedBy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 504,
+            "Top": 35,
+            "Width": 135,
+            "Height": 21,
+            "Margins.Top": 0,
+            "Margins.Bottom": 0,
+            "Align": "alClient",
+            "TabOrder": 3,
+            "OnExit": "edtSubmittedbyExit"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblEmpry",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 642,
+            "Top": 14,
+            "Width": 141,
+            "Height": 42,
+            "Align": "alClient",
+            "Alignment": "taCenter",
+            "Caption": "Empty Space",
+            "Layout": "tlCenter",
+            "Visible": false,
+            "ExplicitWidth": 63,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblCollectionType",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 5,
+            "AlignWithMargins": true,
+            "Left": 223,
+            "Top": 59,
+            "Width": 135,
+            "Height": 15,
+            "Align": "alClient",
+            "Caption": "Collection Type",
+            "Transparent": false,
+            "Layout": "tlBottom",
+            "ExplicitWidth": 73,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cbxCollType",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 223,
+            "Top": 77,
+            "Width": 135,
+            "Height": 21,
+            "Margins.Top": 0,
+            "Margins.Bottom": 0,
+            "Style": "orcsDropDown",
+            "Align": "alClient",
+            "AutoSelect": true,
+            "Caption": "Collection Type",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": false,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 4,
+            "Text": "",
+            "OnChange": "cbxCollTypeChange",
+            "OnExit": "LegacyExit",
+            "OnKeyDown": "LegacyKeyDown",
+            "OnKeyUp": "LegacyKeyUp",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblHowLong",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 7,
+            "AlignWithMargins": true,
+            "Left": 504,
+            "Top": 59,
+            "Width": 135,
+            "Height": 15,
+            "Align": "alClient",
+            "Caption": "How Long?",
+            "Enabled": false,
+            "Layout": "tlBottom",
+            "ExplicitWidth": 55,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TEdit",
+          "name": "edtDays",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 7,
+            "AlignWithMargins": true,
+            "Left": 504,
+            "Top": 77,
+            "Width": 135,
+            "Height": 41,
+            "Margins.Top": 0,
+            "Margins.Bottom": 0,
+            "Align": "alClient",
+            "Enabled": false,
+            "TabOrder": 5,
+            "OnChange": "edtDaysChange",
+            "ExplicitHeight": 21
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblOften",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 6,
+            "AlignWithMargins": true,
+            "Left": 364,
+            "Top": 59,
+            "Width": 134,
+            "Height": 15,
+            "Align": "alClient",
+            "Caption": "How Often?",
+            "Transparent": false,
+            "Layout": "tlBottom",
+            "ExplicitWidth": 57,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cbxFrequency",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 6,
+            "AlignWithMargins": true,
+            "Left": 364,
+            "Top": 77,
+            "Width": 134,
+            "Height": 21,
+            "Margins.Top": 0,
+            "Margins.Bottom": 0,
+            "Style": "orcsDropDown",
+            "Align": "alClient",
+            "AutoSelect": true,
+            "Caption": "How Often",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": false,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 6,
+            "Text": "",
+            "OnChange": "cbxFrequencyChange",
+            "OnExit": "LegacyExit",
+            "OnKeyDown": "LegacyKeyDown",
+            "OnKeyUp": "LegacyKeyUp",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblSurgeon",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 8,
+            "AlignWithMargins": true,
+            "Left": 645,
+            "Top": 59,
+            "Width": 135,
+            "Height": 15,
+            "Align": "alClient",
+            "Caption": "Surgeon/Provider",
+            "Transparent": false,
+            "Layout": "tlBottom",
+            "ExplicitWidth": 84,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TORCheckComboBox",
+          "name": "cbxPtProvider",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 645,
+            "Top": 77,
+            "Width": 135,
+            "Height": 41,
+            "Margins.Top": 0,
+            "Margins.Bottom": 0,
+            "Style": "orcsDropDown",
+            "Align": "alClient",
+            "AutoSelect": true,
+            "Caption": "Surgeon and or Provider",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": true,
+            "LookupPiece": 2,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 7,
+            "Text": "",
+            "OnChange": "cbxPtProviderChange",
+            "OnExit": "LegacyExit",
+            "OnKeyDown": "LegacyKeyDown",
+            "OnKeyUp": "LegacyKeyUp",
+            "OnNeedData": "cbxPtProviderNeedData",
+            "CharsNeedMatch": 1,
+            "MainCheckBoxCaption": "Include Non-VA Providers",
+            "MainCheckBoxVisible": true,
+            "MainCheckBoxAlignment": "calBottom",
+            "OnMainCheckboxClick": "cbxPtProviderMainCheckboxClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlAntiCoagulation",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 220,
+            "Top": 118,
+            "Width": 563,
+            "Height": 29,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 8
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblAnticoag",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 212,
+                "Height": 29,
+                "Align": "alLeft",
+                "Caption": "What kind of anticoagulant is the patient on?",
+                "Layout": "tlCenter"
+              },
+              "children": []
+            },
+            {
+              "class": "TEdit",
+              "name": "edtAnticoag",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 215,
+                "Top": 3,
+                "Width": 342,
+                "Height": 23,
+                "Margins.Right": 6,
+                "Align": "alClient",
+                "TabOrder": 0,
+                "OnExit": "ledtCommentAntiCoagulantExit",
+                "ExplicitHeight": 21
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlDoseDraw",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 220,
+            "Top": 147,
+            "Width": 563,
+            "Height": 29,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 9
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblDose",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 110,
+                "Height": 23,
+                "Align": "alLeft",
+                "Caption": "Enter the last dose time",
+                "Transparent": false,
+                "Layout": "tlCenter"
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblDraw",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 265,
+                "Top": 3,
+                "Width": 73,
+                "Height": 23,
+                "Align": "alLeft",
+                "Caption": "Enter draw time",
+                "Transparent": false,
+                "Layout": "tlCenter"
+              },
+              "children": []
+            },
+            {
+              "class": "TORDateBox",
+              "name": "calDoseTime",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 119,
+                "Top": 4,
+                "Width": 140,
+                "Height": 21,
+                "Margins.Top": 4,
+                "Margins.Bottom": 4,
+                "Align": "alLeft",
+                "TabOrder": 0,
+                "OnChange": "DoseDrawComment",
+                "DateOnly": false,
+                "RequireTime": false,
+                "Caption": ""
+              },
+              "children": []
+            },
+            {
+              "class": "TORDateBox",
+              "name": "calDrawTime",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 344,
+                "Top": 4,
+                "Width": 140,
+                "Height": 21,
+                "Margins.Top": 4,
+                "Margins.Bottom": 4,
+                "Align": "alLeft",
+                "TabOrder": 1,
+                "OnChange": "DoseDrawComment",
+                "DateOnly": false,
+                "RequireTime": false,
+                "Caption": ""
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlOrderComment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 220,
+            "Top": 176,
+            "Width": 563,
+            "Height": 29,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 10
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblOrderComment",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 73,
+                "Height": 23,
+                "Align": "alLeft",
+                "Caption": "Order Comment",
+                "Layout": "tlCenter"
+              },
+              "children": []
+            },
+            {
+              "class": "TEdit",
+              "name": "edtOrderComment",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 82,
+                "Top": 3,
+                "Width": 475,
+                "Height": 23,
+                "Margins.Right": 6,
+                "Align": "alClient",
+                "TabOrder": 0,
+                "OnExit": "ledtOrderCommentExit",
+                "ExplicitHeight": 21
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlPeakTrough",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 220,
+            "Top": 205,
+            "Width": 563,
+            "Height": 29,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 11
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblPeakTrough",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 79,
+                "Height": 23,
+                "Margins.Right": 8,
+                "Align": "alLeft",
+                "Caption": "Sample drawn at",
+                "Transparent": false,
+                "Layout": "tlCenter"
+              },
+              "children": []
+            },
+            {
+              "class": "TEdit",
+              "name": "edtPeakComment",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 317,
+                "Top": 4,
+                "Width": 243,
+                "Height": 21,
+                "Margins.Top": 4,
+                "Margins.Bottom": 4,
+                "Align": "alClient",
+                "TabOrder": 4,
+                "OnExit": "edtPeakCommentExit"
+              },
+              "children": []
+            },
+            {
+              "class": "TRadioButton",
+              "name": "rbPeak",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 93,
+                "Top": 3,
+                "Width": 45,
+                "Height": 23,
+                "Align": "alLeft",
+                "Caption": "&Peak",
+                "TabOrder": 0,
+                "OnClick": "rgrpCommentPeakTroughClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TRadioButton",
+              "name": "rbTrough",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 141,
+                "Top": 0,
+                "Width": 57,
+                "Height": 29,
+                "Align": "alLeft",
+                "Caption": "&Trough",
+                "TabOrder": 1,
+                "OnClick": "rgrpCommentPeakTroughClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TRadioButton",
+              "name": "rbMid",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 198,
+                "Top": 0,
+                "Width": 43,
+                "Height": 29,
+                "Align": "alLeft",
+                "Caption": "&Mid",
+                "TabOrder": 2,
+                "OnClick": "rgrpCommentPeakTroughClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TRadioButton",
+              "name": "rbUnknown",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 241,
+                "Top": 0,
+                "Width": 73,
+                "Height": 29,
+                "Align": "alLeft",
+                "Caption": "&Unknown",
+                "TabOrder": 3,
+                "OnClick": "rgrpCommentPeakTroughClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlUrineVolume",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 220,
+            "Top": 234,
+            "Width": 563,
+            "Height": 29,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 12
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblUrineVolume",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 106,
+                "Height": 23,
+                "Margins.Right": 150,
+                "Align": "alLeft",
+                "Caption": "Enter the urine volume",
+                "Transparent": false,
+                "Layout": "tlCenter"
+              },
+              "children": []
+            },
+            {
+              "class": "TSpinEdit",
+              "name": "spnedtUrineVolume",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 120,
+                "Top": 3,
+                "Width": 121,
+                "Height": 22,
+                "MaxValue": 0,
+                "MinValue": 0,
+                "TabOrder": 0,
+                "Value": 0,
+                "OnChange": "CommentUrineVolumeChange"
+              },
+              "children": []
+            },
+            {
+              "class": "TRadioButton",
+              "name": "rbtnUrineML",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 259,
+                "Top": 0,
+                "Width": 34,
+                "Height": 29,
+                "Align": "alLeft",
+                "Caption": "ml",
+                "TabOrder": 1,
+                "OnClick": "CommentUrineVolumeChange"
+              },
+              "children": []
+            },
+            {
+              "class": "TRadioButton",
+              "name": "rbtnUrineCC",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 293,
+                "Top": 0,
+                "Width": 34,
+                "Height": 29,
+                "Align": "alLeft",
+                "Caption": "cc",
+                "TabOrder": 2,
+                "OnClick": "CommentUrineVolumeChange"
+              },
+              "children": []
+            },
+            {
+              "class": "TRadioButton",
+              "name": "rbtnUrineOZ",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 327,
+                "Top": 0,
+                "Width": 34,
+                "Height": 29,
+                "Align": "alLeft",
+                "Caption": "oz",
+                "TabOrder": 3,
+                "OnClick": "CommentUrineVolumeChange"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlTabs",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 263,
+            "Width": 219,
+            "Height": 21,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 13
+          },
+          "children": [
+            {
+              "class": "TORComboBox",
+              "name": "cbxSpecimenSelect",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 224,
+                "Height": 21,
+                "Style": "orcsDropDown",
+                "AutoSelect": true,
+                "Caption": "Select a Specimen to add to the order.",
+                "Color": "clWindow",
+                "DropDownCount": 8,
+                "ItemHeight": 13,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": true,
+                "LongList": false,
+                "LookupPiece": 0,
+                "MaxLength": 0,
+                "Pieces": "2",
+                "Sorted": false,
+                "SynonymChars": "<>",
+                "TabOrder": 0,
+                "Text": "",
+                "CheckEntireLine": true,
+                "OnChange": "cbxSpecimenChange",
+                "OnEnter": "cbxSpecimenSelectEnter",
+                "OnExit": "cbxSpecimenSelectExit",
+                "OnKeyDown": "cbxSpecimenSelectKeyDown",
+                "OnMouseClick": "cbxSpecimenSelectMouseClick",
+                "CharsNeedMatch": 1
+              },
+              "children": []
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlAddSingleSpecimen",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 195,
+                "Top": 0,
+                "Width": 20,
+                "Height": 21,
+                "BevelKind": "bkTile",
+                "BevelOuter": "bvNone",
+                "Caption": "+",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [
+                  "fsBold"
+                ],
+                "ParentFont": false,
+                "TabOrder": 1,
+                "TabStop": true,
+                "Visible": false,
+                "OnClick": "pnlAddSingleSpecimenClick",
+                "OnEnter": "pnlFocusEnter",
+                "OnExit": "pnlFocusExit"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlTotal",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 223,
+            "Top": 266,
+            "Width": 554,
+            "Height": 15,
+            "Margins.Right": 6,
+            "Align": "alClient",
+            "Alignment": "taRightJustify",
+            "BevelOuter": "bvNone",
+            "TabOrder": 15,
+            "OnEnter": "pnlFocusEnter",
+            "OnExit": "pnlFocusExit"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlSpecMessage",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 220,
+            "Top": 357,
+            "Width": 563,
+            "Height": 72,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Color": "clWindow",
+            "ParentBackground": false,
+            "TabOrder": 17
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblSpecMessage",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 100,
+                "Top": 3,
+                "Width": 363,
+                "Height": 66,
+                "Margins.Left": 100,
+                "Margins.Right": 100,
+                "Align": "alClient",
+                "Alignment": "taCenter",
+                "AutoSize": false,
+                "Caption": "At least one specimen along with a specimen description is required to process an order.",
+                "Color": "clBtnFace",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -19,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [
+                  "fsBold"
+                ],
+                "ParentColor": false,
+                "ParentFont": false,
+                "Layout": "tlCenter",
+                "WordWrap": true,
+                "ExplicitLeft": 6,
+                "ExplicitTop": 6,
+                "ExplicitWidth": 558,
+                "ExplicitHeight": 70
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TCaptionMemo",
+      "name": "memOrder",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 4,
+        "Top": 629,
+        "Width": 669,
+        "Height": 58,
+        "Anchors": [
+          "akLeft",
+          "akRight",
+          "akBottom"
+        ],
+        "TabOrder": 1,
+        "ExplicitLeft": 4,
+        "ExplicitTop": 629,
+        "ExplicitWidth": 669,
+        "ExplicitHeight": 58
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdAccept",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 685,
+        "Top": 632,
+        "Anchors": [
+          "akRight",
+          "akBottom"
+        ],
+        "TabOrder": 2,
+        "ExplicitLeft": 685,
+        "ExplicitTop": 632
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdQuit",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 732,
+        "Top": 659,
+        "Anchors": [
+          "akRight",
+          "akBottom"
+        ],
+        "TabOrder": 3,
+        "ExplicitLeft": 732,
+        "ExplicitTop": 659
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMessage",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 6,
+        "Top": 631,
+        "Width": 665,
+        "Height": 51,
+        "Anchors": [
+          "akLeft",
+          "akRight",
+          "akBottom"
+        ],
+        "TabOrder": 0,
+        "ExplicitLeft": 6,
+        "ExplicitTop": 631,
+        "ExplicitWidth": 665,
+        "ExplicitHeight": 51
+      },
+      "children": [
+        {
+          "class": "TImage",
+          "name": "imgMessage",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Top": 7,
+            "ExplicitTop": 7
+          },
+          "children": []
+        },
+        {
+          "class": "TRichEdit",
+          "name": "memMessage",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 44,
+            "Top": 5,
+            "Width": 612,
+            "Height": 37,
+            "Margins.Left": 42,
+            "Align": "alClient",
+            "PopupMenu": "mnuMessagePopup",
+            "ExplicitLeft": 44,
+            "ExplicitTop": 5,
+            "ExplicitWidth": 612,
+            "ExplicitHeight": 37
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 40,
+        "Data": [
+          [
+            "Component = cbxAvailTest",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memOrder",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdQuit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODAnatPath",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTabs",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pgctrlSpecimen",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pgctrlText",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbxUrgency",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calCollTime",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbxCollType",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbxFrequency",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbxPtProvider",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTotal",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDoseDraw",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlAntiCoagulation",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlUrineVolume",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPeakTrough",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlOrderComment",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = spnedtUrineVolume",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calDoseTime",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calDrawTime",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbxSpecimenSelect",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lvwSpecimen",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlAddSingleSpecimen",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtPeakComment",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = gpMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtSubmittedBy",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtDays",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = rbPeak",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = rbTrough",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = rbMid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = rbUnknown",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSpecMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtAnticoag",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtOrderComment",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "mnuMessagePopup",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 734,
+        "Top": 679
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuViewinReportWindow",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&View in Report Window",
+            "OnClick": "mnuViewinReportWindowClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TActionList",
+      "name": "aPageNav",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 72,
+        "Top": 96
+      },
+      "children": [
+        {
+          "class": "TAction",
+          "name": "aCtrlTab",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "aCtrlTab",
+            "ShortCut": 16393,
+            "OnExecute": "aCtrlTabExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "aCtrlShiftTab",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "aCtrlShiftTab",
+            "ShortCut": 24585,
+            "OnExecute": "aCtrlShiftTabExecute"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508Urgency",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 2,
+        "Component": "cbxUrgency",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Left": 288,
+        "Top": 8
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508CollectionDT",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 3,
+        "Component": "calCollTime",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Instructions": "press the enter key to access",
+        "Left": 456,
+        "Top": 8
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508Submitted",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 4,
+        "Component": "edtSubmittedBy",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Caption": "Specimen Submitted By",
+        "Left": 622,
+        "Top": 9
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508CollectionType",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 5,
+        "Component": "cbxCollType",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Left": 290,
+        "Top": 61
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508Frequency",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 6,
+        "Component": "cbxFrequency",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Left": 460,
+        "Top": 62
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508HowLong",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 7,
+        "Component": "edtDays",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Caption": "How Long",
+        "Left": 596,
+        "Top": 62
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508Orders",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 1,
+        "Component": "cbxAvailTest",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Instructions": "To select an order use the arrow keys, then press enter",
+        "Left": 96,
+        "Top": 16
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508Surgeon",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 8,
+        "Component": "cbxPtProvider",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "OnValueQuery": "VA508SurgeonValueQuery",
+        "Left": 754,
+        "Top": 57
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508OrderComment",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 9,
+        "Component": "edtOrderComment",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Caption": "Order Comment",
+        "Left": 746,
+        "Top": 157
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508SampleDrawn",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 10,
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Left": 600,
+        "Top": 397
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508UrineVolume",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 11,
+        "Component": "spnedtUrineVolume",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Left": 600,
+        "Top": 213
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508Anticoagulant",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 12,
+        "Component": "edtAnticoag",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Left": 680,
+        "Top": 93
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508DoseTime",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 13,
+        "Component": "calDoseTime",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Left": 419,
+        "Top": 118
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508DrawTime",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 14,
+        "Component": "calDrawTime",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Left": 715,
+        "Top": 126
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508PageControl",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 99,
+        "Component": "pgctrlText",
+        "OnCaptionQuery": "VA508GenericCaptionQuery",
+        "OnInstructionsQuery": "VA508PageControlInstructionsQuery",
+        "Instructions": "Use the left and right arrow keys to change tabs",
+        "Left": 32,
+        "Top": 440
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508cbxSpecimenSelect",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Component": "cbxSpecimenSelect",
+        "OnInstructionsQuery": "VA508cbxSpecimenSelectInstructionsQuery",
+        "Instructions": "0",
+        "Left": 81,
+        "Top": 235
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "class": "TfrmTIUTemplates",
+  "name": "frmTIUTemplates",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Caption": "TIU Templates ",
+    "ClientHeight": 202,
+    "ClientWidth": 292,
+    "Position": "poOwnerFormCenter",
+    "ExplicitWidth": 308,
+    "ExplicitHeight": 241,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TBevel",
+      "name": "bvlNotesTitles",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 161,
+        "Width": 292,
+        "Height": 2,
+        "Align": "alBottom",
+        "ExplicitLeft": 118,
+        "ExplicitTop": 10,
+        "ExplicitWidth": 225
+      },
+      "children": []
+    },
+    {
+      "class": "TGridPanel",
+      "name": "gpDetails",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 292,
+        "Height": 161,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800340"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "rgNavigationPos",
+              "Row": 5
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "ckbHighlight",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "gbHighlightColor",
+              "Row": 3
+            }
+          }
+        ],
+        "Ctl3D": true,
+        "ParentBackground": false,
+        "ParentCtl3D": false,
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800240"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000b00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800240"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000dc0440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800240"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000b00440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          }
+        ],
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TRadioGroup",
+          "name": "rgNavigationPos",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 16,
+            "Top": 101,
+            "Width": 260,
+            "Height": 44,
+            "Align": "alClient",
+            "Caption": "Navigation Bar Position",
+            "Columns": 4,
+            "Ctl3D": true,
+            "ItemIndex": 0,
+            "Items.Strings": [
+              "Top",
+              "Left",
+              "Right",
+              "Bottom"
+            ],
+            "ParentCtl3D": false,
+            "TabOrder": 2,
+            "OnClick": "rgNavigationPosClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TCheckBox",
+          "name": "ckbHighlight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 16,
+            "Top": 8,
+            "Width": 260,
+            "Height": 25,
+            "Margins.Left": 12,
+            "Align": "alTop",
+            "Caption": "Highlight Required Fields without Value",
+            "TabOrder": 0,
+            "OnClick": "ckbHighlightClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TGroupBox",
+          "name": "gbHighlightColor",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 16,
+            "Top": 38,
+            "Width": 260,
+            "Height": 55,
+            "Align": "alClient",
+            "Caption": "Highlight color",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TColorBox",
+              "name": "cbHighlightColor",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 10,
+                "Top": 23,
+                "Width": 240,
+                "Height": 22,
+                "Margins.Left": 8,
+                "Margins.Top": 8,
+                "Margins.Right": 8,
+                "Align": "alClient",
+                "DefaultColorColor": "clYellow",
+                "Selected": "clYellow",
+                "Style": [
+                  "cbStandardColors",
+                  "cbPrettyNames"
+                ],
+                "BevelInner": "bvNone",
+                "Color": "clBtnFace",
+                "TabOrder": 0,
+                "OnChange": "cbHighlightColorChange"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TGridPanel",
+      "name": "gpButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 163,
+        "Width": 292,
+        "Height": 39,
+        "Margins.Bottom": 55,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000960540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000960540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800140"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000960540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800340"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "btnDefaults",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 3,
+              "Control": "btnOK",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 5,
+              "Control": "btnCancel",
+              "Row": 1
+            }
+          }
+        ],
+        "ParentBackground": false,
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800240"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000b00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800240"
+              }
+            }
+          }
+        ],
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnDefaults",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 16,
+            "Top": 8,
+            "Width": 75,
+            "Height": 22,
+            "HelpContext": 9996,
+            "Align": "alClient",
+            "Caption": "Defaults",
+            "TabOrder": 0,
+            "OnClick": "btnDefaultsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 122,
+            "Top": 8,
+            "Width": 75,
+            "Height": 22,
+            "HelpContext": 9996,
+            "Align": "alClient",
+            "Caption": "OK",
+            "Default": true,
+            "ModalResult": 1,
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 201,
+            "Top": 8,
+            "Width": 75,
+            "Height": 22,
+            "HelpContext": 9997,
+            "Align": "alClient",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 2
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 248,
+        "Top": 8,
+        "Data": [
+          [
+            "Component = frmTIUTemplates",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbHighlightColor",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = rgNavigationPos",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = gpButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDefaults",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = gpDetails",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ckbHighlight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = gbHighlightColor",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

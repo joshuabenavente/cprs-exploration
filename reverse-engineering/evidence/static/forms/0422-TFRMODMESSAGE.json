@@ -1,0 +1,93 @@
+{
+  "class": "TfrmODMessage",
+  "name": "frmODMessage",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 271,
+    "Top": 515,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "BorderStyle": "bsToolWindow",
+    "ClientHeight": 39,
+    "ClientWidth": 374,
+    "FormStyle": "fsStayOnTop",
+    "Position": "poOwnerFormCenter",
+    "Visible": true,
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "DesignSize": [
+      374,
+      39
+    ],
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TImage",
+      "name": "imgMessage",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 4,
+        "Top": 4,
+        "Width": 32,
+        "Height": 32
+      },
+      "children": []
+    },
+    {
+      "class": "TRichEdit",
+      "name": "memMessage",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 40,
+        "Top": 4,
+        "Width": 332,
+        "Height": 32,
+        "Anchors": [
+          "akLeft",
+          "akTop",
+          "akRight",
+          "akBottom"
+        ],
+        "Color": "clInfoBk",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clInfoText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "ScrollBars": "ssVertical",
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = memMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODMessage",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,2317 @@
+{
+  "class": "TfrmGraphs",
+  "name": "frmGraphs",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 265,
+    "Top": 279,
+    "BorderIcons": [],
+    "BorderStyle": "bsNone",
+    "Caption": "CPRS Graphing - CPRSpatient,One",
+    "ClientHeight": 394,
+    "ClientWidth": 583,
+    "PopupMenu": "mnuPopGraphStuff",
+    "Position": "poDesigned",
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 583,
+    "ExplicitHeight": 394,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlHeader",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 583,
+        "Height": 21,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlTemp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 410,
+            "Top": 0,
+            "Width": 72,
+            "Height": 17,
+            "TabOrder": 1,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TORAutoPanel",
+          "name": "pnlInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 583,
+            "Height": 21,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Select multiple items using Ctrl-click or Shift-click.",
+            "Color": "clCream",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -12,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentFont": false,
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TChart",
+          "name": "chartBase",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 144,
+            "Top": -2,
+            "Width": 103,
+            "Height": 16,
+            "AllowPanning": "pmNone",
+            "BackWall.Brush.Style": "bsClear",
+            "Gradient.EndColor": "clPurple",
+            "Gradient.Visible": true,
+            "Legend.Alignment": "laTop",
+            "Legend.LegendStyle": "lsSeries",
+            "Legend.ResizeChart": false,
+            "Title.Text.Strings": [
+              "fsdfs dfs fsd"
+            ],
+            "Title.Visible": false,
+            "OnClickLegend": "chartBaseClickLegend",
+            "OnClickSeries": "chartBaseClickSeries",
+            "OnUndoZoom": "ChartOnUndoZoom",
+            "OnZoom": "ChartOnZoom",
+            "BottomAxis.Automatic": false,
+            "BottomAxis.AutomaticMaximum": false,
+            "BottomAxis.AutomaticMinimum": false,
+            "BottomAxis.Increment": {
+              "extended80_hex": "4095600bb6600bb6f43f"
+            },
+            "BottomAxis.Maximum": {
+              "extended80_hex": "00000000000000c80340"
+            },
+            "BottomAxis.Visible": false,
+            "TopAxis.LabelsOnAxis": false,
+            "View3D": false,
+            "Zoom.Allow": false,
+            "Zoom.Pen.Color": "clFuchsia",
+            "Color": "clRed",
+            "TabOrder": 0,
+            "Visible": false,
+            "OnDblClick": "mnuPopGraphDetailsClick",
+            "OnMouseDown": "chartBaseMouseDown",
+            "OnMouseUp": "chartBaseMouseUp",
+            "DefaultCanvas": "TGDIPlusCanvas",
+            "ColorPaletteIndex": 13
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlFooter",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 366,
+        "Width": 583,
+        "Height": 28,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblDateRange",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 76,
+            "Height": 22,
+            "Align": "alLeft",
+            "Caption": "Date Range:",
+            "ExplicitHeight": 16
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 511,
+            "Top": 3,
+            "Width": 69,
+            "Height": 22,
+            "Align": "alRight",
+            "Caption": "Close",
+            "TabOrder": 4,
+            "OnClick": "btnCloseClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnChangeSettings",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 421,
+            "Top": 3,
+            "Width": 84,
+            "Height": 22,
+            "Align": "alRight",
+            "Caption": "Settings...",
+            "TabOrder": 3,
+            "OnClick": "btnChangeSettingsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboDateRange",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 85,
+            "Top": 3,
+            "Width": 119,
+            "Height": 24,
+            "Style": "orcsDropDown",
+            "Align": "alLeft",
+            "AutoSelect": true,
+            "Caption": "",
+            "Color": "clWindow",
+            "DropDownCount": 9,
+            "Items.Strings": [
+              "S^Date Range...",
+              "1^Today",
+              "2^One Week",
+              "3^One Month",
+              "4^Six Months",
+              "5^One Year",
+              "6^Two Years",
+              "7^All Results"
+            ],
+            "ItemHeight": 16,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": false,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "TabStop": true,
+            "Text": "",
+            "OnChange": "cboDateRangeChange",
+            "OnDropDown": "cboDateRangeDropDown",
+            "OnExit": "cboDateRangeExit",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TCheckBox",
+          "name": "chkDualViews",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 207,
+            "Top": 0,
+            "Width": 84,
+            "Height": 28,
+            "Align": "alLeft",
+            "Caption": "Split Views",
+            "TabOrder": 1,
+            "OnClick": "chkDualViewsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnGraphSelections",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 304,
+            "Top": 3,
+            "Width": 111,
+            "Height": 22,
+            "Align": "alRight",
+            "Caption": "Select/Define...",
+            "TabOrder": 2,
+            "OnClick": "btnGraphSelectionsClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 21,
+        "Width": 583,
+        "Height": 345,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TSplitter",
+          "name": "splGraphs",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 245,
+            "Width": 583,
+            "Height": 3,
+            "Cursor": "crVSplit",
+            "Align": "alBottom",
+            "Beveled": true,
+            "Color": "clBtnShadow",
+            "ParentColor": false,
+            "OnMoved": "splGraphsMoved"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlTop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Left": 0,
+            "Top": 0,
+            "Width": 583,
+            "Height": 245,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TSplitter",
+              "name": "splItemsTop",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 146,
+                "Top": 0,
+                "Width": 2,
+                "Height": 245,
+                "AutoSnap": false,
+                "Beveled": true,
+                "MinSize": 15,
+                "OnMoved": "splItemsTopMoved"
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlItemsTop",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 146,
+                "Height": 245,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TPanel",
+                  "name": "pnlItemsTopInfo",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 146,
+                    "Height": 22,
+                    "Align": "alTop",
+                    "BevelOuter": "bvNone",
+                    "TabOrder": 0,
+                    "DesignSize": [
+                      146,
+                      22
+                    ]
+                  },
+                  "children": [
+                    {
+                      "class": "TBevel",
+                      "name": "bvlBottomLeft",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Width": 2,
+                        "Height": 22,
+                        "Align": "alLeft"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TBevel",
+                      "name": "bvlBottomRight",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 144,
+                        "Top": 0,
+                        "Width": 2,
+                        "Height": 22,
+                        "Align": "alRight",
+                        "Visible": false
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TCheckBox",
+                      "name": "chkItemsTop",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 8,
+                        "Top": 2,
+                        "Width": 134,
+                        "Height": 20,
+                        "Alignment": "taLeftJustify",
+                        "Anchors": [
+                          "akTop",
+                          "akRight"
+                        ],
+                        "Caption": "Individual Graphs",
+                        "Checked": true,
+                        "State": "cbChecked",
+                        "TabOrder": 0,
+                        "OnClick": "chkItemsTopClick"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "class": "TPageControl",
+                  "name": "pcTop",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 22,
+                    "Width": 146,
+                    "Height": 223,
+                    "ActivePage": "tsTopItems",
+                    "Align": "alClient",
+                    "TabOrder": 1
+                  },
+                  "children": [
+                    {
+                      "class": "TTabSheet",
+                      "name": "tsTopItems",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Caption": "Items"
+                      },
+                      "children": [
+                        {
+                          "class": "TListView",
+                          "name": "lvwItemsTop",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Width": 138,
+                            "Height": 192,
+                            "Align": "alClient",
+                            "BevelInner": "bvNone",
+                            "BevelOuter": "bvNone",
+                            "Columns": [
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "Item",
+                                  "Width": 98
+                                }
+                              },
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "Type",
+                                  "Width": 59
+                                }
+                              },
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "View",
+                                  "Width": 39
+                                }
+                              },
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "Classification"
+                                }
+                              },
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "Remote Location",
+                                  "Width": 148
+                                }
+                              }
+                            ],
+                            "HideSelection": false,
+                            "MultiSelect": true,
+                            "ReadOnly": true,
+                            "RowSelect": true,
+                            "ParentShowHint": false,
+                            "ShowHint": false,
+                            "TabOrder": 0,
+                            "ViewStyle": "vsReport",
+                            "OnChange": "lvwItemsTopChange",
+                            "OnClick": "lvwItemsTopClick",
+                            "OnColumnClick": "lvwItemsTopColumnClick",
+                            "OnCompare": "lvwItemsTopCompare",
+                            "OnEnter": "lvwItemsTopEnter",
+                            "OnKeyDown": "lvwItemsTopKeyDown"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TTabSheet",
+                      "name": "tsTopViews",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Caption": "Views",
+                        "ImageIndex": 1
+                      },
+                      "children": [
+                        {
+                          "class": "TSplitter",
+                          "name": "splViewsTop",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 0,
+                            "Top": 190,
+                            "Width": 138,
+                            "Height": 2,
+                            "Cursor": "crVSplit",
+                            "Align": "alBottom",
+                            "OnMoved": "splViewsTopMoved",
+                            "ExplicitTop": 196,
+                            "ExplicitWidth": 139
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TORListBox",
+                          "name": "lstViewsTop",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Width": 138,
+                            "Height": 190,
+                            "Align": "alClient",
+                            "ParentShowHint": false,
+                            "ShowHint": false,
+                            "TabOrder": 0,
+                            "OnEnter": "lstViewsTopEnter",
+                            "OnMouseDown": "lstViewsTopMouseDown",
+                            "Caption": "",
+                            "ItemTipColor": "clWindow",
+                            "LongList": false,
+                            "Pieces": "2",
+                            "OnChange": "lstViewsTopChange"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TRichEdit",
+                          "name": "memViewsTop",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 0,
+                            "Top": 192,
+                            "Width": 138,
+                            "Height": 0,
+                            "Align": "alBottom",
+                            "Color": "clCream",
+                            "Font.Charset": "ANSI_CHARSET",
+                            "Font.Color": "clWindowText",
+                            "Font.Height": -12,
+                            "Font.Name": "Courier New",
+                            "Font.Style": [],
+                            "Lines.Strings": [
+                              "View Definition"
+                            ],
+                            "ParentFont": false,
+                            "PlainText": true,
+                            "ReadOnly": true,
+                            "ScrollBars": "ssBoth",
+                            "TabOrder": 1,
+                            "WantReturns": false,
+                            "WordWrap": false,
+                            "Zoom": 100
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TTabSheet",
+                      "name": "tsTopCustom",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Caption": "Custom",
+                        "ImageIndex": 2
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlTopRightPad",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 50,
+                "Left": 568,
+                "Top": 0,
+                "Width": 15,
+                "Height": 245,
+                "Align": "alRight",
+                "BevelOuter": "bvNone",
+                "TabOrder": 1
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlScrollTopBase",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 148,
+                "Top": 0,
+                "Width": 419,
+                "Height": 245,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "TabOrder": 2,
+                "OnResize": "pnlScrollTopBaseResize"
+              },
+              "children": [
+                {
+                  "class": "TPanel",
+                  "name": "pnlBlankTop",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 419,
+                    "Height": 216,
+                    "Align": "alClient",
+                    "BevelOuter": "bvNone",
+                    "TabOrder": 2,
+                    "Visible": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TScrollBox",
+                  "name": "scrlTop",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 5,
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 419,
+                    "Height": 216,
+                    "Align": "alClient",
+                    "BevelInner": "bvNone",
+                    "BevelOuter": "bvNone",
+                    "BorderStyle": "bsNone",
+                    "Color": "clBtnFace",
+                    "ParentColor": false,
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TPanel",
+                  "name": "pnlDatelineTop",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 216,
+                    "Width": 419,
+                    "Height": 29,
+                    "Align": "alBottom",
+                    "BevelOuter": "bvNone",
+                    "TabOrder": 1
+                  },
+                  "children": [
+                    {
+                      "class": "TChart",
+                      "name": "chartDatelineTop",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 20,
+                        "Top": 0,
+                        "Width": 399,
+                        "Height": 29,
+                        "AllowPanning": "pmNone",
+                        "BackWall.Brush.Style": "bsClear",
+                        "BackWall.Pen.Visible": false,
+                        "Gradient.EndColor": "clWhite",
+                        "Gradient.StartColor": 8421631,
+                        "Legend.Alignment": "laBottom",
+                        "Legend.Color": "clCream",
+                        "Legend.LegendStyle": "lsSeries",
+                        "Legend.Shadow.HorizSize": 1,
+                        "Legend.Shadow.VertSize": 1,
+                        "Legend.Visible": false,
+                        "Title.Text.Strings": [
+                          ""
+                        ],
+                        "Title.Visible": false,
+                        "OnClickLegend": "chartBaseClickLegend",
+                        "OnClickSeries": "chartBaseClickSeries",
+                        "OnUndoZoom": "ChartOnUndoZoom",
+                        "OnZoom": "ChartOnZoom",
+                        "BottomAxis.Automatic": false,
+                        "BottomAxis.AutomaticMaximum": false,
+                        "BottomAxis.AutomaticMinimum": false,
+                        "BottomAxis.DateTimeFormat": "M/d/yyyy",
+                        "BottomAxis.Increment": {
+                          "extended80_hex": "4095600bb6600bb6f43f"
+                        },
+                        "BottomAxis.Maximum": {
+                          "extended80_hex": "00000000000000c80340"
+                        },
+                        "Frame.Visible": false,
+                        "LeftAxis.Automatic": false,
+                        "LeftAxis.AutomaticMaximum": false,
+                        "LeftAxis.AutomaticMinimum": false,
+                        "LeftAxis.Axis.Visible": false,
+                        "LeftAxis.Grid.Visible": false,
+                        "LeftAxis.Labels": false,
+                        "LeftAxis.LabelsFormat.Visible": false,
+                        "LeftAxis.LabelsOnAxis": false,
+                        "LeftAxis.Maximum": {
+                          "extended80_hex": "00000000000000900240"
+                        },
+                        "LeftAxis.MinorGrid.Visible": true,
+                        "LeftAxis.RoundFirstLabel": false,
+                        "LeftAxis.Title.Caption": " ",
+                        "LeftAxis.Visible": false,
+                        "RightAxis.Automatic": false,
+                        "RightAxis.AutomaticMaximum": false,
+                        "RightAxis.AutomaticMinimum": false,
+                        "RightAxis.Axis.Visible": false,
+                        "RightAxis.Labels": false,
+                        "RightAxis.LabelsFormat.Visible": false,
+                        "RightAxis.LabelsOnAxis": false,
+                        "RightAxis.RoundFirstLabel": false,
+                        "RightAxis.Visible": false,
+                        "TopAxis.LabelsOnAxis": false,
+                        "View3D": false,
+                        "View3DWalls": false,
+                        "Zoom.Pen.Color": "clFuchsia",
+                        "Align": "alClient",
+                        "BevelOuter": "bvNone",
+                        "TabOrder": 0,
+                        "OnDblClick": "mnuPopGraphDetailsClick",
+                        "OnMouseDown": "chartBaseMouseDown",
+                        "OnMouseUp": "chartBaseMouseUp",
+                        "DefaultCanvas": "TGDIPlusCanvas",
+                        "ColorPaletteIndex": 13
+                      },
+                      "children": [
+                        {
+                          "class": "TGanttSeries",
+                          "name": "serDatelineTop",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Legend.Visible": false,
+                            "SeriesColor": "clRed",
+                            "ShowInLegend": false,
+                            "OnGetMarkText": "serDatelineTopGetMarkText",
+                            "ClickableLine": false,
+                            "Pointer.Brush.Gradient.EndColor": 10708548,
+                            "Pointer.Gradient.EndColor": 10708548,
+                            "Pointer.InflateMargins": false,
+                            "Pointer.Style": "psRectangle",
+                            "XValues.Name": "Start",
+                            "XValues.Order": "loAscending",
+                            "YValues.Name": "Y",
+                            "YValues.Order": "loNone",
+                            "Callout.Style": "psRightTriangle",
+                            "Callout.Arrow.Visible": false,
+                            "StartValues.Name": "Start",
+                            "StartValues.Order": "loAscending",
+                            "EndValues.Name": "End",
+                            "EndValues.Order": "loNone",
+                            "NextTask.Name": "NextTask",
+                            "NextTask.Order": "loNone"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TORAutoPanel",
+                      "name": "pnlDatelineTopSpacer",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Width": 20,
+                        "Height": 29,
+                        "Align": "alLeft",
+                        "BevelOuter": "bvNone",
+                        "TabOrder": 1
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TMemo",
+              "name": "memTop",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 567,
+                "Top": 0,
+                "Width": 1,
+                "Height": 245,
+                "Align": "alRight",
+                "BevelInner": "bvNone",
+                "BevelOuter": "bvNone",
+                "BorderStyle": "bsNone",
+                "Color": "clBtnFace",
+                "Lines.Strings": [
+                  "m",
+                  "e",
+                  "m",
+                  "T",
+                  "o",
+                  "p"
+                ],
+                "TabOrder": 3,
+                "Visible": false,
+                "OnEnter": "memTopEnter",
+                "OnExit": "memTopExit",
+                "OnKeyDown": "memTopKeyDown"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Left": 0,
+            "Top": 248,
+            "Width": 583,
+            "Height": 97,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TSplitter",
+              "name": "splItemsBottom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 146,
+                "Top": 0,
+                "Width": 2,
+                "Height": 97,
+                "AutoSnap": false,
+                "Beveled": true,
+                "MinSize": 15,
+                "OnMoved": "splItemsBottomMoved"
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlItemsBottom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 146,
+                "Height": 97,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TPanel",
+                  "name": "pnlItemsBottomInfo",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 146,
+                    "Height": 22,
+                    "Align": "alTop",
+                    "BevelOuter": "bvNone",
+                    "TabOrder": 0
+                  },
+                  "children": [
+                    {
+                      "class": "TBevel",
+                      "name": "bvlTopLeft",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Width": 2,
+                        "Height": 22,
+                        "Align": "alLeft"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TBevel",
+                      "name": "bvlTopRight",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 144,
+                        "Top": 0,
+                        "Width": 2,
+                        "Height": 22,
+                        "Align": "alRight",
+                        "Visible": false
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TCheckBox",
+                      "name": "chkItemsBottom",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 8,
+                        "Top": 2,
+                        "Width": 134,
+                        "Height": 20,
+                        "Alignment": "taLeftJustify",
+                        "Caption": "Individual Graphs",
+                        "Checked": true,
+                        "State": "cbChecked",
+                        "TabOrder": 0,
+                        "OnClick": "chkItemsBottomClick",
+                        "OnEnter": "chkItemsBottomEnter"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "class": "TPageControl",
+                  "name": "pcBottom",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 22,
+                    "Width": 146,
+                    "Height": 75,
+                    "ActivePage": "tsBottomItems",
+                    "Align": "alClient",
+                    "TabOrder": 1
+                  },
+                  "children": [
+                    {
+                      "class": "TTabSheet",
+                      "name": "tsBottomItems",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Caption": "Items"
+                      },
+                      "children": [
+                        {
+                          "class": "TListView",
+                          "name": "lvwItemsBottom",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Width": 138,
+                            "Height": 44,
+                            "Align": "alClient",
+                            "BevelInner": "bvNone",
+                            "BevelOuter": "bvNone",
+                            "Columns": [
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "Item",
+                                  "Width": 98
+                                }
+                              },
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "Type",
+                                  "Width": 59
+                                }
+                              },
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "View",
+                                  "Width": 39
+                                }
+                              },
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "Classification"
+                                }
+                              },
+                              {
+                                "index": null,
+                                "properties": {
+                                  "Caption": "Remote Location",
+                                  "Width": 148
+                                }
+                              }
+                            ],
+                            "HideSelection": false,
+                            "MultiSelect": true,
+                            "ReadOnly": true,
+                            "RowSelect": true,
+                            "ParentShowHint": false,
+                            "ShowHint": false,
+                            "TabOrder": 0,
+                            "ViewStyle": "vsReport",
+                            "OnChange": "lvwItemsBottomChange",
+                            "OnClick": "lvwItemsBottomClick",
+                            "OnColumnClick": "lvwItemsBottomColumnClick",
+                            "OnCompare": "lvwItemsBottomCompare",
+                            "OnEnter": "lvwItemsBottomEnter",
+                            "OnKeyDown": "lvwItemsTopKeyDown"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TTabSheet",
+                      "name": "tsBottomViews",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Caption": "Views",
+                        "ImageIndex": 1
+                      },
+                      "children": [
+                        {
+                          "class": "TSplitter",
+                          "name": "splViewsBottom",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 0,
+                            "Top": 42,
+                            "Width": 138,
+                            "Height": 2,
+                            "Cursor": "crVSplit",
+                            "Align": "alBottom",
+                            "OnMoved": "splViewsTopMoved",
+                            "ExplicitTop": 48,
+                            "ExplicitWidth": 139
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TORListBox",
+                          "name": "lstViewsBottom",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Width": 138,
+                            "Height": 42,
+                            "Align": "alClient",
+                            "ParentShowHint": false,
+                            "ShowHint": false,
+                            "TabOrder": 0,
+                            "OnEnter": "lstViewsBottomEnter",
+                            "Caption": "",
+                            "ItemTipColor": "clWindow",
+                            "LongList": false,
+                            "Pieces": "2",
+                            "OnChange": "lstViewsBottomChange"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TRichEdit",
+                          "name": "memViewsBottom",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 0,
+                            "Top": 44,
+                            "Width": 138,
+                            "Height": 0,
+                            "Align": "alBottom",
+                            "Color": "clCream",
+                            "Font.Charset": "ANSI_CHARSET",
+                            "Font.Color": "clWindowText",
+                            "Font.Height": -12,
+                            "Font.Name": "Courier New",
+                            "Font.Style": [],
+                            "Lines.Strings": [
+                              "View Definition"
+                            ],
+                            "ParentFont": false,
+                            "PlainText": true,
+                            "ReadOnly": true,
+                            "ScrollBars": "ssBoth",
+                            "TabOrder": 1,
+                            "WantReturns": false,
+                            "WordWrap": false,
+                            "Zoom": 100
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TTabSheet",
+                      "name": "tsBottomCustom",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Caption": "Custom",
+                        "ImageIndex": 2
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlBottomRightPad",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 50,
+                "Left": 568,
+                "Top": 0,
+                "Width": 15,
+                "Height": 97,
+                "Align": "alRight",
+                "BevelOuter": "bvNone",
+                "TabOrder": 1
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlScrollBottomBase",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 148,
+                "Top": 0,
+                "Width": 419,
+                "Height": 97,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "TabOrder": 2
+              },
+              "children": [
+                {
+                  "class": "TPanel",
+                  "name": "pnlBlankBottom",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 419,
+                    "Height": 67,
+                    "Align": "alClient",
+                    "BevelOuter": "bvNone",
+                    "TabOrder": 2,
+                    "Visible": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TPanel",
+                  "name": "pnlDatelineBottom",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 67,
+                    "Width": 419,
+                    "Height": 30,
+                    "Align": "alBottom",
+                    "BevelOuter": "bvNone",
+                    "TabOrder": 1
+                  },
+                  "children": [
+                    {
+                      "class": "TChart",
+                      "name": "chartDatelineBottom",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 20,
+                        "Top": 0,
+                        "Width": 399,
+                        "Height": 30,
+                        "AllowPanning": "pmNone",
+                        "BackWall.Brush.Style": "bsClear",
+                        "BackWall.Pen.Visible": false,
+                        "Gradient.EndColor": "clGradientActiveCaption",
+                        "Legend.Alignment": "laBottom",
+                        "Legend.Color": "clCream",
+                        "Legend.LegendStyle": "lsSeries",
+                        "Legend.Shadow.HorizSize": 1,
+                        "Legend.Shadow.VertSize": 1,
+                        "Legend.Visible": false,
+                        "Title.Text.Strings": [
+                          ""
+                        ],
+                        "Title.Visible": false,
+                        "OnClickLegend": "chartBaseClickLegend",
+                        "OnClickSeries": "chartBaseClickSeries",
+                        "OnUndoZoom": "ChartOnUndoZoom",
+                        "OnZoom": "ChartOnZoom",
+                        "BottomAxis.Automatic": false,
+                        "BottomAxis.AutomaticMaximum": false,
+                        "BottomAxis.AutomaticMinimum": false,
+                        "BottomAxis.DateTimeFormat": "M/d/yyyy",
+                        "BottomAxis.Increment": {
+                          "extended80_hex": "4095600bb6600bb6f43f"
+                        },
+                        "BottomAxis.Maximum": {
+                          "extended80_hex": "00000000000000c80340"
+                        },
+                        "Frame.Visible": false,
+                        "LeftAxis.Automatic": false,
+                        "LeftAxis.AutomaticMaximum": false,
+                        "LeftAxis.AutomaticMinimum": false,
+                        "LeftAxis.Axis.Visible": false,
+                        "LeftAxis.Grid.Visible": false,
+                        "LeftAxis.Labels": false,
+                        "LeftAxis.LabelsFormat.Visible": false,
+                        "LeftAxis.LabelsOnAxis": false,
+                        "LeftAxis.Maximum": {
+                          "extended80_hex": "00000000000000900240"
+                        },
+                        "LeftAxis.MinorGrid.Visible": true,
+                        "LeftAxis.RoundFirstLabel": false,
+                        "LeftAxis.Title.Caption": " ",
+                        "RightAxis.Automatic": false,
+                        "RightAxis.AutomaticMaximum": false,
+                        "RightAxis.AutomaticMinimum": false,
+                        "RightAxis.Axis.Visible": false,
+                        "RightAxis.Labels": false,
+                        "RightAxis.LabelsFormat.Visible": false,
+                        "RightAxis.LabelsOnAxis": false,
+                        "RightAxis.RoundFirstLabel": false,
+                        "RightAxis.Visible": false,
+                        "TopAxis.LabelsOnAxis": false,
+                        "View3D": false,
+                        "View3DWalls": false,
+                        "Zoom.Pen.Color": "clFuchsia",
+                        "Align": "alClient",
+                        "BevelOuter": "bvNone",
+                        "TabOrder": 0,
+                        "OnDblClick": "mnuPopGraphDetailsClick",
+                        "OnMouseDown": "chartBaseMouseDown",
+                        "OnMouseUp": "chartBaseMouseUp",
+                        "DefaultCanvas": "TGDIPlusCanvas",
+                        "ColorPaletteIndex": 13
+                      },
+                      "children": [
+                        {
+                          "class": "TGanttSeries",
+                          "name": "serDatelineBottom",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Legend.Visible": false,
+                            "Marks.Emboss.Color": 8553090,
+                            "Marks.Shadow.Color": 8750469,
+                            "SeriesColor": "clRed",
+                            "ShowInLegend": false,
+                            "OnGetMarkText": "serDatelineTopGetMarkText",
+                            "ClickableLine": false,
+                            "Pointer.Brush.Gradient.EndColor": 11842740,
+                            "Pointer.Gradient.EndColor": 11842740,
+                            "Pointer.InflateMargins": true,
+                            "Pointer.Style": "psRectangle",
+                            "XValues.Name": "Start",
+                            "XValues.Order": "loAscending",
+                            "YValues.Name": "Y",
+                            "YValues.Order": "loNone",
+                            "Callout.Style": "psRightTriangle",
+                            "Callout.Arrow.Visible": false,
+                            "StartValues.Name": "Start",
+                            "StartValues.Order": "loAscending",
+                            "EndValues.Name": "End",
+                            "EndValues.Order": "loNone",
+                            "NextTask.Name": "NextTask",
+                            "NextTask.Order": "loNone"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TORAutoPanel",
+                      "name": "pnlDatelineBottomSpacer",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Width": 20,
+                        "Height": 30,
+                        "Align": "alLeft",
+                        "BevelOuter": "bvNone",
+                        "TabOrder": 1
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "class": "TScrollBox",
+                  "name": "scrlBottom",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 5,
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 419,
+                    "Height": 67,
+                    "Align": "alClient",
+                    "BevelInner": "bvNone",
+                    "BorderStyle": "bsNone",
+                    "Color": "clBtnFace",
+                    "ParentColor": false,
+                    "TabOrder": 0
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMemo",
+              "name": "memBottom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 567,
+                "Top": 0,
+                "Width": 1,
+                "Height": 97,
+                "Align": "alRight",
+                "BevelInner": "bvNone",
+                "BevelOuter": "bvNone",
+                "BorderStyle": "bsNone",
+                "Color": "clBtnFace",
+                "Lines.Strings": [
+                  "m",
+                  "e",
+                  "m",
+                  "T",
+                  "o",
+                  "p"
+                ],
+                "TabOrder": 3,
+                "Visible": false,
+                "OnEnter": "memBottomEnter",
+                "OnExit": "memBottomExit",
+                "OnKeyDown": "memBottomKeyDown"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 232,
+        "Top": 80,
+        "Data": [
+          [
+            "Component = pnlHeader",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTemp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chartBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlFooter",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnChangeSettings",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboDateRange",
+            "Label = lblDateRange",
+            "Status = stsOK"
+          ],
+          [
+            "Component = chkDualViews",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnGraphSelections",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlItemsTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlItemsTopInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkItemsTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTopRightPad",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlScrollTopBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBlankTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = scrlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDatelineTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chartDatelineTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDatelineTopSpacer",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlItemsBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlItemsBottomInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkItemsBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottomRightPad",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlScrollBottomBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBlankBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDatelineBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chartDatelineBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDatelineBottomSpacer",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = scrlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmGraphs",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pcTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tsTopItems",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tsTopViews",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tsTopCustom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lvwItemsTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pcBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tsBottomItems",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tsBottomViews",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tsBottomCustom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lvwItemsBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstViewsTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstViewsBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memViewsTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memViewsBottom",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "mnuPopGraphStuff",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnPopup": "mnuPopGraphStuffPopup",
+        "Left": 262,
+        "Top": 80
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphDetails",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Details...",
+            "Enabled": false,
+            "OnClick": "mnuPopGraphDetailsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphValueMarks",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Values...",
+            "Enabled": false,
+            "OnClick": "mnuPopGraphValueMarksClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphViewDefinition",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "View Definition...",
+            "OnClick": "mnuPopGraphViewDefinitionClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphDefineViews",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Select/Define...",
+            "OnClick": "btnGraphSelectionsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphChangeViews",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Settings...",
+            "OnClick": "btnChangeSettingsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N4",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphReset",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Reset Display",
+            "ShortCut": 45,
+            "OnClick": "mnuPopGraphResetClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphZoomBack",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Zoom Back",
+            "Enabled": false,
+            "ShortCut": 46,
+            "OnClick": "mnuPopGraphZoomBackClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphSplit",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Split Numerics/Events",
+            "OnClick": "mnuPopGraphSplitClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphSwap",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Swap",
+            "OnClick": "mnuPopGraphSwapClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphIsolate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Move",
+            "Enabled": false,
+            "OnClick": "mnuPopGraphIsolateClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphRemove",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Remove",
+            "Enabled": false,
+            "OnClick": "mnuPopGraphRemoveClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphStayOnTop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Stay on Top",
+            "OnClick": "mnuPopGraphStayOnTopClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphDualViews",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Dual Views",
+            "Visible": false,
+            "OnClick": "mnuPopGraphDualViewsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphSeparate1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Individual Graphs",
+            "Visible": false,
+            "OnClick": "mnuPopGraphSeparate1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraph3D",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "3D",
+            "OnClick": "mnuPopGraph3DClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphLegend",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Legend",
+            "Visible": false,
+            "OnClick": "mnuPopGraphLegendClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphValues",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Values",
+            "OnClick": "mnuPopGraphValuesClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphFixed",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Fixed Date Range",
+            "Visible": false,
+            "OnClick": "mnuPopGraphFixedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphVertical",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Vertical Zoom",
+            "OnClick": "mnuPopGraphVerticalClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphHorizontal",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Horizontal Zoom",
+            "Visible": false,
+            "OnClick": "mnuPopGraphHorizontalClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphLines",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Lines",
+            "Visible": false,
+            "OnClick": "mnuPopGraphLinesClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphDates",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Dates",
+            "Visible": false,
+            "OnClick": "mnuPopGraphDatesClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphSort",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Sort by Type",
+            "Visible": false,
+            "OnClick": "mnuPopGraphSortClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphClear",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Clear Background",
+            "Visible": false,
+            "OnClick": "mnuPopGraphClearClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphGradient",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Gradient",
+            "Visible": false,
+            "OnClick": "mnuPopGraphGradientClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphHints",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Hints",
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphMergeLabs",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Merge Labs",
+            "OnClick": "mnuPopGraphMergeLabsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphCopy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Copy",
+            "ShortCut": 16451,
+            "OnClick": "mnuPopGraphPrintClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphExport",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Export Data...",
+            "OnClick": "mnuPopGraphExportClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphPrint",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Print...",
+            "OnClick": "mnuPopGraphPrintClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-",
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnutest",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "testing",
+            "Enabled": false,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuFunctions1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Functions",
+            "Enabled": false,
+            "Visible": false
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuInverseValues",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Inverse Values"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuStandardDeviations",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Standard Deviations"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuCustom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Custom",
+            "Enabled": false,
+            "Visible": false,
+            "OnClick": "mnuCustomClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuMHasNumeric1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "MH as Numeric",
+            "Enabled": false,
+            "Visible": false,
+            "OnClick": "mnuMHasNumeric1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuGraphData",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Show Graph Data...",
+            "Enabled": false,
+            "Visible": false,
+            "OnClick": "mnuGraphDataClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopGraphToday",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Reset Today...",
+            "Enabled": false,
+            "Visible": false,
+            "OnClick": "mnuPopGraphTodayClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuTestCount",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "test count",
+            "Enabled": false,
+            "Visible": false
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TORDateRangeDlg",
+      "name": "calDateRange",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "DateOnly": false,
+        "Instruction": "Enter a date range -",
+        "LabelStart": "Begin Date",
+        "LabelStop": "End Date",
+        "RequireTime": false,
+        "Format": "mmm d,yy@hh:nn",
+        "Left": 291,
+        "Top": 80
+      },
+      "children": []
+    },
+    {
+      "class": "TORDateTimeDlg",
+      "name": "dlgDate",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "FMDateTime": {
+          "extended80_hex": "00000000009898b91440"
+        },
+        "DateOnly": true,
+        "RequireTime": false,
+        "Left": 320,
+        "Top": 80
+      },
+      "children": []
+    },
+    {
+      "class": "TTimer",
+      "name": "timHintPause",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Enabled": false,
+        "Interval": 100,
+        "OnTimer": "timHintPauseTimer",
+        "Left": 349,
+        "Top": 80
+      },
+      "children": []
+    }
+  ]
+}

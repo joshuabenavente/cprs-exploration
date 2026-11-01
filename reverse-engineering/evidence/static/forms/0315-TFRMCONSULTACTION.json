@@ -1,0 +1,877 @@
+{
+  "class": "TfrmConsultAction",
+  "name": "frmConsultAction",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 277,
+    "Top": 217,
+    "BorderIcons": [],
+    "Caption": "frmConsultAction",
+    "ClientHeight": 426,
+    "ClientWidth": 584,
+    "Constraints.MinHeight": 406,
+    "Constraints.MinWidth": 600,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "OnResize": "ORFormResize",
+    "ExplicitWidth": 600,
+    "ExplicitHeight": 465,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBase",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 582,
+        "Height": 311,
+        "Margins.Bottom": 6,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0,
+        "ExplicitHeight": 357
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlForward",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 224,
+            "Height": 311,
+            "Align": "alLeft",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TOROffsetLabel",
+              "name": "lblToService",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 218,
+                "Height": 19,
+                "Align": "alTop",
+                "Caption": "To service",
+                "HorzOffset": 2,
+                "Transparent": false,
+                "VertOffset": 6,
+                "WordWrap": false,
+                "ExplicitLeft": 2,
+                "ExplicitTop": 0,
+                "ExplicitWidth": 120
+              },
+              "children": []
+            },
+            {
+              "class": "TOROffsetLabel",
+              "name": "lblUrgency",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 270,
+                "Width": 224,
+                "Height": 20,
+                "Align": "alBottom",
+                "Caption": "Urgency",
+                "HorzOffset": 2,
+                "Transparent": false,
+                "VertOffset": 6,
+                "WordWrap": false,
+                "ExplicitTop": 238
+              },
+              "children": []
+            },
+            {
+              "class": "TMemo",
+              "name": "Label1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 18,
+                "Top": 123,
+                "Width": 185,
+                "Height": 65,
+                "TabStop": false,
+                "Alignment": "taCenter",
+                "BorderStyle": "bsNone",
+                "Color": "clBtnFace",
+                "Lines.Strings": [
+                  "A procedure can only be forwarded to ",
+                  "other services defined as being able to ",
+                  "perform that procedure.  Valid ",
+                  "selections for this procedure are listed ",
+                  "in the drop-down box above."
+                ],
+                "ReadOnly": true,
+                "TabOrder": 3
+              },
+              "children": []
+            },
+            {
+              "class": "TORComboBox",
+              "name": "cboUrgency",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 290,
+                "Width": 224,
+                "Height": 21,
+                "Style": "orcsDropDown",
+                "Align": "alBottom",
+                "AutoSelect": true,
+                "Caption": "Urgency",
+                "Color": "clWindow",
+                "DropDownCount": 8,
+                "ItemHeight": 13,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": true,
+                "LongList": false,
+                "LookupPiece": 0,
+                "MaxLength": 0,
+                "Pieces": "2",
+                "Sorted": false,
+                "SynonymChars": "<>",
+                "TabOrder": 2,
+                "Text": "",
+                "CharsNeedMatch": 1
+              },
+              "children": []
+            },
+            {
+              "class": "TORTreeView",
+              "name": "treService",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 103,
+                "Width": 218,
+                "Height": 164,
+                "Margins.Top": 0,
+                "Align": "alClient",
+                "HideSelection": false,
+                "Indent": 19,
+                "ReadOnly": true,
+                "TabOrder": 1,
+                "OnChange": "treServiceChange",
+                "Caption": "To service",
+                "NodePiece": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TORComboBox",
+              "name": "cboService",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 28,
+                "Width": 218,
+                "Height": 75,
+                "Margins.Bottom": 0,
+                "Style": "orcsSimple",
+                "Align": "alTop",
+                "AutoSelect": true,
+                "Caption": "To service",
+                "Color": "clWindow",
+                "DropDownCount": 8,
+                "ItemHeight": 13,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": true,
+                "LongList": false,
+                "LookupPiece": 0,
+                "MaxLength": 0,
+                "Pieces": "2",
+                "Sorted": true,
+                "SynonymChars": "<>",
+                "TabOrder": 0,
+                "Text": "",
+                "OnKeyPause": "cboServiceSelect",
+                "OnMouseClick": "cboServiceSelect",
+                "CharsNeedMatch": 1
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlOther",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 224,
+            "Top": 0,
+            "Width": 358,
+            "Height": 311,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "pnlSigFind",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 358,
+                "Height": 41,
+                "Align": "alTop",
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TRadioGroup",
+                  "name": "grpSigFindings",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 352,
+                    "Height": 41,
+                    "Align": "alTop",
+                    "Caption": "Significant Findings - Current status:  ",
+                    "Columns": 3,
+                    "Ctl3D": true,
+                    "Items.Strings": [
+                      "&Yes",
+                      "&No",
+                      "&Unknown"
+                    ],
+                    "ParentCtl3D": false,
+                    "TabOrder": 0,
+                    "OnClick": "grpSigFindingsClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlComments",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 41,
+                "Width": 358,
+                "Height": 223,
+                "Align": "alClient",
+                "Alignment": "taLeftJustify",
+                "BevelOuter": "bvNone",
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TOROffsetLabel",
+                  "name": "lblComments",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 352,
+                    "Height": 19,
+                    "Align": "alTop",
+                    "Caption": "Comments",
+                    "HorzOffset": 2,
+                    "Transparent": false,
+                    "VertOffset": 6,
+                    "WordWrap": false,
+                    "ExplicitLeft": 0,
+                    "ExplicitTop": 0,
+                    "ExplicitWidth": 368
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCaptionMemo",
+                  "name": "memComments",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 28,
+                    "Width": 352,
+                    "Height": 192,
+                    "Align": "alClient",
+                    "Font.Charset": "ANSI_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "Courier New",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "ScrollBars": "ssVertical",
+                    "TabOrder": 0,
+                    "OnChange": "ControlChange",
+                    "Caption": "Comments",
+                    "ExplicitWidth": 348,
+                    "ExplicitHeight": 191
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlAlert",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 264,
+                "Width": 358,
+                "Height": 47,
+                "Align": "alBottom",
+                "AutoSize": true,
+                "BevelOuter": "bvNone",
+                "TabOrder": 2
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblAutoAlerts",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 352,
+                    "Height": 4,
+                    "Align": "alTop",
+                    "TabOrder": 1
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCheckBox",
+                  "name": "ckAlert",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 17,
+                    "Width": 352,
+                    "Height": 27,
+                    "Align": "alTop",
+                    "Caption": "Send additional alerts",
+                    "TabOrder": 0,
+                    "OnClick": "ckAlertClick"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 393,
+        "Width": 582,
+        "Height": 30,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TORAlignButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 504,
+            "Top": 3,
+            "Width": 75,
+            "Height": 24,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 2,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TORAlignButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 423,
+            "Top": 3,
+            "Width": 75,
+            "Height": 24,
+            "Align": "alRight",
+            "Caption": "OK",
+            "TabOrder": 1,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnLaunchToolbox",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 3,
+            "Top": 4,
+            "Width": 130,
+            "Height": 25,
+            "Caption": "Open Consult Toolbox",
+            "TabOrder": 0,
+            "OnClick": "btnLaunchToolboxClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TGridPanel",
+      "name": "pnlAll",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 320,
+        "Width": 588,
+        "Height": 70,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000e60640"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "c560c1c79956e5c90440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "3b9f3e3866a91ac60440"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "lblAttentionOf",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblDateofAction",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "lblActionBy",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "cboAttentionOf",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "calDateofAction",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "cboPerson",
+              "Row": 1
+            }
+          }
+        ],
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAuto",
+              "Value": {
+                "extended80_hex": "00000000000000d00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAuto",
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          }
+        ],
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TOROffsetLabel",
+          "name": "lblAttentionOf",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 230,
+            "Height": 21,
+            "Align": "alTop",
+            "Caption": "Attention",
+            "HorzOffset": 2,
+            "Transparent": false,
+            "VertOffset": 6,
+            "WordWrap": false
+          },
+          "children": []
+        },
+        {
+          "class": "TOROffsetLabel",
+          "name": "lblDateofAction",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 231,
+            "Top": 1,
+            "Width": 180,
+            "Height": 21,
+            "Align": "alTop",
+            "Caption": "Date/time of this action",
+            "HorzOffset": 2,
+            "Transparent": false,
+            "VertOffset": 6,
+            "WordWrap": false
+          },
+          "children": []
+        },
+        {
+          "class": "TOROffsetLabel",
+          "name": "lblActionBy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 411,
+            "Top": 1,
+            "Width": 176,
+            "Height": 21,
+            "Align": "alTop",
+            "Caption": "Action by",
+            "HorzOffset": 2,
+            "Transparent": false,
+            "VertOffset": 6,
+            "WordWrap": false
+          },
+          "children": []
+        },
+        {
+          "class": "TORCheckComboBox",
+          "name": "cboAttentionOf",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 25,
+            "Width": 224,
+            "Height": 40,
+            "Style": "orcsDropDown",
+            "Align": "alTop",
+            "AutoSelect": true,
+            "Caption": "Attention",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": true,
+            "LookupPiece": 2,
+            "MaxLength": 0,
+            "Pieces": "2,3",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "Text": "",
+            "OnNeedData": "cboAttentionOfNeedData",
+            "CharsNeedMatch": 1,
+            "MainCheckBoxCaption": "Include Non-VA Providers",
+            "MainCheckBoxVisible": true,
+            "MainCheckBoxAlignment": "calBottom",
+            "OnMainCheckboxClick": "cboAttentionOfMainCheckboxClick",
+            "DropdownStyle": "ddsControl"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "calDateofAction",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 234,
+            "Top": 25,
+            "Width": 174,
+            "Height": 21,
+            "Align": "alTop",
+            "TabOrder": 1,
+            "Text": "Now",
+            "DateOnly": false,
+            "RequireTime": false,
+            "Caption": "Date/time of this action"
+          },
+          "children": []
+        },
+        {
+          "class": "TORCheckComboBox",
+          "name": "cboPerson",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 414,
+            "Top": 25,
+            "Width": 170,
+            "Height": 40,
+            "Style": "orcsDropDown",
+            "Align": "alTop",
+            "AutoSelect": true,
+            "Caption": "Action by",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": true,
+            "LookupPiece": 2,
+            "MaxLength": 0,
+            "Pieces": "2,3",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 3,
+            "TabStop": true,
+            "Text": "",
+            "OnNeedData": "cboPersonNeedData",
+            "CharsNeedMatch": 1,
+            "MainCheckBoxCaption": "Include Non-VA Providers",
+            "MainCheckBoxVisible": true,
+            "MainCheckBoxAlignment": "calBottom",
+            "OnMainCheckboxClick": "cboPersonMainCheckboxClick",
+            "DropdownStyle": "ddsControl"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlForward",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Label1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboUrgency",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = treService",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboService",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlOther",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSigFind",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grpSigFindings",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlComments",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memComments",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlAlert",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblAutoAlerts",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ckAlert",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmConsultAction",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnLaunchToolbox",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlAll",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboAttentionOf",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calDateofAction",
+            "Text = Date/Time of this action. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cboPerson",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "class": "TfrmPCEProvider",
+  "name": "frmPCEProvider",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 192,
+    "Top": 104,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Primary Encounter Provider",
+    "ClientHeight": 254,
+    "ClientWidth": 317,
+    "Position": "poScreenCenter",
+    "OnCloseQuery": "FormCloseQuery",
+    "ExplicitWidth": 323,
+    "ExplicitHeight": 283,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "Spacer1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 317,
+        "Height": 13,
+        "Align": "alTop",
+        "ExplicitWidth": 3
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "lblMsg",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 13,
+        "Width": 317,
+        "Height": 29,
+        "TabStop": false,
+        "Align": "alTop",
+        "Alignment": "taCenter",
+        "BorderStyle": "bsNone",
+        "Color": "clBtnFace",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "Lines.Strings": [
+          "Primary Provider for this Encounter"
+        ],
+        "ParentFont": false,
+        "ReadOnly": true,
+        "TabOrder": 4
+      },
+      "children": []
+    },
+    {
+      "class": "TORCheckComboBox",
+      "name": "cboPrimary",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 6,
+        "Top": 69,
+        "Width": 307,
+        "Height": 180,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "Primary Provider for this Encounter",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": true,
+        "LookupPiece": 2,
+        "MaxLength": 0,
+        "Pieces": "2,3",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 0,
+        "TabStop": true,
+        "Text": "",
+        "Visible": false,
+        "OnChange": "cboPrimaryChange",
+        "OnNeedData": "cboPrimaryNeedData",
+        "CharsNeedMatch": 1,
+        "UniqueAutoComplete": true,
+        "MainCheckBoxCaption": "Include Non-VA Providers",
+        "MainCheckBoxVisible": true,
+        "MainCheckBoxAlignment": "calBottom",
+        "OnMainCheckboxClick": "cboPrimaryMainCheckboxClick",
+        "DropdownStyle": "ddsControl"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnYes",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 158,
+        "Top": 40,
+        "Width": 75,
+        "Height": 21,
+        "Caption": "&Yes",
+        "Default": true,
+        "ModalResult": 6,
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnNo",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 238,
+        "Top": 40,
+        "Width": 75,
+        "Height": 21,
+        "Cancel": true,
+        "Caption": "&No",
+        "ModalResult": 7,
+        "TabOrder": 2
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnSelect",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 6,
+        "Top": 40,
+        "Width": 90,
+        "Height": 21,
+        "Caption": "&Select Primary",
+        "TabOrder": 3,
+        "OnClick": "btnSelectClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lblMsg",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboPrimary",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnYes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnNo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnSelect",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmPCEProvider",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

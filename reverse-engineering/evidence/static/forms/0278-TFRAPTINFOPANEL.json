@@ -1,0 +1,438 @@
+{
+  "class": "TfraPtInfoPanel",
+  "name": "fraPtInfoPanel",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "AlignWithMargins": true,
+    "Left": 0,
+    "Top": 0,
+    "Width": 202,
+    "Height": 314,
+    "Margins.Top": 0,
+    "Margins.Bottom": 0,
+    "Align": "alClient",
+    "Color": "clBtnFace",
+    "ParentColor": false,
+    "TabOrder": 0,
+    "StyleElements": [
+      "seFont",
+      "seBorder"
+    ]
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 202,
+        "Height": 314,
+        "Align": "alClient",
+        "ParentColor": true,
+        "TabOrder": 0,
+        "StyleElements": [
+          "seFont",
+          "seBorder"
+        ]
+      },
+      "children": [
+        {
+          "class": "TGridPanel",
+          "name": "gpTop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 200,
+            "Height": 22,
+            "Margins.Left": 0,
+            "Margins.Top": 0,
+            "Margins.Right": 4,
+            "Margins.Bottom": 0,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "ColumnCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "00000000000000c80440"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "00000000000000c80440"
+                  }
+                }
+              }
+            ],
+            "ControlCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Column": 0,
+                  "Control": "pnlLeft",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 1,
+                  "Control": "pnlRight",
+                  "Row": 0
+                }
+              }
+            ],
+            "ParentColor": true,
+            "RowCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "00000000000000c80540"
+                  }
+                }
+              }
+            ],
+            "TabOrder": 0,
+            "StyleElements": [
+              "seFont",
+              "seBorder"
+            ]
+          },
+          "children": [
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlLeft",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 22,
+                "Hint": "Refresh",
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentColor": true,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 0,
+                "TabStop": true,
+                "StyleElements": [
+                  "seFont",
+                  "seBorder"
+                ],
+                "OnClick": "pnlLeftClick",
+                "OnMouseEnter": "pnlTopEnter",
+                "OnMouseLeave": "pnlTopLeave"
+              },
+              "children": [
+                {
+                  "class": "TImage",
+                  "name": "imgLeft",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 1,
+                    "Width": 20,
+                    "Height": 21,
+                    "Hint": "Refresh",
+                    "Margins.Top": 1,
+                    "Margins.Right": 0,
+                    "Margins.Bottom": 0,
+                    "Align": "alLeft",
+                    "Center": true,
+                    "Picture.Data": {
+                      "binary_bytes": 1026
+                    },
+                    "Transparent": true,
+                    "OnClick": "pnlLeftClick",
+                    "OnMouseEnter": "pnlTopEnter",
+                    "OnMouseLeave": "pnlTopLeave",
+                    "ExplicitLeft": -2
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TImage",
+                  "name": "imgExpand",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 23,
+                    "Top": 0,
+                    "Width": 9,
+                    "Height": 22,
+                    "Align": "alLeft",
+                    "Center": true,
+                    "Picture.Data": {
+                      "binary_bytes": 318
+                    },
+                    "Transparent": true,
+                    "Visible": false,
+                    "ExplicitLeft": 21
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TImage",
+                  "name": "imgCollapse",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 32,
+                    "Top": 0,
+                    "Width": 9,
+                    "Height": 22,
+                    "Align": "alLeft",
+                    "Center": true,
+                    "Picture.Data": {
+                      "binary_bytes": 318
+                    },
+                    "Transparent": true,
+                    "Visible": false,
+                    "ExplicitLeft": 30
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORSymbolLabel",
+                  "name": "slblMain",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 41,
+                    "Top": 0,
+                    "Width": 12,
+                    "Height": 22,
+                    "Symbol.BackgroundColor": "clWindow",
+                    "Symbol.BackgroundValue": 61799,
+                    "Symbol.ForegroundValue": 59718,
+                    "Align": "alLeft",
+                    "Alignment": "taCenter",
+                    "Layout": "tlCenter",
+                    "Visible": false,
+                    "ExplicitHeight": 12
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TKeyClickPanel",
+              "name": "pnlRight",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 3,
+                "Left": 100,
+                "Top": 0,
+                "Width": 100,
+                "Height": 22,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentColor": true,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 1,
+                "TabStop": true,
+                "StyleElements": [
+                  "seFont",
+                  "seBorder"
+                ],
+                "OnClick": "pnlRightClick",
+                "OnMouseEnter": "pnlTopEnter",
+                "OnMouseLeave": "pnlTopLeave"
+              },
+              "children": [
+                {
+                  "class": "TImage",
+                  "name": "imgRight",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 77,
+                    "Top": 1,
+                    "Width": 20,
+                    "Height": 21,
+                    "Hint": "Unpin",
+                    "Margins.Left": 0,
+                    "Margins.Top": 1,
+                    "Margins.Bottom": 0,
+                    "Align": "alRight",
+                    "Center": true,
+                    "ParentShowHint": false,
+                    "Picture.Data": {
+                      "binary_bytes": 1026
+                    },
+                    "ShowHint": true,
+                    "Transparent": true,
+                    "OnClick": "pnlRightClick",
+                    "OnMouseEnter": "pnlTopEnter",
+                    "OnMouseLeave": "pnlTopLeave",
+                    "ExplicitLeft": 121,
+                    "ExplicitTop": 0,
+                    "ExplicitHeight": 16
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TScrollBox",
+          "name": "sbMain",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 23,
+            "Width": 200,
+            "Height": 290,
+            "Align": "alClient",
+            "BevelInner": "bvNone",
+            "BevelOuter": "bvNone",
+            "BorderStyle": "bsNone",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TGridPanel",
+              "name": "gpMain",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 200,
+                "Height": 146,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ColumnCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80540"
+                      }
+                    }
+                  }
+                ],
+                "ControlCollection": [],
+                "ParentBackground": false,
+                "ParentColor": true,
+                "RowCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80540"
+                      }
+                    }
+                  }
+                ],
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TGridPanel",
+              "name": "gpDetails",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 146,
+                "Width": 200,
+                "Height": 144,
+                "Align": "alBottom",
+                "BevelOuter": "bvNone",
+                "ColumnCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80540"
+                      }
+                    }
+                  }
+                ],
+                "ControlCollection": [],
+                "RowCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80540"
+                      }
+                    }
+                  }
+                ],
+                "TabOrder": 1,
+                "Visible": false
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TApplicationEvents",
+      "name": "ptInfoAppEvents",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnMessage": "ptInfoAppEventsMessage",
+        "Left": 41,
+        "Top": 57
+      },
+      "children": []
+    },
+    {
+      "class": "TImageList",
+      "name": "imgListPtInfo",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "DrawingStyle": "dsTransparent",
+        "Width": 20,
+        "Left": 41,
+        "Top": 151,
+        "Bitmap": {
+          "binary_bytes": 10790
+        }
+      },
+      "children": []
+    }
+  ]
+}

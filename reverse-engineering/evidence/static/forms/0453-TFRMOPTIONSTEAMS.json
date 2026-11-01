@@ -1,0 +1,611 @@
+{
+  "class": "TfrmOptionsTeams",
+  "name": "frmOptionsTeams",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 730,
+    "Top": 96,
+    "HelpContext": 9090,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Team Information",
+    "ClientHeight": 445,
+    "ClientWidth": 474,
+    "HelpFile": "CPRSWT.HLP",
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 480,
+    "ExplicitHeight": 470,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TBevel",
+      "name": "Bevel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 44,
+        "Width": 468,
+        "Height": 11,
+        "Align": "alTop",
+        "Shape": "bsTopLine",
+        "ExplicitLeft": 0,
+        "ExplicitTop": 126,
+        "ExplicitWidth": 474
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "lblInfo",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 468,
+        "Height": 35,
+        "TabStop": false,
+        "Align": "alTop",
+        "Alignment": "taCenter",
+        "BorderStyle": "bsNone",
+        "Color": "clBtnFace",
+        "Lines.Strings": [
+          "View team information by selecting teams. You can subscribe or remove ",
+          "yourself from all teams except PCMM teams here:"
+        ],
+        "ReadOnly": true,
+        "TabOrder": 4
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 413,
+        "Width": 474,
+        "Height": 32,
+        "HelpContext": 9090,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ParentColor": true,
+        "TabOrder": 3,
+        "ExplicitTop": 378,
+        "ExplicitWidth": 395
+      },
+      "children": [
+        {
+          "class": "TBevel",
+          "name": "bvlBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 474,
+            "Height": 2,
+            "Align": "alTop",
+            "ExplicitWidth": 384
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 396,
+            "Top": 5,
+            "Width": 75,
+            "Height": 24,
+            "HelpContext": 9998,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Close",
+            "ModalResult": 2,
+            "TabOrder": 0,
+            "ExplicitLeft": 301,
+            "ExplicitTop": 8,
+            "ExplicitHeight": 22
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TCheckBox",
+      "name": "chkPersonal",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 84,
+        "Width": 468,
+        "Height": 17,
+        "HelpContext": 9096,
+        "Align": "alTop",
+        "Caption": "Include personal lists",
+        "TabOrder": 0,
+        "OnClick": "chkPersonalClick",
+        "ExplicitLeft": 10,
+        "ExplicitTop": 40,
+        "ExplicitWidth": 175
+      },
+      "children": []
+    },
+    {
+      "class": "TCheckBox",
+      "name": "chkRestrict",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 61,
+        "Width": 468,
+        "Height": 17,
+        "HelpContext": 9097,
+        "Align": "alTop",
+        "Caption": "View only common members",
+        "Enabled": false,
+        "TabOrder": 2,
+        "Visible": false,
+        "OnClick": "chkRestrictClick",
+        "ExplicitLeft": 200,
+        "ExplicitTop": 40,
+        "ExplicitWidth": 185
+      },
+      "children": []
+    },
+    {
+      "class": "TCheckBox",
+      "name": "chkPcmm",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 107,
+        "Width": 468,
+        "Height": 17,
+        "HelpContext": 9096,
+        "Align": "alTop",
+        "Caption": "Include PCMM teams (View Only)",
+        "TabOrder": 1,
+        "OnClick": "chkPcmmClick",
+        "ExplicitLeft": 10,
+        "ExplicitTop": 63,
+        "ExplicitWidth": 175
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 0,
+        "Top": 127,
+        "Width": 474,
+        "Height": 286,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 8,
+        "ExplicitTop": 392,
+        "ExplicitHeight": 191
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "Panel2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 209,
+            "Height": 286,
+            "Align": "alLeft",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel2",
+            "ShowCaption": false,
+            "TabOrder": 0,
+            "ExplicitHeight": 191
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblTeams",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 203,
+                "Height": 16,
+                "Align": "alTop",
+                "Caption": "You are on these teams:",
+                "ExplicitLeft": 8,
+                "ExplicitTop": 125,
+                "ExplicitWidth": 144
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblSubscribe",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 237,
+                "Width": 203,
+                "Height": 16,
+                "Align": "alBottom",
+                "Caption": "Subscribe to a team:",
+                "ExplicitLeft": 8,
+                "ExplicitTop": 322,
+                "ExplicitWidth": 122
+              },
+              "children": []
+            },
+            {
+              "class": "TORComboBox",
+              "name": "cboSubscribe",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 259,
+                "Width": 203,
+                "Height": 24,
+                "HelpContext": 9095,
+                "Style": "orcsDropDown",
+                "Align": "alBottom",
+                "AutoSelect": true,
+                "Caption": "Subscribe to a team",
+                "Color": "clWindow",
+                "DropDownCount": 8,
+                "ItemHeight": 16,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": false,
+                "LongList": false,
+                "LookupPiece": 0,
+                "MaxLength": 0,
+                "Pieces": "2",
+                "Sorted": true,
+                "SynonymChars": "<>",
+                "TabOrder": 0,
+                "Text": "",
+                "OnClick": "cboSubscribeClick",
+                "OnKeyDown": "cboSubscribeKeyDown",
+                "OnMouseClick": "cboSubscribeMouseClick",
+                "CharsNeedMatch": 1,
+                "ExplicitTop": 608,
+                "ExplicitWidth": 468
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnRemove",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 209,
+                "Width": 203,
+                "Height": 22,
+                "HelpContext": 9094,
+                "Align": "alBottom",
+                "Caption": "Remove yourself from this team",
+                "Enabled": false,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 1,
+                "OnClick": "btnRemoveClick",
+                "ExplicitLeft": 8,
+                "ExplicitTop": 169,
+                "ExplicitWidth": 175
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lstTeams",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 25,
+                "Width": 203,
+                "Height": 178,
+                "HelpContext": 9092,
+                "Align": "alClient",
+                "MultiSelect": true,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "Sorted": true,
+                "TabOrder": 2,
+                "OnClick": "lstTeamsClick",
+                "Caption": "You are on these teams",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2",
+                "ExplicitLeft": 8,
+                "ExplicitTop": 46,
+                "ExplicitWidth": 175,
+                "ExplicitHeight": 145
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 209,
+            "Top": 0,
+            "Width": 265,
+            "Height": 286,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel3",
+            "ShowCaption": false,
+            "TabOrder": 1,
+            "ExplicitLeft": 144,
+            "ExplicitTop": 72,
+            "ExplicitWidth": 185,
+            "ExplicitHeight": 41
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblPatients",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 259,
+                "Height": 16,
+                "Align": "alTop",
+                "Caption": "Patients on selected teams:",
+                "ExplicitLeft": 101,
+                "ExplicitTop": 141,
+                "ExplicitWidth": 164
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblTeamMembers",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 108,
+                "Width": 259,
+                "Height": 16,
+                "Align": "alTop",
+                "Caption": "Team members:",
+                "ExplicitLeft": 166,
+                "ExplicitTop": 175,
+                "ExplicitWidth": 99
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lstUsers",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 130,
+                "Width": 259,
+                "Height": 153,
+                "HelpContext": 9093,
+                "Align": "alClient",
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "Sorted": true,
+                "TabOrder": 0,
+                "Caption": "Team members",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2",
+                "ExplicitTop": 72,
+                "ExplicitHeight": 50
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lstPatients",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 25,
+                "Width": 259,
+                "Height": 77,
+                "HelpContext": 9091,
+                "Align": "alTop",
+                "ParentShowHint": false,
+                "PopupMenu": "mnuPopPatient",
+                "ShowHint": true,
+                "Sorted": true,
+                "TabOrder": 1,
+                "OnMouseDown": "lstPatientsMouseDown",
+                "Caption": "Patients on selected teams",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2",
+                "ExplicitLeft": 90,
+                "ExplicitTop": 114,
+                "ExplicitWidth": 175
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 32,
+        "Top": 176,
+        "Data": [
+          [
+            "Component = lblInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstPatients",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstTeams",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstUsers",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkPersonal",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkRestrict",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSubscribe",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOptionsTeams",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = chkPcmm",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "mnuPopPatient",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 96,
+        "Top": 176
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuPatientID",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Patient ID...",
+            "OnClick": "mnuPatientIDClick"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,561 @@
+{
+  "class": "TfrmODText",
+  "name": "frmODText",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Width": 704,
+    "Height": 645,
+    "Caption": "Text Only Order",
+    "ExplicitWidth": 704,
+    "ExplicitHeight": 645,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TGridPanel",
+      "name": "gpMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 682,
+        "Height": 527,
+        "Margins.Bottom": 0,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a00640"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000c00540"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "ColumnSpan": 3,
+              "Control": "lblText",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "ColumnSpan": 3,
+              "Control": "memText",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "ColumnSpan": 3,
+              "Control": "lblStart",
+              "Row": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "txtStart",
+              "Row": 3
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "ColumnSpan": 3,
+              "Control": "lblStop",
+              "Row": 4
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "txtStop",
+              "Row": 5
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "ColumnSpan": 3,
+              "Control": "lblOrderSig",
+              "Row": 6
+            }
+          }
+        ],
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000b00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000b00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000b00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000b00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000b00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000b00340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800540"
+              }
+            }
+          }
+        ],
+        "ShowCaption": false,
+        "TabOrder": 5
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblText",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 676,
+            "Height": 16,
+            "Align": "alClient",
+            "Caption": "Enter the text of the order -",
+            "ExplicitWidth": 126,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TMemo",
+          "name": "memText",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 25,
+            "Width": 676,
+            "Height": 325,
+            "Align": "alClient",
+            "ScrollBars": "ssVertical",
+            "TabOrder": 0,
+            "OnChange": "ControlChange"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblStart",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 356,
+            "Width": 676,
+            "Height": 16,
+            "Align": "alClient",
+            "Caption": "Start Date/Time",
+            "ExplicitWidth": 76,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "txtStart",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 378,
+            "Width": 154,
+            "Height": 16,
+            "Align": "alClient",
+            "TabOrder": 1,
+            "OnChange": "ControlChange",
+            "DateOnly": false,
+            "RequireTime": false,
+            "Caption": "Start Date/Time",
+            "ExplicitHeight": 21
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblStop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 400,
+            "Width": 676,
+            "Height": 16,
+            "Align": "alClient",
+            "Caption": "Stop Date/Time",
+            "ExplicitWidth": 76,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "txtStop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 422,
+            "Width": 154,
+            "Height": 16,
+            "Align": "alClient",
+            "TabOrder": 2,
+            "OnChange": "ControlChange",
+            "DateOnly": false,
+            "RequireTime": false,
+            "Caption": "Stop Date/Time",
+            "ExplicitHeight": 21
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblOrderSig",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 444,
+            "Width": 676,
+            "Height": 16,
+            "Align": "alClient",
+            "Caption": "Order Sig",
+            "OnClick": "lblOrderSigClick",
+            "ExplicitWidth": 44,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TCaptionMemo",
+      "name": "memOrder",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlGridMessage",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 530,
+        "Width": 682,
+        "Height": 73,
+        "Margins.Top": 0,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "Ctl3D": false,
+        "ParentBackground": false,
+        "ParentColor": true,
+        "ParentCtl3D": false,
+        "ShowCaption": false,
+        "TabOrder": 6
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 543,
+        "Top": 443,
+        "Width": 96,
+        "Height": 64,
+        "BevelOuter": "bvNone",
+        "ParentBackground": false,
+        "ParentColor": true,
+        "ShowCaption": false,
+        "TabOrder": 7
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMessage",
+      "inherited": true,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 9,
+        "Top": 192,
+        "Width": 536,
+        "BevelInner": "bvNone",
+        "BevelOuter": "bvNone",
+        "Ctl3D": false,
+        "ParentCtl3D": false,
+        "TabOrder": 0,
+        "Visible": true,
+        "ExplicitLeft": 9,
+        "ExplicitTop": 192,
+        "ExplicitWidth": 536
+      },
+      "children": [
+        {
+          "class": "TImage",
+          "name": "imgMessage",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Height": 34,
+            "Align": "alLeft",
+            "ExplicitHeight": 34
+          },
+          "children": []
+        },
+        {
+          "class": "TRichEdit",
+          "name": "memMessage",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 44,
+            "Width": 486,
+            "Height": 34,
+            "Align": "alClient",
+            "ExplicitLeft": 44,
+            "ExplicitWidth": 486,
+            "ExplicitHeight": 34
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TButton",
+      "name": "cmdAccept",
+      "inherited": true,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 553,
+        "Top": 243,
+        "TabOrder": 2,
+        "ExplicitLeft": 553,
+        "ExplicitTop": 243
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdQuit",
+      "inherited": true,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 553,
+        "Top": 282,
+        "TabOrder": 3,
+        "ExplicitLeft": 553,
+        "ExplicitTop": 282
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 568,
+        "Top": 48,
+        "Data": [
+          [
+            "Component = memText",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtStart",
+            "Text = Start Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = txtStop",
+            "Text = Stop Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = memOrder",
+            "Label = lblOrderSig",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdQuit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODText",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = gpMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlGridMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508CompMemOrder",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Component": "memOrder",
+        "OnStateQuery": "VA508CompMemOrderStateQuery",
+        "Left": 152,
+        "Top": 216
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "class": "TfrmPostings",
+  "name": "frmPostings",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 610,
+    "Top": 242,
+    "Caption": "Postings",
+    "ClientHeight": 273,
+    "ClientWidth": 427,
+    "OldCreateOrder": true,
+    "ExplicitWidth": 435,
+    "ExplicitHeight": 300,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlBase",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 80,
+        "Top": 56,
+        "Width": 185,
+        "Height": 165,
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmPostings",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

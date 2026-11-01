@@ -1,0 +1,268 @@
+{
+  "class": "TfrmOptionsProcessedAlerts",
+  "name": "frmOptionsProcessedAlerts",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 232,
+    "Top": 107,
+    "HelpContext": 9100,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Processed Alerts Preferences",
+    "ClientHeight": 118,
+    "ClientWidth": 314,
+    "HelpFile": "CPRSWT.HLP",
+    "OnCloseQuery": "FormCloseQuery",
+    "ExplicitWidth": 320,
+    "ExplicitHeight": 147,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 86,
+        "Width": 314,
+        "Height": 32,
+        "HelpContext": 9100,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ParentColor": true,
+        "TabOrder": 4
+      },
+      "children": [
+        {
+          "class": "TBevel",
+          "name": "bvlBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 314,
+            "Height": 2,
+            "Align": "alTop",
+            "ExplicitWidth": 313
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnDefaults",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 5,
+            "Width": 75,
+            "Height": 24,
+            "HelpContext": 9996,
+            "Align": "alLeft",
+            "Caption": "Defaults",
+            "TabOrder": 0,
+            "OnClick": "btnDefaultsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 236,
+            "Top": 5,
+            "Width": 75,
+            "Height": 24,
+            "HelpContext": 9997,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 1,
+            "ExplicitLeft": 86,
+            "ExplicitTop": 3
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 155,
+            "Top": 5,
+            "Width": 75,
+            "Height": 24,
+            "HelpContext": 9996,
+            "Align": "alRight",
+            "Caption": "OK",
+            "Default": true,
+            "ModalResult": 1,
+            "TabOrder": 2,
+            "ExplicitLeft": 100,
+            "ExplicitTop": 8
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TEdit",
+      "name": "edDays",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 200,
+        "Top": 17,
+        "Width": 106,
+        "Height": 21,
+        "Anchors": [
+          "akLeft",
+          "akTop",
+          "akRight"
+        ],
+        "TabOrder": 1,
+        "Text": "33",
+        "OnKeyPress": "edDaysKeyPress"
+      },
+      "children": []
+    },
+    {
+      "class": "TEdit",
+      "name": "edMaxRecords",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 200,
+        "Top": 47,
+        "Width": 105,
+        "Height": 21,
+        "Anchors": [
+          "akLeft",
+          "akTop",
+          "akRight"
+        ],
+        "NumbersOnly": true,
+        "TabOrder": 3,
+        "Text": "111"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508StaticText",
+      "name": "sTxtMaxRecords",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Name": "sTxtMaxRecords",
+        "Left": 8,
+        "Top": 49,
+        "Width": 125,
+        "Height": 15,
+        "Alignment": "taLeftJustify",
+        "Caption": "Max # of records to show:",
+        "TabOrder": 2,
+        "ShowAccelChar": true,
+        "WordWrap": false,
+        "LabelAlignment": "taLeftJustify",
+        "LabelLayout": "tlTop"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508StaticText",
+      "name": "sTxtLogDays",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Name": "sTxtLogDays",
+        "Left": 8,
+        "Top": 17,
+        "Width": 122,
+        "Height": 15,
+        "Alignment": "taLeftJustify",
+        "Caption": "Show Log Data for (days)",
+        "TabOrder": 0,
+        "ShowAccelChar": true,
+        "WordWrap": false,
+        "LabelAlignment": "taLeftJustify",
+        "LabelLayout": "tlTop"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 152,
+        "Top": 16,
+        "Data": [
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOptionsProcessedAlerts",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDefaults",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edDays",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edMaxRecords",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = sTxtMaxRecords",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = sTxtLogDays",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

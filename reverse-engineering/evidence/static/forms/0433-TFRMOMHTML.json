@@ -1,0 +1,193 @@
+{
+  "class": "TfrmOMHTML",
+  "name": "frmOMHTML",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 390,
+    "Top": 242,
+    "Caption": "HTML Ordering",
+    "ClientHeight": 293,
+    "ClientWidth": 512,
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 520,
+    "ExplicitHeight": 320,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TButton",
+      "name": "btnOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 352,
+        "Top": 268,
+        "Width": 72,
+        "Height": 21,
+        "Anchors": [
+          "akRight",
+          "akBottom"
+        ],
+        "Caption": "OK",
+        "TabOrder": 0,
+        "OnClick": "btnOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 433,
+        "Top": 268,
+        "Width": 72,
+        "Height": 21,
+        "Anchors": [
+          "akRight",
+          "akBottom"
+        ],
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 1,
+        "OnClick": "btnCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnBack",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 6,
+        "Top": 268,
+        "Width": 43,
+        "Height": 21,
+        "Anchors": [
+          "akLeft",
+          "akBottom"
+        ],
+        "Caption": "< Back",
+        "Enabled": false,
+        "TabOrder": 2,
+        "OnClick": "btnBackClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlWeb",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 6,
+        "Top": 6,
+        "Width": 499,
+        "Height": 253,
+        "Anchors": [
+          "akLeft",
+          "akTop",
+          "akRight",
+          "akBottom"
+        ],
+        "BevelOuter": "bvNone",
+        "TabOrder": 3
+      },
+      "children": [
+        {
+          "class": "TWebBrowser",
+          "name": "webView",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 499,
+            "Height": 253,
+            "Align": "alClient",
+            "TabOrder": 0,
+            "SelectedEngine": "EdgeIfAvailable",
+            "OnBeforeNavigate2": "webViewBeforeNavigate2",
+            "OnDocumentComplete": "webViewDocumentComplete",
+            "ControlData": {
+              "binary_bytes": 156
+            }
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TButton",
+      "name": "btnShow",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 55,
+        "Top": 268,
+        "Width": 103,
+        "Height": 21,
+        "Anchors": [
+          "akLeft",
+          "akBottom"
+        ],
+        "Caption": "Show Selections....",
+        "TabOrder": 4,
+        "OnClick": "btnShowClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnBack",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlWeb",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = webView",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnShow",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOMHTML",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

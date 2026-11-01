@@ -1,0 +1,18 @@
+00862ab4 XWBHash.Encrypt instructions 64
+ CALL 00862b1f 008617bc MFunStr.Translate
+00862b6c XWBHash.Decrypt instructions 64
+ CALL 00862bef 008617bc MFunStr.Translate
+009af1ec ORNet.CallBroker instructions 35
+ CALL 009af1f6 009acd20 ORNet.LockBroker
+ CALL 009af20e 009ae170 ORNet.UpdateContext
+ CALL 009af217 009ae314 ORNet.CallBrokerInContext
+ CALL 009af22c 009acd2c ORNet.UnlockBroker
+00a0b3e0 rTIU.CosignDocument instructions 41
+ CALL 00a0b413 009ad924 ORNet.CallVistA
+ LITERAL 00a0b40e 00a0b45c 'TIU WHICH SIGNATURE ACTION'
+ LITERAL 00a0b41b 00a0b4a0 'COSIGNATURE'
+00a0c6fc rTIU.SignDocument instructions 70
+ CALL 00a0c747 009ad924 ORNet.CallVistA
+ CALL 00a0c75c 009b2f6c ORFn.Piece
+ CALL 00a0c783 009b2f6c ORFn.Piece
+ LITERAL 00a0c742 00a0c7d4 'TIU SIGN RECORD'

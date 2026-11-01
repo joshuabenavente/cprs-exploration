@@ -1,0 +1,98 @@
+openjdk version "25.0.5" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode)
+INFO  Using log config file: jar:file:/workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /workspace/reverse-engineering/evidence/bounded-analysis-corrected.log (LoggingInitialization)  
+INFO  Loading user preferences: /workspace/reverse-engineering/.ghidra-settings/agent-ghidra/ghidra_12.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1058 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Loaded 154 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt (UnixSystemTrustKeyStoreUtil)  
+INFO  Loaded 154 trusted CA certificates from the OS trust store. (DefaultTrustManagerFactory)  
+INFO  Loaded 118 trusted CA certificates from the Java default trust store. (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (2324 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 60 extension points (19 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /workspace/reverse-engineering/scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /workspace/reverse-engineering/projects/CPRSChart (HeadlessAnalyzer)  
+INFO  Opening project: /workspace/reverse-engineering/projects/CPRSChart (HeadlessProject)  
+INFO  REPORT: Processing project file: /CPRSChart.exe (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: ConfigureBoundedAnalysis.java '/workspace/reverse-engineering/evidence/analysis-options.json'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /workspace/reverse-engineering/scripts/ConfigureBoundedAnalysis.java (HeadlessAnalyzer)  
+INFO  ConfigureBoundedAnalysis.java> BOUNDED_ANALYSIS disabled=[Aggressive Instruction Finder, Create Address Tables, Data Reference.Create Address Tables, Decompiler Parameter ID, Decompiler Switch Analysis, Reference.Create Address Tables, Stack] (GhidraScript)  
+INFO  ANALYZING all memory and code: /CPRSChart.exe (HeadlessAnalyzer)  
+WARN  Ignoring leading '_' chars on no-return name '___raise_securityfailure' specified in file: /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn (NoReturnFunctionAnalyzer)  
+WARN  Ignoring leading '_' chars on no-return name '___report_rangecheckfailure' specified in file: /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn (NoReturnFunctionAnalyzer)  
+INFO  Unable to find DWARF information, skipping DWARF analysis (DWARFAnalyzer)  
+INFO  Skipping PDB processing: missing PDB information in program metadata (PdbUniversalAnalyzer)  
+ERROR Invalid PNG data at 0122e251 (PngDataType)  
+ERROR Invalid PNG data at 012352f8 (PngDataType)  
+INFO  Packed database cache: /workspace/reverse-engineering/.cache/agent-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: windows_vs12_32 (ApplyDataArchiveAnalyzer)  
+INFO  -----------------------------------------------------
+    ASCII Strings                              1.810 secs
+    Apply Data Archives                        1.762 secs
+    Call Convention ID                         0.297 secs
+    Call-Fixup Installer                       0.578 secs
+    Create Function                            5.892 secs
+    DWARF                                      0.002 secs
+    Data Reference                             8.866 secs
+    Demangler GNU                              3.730 secs
+    Demangler Microsoft                        1.393 secs
+    Disassemble                                5.651 secs
+    Disassemble Entry Points                   9.450 secs
+    Disassemble Entry Points - One Time       10.322 secs
+    Embedded Media                             0.122 secs
+    External Entry References                  0.001 secs
+    Function ID                                0.023 secs
+    Function Start Search                      0.486 secs
+    Function Start Search After Code           0.413 secs
+    Non-Returning Functions - Discovered       5.885 secs
+    Non-Returning Functions - Known            0.382 secs
+    PDB Universal                              0.003 secs
+    Reference                                 15.330 secs
+    Scalar Operand References                  8.684 secs
+    Shared Return Calls                        4.007 secs
+    Source Language Support                    0.013 secs
+    Subroutine References                      3.352 secs
+    Subroutine References - One Time           0.001 secs
+    Variadic Function Signature Override       3.182 secs
+    WindowsResourceReference                   4.898 secs
+    X86 Function Callee Purge                  3.689 secs
+    x86 Constant Reference Analyzer           37.358 secs
+-----------------------------------------------------
+     Total Time   137 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: /CPRSChart.exe (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: ExportProgramInventory.java '/workspace/reverse-engineering/evidence/inventory-final' '7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /workspace/reverse-engineering/scripts/ExportProgramInventory.java (HeadlessAnalyzer)  
+INFO  ExportProgramInventory.java> INVENTORY internal=41948 external=1423 calls=243852 (GhidraScript)  
+INFO  ANALYZING changes made by post scripts: /CPRSChart.exe (HeadlessAnalyzer)  
+INFO  REPORT: Post-analysis succeeded for file: /CPRSChart.exe (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for processed file: /CPRSChart.exe (HeadlessAnalyzer)  

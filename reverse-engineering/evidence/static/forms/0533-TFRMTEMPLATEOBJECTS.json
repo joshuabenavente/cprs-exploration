@@ -1,0 +1,185 @@
+{
+  "class": "TfrmTemplateObjects",
+  "name": "frmTemplateObjects",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 215,
+    "Top": 343,
+    "ActiveControl": "cboObjects",
+    "Caption": "Insert Patient Data (Object)",
+    "ClientHeight": 273,
+    "ClientWidth": 239,
+    "FormStyle": "fsStayOnTop",
+    "Position": "poOwnerFormCenter",
+    "OnClose": "FormClose",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 247,
+    "ExplicitHeight": 300,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TORComboBox",
+      "name": "cboObjects",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 239,
+        "Height": 246,
+        "Style": "orcsSimple",
+        "Align": "alClient",
+        "AutoSelect": true,
+        "Caption": "Patient Data",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "1",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 0,
+        "OnDblClick": "cboObjectsDblClick",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 246,
+        "Width": 239,
+        "Height": 27,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "DesignSize": [
+          239,
+          27
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 162,
+            "Top": 4,
+            "Width": 75,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Cancel": true,
+            "Caption": "&Done",
+            "ModalResult": 2,
+            "TabOrder": 1,
+            "OnClick": "btnCancelClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnInsert",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 82,
+            "Top": 4,
+            "Width": 75,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Caption": "&Insert Object",
+            "Default": true,
+            "ModalResult": 4,
+            "TabOrder": 0,
+            "OnClick": "btnInsertClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnRefresh",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 2,
+            "Top": 4,
+            "Width": 75,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Caption": "&Refresh",
+            "Default": true,
+            "ModalResult": 4,
+            "TabOrder": 2,
+            "OnClick": "btnRefreshClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = cboObjects",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnInsert",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRefresh",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmTemplateObjects",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

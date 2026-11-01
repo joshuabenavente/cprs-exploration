@@ -1,0 +1,1116 @@
+{
+  "class": "TfraPtSelDemog",
+  "name": "fraPtSelDemog",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 323,
+    "Height": 429,
+    "Constraints.MinHeight": 200,
+    "TabOrder": 0,
+    "OnResize": "FrameResize"
+  },
+  "children": [
+    {
+      "class": "TGridPanel",
+      "name": "gPanel",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 20,
+        "Width": 317,
+        "Height": 406,
+        "Margins.Top": 0,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000f00540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxSSN",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblPtSSN",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxDOB",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblPtDOB",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxSexAge",
+              "Row": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblPtSex",
+              "Row": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxSIGI",
+              "Row": 3
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblPtSigi",
+              "Row": 3
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxVeteran",
+              "Row": 4
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblPtVet",
+              "Row": 4
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxSC",
+              "Row": 5
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblPtSC",
+              "Row": 5
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxLocation",
+              "Row": 6
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblPtLocation",
+              "Row": 6
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxRoomBed",
+              "Row": 7
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblPtRoomBed",
+              "Row": 7
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblCombatVet",
+              "Row": 8
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "lblVeteran",
+              "Row": 8
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxPrimaryProvider",
+              "Row": 9
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "stxPtPrimaryProvider",
+              "Row": 9
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxInpatientProvider",
+              "Row": 10
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "stxPtInpatientProvider",
+              "Row": 10
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxAttending",
+              "Row": 11
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "stxPtAttending",
+              "Row": 11
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxLastVisitLocation",
+              "Row": 12
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "stxPtLastVisitLocation",
+              "Row": 12
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxLastVisitDate",
+              "Row": 13
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "stxPtLastVisitDate",
+              "Row": 13
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "ColumnSpan": 2,
+              "Control": "Memo",
+              "Row": 14
+            }
+          }
+        ],
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000a80340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          }
+        ],
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TStaticText",
+          "name": "stxSSN",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 1,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "AutoSize": false,
+            "Caption": "SSN:",
+            "TabOrder": 0,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblPtSSN",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 1,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "123-45-1234",
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxDOB",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 22,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "DOB:",
+            "TabOrder": 2,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblPtDOB",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 22,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Jun 26,1957",
+            "TabOrder": 3
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxSexAge",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 43,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Birth Sex:",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 4,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblPtSex",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 43,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Male, age 39",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 5
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxSIGI",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 64,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "SIGI:",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 6,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblPtSigi",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 64,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Male",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 7
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxVeteran",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 85,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Veteran:",
+            "TabOrder": 8,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblPtVet",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 85,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Veteran",
+            "TabOrder": 9
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxSC",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 106,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Service:",
+            "TabOrder": 10,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblPtSC",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 106,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Service Connected 50%",
+            "TabOrder": 11
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxLocation",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 127,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Location:",
+            "TabOrder": 12,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblPtLocation",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 127,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "2 EAST",
+            "ShowAccelChar": false,
+            "TabOrder": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxRoomBed",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 148,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "Room-Bed:",
+            "TabOrder": 14,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblPtRoomBed",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 148,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Anchors": [],
+            "AutoSize": false,
+            "Caption": "257-B",
+            "ShowAccelChar": false,
+            "TabOrder": 15
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblCombatVet",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 169,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "Combat Vet",
+            "TabOrder": 16
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblVeteran",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 169,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "Combat Vet:",
+            "TabOrder": 17,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxPrimaryProvider",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 190,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "PC Provider:",
+            "TabOrder": 18,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxPtPrimaryProvider",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 190,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "Primary Provider",
+            "TabOrder": 19
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxInpatientProvider",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 211,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "Inpt Provider:",
+            "TabOrder": 20,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxPtInpatientProvider",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 211,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "Inpatient Provider",
+            "TabOrder": 21
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxAttending",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 232,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "Attending:",
+            "TabOrder": 22,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxPtAttending",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 232,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "stxPtAttending",
+            "TabOrder": 23
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxLastVisitLocation",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 253,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "Last Location:",
+            "TabOrder": 24,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxPtLastVisitLocation",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 253,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "Last Location",
+            "TabOrder": 25
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxLastVisitDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 274,
+            "Width": 114,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "Last Visited:",
+            "TabOrder": 26,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxPtLastVisitDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 123,
+            "Top": 274,
+            "Width": 191,
+            "Height": 19,
+            "Margins.Top": 1,
+            "Margins.Bottom": 1,
+            "Align": "alClient",
+            "Caption": "stxPtLastVisitDate",
+            "TabOrder": 27
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionMemo",
+          "name": "Memo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 297,
+            "Width": 311,
+            "Height": 106,
+            "Align": "alClient",
+            "HideSelection": false,
+            "Lines.Strings": [
+              "Memo"
+            ],
+            "ReadOnly": true,
+            "TabOrder": 28,
+            "Visible": false,
+            "WantReturns": false,
+            "OnEnter": "MemoEnter",
+            "OnKeyDown": "MemoKeyDown",
+            "Caption": ""
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TStaticText",
+      "name": "lblPtName",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 2,
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 317,
+        "Height": 17,
+        "Margins.Bottom": 0,
+        "Align": "alTop",
+        "Caption": "Winchester,Charles Emerson",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentFont": false,
+        "TabOrder": 1
+      },
+      "children": []
+    }
+  ]
+}

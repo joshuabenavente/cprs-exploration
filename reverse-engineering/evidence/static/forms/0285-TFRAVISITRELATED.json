@@ -1,0 +1,231 @@
+{
+  "class": "TfraVisitRelated",
+  "name": "fraVisitRelated",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Width": 318,
+    "Height": 289,
+    "Align": "alClient",
+    "ExplicitWidth": 318,
+    "ExplicitHeight": 289
+  },
+  "children": [
+    {
+      "class": "TScrollBox",
+      "name": "sbMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 318,
+        "Height": 289,
+        "Align": "alClient",
+        "BorderStyle": "bsNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlMain",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 318,
+            "Height": 265,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TGroupBox",
+              "name": "gbVisitRelatedTo",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 312,
+                "Height": 259,
+                "Align": "alClient",
+                "Caption": "Visit Related To",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblNoSAAvailable",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 2,
+                    "Top": 17,
+                    "Width": 308,
+                    "Height": 19,
+                    "Align": "alTop",
+                    "Caption": "No Special Authorities to select",
+                    "TabOrder": 1,
+                    "TabStop": true,
+                    "Visible": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TGridPanel",
+                  "name": "gpMain",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 5,
+                    "Top": 36,
+                    "Width": 302,
+                    "Height": 221,
+                    "Margins.Top": 0,
+                    "Margins.Bottom": 0,
+                    "Align": "alClient",
+                    "BevelEdges": [],
+                    "BevelOuter": "bvNone",
+                    "ColumnCollection": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "SizeStyle": "ssAbsolute",
+                          "Value": {
+                            "extended80_hex": "00000000000000b80340"
+                          }
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "00000000000000c80540"
+                          }
+                        }
+                      }
+                    ],
+                    "ControlCollection": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 0,
+                          "Control": "lblYes",
+                          "Row": 0
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 1,
+                          "Control": "lblNo",
+                          "Row": 0
+                        }
+                      }
+                    ],
+                    "RowCollection": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "SizeStyle": "ssAbsolute",
+                          "Value": {
+                            "extended80_hex": "00000000000000f00240"
+                          }
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "SizeStyle": "ssAuto"
+                        }
+                      }
+                    ],
+                    "ShowCaption": false,
+                    "TabOrder": 0
+                  },
+                  "children": [
+                    {
+                      "class": "TLabel",
+                      "name": "lblYes",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Width": 23,
+                        "Height": 15,
+                        "Align": "alBottom",
+                        "Caption": "Yes",
+                        "Layout": "tlBottom",
+                        "ExplicitWidth": 17
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TLabel",
+                      "name": "lblNo",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 23,
+                        "Top": 0,
+                        "Width": 279,
+                        "Height": 15,
+                        "Align": "alBottom",
+                        "Caption": "No",
+                        "Layout": "tlBottom",
+                        "ExplicitWidth": 16
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TBalloonHint",
+      "name": "bHint",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Style": "bhsStandard",
+        "HideAfter": 15000,
+        "Position": "hpBelow",
+        "Left": 16,
+        "Top": 44
+      },
+      "children": []
+    },
+    {
+      "class": "TApplicationEvents",
+      "name": "appEvents",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnMessage": "appEventsMessage",
+        "Left": 64,
+        "Top": 44
+      },
+      "children": []
+    }
+  ]
+}

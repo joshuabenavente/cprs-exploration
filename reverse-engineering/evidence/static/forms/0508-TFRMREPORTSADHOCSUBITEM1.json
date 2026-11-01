@@ -1,0 +1,591 @@
+{
+  "class": "TfrmReportsAdhocSubItem1",
+  "name": "frmReportsAdhocSubItem1",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 223,
+    "Top": 170,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "frmReportsAdhocSubItem1",
+    "ClientHeight": 386,
+    "OldCreateOrder": false,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 320,
+    "ExplicitHeight": 341,
+    "PixelsPerInch": 120,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TGroupBox",
+      "name": "GroupBox1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 526,
+        "Height": 386,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Align": "alClient",
+        "Color": "clBtnFace",
+        "ParentColor": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TSplitter",
+          "name": "Splitter3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 247,
+            "Top": 60,
+            "Width": 7,
+            "Height": 283,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "ExplicitTop": 64,
+            "ExplicitHeight": 279
+          },
+          "children": []
+        },
+        {
+          "class": "TKeyClickPanel",
+          "name": "pnl7Button",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 486,
+            "Top": 100,
+            "Width": 24,
+            "Height": 29,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "BevelOuter": "bvNone",
+            "TabOrder": 4,
+            "TabStop": true,
+            "OnClick": "SpeedButton7Click",
+            "OnEnter": "pnl7ButtonEnter",
+            "OnExit": "pnl7ButtonExit"
+          },
+          "children": [
+            {
+              "class": "TSpeedButton",
+              "name": "SpeedButton7",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 21,
+                "Height": 27,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Enabled": false,
+                "Glyph.Data": {
+                  "binary_bytes": 378
+                },
+                "NumGlyphs": 2,
+                "OnClick": "SpeedButton7Click"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TKeyClickPanel",
+          "name": "pnl8Button",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 486,
+            "Top": 130,
+            "Width": 24,
+            "Height": 30,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "BevelOuter": "bvNone",
+            "TabOrder": 5,
+            "TabStop": true,
+            "OnClick": "SpeedButton8Click",
+            "OnEnter": "pnl7ButtonEnter",
+            "OnExit": "pnl7ButtonExit"
+          },
+          "children": [
+            {
+              "class": "TSpeedButton",
+              "name": "SpeedButton8",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 21,
+                "Height": 27,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Enabled": false,
+                "Glyph.Data": {
+                  "binary_bytes": 378
+                },
+                "NumGlyphs": 2,
+                "OnClick": "SpeedButton8Click"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TORComboBox",
+          "name": "ORComboBox2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 2,
+            "Top": 60,
+            "Width": 245,
+            "Height": 283,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Style": "orcsSimple",
+            "Align": "alLeft",
+            "AutoSelect": true,
+            "Caption": "File Selections",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 16,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": true,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 1,
+            "Text": "",
+            "OnDblClick": "btnAddSelClick",
+            "OnKeyUp": "ORComboBox2KeyUp",
+            "OnNeedData": "ORComboBox2NeedData",
+            "CharsNeedMatch": 1,
+            "ExplicitTop": 64,
+            "ExplicitHeight": 279
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "ORListBox1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 286,
+            "Top": 59,
+            "Width": 198,
+            "Height": 159,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "DragMode": "dmAutomatic",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 3,
+            "OnDragDrop": "ORListBox1DragDrop",
+            "OnDragOver": "ORListBox1DragOver",
+            "OnEndDrag": "ORListBox1EndDrag",
+            "Caption": "File Entries Selected",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel4",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 2,
+            "Top": 18,
+            "Width": 522,
+            "Height": 42,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0,
+            "ExplicitTop": 22,
+            "ExplicitWidth": 521
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "Label4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 25,
+                "Width": 91,
+                "Height": 16,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Caption": "File Selections:"
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "Label5",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 286,
+                "Top": 25,
+                "Width": 126,
+                "Height": 16,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Caption": "File Entries Selected:"
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "Label6",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 286,
+                "Top": 1,
+                "Width": 123,
+                "Height": 20,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Caption": "Selections allowed: ",
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblLimit",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 404,
+                "Top": 1,
+                "Width": 52,
+                "Height": 20,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Caption": "No Limit",
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel5",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 2,
+            "Top": 343,
+            "Width": 522,
+            "Height": 41,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "TabOrder": 6,
+            "ExplicitWidth": 521,
+            "DesignSize": [
+              522,
+              41
+            ]
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnCancel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 420,
+                "Top": 5,
+                "Width": 92,
+                "Height": 31,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Anchors": [
+                  "akRight",
+                  "akBottom"
+                ],
+                "Cancel": true,
+                "Caption": "Cancel",
+                "TabOrder": 1,
+                "OnClick": "btnCancelClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnOK",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 309,
+                "Top": 5,
+                "Width": 92,
+                "Height": 31,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Anchors": [
+                  "akRight",
+                  "akBottom"
+                ],
+                "Caption": "OK",
+                "TabOrder": 0,
+                "OnClick": "btnOKClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel8",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 256,
+            "Top": 69,
+            "Width": 31,
+            "Height": 169,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "BevelOuter": "bvNone",
+            "TabOrder": 2
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnAddSel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 5,
+                "Top": 6,
+                "Width": 21,
+                "Height": 27,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Caption": ">",
+                "TabOrder": 0,
+                "OnClick": "btnAddSelClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnRemoveSel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 5,
+                "Top": 37,
+                "Width": 21,
+                "Height": 27,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Caption": "<",
+                "TabOrder": 1,
+                "OnClick": "btnRemoveSelClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnRemoveAllSel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 5,
+                "Top": 68,
+                "Width": 21,
+                "Height": 27,
+                "Margins.Left": 4,
+                "Margins.Top": 4,
+                "Margins.Right": 4,
+                "Margins.Bottom": 4,
+                "Caption": "<<",
+                "TabOrder": 2,
+                "OnClick": "btnRemoveAllSelClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = GroupBox1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnl7Button",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnl8Button",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ORComboBox2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ORListBox1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Label6",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLimit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel5",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel8",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAddSel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemoveSel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemoveAllSel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmReportsAdhocSubItem1",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TTimer",
+      "name": "Timer2",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Enabled": false,
+        "OnTimer": "Timer2Timer",
+        "Left": 392,
+        "Top": 16
+      },
+      "children": []
+    }
+  ]
+}

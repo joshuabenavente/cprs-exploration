@@ -1,0 +1,38 @@
+; Static instruction listing. Function bodies and indirect exception flow require review.
+00e82498  55  PUSH EBP
+00e82499  8bec  MOV EBP,ESP
+00e8249b  53  PUSH EBX
+00e8249c  8b4508  MOV EAX,dword ptr [EBP + 0x8]
+00e8249f  8b40fc  MOV EAX,dword ptr [EAX + -0x4]
+00e824a2  8b9880040000  MOV EBX,dword ptr [EAX + 0x480]
+00e824a8  8b4508  MOV EAX,dword ptr [EBP + 0x8]
+00e824ab  8b40fc  MOV EAX,dword ptr [EAX + -0x4]
+00e824ae  e891070000  CALL 0x00e82c44
+00e824b3  8bc3  MOV EAX,EBX
+00e824b5  e8621793ff  CALL 0x007b3c1c
+00e824ba  85c0  TEST EAX,EAX
+00e824bc  7e3e  JLE 0x00e824fc
+00e824be  8bc3  MOV EAX,EBX
+00e824c0  e8571793ff  CALL 0x007b3c1c
+00e824c5  48  DEC EAX
+00e824c6  7514  JNZ 0x00e824dc
+00e824c8  33d2  XOR EDX,EDX
+00e824ca  8bc3  MOV EAX,EBX
+00e824cc  e8af0c93ff  CALL 0x007b3180
+00e824d1  8b4508  MOV EAX,dword ptr [EBP + 0x8]
+00e824d4  8b40fc  MOV EAX,dword ptr [EAX + -0x4]
+00e824d7  e878070000  CALL 0x00e82c54
+00e824dc  8b83c8020000  MOV EAX,dword ptr [EBX + 0x2c8]
+00e824e2  ba1425e800  MOV EDX,0xe82514
+00e824e7  8b08  MOV ECX,dword ptr [EAX]
+00e824e9  ff513c  CALL dword ptr [ECX + 0x3c]
+00e824ec  8b83c8020000  MOV EAX,dword ptr [EBX + 0x2c8]
+00e824f2  babc25e800  MOV EDX,0xe825bc
+00e824f7  8b08  MOV ECX,dword ptr [EAX]
+00e824f9  ff513c  CALL dword ptr [ECX + 0x3c]
+00e824fc  33d2  XOR EDX,EDX
+00e824fe  8bc3  MOV EAX,EBX
+00e82500  e8e71193ff  CALL 0x007b36ec
+00e82505  5b  POP EBX
+00e82506  5d  POP EBP
+00e82507  c3  RET

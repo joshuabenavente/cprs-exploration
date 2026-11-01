@@ -1,0 +1,324 @@
+{
+  "class": "TfrmSignonConfig",
+  "name": "frmSignonConfig",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 232,
+    "Top": 110,
+    "HelpContext": 2,
+    "ActiveControl": "CancelBtn",
+    "Anchors": [
+      "akTop"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Sign-on Properties",
+    "ClientHeight": 236,
+    "ClientWidth": 366,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Courier New",
+    "Font.Style": [
+      "fsBold"
+    ],
+    "FormStyle": "fsStayOnTop",
+    "Position": "poScreenCenter",
+    "OnShow": "FormShow",
+    "TextHeight": 14
+  },
+  "children": [
+    {
+      "class": "TBevel",
+      "name": "Bevel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 7,
+        "Top": 7,
+        "Width": 264,
+        "Height": 228,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Shape": "bsFrame",
+        "IsControl": true
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "OKBtn",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 286,
+        "Top": 7,
+        "Width": 70,
+        "Height": 25,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "OK",
+        "Glyph.Data": {
+          "binary_bytes": 482
+        },
+        "Margin": 2,
+        "ModalResult": 1,
+        "NumGlyphs": 2,
+        "Spacing": -1,
+        "TabOrder": 5,
+        "OnClick": "OKBtnClick",
+        "IsControl": true
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "CancelBtn",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 286,
+        "Top": 44,
+        "Width": 70,
+        "Height": 25,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "Default": true,
+        "Glyph.Data": {
+          "binary_bytes": 482
+        },
+        "Margin": 2,
+        "ModalResult": 2,
+        "NumGlyphs": 2,
+        "Spacing": -1,
+        "TabOrder": 0,
+        "IsControl": true
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "HelpBtn",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 286,
+        "Top": 117,
+        "Width": 70,
+        "Height": 25,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Kind": "bkHelp",
+        "Margin": 2,
+        "NumGlyphs": 2,
+        "Spacing": -1,
+        "TabOrder": 6,
+        "IsControl": true
+      },
+      "children": []
+    },
+    {
+      "class": "TRadioGroup",
+      "name": "rgrWindowPosition",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 22,
+        "Top": 22,
+        "Width": 111,
+        "Height": 74,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "Window Position",
+        "Items.Strings": [
+          "Center",
+          "Current",
+          "Remember"
+        ],
+        "TabOrder": 2,
+        "TabStop": true
+      },
+      "children": []
+    },
+    {
+      "class": "TRadioGroup",
+      "name": "rgrWindowSize",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 146,
+        "Top": 22,
+        "Width": 111,
+        "Height": 74,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "Window Size",
+        "Items.Strings": [
+          "Normal",
+          "Current",
+          "Remember"
+        ],
+        "TabOrder": 3,
+        "TabStop": true
+      },
+      "children": []
+    },
+    {
+      "class": "TGroupBox",
+      "name": "GroupBox1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 22,
+        "Top": 110,
+        "Width": 235,
+        "Height": 110,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "Intro Text",
+        "TabOrder": 4
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "Button1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 14,
+            "Top": 73,
+            "Width": 89,
+            "Height": 25,
+            "Margins.Left": 2,
+            "Margins.Top": 2,
+            "Margins.Right": 2,
+            "Margins.Bottom": 2,
+            "Caption": "Change Font",
+            "TabOrder": 1,
+            "OnClick": "Button1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TRadioGroup",
+          "name": "rgrIntroBackClr",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 14,
+            "Top": 22,
+            "Width": 206,
+            "Height": 37,
+            "Margins.Left": 2,
+            "Margins.Top": 2,
+            "Margins.Right": 2,
+            "Margins.Bottom": 2,
+            "Caption": "Background Color",
+            "Columns": 2,
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -10,
+            "Font.Name": "Courier New",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "Items.Strings": [
+              "Current",
+              "Select New"
+            ],
+            "ParentFont": false,
+            "TabOrder": 0,
+            "TabStop": true,
+            "OnClick": "rgrIntroBackClrClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TBitBtn",
+      "name": "btnDefaults",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 286,
+        "Top": 81,
+        "Width": 70,
+        "Height": 24,
+        "HelpContext": 4,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Caption": "&Defaults",
+        "Glyph.Data": {
+          "binary_bytes": 378
+        },
+        "Margin": 2,
+        "ModalResult": 5,
+        "NumGlyphs": 2,
+        "Spacing": -1,
+        "TabOrder": 1,
+        "IsControl": true
+      },
+      "children": []
+    },
+    {
+      "class": "TFontDialog",
+      "name": "FontDialog1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -13,
+        "Font.Name": "System",
+        "Font.Style": [],
+        "Left": 136,
+        "Top": 200
+      },
+      "children": []
+    },
+    {
+      "class": "TColorDialog",
+      "name": "ColorDialog1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 336,
+        "Top": 216
+      },
+      "children": []
+    }
+  ]
+}

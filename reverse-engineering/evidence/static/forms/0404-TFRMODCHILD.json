@@ -1,0 +1,203 @@
+{
+  "class": "TfrmODChild",
+  "name": "frmODChild",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 433,
+    "Top": 271,
+    "Caption": "Associated Complex Orders",
+    "ClientHeight": 524,
+    "ClientWidth": 620,
+    "OldCreateOrder": false,
+    "Position": "poMainFormCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 512,
+    "ExplicitHeight": 453,
+    "PixelsPerInch": 120,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblWarning",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 620,
+        "Height": 73,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Align": "alTop",
+        "AutoSize": false,
+        "Caption": "You have requested to discontinue a medication order which was entered as part of a complex order. The following are the orders associated with the same complex order. Do you want to dicscontinue all of these orders?",
+        "WordWrap": true
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 73,
+        "Width": 620,
+        "Height": 401,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "BorderWidth": 3,
+        "BorderStyle": "bsSingle",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TListBox",
+          "name": "lstODComplex",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 4,
+            "Top": 4,
+            "Width": 608,
+            "Height": 389,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Style": "lbOwnerDrawVariable",
+            "Align": "alClient",
+            "TabOrder": 0,
+            "OnDrawItem": "lstODComplexDrawItem",
+            "OnMeasureItem": "lstODComplexMeasureItem"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 474,
+        "Width": 620,
+        "Height": 50,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Align": "alBottom",
+        "TabOrder": 1,
+        "DesignSize": [
+          620,
+          50
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 409,
+            "Top": 15,
+            "Width": 92,
+            "Height": 26,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "Caption": "OK",
+            "TabOrder": 0,
+            "OnClick": "btnOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 512,
+            "Top": 15,
+            "Width": 92,
+            "Height": 26,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "Caption": "Cancel",
+            "TabOrder": 1,
+            "OnClick": "btnCancelClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstODComplex",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODChild",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+{
+  "class": "TfrmSurrogateEdit",
+  "name": "frmSurrogateEdit",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "BorderStyle": "bsDialog",
+    "Caption": "Surrogate Management",
+    "ClientHeight": 163,
+    "ClientWidth": 311,
+    "OnCloseQuery": "FormCloseQuery",
+    "ExplicitWidth": 327,
+    "ExplicitHeight": 202,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 128,
+        "Width": 305,
+        "Height": 32,
+        "HelpContext": 9100,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ParentColor": true,
+        "TabOrder": 1,
+        "ExplicitTop": 176
+      },
+      "children": [
+        {
+          "class": "TBevel",
+          "name": "bvlBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 305,
+            "Height": 2,
+            "Align": "alTop",
+            "ExplicitWidth": 366
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "txtReset",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 8,
+            "Width": 110,
+            "Height": 17,
+            "Caption": "Reset Button Disabled",
+            "TabOrder": 1,
+            "TabStop": true
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 134,
+            "Top": 2,
+            "Width": 171,
+            "Height": 30,
+            "Align": "alRight",
+            "BevelOuter": "bvNone",
+            "TabOrder": 2
+          },
+          "children": [
+            {
+              "class": "TStaticText",
+              "name": "txtCancel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 93,
+                "Top": 6,
+                "Width": 115,
+                "Height": 17,
+                "Caption": "Cancel Button Disabled",
+                "TabOrder": 3,
+                "TabStop": true
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "txtOK",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 12,
+                "Top": 6,
+                "Width": 97,
+                "Height": 17,
+                "Caption": "OK Button Disabled",
+                "TabOrder": 2,
+                "TabStop": true
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnOK",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 12,
+                "Top": 3,
+                "Width": 75,
+                "Height": 24,
+                "HelpContext": 9996,
+                "Align": "alRight",
+                "Caption": "OK",
+                "ModalResult": 1,
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnCancel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 93,
+                "Top": 3,
+                "Width": 75,
+                "Height": 24,
+                "HelpContext": 9997,
+                "Align": "alRight",
+                "Cancel": true,
+                "Caption": "Cancel",
+                "ModalResult": 2,
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TButton",
+          "name": "btnReset",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 8,
+            "Top": 5,
+            "Width": 75,
+            "Height": 24,
+            "Margins.Left": 8,
+            "Action": "ActionReset",
+            "Align": "alLeft",
+            "TabOrder": 0
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlSurrogateTools",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 311,
+        "Height": 125,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0,
+        "ExplicitLeft": -3,
+        "ExplicitTop": -1,
+        "ExplicitHeight": 137,
+        "DesignSize": [
+          311,
+          125
+        ]
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "stxtAllowedRange",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 109,
+            "Width": 305,
+            "Height": 13,
+            "Align": "alBottom",
+            "Caption": "Start and stop times must be within this range...",
+            "ExplicitTop": 157,
+            "ExplicitWidth": 221
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboSurrogate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 21,
+            "Width": 301,
+            "Height": 21,
+            "Hint": "Surrogate Name",
+            "HelpContext": 9102,
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akRight"
+            ],
+            "Style": "orcsDropDown",
+            "AutoSelect": true,
+            "Caption": "Surrogate Name",
+            "Color": "clWindow",
+            "DropDownCount": 7,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": true,
+            "LookupPiece": 2,
+            "MaxLength": 0,
+            "Pieces": "2,3",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 1,
+            "TabStop": true,
+            "Text": "",
+            "FlatCheckBoxes": false,
+            "OnChange": "cboSurrogateChange",
+            "OnNeedData": "cboSurrogateNeedData",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "ordtbStart",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 4,
+            "Top": 66,
+            "Width": 142,
+            "Height": 21,
+            "Hint": "Surrogate Start Date and Time",
+            "TabOrder": 3,
+            "DateOnly": false,
+            "RequireTime": true,
+            "Caption": "",
+            "OnDateDialogClosed": "ordtbStartDateDialogClosed"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "ordtbStop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 152,
+            "Top": 66,
+            "Width": 153,
+            "Height": 21,
+            "Hint": "Surrogate End Date and Time",
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akRight"
+            ],
+            "TabOrder": 5,
+            "DateOnly": false,
+            "RequireTime": true,
+            "Caption": "",
+            "OnDateDialogClosed": "ordtbStopDateDialogClosed"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "VA508StaticText1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 4,
+            "Top": 49,
+            "Width": 26,
+            "Height": 17,
+            "Caption": "Start",
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "VA508StaticText2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 152,
+            "Top": 49,
+            "Width": 26,
+            "Height": 17,
+            "Caption": "Stop",
+            "TabOrder": 4
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "VA508StaticTextName",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 4,
+            "Width": 32,
+            "Height": 17,
+            "Caption": "Name",
+            "TabOrder": 0
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 384,
+        "Top": 152,
+        "Data": [
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnReset",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSurrogateTools",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSurrogate",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ordtbStart",
+            "Text = Surrogate Start Date and Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = ordtbStop",
+            "Text = Surrogate Stop Date and Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = VA508StaticText1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = VA508StaticText2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = VA508StaticTextName",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmSurrogateEdit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtReset",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TActionList",
+      "name": "ALMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnUpdate": "ALMainUpdate",
+        "Left": 72,
+        "Top": 4
+      },
+      "children": [
+        {
+          "class": "TAction",
+          "name": "ActionReset",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Reset",
+            "ShortCut": 16466,
+            "OnExecute": "ActionResetExecute"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

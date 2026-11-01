@@ -1,0 +1,54 @@
+{
+  "class": "TfrmPage",
+  "name": "frmPage",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 13,
+    "Top": 236,
+    "Caption": "Basic Page",
+    "ClientHeight": 361,
+    "ClientWidth": 640,
+    "OldCreateOrder": true,
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TShape",
+      "name": "shpPageBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 356,
+        "Width": 640,
+        "Height": 5,
+        "Align": "alBottom",
+        "Brush.Color": "clBtnFace",
+        "Pen.Style": "psClear"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = frmPage",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

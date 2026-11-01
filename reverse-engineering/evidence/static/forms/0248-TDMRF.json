@@ -1,0 +1,312 @@
+{
+  "class": "TdmRF",
+  "name": "dmRF",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "OldCreateOrder": false,
+    "OnCreate": "DataModuleCreate",
+    "OnDestroy": "DataModuleDestroy",
+    "Height": 150,
+    "Width": 215
+  },
+  "children": [
+    {
+      "class": "TClientDataSet",
+      "name": "cdsControls",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "PersistDataPacket.Data": {
+          "binary_bytes": 274
+        },
+        "Active": true,
+        "Aggregates": [],
+        "FieldDefs": [
+          {
+            "index": null,
+            "properties": {
+              "Name": "AbsY",
+              "DataType": "ftInteger"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "AbsX",
+              "DataType": "ftInteger"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "CTRL_OBJ",
+              "DataType": "ftLargeint"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "CTRL_FOCUSABLE",
+              "DataType": "ftBoolean"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "FLD_REQUIRED",
+              "DataType": "ftBoolean"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "Tag",
+              "DataType": "ftInteger"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "Top",
+              "DataType": "ftInteger"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "Left",
+              "DataType": "ftInteger"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "FLD_OBJ",
+              "DataType": "ftInteger"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "FLD",
+              "DataType": "ftInteger"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "FLD_ID",
+              "DataType": "ftInteger"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "FLD_NAME",
+              "DataType": "ftString",
+              "Size": 80
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "Class",
+              "DataType": "ftString",
+              "Size": 120
+            }
+          }
+        ],
+        "IndexDefs": [
+          {
+            "index": null,
+            "properties": {
+              "Name": "DEFAULT_ORDER"
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Name": "CHANGEINDEX"
+            }
+          }
+        ],
+        "IndexFieldNames": "AbsY;AbsX",
+        "Params": [],
+        "StoreDefs": true,
+        "Left": 32,
+        "Top": 21
+      },
+      "children": [
+        {
+          "class": "TIntegerField",
+          "name": "cdsControlsAbsY",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "FieldName": "AbsY"
+          },
+          "children": []
+        },
+        {
+          "class": "TIntegerField",
+          "name": "cdsControlsAbsX",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "FieldName": "AbsX"
+          },
+          "children": []
+        },
+        {
+          "class": "TLargeintField",
+          "name": "cdsControlsCTRL_OBJ",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "DisplayWidth": 10,
+            "FieldName": "CTRL_OBJ"
+          },
+          "children": []
+        },
+        {
+          "class": "TBooleanField",
+          "name": "cdsControlsCTRL_FOCUSABLE",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "FieldName": "CTRL_FOCUSABLE"
+          },
+          "children": []
+        },
+        {
+          "class": "TBooleanField",
+          "name": "cdsControlsFLD_REQUIRED",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "FieldName": "FLD_REQUIRED"
+          },
+          "children": []
+        },
+        {
+          "class": "TIntegerField",
+          "name": "cdsControlsTag",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "FieldName": "Tag",
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TIntegerField",
+          "name": "cdsControlsTop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "FieldName": "Top",
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TIntegerField",
+          "name": "cdsControlsLeft",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "FieldName": "Left",
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TIntegerField",
+          "name": "cdsControlsFLD_OBJ",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "FieldName": "FLD_OBJ"
+          },
+          "children": []
+        },
+        {
+          "class": "TIntegerField",
+          "name": "cdsControlsFLD",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "DisplayWidth": 5,
+            "FieldName": "FLD"
+          },
+          "children": []
+        },
+        {
+          "class": "TIntegerField",
+          "name": "cdsControlsFLD_ID",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "DisplayWidth": 5,
+            "FieldName": "FLD_ID"
+          },
+          "children": []
+        },
+        {
+          "class": "TStringField",
+          "name": "cdsControlsFLD_NAME",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "DisplayWidth": 20,
+            "FieldName": "FLD_NAME",
+            "Size": 80
+          },
+          "children": []
+        },
+        {
+          "class": "TStringField",
+          "name": "cdsControlsClass",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "DisplayWidth": 40,
+            "FieldName": "Class",
+            "Size": 120
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TDataSource",
+      "name": "dsControls",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "DataSet": "cdsControls",
+        "Left": 32,
+        "Top": 69
+      },
+      "children": []
+    }
+  ]
+}

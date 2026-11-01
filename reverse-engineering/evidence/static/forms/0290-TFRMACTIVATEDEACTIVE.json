@@ -1,0 +1,137 @@
+{
+  "class": "TfrmActivateDeactive",
+  "name": "frmActivateDeactive",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 293,
+    "Top": 317,
+    "BorderIcons": [],
+    "Caption": "Renew Order",
+    "ClientHeight": 185,
+    "ClientWidth": 569,
+    "OldCreateOrder": false,
+    "ExplicitWidth": 587,
+    "ExplicitHeight": 230,
+    "DesignSize": [
+      569,
+      185
+    ],
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TButton",
+      "name": "TActivate",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 206,
+        "Top": 157,
+        "Width": 106,
+        "Height": 25,
+        "Anchors": [
+          "akLeft",
+          "akTop",
+          "akRight",
+          "akBottom"
+        ],
+        "Caption": "DC Pending Order",
+        "TabOrder": 2,
+        "OnClick": "TActivateClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "TDeactive",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 132,
+        "Top": 157,
+        "Width": 63,
+        "Height": 25,
+        "Caption": "DC BOTH",
+        "TabOrder": 1,
+        "OnClick": "TDeactiveClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "Memo1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 569,
+        "Height": 145,
+        "BorderStyle": "bsNone",
+        "Color": "clBtnFace",
+        "Lines.Strings": [
+          "Memo1"
+        ],
+        "ReadOnly": true,
+        "ScrollBars": "ssVertical",
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "TCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 324,
+        "Top": 157,
+        "Width": 137,
+        "Height": 25,
+        "Caption": "Cancel-No Action Taken",
+        "TabOrder": 3,
+        "OnClick": "TCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = TActivate",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = TDeactive",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Memo1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = TCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmActivateDeactive",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

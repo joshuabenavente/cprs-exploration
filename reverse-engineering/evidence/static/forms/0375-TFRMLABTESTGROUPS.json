@@ -1,0 +1,721 @@
+{
+  "class": "TfrmLabTestGroups",
+  "name": "frmLabTestGroups",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 337,
+    "Top": 202,
+    "Caption": "Select Lab Tests",
+    "ClientHeight": 434,
+    "ClientWidth": 457,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 473,
+    "ExplicitHeight": 472,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlLabTestGroups",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 457,
+        "Height": 434,
+        "Align": "alClient",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TBevel",
+          "name": "bvlTestGroups",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 455,
+            "Height": 120,
+            "Align": "alTop"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblTests",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 10,
+            "Top": 124,
+            "Width": 79,
+            "Height": 13,
+            "Caption": "Laboratory Tests"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 284,
+            "Top": 144,
+            "Width": 100,
+            "Height": 13,
+            "Caption": "Tests to be displayed"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblSpecimen",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 12,
+            "Top": 383,
+            "Width": 47,
+            "Height": 13,
+            "Caption": "Specimen"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblTestGroups",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 10,
+            "Top": 38,
+            "Width": 58,
+            "Height": 13,
+            "Caption": "Test Groups"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblUsers",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 164,
+            "Top": 4,
+            "Width": 159,
+            "Height": 13,
+            "Caption": "Persons with defined Test Groups"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblOrder",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 182,
+            "Top": 304,
+            "Width": 40,
+            "Height": 52,
+            "Caption": "Arrange order of tests for display.",
+            "WordWrap": true
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblTestGroup",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 181,
+            "Top": 198,
+            "Width": 91,
+            "Height": 39,
+            "Caption": "To create a New Test Group, limit selection to 7 tests.",
+            "WordWrap": true
+          },
+          "children": []
+        },
+        {
+          "class": "TVA508StaticText",
+          "name": "lblDefine",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Name": "lblDefine",
+            "Left": 352,
+            "Top": 8,
+            "Width": 94,
+            "Height": 15,
+            "Alignment": "taLeftJustify",
+            "AutoSize": true,
+            "Caption": "Define Test Groups",
+            "TabOrder": 12,
+            "ShowAccelChar": true,
+            "WordWrap": false,
+            "LabelAlignment": "taLeftJustify",
+            "LabelLayout": "tlTop"
+          },
+          "children": []
+        },
+        {
+          "class": "TKeyClickPanel",
+          "name": "pnlUpButton",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 235,
+            "Top": 299,
+            "Width": 29,
+            "Height": 29,
+            "BevelOuter": "bvNone",
+            "Constraints.MaxHeight": 29,
+            "Constraints.MaxWidth": 29,
+            "TabOrder": 7,
+            "TabStop": true,
+            "OnClick": "cmdUpClick",
+            "OnEnter": "pnlUpButtonEnter",
+            "OnExit": "pnlUpButtonExit",
+            "OnResize": "pnlUpButtonResize"
+          },
+          "children": [
+            {
+              "class": "TSpeedButton",
+              "name": "cmdUp",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 2,
+                "Width": 25,
+                "Height": 25,
+                "Caption": "^",
+                "Enabled": false,
+                "OnClick": "cmdUpClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TKeyClickPanel",
+          "name": "pnlDownButton",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 235,
+            "Top": 331,
+            "Width": 29,
+            "Height": 29,
+            "BevelOuter": "bvNone",
+            "Constraints.MaxHeight": 29,
+            "Constraints.MaxWidth": 29,
+            "TabOrder": 8,
+            "TabStop": true,
+            "OnClick": "cmdDownClick",
+            "OnEnter": "pnlDownButtonEnter",
+            "OnExit": "pnlDownButtonExit",
+            "OnResize": "pnlDownButtonResize"
+          },
+          "children": [
+            {
+              "class": "TSpeedButton",
+              "name": "cmdDown",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 2,
+                "Width": 25,
+                "Height": 25,
+                "Caption": "v",
+                "Enabled": false,
+                "OnClick": "cmdDownClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 277,
+            "Top": 398,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "OK",
+            "TabOrder": 10,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 368,
+            "Top": 398,
+            "Width": 72,
+            "Height": 21,
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 11
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdClear",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 189,
+            "Top": 244,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "Remove All",
+            "Enabled": false,
+            "TabOrder": 4,
+            "OnClick": "cmdClearClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdRemove",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 189,
+            "Top": 268,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "Remove One",
+            "Enabled": false,
+            "TabOrder": 5,
+            "OnClick": "cmdRemoveClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "lstList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 278,
+            "Top": 163,
+            "Width": 160,
+            "Height": 211,
+            "ItemHeight": 13,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 9,
+            "OnClick": "lstListClick",
+            "Caption": "Tests to be displayed",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2",
+            "OnChange": "lstListClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboTests",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 10,
+            "Top": 144,
+            "Width": 160,
+            "Height": 233,
+            "Style": "orcsSimple",
+            "AutoSelect": true,
+            "Caption": "Laboratory Tests",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": true,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "ParentShowHint": false,
+            "Pieces": "2",
+            "ShowHint": true,
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "TabStop": true,
+            "Text": "",
+            "OnChange": "cboTestsChange",
+            "OnDblClick": "cmdAddTestClick",
+            "OnEnter": "cboTestsEnter",
+            "OnExit": "cboTestsExit",
+            "OnNeedData": "cboTestsNeedData",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboUsers",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 164,
+            "Top": 23,
+            "Width": 165,
+            "Height": 21,
+            "Style": "orcsDropDown",
+            "AutoSelect": true,
+            "Caption": "Persons with defined Test Groups",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": true,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 13,
+            "Text": "",
+            "OnClick": "cboUsersClick",
+            "OnNeedData": "cboUsersNeedData",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "lstTestGroups",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 10,
+            "Top": 56,
+            "Width": 319,
+            "Height": 57,
+            "ItemHeight": 13,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 14,
+            "Caption": "Test Groups",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2",
+            "OnChange": "lstTestGroupsChange"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdReplace",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 368,
+            "Top": 60,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "Replace",
+            "Enabled": false,
+            "TabOrder": 16,
+            "OnClick": "cmdReplaceClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboSpecimen",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 12,
+            "Top": 402,
+            "Width": 160,
+            "Height": 21,
+            "Style": "orcsDropDown",
+            "AutoSelect": true,
+            "Caption": "Specimen",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": true,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "ParentShowHint": false,
+            "Pieces": "2",
+            "ShowHint": true,
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 1,
+            "Text": "",
+            "OnNeedData": "cboSpecimenNeedData",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdDelete",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 368,
+            "Top": 88,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "Delete",
+            "Enabled": false,
+            "TabOrder": 17,
+            "OnClick": "cmdDeleteClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdAdd",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 368,
+            "Top": 32,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "New",
+            "Enabled": false,
+            "ParentShowHint": false,
+            "ShowHint": false,
+            "TabOrder": 15,
+            "OnClick": "cmdAddClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdAddTest",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 189,
+            "Top": 144,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "Add",
+            "Enabled": false,
+            "TabOrder": 2,
+            "OnClick": "cmdAddTestClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TVA508StaticText",
+          "name": "lbl508TstGrp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Name": "lbl508TstGrp",
+            "Left": 173,
+            "Top": 198,
+            "Width": 8,
+            "Height": 39,
+            "Margins.Left": 0,
+            "Margins.Top": 0,
+            "Margins.Right": 0,
+            "Margins.Bottom": 0,
+            "Alignment": "taLeftJustify",
+            "Caption": "",
+            "Enabled": false,
+            "TabOrder": 3,
+            "Visible": false,
+            "ShowAccelChar": true,
+            "WordWrap": false,
+            "LabelAlignment": "taLeftJustify",
+            "LabelLayout": "tlTop"
+          },
+          "children": []
+        },
+        {
+          "class": "TVA508StaticText",
+          "name": "lbl508Order",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Name": "lbl508Order",
+            "Left": 173,
+            "Top": 304,
+            "Width": 8,
+            "Height": 52,
+            "Alignment": "taLeftJustify",
+            "Caption": "",
+            "Enabled": false,
+            "TabOrder": 6,
+            "Visible": false,
+            "ShowAccelChar": true,
+            "WordWrap": false,
+            "LabelAlignment": "taLeftJustify",
+            "LabelLayout": "tlTop"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlLabTestGroups",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlUpButton",
+            "Text = Display selected test earlier",
+            "Status = stsOK"
+          ],
+          [
+            "Component = pnlDownButton",
+            "Text = Display selected test later",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdClear",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboTests",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboUsers",
+            "Label = lblUsers",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lstTestGroups",
+            "Label = lblTestGroups",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdReplace",
+            "Text = Replace Test Group",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cboSpecimen",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdDelete",
+            "Text = Delete Test Group",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdAdd",
+            "Text = New Test Group",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdAddTest",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmLabTestGroups",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDefine",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lbl508TstGrp",
+            "Text = To create a New Test Group, limit selection to 7 tests.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lbl508Order",
+            "Text = Arrange order of tests for display.",
+            "Status = stsOK"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "class": "TfrmNotificationProcessor",
+  "name": "frmNotificationProcessor",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Caption": "CPRS Notification Processor",
+    "ClientHeight": 362,
+    "ClientWidth": 596,
+    "Color": "clBtnFace",
+    "Constraints.MinHeight": 400,
+    "Constraints.MinWidth": 500,
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Tahoma",
+    "Font.Style": [],
+    "OldCreateOrder": false,
+    "Position": "poMainFormCenter",
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "DesignSize": [
+      596,
+      362
+    ],
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TBevel",
+      "name": "bvlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 322,
+        "Width": 596,
+        "Height": 40,
+        "Align": "alBottom",
+        "Shape": "bsSpacer",
+        "ExplicitTop": 312,
+        "ExplicitWidth": 484
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "memNotificationSpecifications",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 26,
+        "Width": 590,
+        "Height": 103,
+        "Align": "alTop",
+        "Anchors": [
+          "akLeft",
+          "akTop",
+          "akRight",
+          "akBottom"
+        ],
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "Courier New",
+        "Font.Style": [],
+        "Lines.Strings": [
+          "memNotificationSpecifications",
+          "12345678901234567890123456789012345678901234567890123456789012345678901234567890"
+        ],
+        "ParentFont": false,
+        "ReadOnly": true,
+        "ScrollBars": "ssVertical",
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "stxtNotificationName",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 590,
+        "Height": 17,
+        "Align": "alTop",
+        "Caption": "stxtNotificationName",
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TRadioButton",
+      "name": "rbtnNewNote",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 135,
+        "Width": 590,
+        "Height": 17,
+        "Align": "alTop",
+        "Anchors": [
+          "akLeft",
+          "akRight",
+          "akBottom"
+        ],
+        "Caption": "Create New Note",
+        "TabOrder": 2,
+        "OnClick": "NewOrAddendClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TRadioButton",
+      "name": "rbtnAddendOneOfTheFollowing",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 158,
+        "Width": 590,
+        "Height": 17,
+        "Align": "alTop",
+        "Anchors": [
+          "akLeft",
+          "akRight",
+          "akBottom"
+        ],
+        "Caption": "Addend one of the following notes",
+        "TabOrder": 3,
+        "OnClick": "NewOrAddendClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TListBox",
+      "name": "lbxCurrentNotesAvailable",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 181,
+        "Width": 590,
+        "Height": 138,
+        "Align": "alClient",
+        "Anchors": [
+          "akLeft",
+          "akRight",
+          "akBottom"
+        ],
+        "ItemHeight": 13,
+        "TabOrder": 4,
+        "OnClick": "NewOrAddendClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 450,
+        "Top": 329,
+        "Width": 138,
+        "Height": 25,
+        "Anchors": [
+          "akRight",
+          "akBottom"
+        ],
+        "Caption": "&Return to Notifications",
+        "ModalResult": 2,
+        "TabOrder": 5
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 369,
+        "Top": 329,
+        "Width": 75,
+        "Height": 25,
+        "Anchors": [
+          "akRight",
+          "akBottom"
+        ],
+        "Caption": "&OK",
+        "ModalResult": 1,
+        "TabOrder": 6,
+        "OnClick": "btnOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnDefer",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 329,
+        "Width": 107,
+        "Height": 25,
+        "Anchors": [
+          "akLeft",
+          "akBottom"
+        ],
+        "Caption": "&Defer Notification",
+        "ModalResult": 2,
+        "TabOrder": 7,
+        "OnClick": "btnDeferClick"
+      },
+      "children": []
+    }
+  ]
+}

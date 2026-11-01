@@ -1,0 +1,128 @@
+{
+  "class": "TfraParent",
+  "name": "fraParent",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 809,
+    "Height": 179,
+    "Margins.Left": 1,
+    "Margins.Top": 0,
+    "Margins.Right": 1,
+    "Margins.Bottom": 0,
+    "Color": "clActiveCaption",
+    "Padding.Left": 3,
+    "Padding.Right": 3,
+    "ParentBackground": false,
+    "ParentColor": false,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlHeader",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 3,
+        "Top": 0,
+        "Width": 803,
+        "Height": 29,
+        "Align": "alTop",
+        "BevelEdges": [],
+        "BevelOuter": "bvNone",
+        "Color": "clActiveCaption",
+        "TabOrder": 0,
+        "OnEnter": "pnlHeaderEnter"
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblHeader",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 32,
+            "Top": 3,
+            "Width": 768,
+            "Height": 23,
+            "Align": "alClient",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "Tahoma",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false,
+            "Layout": "tlCenter",
+            "ExplicitWidth": 3,
+            "ExplicitHeight": 13
+          },
+          "children": []
+        },
+        {
+          "class": "TSpeedButton",
+          "name": "spBtnExpandCollapse",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 23,
+            "Height": 23,
+            "Align": "alLeft",
+            "Flat": true,
+            "OnClick": "spbtnExpandCollapseClick",
+            "ExplicitLeft": 16,
+            "ExplicitTop": 4,
+            "ExplicitHeight": 22
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlWorkspace",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 3,
+        "Top": 29,
+        "Width": 803,
+        "Height": 150,
+        "Align": "alClient",
+        "BevelEdges": [],
+        "BevelOuter": "bvNone",
+        "Color": "clWindow",
+        "ParentBackground": false,
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TImageList",
+      "name": "imgLst",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 104,
+        "Bitmap": {
+          "binary_bytes": 4390
+        }
+      },
+      "children": []
+    }
+  ]
+}

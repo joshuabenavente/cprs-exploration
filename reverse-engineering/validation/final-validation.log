@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "target_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+  "function_count": 43371,
+  "statuses": {
+    "analyzed": 2245,
+    "unresolved": 40943,
+    "partially_analyzed": 183
+  },
+  "direct_call_counts": {
+    "direct_E8_destinations_verified": 204270,
+    "other_instruction_form": 39587
+  },
+  "bounded_exports": 44,
+  "bounded_instructions_checked": 4953,
+  "checks": [
+    "All uploaded input hashes and sizes match pinned manifest",
+    "All function entries are unique, classified, linked to existing evidence and carry uncertainty",
+    "Subsystem and status counts reconcile with complete JSON/JSONL inventory",
+    "All analyzed-scope proof bytes match target; independent bounded objdump samples cover every small-body pattern kind",
+    "All 204270 direct E8 destinations independently verified against uploaded bytes",
+    "All 44 bounded exports and their instruction bytes validated; five continuation repairs recorded",
+    "Class/literal type-application counts and historical byte validation reconcile",
+    "Readable/structured specifications and checkpoint agree; document links exist; next exact batch is recorded",
+    "All Python sources parse and all Java scripts compile against Ghidra 12.2 APIs"
+  ],
+  "target_executed": false,
+  "runtime_behavior_verified": false
+}

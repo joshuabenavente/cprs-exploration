@@ -1,0 +1,375 @@
+{
+  "class": "TfrmReminderTree",
+  "name": "frmReminderTree",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 229,
+    "Top": 197,
+    "HelpContext": 11200,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "Available Reminders",
+    "ClientHeight": 241,
+    "ClientWidth": 472,
+    "FormStyle": "fsStayOnTop",
+    "Menu": "mmMain",
+    "OnMouseWheel": "FormMouseWheel",
+    "ExplicitWidth": 488,
+    "ExplicitHeight": 300,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 472,
+        "Height": 241,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "Constraints.MinHeight": 120,
+        "Constraints.MinWidth": 300,
+        "TabOrder": 0,
+        "OnResize": "pnlTopResize"
+      },
+      "children": [
+        {
+          "class": "TORTreeView",
+          "name": "tvRem",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 999,
+            "Left": 0,
+            "Top": 17,
+            "Width": 265,
+            "Height": 192,
+            "HideSelection": false,
+            "Images": "dmodShared.imgReminders",
+            "Indent": 23,
+            "ReadOnly": true,
+            "RightClickSelect": true,
+            "RowSelect": true,
+            "StateImages": "dmodShared.imgReminders",
+            "TabOrder": 0,
+            "OnChange": "tvRemChange",
+            "OnClick": "tvRemClick",
+            "OnCollapsed": "tvRemCollapsed",
+            "OnEnter": "tvRemEnter",
+            "OnExit": "tvRemExit",
+            "OnExpanded": "tvRemExpanded",
+            "OnKeyDown": "tvRemKeyDown",
+            "OnMouseDown": "tvRemMouseDown",
+            "Caption": "Available Reminders",
+            "NodePiece": 0,
+            "OnNodeCaptioning": "tvRemNodeCaptioning"
+          },
+          "children": []
+        },
+        {
+          "class": "THeaderControl",
+          "name": "hcRem",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 472,
+            "Height": 17,
+            "Sections": [
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MaxWidth": 267,
+                  "MinWidth": 267,
+                  "Text": "Available Reminders",
+                  "Width": 267
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Alignment": "taCenter",
+                  "ImageIndex": -1,
+                  "MaxWidth": 68,
+                  "MinWidth": 68,
+                  "Text": "Due Date",
+                  "Width": 68
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MaxWidth": 91,
+                  "MinWidth": 91,
+                  "Text": "Last Occurrence",
+                  "Width": 91
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Alignment": "taCenter",
+                  "ImageIndex": -1,
+                  "MaxWidth": 43,
+                  "MinWidth": 43,
+                  "Text": "Priority",
+                  "Width": 43
+                }
+              }
+            ],
+            "OnSectionClick": "hcRemSectionClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlTopRight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 266,
+            "Top": 17,
+            "Width": 206,
+            "Height": 224,
+            "Align": "alRight",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlTopRight",
+            "TabOrder": 2
+          },
+          "children": [
+            {
+              "class": "TBevel",
+              "name": "bvlGap",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 207,
+                "Width": 206,
+                "Height": 17,
+                "Align": "alBottom",
+                "Shape": "bsSpacer",
+                "Visible": false,
+                "ExplicitTop": 175
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lbRem",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 206,
+                "Height": 207,
+                "TabStop": false,
+                "Style": "lbOwnerDrawFixed",
+                "Align": "alClient",
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 0,
+                "OnClick": "lbRemClick",
+                "OnDblClick": "lbRemClick",
+                "OnDrawItem": "lbRemDrawItem",
+                "Caption": "Due Date, last occurance, and priority",
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": false,
+                "LongList": false,
+                "OnChange": "lbRemChange"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tvRem",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = hcRem",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTopRight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lbRem",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmReminderTree",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TMainMenu",
+      "name": "mmMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Images": "dmodShared.imgReminders2",
+        "Left": 48,
+        "Top": 24
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "memAction",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Action",
+            "OnClick": "memActionClick"
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "memEval",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Evaluate Reminder",
+                "OnClick": "memEvalClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "memEvalCat",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Evaluate &Category Reminders",
+                "OnClick": "memEvalCatClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "memEvalAll",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Evaluate Processed &Reminders",
+                "OnClick": "memEvalAllClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "memRefresh",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Re&fresh Reminder Dialogs",
+                "OnClick": "memRefreshClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuCoverSheet",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Edit Cover Sheet Reminder &List",
+                "OnClick": "mnuCoverSheetClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuExit",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "E&xit Available Reminders",
+                "ShortCut": 27,
+                "OnClick": "mnuExitClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblReminders",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [
+          {
+            "index": null,
+            "properties": {
+              "Component": "tvRem"
+            }
+          }
+        ],
+        "Labels": [],
+        "RemoteLabeler": "dmodShared.imgLblReminders",
+        "Left": 120,
+        "Top": 56
+      },
+      "children": []
+    }
+  ]
+}

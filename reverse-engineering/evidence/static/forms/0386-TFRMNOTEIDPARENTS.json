@@ -1,0 +1,124 @@
+{
+  "class": "TfrmNoteIDParents",
+  "name": "frmNoteIDParents",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 387,
+    "Top": 203,
+    "Caption": "Attach to Interdisciplinary Note",
+    "ClientHeight": 338,
+    "ClientWidth": 446,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 454,
+    "ExplicitHeight": 365,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblSelectParent",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 5,
+        "Top": 12,
+        "Width": 123,
+        "Height": 13,
+        "Caption": "Select a note to attach to:"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 147,
+        "Top": 306,
+        "Width": 75,
+        "Height": 25,
+        "Caption": "OK",
+        "TabOrder": 1,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 237,
+        "Top": 306,
+        "Width": 75,
+        "Height": 25,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 2,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TORListBox",
+      "name": "lstIDParents",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 5,
+        "Top": 31,
+        "Width": 434,
+        "Height": 267,
+        "ItemHeight": 13,
+        "ParentShowHint": false,
+        "ShowHint": true,
+        "TabOrder": 0,
+        "TabWidth": 8,
+        "Caption": "Select a note to attach to:",
+        "ItemTipColor": "clWindow",
+        "LongList": false,
+        "Pieces": "2",
+        "TabPositions": "30"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstIDParents",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmNoteIDParents",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,575 @@
+{
+  "class": "TfrmRemDlg",
+  "name": "frmRemDlg",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 310,
+    "Top": 154,
+    "Width": 250,
+    "Height": 250,
+    "HelpContext": 11100,
+    "VertScrollBar.Range": 162,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "Reminder Dialog",
+    "Constraints.MinHeight": 250,
+    "Constraints.MinWidth": 250,
+    "FormStyle": "fsStayOnTop",
+    "OnCloseQuery": "FormCloseQuery",
+    "OnMouseWheel": "FormMouseWheel",
+    "ExplicitWidth": 250,
+    "ExplicitHeight": 250,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TSplitter",
+      "name": "splTxtData",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 49,
+        "Width": 234,
+        "Height": 3,
+        "Cursor": "crVSplit",
+        "Align": "alBottom",
+        "ExplicitTop": 132,
+        "ExplicitWidth": 428
+      },
+      "children": []
+    },
+    {
+      "class": "TScrollBox",
+      "name": "sb1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 234,
+        "Height": 49,
+        "HorzScrollBar.Tracking": true,
+        "VertScrollBar.Tracking": true,
+        "Align": "alClient",
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -12,
+        "Font.Name": "Courier New",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 0,
+        "Visible": false,
+        "OnResize": "sbResize"
+      },
+      "children": []
+    },
+    {
+      "class": "TScrollBox",
+      "name": "sb2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 234,
+        "Height": 49,
+        "HorzScrollBar.Tracking": true,
+        "VertScrollBar.Tracking": true,
+        "Align": "alClient",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -12,
+        "Font.Name": "Courier New",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 1,
+        "OnResize": "sbResize"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlFrmBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 0,
+        "Top": 52,
+        "Width": 234,
+        "Height": 159,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblFootnotes",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 144,
+            "Width": 234,
+            "Height": 15,
+            "Align": "alBottom",
+            "AutoSize": false,
+            "Caption": " * Indicates a Required Field",
+            "ExplicitWidth": 428
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 234,
+            "Height": 144,
+            "Align": "alClient",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TSplitter",
+              "name": "splText",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 94,
+                "Width": 232,
+                "Height": 3,
+                "Cursor": "crVSplit",
+                "Align": "alBottom",
+                "ExplicitWidth": 426
+              },
+              "children": []
+            },
+            {
+              "class": "TRichEdit",
+              "name": "reData",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 97,
+                "Width": 232,
+                "Height": 46,
+                "Align": "alBottom",
+                "Color": "clCream",
+                "Font.Charset": "ANSI_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -12,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "Constraints.MinHeight": 30,
+                "ParentFont": false,
+                "ReadOnly": true,
+                "ScrollBars": "ssVertical",
+                "TabOrder": 1,
+                "WantReturns": false,
+                "Zoom": 100
+              },
+              "children": []
+            },
+            {
+              "class": "TRichEdit",
+              "name": "reText",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 25,
+                "Width": 232,
+                "Height": 69,
+                "Align": "alClient",
+                "Color": "clCream",
+                "Font.Charset": "ANSI_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -12,
+                "Font.Name": "Courier New",
+                "Font.Style": [],
+                "Constraints.MinHeight": 30,
+                "ParentFont": false,
+                "ReadOnly": true,
+                "ScrollBars": "ssBoth",
+                "TabOrder": 0,
+                "WantReturns": false,
+                "WordWrap": false,
+                "Zoom": 100
+              },
+              "children": []
+            },
+            {
+              "class": "TGridPanel",
+              "name": "gpButtons",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 232,
+                "Height": 24,
+                "Align": "alTop",
+                "ColumnCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "56e0097381e7fbc60240"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "ee875135b7dc4ea50340"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "d98e5b9e9feb84cb0240"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "97f485cf595082d00240"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "900fe56d63afc8d50240"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "3574236841cf5adb0240"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "990869de71a43be10240"
+                      }
+                    }
+                  }
+                ],
+                "ControlCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 0,
+                      "Control": "btnClear",
+                      "Row": 0
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 1,
+                      "Control": "btnClinMaint",
+                      "Row": 0
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 2,
+                      "Control": "btnVisit",
+                      "Row": 0
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 3,
+                      "Control": "btnBack",
+                      "Row": 0
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 4,
+                      "Control": "btnNext",
+                      "Row": 0
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 5,
+                      "Control": "btnFinish",
+                      "Row": 0
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 6,
+                      "Control": "btnCancel",
+                      "Row": 0
+                    }
+                  }
+                ],
+                "RowCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80540"
+                      }
+                    }
+                  }
+                ],
+                "TabOrder": 2
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnClear",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 1,
+                    "Top": 1,
+                    "Width": 28,
+                    "Height": 22,
+                    "Hint": "Clear Reminder Resolutions for this Reminder",
+                    "Align": "alClient",
+                    "Caption": "Clear",
+                    "TabOrder": 0,
+                    "OnClick": "btnClearClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnClinMaint",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 29,
+                    "Top": 1,
+                    "Width": 47,
+                    "Height": 22,
+                    "Hint": "View the Clinical Maintenance Component",
+                    "Align": "alClient",
+                    "Caption": "Clinical &Maint",
+                    "TabOrder": 1,
+                    "OnClick": "btnClinMaintClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnVisit",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 76,
+                    "Top": 1,
+                    "Width": 29,
+                    "Height": 22,
+                    "Align": "alClient",
+                    "Caption": "&Visit Info",
+                    "TabOrder": 2,
+                    "OnClick": "btnVisitClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnBack",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 105,
+                    "Top": 1,
+                    "Width": 29,
+                    "Height": 22,
+                    "Hint": "Go back to the Previous Reminder Dialog",
+                    "Align": "alClient",
+                    "Caption": "<  Back",
+                    "TabOrder": 3,
+                    "OnClick": "btnBackClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnNext",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 134,
+                    "Top": 1,
+                    "Width": 30,
+                    "Height": 22,
+                    "Hint": "Go on to the Next Reminder Dialog",
+                    "Align": "alClient",
+                    "Caption": "Next  >",
+                    "TabOrder": 4,
+                    "OnClick": "btnNextClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnFinish",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 164,
+                    "Top": 1,
+                    "Width": 31,
+                    "Height": 22,
+                    "Hint": "Finish Processing",
+                    "Align": "alClient",
+                    "Caption": "Finish",
+                    "TabOrder": 5,
+                    "OnClick": "btnFinishClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnCancel",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 195,
+                    "Top": 1,
+                    "Width": 36,
+                    "Height": 22,
+                    "Hint": "Cancel All Reminder Dialog Processing",
+                    "Align": "alClient",
+                    "Cancel": true,
+                    "Caption": "Cancel",
+                    "TabOrder": 6,
+                    "OnClick": "btnCancelClick",
+                    "OnMouseDown": "btnCancelMouseDown"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = sb1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = sb2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlFrmBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = reData",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = reText",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmRemDlg",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = gpButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClear",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClinMaint",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnVisit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnBack",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnNext",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnFinish",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

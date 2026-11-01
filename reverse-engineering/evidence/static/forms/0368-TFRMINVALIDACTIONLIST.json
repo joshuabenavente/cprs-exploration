@@ -1,0 +1,295 @@
+{
+  "class": "TfrmInvalidActionList",
+  "name": "frmInvalidActionList",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 445,
+    "Top": 142,
+    "Caption": "Invalidated action orders",
+    "ClientHeight": 639,
+    "ClientWidth": 647,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "OnResize": "FormResize",
+    "ExplicitWidth": 320,
+    "ExplicitHeight": 240,
+    "PixelsPerInch": 120,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 647,
+        "Height": 282,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Align": "alTop",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "Label1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 645,
+            "Height": 30,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Align": "alTop",
+            "AutoSize": false,
+            "Caption": "You can't take this action on the following orders"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionListBox",
+          "name": "lstActDeniedOrders",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 64,
+            "Width": 645,
+            "Height": 217,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Style": "lbOwnerDrawVariable",
+            "Align": "alClient",
+            "TabOrder": 0,
+            "OnDrawItem": "lstActDeniedOrdersDrawItem",
+            "OnMeasureItem": "lstActDeniedOrdersMeasureItem",
+            "Caption": "You can't take this action on the following orders"
+          },
+          "children": []
+        },
+        {
+          "class": "THeaderControl",
+          "name": "hdrAction",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 31,
+            "Width": 645,
+            "Height": 33,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Sections": [
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 300,
+                  "Text": "Order",
+                  "Width": 350
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 150,
+                  "Text": "Reason",
+                  "Width": 150
+                }
+              }
+            ],
+            "OnSectionResize": "hdrActionSectionResize"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 282,
+        "Width": 647,
+        "Height": 306,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Align": "alClient",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "Label2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 645,
+            "Height": 49,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Align": "alTop",
+            "AutoSize": false,
+            "Caption": "The following orders will be taken action:",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -15,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentFont": false,
+            "Layout": "tlCenter"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionListBox",
+          "name": "lstValidOrders",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 50,
+            "Width": 645,
+            "Height": 255,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Style": "lbOwnerDrawVariable",
+            "Align": "alClient",
+            "TabOrder": 0,
+            "OnDrawItem": "lstValidOrdersDrawItem",
+            "OnMeasureItem": "lstValidOrdersMeasureItem",
+            "Caption": "The following orders will be taken action"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 588,
+        "Width": 647,
+        "Height": 51,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Align": "alBottom",
+        "TabOrder": 2,
+        "DesignSize": [
+          647,
+          51
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 542,
+            "Top": 15,
+            "Width": 92,
+            "Height": 26,
+            "Margins.Left": 4,
+            "Margins.Top": 4,
+            "Margins.Right": 4,
+            "Margins.Bottom": 4,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "Caption": "OK",
+            "TabOrder": 0,
+            "OnClick": "btnOKClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstActDeniedOrders",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = hdrAction",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstValidOrders",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmInvalidActionList",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

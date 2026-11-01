@@ -1,0 +1,896 @@
+{
+  "class": "TfrmTemplateDialog",
+  "name": "frmTemplateDialog",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 268,
+    "Top": 155,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biMaximize"
+    ],
+    "Caption": "Text Dialog",
+    "ClientHeight": 603,
+    "ClientWidth": 910,
+    "Position": "poScreenCenter",
+    "OnCloseQuery": "FormCloseQuery",
+    "OnMouseWheel": "FormMouseWheel",
+    "OnPaint": "FormPaint",
+    "OnResize": "FormResize",
+    "ExplicitTop": -110,
+    "ExplicitWidth": 926,
+    "ExplicitHeight": 642,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TSplitter",
+      "name": "splFields",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 639,
+        "Top": 0,
+        "Height": 566,
+        "Align": "alRight",
+        "Color": "clSilver",
+        "ParentColor": false,
+        "Visible": false,
+        "ExplicitLeft": 0,
+        "ExplicitTop": 533,
+        "ExplicitHeight": 636
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlDebug",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 642,
+        "Top": 0,
+        "Width": 268,
+        "Height": 566,
+        "Align": "alRight",
+        "BevelOuter": "bvLowered",
+        "TabOrder": 0,
+        "Visible": false
+      },
+      "children": [
+        {
+          "class": "TSplitter",
+          "name": "splDebug",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 240,
+            "Width": 266,
+            "Height": 3,
+            "Cursor": "crVSplit",
+            "Align": "alBottom",
+            "Visible": false,
+            "ExplicitLeft": 3,
+            "ExplicitTop": 112
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlTables",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 266,
+            "Height": 239,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlTables",
+            "ShowCaption": false,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TDBGrid",
+              "name": "dbgControls",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 34,
+                "Width": 266,
+                "Height": 205,
+                "Align": "alClient",
+                "Options": [
+                  "dgTitles",
+                  "dgIndicator",
+                  "dgColumnResize",
+                  "dgColLines",
+                  "dgRowLines",
+                  "dgTabs",
+                  "dgRowSelect",
+                  "dgAlwaysShowSelection",
+                  "dgConfirmDelete",
+                  "dgCancelOnExit",
+                  "dgTitleClick",
+                  "dgTitleHotTrack"
+                ],
+                "TabOrder": 0,
+                "TitleFont.Charset": "DEFAULT_CHARSET",
+                "TitleFont.Color": "clWindowText",
+                "TitleFont.Height": -11,
+                "TitleFont.Name": "MS Sans Serif",
+                "TitleFont.Style": []
+              },
+              "children": []
+            },
+            {
+              "class": "TCheckBox",
+              "name": "cbCdsFieldsRequired",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 266,
+                "Height": 17,
+                "Align": "alTop",
+                "Caption": "Required and Focusable",
+                "Color": "clYellow",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clPurple",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentColor": false,
+                "ParentFont": false,
+                "TabOrder": 1,
+                "OnClick": "cbCdsFieldsRequiredClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TCheckBox",
+              "name": "cbText",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 17,
+                "Width": 266,
+                "Height": 17,
+                "Align": "alTop",
+                "Caption": "Show Text",
+                "TabOrder": 2,
+                "OnClick": "cbTextClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlText",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 243,
+            "Width": 266,
+            "Height": 322,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlText",
+            "ShowCaption": false,
+            "TabOrder": 1,
+            "Visible": false
+          },
+          "children": [
+            {
+              "class": "TEdit",
+              "name": "edTarget",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 266,
+                "Height": 21,
+                "Align": "alTop",
+                "TabOrder": 0,
+                "OnKeyDown": "edTargetKeyDown"
+              },
+              "children": []
+            },
+            {
+              "class": "TRichEdit",
+              "name": "reText",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 21,
+                "Width": 266,
+                "Height": 301,
+                "Align": "alClient",
+                "Color": "clCream",
+                "Font.Charset": "ANSI_CHARSET",
+                "Font.Color": "clPurple",
+                "Font.Height": -12,
+                "Font.Name": "Courier New",
+                "Font.Style": [],
+                "Constraints.MinHeight": 30,
+                "ParentFont": false,
+                "PopupMenu": "PopupMenu2",
+                "ReadOnly": true,
+                "ScrollBars": "ssBoth",
+                "TabOrder": 1,
+                "WantReturns": false,
+                "WordWrap": false,
+                "Zoom": 100
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottomGrid",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 566,
+        "Width": 910,
+        "Height": 37,
+        "Align": "alBottom",
+        "BevelOuter": "bvLowered",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlBottomLeft",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 5,
+            "Width": 8,
+            "Height": 27,
+            "Align": "alLeft",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlBottomRight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 901,
+            "Top": 5,
+            "Width": 8,
+            "Height": 27,
+            "Align": "alRight",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TGridPanel",
+          "name": "grdpnlBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 9,
+            "Top": 5,
+            "Width": 892,
+            "Height": 27,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "ColumnCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "SizeStyle": "ssAbsolute",
+                  "Value": {
+                    "extended80_hex": "00000000000000960540"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "SizeStyle": "ssAbsolute",
+                  "Value": {
+                    "extended80_hex": "00000000000000960540"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "00000000000000c80540"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "SizeStyle": "ssAbsolute",
+                  "Value": {
+                    "extended80_hex": "00000000000000960540"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "SizeStyle": "ssAbsolute"
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "SizeStyle": "ssAbsolute",
+                  "Value": {
+                    "extended80_hex": "00000000000000960540"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "SizeStyle": "ssAbsolute",
+                  "Value": {
+                    "extended80_hex": "00000000000000960540"
+                  }
+                }
+              }
+            ],
+            "ControlCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Column": 0,
+                  "Control": "btnAllGrid",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 1,
+                  "Control": "btnNoneGrid",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 3,
+                  "Control": "btnPreviewGrid",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 5,
+                  "Control": "btnOKGrid",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 6,
+                  "Control": "btnCancelGrid",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 2,
+                  "Control": "Panel1",
+                  "Row": 0
+                }
+              }
+            ],
+            "RowCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "00000000000000c80540"
+                  }
+                }
+              }
+            ],
+            "TabOrder": 2
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnAllGrid",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 75,
+                "Height": 27,
+                "Align": "alClient",
+                "Caption": "All",
+                "TabOrder": 0,
+                "OnClick": "btnAllClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnNoneGrid",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 75,
+                "Top": 0,
+                "Width": 75,
+                "Height": 27,
+                "Align": "alClient",
+                "Caption": "None",
+                "TabOrder": 1,
+                "OnClick": "btnNoneClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnPreviewGrid",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 667,
+                "Top": 0,
+                "Width": 75,
+                "Height": 27,
+                "Align": "alClient",
+                "Caption": "Preview",
+                "TabOrder": 2,
+                "OnClick": "btnPreviewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnOKGrid",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 742,
+                "Top": 0,
+                "Width": 75,
+                "Height": 27,
+                "Align": "alClient",
+                "Caption": "OK",
+                "ModalResult": 1,
+                "TabOrder": 3,
+                "OnClick": "btnOKClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnCancelGrid",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 817,
+                "Top": 0,
+                "Width": 75,
+                "Height": 27,
+                "Align": "alClient",
+                "Cancel": true,
+                "Caption": "Cancel",
+                "ModalResult": 2,
+                "TabOrder": 4
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 150,
+                "Top": 0,
+                "Width": 517,
+                "Height": 27,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel1",
+                "ShowCaption": false,
+                "TabOrder": 5
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "StaticText1",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 134,
+                    "Height": 21,
+                    "Align": "alLeft",
+                    "Alignment": "taCenter",
+                    "Caption": "* Indicates a Required Field",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnDebug",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 442,
+                    "Top": 0,
+                    "Width": 75,
+                    "Height": 27,
+                    "Align": "alRight",
+                    "Caption": "Debug",
+                    "TabOrder": 1,
+                    "Visible": false,
+                    "OnClick": "btnDebugClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnFields",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 367,
+                    "Top": 0,
+                    "Width": 75,
+                    "Height": 27,
+                    "Align": "alRight",
+                    "Caption": "Fields",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clPurple",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "TabOrder": 2,
+                    "Visible": false,
+                    "OnClick": "btnFieldsClick"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlBtnTop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 908,
+            "Height": 4,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "TabOrder": 3
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlBtnBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 32,
+            "Width": 908,
+            "Height": 4,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "TabOrder": 4
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TScrollBox",
+      "name": "sbMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 639,
+        "Height": 566,
+        "VertScrollBar.Tracking": true,
+        "Align": "alClient",
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "Courier New",
+        "Font.Style": [],
+        "ParentFont": false,
+        "PopupMenu": "PopupMenu1",
+        "TabOrder": 2
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 16,
+        "Top": 8,
+        "Data": [
+          [
+            "Component = sbMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmTemplateDialog",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grdpnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAllGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnNoneGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnPreviewGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOKGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancelGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDebug",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = reText",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottomGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottomLeft",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottomRight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBtnTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBtnBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = StaticText1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDebug",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnFields",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbCdsFieldsRequired",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = dbgControls",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTables",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlText",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edTarget",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbText",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "PopupMenu1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 96,
+        "Top": 8
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "S1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Highlight Required Fields without Value",
+            "Checked": true,
+            "OnClick": "S1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "S4",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Set Highlighting Preferences",
+            "OnClick": "S4Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-",
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "T1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Template Debug Info",
+            "Visible": false,
+            "OnClick": "T1Click"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TCopyEditMonitor",
+      "name": "CPTemp",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "CopyMonitor": "frmFrame.CPAppMon",
+        "RelatedPackage": "Template",
+        "TrackOnlyEdits": [],
+        "Left": 16,
+        "Top": 64
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "PopupMenu2",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 688,
+        "Top": 288
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "Highlight1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Highlight",
+            "OnClick": "Highlight1Click"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

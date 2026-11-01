@@ -1,0 +1,466 @@
+{
+  "class": "TfrmImmunizations",
+  "name": "frmImmunizations",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 373,
+    "Top": 169,
+    "Caption": "Encouner Immunization",
+    "ClientHeight": 367,
+    "ClientWidth": 702,
+    "Constraints.MinHeight": 194,
+    "Constraints.MinWidth": 714,
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "ScaleMethod": "smManual",
+    "ExplicitWidth": 718,
+    "ExplicitHeight": 406,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMainAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 702,
+        "Height": 136,
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ],
+        "ExplicitWidth": 702,
+        "ExplicitHeight": 136
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlGrid",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": false,
+            "Left": 0,
+            "Top": 0,
+            "Width": 624,
+            "Height": 136,
+            "BevelKind": "bkNone",
+            "StyleElements": [
+              "seFont",
+              "seClient",
+              "seBorder"
+            ],
+            "ExplicitLeft": 0,
+            "ExplicitTop": 0,
+            "ExplicitWidth": 624,
+            "ExplicitHeight": 136
+          },
+          "children": [
+            {
+              "class": "TCaptionListView",
+              "name": "lstCaptionList",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 618,
+                "Height": 87,
+                "Columns": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "Series",
+                      "Width": 80
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "Refused/Contra",
+                      "Tag": 1,
+                      "Width": 120
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "AutoSize": true,
+                      "Caption": "Selected Immunizations"
+                    }
+                  }
+                ],
+                "Caption": "Selected Immunizations",
+                "Pieces": "1,2,3,4",
+                "ExplicitWidth": 618,
+                "ExplicitHeight": 87
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlComments",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Top": 93,
+                "Width": 624,
+                "Visible": false,
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitTop": 93,
+                "ExplicitWidth": 624
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblComment",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Width": 618,
+                    "StyleElements": [
+                      "seFont",
+                      "seClient",
+                      "seBorder"
+                    ]
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCaptionEdit",
+                  "name": "edtComment",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Width": 618,
+                    "StyleElements": [
+                      "seFont",
+                      "seClient",
+                      "seBorder"
+                    ],
+                    "ExplicitWidth": 618
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlGridRight",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 624,
+            "Height": 136,
+            "StyleElements": [
+              "seFont",
+              "seClient",
+              "seBorder"
+            ],
+            "ExplicitLeft": 624,
+            "ExplicitHeight": 136
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnRemove",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Top": 68,
+                "TabOrder": 2,
+                "Visible": false,
+                "ExplicitTop": 68
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnSelectAll",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Top": 44,
+                "Margins.Top": 0,
+                "TabOrder": 1,
+                "ExplicitTop": 44
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnAdd",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 0,
+                "Top": 3,
+                "Width": 75,
+                "Height": 38,
+                "Margins.Left": 0,
+                "Align": "alTop",
+                "Caption": "Add / Edit / Delete Record",
+                "TabOrder": 0,
+                "WordWrap": true,
+                "OnClick": "btnAddClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottomAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 340,
+        "Width": 702,
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ],
+        "ExplicitTop": 340,
+        "ExplicitWidth": 702
+      },
+      "children": [
+        {
+          "class": "TBitBtn",
+          "name": "btnOK",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 543,
+            "ExplicitLeft": 543
+          },
+          "children": []
+        },
+        {
+          "class": "TBitBtn",
+          "name": "btnCancel",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 624,
+            "ExplicitLeft": 624
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 702,
+        "Visible": false,
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ],
+        "ExplicitWidth": 702
+      },
+      "children": [
+        {
+          "class": "TGridPanel",
+          "name": "grdMain",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Width": 702,
+            "StyleElements": [
+              "seFont",
+              "seClient",
+              "seBorder"
+            ],
+            "ExplicitWidth": 702
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblSection",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 347,
+                "Caption": "Immunization Section",
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitWidth": 100
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblList",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 351,
+                "Width": 347,
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitLeft": 351
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lbSection",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 347,
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "Caption": "Immunization Section",
+                "ExplicitWidth": 347
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lbxSection",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 351,
+                "Width": 347,
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "Caption": "Section Name",
+                "ExplicitLeft": 351,
+                "ExplicitWidth": 347
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnOther",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 347,
+                "ExplicitWidth": 347
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = edtComment",
+            "Label = lblComment",
+            "Status = stsOK"
+          ],
+          [
+            "Component = btnRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnSelectAll",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lbxSection",
+            "Label = lblList",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lbSection",
+            "Label = lblSection",
+            "Status = stsOK"
+          ],
+          [
+            "Component = btnOther",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmImmunizations",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAdd",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

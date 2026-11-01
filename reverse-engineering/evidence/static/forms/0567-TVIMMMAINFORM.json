@@ -1,0 +1,289 @@
+{
+  "class": "TvimmMainForm",
+  "name": "vimmMainForm",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Caption": "vimmMainForm",
+    "ClientHeight": 561,
+    "ClientWidth": 1011,
+    "Color": "clWhite",
+    "Constraints.MinHeight": 600,
+    "Constraints.MinWidth": 1024,
+    "Font.Name": "Tahoma",
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "OnCloseQuery": "FormCloseQuery",
+    "ExplicitWidth": 1027,
+    "ExplicitHeight": 600,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TScrollBox",
+      "name": "ScrollBox",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 1011,
+        "Height": 561,
+        "Align": "alClient",
+        "ParentBackground": true,
+        "TabOrder": 0,
+        "OnResize": "ScrollBoxResize"
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlForm",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 1007,
+            "Height": 553,
+            "Align": "alTop",
+            "Caption": "pnlForm",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "Panel1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 511,
+                "Width": 1005,
+                "Height": 41,
+                "Align": "alBottom",
+                "ParentBackground": false,
+                "TabOrder": 0,
+                "DesignSize": [
+                  1005,
+                  41
+                ]
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnCancel",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 644,
+                    "Top": 6,
+                    "Width": 74,
+                    "Height": 25,
+                    "Anchors": [
+                      "akTop",
+                      "akRight"
+                    ],
+                    "Caption": "Cancel",
+                    "TabOrder": 0,
+                    "TabStop": false,
+                    "OnClick": "btnCancelClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnSave",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 900,
+                    "Top": 6,
+                    "Width": 93,
+                    "Height": 25,
+                    "Anchors": [
+                      "akTop",
+                      "akRight"
+                    ],
+                    "Caption": "Finish",
+                    "TabOrder": 3,
+                    "TabStop": false,
+                    "OnClick": "btnSaveClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnAdd",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 812,
+                    "Top": 6,
+                    "Width": 84,
+                    "Height": 25,
+                    "Anchors": [
+                      "akTop",
+                      "akRight"
+                    ],
+                    "Caption": "Save",
+                    "TabOrder": 2,
+                    "OnClick": "btnAddClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnCancelRecord",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 724,
+                    "Top": 6,
+                    "Width": 82,
+                    "Height": 25,
+                    "Anchors": [
+                      "akTop",
+                      "akRight"
+                    ],
+                    "Caption": "Clear",
+                    "TabOrder": 1,
+                    "OnClick": "btnCancelRecordClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TGridPanel",
+              "name": "GridPanel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 1005,
+                "Height": 510,
+                "Align": "alClient",
+                "BevelInner": "bvRaised",
+                "BevelKind": "bkSoft",
+                "BorderWidth": 1,
+                "BorderStyle": "bsSingle",
+                "Color": "clWindow",
+                "ColumnCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80540"
+                      }
+                    }
+                  }
+                ],
+                "ControlCollection": [],
+                "ParentBackground": false,
+                "RowCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "49ce6b716bbf94de0340"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "951f07a5de42d3c40340"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "5d52b98f4812fbb80340"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "c6bfd3596deb9cc30340"
+                      }
+                    }
+                  }
+                ],
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = ScrollBox",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlForm",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnSave",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAdd",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancelRecord",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = GridPanel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = vimmMainForm",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

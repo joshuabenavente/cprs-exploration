@@ -1,0 +1,147 @@
+{
+  "class": "TfrmClinicWardMeds",
+  "name": "frmClinicWardMeds",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 523,
+    "Top": 389,
+    "BorderIcons": [],
+    "Caption": "Patient Location",
+    "ClientHeight": 95,
+    "ClientWidth": 298,
+    "ExplicitWidth": 306,
+    "ExplicitHeight": 122,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TStaticText",
+      "name": "stxtLine3",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 16,
+        "Top": 35,
+        "Width": 29,
+        "Height": 17,
+        "Caption": "line 3",
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "stxtLine2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 16,
+        "Top": 20,
+        "Width": 29,
+        "Height": 17,
+        "Caption": "line 2",
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "stxtLine1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 16,
+        "Top": 5,
+        "Width": 29,
+        "Height": 17,
+        "Caption": "line 1",
+        "TabOrder": 2
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnClinic",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 31,
+        "Top": 62,
+        "Width": 58,
+        "Height": 24,
+        "Anchors": [
+          "akLeft",
+          "akBottom"
+        ],
+        "BiDiMode": "bdLeftToRight",
+        "ParentBiDiMode": false,
+        "TabOrder": 3,
+        "OnClick": "btnClinicClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnWard",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 159,
+        "Top": 62,
+        "Width": 58,
+        "Height": 24,
+        "Anchors": [
+          "akLeft",
+          "akBottom"
+        ],
+        "TabOrder": 4,
+        "OnClick": "btnWardClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = stxtLine3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stxtLine2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stxtLine1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClinic",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnWard",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmClinicWardMeds",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

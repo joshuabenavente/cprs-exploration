@@ -1,0 +1,267 @@
+{
+  "class": "TfrmLabTests",
+  "name": "frmLabTests",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 288,
+    "Top": 115,
+    "Caption": "Select Lab Tests",
+    "ClientHeight": 281,
+    "ClientWidth": 452,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlLabTests",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 452,
+        "Height": 281,
+        "Align": "alClient",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblTests",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 12,
+            "Top": 12,
+            "Width": 79,
+            "Height": 13,
+            "Caption": "Laboratory Tests"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 276,
+            "Top": 28,
+            "Width": 100,
+            "Height": 13,
+            "Caption": "Tests to be displayed"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 270,
+            "Top": 247,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "OK",
+            "TabOrder": 5,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 362,
+            "Top": 246,
+            "Width": 72,
+            "Height": 21,
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 6
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "lstList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 274,
+            "Top": 52,
+            "Width": 160,
+            "Height": 179,
+            "ItemHeight": 13,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 4,
+            "OnClick": "lstListClick",
+            "Caption": "Tests to be displayed",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2"
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboTests",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 10,
+            "Top": 34,
+            "Width": 160,
+            "Height": 200,
+            "Style": "orcsSimple",
+            "AutoSelect": true,
+            "Caption": "Laboratory Tests",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": true,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "ParentShowHint": false,
+            "Pieces": "2",
+            "ShowHint": true,
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "OnChange": "cboTestsChange",
+            "OnDblClick": "cmdAddClick",
+            "OnEnter": "cboTestsEnter",
+            "OnExit": "cboTestsExit",
+            "OnNeedData": "cboTestsNeedData",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdRemove",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 186,
+            "Top": 144,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "Remove One",
+            "Enabled": false,
+            "TabOrder": 3,
+            "OnClick": "cmdRemoveClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdClear",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 186,
+            "Top": 116,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "Remove All",
+            "Enabled": false,
+            "TabOrder": 2,
+            "OnClick": "cmdClearClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdAdd",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 186,
+            "Top": 32,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "Add",
+            "Enabled": false,
+            "TabOrder": 1,
+            "OnClick": "cmdAddClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlLabTests",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboTests",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdClear",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdAdd",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmLabTests",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

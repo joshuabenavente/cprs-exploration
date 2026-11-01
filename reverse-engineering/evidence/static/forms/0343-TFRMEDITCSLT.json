@@ -1,0 +1,1518 @@
+{
+  "class": "TfrmEditCslt",
+  "name": "frmEditCslt",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Tag": 110,
+    "Left": 461,
+    "Top": 191,
+    "Width": 580,
+    "Height": 500,
+    "HorzScrollBar.Range": 561,
+    "VertScrollBar.Range": 340,
+    "Caption": "Edit/Resubmit a Cancelled Consult",
+    "Constraints.MinHeight": 500,
+    "Constraints.MinWidth": 580,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 580,
+    "ExplicitHeight": 500,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlCombatVet",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 558,
+        "Height": 25,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TVA508StaticText",
+          "name": "txtCombatVet",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Name": "txtCombatVet",
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 552,
+            "Height": 19,
+            "Align": "alClient",
+            "Alignment": "taCenter",
+            "BevelOuter": "bvNone",
+            "Caption": "",
+            "Enabled": false,
+            "TabOrder": 0,
+            "ShowAccelChar": true,
+            "WordWrap": false,
+            "LabelAlignment": "taCenter",
+            "LabelLayout": "tlTop"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 34,
+        "Width": 558,
+        "Height": 391,
+        "Align": "alClient",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblReason",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 315,
+            "Width": 550,
+            "Height": 13,
+            "Align": "alTop",
+            "Caption": "Reason for Request",
+            "ExplicitWidth": 95
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblComment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 249,
+            "Width": 550,
+            "Height": 13,
+            "Align": "alTop",
+            "Caption": "New Comments:",
+            "ExplicitWidth": 77
+          },
+          "children": []
+        },
+        {
+          "class": "TRichEdit",
+          "name": "memReason",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 334,
+            "Width": 550,
+            "Height": 3,
+            "Align": "alClient",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "Courier New",
+            "Font.Style": [],
+            "ParentFont": false,
+            "PopupMenu": "popReason",
+            "ScrollBars": "ssVertical",
+            "TabOrder": 2,
+            "WantTabs": true,
+            "Zoom": 100,
+            "OnChange": "ControlChange",
+            "OnExit": "memReasonExit",
+            "OnKeyDown": "memCommentKeyDown",
+            "OnKeyPress": "memCommentKeyPress",
+            "OnKeyUp": "memCommentKeyUp"
+          },
+          "children": []
+        },
+        {
+          "class": "TRichEdit",
+          "name": "memComment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 268,
+            "Width": 550,
+            "Height": 41,
+            "Align": "alTop",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentFont": false,
+            "PopupMenu": "popReason",
+            "TabOrder": 1,
+            "WantTabs": true,
+            "Zoom": 100,
+            "OnChange": "ControlChange",
+            "OnExit": "memCommentExit",
+            "OnKeyDown": "memCommentKeyDown",
+            "OnKeyPress": "memCommentKeyPress",
+            "OnKeyUp": "memCommentKeyUp"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlMessage",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 343,
+            "Width": 550,
+            "Height": 44,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlMessage",
+            "TabOrder": 3,
+            "Visible": false
+          },
+          "children": [
+            {
+              "class": "TImage",
+              "name": "imgMessage",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 32,
+                "Height": 38,
+                "Align": "alLeft",
+                "ExplicitLeft": 4,
+                "ExplicitTop": 4,
+                "ExplicitHeight": 32
+              },
+              "children": []
+            },
+            {
+              "class": "TRichEdit",
+              "name": "memMessage",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 38,
+                "Top": 0,
+                "Width": 512,
+                "Height": 44,
+                "Align": "alClient",
+                "BevelInner": "bvNone",
+                "BevelOuter": "bvNone",
+                "Color": "clInfoBk",
+                "Font.Charset": "ANSI_CHARSET",
+                "Font.Color": "clInfoText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "ScrollBars": "ssVertical",
+                "TabOrder": 0,
+                "WantReturns": false,
+                "Zoom": 100
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TGridPanel",
+          "name": "GridPanel1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 556,
+            "Height": 245,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "Caption": "GridPanel1",
+            "ColumnCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "a2c5849235175f850440"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "ccf4193ec6f3cd850440"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "9245612f04f5d2840440"
+                  }
+                }
+              }
+            ],
+            "ControlCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Column": 0,
+                  "Control": "Panel1",
+                  "Row": 0,
+                  "RowSpan": 3
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 0,
+                  "Control": "Panel2",
+                  "Row": 3
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 1,
+                  "Control": "Panel3",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 1,
+                  "Control": "Panel4",
+                  "Row": 1
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 1,
+                  "Control": "Panel5",
+                  "Row": 2
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 1,
+                  "ColumnSpan": 2,
+                  "Control": "Panel6",
+                  "Row": 3
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 2,
+                  "Control": "Panel8",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 2,
+                  "Control": "Panel9",
+                  "Row": 1
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 2,
+                  "Control": "Panel10",
+                  "Row": 2
+                }
+              }
+            ],
+            "Ctl3D": false,
+            "ParentCtl3D": false,
+            "RowCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "5ad3bc22f63bc5e60340"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "78aa2e8c5929b3bf0340"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "47ba1f1476bb81c90340"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "e7c7f43c3adf05b00340"
+                  }
+                }
+              }
+            ],
+            "ShowCaption": false,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "Panel1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 185,
+                "Height": 191,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel1",
+                "ShowCaption": false,
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblService",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 179,
+                    "Height": 13,
+                    "Align": "alTop",
+                    "Caption": "Consult to Service/Specialty",
+                    "ExplicitWidth": 134
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboService",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 22,
+                    "Width": 179,
+                    "Height": 166,
+                    "Style": "orcsSimple",
+                    "Align": "alClient",
+                    "AutoSelect": true,
+                    "Caption": "Consult to Service/Specialty",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "Enabled": false,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clGrayText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": true,
+                    "LongList": false,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "ParentFont": false,
+                    "Pieces": "2",
+                    "Sorted": true,
+                    "SynonymChars": "<>",
+                    "TabOrder": 0,
+                    "Text": "",
+                    "CharsNeedMatch": 1
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 191,
+                "Width": 185,
+                "Height": 54,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel2",
+                "ShowCaption": false,
+                "TabOrder": 7
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblComments",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 179,
+                    "Height": 13,
+                    "Align": "alTop",
+                    "Caption": "Display Comments:",
+                    "ExplicitWidth": 89
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnCmtOther",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 107,
+                    "Top": 22,
+                    "Width": 75,
+                    "Height": 29,
+                    "Align": "alRight",
+                    "Caption": "Other",
+                    "TabOrder": 1,
+                    "OnClick": "btnCmtOtherClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnCmtCancel",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 22,
+                    "Width": 98,
+                    "Height": 29,
+                    "Align": "alClient",
+                    "Caption": "Cancellation",
+                    "TabOrder": 0,
+                    "OnClick": "btnCmtCancelClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 185,
+                "Top": 0,
+                "Width": 186,
+                "Height": 71,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentShowHint": false,
+                "ShowHint": false,
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblUrgency",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 180,
+                    "Height": 13,
+                    "Align": "alTop",
+                    "Caption": "Urgency",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboUrgency",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 22,
+                    "Width": 180,
+                    "Height": 21,
+                    "Style": "orcsDropDown",
+                    "Align": "alClient",
+                    "AutoSelect": true,
+                    "Caption": "Urgency",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": true,
+                    "LongList": false,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "Pieces": "2",
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 1,
+                    "Text": "",
+                    "OnChange": "ControlChange",
+                    "CharsNeedMatch": 1
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 185,
+                "Top": 71,
+                "Width": 186,
+                "Height": 58,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentShowHint": false,
+                "ShowHint": false,
+                "TabOrder": 3
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblClinicallyIndicated",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 180,
+                    "Height": 17,
+                    "Align": "alTop",
+                    "Caption": "Clinically indicated date:",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORDateBox",
+                  "name": "calClinicallyIndicated",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 26,
+                    "Width": 180,
+                    "Height": 29,
+                    "Align": "alClient",
+                    "TabOrder": 1,
+                    "OnExit": "calClinicallyIndicatedExit",
+                    "DateOnly": true,
+                    "RequireTime": false,
+                    "Caption": "",
+                    "ExplicitHeight": 19
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel5",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 185,
+                "Top": 129,
+                "Width": 186,
+                "Height": 62,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentShowHint": false,
+                "ShowHint": false,
+                "TabOrder": 5
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblInpOutp",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 180,
+                    "Height": 17,
+                    "Align": "alTop",
+                    "Caption": "Patient will be seen as an:",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TRadioButton",
+                  "name": "radInpatient",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 6,
+                    "Top": 29,
+                    "Width": 75,
+                    "Height": 17,
+                    "Caption": "&Inpatient",
+                    "TabOrder": 1,
+                    "OnClick": "radInpatientClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TRadioButton",
+                  "name": "radOutpatient",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 81,
+                    "Top": 29,
+                    "Width": 97,
+                    "Height": 17,
+                    "Caption": "&Outpatient",
+                    "TabOrder": 2,
+                    "OnClick": "radOutpatientClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel6",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 185,
+                "Top": 191,
+                "Width": 371,
+                "Height": 54,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentShowHint": false,
+                "ShowHint": false,
+                "TabOrder": 8
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblProvDiag",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 365,
+                    "Height": 17,
+                    "Align": "alTop",
+                    "Caption": "Provisional Diagnosis",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TPanel",
+                  "name": "Panel7",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 23,
+                    "Width": 371,
+                    "Height": 31,
+                    "Align": "alClient",
+                    "BevelOuter": "bvNone",
+                    "ShowCaption": false,
+                    "TabOrder": 1
+                  },
+                  "children": [
+                    {
+                      "class": "TButton",
+                      "name": "cmdLexSearch",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 299,
+                        "Top": 3,
+                        "Width": 69,
+                        "Height": 25,
+                        "Align": "alRight",
+                        "Caption": "Lexicon",
+                        "TabOrder": 1,
+                        "OnClick": "cmdLexSearchClick"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TCaptionEdit",
+                      "name": "txtProvDiag",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 3,
+                        "Top": 3,
+                        "Width": 290,
+                        "Height": 25,
+                        "Align": "alClient",
+                        "MaxLength": 180,
+                        "ParentShowHint": false,
+                        "PopupMenu": "mnuPopProvDx",
+                        "ShowHint": true,
+                        "TabOrder": 0,
+                        "OnChange": "ControlChange",
+                        "Caption": "Provisional Diagnosis",
+                        "ExplicitHeight": 19
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel8",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 371,
+                "Top": 0,
+                "Width": 185,
+                "Height": 71,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentShowHint": false,
+                "ShowHint": false,
+                "TabOrder": 2
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblAttn",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 179,
+                    "Height": 13,
+                    "Align": "alTop",
+                    "Caption": "Attention",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORCheckComboBox",
+                  "name": "cboAttn",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 22,
+                    "Width": 179,
+                    "Height": 46,
+                    "Style": "orcsDropDown",
+                    "Align": "alClient",
+                    "AutoSelect": true,
+                    "Caption": "Attention",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": true,
+                    "LongList": true,
+                    "LookupPiece": 2,
+                    "MaxLength": 0,
+                    "Pieces": "2,3",
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 1,
+                    "TabStop": true,
+                    "Text": "",
+                    "OnChange": "ControlChange",
+                    "OnNeedData": "cboAttnNeedData",
+                    "CharsNeedMatch": 1,
+                    "MainCheckBoxCaption": "Include Non-VA Providers",
+                    "MainCheckBoxVisible": true,
+                    "MainCheckBoxAlignment": "calBottom",
+                    "OnMainCheckboxClick": "cboAttnMainCheckboxClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel9",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 371,
+                "Top": 71,
+                "Width": 185,
+                "Height": 58,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentShowHint": false,
+                "ShowHint": false,
+                "TabOrder": 4
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblLatest",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 179,
+                    "Height": 17,
+                    "Align": "alTop",
+                    "Caption": "Latest appropriate date:",
+                    "TabOrder": 0,
+                    "Visible": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORDateBox",
+                  "name": "calLatest",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 26,
+                    "Width": 179,
+                    "Height": 29,
+                    "Align": "alClient",
+                    "TabOrder": 1,
+                    "Visible": false,
+                    "OnExit": "calLatestExit",
+                    "DateOnly": true,
+                    "RequireTime": false,
+                    "Caption": "",
+                    "ExplicitHeight": 19
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel10",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 371,
+                "Top": 129,
+                "Width": 185,
+                "Height": 62,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ParentShowHint": false,
+                "ShowHint": false,
+                "TabOrder": 6
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "lblPlace",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 179,
+                    "Height": 17,
+                    "Align": "alTop",
+                    "Caption": "Place of Consultation",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboCategory",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 26,
+                    "Width": 179,
+                    "Height": 21,
+                    "Style": "orcsDropDown",
+                    "Align": "alClient",
+                    "AutoSelect": true,
+                    "Caption": "",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": false,
+                    "LongList": false,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 1,
+                    "Text": "",
+                    "Visible": false,
+                    "CharsNeedMatch": 1
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboPlace",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 26,
+                    "Width": 179,
+                    "Height": 21,
+                    "Style": "orcsDropDown",
+                    "Align": "alClient",
+                    "AutoSelect": true,
+                    "Caption": "Place of Consultation",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": true,
+                    "LongList": false,
+                    "LookupPiece": 0,
+                    "MaxLength": 0,
+                    "Pieces": "2",
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 2,
+                    "Text": "",
+                    "OnChange": "ControlChange",
+                    "CharsNeedMatch": 1
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 428,
+        "Width": 564,
+        "Height": 33,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TStaticText",
+          "name": "stLaunchToolbox",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 7,
+            "Top": 7,
+            "Width": 197,
+            "Height": 17,
+            "Caption": "Launch Consult Toolbox Button Disabled",
+            "TabOrder": 1,
+            "TabStop": true,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdAccept",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 410,
+            "Top": 3,
+            "Width": 73,
+            "Height": 27,
+            "Align": "alRight",
+            "Caption": "Resubmit",
+            "TabOrder": 2,
+            "OnClick": "cmdAcceptClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdQuit",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 489,
+            "Top": 3,
+            "Width": 72,
+            "Height": 27,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 3,
+            "OnClick": "cmdQuitClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnLaunchToolbox",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 7,
+            "Top": 3,
+            "Width": 162,
+            "Height": 25,
+            "Caption": "Open Consult Toolbox",
+            "TabOrder": 0,
+            "OnClick": "btnLaunchToolboxClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 24,
+        "Top": 96,
+        "Data": [
+          [
+            "Component = pnlMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdQuit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmEditCslt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblUrgency",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblPlace",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblAttn",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblProvDiag",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblInpOutp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memReason",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboService",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboUrgency",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radInpatient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radOutpatient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboPlace",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtProvDiag",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboAttn",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboCategory",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memComment",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdLexSearch",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblClinicallyIndicated",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calClinicallyIndicated",
+            "Text = Clinice. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lblLatest",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calLatest",
+            "Text = Latest appropriate Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = pnlCombatVet",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtCombatVet",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = GridPanel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCmtOther",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCmtCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel5",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel6",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel7",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel8",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel9",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel10",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnLaunchToolbox",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stLaunchToolbox",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "mnuPopProvDx",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 137,
+        "Top": 121
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuPopProvDxDelete",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Delete diagnosis",
+            "OnClick": "mnuPopProvDxDeleteClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popReason",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnPopup": "popReasonPopup",
+        "Left": 83,
+        "Top": 97
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "popReasonCut",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Cu&t",
+            "ShortCut": 16472,
+            "OnClick": "popReasonCutClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popReasonCopy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Copy",
+            "ShortCut": 16451,
+            "OnClick": "popReasonCopyClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popReasonPaste",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Paste",
+            "ShortCut": 16470,
+            "OnClick": "popReasonPasteClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popReasonPaste2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Paste2",
+            "ShortCut": 8237,
+            "Visible": false,
+            "OnClick": "popReasonPasteClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popReasonReformat",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Reformat Paragraph",
+            "ShortCut": 16466,
+            "OnClick": "popReasonReformatClick"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

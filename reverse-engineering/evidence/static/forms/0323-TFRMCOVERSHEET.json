@@ -1,0 +1,98 @@
+{
+  "class": "TfrmCoverSheet",
+  "name": "frmCoverSheet",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Align": "alClient",
+    "BorderStyle": "bsNone",
+    "Caption": "CoverSheet",
+    "ClientHeight": 469,
+    "ClientWidth": 651,
+    "Color": "clWindow",
+    "Font.Charset": "ANSI_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Tahoma",
+    "Font.Style": [],
+    "OldCreateOrder": false,
+    "Position": "poMainFormCenter",
+    "ExplicitWidth": 320,
+    "ExplicitHeight": 240,
+    "DesignSize": [
+      651,
+      469
+    ],
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TGridPanel",
+      "name": "gpMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 5,
+        "Top": 5,
+        "Width": 641,
+        "Height": 456,
+        "Anchors": [
+          "akLeft",
+          "akTop",
+          "akRight",
+          "akBottom"
+        ],
+        "BevelOuter": "bvNone",
+        "BevelWidth": 5,
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80440"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [],
+        "ParentColor": true,
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80440"
+              }
+            }
+          }
+        ],
+        "ShowCaption": false,
+        "TabOrder": 0,
+        "ExplicitWidth": 625,
+        "ExplicitHeight": 418
+      },
+      "children": []
+    }
+  ]
+}

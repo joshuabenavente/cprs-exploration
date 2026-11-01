@@ -1,0 +1,238 @@
+{
+  "class": "TfrmTemplateAutoGen",
+  "name": "frmTemplateAutoGen",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 361,
+    "Top": 230,
+    "ActiveControl": "rgSource",
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Generate Template",
+    "ClientHeight": 213,
+    "ClientWidth": 415,
+    "Position": "poScreenCenter",
+    "OnShow": "FormShow",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TMemo",
+      "name": "lblTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 256,
+        "Top": 8,
+        "Width": 147,
+        "Height": 65,
+        "TabStop": false,
+        "BorderStyle": "bsNone",
+        "Color": "clBtnFace",
+        "Lines.Strings": [
+          "Template generation creates a ",
+          "new template, automatically ",
+          "copying the template's ",
+          "boilerplate from an existing ",
+          "source."
+        ],
+        "TabOrder": 5
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "lblSelect",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 241,
+        "Height": 213,
+        "Align": "alLeft",
+        "Alignment": "taCenter",
+        "AutoSize": false,
+        "Caption": "Select Source of Template Generation ...",
+        "TabOrder": 6
+      },
+      "children": []
+    },
+    {
+      "class": "TKeyClickRadioGroup",
+      "name": "rgSource",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 256,
+        "Top": 88,
+        "Width": 153,
+        "Height": 81,
+        "Caption": " Template Generate Source ",
+        "Items.Strings": [
+          "&Boilerplated Note Title",
+          "&Patient Data (Object)"
+        ],
+        "TabOrder": 2,
+        "TabStop": true,
+        "OnClick": "rgSourceClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cbxObjects",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 249,
+        "Height": 213,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "Patient Data",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "1",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 1,
+        "Visible": false,
+        "OnDblClick": "cbxObjectsDblClick",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 257,
+        "Top": 190,
+        "Width": 75,
+        "Height": 21,
+        "Caption": "&OK",
+        "Default": true,
+        "ModalResult": 1,
+        "TabOrder": 3
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 337,
+        "Top": 190,
+        "Width": 75,
+        "Height": 21,
+        "Cancel": true,
+        "Caption": "&Cancel",
+        "ModalResult": 2,
+        "TabOrder": 4
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cbxTitles",
+      "inherited": false,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 249,
+        "Height": 213,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "Choose Existing Template",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 0,
+        "Visible": false,
+        "OnDblClick": "cbxTitlesDblClick",
+        "OnNeedData": "cbxTitlesNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lblTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblSelect",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = rgSource",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbxObjects",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbxTitles",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmTemplateAutoGen",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

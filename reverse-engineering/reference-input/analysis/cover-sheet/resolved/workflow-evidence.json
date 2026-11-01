@@ -1,0 +1,1397 @@
+[
+  {
+    "function": "oCoverSheetGrid.TCoverSheetGrid.getPanelXY",
+    "address": "00bcdb70",
+    "status": "decompiled",
+    "file": "oCoverSheetGrid.TCoverSheetGrid.getPanelXY_00bcdb70.c",
+    "numeric_callee_references": [
+      {
+        "address": "00bcda94",
+        "map_names": [
+          "oCoverSheetGrid.TCoverSheetGrid.ErrorCheck"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "oCoverSheetGrid.TCoverSheetGrid.setPanelCount",
+    "address": "00bcdba0",
+    "status": "decompiled",
+    "file": "oCoverSheetGrid.TCoverSheetGrid.setPanelCount_00bcdba0.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040a640",
+        "map_names": [
+          "System.@RaiseExcept"
+        ]
+      },
+      {
+        "address": "0040e9b8",
+        "map_names": [
+          "System.@DynArraySetLength"
+        ]
+      },
+      {
+        "address": "0040eadc",
+        "map_names": [
+          "System.@DynArrayClear"
+        ]
+      },
+      {
+        "address": "00435fdc",
+        "map_names": [
+          "System.SysUtils.Exception.CreateFmt"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bce82c",
+        "file_offset": 8182828,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 42,
+        "text": "Panel count of %d not currently supported."
+      }
+    ]
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create",
+    "address": "00bd34b4",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+    "numeric_callee_references": [
+      {
+        "address": "004096ac",
+        "map_names": [
+          "System.@ClassCreate"
+        ]
+      },
+      {
+        "address": "00409704",
+        "map_names": [
+          "System.@AfterConstruction"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "0067b5c0",
+        "map_names": [
+          "Vcl.ComCtrls.TListColumn.SetAutoSize"
+        ]
+      },
+      {
+        "address": "0067b720",
+        "map_names": [
+          "Vcl.ComCtrls.TListColumns.Add"
+        ]
+      },
+      {
+        "address": "0067fd4c",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.SetRowSelect"
+        ]
+      },
+      {
+        "address": "0067fe24",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.SetColumnHeaders"
+        ]
+      },
+      {
+        "address": "00680278",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.SetReadOnly"
+        ]
+      },
+      {
+        "address": "006b860c",
+        "map_names": [
+          "Vcl.ExtCtrls.TTimer.SetEnabled"
+        ]
+      },
+      {
+        "address": "006b861c",
+        "map_names": [
+          "Vcl.ExtCtrls.TTimer.SetInterval"
+        ]
+      },
+      {
+        "address": "00bd2a9c",
+        "map_names": [
+          "mCoverSheetDisplayPanel.TfraCoverSheetDisplayPanel.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView",
+    "address": "00bd35d0",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "numeric_callee_references": [
+      {
+        "address": "0067cfe0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.Clear"
+        ]
+      },
+      {
+        "address": "0067d074",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.BeginUpdate"
+        ]
+      },
+      {
+        "address": "0067d264",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.EndUpdate"
+        ]
+      },
+      {
+        "address": "009fc628",
+        "map_names": [
+          "VA508AccessibilityManager.TVA508AccessibilityManager.SetComponentManager"
+        ]
+      },
+      {
+        "address": "009fc648",
+        "map_names": [
+          "VA508AccessibilityManager.TVA508AccessibilityManager.SetUseDefault"
+        ]
+      },
+      {
+        "address": "00a01f1c",
+        "map_names": [
+          "U508Extensions.FindControl508Manager"
+        ]
+      },
+      {
+        "address": "00a02048",
+        "map_names": [
+          "U508Extensions.Tlv508Manager.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData",
+    "address": "00bd3688",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems",
+    "address": "00bd391c",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems_00bd391c.c",
+    "numeric_callee_references": [
+      {
+        "address": "004d5460",
+        "map_names": [
+          "System.Classes.TStringsEnumerator.Create"
+        ]
+      },
+      {
+        "address": "004d54a4",
+        "map_names": [
+          "System.Classes.TStringsEnumerator.GetCurrent"
+        ]
+      },
+      {
+        "address": "0067c4d8",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.SetCaption"
+        ]
+      },
+      {
+        "address": "0067c5e0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.SetData"
+        ]
+      },
+      {
+        "address": "0067cde0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.Add"
+        ]
+      },
+      {
+        "address": "00bcf770",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.Create"
+        ]
+      },
+      {
+        "address": "00bcf93c",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPiece"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bd3a50",
+        "file_offset": 8203856,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 16,
+        "text": "^No data found.^"
+      }
+    ]
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnGetDetail",
+    "address": "00bd3dd8",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnGetDetail_00bd3dd8.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "00bcf93c",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPiece"
+        ]
+      },
+      {
+        "address": "00bd3824",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataKeyDown",
+    "address": "00bd4180",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataKeyDown_00bd4180.c",
+    "numeric_callee_references": [
+      {
+        "address": "00682964",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.GetSelected"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail",
+    "address": "00bd41b4",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "numeric_callee_references": [
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "0067cb00",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.GetIndex"
+        ]
+      },
+      {
+        "address": "00bcf93c",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPiece"
+        ]
+      },
+      {
+        "address": "00bd40a4",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataEnter"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bd4354",
+        "file_offset": 8206164,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": " Item Detail: "
+      }
+    ]
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataMouseDown",
+    "address": "00bd4384",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataMouseDown_00bd4384.c",
+    "numeric_callee_references": [
+      {
+        "address": "00682c14",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.GetItemAt"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataSelectItem",
+    "address": "00bd43c4",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataSelectItem_00bd43c4.c",
+    "numeric_callee_references": [
+      {
+        "address": "0067cb00",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.GetIndex"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail",
+    "address": "00bd4908",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "00682964",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.GetSelected"
+        ]
+      },
+      {
+        "address": "01007fec",
+        "map_names": [
+          "fRptBox.ReportBox"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bd49b8",
+        "file_offset": 8207800,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": " Item Detail: "
+      }
+    ]
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create",
+    "address": "00bd67fc",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create_00bd67fc.c",
+    "numeric_callee_references": [
+      {
+        "address": "004096ac",
+        "map_names": [
+          "System.@ClassCreate"
+        ]
+      },
+      {
+        "address": "00409704",
+        "map_names": [
+          "System.@AfterConstruction"
+        ]
+      },
+      {
+        "address": "00bd36a0",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+        ]
+      },
+      {
+        "address": "00bd3894",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.AddColumn"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bd687c",
+        "file_offset": 8215676,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 5,
+        "text": "Agent"
+      },
+      {
+        "address": "00bd6894",
+        "file_offset": 8215700,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 8,
+        "text": "Severity"
+      },
+      {
+        "address": "00bd68b4",
+        "file_offset": 8215732,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": "Signs/Symptoms"
+      }
+    ]
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems",
+    "address": "00bd6b7c",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems_00bd6b7c.c",
+    "numeric_callee_references": [
+      {
+        "address": "004d5460",
+        "map_names": [
+          "System.Classes.TStringsEnumerator.Create"
+        ]
+      },
+      {
+        "address": "004d54a4",
+        "map_names": [
+          "System.Classes.TStringsEnumerator.GetCurrent"
+        ]
+      },
+      {
+        "address": "0067c4d8",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.SetCaption"
+        ]
+      },
+      {
+        "address": "0067c5e0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.SetData"
+        ]
+      },
+      {
+        "address": "0067cde0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.Add"
+        ]
+      },
+      {
+        "address": "0067ce80",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.GetCount"
+        ]
+      },
+      {
+        "address": "0067d074",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.BeginUpdate"
+        ]
+      },
+      {
+        "address": "009b2a68",
+        "map_names": [
+          "ORFn.MixedCase"
+        ]
+      },
+      {
+        "address": "00bcf770",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.Create"
+        ]
+      },
+      {
+        "address": "00bcf93c",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPiece"
+        ]
+      },
+      {
+        "address": "00bd0bd4",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPieceIsNull"
+        ]
+      },
+      {
+        "address": "00bd36a0",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+        ]
+      },
+      {
+        "address": "00bd3be0",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ExpandColumns"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnGetDetail",
+    "address": "00bd6d88",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnGetDetail_00bd6d88.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "00bcf93c",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPiece"
+        ]
+      },
+      {
+        "address": "00bd3824",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "oCoverSheetParam_CPRS_Allergies.TCoverSheetParam_CPRS_Allergies.NewCoverSheetControl",
+    "address": "00bd750c",
+    "status": "decompiled",
+    "file": "oCoverSheetParam_CPRS_Allergies.TCoverSheetParam_CPRS_Allergies.NewCoverSheetControl_00bd750c.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create",
+    "address": "00bda47c",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create_00bda47c.c",
+    "numeric_callee_references": [
+      {
+        "address": "004096ac",
+        "map_names": [
+          "System.@ClassCreate"
+        ]
+      },
+      {
+        "address": "00409704",
+        "map_names": [
+          "System.@AfterConstruction"
+        ]
+      },
+      {
+        "address": "00bd36a0",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CollapseColumns"
+        ]
+      },
+      {
+        "address": "00bd3894",
+        "map_names": [
+          "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.AddColumn"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bda4dc",
+        "file_offset": 8231132,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 12,
+        "text": "Problem List"
+      }
+    ]
+  },
+  {
+    "function": "mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail",
+    "address": "00bda4f8",
+    "status": "decompiled",
+    "file": "mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail_00bda4f8.c",
+    "numeric_callee_references": [
+      {
+        "address": "009b44a8",
+        "map_names": [
+          "ORFn.InfoBox"
+        ]
+      },
+      {
+        "address": "00bd0338",
+        "map_names": [
+          "oDelimitedString.TDelimitedString.GetPieceEquals"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bda5a4",
+        "file_offset": 8231332,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "#"
+      },
+      {
+        "address": "00bda5b4",
+        "file_offset": 8231348,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 3,
+        "text": "10D"
+      },
+      {
+        "address": "00bda5c8",
+        "file_offset": 8231368,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 23,
+        "text": "Inactive ICD-10-CM code"
+      },
+      {
+        "address": "00bda604",
+        "file_offset": 8231428,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 102,
+        "text": "The ICD-10-CM code for this problem is inactive.\r\n\r\nPlease correct this code using the 'Problems' tab."
+      },
+      {
+        "address": "00bda6e0",
+        "file_offset": 8231648,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 22,
+        "text": "Inactive ICD-9-CM code"
+      },
+      {
+        "address": "00bda71c",
+        "file_offset": 8231708,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 101,
+        "text": "The ICD-9-CM code for this problem is inactive.\r\n\r\nPlease correct this code using the 'Problems' tab."
+      },
+      {
+        "address": "00bda7f4",
+        "file_offset": 8231924,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "$"
+      },
+      {
+        "address": "00bda804",
+        "file_offset": 8231940,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 23,
+        "text": "Inactive SNOMED CT code"
+      },
+      {
+        "address": "00bda840",
+        "file_offset": 8232000,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 102,
+        "text": "The SNOMED CT code for this problem is inactive.\r\n\r\nPlease correct this code using the 'Problems' tab."
+      }
+    ]
+  },
+  {
+    "function": "oCoverSheetParam_CPRS_ProblemList.TCoverSheetParam_CPRS_ProblemList.NewCoverSheetControl",
+    "address": "00bdaad8",
+    "status": "decompiled",
+    "file": "oCoverSheetParam_CPRS_ProblemList.TCoverSheetParam_CPRS_ProblemList.NewCoverSheetControl_00bdaad8.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "oCoverSheet.TCoverSheet.Create",
+    "address": "00bee1d8",
+    "status": "decompiled",
+    "file": "oCoverSheet.TCoverSheet.Create_00bee1d8.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040908c",
+        "map_names": [
+          "System.TObject.Create"
+        ]
+      },
+      {
+        "address": "004091e8",
+        "map_names": [
+          "System.TObject.GetInterface"
+        ]
+      },
+      {
+        "address": "004096ac",
+        "map_names": [
+          "System.@ClassCreate"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b3c4",
+        "map_names": [
+          "System.@UStrAsg"
+        ]
+      },
+      {
+        "address": "0040eadc",
+        "map_names": [
+          "System.@DynArrayClear"
+        ]
+      },
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "009af7e0",
+        "map_names": [
+          "ORNet.DottedIPStr"
+        ]
+      },
+      {
+        "address": "00bcda20",
+        "map_names": [
+          "oCoverSheetGrid.TCoverSheetGrid.Create"
+        ]
+      },
+      {
+        "address": "00bed824",
+        "map_names": [
+          "oCoverSheetParamList.TCoverSheetParamList.Create"
+        ]
+      },
+      {
+        "address": "00befb04",
+        "map_names": [
+          "oCoverSheet.{System.Generics.Collections}TObjectList<Vcl.Controls.TControl>.Create"
+        ]
+      },
+      {
+        "address": "00bf0138",
+        "map_names": [
+          "iCoverSheetIntf.NewGUID"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "oCoverSheet.TCoverSheet.OnClearPtData",
+    "address": "00bee374",
+    "status": "decompiled",
+    "file": "oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "numeric_callee_references": [
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "00439820",
+        "map_names": [
+          "System.SysUtils.Supports"
+        ]
+      },
+      {
+        "address": "0061782c",
+        "map_names": [
+          "Vcl.Controls.{System.Generics.Collections}TList<Vcl.Controls.TControl>.TEnumerator.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "oCoverSheet.TCoverSheet.OnDisplay",
+    "address": "00bee478",
+    "status": "decompiled",
+    "file": "oCoverSheet.TCoverSheet.OnDisplay_00bee478.c",
+    "numeric_callee_references": [
+      {
+        "address": "00408ee4",
+        "map_names": [
+          "System.TObject.ClassName"
+        ]
+      },
+      {
+        "address": "004091e8",
+        "map_names": [
+          "System.TObject.GetInterface"
+        ]
+      },
+      {
+        "address": "0040e9b8",
+        "map_names": [
+          "System.@DynArraySetLength"
+        ]
+      },
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "0042ef18",
+        "map_names": [
+          "System.SysUtils.Format"
+        ]
+      },
+      {
+        "address": "00439820",
+        "map_names": [
+          "System.SysUtils.Supports"
+        ]
+      },
+      {
+        "address": "004597a0",
+        "map_names": [
+          "System.Generics.Collections.TListHelper.InternalAdd4"
+        ]
+      },
+      {
+        "address": "004598c4",
+        "map_names": [
+          "System.Generics.Collections.TListHelper.InternalClear4"
+        ]
+      },
+      {
+        "address": "004d4e14",
+        "map_names": [
+          "System.Classes.TCollection.Clear"
+        ]
+      },
+      {
+        "address": "006015e8",
+        "map_names": [
+          "Vcl.Controls.TControl.SetAlign"
+        ]
+      },
+      {
+        "address": "006025b0",
+        "map_names": [
+          "Vcl.Controls.TControl.SetVisible"
+        ]
+      },
+      {
+        "address": "006bace8",
+        "map_names": [
+          "Vcl.ExtCtrls.TCellItem.SetSizeStyle"
+        ]
+      },
+      {
+        "address": "006bacf8",
+        "map_names": [
+          "Vcl.ExtCtrls.TCellItem.SetValue"
+        ]
+      },
+      {
+        "address": "006bad98",
+        "map_names": [
+          "Vcl.ExtCtrls.TCellCollection.GetItem"
+        ]
+      },
+      {
+        "address": "006bb030",
+        "map_names": [
+          "Vcl.ExtCtrls.TRowCollection.Add"
+        ]
+      },
+      {
+        "address": "006bb1d4",
+        "map_names": [
+          "Vcl.ExtCtrls.TColumnCollection.Add"
+        ]
+      },
+      {
+        "address": "006bb684",
+        "map_names": [
+          "Vcl.ExtCtrls.TControlCollection.AddControl"
+        ]
+      },
+      {
+        "address": "00bcd62c",
+        "map_names": [
+          "iGridPanelIntf.NewGridPanel"
+        ]
+      },
+      {
+        "address": "00bcd77c",
+        "map_names": [
+          "iGridPanelIntf.NewGridPanelDisplay"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bee980",
+        "file_offset": 8314240,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 9,
+        "text": "%s_Row_%d"
+      }
+    ]
+  },
+  {
+    "function": "oCoverSheet.TCoverSheet.OnSwitchToPatient",
+    "address": "00bef080",
+    "status": "decompiled",
+    "file": "oCoverSheet.TCoverSheet.OnSwitchToPatient_00bef080.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      },
+      {
+        "address": "0040c4b0",
+        "map_names": [
+          "System.@UStrPos"
+        ]
+      },
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "0042cfdc",
+        "map_names": [
+          "System.SysUtils.IntToStr"
+        ]
+      },
+      {
+        "address": "004397f8",
+        "map_names": [
+          "System.SysUtils.Supports"
+        ]
+      },
+      {
+        "address": "00439820",
+        "map_names": [
+          "System.SysUtils.Supports"
+        ]
+      },
+      {
+        "address": "0061782c",
+        "map_names": [
+          "Vcl.Controls.{System.Generics.Collections}TList<Vcl.Controls.TControl>.TEnumerator.Create"
+        ]
+      },
+      {
+        "address": "00bf0108",
+        "map_names": [
+          "iCoverSheetIntf.CoverSheet"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bef554",
+        "file_offset": 8317268,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 11,
+        "text": "ORWCV START"
+      }
+    ]
+  },
+  {
+    "function": "oCoverSheet.TCoverSheet.OnInitCoverSheet",
+    "address": "00bef608",
+    "status": "decompiled",
+    "file": "oCoverSheet.TCoverSheet.OnInitCoverSheet_00bef608.c",
+    "numeric_callee_references": [
+      {
+        "address": "004091e8",
+        "map_names": [
+          "System.TObject.GetInterface"
+        ]
+      },
+      {
+        "address": "0040c35c",
+        "map_names": [
+          "System.@UStrCopy"
+        ]
+      },
+      {
+        "address": "0040c4b0",
+        "map_names": [
+          "System.@UStrPos"
+        ]
+      },
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "0042d238",
+        "map_names": [
+          "System.SysUtils.StrToIntDef"
+        ]
+      },
+      {
+        "address": "004d5460",
+        "map_names": [
+          "System.Classes.TStringsEnumerator.Create"
+        ]
+      },
+      {
+        "address": "004d54a4",
+        "map_names": [
+          "System.Classes.TStringsEnumerator.GetCurrent"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "00bd5758",
+        "map_names": [
+          "oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.Create"
+        ]
+      },
+      {
+        "address": "00bec394",
+        "map_names": [
+          "oCoverSheetParam_WidgetClock.TCoverSheetParam_WidgetClock.Create"
+        ]
+      },
+      {
+        "address": "00bed054",
+        "map_names": [
+          "oCoverSheetParam_Web.TCoverSheetParam_Web.Create"
+        ]
+      },
+      {
+        "address": "00bf0108",
+        "map_names": [
+          "iCoverSheetIntf.CoverSheet"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00befa84",
+        "file_offset": 8318596,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 22,
+        "text": "ORWCV1 COVERSHEET LIST"
+      },
+      {
+        "address": "00befac0",
+        "file_offset": 8318656,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "^"
+      }
+    ]
+  },
+  {
+    "function": "rCover.DetailProblem",
+    "address": "00bf026c",
+    "status": "decompiled",
+    "file": "rCover.DetailProblem_00bf026c.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "00430914",
+        "map_names": [
+          "System.SysUtils.FloatToStr"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bf0348",
+        "file_offset": 8320840,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "^"
+      },
+      {
+        "address": "00bf0358",
+        "file_offset": 8320856,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 13,
+        "text": "ORQQPL DETAIL"
+      }
+    ]
+  },
+  {
+    "function": "rCover.DetailAllergy",
+    "address": "00bf0374",
+    "status": "decompiled",
+    "file": "rCover.DetailAllergy_00bf0374.c",
+    "numeric_callee_references": [
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bf03d8",
+        "file_offset": 8320984,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 13,
+        "text": "ORQQAL DETAIL"
+      }
+    ]
+  },
+  {
+    "function": "rCover.ListAllergies",
+    "address": "00bf05e8",
+    "status": "decompiled",
+    "file": "rCover.ListAllergies_00bf05e8.c",
+    "numeric_callee_references": [
+      {
+        "address": "009b2cf8",
+        "map_names": [
+          "ORFn.MixedCaseList"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00bf062c",
+        "file_offset": 8321580,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 11,
+        "text": "ORQQAL LIST"
+      }
+    ]
+  },
+  {
+    "function": "fCoverSheet.TfrmCoverSheet.Create",
+    "address": "00fd92b4",
+    "status": "decompiled",
+    "file": "fCoverSheet.TfrmCoverSheet.Create_00fd92b4.c",
+    "numeric_callee_references": [
+      {
+        "address": "004096ac",
+        "map_names": [
+          "System.@ClassCreate"
+        ]
+      },
+      {
+        "address": "00409704",
+        "map_names": [
+          "System.@AfterConstruction"
+        ]
+      },
+      {
+        "address": "011c5f98",
+        "map_names": [
+          "fBase508Form.TfrmBase508Form.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fCoverSheet.TfrmCoverSheet.OnFocusFirstControl",
+    "address": "00fd9308",
+    "status": "decompiled",
+    "file": "fCoverSheet.TfrmCoverSheet.OnFocusFirstControl_00fd9308.c",
+    "numeric_callee_references": [
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "004397f8",
+        "map_names": [
+          "System.SysUtils.Supports"
+        ]
+      },
+      {
+        "address": "00bf0108",
+        "map_names": [
+          "iCoverSheetIntf.CoverSheet"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fCoverSheet.TfrmCoverSheet.OnClearPtData",
+    "address": "00fd9450",
+    "status": "decompiled",
+    "file": "fCoverSheet.TfrmCoverSheet.OnClearPtData_00fd9450.c",
+    "numeric_callee_references": [
+      {
+        "address": "00410738",
+        "map_names": [
+          "System.@IntfClear"
+        ]
+      },
+      {
+        "address": "00bf0108",
+        "map_names": [
+          "iCoverSheetIntf.CoverSheet"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fCoverSheet.TfrmCoverSheet.OnDisplayPage",
+    "address": "00fd94a8",
+    "status": "decompiled",
+    "file": "fCoverSheet.TfrmCoverSheet.OnDisplayPage_00fd94a8.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040d1c4",
+        "map_names": [
+          "System.@FinalizeArray"
+        ]
+      },
+      {
+        "address": "0060297c",
+        "map_names": [
+          "Vcl.Controls.TControl.BringToFront"
+        ]
+      },
+      {
+        "address": "00724290",
+        "map_names": [
+          "Vcl.Forms.TCustomForm.FocusControl"
+        ]
+      },
+      {
+        "address": "00bf0108",
+        "map_names": [
+          "iCoverSheetIntf.CoverSheet"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  }
+]

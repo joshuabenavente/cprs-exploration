@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "status": "discovered_inventory_classified_behavioral_recovery_partial",
+  "requested_target": {
+    "name": "CPRSChart.exe",
+    "path": "/workspace/reverse-engineering/input/cprs/CPRSChart.exe",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "ghidra_program": "/workspace/reverse-engineering/projects/CPRSChart.gpr",
+    "user_reported_source_directory": "C:\\Users\\soapo\\Documents\\AI-Work\\projects\\cprs-exploration\\cprs"
+  },
+  "connection": {
+    "ghidra_mcp_tool_exposed": false,
+    "ghidra_mcp_verified": false,
+    "local_ghidra_version": "12.2",
+    "analysis_backend": "Local Ghidra 12.2 headless"
+  },
+  "coverage": {
+    "schema_version": 1,
+    "target_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "inventory_source": "evidence/inventory-reviewed",
+    "internal_functions": 41948,
+    "external_functions": 1423,
+    "total_functions": 43371,
+    "statuses": {
+      "analyzed": 2245,
+      "unresolved": 40943,
+      "partially_analyzed": 183
+    },
+    "all_inventory_entries_classified": true,
+    "full_behavioral_recovery_complete": false,
+    "discovery_complete_for_executable": false,
+    "analysis_timeout": false,
+    "automatic_analysis_enabled": true,
+    "final_snapshot_analysis_enabled": false,
+    "static_call_sites": 243857,
+    "unresolved_indirect_call_sites": 38574,
+    "verified_import_thunks": 1518,
+    "verified_small_function_semantics": 727,
+    "literal_use_sites": 27151,
+    "rpc_literal_use_sites": 1097,
+    "verified_archived_direct_call_sites": 3355,
+    "historical_entries_absent_from_current_function_inventory": 0,
+    "subsystems": {
+      "compiler-runtime-and-libraries": {
+        "functions": 23858,
+        "status": {
+          "analyzed": 1977,
+          "unresolved": 21881
+        }
+      },
+      "other-application-modules": {
+        "functions": 9924,
+        "status": {
+          "unresolved": 9756,
+          "analyzed": 159,
+          "partially_analyzed": 9
+        }
+      },
+      "shared-controls-and-accessibility": {
+        "functions": 1241,
+        "status": {
+          "unresolved": 1228,
+          "analyzed": 13
+        }
+      },
+      "transport-authentication-and-integration": {
+        "functions": 737,
+        "status": {
+          "unresolved": 657,
+          "partially_analyzed": 20,
+          "analyzed": 60
+        }
+      },
+      "documentation-encounters-and-reminders": {
+        "functions": 1434,
+        "status": {
+          "unresolved": 1399,
+          "partially_analyzed": 27,
+          "analyzed": 8
+        }
+      },
+      "orders-medications-and-consults": {
+        "functions": 3078,
+        "status": {
+          "unresolved": 3037,
+          "partially_analyzed": 33,
+          "analyzed": 8
+        }
+      },
+      "results-reports-and-graphs": {
+        "functions": 849,
+        "status": {
+          "unresolved": 834,
+          "partially_analyzed": 12,
+          "analyzed": 3
+        }
+      },
+      "cover-sheet-and-vitals": {
+        "functions": 297,
+        "status": {
+          "unresolved": 232,
+          "partially_analyzed": 50,
+          "analyzed": 15
+        }
+      },
+      "patient-context-and-shell": {
+        "functions": 530,
+        "status": {
+          "unresolved": 496,
+          "partially_analyzed": 32,
+          "analyzed": 2
+        }
+      },
+      "external-libraries": {
+        "functions": 1423,
+        "status": {
+          "unresolved": 1423
+        }
+      }
+    },
+    "limits": [
+      "Classification is not behavioral recovery",
+      "Automatic discovery may include false functions and miss code",
+      "A direct call/reference is a static edge, not proof of runtime reachability",
+      "MAP labels include data, RTTI and literals; only function manager entries counted as functions"
+    ]
+  },
+  "target_executed": false,
+  "target_mutations": [],
+  "blockers": [],
+  "historical_reference": {
+    "name": "CPRSChart.exe",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "metadata": "/workspace/cprs-exploration/provenance/chart.lock.json",
+    "relation_to_target": "Executable and MAP hashes exactly match uploaded archive",
+    "used_as_target_evidence": true
+  },
+  "deliverables": {
+    "architecture": "written_with_explicit_coverage_limits",
+    "function_inventory": "written_with_explicit_coverage_limits",
+    "data_structures": "written_with_explicit_coverage_limits",
+    "external_interfaces": "written_with_explicit_coverage_limits",
+    "behavior": "written_with_explicit_coverage_limits",
+    "bounded_reviews": "written_with_explicit_coverage_limits",
+    "reimplementation": "written_with_explicit_coverage_limits",
+    "reproduction": "written_with_explicit_coverage_limits"
+  },
+  "next_action": "Export and analyze batch 0004: ORNet.SetParams 009ad030; fNotes.SaveEditedNote 00e19034; Wsockc.NetStart 009916c8; RpcSLogin.StartProgSLogin 00996390; rMisc.LoadDll 01192018. Verify caller ABI, exception continuations, argument schemas and effects, then update address-keyed statuses.",
+  "batch_policy": {
+    "maximum_functions": 32,
+    "decompile_timeout_seconds_per_function": 30,
+    "checkpoint_after_each_batch": true
+  },
+  "source_access": {
+    "windows_drive_mounted": false,
+    "local_terminal_connection": "connection closed before server request was answered",
+    "direct_local_file_transfer_tool_available": false
+  },
+  "tool_validation": {
+    "status": "passed",
+    "receipt": "validation/smoke/receipt.json",
+    "scope": "Unrelated static fixture; no target conclusions"
+  },
+  "archive": {
+    "path": "/workspace/attachments/588b4920-75a0-4baf-92cf-192fde444d84/cprs.zip",
+    "sha256": "64754d9e1c5292c9dd1f2fa98df3e3d385f4e75ea2f4db7b878c75e4f95ecac3",
+    "file_count": 13,
+    "uncompressed_bytes": 79598356
+  },
+  "analysis_attempts": [
+    {
+      "kind": "default whole-program automatic analysis",
+      "heap_limit": "8G",
+      "status": "failed",
+      "failure": "OutOfMemoryError in AddressTableAnalyzer; import was not saved",
+      "log": "evidence-import.log"
+    },
+    {
+      "kind": "baseline noanalysis import",
+      "status": "saved",
+      "internal_functions": 702,
+      "external_functions": 1,
+      "log": "evidence-baseline.log"
+    },
+    {
+      "kind": "metadata-guided discovery",
+      "status": "succeeded and saved",
+      "candidate_count": 10641,
+      "log": "evidence-seeded.log"
+    },
+    {
+      "kind": "corrected controlled automatic discovery",
+      "status": "succeeded and saved",
+      "analysis_seconds": 137,
+      "timeout": false,
+      "internal_functions": 41948,
+      "external_functions": 1423,
+      "log": "evidence-bounded-corrected.log",
+      "options": "evidence/analysis-options.json"
+    }
+  ],
+  "metadata_changes": {
+    "class_prefix_types_applied": 2554,
+    "literal_header_types_applied": 32,
+    "review_function_names_applied": 25
+  },
+  "behavioral_recovery_complete": false,
+  "inventory_classification_complete": true,
+  "next_batch": [
+    {
+      "address": "009ad030",
+      "name": "ORNet.SetParams",
+      "purpose": "Recover exact broker argument construction and overload contract"
+    },
+    {
+      "address": "00e19034",
+      "name": "fNotes.TfrmNotes.SaveEditedNote",
+      "purpose": "Recover note-save branches beneath SaveCurrentNote"
+    },
+    {
+      "address": "009916c8",
+      "name": "Wsockc.TXWBWinsock.NetStart",
+      "purpose": "Recover transport startup beneath NetworkConnect"
+    },
+    {
+      "address": "00996390",
+      "name": "RpcSLogin.StartProgSLogin",
+      "purpose": "Recover secure-connection program construction and launch boundary"
+    },
+    {
+      "address": "01192018",
+      "name": "rMisc.LoadDll",
+      "purpose": "Recover plugin search/loading and error behavior"
+    }
+  ],
+  "final_ghidra_project": "/workspace/reverse-engineering/projects/CPRSChart.gpr"
+}

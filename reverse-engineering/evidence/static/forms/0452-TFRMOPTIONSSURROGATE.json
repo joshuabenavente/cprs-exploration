@@ -1,0 +1,533 @@
+{
+  "class": "TfrmOptionsSurrogate",
+  "name": "frmOptionsSurrogate",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 232,
+    "Top": 107,
+    "HelpContext": 9100,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Surrogate for Notifications",
+    "ClientHeight": 294,
+    "ClientWidth": 589,
+    "HelpFile": "CPRSWT.HLP",
+    "KeyPreview": false,
+    "ExplicitWidth": 595,
+    "ExplicitHeight": 323,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TCaptionListView",
+      "name": "clvSurrogates",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 81,
+        "Width": 589,
+        "Height": 189,
+        "Hint": "Add, Edit, or Remove the Surrogate within the selected time range",
+        "HelpContext": 9035,
+        "Align": "alClient",
+        "Columns": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "#",
+              "Width": 32
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Name",
+              "Width": 166
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Start Date",
+              "Width": 110
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Stop Date",
+              "Width": 110
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Comments",
+              "Width": 150
+            }
+          }
+        ],
+        "HideSelection": false,
+        "ReadOnly": true,
+        "RowSelect": true,
+        "TabOrder": 2,
+        "ViewStyle": "vsReport",
+        "OnChange": "clvSurrogatesChange",
+        "OnCompare": "clvSurrogatesCompare",
+        "OnCustomDrawItem": "clvSurrogatesCustomDrawItem",
+        "OnDblClick": "clvSurrogatesDblClick",
+        "OnKeyDown": "clvSurrogatesKeyDown",
+        "OnMouseDown": "clvSurrogatesMouseDown",
+        "AutoSize": false,
+        "Caption": "You can add, remove, or modify the surrogate",
+        "HideTinyColumns": false,
+        "Pieces": "1,2,3,4"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlParams",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 589,
+        "Height": 49,
+        "Align": "alTop",
+        "Alignment": "taLeftJustify",
+        "BevelOuter": "bvNone",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentBackground": false,
+        "ParentColor": true,
+        "ParentFont": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblDefaultPeriod",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 138,
+            "Top": 28,
+            "Width": 203,
+            "Height": 13,
+            "Caption": "Default surrogate period (from 1 to 30 days)"
+          },
+          "children": []
+        },
+        {
+          "class": "TCheckBox",
+          "name": "cbUseDefaultDates",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 96,
+            "Top": 3,
+            "Width": 490,
+            "Height": 16,
+            "Hint": "If checkmarked the \"Start\" and \"Stop\" fields of the surrogate record are populated with dates",
+            "HelpContext": 9032,
+            "Margins.Left": 96,
+            "Align": "alTop",
+            "Caption": "         Use default Start and Stop dates when entering a new surrogate",
+            "Checked": true,
+            "State": "cbChecked",
+            "TabOrder": 0,
+            "OnClick": "cbUseDefaultDatesClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TEdit",
+          "name": "edDefaultPeriod",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 96,
+            "Top": 25,
+            "Width": 27,
+            "Height": 21,
+            "TabOrder": 1,
+            "Text": "7",
+            "OnChange": "edDefaultPeriodChange",
+            "OnExit": "edDefaultPeriodExit",
+            "OnKeyPress": "edDefaultPeriodKeyPress"
+          },
+          "children": []
+        },
+        {
+          "class": "TVA508StaticText",
+          "name": "txtDefaultPeriod",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Name": "txtDefaultPeriod",
+            "Left": 342,
+            "Top": 28,
+            "Width": 197,
+            "Height": 15,
+            "Alignment": "taLeftJustify",
+            "Caption": "Default surrogate period edit box disabled",
+            "TabOrder": 2,
+            "TabStop": true,
+            "ShowAccelChar": true,
+            "WordWrap": false,
+            "LabelAlignment": "taLeftJustify",
+            "LabelLayout": "tlTop"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlSurrogateTools",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 49,
+        "Width": 589,
+        "Height": 32,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlUpdateIndicator",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 19,
+            "Height": 32,
+            "Align": "alLeft",
+            "BevelOuter": "bvNone",
+            "ParentColor": true,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TVA508StaticText",
+              "name": "stxtChanged",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Name": "stxtChanged",
+                "Left": 8,
+                "Top": 9,
+                "Width": 7,
+                "Height": 15,
+                "Hint": "Changes are not saved",
+                "Alignment": "taLeftJustify",
+                "Caption": "!",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clRed",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [
+                  "fsBold"
+                ],
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 0,
+                "TabStop": true,
+                "Visible": false,
+                "ShowAccelChar": true,
+                "WordWrap": false,
+                "LabelAlignment": "taLeftJustify",
+                "LabelLayout": "tlTop"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 22,
+            "Top": 3,
+            "Width": 380,
+            "Height": 26,
+            "Align": "alLeft",
+            "Alignment": "taLeftJustify",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblInfo",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 16,
+                "Top": 6,
+                "Width": 215,
+                "Height": 13,
+                "Caption": "You can add, remove, or modify the surrogate"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlToolBar",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 400,
+            "Top": 0,
+            "Width": 189,
+            "Height": 32,
+            "Align": "alRight",
+            "BevelOuter": "bvNone",
+            "TabOrder": 2
+          },
+          "children": [
+            {
+              "class": "TVA508StaticText",
+              "name": "txtRemove",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Name": "txtRemove",
+                "Left": 122,
+                "Top": 6,
+                "Width": 117,
+                "Height": 15,
+                "Alignment": "taLeftJustify",
+                "Caption": "Remove button disabled",
+                "TabOrder": 3,
+                "TabStop": true,
+                "ShowAccelChar": true,
+                "WordWrap": false,
+                "LabelAlignment": "taLeftJustify",
+                "LabelLayout": "tlTop"
+              },
+              "children": []
+            },
+            {
+              "class": "TVA508StaticText",
+              "name": "txtSurrEdit",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Name": "txtSurrEdit",
+                "Left": 8,
+                "Top": 6,
+                "Width": 145,
+                "Height": 15,
+                "Alignment": "taLeftJustify",
+                "Caption": "Add Surrogate button disabled",
+                "TabOrder": 1,
+                "TabStop": true,
+                "ShowAccelChar": true,
+                "WordWrap": false,
+                "LabelAlignment": "taLeftJustify",
+                "LabelLayout": "tlTop"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnRemove",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 114,
+                "Top": 3,
+                "Width": 72,
+                "Height": 26,
+                "Hint": "Remove selected surrogate",
+                "HelpContext": 9101,
+                "Align": "alRight",
+                "Caption": "&Remove",
+                "Enabled": false,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 2,
+                "OnClick": "btnRemoveClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnSurrEdit",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 6,
+                "Top": 3,
+                "Width": 102,
+                "Height": 26,
+                "Hint": "Add/Edit Surrogate within the selected range",
+                "Align": "alRight",
+                "Caption": "&Add Surrogate",
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 0,
+                "OnClick": "btnSurrEditClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlDebug",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 0,
+        "Top": 270,
+        "Width": 589,
+        "Height": 24,
+        "Align": "alBottom",
+        "Alignment": "taLeftJustify",
+        "BevelOuter": "bvNone",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clPurple",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentBackground": false,
+        "ParentColor": true,
+        "ParentFont": false,
+        "TabOrder": 3,
+        "Visible": false
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = clvSurrogates",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlParams",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbUseDefaultDates",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edDefaultPeriod",
+            "Text = Default surrogate period, enter a value between 1 and 30 days",
+            "Status = stsOK"
+          ],
+          [
+            "Component = txtDefaultPeriod",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSurrogateTools",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlUpdateIndicator",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stxtChanged",
+            "Text = Surrogates have changed",
+            "Status = stsOK"
+          ],
+          [
+            "Component = pnlInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlToolBar",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnSurrEdit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtSurrEdit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDebug",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOptionsSurrogate",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

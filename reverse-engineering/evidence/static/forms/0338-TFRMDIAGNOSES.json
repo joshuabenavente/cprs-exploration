@@ -1,0 +1,446 @@
+{
+  "class": "TfrmDiagnoses",
+  "name": "frmDiagnoses",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 304,
+    "Top": 169,
+    "AutoScroll": true,
+    "Caption": "Encounter Diagnoses",
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "ScaleMethod": "smManual",
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMainAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ],
+        "ExplicitTop": 210,
+        "ExplicitHeight": 162
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlGrid",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "StyleElements": [
+              "seFont",
+              "seClient",
+              "seBorder"
+            ],
+            "ExplicitHeight": 156
+          },
+          "children": [
+            {
+              "class": "TCaptionListView",
+              "name": "lstCaptionList",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Columns": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "Add to PL",
+                      "Width": 80
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Caption": "Primary",
+                      "Width": 120
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "AutoSize": true,
+                      "Caption": "Selected Diagnoses"
+                    }
+                  }
+                ],
+                "Caption": "Selected Diagnoses",
+                "Pieces": "1,2,3",
+                "ExplicitHeight": 124
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlComments",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitTop": 130
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblComment",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "StyleElements": [
+                      "seFont",
+                      "seClient",
+                      "seBorder"
+                    ]
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCaptionEdit",
+                  "name": "edtComment",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "StyleElements": [
+                      "seFont",
+                      "seClient",
+                      "seBorder"
+                    ]
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlGridRight",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "StyleElements": [
+              "seFont",
+              "seClient",
+              "seBorder"
+            ],
+            "ExplicitHeight": 162
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnRemove",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Top": 97,
+                "TabOrder": 3,
+                "ExplicitTop": 97
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnSelectAll",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Top": 73,
+                "Margins.Top": 0,
+                "TabOrder": 2,
+                "TabStop": true,
+                "ExplicitTop": 73
+              },
+              "children": []
+            },
+            {
+              "class": "TCheckBox",
+              "name": "ckbDiagProb",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 72,
+                "Height": 43,
+                "Align": "alTop",
+                "Caption": "Add to Problem list",
+                "TabOrder": 0,
+                "WordWrap": true,
+                "OnClick": "ckbDiagProbClicked"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "cmdDiagPrimary",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 0,
+                "Top": 49,
+                "Width": 75,
+                "Height": 21,
+                "Margins.Left": 0,
+                "Margins.Top": 0,
+                "Align": "alTop",
+                "Caption": "Primary",
+                "Enabled": false,
+                "TabOrder": 1,
+                "OnClick": "cmdDiagPrimaryClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottomAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ],
+        "ExplicitLeft": 3,
+        "ExplicitTop": 3,
+        "ExplicitWidth": 614
+      },
+      "children": [
+        {
+          "class": "TGridPanel",
+          "name": "grdMain",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "StyleElements": [
+              "seFont",
+              "seClient",
+              "seBorder"
+            ],
+            "ExplicitWidth": 614
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblSection",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Diagnoses Section",
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitWidth": 89
+              },
+              "children": []
+            },
+            {
+              "class": "TLabel",
+              "name": "lblList",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitLeft": 310
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lbSection",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitWidth": 301
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lbxSection",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "Caption": "Section Name",
+                "Pieces": "2,3",
+                "ExplicitLeft": 310,
+                "ExplicitWidth": 301
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnOther",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 12,
+                "Caption": "Other Diagnosis...",
+                "ExplicitWidth": 301
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = cmdDiagPrimary",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtComment",
+            "Label = lblComment",
+            "Status = stsOK"
+          ],
+          [
+            "Component = btnRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnSelectAll",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lbxSection",
+            "Label = lblList",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lbSection",
+            "Label = lblSection",
+            "Status = stsOK"
+          ],
+          [
+            "Component = btnOther",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmDiagnoses",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMainAncestor",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstCaptionList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlComments",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlGridRight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ckbDiagProb",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottomAncestor",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

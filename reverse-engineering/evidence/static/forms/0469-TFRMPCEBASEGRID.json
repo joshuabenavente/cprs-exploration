@@ -1,0 +1,171 @@
+{
+  "class": "TfrmPCEBaseGrid",
+  "name": "frmPCEBaseGrid",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 128,
+    "Top": 192,
+    "Caption": "frmPCEBaseGrid",
+    "ClientWidth": 620,
+    "ExplicitHeight": 436,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottomAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 620,
+        "ExplicitTop": 370,
+        "ExplicitWidth": 616
+      },
+      "children": [
+        {
+          "class": "TBitBtn",
+          "name": "btnOK",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "ExplicitTop": 3
+          },
+          "children": []
+        },
+        {
+          "class": "TBitBtn",
+          "name": "btnCancel",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "ExplicitLeft": 538,
+            "ExplicitTop": 3
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMainAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 620,
+        "ExplicitHeight": 370
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlGrid",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 620,
+            "Height": 371,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0,
+            "ExplicitLeft": 6,
+            "ExplicitTop": 238,
+            "ExplicitWidth": 451,
+            "ExplicitHeight": 87
+          },
+          "children": [
+            {
+              "class": "TCaptionListView",
+              "name": "lstCaptionList",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 614,
+                "Height": 365,
+                "Align": "alClient",
+                "Color": "clCream",
+                "Columns": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Width": 30
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Tag": 1,
+                      "Width": 120
+                    }
+                  }
+                ],
+                "HideSelection": false,
+                "HoverTime": 0,
+                "IconOptions.WrapText": false,
+                "MultiSelect": true,
+                "ReadOnly": true,
+                "RowSelect": true,
+                "ParentShowHint": false,
+                "ShowWorkAreas": true,
+                "ShowHint": true,
+                "TabOrder": 0,
+                "ViewStyle": "vsReport",
+                "OnChanging": "lstCaptionListChanging",
+                "AutoSize": false,
+                "ExplicitLeft": 0,
+                "ExplicitWidth": 435,
+                "ExplicitHeight": 81
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmPCEBaseGrid",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstCaptionList",
+            "Status = stsDefault",
+            "Columns",
+            []
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "class": "TfrmPCEBase",
+  "name": "frmPCEBase",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 194,
+    "Top": 170,
+    "Caption": "Basic Page",
+    "ClientHeight": 399,
+    "ClientWidth": 620,
+    "Position": "poMainFormCenter",
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "ExplicitWidth": 636,
+    "ExplicitHeight": 438,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottomAncestor",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 372,
+        "Width": 620,
+        "Height": 27,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TBitBtn",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 461,
+            "Top": 3,
+            "Width": 75,
+            "Height": 21,
+            "Align": "alRight",
+            "Caption": "OK",
+            "ModalResult": 1,
+            "NumGlyphs": 2,
+            "TabOrder": 0,
+            "OnClick": "btnOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TBitBtn",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 542,
+            "Top": 3,
+            "Width": 75,
+            "Height": 21,
+            "Align": "alRight",
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "NumGlyphs": 2,
+            "TabOrder": 1,
+            "OnClick": "btnCancelClick",
+            "OnMouseDown": "btnCancelMouseDown"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMainAncestor",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 620,
+        "Height": 372,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 24,
+        "Top": 16,
+        "Data": [
+          [
+            "Component = frmPCEBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottomAncestor",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMainAncestor",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

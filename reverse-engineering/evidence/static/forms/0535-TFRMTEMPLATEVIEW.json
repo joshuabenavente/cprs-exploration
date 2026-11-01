@@ -1,0 +1,223 @@
+{
+  "class": "TfrmTemplateView",
+  "name": "frmTemplateView",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 257,
+    "Top": 105,
+    "Caption": "View Template",
+    "ClientHeight": 343,
+    "ClientWidth": 568,
+    "Position": "poScreenCenter",
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "ExplicitWidth": 576,
+    "ExplicitHeight": 370,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 313,
+        "Width": 568,
+        "Height": 30,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "DesignSize": [
+          568,
+          30
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 492,
+            "Top": 6,
+            "Width": 75,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Cancel": true,
+            "Caption": "Close",
+            "Default": true,
+            "TabOrder": 2,
+            "OnClick": "btnCloseClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TCheckBox",
+          "name": "cbStayOnTop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 8,
+            "Width": 77,
+            "Height": 17,
+            "Caption": "Stay on Top",
+            "TabOrder": 0,
+            "OnClick": "cbStayOnTopClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnPrint",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 412,
+            "Top": 6,
+            "Width": 75,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Caption": "Print",
+            "TabOrder": 1,
+            "OnClick": "btnPrintClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TRichEdit",
+      "name": "reMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 568,
+        "Height": 313,
+        "Align": "alClient",
+        "Color": "clCream",
+        "Font.Charset": "ANSI_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "Courier New",
+        "Font.Style": [],
+        "HideSelection": false,
+        "ParentFont": false,
+        "PopupMenu": "popView",
+        "ReadOnly": true,
+        "ScrollBars": "ssBoth",
+        "TabOrder": 0,
+        "WantReturns": false,
+        "WordWrap": false
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cbStayOnTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnPrint",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = reMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmTemplateView",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popView",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnPopup": "popViewPopup",
+        "Left": 24,
+        "Top": 24
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "Copy1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Copy",
+            "ShortCut": 16451,
+            "OnClick": "Copy1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "SelectAll1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Select &All",
+            "ShortCut": 16449,
+            "OnClick": "SelectAll1Click"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

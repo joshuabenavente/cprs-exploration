@@ -1,0 +1,191 @@
+{
+  "class": "TfrmLabCollectTimes",
+  "name": "frmLabCollectTimes",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 332,
+    "Top": 310,
+    "BorderIcons": [],
+    "Caption": "Future Lab Collect Times",
+    "ClientHeight": 170,
+    "ClientWidth": 439,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 455,
+    "ExplicitHeight": 208,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TMemo",
+      "name": "lblFutureTimes",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 211,
+        "Top": 113,
+        "Width": 129,
+        "Height": 46,
+        "TabStop": false,
+        "BorderStyle": "bsNone",
+        "Color": "clBtnFace",
+        "Lines.Strings": [
+          "Select a date and a routine ",
+          "lab collect time for that ",
+          "date."
+        ],
+        "ReadOnly": true,
+        "TabOrder": 5
+      },
+      "children": []
+    },
+    {
+      "class": "TORDateBox",
+      "name": "calLabCollect",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 241,
+        "Top": 22,
+        "Width": 158,
+        "Height": 21,
+        "TabOrder": 0,
+        "Visible": false,
+        "OnChange": "calLabCollectChange",
+        "DateOnly": true,
+        "RequireTime": false,
+        "Caption": ""
+      },
+      "children": []
+    },
+    {
+      "class": "TORListBox",
+      "name": "lstLabCollTimes",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 210,
+        "Top": 6,
+        "Width": 218,
+        "Height": 98,
+        "ItemHeight": 13,
+        "ParentShowHint": false,
+        "ShowHint": true,
+        "TabOrder": 1,
+        "Caption": "",
+        "ItemTipColor": "clWindow",
+        "LongList": false,
+        "Pieces": "2"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 353,
+        "Top": 112,
+        "Width": 75,
+        "Height": 21,
+        "Caption": "OK",
+        "TabOrder": 2,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 353,
+        "Top": 139,
+        "Width": 75,
+        "Height": 21,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 3,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TMonthCalendar",
+      "name": "calMonth",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 8,
+        "Top": 5,
+        "Width": 190,
+        "Height": 153,
+        "CalColors.TitleBackColor": "clBtnFace",
+        "CalColors.TitleTextColor": "clBtnText",
+        "CalColors.MonthBackColor": "clWindow",
+        "CalColors.TrailingTextColor": "clGrayText",
+        "Date": {
+          "extended80_hex": "c9d22f103f9d9b8e0e40"
+        },
+        "ShowTodayCircle": false,
+        "TabOrder": 4,
+        "TabStop": true,
+        "OnClick": "calMonthClick",
+        "OnKeyDown": "calMonthKeyDown"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lblFutureTimes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calLabCollect",
+            "Text = Lab Collect Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lstLabCollTimes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calMonth",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmLabCollectTimes",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

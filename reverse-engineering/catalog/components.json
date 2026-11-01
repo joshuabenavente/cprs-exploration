@@ -1,0 +1,611 @@
+[
+  {
+    "file": "input/cprs/GMV_VitalsViewEnter.dll",
+    "sha256": "9b3db7ab1ca092b0fefd1fa756f9f0f1e02f3462f3e644b898b8dc9ef331623f",
+    "bytes": 7810976,
+    "machine": "0x14c",
+    "image_base": "00400000",
+    "entry": "009ff878",
+    "normal_import_dlls": [
+      "mpr.dll",
+      "borlndmm.dll",
+      "winspool.drv",
+      "comdlg32.dll",
+      "comctl32.dll",
+      "shell32.dll",
+      "ws2_32.dll",
+      "user32.dll",
+      "version.dll",
+      "oleaut32.dll",
+      "WTSAPI32.DLL",
+      "msvcrt.dll",
+      "advapi32.dll",
+      "winhttp.dll",
+      "cryptui.dll",
+      "kernel32.dll",
+      "SHFolder.dll",
+      "wsock32.dll",
+      "crypt32.dll",
+      "ole32.dll",
+      "gdi32.dll"
+    ],
+    "exports": [
+      {
+        "ordinal": 1,
+        "name": "dbkFCallWrapperAddr",
+        "address": "00a12648",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 2,
+        "name": "__dbk_fcall_wrapper",
+        "address": "00413984",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 3,
+        "name": "GMV_SetUpInputForm",
+        "address": "009e89a8",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 4,
+        "name": "GetVitalsInputForm",
+        "address": "009e8a38",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 5,
+        "name": "GMV_GetLatestVitalsList",
+        "address": "009eb1f4",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 6,
+        "name": "GMV_EnterPatientVitalsForm",
+        "address": "009eb0cc",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 7,
+        "name": "GMV_EnterPatientVitals",
+        "address": "009eb028",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 8,
+        "name": "GMV_ViewPatientVitalsForm",
+        "address": "009eb14c",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 9,
+        "name": "GMV_ViewPatientVitals",
+        "address": "009eaf80",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 10,
+        "name": "GMV_LatestVitalsList",
+        "address": "009ec0a4",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 11,
+        "name": "GMV_VitalsExit",
+        "address": "009eaf70",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 12,
+        "name": "GMV_VitalsEnterForm",
+        "address": "009ebf0c",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 13,
+        "name": "GMV_VitalsViewForm",
+        "address": "009ebfbc",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 14,
+        "name": "GMV_VitalsViewDLG",
+        "address": "009eb25c",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 15,
+        "name": "GMV_VitalsEnterDLG",
+        "address": "009eb898",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      }
+    ],
+    "implementation_status": "not semantically analyzed; exported interface metadata only"
+  },
+  {
+    "file": "input/cprs/RoboEx32.dll",
+    "sha256": "1eba268dc7b387e83e6a422bd9f26072566c9cad80f890778cb9dfcdd979df00",
+    "bytes": 1044480,
+    "machine": "0x14c",
+    "image_base": "050c0000",
+    "entry": "0510ff35",
+    "normal_import_dlls": [
+      "VERSION.dll",
+      "KERNEL32.dll",
+      "USER32.dll",
+      "GDI32.dll",
+      "comdlg32.dll",
+      "WINSPOOL.DRV",
+      "ADVAPI32.dll",
+      "SHELL32.dll",
+      "COMCTL32.dll",
+      "oledlg.dll",
+      "ole32.dll",
+      "OLEPRO32.DLL",
+      "OLEAUT32.dll"
+    ],
+    "exports": [
+      {
+        "ordinal": 1,
+        "name": "LDLLHandler",
+        "address": "050c6160",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 3,
+        "name": "JumpUrlIERefresh",
+        "address": "050d5f20",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 4,
+        "name": "JumpUrlIEStop",
+        "address": "050d6070",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 5,
+        "name": "JumpUrlIEBack",
+        "address": "050d5fb0",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 6,
+        "name": "JumpUrlIEForward",
+        "address": "050d6060",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 7,
+        "name": "JumpHtml",
+        "address": "050d5ef0",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 10,
+        "name": "JumpUrlIEPrint",
+        "address": "050d5fd0",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 11,
+        "name": "AboutWinHelp2000",
+        "address": "050d5be0",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 12,
+        "name": "InitWinHelp2000",
+        "address": "050d5bd0",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 13,
+        "name": "JumpUrlIEBrowsePrev",
+        "address": "050d6100",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 14,
+        "name": "JumpUrlIEBrowseNext",
+        "address": "050d6190",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 15,
+        "name": "RoboHelpExInitialize",
+        "address": "050d59a0",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 16,
+        "name": "RoboHelpExAbout",
+        "address": "050d5a00",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 17,
+        "name": "RoboHelpExShowNavPane",
+        "address": "050d5a90",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 18,
+        "name": "RoboHelpExWatermark",
+        "address": "050d5b70",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 19,
+        "name": "RoboHelpExSeeAlso",
+        "address": "050d5b30",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 20,
+        "name": "RoboHelpExWatermarkNonScroll",
+        "address": "050d5ba0",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 21,
+        "name": "RoboHelpExShowSeeAlso",
+        "address": "050d5b00",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 24,
+        "name": "RoboHelpExEHelp",
+        "address": "050d5b50",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 40,
+        "name": "Wh98Initialize",
+        "address": "050d6220",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 41,
+        "name": "Wh98About",
+        "address": "050d6230",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 42,
+        "name": "Wh98ShowNavPane",
+        "address": "050d6240",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 43,
+        "name": "Wh98Watermark",
+        "address": "050d6270",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 44,
+        "name": "Wh98SeeAlso",
+        "address": "050d6260",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 45,
+        "name": "Wh98WatermarkNSR",
+        "address": "050d6290",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 46,
+        "name": "Wh98ShowSeeAlso",
+        "address": "050d6250",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      }
+    ],
+    "implementation_status": "not semantically analyzed; exported interface metadata only"
+  },
+  {
+    "file": "input/cprs/WebView2Loader.dll",
+    "sha256": "57abef0622d1cd646eb9efe1cd58c8e59192a51fbc4bba0a6f9e7db3e99ac3c1",
+    "bytes": 115128,
+    "machine": "0x14c",
+    "image_base": "10000000",
+    "entry": "10003f00",
+    "normal_import_dlls": [
+      "KERNEL32.dll"
+    ],
+    "exports": [
+      {
+        "ordinal": 1,
+        "name": "CompareBrowserVersions",
+        "address": "10001f00",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 2,
+        "name": "CreateCoreWebView2Environment",
+        "address": "10002050",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 3,
+        "name": "CreateCoreWebView2EnvironmentWithOptions",
+        "address": "10001570",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 4,
+        "name": "GetAvailableCoreWebView2BrowserVersionString",
+        "address": "10001a00",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      }
+    ],
+    "implementation_status": "not semantically analyzed; exported interface metadata only"
+  },
+  {
+    "file": "input/cprs/YS_MHA_A_XE10.dll",
+    "sha256": "04d093acac06c8e7861b6b014d84d9472d8bf2119fa57f986268f811c34d3e09",
+    "bytes": 9714080,
+    "machine": "0x14c",
+    "image_base": "00400000",
+    "entry": "00b98208",
+    "normal_import_dlls": [
+      "winmm.dll",
+      "borlndmm.dll",
+      "shlwapi.dll",
+      "wininet.dll",
+      "winspool.drv",
+      "comdlg32.dll",
+      "comctl32.dll",
+      "ws2_32.dll",
+      "shell32.dll",
+      "user32.dll",
+      "version.dll",
+      "oleaut32.dll",
+      "WTSAPI32.DLL",
+      "msvcrt.dll",
+      "advapi32.dll",
+      "winhttp.dll",
+      "cryptui.dll",
+      "kernel32.dll",
+      "wsock32.dll",
+      "crypt32.dll",
+      "gdiplus.dll",
+      "ole32.dll",
+      "gdi32.dll"
+    ],
+    "exports": [
+      {
+        "ordinal": 1,
+        "name": "dbkFCallWrapperAddr",
+        "address": "00bad648",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 2,
+        "name": "__dbk_fcall_wrapper",
+        "address": "00414540",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 3,
+        "name": "CloseDLL",
+        "address": "00b7d588",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 4,
+        "name": "RemoveTempVistaFile",
+        "address": "00b80004",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 5,
+        "name": "RemoveTempFile",
+        "address": "00b7fd7c",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 6,
+        "name": "SaveInstrument",
+        "address": "00b7eb88",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 7,
+        "name": "ShowInstrument",
+        "address": "00b7d78c",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      }
+    ],
+    "implementation_status": "not semantically analyzed; exported interface metadata only"
+  },
+  {
+    "file": "input/cprs/borlndmm.dll",
+    "sha256": "844e082b2a96631b2ea21c871c47efd0d82ebd930a9659798b3f2f004b3448b2",
+    "bytes": 74736,
+    "machine": "0x14c",
+    "image_base": "50030000",
+    "entry": "5003d118",
+    "normal_import_dlls": [
+      "kernel32.dll",
+      "user32.dll",
+      "oleaut32.dll"
+    ],
+    "exports": [
+      {
+        "ordinal": 1,
+        "name": "dbkFCallWrapperAddr",
+        "address": "50042580",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 2,
+        "name": "__dbk_fcall_wrapper",
+        "address": "50038f60",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 3,
+        "name": "GetAllocMemSize",
+        "address": "5003b44c",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 4,
+        "name": "GetAllocMemCount",
+        "address": "5003b444",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 5,
+        "name": "GetHeapStatus",
+        "address": "5003b048",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 6,
+        "name": "DumpBlocks",
+        "address": "5003b454",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 7,
+        "name": "ReallocMemory",
+        "address": "500386c4",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 8,
+        "name": "FreeMemory",
+        "address": "500386ac",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 9,
+        "name": "GetMemory",
+        "address": "5003869c",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 10,
+        "name": "@Borlndmm@SysUnregisterExpectedMemoryLeak$qqrpi",
+        "address": "5003aa28",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 11,
+        "name": "@Borlndmm@SysRegisterExpectedMemoryLeak$qqrpi",
+        "address": "5003a9e8",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 12,
+        "name": "@Borlndmm@SysAllocMem$qqri",
+        "address": "5003a65c",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 13,
+        "name": "@Borlndmm@SysReallocMem$qqrpvi",
+        "address": "5003a340",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 14,
+        "name": "@Borlndmm@SysFreeMem$qqrpv",
+        "address": "5003a148",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 15,
+        "name": "@Borlndmm@SysGetMem$qqri",
+        "address": "50039dc4",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 16,
+        "name": "@Borlndmm@HeapRelease$qqrv",
+        "address": "5003b428",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      },
+      {
+        "ordinal": 17,
+        "name": "@Borlndmm@HeapAddRef$qqrv",
+        "address": "5003b414",
+        "forwarder": null,
+        "contract_status": "unresolved"
+      }
+    ],
+    "implementation_status": "not semantically analyzed; exported interface metadata only"
+  }
+]

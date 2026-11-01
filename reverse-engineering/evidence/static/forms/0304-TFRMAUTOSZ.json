@@ -1,0 +1,41 @@
+{
+  "class": "TfrmAutoSz",
+  "name": "frmAutoSz",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 226,
+    "Top": 373,
+    "HorzScrollBar.Visible": false,
+    "VertScrollBar.Visible": false,
+    "Caption": "frmAutoSz",
+    "ClientHeight": 273,
+    "ClientWidth": 427,
+    "OldCreateOrder": true,
+    "OnDestroy": "FormDestroy",
+    "OnResize": "FormResize",
+    "ExplicitWidth": 435,
+    "ExplicitHeight": 300,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = frmAutoSz",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

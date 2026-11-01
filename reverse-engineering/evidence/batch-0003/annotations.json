@@ -1,0 +1,403 @@
+[
+  {
+    "address": "00862ab4",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "XWBHash.Encrypt",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 64,
+    "direct_calls": [
+      {
+        "site": "00862ac8",
+        "target": "0040b0c8",
+        "names": [
+          "System.@UStrAddRef"
+        ],
+        "bytes": "e8fb85baff"
+      },
+      {
+        "site": "00862adb",
+        "target": "00407e34",
+        "names": [
+          "System.Randomize"
+        ],
+        "bytes": "e85453baff"
+      },
+      {
+        "site": "00862ae5",
+        "target": "00407e84",
+        "names": [
+          "System.Random"
+        ],
+        "bytes": "e89a53baff"
+      },
+      {
+        "site": "00862af1",
+        "target": "00407e84",
+        "names": [
+          "System.Random"
+        ],
+        "bytes": "e88e53baff"
+      },
+      {
+        "site": "00862b02",
+        "target": "0040bf44",
+        "names": [
+          "System.@UStrFromWChar"
+        ],
+        "bytes": "e83d94baff"
+      },
+      {
+        "site": "00862b1f",
+        "target": "008617bc",
+        "names": [
+          "MFunStr.Translate"
+        ],
+        "bytes": "e898ecffff"
+      },
+      {
+        "site": "00862b2d",
+        "target": "0040bf44",
+        "names": [
+          "System.@UStrFromWChar"
+        ],
+        "bytes": "e81294baff"
+      },
+      {
+        "site": "00862b3c",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e8d396baff"
+      },
+      {
+        "site": "00862b56",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e8d984baff"
+      }
+    ],
+    "literal_references": [],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "00862b5c",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00862b6c",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "XWBHash.Decrypt",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 64,
+    "direct_calls": [
+      {
+        "site": "00862b82",
+        "target": "0040b0c8",
+        "names": [
+          "System.@UStrAddRef"
+        ],
+        "bytes": "e84185baff"
+      },
+      {
+        "site": "00862bd6",
+        "target": "0040c35c",
+        "names": [
+          "System.@UStrCopy"
+        ],
+        "bytes": "e88197baff"
+      },
+      {
+        "site": "00862bef",
+        "target": "008617bc",
+        "names": [
+          "MFunStr.Translate"
+        ],
+        "bytes": "e8c8ebffff"
+      },
+      {
+        "site": "00862c04",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8cb83baff"
+      },
+      {
+        "site": "00862c0c",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8c383baff"
+      }
+    ],
+    "literal_references": [],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "00862c12",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "009af1ec",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "ORNet.CallBroker",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 35,
+    "direct_calls": [
+      {
+        "site": "009af1f6",
+        "target": "009acd20",
+        "names": [
+          "ORNet.LockBroker"
+        ],
+        "bytes": "e825dbffff"
+      },
+      {
+        "site": "009af20e",
+        "target": "009ae170",
+        "names": [
+          "ORNet.UpdateContext"
+        ],
+        "bytes": "e85defffff"
+      },
+      {
+        "site": "009af217",
+        "target": "009ae314",
+        "names": [
+          "ORNet.CallBrokerInContext"
+        ],
+        "bytes": "e8f8f0ffff"
+      },
+      {
+        "site": "009af22c",
+        "target": "009acd2c",
+        "names": [
+          "ORNet.UnlockBroker"
+        ],
+        "bytes": "e8fbdaffff"
+      }
+    ],
+    "literal_references": [],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "009af232",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00a0b3e0",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rTIU.CosignDocument",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 41,
+    "direct_calls": [
+      {
+        "site": "00a0b413",
+        "target": "009ad924",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e80c25faff"
+      },
+      {
+        "site": "00a0b420",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8ff0ea0ff"
+      },
+      {
+        "site": "00a0b438",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e897fb9fff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "00a0b40e",
+        "instruction": "MOV EAX,0xa0b45c",
+        "literal": {
+          "address": "00a0b45c",
+          "header_address": "00a0b450",
+          "file_offset": 6334556,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 26,
+          "text": "TIU WHICH SIGNATURE ACTION",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00a0b41b",
+        "instruction": "MOV EDX,0xa0b4a0",
+        "literal": {
+          "address": "00a0b4a0",
+          "header_address": "00a0b494",
+          "file_offset": 6334624,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 11,
+          "text": "COSIGNATURE",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "00a0b43e",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00a0c6fc",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rTIU.SignDocument",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 70,
+    "direct_calls": [
+      {
+        "site": "00a0c747",
+        "target": "009ad924",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e8d811faff"
+      },
+      {
+        "site": "00a0c75c",
+        "target": "009b2f6c",
+        "names": [
+          "ORFn.Piece"
+        ],
+        "bytes": "e80b68faff"
+      },
+      {
+        "site": "00a0c769",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8b6fb9fff"
+      },
+      {
+        "site": "00a0c783",
+        "target": "009b2f6c",
+        "names": [
+          "ORFn.Piece"
+        ],
+        "bytes": "e8e467faff"
+      },
+      {
+        "site": "00a0c78e",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e831ec9fff"
+      },
+      {
+        "site": "00a0c7a8",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e887e89fff"
+      },
+      {
+        "site": "00a0c7b0",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e81fe89fff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "00a0c742",
+        "instruction": "MOV EAX,0xa0c7d4",
+        "literal": {
+          "address": "00a0c7d4",
+          "header_address": "00a0c7c8",
+          "file_offset": 6339540,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 15,
+          "text": "TIU SIGN RECORD",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00a0c764",
+        "instruction": "MOV EDX,0xa0c800",
+        "literal": {
+          "address": "00a0c800",
+          "header_address": "00a0c7f4",
+          "file_offset": 6339584,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "0",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "00a0c7b6",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  }
+]

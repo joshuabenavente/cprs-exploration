@@ -1,0 +1,275 @@
+openjdk version "25.0.5" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode)
+INFO  Using log config file: jar:file:/workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /workspace/reverse-engineering/evidence/ghidra-analysis.log (LoggingInitialization)  
+INFO  Loading user preferences: /workspace/reverse-engineering/.ghidra-settings/agent-ghidra/ghidra_12.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (991 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Loaded 154 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt (UnixSystemTrustKeyStoreUtil)  
+INFO  Loaded 154 trusted CA certificates from the OS trust store. (DefaultTrustManagerFactory)  
+INFO  Loaded 118 trusted CA certificates from the Java default trust store. (DefaultTrustManagerFactory)  
+INFO  Starting cache cleanup: /workspace/reverse-engineering/.cache/agent-ghidra/fscache2 (FileCacheMaintenanceDaemon)  
+INFO  Finished cache cleanup, estimated storage used: 0 (FileCacheMaintenanceDaemon)  
+INFO  Headless startup complete (3016 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 60 extension points (19 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /workspace/reverse-engineering/scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /workspace/reverse-engineering/projects/CPRSChart (HeadlessAnalyzer)  
+INFO  Creating project: /workspace/reverse-engineering/projects/CPRSChart (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /workspace/reverse-engineering/projects/CPRSChart (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///workspace/reverse-engineering/input/cprs/CPRSChart.exe (HeadlessAnalyzer)  
+INFO  Using Loader: Portable Executable (PE) (ProgramLoader)  
+INFO  Using Language/Compiler: x86:LE:32:default:borlanddelphi (ProgramLoader)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib64] (ProgramLoader)  
+INFO  TLS callbacks at 126a010 (TLSDirectory)  
+WARN  Delay-load INT/IAT import count mismatch for 'kernel32.dll': INT=1 IAT=638 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'user32.dll': INT=1 IAT=637 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'user32.dll': INT=13 IAT=636 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'msimg32.dll': INT=2 IAT=623 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'kernel32.dll': INT=8 IAT=621 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'advapi32.dll': INT=1 IAT=613 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'rpcrt4.dll': INT=1 IAT=612 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'windowscodecs.dll': INT=1 IAT=611 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'shell32.dll': INT=1 IAT=610 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'uxtheme.dll': INT=11 IAT=609 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'imm32.dll': INT=9 IAT=598 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'DWMAPI.DLL': INT=6 IAT=589 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'Shcore.dll': INT=3 IAT=583 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'Crypt32.dll': INT=11 IAT=580 (DelayImportDescriptor)  
+WARN  Delay-load INT/IAT import count mismatch for 'kernel32.dll': INT=1 IAT=2 (DelayImportDescriptor)  
+INFO  Additional info:
+Loading file:///workspace/reverse-engineering/input/cprs/CPRSChart.exe?MD5=c17ba56a88a2fcd71abe6a9f50cce788...
+------------------------------------------------
+
+Searching 8 paths for library ADVAPI32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library BORLNDMM.DLL...
+Loading file:///workspace/reverse-engineering/input/cprs/borlndmm.dll?MD5=7f2c51ab9b76afbcc1680f496e18a730...
+Created exports file: /workspace/reverse-engineering/.ghidra-settings/agent-ghidra/ghidra_12.2_PUBLIC/symbols/win32/borlndmm.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 8 paths for library COMCTL32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library COMDLG32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library CRYPT32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library CRYPTUI.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library DWMAPI.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library GDI32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library GDIPLUS.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library IMM32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library KERNEL32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library MSIMG32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library MSVCRT.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library OLE32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library OLEAUT32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library RPCRT4.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library SECUR32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library SHCORE.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library SHELL32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library SHFOLDER.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library SHLWAPI.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library USER32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library UXTHEME.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library VERSION.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library WINDOWSCODECS.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library WINHTTP.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library WINSCARD.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library WINSPOOL.DRV...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library WS2_32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library WSOCK32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library WTSAPI32.DLL...
+Library not found.
+------------------------------------------------
+
+Applying cached symbols from BORLNDMM.DLL
+Linking the External Programs of 'CPRSChart.exe' to imported libraries...
+  [BORLNDMM.DLL] -> not found in project
+  [SHLWAPI.DLL] -> not found in project
+  [WINSPOOL.DRV] -> not found in project
+  [COMDLG32.DLL] -> not found in project
+  [COMCTL32.DLL] -> not found in project
+  [SHELL32.DLL] -> not found in project
+  [WS2_32.DLL] -> not found in project
+  [USER32.DLL] -> not found in project
+  [VERSION.DLL] -> not found in project
+  [OLEAUT32.DLL] -> not found in project
+  [WTSAPI32.DLL] -> not found in project
+  [ADVAPI32.DLL] -> not found in project
+  [MSVCRT.DLL] -> not found in project
+  [WINHTTP.DLL] -> not found in project
+  [CRYPTUI.DLL] -> not found in project
+  [KERNEL32.DLL] -> not found in project
+  [SHFOLDER.DLL] -> not found in project
+  [WSOCK32.DLL] -> not found in project
+  [CRYPT32.DLL] -> not found in project
+  [OLE32.DLL] -> not found in project
+  [WINSCARD.DLL] -> not found in project
+  [SECUR32.DLL] -> not found in project
+  [GDI32.DLL] -> not found in project
+  [MSIMG32.DLL] -> not found in project
+  [RPCRT4.DLL] -> not found in project
+  [WINDOWSCODECS.DLL] -> not found in project
+  [UXTHEME.DLL] -> not found in project
+  [IMM32.DLL] -> not found in project
+  [DWMAPI.DLL] -> not found in project
+  [SHCORE.DLL] -> not found in project
+  [GDIPLUS.DLL] -> not found in project
+------------------------------------------------
+
+ (ProgramLoader)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: ImportChartMap.java '/workspace/cprs-exploration/analysis/inventory/chart-symbols.tsv'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /workspace/reverse-engineering/scripts/ImportChartMap.java (HeadlessAnalyzer)  
+INFO  ImportChartMap.java> CPRS_MAP imported=65610 failures=0 seeded_functions=41 (GhidraScript)  
+INFO  ANALYZING all memory and code: file:///workspace/reverse-engineering/input/cprs/CPRSChart.exe (HeadlessAnalyzer)  
+WARN  Ignoring leading '_' chars on no-return name '___raise_securityfailure' specified in file: /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn (NoReturnFunctionAnalyzer)  
+WARN  Ignoring leading '_' chars on no-return name '___report_rangecheckfailure' specified in file: /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn (NoReturnFunctionAnalyzer)  
+INFO  Unable to find DWARF information, skipping DWARF analysis (DWARFAnalyzer)  
+INFO  Skipping PDB processing: missing PDB information in program metadata (PdbUniversalAnalyzer)  
+ERROR Invalid PNG data at 0122e251 (PngDataType)  
+ERROR Invalid PNG data at 012352f8 (PngDataType)  
+INFO  hit non-returning function, restarting decompiler switch analyzer later (DecompilerSwitchAnalyzer)  
+INFO  hit non-returning function, restarting decompiler switch analyzer later (DecompilerSwitchAnalyzer)  
+WARN  Decompiling 0077c050: Unable to read bytes at ram:24448b66 (DecompileCallback)  
+WARN  Decompiling 0042a428: Unable to read bytes at ram:6f547210 (DecompileCallback)  
+INFO  Packed database cache: /workspace/reverse-engineering/.cache/agent-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: windows_vs12_32 (ApplyDataArchiveAnalyzer)  
+WARN  Decompiling 008de028, pcode error at 41008de0: Could not follow disassembly flow into non-existing memory at 41008de0 (DecompileCallback)  
+ERROR Abort due to Headless analyzer error: Java heap space (HeadlessAnalyzer) java.lang.OutOfMemoryError: Java heap space
+	at ghidra.util.datastruct.RedBlackTree.getOrCreateEntry(RedBlackTree.java:152)
+	at ghidra.program.model.address.AddressSet.createRangeNode(AddressSet.java:1154)
+	at ghidra.program.model.address.AddressSet.add(AddressSet.java:149)
+	at ghidra.program.model.address.AddressSet.add(AddressSet.java:113)
+	at ghidra.program.model.address.AddressSet.deleteSets(AddressSet.java:1002)
+	at ghidra.program.model.address.AddressSet.subtract(AddressSet.java:525)
+	at ghidra.app.plugin.core.disassembler.AddressTableAnalyzer.added(AddressTableAnalyzer.java:203)
+	at ghidra.app.plugin.core.analysis.OneShotAnalysisCommand.applyTo(OneShotAnalysisCommand.java:50)
+	at ghidra.app.plugin.core.analysis.OneShotAnalysisCommand.applyTo(OneShotAnalysisCommand.java:30)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager$AnalysisTaskWrapper.run(AutoAnalysisManager.java:661)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager.startAnalysis(AutoAnalysisManager.java:761)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager.startAnalysis(AutoAnalysisManager.java:640)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager.startAnalysis(AutoAnalysisManager.java:605)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1073)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileWithImport(HeadlessAnalyzer.java:1606)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processWithLoader(HeadlessAnalyzer.java:1770)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processWithImport(HeadlessAnalyzer.java:1705)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processWithImport(HeadlessAnalyzer.java:1795)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:464)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:211)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:41)
+ 

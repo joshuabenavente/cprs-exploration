@@ -1,0 +1,177 @@
+{
+  "class": "TfraEditGridBase",
+  "name": "fraEditGridBase",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 674,
+    "Height": 337,
+    "Color": "clWindow",
+    "ParentBackground": false,
+    "ParentColor": false,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TScrollBox",
+      "name": "ScrollBox1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 674,
+        "Height": 337,
+        "Align": "alClient",
+        "TabOrder": 0,
+        "OnMouseWheel": "ScrollBox1MouseWheel"
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlForm",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 670,
+            "Height": 330,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "ParentColor": true,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TGridPanel",
+              "name": "grdEditPanel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 670,
+                "Height": 281,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "ColumnCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80440"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80440"
+                      }
+                    }
+                  }
+                ],
+                "ControlCollection": [],
+                "ParentColor": true,
+                "RowCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80440"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80440"
+                      }
+                    }
+                  }
+                ],
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlButtons",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 281,
+                "Width": 670,
+                "Height": 49,
+                "Align": "alBottom",
+                "BevelOuter": "bvNone",
+                "TabOrder": 1,
+                "DesignSize": [
+                  670,
+                  49
+                ]
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnSave",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 568,
+                    "Top": 16,
+                    "Width": 75,
+                    "Height": 25,
+                    "Anchors": [
+                      "akTop",
+                      "akRight"
+                    ],
+                    "Caption": "Save",
+                    "TabOrder": 0,
+                    "TabStop": false,
+                    "OnClick": "btnSaveClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnCancel",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 464,
+                    "Top": 16,
+                    "Width": 75,
+                    "Height": 25,
+                    "Anchors": [
+                      "akTop",
+                      "akRight"
+                    ],
+                    "Caption": "Cancel",
+                    "TabOrder": 1,
+                    "TabStop": false,
+                    "OnClick": "btnCancelClick"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

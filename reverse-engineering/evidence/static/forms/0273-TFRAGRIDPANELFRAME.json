@@ -1,0 +1,253 @@
+{
+  "class": "TfraGridPanelFrame",
+  "name": "fraGridPanelFrame",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "AlignWithMargins": true,
+    "Left": 0,
+    "Top": 0,
+    "Width": 505,
+    "Height": 385,
+    "Margins.Left": 2,
+    "Margins.Top": 2,
+    "Margins.Right": 2,
+    "Margins.Bottom": 2,
+    "DoubleBuffered": true,
+    "ParentDoubleBuffered": false,
+    "PopupMenu": "pmn",
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 505,
+        "Height": 385,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ParentBackground": false,
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlHeader",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 499,
+            "Height": 25,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlHeader",
+            "DoubleBuffered": true,
+            "ParentColor": true,
+            "ParentDoubleBuffered": false,
+            "ShowCaption": false,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblTitle",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 28,
+                "Top": 3,
+                "Width": 443,
+                "Height": 19,
+                "Align": "alClient",
+                "Caption": "lblTitle",
+                "Layout": "tlCenter",
+                "ExplicitWidth": 30,
+                "ExplicitHeight": 13
+              },
+              "children": []
+            },
+            {
+              "class": "TSpeedButton",
+              "name": "sbtnExpandCollapse",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 19,
+                "Height": 19,
+                "Align": "alLeft",
+                "Flat": true,
+                "Visible": false,
+                "ExplicitLeft": 288,
+                "ExplicitTop": 8,
+                "ExplicitHeight": 22
+              },
+              "children": []
+            },
+            {
+              "class": "TSpeedButton",
+              "name": "sbtnRefresh",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 477,
+                "Top": 3,
+                "Width": 19,
+                "Height": 19,
+                "Align": "alRight",
+                "Flat": true,
+                "Visible": false,
+                "ExplicitLeft": 473
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlWorkspace",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 34,
+            "Top": 33,
+            "Width": 469,
+            "Height": 350,
+            "Margins.Left": 2,
+            "Margins.Top": 2,
+            "Margins.Right": 2,
+            "Margins.Bottom": 2,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlWorkspace",
+            "DoubleBuffered": true,
+            "ParentBackground": false,
+            "ParentColor": true,
+            "ParentDoubleBuffered": false,
+            "ShowCaption": false,
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlVertHeader",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 31,
+            "Width": 32,
+            "Height": 354,
+            "Align": "alLeft",
+            "BevelOuter": "bvNone",
+            "TabOrder": 2,
+            "Visible": false
+          },
+          "children": [
+            {
+              "class": "TImage",
+              "name": "img",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 32,
+                "Height": 354,
+                "Align": "alClient",
+                "ExplicitTop": 31
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "pmn",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 232,
+        "Top": 56
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "pmnExpandCollapse",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Expand/Collapse"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "pmnRefresh",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Refresh"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "pmnCustomize",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Customize ..."
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "pmnShowError",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Show Error ...",
+            "Visible": false
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "class": "TfrmAutoResize",
+  "name": "frmAutoResize",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 276,
+    "Top": 383,
+    "Caption": "Basic Auto-Resize Page",
+    "OnDestroy": "FormDestroy",
+    "OnResize": "FormResize",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = frmAutoResize",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

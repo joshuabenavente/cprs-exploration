@@ -1,0 +1,1837 @@
+[
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/vmt.json",
+    "copy": "reference-input/analysis/active-medications/vmt.json",
+    "sha256": "1d3fea8047511b75d815cebf25e9246c720521245a1684faef46bbe566366005"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/vmt.json",
+    "copy": "reference-input/analysis/appointments/vmt.json",
+    "sha256": "29950c3cf9deb4e25b1a3901d0f5623e532c8ad63cb3094f0d7d66d2ab1b6271"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallBroker_009af1ec.asm",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallBroker_009af1ec.asm",
+    "sha256": "a288fb230e0f9dbd7c0897fc6a059878fb7155b4430d77508e31b8453eff4591"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallBroker_009af1ec.c",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallBroker_009af1ec.c",
+    "sha256": "1703d4467a74be310dd7853f1429e3276365e17b691420877ebf00360b7f8e25"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad778.asm",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad778.asm",
+    "sha256": "7e597d46c55e000d7fb38bbfb037a11cc760c1bea5f1c1ce4e4e951d87b7fb38"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad778.c",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad778.c",
+    "sha256": "3d86efc85ad5750be130bf669411e0210f7e5a5a362cd3a010808506afbe7ae0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad7ec.asm",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad7ec.asm",
+    "sha256": "fd1952845e6a93e6a89e6507c138d22b29edf37d6736431317af74090ca4a041"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad7ec.c",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad7ec.c",
+    "sha256": "c1f27c1e85f4d417e0b5ce2b05344d67cd6e044020ee177eb2f05250ef23fef4"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad864.asm",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad864.asm",
+    "sha256": "0ad31f5dbe54df0076f4963d77be1315b7773f0baf59f5dcd9f6a1480eaecb0c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad864.c",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad864.c",
+    "sha256": "f68697a68411802333aaef02c64b5a071cd387cb308562c5515f160da366807d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad880.asm",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad880.asm",
+    "sha256": "418b52a4da6c24d2b1b9f132548b10691a3b4850903268785adc15ed1867d8cb"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad880.c",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad880.c",
+    "sha256": "1e3cb0373d150c19b4ab8d799aba1ec45a4c9be93c72f464d2a57401e04c8db0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad900.asm",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad900.asm",
+    "sha256": "88d4007b4d4626642a84862bab9a16999de69c378cc0d75db08abdc29b07730d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad900.c",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad900.c",
+    "sha256": "9ed7d584e5208dfc49a7b3bea258525e10822a996479d8e4c4a2d69821e1719f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad924.asm",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad924.asm",
+    "sha256": "c84781d08848e5084d3b7d0b050c5a151a12c382320aaf2362bbfdf815f95325"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ad924.c",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ad924.c",
+    "sha256": "c8ebe1d96f16158243329729800f2d5922ab66590da53d75881f743c91e1d08d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ada1c.asm",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ada1c.asm",
+    "sha256": "1e1cc741100a78fb21462522d050c70dfac0920c6b2c91325c50381ef9bda09b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ada1c.c",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ada1c.c",
+    "sha256": "3e78be4518c4fe253f96f473b54cd375685c44e21b5b7841e93bb4a23f2db56b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ada80.asm",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ada80.asm",
+    "sha256": "54fc46db242623e74a69d0727a1a22e538230f78518c85e66862fb1beab81110"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/ORNet.CallVistA_009ada80.c",
+    "copy": "reference-input/analysis/decompiled/ORNet.CallVistA_009ada80.c",
+    "sha256": "ca09ac27d1a9ebb9cb973d51b8e8d23f19b6efc822295e192e1e64f64949c96f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/Trpcb.TRPCBroker.Call_0099f884.asm",
+    "copy": "reference-input/analysis/decompiled/Trpcb.TRPCBroker.Call_0099f884.asm",
+    "sha256": "5c3b6a25f84e04cc661d75e6a67a9335b6cb1fcc4076c35802b0fc1404bf9bd2"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/Trpcb.TRPCBroker.Call_0099f884.c",
+    "copy": "reference-input/analysis/decompiled/Trpcb.TRPCBroker.Call_0099f884.c",
+    "sha256": "452177446c8c8e4f334725f13f55f890846e50b8c9eca48440090483e84a458d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.AllowContextChangeAll_00fecc4c.asm",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.AllowContextChangeAll_00fecc4c.asm",
+    "sha256": "85759149f7c319452c967c6a732484909f29dccae1224b09c47ba43d7a3e8981"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.AllowContextChangeAll_00fecc4c.c",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.AllowContextChangeAll_00fecc4c.c",
+    "sha256": "319f916ec9248768895fa1399e0c53aba32c62969de597ea09f82c65e9169bb7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.FormCreate_00fee504.asm",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.FormCreate_00fee504.asm",
+    "sha256": "fe89de9860523d09cd1b91e68f4a8274d82ac648a6da2d0b9927282ccdcddb16"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.FormCreate_00fee504.c",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.FormCreate_00fee504.c",
+    "sha256": "63be76fffdc44af9724d5fc8f1d325956d51f861ad2ccb2ef497c2652303a758"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.SetActiveTab_01004578.asm",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.SetActiveTab_01004578.asm",
+    "sha256": "6f52605c2a279cbe73acc57fbdc9d502e4e64756b100141bccac101698d56be5"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.SetActiveTab_01004578.c",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.SetActiveTab_01004578.c",
+    "sha256": "4ff7e4c0efcb5743576b42eec336e0943365b2f2bf835c2154722d9c14c056b3"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.SetupPatient_00ff1f14.asm",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.SetupPatient_00ff1f14.asm",
+    "sha256": "e29ed264b27463c9cd8c0fc0831190d7d11f392054f9f3c11b83c1e7198b042e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.SetupPatient_00ff1f14.c",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.SetupPatient_00ff1f14.c",
+    "sha256": "9ba94e3f3fe3536ce6ee128a657a16a6727c8947649312ee14f1dea9c15786fb"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.SetupPtInfoPanel_00ff2f08.asm",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.SetupPtInfoPanel_00ff2f08.asm",
+    "sha256": "ea2c25f17abefec2a68f9c54debdffdd89d4847bd84f1dc70fe669f359e64a0f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.SetupPtInfoPanel_00ff2f08.c",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.SetupPtInfoPanel_00ff2f08.c",
+    "sha256": "c1dbe3e706bff24f6abaa5ea78f77527bb164e3eabab89161a1489b1a28dd4e8"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.mnuFileOpenClick_00ff4658.asm",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.mnuFileOpenClick_00ff4658.asm",
+    "sha256": "7f45551b1e116007462bb1f9cb611f3ceae935e1fc179a2203008d98d5774c54"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.mnuFileOpenClick_00ff4658.c",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.mnuFileOpenClick_00ff4658.c",
+    "sha256": "9db5118923ec75cfdd36eeb042d3025ee812b8b5537cd3b756dbec5cebed70f7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.tabPageChange_00ff1ae8.asm",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.tabPageChange_00ff1ae8.asm",
+    "sha256": "06230ef43474f6c17a702cde1edf77bd0fa111ecf92ddc1fb756e1e5012c0d8f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fFrame.TfrmFrame.tabPageChange_00ff1ae8.c",
+    "copy": "reference-input/analysis/decompiled/fFrame.TfrmFrame.tabPageChange_00ff1ae8.c",
+    "sha256": "90bc22ece5a8d05c0bf401054285b417f1cbbacf623fec3ec5af79178453f707"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.SelectPatient_00e81038.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.SelectPatient_00e81038.asm",
+    "sha256": "e6e19716d07ca757fff9a92cfeb96fc0e4bcaa52d43323f3ee864ad533ca72c5"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.SelectPatient_00e81038.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.SelectPatient_00e81038.c",
+    "sha256": "6817e74e91f912ea9686a2ee6c35276d5c5dd3c252410e1d1e25c55770a87045"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.ShowMatchingPatients_00e82498.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.ShowMatchingPatients_00e82498.asm",
+    "sha256": "8e7bb0f676914e14d986a97d55272398bcb838e410d2b17ac57d6b8dea9bc7a4"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.ShowMatchingPatients_00e82498.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.ShowMatchingPatients_00e82498.c",
+    "sha256": "12eb7171bbdfa59e34d6bee444381c9799098cae29d138a3912fff94bfe5b1ae"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.FormCloseQuery_00e85bec.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.FormCloseQuery_00e85bec.asm",
+    "sha256": "28781e18ec8ac22d1b98126b26f1be88eee2f8a701a9a8a49b6e5b6a33757de9"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.FormCloseQuery_00e85bec.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.FormCloseQuery_00e85bec.c",
+    "sha256": "620dd23e15a9da20c732cf3360ca097e445e14031a677374125dadd09695f0a0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.FormCreate_00e85c08.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.FormCreate_00e85c08.asm",
+    "sha256": "9436ef1dac120e5785474df4eb6d26f923ef45da6832208c5d961aab892956e3"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.FormCreate_00e85c08.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.FormCreate_00e85c08.c",
+    "sha256": "57f56292c98a83dace1a547c28f40f425fa9ac277d741968b4f56b9fc241bd0e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.FormShow_00e87450.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.FormShow_00e87450.asm",
+    "sha256": "04e2e14448ebb6d4fe92fcde47a22ef90164bf5540ebff07f7192606db9e1e2a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.FormShow_00e87450.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.FormShow_00e87450.c",
+    "sha256": "039822fde6e60795f119f720fb80e2904618075e622556f0628f9be2b088fb33"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.SelectPtByDFN_00e8303c.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.SelectPtByDFN_00e8303c.asm",
+    "sha256": "4d8c0f03982fbb5a601bf41a9819dd8ea6a7bd408e29c78ed5aefed23eaaef30"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.SelectPtByDFN_00e8303c.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.SelectPtByDFN_00e8303c.c",
+    "sha256": "817d0792cba275cc8961986937e2ce4fe2832b1485d9024d2817bf8adeb951d2"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.asmboPatientChange_00e825c4.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.asmboPatientChange_00e825c4.asm",
+    "sha256": "625bae8c32257fc6bed8d9cc16a8284657a44c075cf182c21fdfefc6bf8a1f23"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.asmboPatientDblClick_00e82908.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.asmboPatientDblClick_00e82908.asm",
+    "sha256": "5c61b8e7c78f52b5107c11241c20d915a5acead080bb0f67e222dba6bb86441e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.asmboPatientKeyPause_00e827a0.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.asmboPatientKeyPause_00e827a0.asm",
+    "sha256": "834a65f806cbb6c882444cd12ca238b0884d239504c90423924dc33167624fa2"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.asmboPatientNeedData_00e82980.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.asmboPatientNeedData_00e82980.asm",
+    "sha256": "0528c29baf455e1e6c6ebc1583592e66eb501640b0a2e812ab92ed7f935b5c5b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.asmmdCancelClick_00e8352c.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.asmmdCancelClick_00e8352c.asm",
+    "sha256": "508c306a7c30cc7f6a297e5a4bddeb781a9f96ec86c52aac7ec58bed4be66b97"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.asmmdOKClick_00e82d44.asm",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.asmmdOKClick_00e82d44.asm",
+    "sha256": "d16d75a0ffab1e8a14f76fec7545288a0b1a9bc86011abc1431e838117bf1716"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.cboPatientChange_00e825c4.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.cboPatientChange_00e825c4.c",
+    "sha256": "32efeb8e161897ae5db02034f5e1e30b14f595027da318075b3c71c0b53b5478"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.cboPatientDblClick_00e82908.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.cboPatientDblClick_00e82908.c",
+    "sha256": "ef2ea3f566d9b966b0acd8517358f393e2659106510cf4723fc8c265c938db59"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.cboPatientKeyPause_00e827a0.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.cboPatientKeyPause_00e827a0.c",
+    "sha256": "29f07f2cc27f1ba569cf135819a36128b1e53cd9198a6241db6894f4c3a29b63"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.cboPatientNeedData_00e82980.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.cboPatientNeedData_00e82980.c",
+    "sha256": "ebc86249a17513df107fa6c1aa3ebc18bfee35754db186e99711be7f87f1bcbd"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.cmdCancelClick_00e8352c.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.cmdCancelClick_00e8352c.c",
+    "sha256": "5ca6031b4bad7bb03e37506b58ecced7459a151779d579ec6e68dda3f90be6ed"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/fPtSel.TfrmPtSel.cmdOKClick_00e82d44.c",
+    "copy": "reference-input/analysis/decompiled/fPtSel.TfrmPtSel.cmdOKClick_00e82d44.c",
+    "sha256": "61e21d563d363352ecdac2b0dd54b022557fc7803682cff20a9c0660e8fa2e90"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/program.txt",
+    "copy": "reference-input/analysis/decompiled/program.txt",
+    "sha256": "977317b0cdb5946dcd3b6d7c07331e9b25475078868b8271ddf4cc1d765a8739"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.CheckSensitiveRecordAccess_011ce0fc.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.CheckSensitiveRecordAccess_011ce0fc.asm",
+    "sha256": "82786b4b6c494f3ddc0237df796265287ba98fbe53f57b7be05545658a635788"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.CheckSensitiveRecordAccess_011ce0fc.c",
+    "copy": "reference-input/analysis/decompiled/rCore.CheckSensitiveRecordAccess_011ce0fc.c",
+    "sha256": "59862c369db2771e769227f05d28c5029c568680e901fc01cff44d7e920790c2"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.GetPtIDInfo_011ce3e4.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.GetPtIDInfo_011ce3e4.asm",
+    "sha256": "167558dcbd10525b42fae5daa78c732cd94964992d92fb892d7c9efa0d0891d5"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.GetPtIDInfo_011ce3e4.c",
+    "copy": "reference-input/analysis/decompiled/rCore.GetPtIDInfo_011ce3e4.c",
+    "sha256": "f5c50b6de30d5b32db5927567a750b1cebd003b70438a03e5fda9dd709483db4"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtByFullSSN_011cd988.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtByFullSSN_011cd988.asm",
+    "sha256": "b7f8a37f0882f45af94bc2d2e28b817aa4b5314a78d8817987c70e1fb8c97413"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtByFullSSN_011cd988.c",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtByFullSSN_011cd988.c",
+    "sha256": "af68b0c01dee9babdf65131b54932c96dfccd9ea69be0cb9030a8aa25d9a11dd"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtByLast5_011cd5e0.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtByLast5_011cd5e0.asm",
+    "sha256": "f34c79d69f60336a490c927c2f83ee40caa72be7c87e2a8b3ddab67a54a41741"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtByLast5_011cd5e0.c",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtByLast5_011cd5e0.c",
+    "sha256": "40832d4d0b5db00b030db744d474ce24ce4d70e9f4a52ef1e315c1e5b32f5d1e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtByRPLFullSSN_011cdbf0.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtByRPLFullSSN_011cdbf0.asm",
+    "sha256": "49e868ea0ac1f90bbc9395287dc64931c67d9d75f9439a68af1cb7d27f9761cd"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtByRPLFullSSN_011cdbf0.c",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtByRPLFullSSN_011cdbf0.c",
+    "sha256": "d582baf75f00c5b3590de07a25edb270ea64cf584533afde1582e6a20b125a4f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtByRPLLast5_011cd7b0.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtByRPLLast5_011cd7b0.asm",
+    "sha256": "2df6a9b2805cd717049bd9f9b16d3eed39347232b77aabb1a718b69e7e71e85d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtByRPLLast5_011cd7b0.c",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtByRPLLast5_011cd7b0.c",
+    "sha256": "3968d592f9f8b1b54dbe7d03b8a76e2361a531ae87aa6e450a7a598167d3841b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtTop_011cde60.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtTop_011cde60.asm",
+    "sha256": "db7542b4806c01e856057279e154265eb9f3acf31b05ad139c7f6cfe4da50cc0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.ListPtTop_011cde60.c",
+    "copy": "reference-input/analysis/decompiled/rCore.ListPtTop_011cde60.c",
+    "sha256": "0557ffc2cd7192abfdcaa4a958e375f899f29935af4129519e5f48cd4e2c5902"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.SelectPatient_011cec4c.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.SelectPatient_011cec4c.asm",
+    "sha256": "25799ee88b8510a1afe5b4b1c3b138eeb2613d08f9f01adb1ada2c5332893fba"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.SelectPatient_011cec4c.c",
+    "copy": "reference-input/analysis/decompiled/rCore.SelectPatient_011cec4c.c",
+    "sha256": "ad5dc74f5cdfcfcccabba15b56e0fbd523a27d99414041544839263f9b4866ee"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.setRPLPtList_011cdfb4.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.setRPLPtList_011cdfb4.asm",
+    "sha256": "8b92783ca754381cef059e423d286b58dccd287e3787209f3fd8d65ded39ccfb"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.setRPLPtList_011cdfb4.c",
+    "copy": "reference-input/analysis/decompiled/rCore.setRPLPtList_011cdfb4.c",
+    "sha256": "bb845600bef37763bd82ff2d53f4b145d8e7184201dee70a9ed646a61744d1c5"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.setSubSetOfPatients_011cdeb0.asm",
+    "copy": "reference-input/analysis/decompiled/rCore.setSubSetOfPatients_011cdeb0.asm",
+    "sha256": "3bc0efaea584e6e5d7180539b81e57359919688c4943871dbe14547e2e57671d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/rCore.setSubSetOfPatients_011cdeb0.c",
+    "copy": "reference-input/analysis/decompiled/rCore.setSubSetOfPatients_011cdeb0.c",
+    "sha256": "c406928d561c8eae0a94df7a6e25683f0dfbf46aaabe8e2da5e02d5902e68745"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/uCore.AllowAccessToSensitivePatient_011d3630.asm",
+    "copy": "reference-input/analysis/decompiled/uCore.AllowAccessToSensitivePatient_011d3630.asm",
+    "sha256": "2d348a704e4ea5c65990044a72456a35598c823a9ecef3d8e0f6144e2e8b647d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/uCore.AllowAccessToSensitivePatient_011d3630.c",
+    "copy": "reference-input/analysis/decompiled/uCore.AllowAccessToSensitivePatient_011d3630.c",
+    "sha256": "cfa1722632e6a227f408937beb7c76f699822b7f6c03fdf5d015e0b3cd983a2c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/uCore.TPatient.SetDFN_011d4918.asm",
+    "copy": "reference-input/analysis/decompiled/uCore.TPatient.SetDFN_011d4918.asm",
+    "sha256": "b52a660ccece3ab45e8b7ded760f86dd57877cf94b44b373333591745cd648e1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/uCore.TPatient.SetDFN_011d4918.c",
+    "copy": "reference-input/analysis/decompiled/uCore.TPatient.SetDFN_011d4918.c",
+    "sha256": "a331fa0b0bc150212bca22bf081201642113e998ba16289324677bc8c418310f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/workflow-calls.tsv",
+    "copy": "reference-input/analysis/decompiled/workflow-calls.tsv",
+    "sha256": "1edd1440ae9b127a79ba2393008e572094aab5291ad1f2dfec4829966e08e64d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/decompiled/workflow-functions.tsv",
+    "copy": "reference-input/analysis/decompiled/workflow-functions.tsv",
+    "sha256": "6b5412832ca419fe38c4fdb4a8c8d1ccdbf15af2e18ddd7cc0fcf6ed4f369916"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/resolved/workflow-evidence.json",
+    "copy": "reference-input/analysis/resolved/workflow-evidence.json",
+    "sha256": "fd1f2291acb1fd2c418959e9a55fa21135ba7fc5f2e594f69de2b0597146dbda"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/vmt.json",
+    "copy": "reference-input/analysis/vitals/vmt.json",
+    "sha256": "058bb1e0966ca53b1ec774f13fd9904c6af32e6d8ef443b398cefdf835d13c96"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.asm",
+    "sha256": "5a64ebe51480190649742ef0007bf413562143920041626201e6dfa63e9fa984"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.c",
+    "sha256": "d8c7a6d79401402f90a9d20379078bb05355b7fae0dbe00447f716eea70210d8"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+    "sha256": "a43275faabdac30d7fdec38bb40f941d343673c10d30e8d71c206e9cd2d27a48"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "sha256": "9a3f32fa63bade7fd504de07fa77166d905236e81867c2e762f15b5603bbf880"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.asm",
+    "sha256": "a17c742bba101ff6c3d843668d24a77860bf8cb047920bc1b098cb76e7b8d97b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+    "sha256": "a2613c02740b86066b326bc4c0b861187407c9f70b6e42ab1923242e9ca86dfe"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+    "sha256": "3be0636ad917bbd4bd209cee17826773f81478e0eca84f3a61d3de4d60925343"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "sha256": "614d7776e525660f24f1435ea8b8cc97e62c9e984d60faad48336491b1a19966"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+    "sha256": "338662ac108718431dd5603ecf317fdf9e1d5fad1885096c64b5d854d59e8203"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "sha256": "0519ad45920fd7dacf4bfe84f5654985f9ce9136d774618595548293b3c38f31"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.asm",
+    "sha256": "f7a9756c94d5e951c8890394dfda6e6d7b3d7a61b4f78e9a3d8c12a2e40aba03"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+    "sha256": "e4c8ab27d32a4252df1fb7585cfc2498ea443f52c9b892d8609c2cb004cb37af"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.Create_00bd5e48.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.Create_00bd5e48.asm",
+    "sha256": "bc599dc725a93e3c856a0c3999b8a59fcf59d04cdb976eab63134e24feb5ef70"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.Create_00bd5e48.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.Create_00bd5e48.c",
+    "sha256": "76f9a4dc1fa82748cc71c33719588e53db54e5288136e4c5742e2343e09536be"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnAddItems_00bd5eec.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnAddItems_00bd5eec.asm",
+    "sha256": "a148752c5708481b297b50d80fb7292ab93918b865efa833cb377551929cc7d5"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnAddItems_00bd5eec.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnAddItems_00bd5eec.c",
+    "sha256": "a787921d26ef239720556b241cc4996c68841355f551fb5e582e476b123248e1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnGetDetail_00bd615c.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnGetDetail_00bd615c.asm",
+    "sha256": "37358214862f517330999bd0d0ba06032faf83a728b6230bc88d8113c060d0a5"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnGetDetail_00bd615c.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/mCoverSheetDisplayPanel_CPRS_ActiveMeds.TfraCoverSheetDisplayPanel_CPRS_ActiveMeds.OnGetDetail_00bd615c.c",
+    "sha256": "82b21dc86c0fca8a89a1117f84bf0797795fae717f3b8faea2a43e5eb657a8af"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+    "sha256": "04aa8ae9badbdfdda0e53fcb4cd3ec67da9c3aa4bdbacebca57759faebffabf9"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "sha256": "176dc76825b3b910bd71d333c5e4fa37af8dd1e738601fc6a10661c182a8c4e8"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.asm",
+    "sha256": "74e702f7512efdd6804452f1fee17f03247494e5f02bc582980c744f103b1f2c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.c",
+    "sha256": "4ff0420ddb20177d3b468abd48c3bb3015ce86f862072be8227fd13ade78fdb2"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/oCoverSheetParam_CPRS_ActiveMeds.TCoverSheetParam_CPRS_ActiveMeds.NewCoverSheetControl_00bd63d8.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/oCoverSheetParam_CPRS_ActiveMeds.TCoverSheetParam_CPRS_ActiveMeds.NewCoverSheetControl_00bd63d8.asm",
+    "sha256": "598da683918dede6ec4750fa842369dba093177e2d15fd11298b81e49d27f69d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/oCoverSheetParam_CPRS_ActiveMeds.TCoverSheetParam_CPRS_ActiveMeds.NewCoverSheetControl_00bd63d8.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/oCoverSheetParam_CPRS_ActiveMeds.TCoverSheetParam_CPRS_ActiveMeds.NewCoverSheetControl_00bd63d8.c",
+    "sha256": "51e25bad6a6eb823bb633b60772e8ef87340f5fe1915df1d374e1afd65af511d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/program.txt",
+    "copy": "reference-input/analysis/active-medications/decompiled/program.txt",
+    "sha256": "2d8875228a8503325f2124f48576b2eb8359167b70375734a41dc183e0aaf7d7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/rMeds.ExtractActiveMeds_00add94c.asm",
+    "copy": "reference-input/analysis/active-medications/decompiled/rMeds.ExtractActiveMeds_00add94c.asm",
+    "sha256": "f201a860fac8c9a8f60ef1e69e4d02a94c459461f4bc1520f41a0f4ba7b00078"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/rMeds.ExtractActiveMeds_00add94c.c",
+    "copy": "reference-input/analysis/active-medications/decompiled/rMeds.ExtractActiveMeds_00add94c.c",
+    "sha256": "ac6e8158b25e8868201dcad7836958997cde8b0eb6eb06f1a3aea971b48c8163"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/workflow-calls.tsv",
+    "copy": "reference-input/analysis/active-medications/decompiled/workflow-calls.tsv",
+    "sha256": "a2c973604ac7f4dee18de49c88ef8cbaf1a91aee57d2296e9e1c666073c9d48f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/decompiled/workflow-functions.tsv",
+    "copy": "reference-input/analysis/active-medications/decompiled/workflow-functions.tsv",
+    "sha256": "1570323b7ef0ef7f1b6815cccd3f1eafd835f442414122ba0446ceaef87ff4c3"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/active-medications/resolved/workflow-evidence.json",
+    "copy": "reference-input/analysis/active-medications/resolved/workflow-evidence.json",
+    "sha256": "5cc3ccc99a546611df4f97de2244767526426c964c9ba0d945a854312cde064a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.asm",
+    "sha256": "5a64ebe51480190649742ef0007bf413562143920041626201e6dfa63e9fa984"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.c",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.CPRSParams_00bd3824.c",
+    "sha256": "d8c7a6d79401402f90a9d20379078bb05355b7fae0dbe00447f716eea70210d8"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+    "sha256": "a43275faabdac30d7fdec38bb40f941d343673c10d30e8d71c206e9cd2d27a48"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "sha256": "9a3f32fa63bade7fd504de07fa77166d905236e81867c2e762f15b5603bbf880"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.asm",
+    "sha256": "a17c742bba101ff6c3d843668d24a77860bf8cb047920bc1b098cb76e7b8d97b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+    "sha256": "a2613c02740b86066b326bc4c0b861187407c9f70b6e42ab1923242e9ca86dfe"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+    "sha256": "3be0636ad917bbd4bd209cee17826773f81478e0eca84f3a61d3de4d60925343"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "sha256": "614d7776e525660f24f1435ea8b8cc97e62c9e984d60faad48336491b1a19966"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+    "sha256": "338662ac108718431dd5603ecf317fdf9e1d5fad1885096c64b5d854d59e8203"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "sha256": "0519ad45920fd7dacf4bfe84f5654985f9ce9136d774618595548293b3c38f31"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.asm",
+    "sha256": "f7a9756c94d5e951c8890394dfda6e6d7b3d7a61b4f78e9a3d8c12a2e40aba03"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+    "sha256": "e4c8ab27d32a4252df1fb7585cfc2498ea443f52c9b892d8609c2cb004cb37af"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.Create_00bd787c.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.Create_00bd787c.asm",
+    "sha256": "0b1e62e7eda349f2819ce3f44e31ad40ce326dd9d955f02aaea3b0169070e867"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.Create_00bd787c.c",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.Create_00bd787c.c",
+    "sha256": "a43858bb3795ecfd6933ebdd0e0149a25befc8d6ebe11359b9f7655fd5e6dc8f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems_00bd7954.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems_00bd7954.asm",
+    "sha256": "b9e41024341e60119d0db85ca65b59a07217d43c2ce5b7cf273d83232008f374"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems_00bd7954.c",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems_00bd7954.c",
+    "sha256": "49b8d5844f403b4c6f43e62794f1458adadbdb737da8289703a72789db221ce1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnGetDetail_00bd7cb8.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnGetDetail_00bd7cb8.asm",
+    "sha256": "c930f7c82fd19e3d66254c90ca029ad99990b80142e048ab9ab67648574d7af3"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnGetDetail_00bd7cb8.c",
+    "copy": "reference-input/analysis/appointments/decompiled/mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnGetDetail_00bd7cb8.c",
+    "sha256": "ae5e6b409af93db3ee1ee1db34a9f0bdb8b0a3c1c086b4b500bf9a0a9569989b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+    "sha256": "04aa8ae9badbdfdda0e53fcb4cd3ec67da9c3aa4bdbacebca57759faebffabf9"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "copy": "reference-input/analysis/appointments/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "sha256": "176dc76825b3b910bd71d333c5e4fa37af8dd1e738601fc6a10661c182a8c4e8"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.asm",
+    "sha256": "74e702f7512efdd6804452f1fee17f03247494e5f02bc582980c744f103b1f2c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.c",
+    "copy": "reference-input/analysis/appointments/decompiled/oCoverSheetParam_CPRS.TCoverSheetParam_CPRS.getDetailRPC_00bd59e0.c",
+    "sha256": "4ff0420ddb20177d3b468abd48c3bb3015ce86f862072be8227fd13ade78fdb2"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/oCoverSheetParam_CPRS_Appts.TCoverSheetParam_CPRS_Appts.NewCoverSheetControl_00bd7f30.asm",
+    "copy": "reference-input/analysis/appointments/decompiled/oCoverSheetParam_CPRS_Appts.TCoverSheetParam_CPRS_Appts.NewCoverSheetControl_00bd7f30.asm",
+    "sha256": "1eb96bfe29d5453fa72d6e282f0056c57a64d8dad2545a29d0c7c7bfc12db4ce"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/oCoverSheetParam_CPRS_Appts.TCoverSheetParam_CPRS_Appts.NewCoverSheetControl_00bd7f30.c",
+    "copy": "reference-input/analysis/appointments/decompiled/oCoverSheetParam_CPRS_Appts.TCoverSheetParam_CPRS_Appts.NewCoverSheetControl_00bd7f30.c",
+    "sha256": "c47904aa081ed927e77b2b4fdc37b16677a89766f38b1c7ce5e89c0b35683b28"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/program.txt",
+    "copy": "reference-input/analysis/appointments/decompiled/program.txt",
+    "sha256": "24b4e6f02224efc066f63f39562b9670d8d69e396331a0c0b477d053996e8ef0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/workflow-calls.tsv",
+    "copy": "reference-input/analysis/appointments/decompiled/workflow-calls.tsv",
+    "sha256": "8360472528a38f1d1cc8479b65451230cfe68b22999d84e337947c9dfef1e9c0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/decompiled/workflow-functions.tsv",
+    "copy": "reference-input/analysis/appointments/decompiled/workflow-functions.tsv",
+    "sha256": "d618f7ce37adeb6869b072a46952c708d399d5c02e463cc4b69a89b0de861b73"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/appointments/resolved/workflow-evidence.json",
+    "copy": "reference-input/analysis/appointments/resolved/workflow-evidence.json",
+    "sha256": "21ddcab4898f0c8d15cd79aff83907211481771235124b141251439fca13cf70"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.Create_00fd92b4.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.Create_00fd92b4.asm",
+    "sha256": "e3e669c756dc5d14d9238cbfc0bc0e28cb9263132092038c72d5e72b994c9e27"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.Create_00fd92b4.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.Create_00fd92b4.c",
+    "sha256": "3f41320761f26c931b79f8c690008ecb8b42216d87d9a55cd2623f4437fd1f1b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnClearPtData_00fd9450.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnClearPtData_00fd9450.asm",
+    "sha256": "43aa9970f48fa3bcf960bf8b0616220a2eb7cf8739671ed9ae844d25f1872612"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnClearPtData_00fd9450.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnClearPtData_00fd9450.c",
+    "sha256": "a58725189ef0070b609709dec1ca00fb076b857a6aa3b72b36ac7ec7e31b9a77"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnDisplayPage_00fd94a8.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnDisplayPage_00fd94a8.asm",
+    "sha256": "f7bd8fc58faccfbfb546ee4c94bcba367149401ed03fa3d92ce057abfaf1da62"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnDisplayPage_00fd94a8.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnDisplayPage_00fd94a8.c",
+    "sha256": "a7827827e837dc12e38f698628059c20196d2d04103978665b71dcaa8b011a5f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnFocusFirstControl_00fd9308.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnFocusFirstControl_00fd9308.asm",
+    "sha256": "b9841aae05d3d5e55de7c2776eb8efffadb013276695a9a5ec1affbe35c749af"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnFocusFirstControl_00fd9308.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/fCoverSheet.TfrmCoverSheet.OnFocusFirstControl_00fd9308.c",
+    "sha256": "333c9e8c6b498af1e02166386b0e8dc6bbccfceab44ca3aba6ec5ead9ed7d5b7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+    "sha256": "a43275faabdac30d7fdec38bb40f941d343673c10d30e8d71c206e9cd2d27a48"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "sha256": "9a3f32fa63bade7fd504de07fa77166d905236e81867c2e762f15b5603bbf880"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.asm",
+    "sha256": "a17c742bba101ff6c3d843668d24a77860bf8cb047920bc1b098cb76e7b8d97b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.Create_00bd34b4.c",
+    "sha256": "a2613c02740b86066b326bc4c0b861187407c9f70b6e42ab1923242e9ca86dfe"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+    "sha256": "3be0636ad917bbd4bd209cee17826773f81478e0eca84f3a61d3de4d60925343"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "sha256": "614d7776e525660f24f1435ea8b8cc97e62c9e984d60faad48336491b1a19966"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems_00bd391c.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems_00bd391c.asm",
+    "sha256": "532e641bde0526ca05233e179d2b9d24475faf582ce4e22f629634b544e7c891"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems_00bd391c.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnAddItems_00bd391c.c",
+    "sha256": "5cb67350040a782aaf35831be07759867ac32fe3591bcf1135f8f9330decf645"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+    "sha256": "338662ac108718431dd5603ecf317fdf9e1d5fad1885096c64b5d854d59e8203"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "sha256": "0519ad45920fd7dacf4bfe84f5654985f9ce9136d774618595548293b3c38f31"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnGetDetail_00bd3dd8.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnGetDetail_00bd3dd8.asm",
+    "sha256": "80ada137908e47168d1e147ade532692911bd43494fa8307233b74a551dfcd71"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnGetDetail_00bd3dd8.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnGetDetail_00bd3dd8.c",
+    "sha256": "29d94359c179090b7a13d51c7badef8bf7da6a5929f69b30b0b02b811f0723ab"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.asm",
+    "sha256": "f7a9756c94d5e951c8890394dfda6e6d7b3d7a61b4f78e9a3d8c12a2e40aba03"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail_00bd4908.c",
+    "sha256": "e4c8ab27d32a4252df1fb7585cfc2498ea443f52c9b892d8609c2cb004cb37af"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataKeyDown_00bd4180.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataKeyDown_00bd4180.asm",
+    "sha256": "176a576775d3e18bbd1767adadfc4b88821e62dee672ee1e61ffb8e2f572bc35"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataKeyDown_00bd4180.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataKeyDown_00bd4180.c",
+    "sha256": "3eba76006310997f01a3852fafbeb785a87c371ca372ef0f18f26cfb967010cc"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataMouseDown_00bd4384.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataMouseDown_00bd4384.asm",
+    "sha256": "9c5bdb64656161c581df9f75579213c2ecaf43005bfcc8a3d7510be21c204205"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataMouseDown_00bd4384.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataMouseDown_00bd4384.c",
+    "sha256": "1fe47c792d59b58cb7939d9f3a0eb556a4aae7bccaaefa055594c82f78adf1c6"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataSelectItem_00bd43c4.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataSelectItem_00bd43c4.asm",
+    "sha256": "7c86972cb0b0ebe4eb1377ff1bdbef65de4f34319a2a6a0cd707895a318c150c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataSelectItem_00bd43c4.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.lvDataSelectItem_00bd43c4.c",
+    "sha256": "f603bfe5931d99e01a62911db8d44b2ec0cb4a80b8c715155b53369184e1f579"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create_00bd67fc.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create_00bd67fc.asm",
+    "sha256": "9f625272765cb0965062ddf761c140ce6e8a7e8849995bc5b1a7ecdf37892b3e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create_00bd67fc.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.Create_00bd67fc.c",
+    "sha256": "835bc239c6c34f31f86f637494515874ba31145bec8688068c326f8dcc8c2cbb"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems_00bd6b7c.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems_00bd6b7c.asm",
+    "sha256": "ffb657e79c3ff44f2522fa19b687ba76755e45ba34597ee332077f303ffa870e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems_00bd6b7c.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnAddItems_00bd6b7c.c",
+    "sha256": "bf27a70c0c4c9353ca7e835bcad2077480013508618946dc0a82c21616d2e697"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnGetDetail_00bd6d88.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnGetDetail_00bd6d88.asm",
+    "sha256": "f604dc553632318ac1665d1670216c54a8099c6fa7b307cdea853b9cc63be608"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnGetDetail_00bd6d88.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_Allergies.TfraCoverSheetDisplayPanel_CPRS_Allergies.OnGetDetail_00bd6d88.c",
+    "sha256": "d62d0484b286fb76fe29667d0c7789736390e307c185ebc72f7490a0c0133cbb"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create_00bda47c.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create_00bda47c.asm",
+    "sha256": "45d9b3745448af3c423ae79eed2f28780675d186463a15902966fcd23d5b37fd"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create_00bda47c.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.Create_00bda47c.c",
+    "sha256": "a8134ee656b2c5694b45e1c01b00ccb3837c8f670fa8a8451ef7e1458b11e7f1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail_00bda4f8.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail_00bda4f8.asm",
+    "sha256": "55d98b018992994d27e2324425eb7f59fb2696c31bce479e2f2b456f537cf2e7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail_00bda4f8.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/mCoverSheetDisplayPanel_CPRS_ProblemList.TfraCoverSheetDisplayPanel_CPRS_ProblemList.OnGetDetail_00bda4f8.c",
+    "sha256": "2459f073ee0324db214bc4b79af8ce22d52d0ab9b751b84e65598f289e191452"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.Create_00bee1d8.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.Create_00bee1d8.asm",
+    "sha256": "e8f37302caffb0d5a7c74f66d689ac70b730abae9c257202f1db0e61096caf0c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.Create_00bee1d8.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.Create_00bee1d8.c",
+    "sha256": "9b2c99dd50a105d94412ad51d51bb38d12dece5d469f269fa3a147b01a52a969"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+    "sha256": "04aa8ae9badbdfdda0e53fcb4cd3ec67da9c3aa4bdbacebca57759faebffabf9"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "sha256": "176dc76825b3b910bd71d333c5e4fa37af8dd1e738601fc6a10661c182a8c4e8"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnDisplay_00bee478.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnDisplay_00bee478.asm",
+    "sha256": "23e2023e48dc423c4e1a7784d299d6a440ecfa3f52a950327292dfd85fa106ca"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnDisplay_00bee478.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnDisplay_00bee478.c",
+    "sha256": "9dedf72dc59594c52dd1b86157f9fc5cf843bb871375db68369d6175e3e31eed"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnInitCoverSheet_00bef608.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnInitCoverSheet_00bef608.asm",
+    "sha256": "5adcc180a3401035ec38bfd4ff8cc973a9b3d1ac0429a050fa46b3bb20239fce"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnInitCoverSheet_00bef608.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnInitCoverSheet_00bef608.c",
+    "sha256": "0a4c9c3d629541180680911f51062d3b5a04958bfe6c36ec99f006d75f590a88"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnSwitchToPatient_00bef080.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnSwitchToPatient_00bef080.asm",
+    "sha256": "34f912789e5a2672fdfb7b280191fd80ad689a0c1b55362b31e60047d40fd496"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnSwitchToPatient_00bef080.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheet.TCoverSheet.OnSwitchToPatient_00bef080.c",
+    "sha256": "01d3793edae0c87fed51dbe635655609d9266161a22bf04ad390f13ed4b3c130"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.getPanelXY_00bcdb70.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.getPanelXY_00bcdb70.asm",
+    "sha256": "42908216ac9420ad20e82e76485b5608acc4bdde2a0711b622b9910ed6b43e03"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.getPanelXY_00bcdb70.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.getPanelXY_00bcdb70.c",
+    "sha256": "5fc7a258dd2973f5e8311701d29ffb786c39adf74785f2c59aceb56d09f1a86b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.setPanelCount_00bcdba0.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.setPanelCount_00bcdba0.asm",
+    "sha256": "578c80e87333512037a8baef6414e492ae2a5e30010ea2bf3d9de7b482fc154a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.setPanelCount_00bcdba0.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheetGrid.TCoverSheetGrid.setPanelCount_00bcdba0.c",
+    "sha256": "9ce262b6ef6be210ec9aec6eb2ed73054fa545f52ea1011a3ac5a7da0717a866"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_Allergies.TCoverSheetParam_CPRS_Allergies.NewCoverSheetControl_00bd750c.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_Allergies.TCoverSheetParam_CPRS_Allergies.NewCoverSheetControl_00bd750c.asm",
+    "sha256": "d8a06832f4754b730264c438bdbfd4c7f2584c3285fdcb4d8b5a1a6dc42f3632"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_Allergies.TCoverSheetParam_CPRS_Allergies.NewCoverSheetControl_00bd750c.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_Allergies.TCoverSheetParam_CPRS_Allergies.NewCoverSheetControl_00bd750c.c",
+    "sha256": "9ec0cc1a394a9c6d2deb66847bb9e0a8f110801709d553d890298339e471897c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_ProblemList.TCoverSheetParam_CPRS_ProblemList.NewCoverSheetControl_00bdaad8.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_ProblemList.TCoverSheetParam_CPRS_ProblemList.NewCoverSheetControl_00bdaad8.asm",
+    "sha256": "1153e1fb200f456a7d3cd8c4521812a6101df481fca8a58e68f7f366dcf455f3"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_ProblemList.TCoverSheetParam_CPRS_ProblemList.NewCoverSheetControl_00bdaad8.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/oCoverSheetParam_CPRS_ProblemList.TCoverSheetParam_CPRS_ProblemList.NewCoverSheetControl_00bdaad8.c",
+    "sha256": "caee0e55ebfa1708ede8edb6c0f17dd99f49c4288c9e59d08be65280e0eabab6"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/program.txt",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/program.txt",
+    "sha256": "e62973039c1f95db6b5cd94b04ea82a0d0e6ba50619cacae45c35b18db09097b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/rCover.DetailAllergy_00bf0374.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/rCover.DetailAllergy_00bf0374.asm",
+    "sha256": "11ab40cc04c9ffa204958d8306ad440534347a08af3c42c62a04e4aa2f325cc8"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/rCover.DetailAllergy_00bf0374.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/rCover.DetailAllergy_00bf0374.c",
+    "sha256": "b3d0f382184c1b2632fb06f0ada38a1c790fbe15bddbe789bf15fd5d8eaacb07"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/rCover.DetailProblem_00bf026c.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/rCover.DetailProblem_00bf026c.asm",
+    "sha256": "60228639aeb3b09f06305e9d6b119e7c26d8375880b2f66ea9443c087b519a6a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/rCover.DetailProblem_00bf026c.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/rCover.DetailProblem_00bf026c.c",
+    "sha256": "e24b272b92637ed421716ca19efedb8409a1883fa37ae090b1713e9941a082c6"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/rCover.ListAllergies_00bf05e8.asm",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/rCover.ListAllergies_00bf05e8.asm",
+    "sha256": "cc4f271408242a242c0649e9de988fa709880acb805257fa6a80e08320c4d868"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/rCover.ListAllergies_00bf05e8.c",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/rCover.ListAllergies_00bf05e8.c",
+    "sha256": "2229f2770d9956de1b490089f253b0fa9f2b6d5ab18ffa62d3a4fdc000be5b1b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/workflow-calls.tsv",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/workflow-calls.tsv",
+    "sha256": "194f2a37758f15c1c64f44c8bdfbdc1fa37d1569394b748c2c390bca1edc741e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/decompiled/workflow-functions.tsv",
+    "copy": "reference-input/analysis/cover-sheet/decompiled/workflow-functions.tsv",
+    "sha256": "f71efc456fde8916f1d29681303b42147d1fedae6b9556eacc783cfcadab1f0e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/cover-sheet/resolved/workflow-evidence.json",
+    "copy": "reference-input/analysis/cover-sheet/resolved/workflow-evidence.json",
+    "sha256": "6ebb944458dd7f09d447c89b8dd0e968feb09b645d415d7f2e1a63178d7d0521"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.ClearPtData_00e14524.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.ClearPtData_00e14524.asm",
+    "sha256": "95b394d98da49f0f397f3c51578aecadde6d3c4f04e48648f29a1b7ff6774194"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.ClearPtData_00e14524.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.ClearPtData_00e14524.c",
+    "sha256": "1351840f2f00590c4647d17344a4aebb717df90d2cc301adcd2c3e4a4c555146"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.ClearTVNotes_00e14ec4.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.ClearTVNotes_00e14ec4.asm",
+    "sha256": "4caff2f6cd41c5d3323a85cdd887b8033a9b3f030d8dd81fb1f1f685aaa643b0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.ClearTVNotes_00e14ec4.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.ClearTVNotes_00e14ec4.c",
+    "sha256": "152b66797003474818a6b6beaf3ac407eb276da22b22a7a90c92fd97ee409ba1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.DisplayPage_00e146cc.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.DisplayPage_00e146cc.asm",
+    "sha256": "176c3cea50ca4502bd9c9a81c86cc323fbf5bd5fc0ac045d6ad49623af6bc34a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.DisplayPage_00e146cc.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.DisplayPage_00e146cc.c",
+    "sha256": "e09df4f5c7d1fd12d9a114e8eb9d81afc467aaf7043fc94a343dab5770584967"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.DoSelect_00e2307c.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.DoSelect_00e2307c.asm",
+    "sha256": "57e011d7aef50be3412a47f8ec2d8085f411eda3ff7bcbe494b1524af923f0bc"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.DoSelect_00e2307c.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.DoSelect_00e2307c.c",
+    "sha256": "83496fe85771de9d266c9631353837546adfec196d23126c7c6cbf03b5b1e1d2"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.GetTitleText_00e15850.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.GetTitleText_00e15850.asm",
+    "sha256": "8538eb18f716a6aea042058f274819ad334b47f9adc705c9476af0d8ead8bbaa"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.GetTitleText_00e15850.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.GetTitleText_00e15850.c",
+    "sha256": "a2155b86fd6755f8bb832333f61b7575064c9099f59fdbf51a2f4f7672e984fb"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.LoadNotes_00e21f14.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.LoadNotes_00e21f14.asm",
+    "sha256": "be5c1a682e8c92b44f76f3a0552a0de821011312983cd22a3cdcbfedebebf548"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.LoadNotes_00e21f14.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.LoadNotes_00e21f14.c",
+    "sha256": "ee1c7681bad30e09bf7b754ac57b747f97e4b35e2a02bcdc5d00f19021adf115"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.ReadToFront_00e1c0f8.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.ReadToFront_00e1c0f8.asm",
+    "sha256": "315004395ecf56481630886498cbb2bf2e958a037b4451e8756eed65abdd89b7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.ReadToFront_00e1c0f8.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.ReadToFront_00e1c0f8.c",
+    "sha256": "576c74c8b192c077662ad7f7ee65d3e887c6fb98f4ca0e33f9aad6becaa05fd6"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.SetViewContext_00e1df9c.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.SetViewContext_00e1df9c.asm",
+    "sha256": "cc5bc580bfc357b8a1e07ff64b0e91ba52a13473b13baa46e4745ad71aa6e288"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.SetViewContext_00e1df9c.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.SetViewContext_00e1df9c.c",
+    "sha256": "08b436c7c6a7057b6dbc68b40784778a94ab952bd7284906866cb03d2729c787"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lstNotesClick_00e19480.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lstNotesClick_00e19480.asm",
+    "sha256": "af97403e065bcab8b0000ceb027d8178ca8393b3542807ffad3e6fe8a1d1fdcd"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lstNotesClick_00e19480.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lstNotesClick_00e19480.c",
+    "sha256": "12fea3deffb4b19e34cc0ea6c7a0c832bae24bedbb83b3c8252002a8a716adb7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesClick_00e1fc84.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesClick_00e1fc84.asm",
+    "sha256": "6a4077a063c85bd34e2228ab914d90aa37ed9161d2ec92cd45d8a11e72dcaebb"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesClick_00e1fc84.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesClick_00e1fc84.c",
+    "sha256": "fd9502d87414710687ae1ab8f94d60d555646675f36b19b89d6bcac11abb5c3c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesColumnClick_00e1fe30.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesColumnClick_00e1fe30.asm",
+    "sha256": "da2702bd7ade780edafc7626b26dacb88b7d81a85746be38a2e3e3789c35d6cf"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesColumnClick_00e1fe30.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesColumnClick_00e1fe30.c",
+    "sha256": "a64e85fea5bcd2c4651f1564015499fcc2f76a9d6cff4a348373e95f79e79547"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesDblClick_00e20188.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesDblClick_00e20188.asm",
+    "sha256": "fe1aa863ece25678a5ecedc9fd2d37d9c8b6403096480eedf63231be44ca8a56"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesDblClick_00e20188.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesDblClick_00e20188.c",
+    "sha256": "cd8f82e2ddd6497a382e83774cd65a46c95b8293d7a42fb2593278ac84b940dc"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesKeyDown_00e20234.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesKeyDown_00e20234.asm",
+    "sha256": "debaa051df5b53a1e93131cc5b6410ccdf7df9524346c9b6ee3415261afd6923"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesKeyDown_00e20234.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesKeyDown_00e20234.c",
+    "sha256": "36fee1f9c01f193a70cb5ae11143ddea40dd84c5e88e35773536931e4e4e5e16"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesSelectItem_00e202f8.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesSelectItem_00e202f8.asm",
+    "sha256": "a7f1fe2aca64778030bb3f2721987f29b6853ca90d35b0caedff25e267b432df"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesSelectItem_00e202f8.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.lvNotesSelectItem_00e202f8.c",
+    "sha256": "019b7e8288a7d4c2325ddaf9696898dc7cbf51ec09a891497bad7879a9389c59"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesChange_00e1e870.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesChange_00e1e870.asm",
+    "sha256": "f0db671337eeb1411ca7933e79c6fb725be9bc69d8c55a114222e0b7511e8461"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesChange_00e1e870.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesChange_00e1e870.c",
+    "sha256": "2813cc408b366c944e346300e5072983c0429f7878672101c5a0490cebbec72a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesKeyDown_00e1f8e8.asm",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesKeyDown_00e1f8e8.asm",
+    "sha256": "67ac53e5e9d788ae953024394fb7e36ac2735bcdef0a39278b164ba9caaf18a1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesKeyDown_00e1f8e8.c",
+    "copy": "reference-input/analysis/notes/decompiled/fNotes.TfrmNotes.tvNotesKeyDown_00e1f8e8.c",
+    "sha256": "76c796a3b803aa4b2ed86b9043bb8056601febc7088e7795cb8e585007b1c9c0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/program.txt",
+    "copy": "reference-input/analysis/notes/decompiled/program.txt",
+    "sha256": "05c13dbe7ac3ad901486428b982b46b0dfe02eea4f8d1257eb81290f25ce43be"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/rTIU.GetTIUListItem_00a0c248.asm",
+    "copy": "reference-input/analysis/notes/decompiled/rTIU.GetTIUListItem_00a0c248.asm",
+    "sha256": "e758049c2787fe23a6111a238abd299b0633309ee0b07abc23234aee4aa6b2b3"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/rTIU.GetTIUListItem_00a0c248.c",
+    "copy": "reference-input/analysis/notes/decompiled/rTIU.GetTIUListItem_00a0c248.c",
+    "sha256": "d9ee1e117c50a3e4940eb22b653826c0df83835231948117af3d1696caa5e0fa"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/rTIU.ListNotesForTree_00a0b640.asm",
+    "copy": "reference-input/analysis/notes/decompiled/rTIU.ListNotesForTree_00a0b640.asm",
+    "sha256": "5293118d142248fdcbadffb497c0207a065c6c25c85ac4fb291aec717e3b2228"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/rTIU.ListNotesForTree_00a0b640.c",
+    "copy": "reference-input/analysis/notes/decompiled/rTIU.ListNotesForTree_00a0b640.c",
+    "sha256": "9e9e48795e88cbc02db8865fe297286228ba72513342f33c82845811b4ebdeb5"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/rTIU.LoadDetailText_00a0b8cc.asm",
+    "copy": "reference-input/analysis/notes/decompiled/rTIU.LoadDetailText_00a0b8cc.asm",
+    "sha256": "1b57f9c121e5e282e3fb3625c0aa5f438402053cf9f1a5413f00bf4b3314c997"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/rTIU.LoadDetailText_00a0b8cc.c",
+    "copy": "reference-input/analysis/notes/decompiled/rTIU.LoadDetailText_00a0b8cc.c",
+    "sha256": "c3009ddfb44c6d1216ef4d63dffcba1c7249917da97eee0294b96d6d0dd4156b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/rTIU.LoadDocumentText_00a0b870.asm",
+    "copy": "reference-input/analysis/notes/decompiled/rTIU.LoadDocumentText_00a0b870.asm",
+    "sha256": "c815ee8038a030a414d937c6b159a575290210d2d21a5113c8411f77020387ce"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/rTIU.LoadDocumentText_00a0b870.c",
+    "copy": "reference-input/analysis/notes/decompiled/rTIU.LoadDocumentText_00a0b870.c",
+    "sha256": "3cb30c794fca822078cee2caa8102c51d1dcbad757a29fc53cd2bb3ca71311be"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/workflow-calls.tsv",
+    "copy": "reference-input/analysis/notes/decompiled/workflow-calls.tsv",
+    "sha256": "8351bd9e8cbe31a950eb3994a35fffaee0f82fe8b5082707bdab4cc95fbc9fea"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/decompiled/workflow-functions.tsv",
+    "copy": "reference-input/analysis/notes/decompiled/workflow-functions.tsv",
+    "sha256": "2dc2c7b5593a65f4c2148281047b572acda408f9de65eb2aff7cfdcf6dd47a82"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/notes/resolved/workflow-evidence.json",
+    "copy": "reference-input/analysis/notes/resolved/workflow-evidence.json",
+    "sha256": "c17879c56d7aada6df6b8cf818fab170a45c30c75b924bdccfa3576adfddc83e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.ClearPtData_01179ba0.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.ClearPtData_01179ba0.asm",
+    "sha256": "f4436ecfd0348c6ee60a27e8d1118d54003a9d473d360ef10e2695483bbe2785"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.ClearPtData_01179ba0.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.ClearPtData_01179ba0.c",
+    "sha256": "6ee344377a0e5bb0ca09a749e489213c375a5957d0cd4f92a4db2eb39dc51d75"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.DisplayPage_01179c00.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.DisplayPage_01179c00.asm",
+    "sha256": "cb0a3202a79b57397f2a9af8732c6d03129e22cd424eef1d51ddaaf4bc795ae6"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.DisplayPage_01179c00.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.DisplayPage_01179c00.c",
+    "sha256": "5f42245c20a4ff8f7370f87dbc0ba72d1ad92ac7c31f4e2f0baefce981babf24"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.GetOrderText_0117ea50.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.GetOrderText_0117ea50.asm",
+    "sha256": "299bb19059c339308ac0a58fd3ad375f0418a22677acac7fc645caf723f6c611"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.GetOrderText_0117ea50.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.GetOrderText_0117ea50.c",
+    "sha256": "e33500757c194a8b5eeb052d8461c80428856e97f6969e01bf6bfe6703ae511a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.GetPlainText_0117e4e8.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.GetPlainText_0117e4e8.asm",
+    "sha256": "d0b53b453be16b5db1054a063d3c9e1bc4fa2a0b8c3e63aacdb2fa0579a8db9e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.GetPlainText_0117e4e8.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.GetPlainText_0117e4e8.c",
+    "sha256": "b5819053fc0b63575a523e665918b0800538c8758d37bdbaf0442cdc406ebfb5"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.GetStartStopText_0117e84c.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.GetStartStopText_0117e84c.asm",
+    "sha256": "c854e496974367282924469da211ade3ff39bbf48a7379b996ff937eb2133825"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.GetStartStopText_0117e84c.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.GetStartStopText_0117e84c.c",
+    "sha256": "c7e968ba70b551cf4c394b00d5127478b7ebf743ff8c75f36b23551859329718"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.NoneSelected_01181714.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.NoneSelected_01181714.asm",
+    "sha256": "0a25360c6c80bf4bafd2d394c2c75f9880e9c5c65bc2893fe36ba04a750c5c99"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.NoneSelected_01181714.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.NoneSelected_01181714.c",
+    "sha256": "34cb696689f28b2cf4e392ab6b34f1740031dba482f1a5fcd620f7e4203612d9"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.RefreshOrderList_0117b000.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.RefreshOrderList_0117b000.asm",
+    "sha256": "e702bcd870f427a08f6aaa0527ccc721131a386e81fa357b0707330d2d62c71d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.RefreshOrderList_0117b000.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.RefreshOrderList_0117b000.c",
+    "sha256": "097721664afc292237918585179c7f15134d0502c1cbc3f2a016e7bd80cf5f5a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.RetrieveVisibleOrders_0117e3f0.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.RetrieveVisibleOrders_0117e3f0.asm",
+    "sha256": "bd69c783b81e5ccc7df3af0685c7c997e1acc6b867c3b69c1c922062859d3760"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.RetrieveVisibleOrders_0117e3f0.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.RetrieveVisibleOrders_0117e3f0.c",
+    "sha256": "021970ff0b4c1f2b610c9b68770304e4f323645f8b0072edd4ffb6262e6acc60"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.SetCannedView_0117b878.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.SetCannedView_0117b878.asm",
+    "sha256": "82558bfab9a7090e131b10cb305234c590a0dc73ffaeab516c5b682cc473d63f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.SetCannedView_0117b878.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.SetCannedView_0117b878.c",
+    "sha256": "b8c227a0f3752dbc5c93298931a04a0d0f6b6eed9eef593cb90008f3b4f63afb"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.SetOrderView_0117b7d4.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.SetOrderView_0117b7d4.asm",
+    "sha256": "0c2fa757934e6a071c37a25deec5f599d320581b0868e2b97eeb15085465ef79"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.SetOrderView_0117b7d4.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.SetOrderView_0117b7d4.c",
+    "sha256": "ae53978933a9acbd99959e72ec8e6066e5d1993241e1a75888457820cf4f5f19"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.hdrOrdersSectionClick_0118c37c.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.hdrOrdersSectionClick_0118c37c.asm",
+    "sha256": "239fd8ed0341e8f25494b115f955ab07a8efa6411526fdadf50190678d341c9b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.hdrOrdersSectionClick_0118c37c.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.hdrOrdersSectionClick_0118c37c.c",
+    "sha256": "8af62fe582c9ef2d7eceef7de7cb80175ae1b4f62ddf8738f3d15ad03a487272"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.lstOrdersDblClick_0117f5dc.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.lstOrdersDblClick_0117f5dc.asm",
+    "sha256": "a99142bb42017aeaf0eb23d8a6fe501c721c53af20dcadffa7a47d87c7899dad"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.lstOrdersDblClick_0117f5dc.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.lstOrdersDblClick_0117f5dc.c",
+    "sha256": "dde988ceb17564924e3ad34bcfffc490a48c677445afe9b2ee4c625c8e917aa0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.lstSheetsClick_0117dc1c.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.lstSheetsClick_0117dc1c.asm",
+    "sha256": "08d137914c735521b525ed488f8432104ebe10574ffad3843b0012314975ff1c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.lstSheetsClick_0117dc1c.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.lstSheetsClick_0117dc1c.c",
+    "sha256": "cbc88c763c6f8115c91316dec3f24aa30f0314c808e2eb9a37cfc530970d297a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewActiveClick_0117bdd0.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewActiveClick_0117bdd0.asm",
+    "sha256": "01d4ed5d781a10bc50e350f377c392762fce5b39f61efb16d3f6f208fb31d158"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewActiveClick_0117bdd0.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewActiveClick_0117bdd0.c",
+    "sha256": "9e5259e74c7d1dd9b2ea8ecc7dec442a0115cc641e087eee879ad707f87d7d93"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewCurrentClick_0117beb8.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewCurrentClick_0117beb8.asm",
+    "sha256": "8f1f492bff010c20b690ad05fd6455609f457d122bc771efda141cc5208dd531"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewCurrentClick_0117beb8.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewCurrentClick_0117beb8.c",
+    "sha256": "76f90af6f9d815e2487e46f1a9062ddd5981bf707e68ce90a36c4fb54bc51409"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewDetailClick_0117cc00.asm",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewDetailClick_0117cc00.asm",
+    "sha256": "484bbb3a79ed8cca87dbc5b522aa971ed1027a33d4962a4f4f896f45c08f1941"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewDetailClick_0117cc00.c",
+    "copy": "reference-input/analysis/orders/decompiled/fOrders.TfrmOrders.mnuViewDetailClick_0117cc00.c",
+    "sha256": "e33f03541b48ebe14bfe9797169183fdfcdec29513b9ceab7ed94904c817311f"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/program.txt",
+    "copy": "reference-input/analysis/orders/decompiled/program.txt",
+    "sha256": "80518158fc555758ec5ca4017d0adc9eb11ed7857965637d476b20b957c150bc"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.ClearOrders_011db7c0.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.ClearOrders_011db7c0.asm",
+    "sha256": "053e6d33a31123c96fb7942a776920967cee54660ba4c8e82c6b8531bec4829c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.ClearOrders_011db7c0.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.ClearOrders_011db7c0.c",
+    "sha256": "a18817f4b9cc1141a3091c3cfd7cace52b259cd236a8f57d0a91b84fc12f51ee"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.GetOrderStatus_011db190.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.GetOrderStatus_011db190.asm",
+    "sha256": "6a5741b6438535524ee2e34ba49672f1208ee0d9e030672176e19e7b551d2566"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.GetOrderStatus_011db190.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.GetOrderStatus_011db190.c",
+    "sha256": "a2607bc6046f12ea99f3529feb16963d362a7a1eb9b001bd5880ca395029d629"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.ListOrderFiltersAll_011df26c.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.ListOrderFiltersAll_011df26c.asm",
+    "sha256": "8d011ee2a9edc6d58cb3b8b01671630603a2863e05094ff21816a184b8f4baa9"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.ListOrderFiltersAll_011df26c.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.ListOrderFiltersAll_011df26c.c",
+    "sha256": "3a609d1804bf3e1c370cd5595cd61ac6112aad3d5da20edc87324b2a9f6fa363"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dc634.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dc634.asm",
+    "sha256": "3223a0b3f469e7954655475d9a70674cedc5b388aeb72889cba71e30559ebdbd"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dc634.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dc634.c",
+    "sha256": "dcae50b9c98bb013ad4a45b4292100b3bee99076faefb07c69691ebc4d45cdc0"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dcb68.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dcb68.asm",
+    "sha256": "f50d5cd00b57a7284eb9f1073731d94530cf3a3da2c022dd6899736fea4d4720"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dcb68.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dcb68.c",
+    "sha256": "b7674c29b4b45a6549e64c69a10fa2a0ea1f5e362d17da028c3dcf369bb410b3"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dccc0.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dccc0.asm",
+    "sha256": "d054859d102e8e753825550e4352f7173b2044af1a4acb42a5d4b56c069fad88"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dccc0.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.LoadOrdersAbbr_011dccc0.c",
+    "sha256": "4fc004dd7f216bc4281bc5745cb9bf6f84a63281c04d3b90ae94a8c72f58ed4b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.NameOfStatus_011dad98.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.NameOfStatus_011dad98.asm",
+    "sha256": "af4d38ea9d9b14658acfc6d70baec1ad2e5e6a53037d63ebb97166e196a60d03"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.NameOfStatus_011dad98.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.NameOfStatus_011dad98.c",
+    "sha256": "804944555aba5d045303e9e94374c24d53005430b07a536129c25f40b3f5010a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.RetrieveOrderFields_011ddc0c.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.RetrieveOrderFields_011ddc0c.asm",
+    "sha256": "25690bc43380075162c1b4cfaf518d4e36437d04e249f8aaad45837de0cef5b4"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.RetrieveOrderFields_011ddc0c.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.RetrieveOrderFields_011ddc0c.c",
+    "sha256": "01f3c481b593e3ab983d11b068713f09a6a84cf6829dcdffcaac365718217b8c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.TextForOrder_011e3c68.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.TextForOrder_011e3c68.asm",
+    "sha256": "15610c77afd9ffbde372f181fc64e23b79d34f2dc05f7b08f6fb68c063147da3"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.TextForOrder_011e3c68.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.TextForOrder_011e3c68.c",
+    "sha256": "605436d66ac491270d6a0937b421740f7353b188b41ec82bbc846f3658a2ecf1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.getDetailOrder_011dabac.asm",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.getDetailOrder_011dabac.asm",
+    "sha256": "60aa34f3dd270432cbe8f4994d1b43ad5f0d00f7067278a2e92dbcef24e8adf7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/rOrders.getDetailOrder_011dabac.c",
+    "copy": "reference-input/analysis/orders/decompiled/rOrders.getDetailOrder_011dabac.c",
+    "sha256": "84d91d1ffd160d0f5e020ca23cfb3d56d70c06f471e059c54196c549444301b9"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/workflow-calls.tsv",
+    "copy": "reference-input/analysis/orders/decompiled/workflow-calls.tsv",
+    "sha256": "79e533097f3f6396786aefce99a903261bd51f10ecf8adc005ca7d4ca7f0094b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/decompiled/workflow-functions.tsv",
+    "copy": "reference-input/analysis/orders/decompiled/workflow-functions.tsv",
+    "sha256": "27c5d31ae27e5583944c554830e3a17191da589284e9735530a4cb75fd3b3d71"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/orders/resolved/workflow-evidence.json",
+    "copy": "reference-input/analysis/orders/resolved/workflow-evidence.json",
+    "sha256": "9f5fda495d5659dae374f28d16c89e608efb698ab169d8c963b07724fe2aa800"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.ClearPtData_00ea4440.asm",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.ClearPtData_00ea4440.asm",
+    "sha256": "d212de94afe203b1eb06eed08689df5ce72f69da598c275784eebe2f07c7bee8"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.ClearPtData_00ea4440.c",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.ClearPtData_00ea4440.c",
+    "sha256": "50e5010f66cf98862018312e98dd259ed91a45d0a7546c24d3ea0a5cc92fa6a2"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.DisplayPage_00ea4504.asm",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.DisplayPage_00ea4504.asm",
+    "sha256": "d41f096d84bd716260b22ebb22a03424cc5d90727fa6fdaf491ce57e2118c676"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.DisplayPage_00ea4504.c",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.DisplayPage_00ea4504.c",
+    "sha256": "8deabb455453ec6db60459fa409c09d4bd12cc14229570d32ca41e5647207a90"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.LoadListView_00ea4d6c.asm",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.LoadListView_00ea4d6c.asm",
+    "sha256": "eb0eb93e16382146ccb84952705d22f293ab48c193d7c2cd2ad7b0f70457ac04"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.LoadListView_00ea4d6c.c",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.LoadListView_00ea4d6c.c",
+    "sha256": "8c041b24caa92ef210afdad47d6ee7f34debacc1d06354c5bf6c51441c8454f1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.Memo1Enter_00ebda94.asm",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.Memo1Enter_00ebda94.asm",
+    "sha256": "52d1df6f11e43e8ebf133ecb808a013969e632854a47ceec5828afb9341d97d7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.Memo1Enter_00ebda94.c",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.Memo1Enter_00ebda94.c",
+    "sha256": "712e3c9579bca27d391049d233bd0911dfa603f8efd706abc21ffc3ce13deb76"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.lstDatesClick_00ea9ee4.asm",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.lstDatesClick_00ea9ee4.asm",
+    "sha256": "acff9eb0ecfdbbcee3587f1c17b33bc53750d23515e889e12bf00e50cb23565a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.lstDatesClick_00ea9ee4.c",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.lstDatesClick_00ea9ee4.c",
+    "sha256": "a0cfec9558ea5c984636108c8ab32c81686c2ced06d962e35bad077f5619f006"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.lstHeadersClick_00ea67e0.asm",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.lstHeadersClick_00ea67e0.asm",
+    "sha256": "83831989d1aee7165e62d8cd7447df09638cc77338255950720bb20b6df67e3a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.lstHeadersClick_00ea67e0.c",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.lstHeadersClick_00ea67e0.c",
+    "sha256": "2913bd3eaae879b683e9671cd56065fa6680f5bbe33c0d746b03dd4ef73f7c02"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.lvReportsSelectItem_00eb1a30.asm",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.lvReportsSelectItem_00eb1a30.asm",
+    "sha256": "c810a9d1432f8c07160e67ef2bd0a6bbc994792f66ff56e7c63efc7bd667da9a"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.lvReportsSelectItem_00eb1a30.c",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.lvReportsSelectItem_00eb1a30.c",
+    "sha256": "5812b92192de9f1b6866b41301c3988edc649702c3482a8c99213aa1449a667e"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.tvReportsClick_00eb4c1c.asm",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.tvReportsClick_00eb4c1c.asm",
+    "sha256": "68c87d2e7ac30bc78a7278b02609a60ea04845837ed7085614720d4458274698"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/fLabs.TfrmLabs.tvReportsClick_00eb4c1c.c",
+    "copy": "reference-input/analysis/results/decompiled/fLabs.TfrmLabs.tvReportsClick_00eb4c1c.c",
+    "sha256": "2976d936ba41cf64f78aeefe896093d963ab91a0006990ab4d6628a5e1f6f0f1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/program.txt",
+    "copy": "reference-input/analysis/results/decompiled/program.txt",
+    "sha256": "43f26c1773019d60bb098a46fabeeb286a94df2d4cc1fa7daaa15da5982fd013"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/rLabs.GetNewestOldest_00c87324.asm",
+    "copy": "reference-input/analysis/results/decompiled/rLabs.GetNewestOldest_00c87324.asm",
+    "sha256": "54511386994caa5cf90798a779ac0d5acbe1c3b31f915b5a5085e4a80f24cc38"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/rLabs.GetNewestOldest_00c87324.c",
+    "copy": "reference-input/analysis/results/decompiled/rLabs.GetNewestOldest_00c87324.c",
+    "sha256": "89a05f862a8b3649600eec03cb97c907d1fec723b2123293cd0f66e27007d93d"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/rLabs.Interim_00c867c8.asm",
+    "copy": "reference-input/analysis/results/decompiled/rLabs.Interim_00c867c8.asm",
+    "sha256": "da2577d7bae3dc80c8ee334b6d1bb40647da06f091060d33011794ced89582c1"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/rLabs.Interim_00c867c8.c",
+    "copy": "reference-input/analysis/results/decompiled/rLabs.Interim_00c867c8.c",
+    "sha256": "ab8ab5bfee51bef74d90ee3517573d6f1b879d4d8ddb17a3ad08f67572cc2ce7"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/rLabs.setInterimSelect_00c86c80.asm",
+    "copy": "reference-input/analysis/results/decompiled/rLabs.setInterimSelect_00c86c80.asm",
+    "sha256": "64a54e1163e5b23164d5c3700973fa05673077b13bf640973cadd6b551e68567"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/rLabs.setInterimSelect_00c86c80.c",
+    "copy": "reference-input/analysis/results/decompiled/rLabs.setInterimSelect_00c86c80.c",
+    "sha256": "31ea778188fb9098ceb7265b2b1314b875d0e45c561997630f73491273be9932"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/rReports.LoadReportText_00c03f50.asm",
+    "copy": "reference-input/analysis/results/decompiled/rReports.LoadReportText_00c03f50.asm",
+    "sha256": "00226ed53399da647a9f6c1c2033b1d3e619dd6dba0163ae5be8a42755f26983"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/rReports.LoadReportText_00c03f50.c",
+    "copy": "reference-input/analysis/results/decompiled/rReports.LoadReportText_00c03f50.c",
+    "sha256": "0db0478d121952cc09fd7e20440bdc928c6c03118d43d35a1c19fcd980653c09"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/workflow-calls.tsv",
+    "copy": "reference-input/analysis/results/decompiled/workflow-calls.tsv",
+    "sha256": "1877e9e013b5fdfe78e903653298b0c105104af1812ff472918dd2e60e619f0c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/decompiled/workflow-functions.tsv",
+    "copy": "reference-input/analysis/results/decompiled/workflow-functions.tsv",
+    "sha256": "92efb99b0b5cfc58d80f79642baf0a60704bef5fa9259873b1f1f8e1b5741bdd"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/results/resolved/workflow-evidence.json",
+    "copy": "reference-input/analysis/results/resolved/workflow-evidence.json",
+    "sha256": "fd34f7e85dbfbf2c4f7032085f306f9ed949550dee906ef631f2efc9ad2d9f38"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.asm",
+    "sha256": "a43275faabdac30d7fdec38bb40f941d343673c10d30e8d71c206e9cd2d27a48"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView_00bd35d0.c",
+    "sha256": "9a3f32fa63bade7fd504de07fa77166d905236e81867c2e762f15b5603bbf880"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.asm",
+    "sha256": "3be0636ad917bbd4bd209cee17826773f81478e0eca84f3a61d3de4d60925343"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.DisplayItemDetail_00bd41b4.c",
+    "sha256": "614d7776e525660f24f1435ea8b8cc97e62c9e984d60faad48336491b1a19966"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.asm",
+    "sha256": "338662ac108718431dd5603ecf317fdf9e1d5fad1885096c64b5d854d59e8203"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnClearPtData_00bd3688.c",
+    "sha256": "0519ad45920fd7dacf4bfe84f5654985f9ce9136d774618595548293b3c38f31"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create_00be2090.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create_00be2090.asm",
+    "sha256": "3f9e193f8b4974498d3f3d782c0f0ef2e2a78656c147182c726b8aae13c5be2b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create_00be2090.c",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.Create_00be2090.c",
+    "sha256": "8ebd0893609927ae15227fc5543c9f6dac089353a5c136ac7c3c497a24b60580"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnAddItems_00be2474.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnAddItems_00be2474.asm",
+    "sha256": "12798e7de99e377d71b9872227d26afaf5a73f41f303e0fe55848efc193c744c"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnAddItems_00be2474.c",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnAddItems_00be2474.c",
+    "sha256": "92023a0befd04ae0fe193f27f583437d523cee0f8d5f421c8475079a0bcb0ec6"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail_00be279c.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail_00be279c.asm",
+    "sha256": "101bd9b915311c7e9af0cb85d280504777d43516421769d532a4fbe87887018b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail_00be279c.c",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnGetDetail_00be279c.c",
+    "sha256": "53b8c587e8d521d61684494f55e0ca9b2536c69f504edd203685d3546fe22431"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail_00be22f4.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail_00be22f4.asm",
+    "sha256": "422c156f2af13011d1d607aa25815afa05033bb4cc1c5d4cafb15c3555883a11"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail_00be22f4.c",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnShowDetail_00be22f4.c",
+    "sha256": "f95fcc0de2b14f6ad0ee176c6666922c48027e92f15ec7d4c6936e7038c3d64b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals_00be2334.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals_00be2334.asm",
+    "sha256": "5319f619db00ada105f5f2b6e47c402459caf0f61c834972e0b6ac455a0c3f99"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals_00be2334.c",
+    "copy": "reference-input/analysis/vitals/decompiled/mCoverSheetDisplayPanel_CPRS_Vitals.TfraCoverSheetDisplayPanel_CPRS_Vitals.OnUpdateVitals_00be2334.c",
+    "sha256": "87ec36736eb45d918aa8111ed8ddf1590beaa58109826ecc3c3c07ea8d8aa954"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.asm",
+    "sha256": "04aa8ae9badbdfdda0e53fcb4cd3ec67da9c3aa4bdbacebca57759faebffabf9"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "copy": "reference-input/analysis/vitals/decompiled/oCoverSheet.TCoverSheet.OnClearPtData_00bee374.c",
+    "sha256": "176dc76825b3b910bd71d333c5e4fa37af8dd1e738601fc6a10661c182a8c4e8"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/oCoverSheetParam_CPRS_Vitals.TCoverSheetParam_CPRS_Vitals.NewCoverSheetControl_00be2c84.asm",
+    "copy": "reference-input/analysis/vitals/decompiled/oCoverSheetParam_CPRS_Vitals.TCoverSheetParam_CPRS_Vitals.NewCoverSheetControl_00be2c84.asm",
+    "sha256": "9dd4cd97662fb5f9297d8bad84e7843ca1e4a274a28e51a9df88ab7fa6b07210"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/oCoverSheetParam_CPRS_Vitals.TCoverSheetParam_CPRS_Vitals.NewCoverSheetControl_00be2c84.c",
+    "copy": "reference-input/analysis/vitals/decompiled/oCoverSheetParam_CPRS_Vitals.TCoverSheetParam_CPRS_Vitals.NewCoverSheetControl_00be2c84.c",
+    "sha256": "4e3f06f3940813b80957cd2ab3d206c397dfb60801090082e30a2792e39ad4f6"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/program.txt",
+    "copy": "reference-input/analysis/vitals/decompiled/program.txt",
+    "sha256": "f80fa9835d7b8382c9f1d01ddaace39162c8fd53525e0e83750ccfa91ced666b"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/workflow-calls.tsv",
+    "copy": "reference-input/analysis/vitals/decompiled/workflow-calls.tsv",
+    "sha256": "934f1d09254b8e21acbf1a17fad0c39c0c6e966f1b7ece1e753f6f23b8fd1006"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/decompiled/workflow-functions.tsv",
+    "copy": "reference-input/analysis/vitals/decompiled/workflow-functions.tsv",
+    "sha256": "dbf4f42ee50adef4ec1b6aad80c23605f6b0c926201b3a565749aba4a924a2ed"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/vitals/resolved/workflow-evidence.json",
+    "copy": "reference-input/analysis/vitals/resolved/workflow-evidence.json",
+    "sha256": "4d57841af5a72fab8e48b0553cf59cbc0343e781eceb92b888a50322479b4775"
+  },
+  {
+    "source": "/workspace/cprs-exploration/analysis/inventory/chart-symbols.tsv",
+    "copy": "reference-input/analysis/inventory/chart-symbols.tsv",
+    "sha256": "04bcca7ea905d48a2aa409d92988d83d71117f70cfe394a8433002788b335e81"
+  },
+  {
+    "source": "/workspace/cprs-exploration/provenance/chart.lock.json",
+    "copy": "reference-input/provenance/chart.lock.json",
+    "sha256": "18f2ef73b7a95e0cdfcb0984d20079746261a78e6004205e491cbfc09f2aa280"
+  }
+]

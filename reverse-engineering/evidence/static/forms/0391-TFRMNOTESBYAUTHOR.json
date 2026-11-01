@@ -1,0 +1,187 @@
+{
+  "class": "TfrmNotesByAuthor",
+  "name": "frmNotesByAuthor",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 473,
+    "Top": 272,
+    "BorderIcons": [],
+    "Caption": "List Signed Notes by Author",
+    "ClientHeight": 205,
+    "ClientWidth": 308,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 324,
+    "ExplicitHeight": 244,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlBase",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 308,
+        "Height": 205,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblAuthor",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 8,
+            "Width": 31,
+            "Height": 13,
+            "Caption": "Author"
+          },
+          "children": []
+        },
+        {
+          "class": "TRadioGroup",
+          "name": "radSort",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 148,
+            "Width": 212,
+            "Height": 49,
+            "Caption": "Sort Order",
+            "Items.Strings": [
+              "&Ascending (oldest first)",
+              "&Descending (newest first)"
+            ],
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TORCheckComboBox",
+          "name": "cboAuthor",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 27,
+            "Width": 212,
+            "Height": 113,
+            "Style": "orcsSimple",
+            "AutoSelect": true,
+            "Caption": "Author",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": true,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "Text": "",
+            "OnNeedData": "cboAuthorNeedData",
+            "CharsNeedMatch": 1,
+            "MainCheckBoxCaption": "Include Non-VA Providers",
+            "MainCheckBoxVisible": true,
+            "MainCheckBoxAlignment": "calBottom",
+            "OnMainCheckboxClick": "cboAuthorMainCheckboxClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 228,
+            "Top": 22,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "OK",
+            "Default": true,
+            "TabOrder": 2,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 228,
+            "Top": 49,
+            "Width": 72,
+            "Height": 21,
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 3,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 256,
+        "Top": 128,
+        "Data": [
+          [
+            "Component = pnlBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radSort",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboAuthor",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmNotesByAuthor",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

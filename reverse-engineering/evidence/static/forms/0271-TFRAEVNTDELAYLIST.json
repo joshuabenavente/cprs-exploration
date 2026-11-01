@@ -1,0 +1,164 @@
+{
+  "class": "TfraEvntDelayList",
+  "name": "fraEvntDelayList",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 366,
+    "Height": 216,
+    "Anchors": [],
+    "AutoScroll": true,
+    "TabOrder": 0,
+    "TabStop": true
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlDate",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 261,
+        "Top": 0,
+        "Width": 105,
+        "Height": 216,
+        "Align": "alRight",
+        "Anchors": [
+          "akLeft",
+          "akBottom"
+        ],
+        "TabOrder": 0,
+        "Visible": false
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblEffective",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 4,
+            "Top": 32,
+            "Width": 83,
+            "Height": 16,
+            "Caption": "Effective Date:"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "orDateBox",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 3,
+            "Top": 48,
+            "Width": 97,
+            "Height": 21,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 0,
+            "Text": "Today",
+            "DateOnly": false,
+            "RequireTime": false,
+            "Caption": "Effective Date:"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlList",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 261,
+        "Height": 216,
+        "Align": "alClient",
+        "Anchors": [
+          "akLeft",
+          "akBottom"
+        ],
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblEvntDelayList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 259,
+            "Height": 16,
+            "Align": "alTop",
+            "Caption": "Event Delay List:",
+            "ExplicitWidth": 94
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "mlstEvents",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 38,
+            "Width": 259,
+            "Height": 177,
+            "Align": "alClient",
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 0,
+            "OnClick": "mlstEventsClick",
+            "OnKeyUp": "mlstEventsKeyUp",
+            "Caption": "",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "9",
+            "OnChange": "mlstEventsChange",
+            "RightClickSelect": true,
+            "CheckEntireLine": true,
+            "ExplicitTop": 35,
+            "ExplicitHeight": 180
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "edtSearch",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 17,
+            "Width": 259,
+            "Height": 21,
+            "Align": "alTop",
+            "TabOrder": 1,
+            "OnChange": "edtSearchChange",
+            "OnKeyDown": "edtSearchKeyDown",
+            "Caption": "",
+            "ExplicitTop": 14
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

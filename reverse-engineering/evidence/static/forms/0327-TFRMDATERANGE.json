@@ -1,0 +1,177 @@
+{
+  "class": "TfrmDateRange",
+  "name": "frmDateRange",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 460,
+    "Top": 262,
+    "Caption": "Date Range",
+    "ClientHeight": 138,
+    "ClientWidth": 318,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 336,
+    "ExplicitHeight": 183,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblStart",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 32,
+        "Top": 59,
+        "Width": 67,
+        "Height": 16,
+        "Caption": "Begin Date"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblStop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 169,
+        "Top": 59,
+        "Width": 56,
+        "Height": 16,
+        "Caption": "End Date"
+      },
+      "children": []
+    },
+    {
+      "class": "TOROffsetLabel",
+      "name": "lblInstruct",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 318,
+        "Height": 53,
+        "Align": "alTop",
+        "Caption": "Select a date range -",
+        "HorzOffset": 8,
+        "Transparent": false,
+        "VertOffset": 8,
+        "WordWrap": true
+      },
+      "children": []
+    },
+    {
+      "class": "TORDateBox",
+      "name": "txtStart",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 32,
+        "Top": 73,
+        "Width": 121,
+        "Height": 24,
+        "TabOrder": 0,
+        "DateOnly": false,
+        "RequireTime": false,
+        "Caption": "Begin Date"
+      },
+      "children": []
+    },
+    {
+      "class": "TORDateBox",
+      "name": "txtStop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 169,
+        "Top": 73,
+        "Width": 121,
+        "Height": 24,
+        "TabOrder": 1,
+        "DateOnly": false,
+        "RequireTime": false,
+        "Caption": "End Date"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 154,
+        "Top": 109,
+        "Width": 72,
+        "Height": 21,
+        "Caption": "OK",
+        "Default": true,
+        "TabOrder": 2,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 234,
+        "Top": 109,
+        "Width": 72,
+        "Height": 21,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 3,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = txtStart",
+            "Text = Begin Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = txtStop",
+            "Text = End Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmDateRange",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

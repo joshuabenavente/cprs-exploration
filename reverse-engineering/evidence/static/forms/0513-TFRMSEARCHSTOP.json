@@ -1,0 +1,86 @@
+{
+  "class": "TfrmSearchStop",
+  "name": "frmSearchStop",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 477,
+    "Top": 351,
+    "BorderIcons": [],
+    "BorderStyle": "bsDialog",
+    "Caption": "Scanning Notes....",
+    "ClientHeight": 95,
+    "ClientWidth": 163,
+    "FormStyle": "fsStayOnTop",
+    "OldCreateOrder": false,
+    "Position": "poMainFormCenter",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 169,
+    "ExplicitHeight": 123,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TButton",
+      "name": "btnSearchStop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 45,
+        "Top": 64,
+        "Width": 73,
+        "Height": 25,
+        "Caption": "Stop Scan",
+        "TabOrder": 1,
+        "OnClick": "btnSearchStopClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "lblSearchStatus",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 8,
+        "Top": 32,
+        "Width": 98,
+        "Height": 20,
+        "Caption": "lblSearchStatus",
+        "TabOrder": 0,
+        "TabStop": true
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 88,
+        "Top": 8,
+        "Data": [
+          [
+            "Component = btnSearchStop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblSearchStatus",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmSearchStop",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

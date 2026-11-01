@@ -1,0 +1,2581 @@
+{
+  "class": "TfrmSurgery",
+  "name": "frmSurgery",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 468,
+    "Top": 224,
+    "Align": "alClient",
+    "Caption": "Surgery Page",
+    "ClientHeight": 492,
+    "ClientWidth": 832,
+    "HelpFile": "overvw",
+    "Menu": "mnuNotes",
+    "ExplicitWidth": 850,
+    "ExplicitHeight": 562,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TShape",
+      "name": "shpPageBottom",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 487,
+        "Width": 832,
+        "Margins.Left": 5,
+        "Margins.Top": 5,
+        "Margins.Right": 5,
+        "Margins.Bottom": 5,
+        "ExplicitTop": 358,
+        "ExplicitWidth": 712
+      },
+      "children": []
+    },
+    {
+      "class": "TSplitter",
+      "name": "sptHorz",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 64,
+        "Height": 487,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "AutoSnap": false,
+        "OnCanResize": "sptHorzCanResize",
+        "ExplicitLeft": 64,
+        "ExplicitHeight": 358
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlLeft",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 64,
+        "Height": 487,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Constraints.MinWidth": 37,
+        "ExplicitWidth": 64,
+        "ExplicitHeight": 487
+      },
+      "children": [
+        {
+          "class": "TOROffsetLabel",
+          "name": "lblCases",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 64,
+            "Height": 19,
+            "Align": "alTop",
+            "Caption": "Last 100 Surgery Cases",
+            "HorzOffset": 2,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "Transparent": true,
+            "VertOffset": 6,
+            "WordWrap": false
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblSpace1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 442,
+            "Width": 64,
+            "Height": 3,
+            "Align": "alBottom",
+            "AutoSize": false,
+            "Caption": " ",
+            "ExplicitTop": 313
+          },
+          "children": []
+        },
+        {
+          "class": "TORAlignButton",
+          "name": "cmdNewNote",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 445,
+            "Width": 64,
+            "Height": 21,
+            "Align": "alBottom",
+            "Caption": "New Report",
+            "TabOrder": 1,
+            "Visible": false,
+            "OnClick": "cmdNewNoteClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TORAlignButton",
+          "name": "cmdPCE",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 466,
+            "Width": 64,
+            "Height": 21,
+            "Align": "alBottom",
+            "Caption": "Encounter",
+            "TabOrder": 2,
+            "Visible": false,
+            "OnClick": "cmdPCEClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlDrawers",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 19,
+            "Width": 64,
+            "Height": 423,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TSplitter",
+              "name": "splDrawers",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 420,
+                "Width": 64,
+                "Height": 3,
+                "Cursor": "crVSplit",
+                "Align": "alBottom",
+                "ExplicitTop": 291
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lstNotes",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 14,
+                "Top": 289,
+                "Width": 121,
+                "Height": 97,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 3,
+                "Visible": false,
+                "OnClick": "lstNotesClick",
+                "Caption": "",
+                "ItemTipColor": "clWindow",
+                "LongList": false
+              },
+              "children": []
+            },
+            {
+              "class": "TORTreeView",
+              "name": "tvSurgery",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 64,
+                "Height": 420,
+                "Align": "alClient",
+                "Constraints.MinWidth": 30,
+                "DragMode": "dmAutomatic",
+                "HideSelection": false,
+                "Images": "dmodShared.imgSurgery",
+                "Indent": 19,
+                "PopupMenu": "popNoteList",
+                "ReadOnly": true,
+                "StateImages": "dmodShared.imgImages",
+                "TabOrder": 0,
+                "OnChange": "tvSurgeryChange",
+                "OnCollapsed": "tvSurgeryCollapsed",
+                "OnExpanded": "tvSurgeryExpanded",
+                "Caption": "Last 100 Surgery Cases",
+                "NodePiece": 0,
+                "ShortNodeCaptions": true
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlRight",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 68,
+        "Width": 764,
+        "Height": 487,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Constraints.MinWidth": 30,
+        "OnResize": "pnlRightResize",
+        "ExplicitLeft": 68,
+        "ExplicitWidth": 764,
+        "ExplicitHeight": 487
+      },
+      "children": [
+        {
+          "class": "TSplitter",
+          "name": "sptVert",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 438,
+            "Width": 764,
+            "Height": 4,
+            "Cursor": "crVSplit",
+            "Align": "alBottom",
+            "AutoSnap": false,
+            "ExplicitTop": 309,
+            "ExplicitWidth": 644
+          },
+          "children": []
+        },
+        {
+          "class": "TRichEdit",
+          "name": "memPCEShow",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 442,
+            "Width": 764,
+            "Height": 45,
+            "Align": "alBottom",
+            "Color": "clCream",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -15,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "Lines.Strings": [
+              "<No encounter information entered>"
+            ],
+            "ParentFont": false,
+            "PlainText": true,
+            "ReadOnly": true,
+            "ScrollBars": "ssVertical",
+            "TabOrder": 2,
+            "WantReturns": false,
+            "Zoom": 100
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlWrite",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 764,
+            "Height": 438,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0,
+            "Visible": false,
+            "OnResize": "pnlWriteResize"
+          },
+          "children": [
+            {
+              "class": "TSplitter",
+              "name": "spEditDetails",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 334,
+                "Width": 764,
+                "Height": 4,
+                "Cursor": "crVSplit",
+                "Align": "alBottom",
+                "AutoSnap": false,
+                "Visible": false,
+                "ExplicitLeft": 24,
+                "ExplicitTop": 298
+              },
+              "children": []
+            },
+            {
+              "class": "TRichEdit",
+              "name": "memNewNote",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 67,
+                "Width": 764,
+                "Height": 267,
+                "Align": "alClient",
+                "Font.Charset": "ANSI_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -12,
+                "Font.Name": "Courier New",
+                "Font.Style": [],
+                "MaxLength": 2147483645,
+                "ParentFont": false,
+                "PlainText": true,
+                "PopupMenu": "popNoteMemo",
+                "ScrollBars": "ssVertical",
+                "TabOrder": 1,
+                "WantTabs": true,
+                "Zoom": 100,
+                "OnChange": "memNewNoteChange",
+                "OnKeyDown": "memNewNoteKeyDown"
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlFields",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 764,
+                "Height": 67,
+                "Align": "alTop",
+                "BevelOuter": "bvNone",
+                "TabOrder": 0,
+                "DesignSize": [
+                  764,
+                  67
+                ]
+              },
+              "children": [
+                {
+                  "class": "TGridPanel",
+                  "name": "grdFields",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 758,
+                    "Height": 67,
+                    "Align": "alTop",
+                    "ColumnCollection": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "53a7ad715848128d0240"
+                          }
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "be3769a5eff3d1f20340"
+                          }
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "255216f00cfbbe9c0240"
+                          }
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "255216f00cfbbe9c0240"
+                          }
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "be3769a5eff3d1f20340"
+                          }
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "f0eb8018cff127ae0240"
+                          }
+                        }
+                      }
+                    ],
+                    "ControlCollection": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 1,
+                          "ColumnSpan": 5,
+                          "Control": "txtSubject",
+                          "Row": 2
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 1,
+                          "Row": 2
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 0,
+                          "Control": "lblSubject",
+                          "Row": 2
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 0,
+                          "ColumnSpan": 3,
+                          "Control": "lblVisit",
+                          "Row": 1
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 3,
+                          "ColumnSpan": 2,
+                          "Control": "lblCosigner",
+                          "Row": 1
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 4,
+                          "Control": "lblAuthor",
+                          "Row": 0
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 2,
+                          "ColumnSpan": 2,
+                          "Control": "lblRefDate",
+                          "Row": 0
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 5,
+                          "Control": "cmdChange",
+                          "Row": 0,
+                          "RowSpan": 2
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Column": 0,
+                          "ColumnSpan": 2,
+                          "Control": "pnlNewTitle",
+                          "Row": 0
+                        }
+                      }
+                    ],
+                    "ExpandStyle": "emFixedSize",
+                    "RowCollection": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "d75c5555555555850440"
+                          }
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "d75c5555555555850440"
+                          }
+                        }
+                      },
+                      {
+                        "index": null,
+                        "properties": {
+                          "Value": {
+                            "extended80_hex": "d75c5555555555850440"
+                          }
+                        }
+                      }
+                    ],
+                    "TabOrder": 0,
+                    "ExplicitLeft": 0,
+                    "ExplicitTop": 96,
+                    "ExplicitWidth": 764,
+                    "ExplicitHeight": 73,
+                    "DesignSize": [
+                      758,
+                      67
+                    ]
+                  },
+                  "children": [
+                    {
+                      "class": "TPanel",
+                      "name": "pnlNewTitle",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 1,
+                        "Top": 1,
+                        "Width": 296,
+                        "Height": 22,
+                        "Align": "alClient",
+                        "BevelOuter": "bvNone",
+                        "TabOrder": 2,
+                        "ExplicitWidth": 185,
+                        "ExplicitHeight": 9
+                      },
+                      "children": [
+                        {
+                          "class": "TBevel",
+                          "name": "bvlNewTitle",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "AlignWithMargins": true,
+                            "Left": 3,
+                            "Top": 3,
+                            "Width": 117,
+                            "Height": 15
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TLabel",
+                          "name": "lblNewTitle",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "AlignWithMargins": true,
+                            "Left": 3,
+                            "Top": 3,
+                            "Width": 290,
+                            "Height": 16,
+                            "Hint": "Press \"Change...\" to select a different title.",
+                            "Align": "alClient",
+                            "Caption": " General Medicine Note ",
+                            "Color": "clCream",
+                            "ParentColor": false,
+                            "ParentShowHint": false,
+                            "ShowAccelChar": false,
+                            "ShowHint": true,
+                            "ExplicitLeft": 1,
+                            "ExplicitTop": 1,
+                            "ExplicitWidth": 115,
+                            "ExplicitHeight": 13
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TLabel",
+                      "name": "lblRefDate",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 300,
+                        "Top": 4,
+                        "Width": 142,
+                        "Height": 16,
+                        "Hint": "Press \"Change...\" to change date/time of note.",
+                        "Align": "alClient",
+                        "Alignment": "taCenter",
+                        "Caption": "Oct 20,1999@15:30",
+                        "ParentShowHint": false,
+                        "ShowAccelChar": false,
+                        "ShowHint": true,
+                        "ExplicitLeft": 237,
+                        "ExplicitTop": 6,
+                        "ExplicitWidth": 97,
+                        "ExplicitHeight": 13
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TLabel",
+                      "name": "lblAuthor",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 448,
+                        "Top": 4,
+                        "Width": 224,
+                        "Height": 16,
+                        "Hint": "Press \"Change...\" to select a different author.",
+                        "Align": "alClient",
+                        "Alignment": "taRightJustify",
+                        "Caption": "Winchester,Charles Emerson III",
+                        "ParentShowHint": false,
+                        "ShowAccelChar": false,
+                        "ShowHint": true,
+                        "ExplicitLeft": 366,
+                        "ExplicitTop": 1,
+                        "ExplicitWidth": 319,
+                        "ExplicitHeight": 23
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TLabel",
+                      "name": "lblVisit",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 4,
+                        "Top": 26,
+                        "Width": 364,
+                        "Height": 15,
+                        "Align": "alClient",
+                        "Caption": "Vst: 10/20/99 Pulmonary Clinic, Dr. Welby",
+                        "ShowAccelChar": false,
+                        "ExplicitLeft": 2,
+                        "ExplicitTop": 25,
+                        "ExplicitWidth": 191,
+                        "ExplicitHeight": 13
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TLabel",
+                      "name": "lblCosigner",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 374,
+                        "Top": 26,
+                        "Width": 298,
+                        "Height": 15,
+                        "Hint": "Press \"Change...\" to select a different cosigner.",
+                        "Align": "alClient",
+                        "Alignment": "taRightJustify",
+                        "AutoSize": false,
+                        "Caption": "Expected Cosigner: Winchester,Charles Emerson III",
+                        "ParentShowHint": false,
+                        "ShowAccelChar": false,
+                        "ShowHint": true,
+                        "ExplicitLeft": 354,
+                        "ExplicitTop": 25,
+                        "ExplicitWidth": 603,
+                        "ExplicitHeight": 23
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TLabel",
+                      "name": "lblSubject",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 4,
+                        "Top": 47,
+                        "Width": 61,
+                        "Height": 16,
+                        "Align": "alClient",
+                        "Caption": "Subject:",
+                        "Layout": "tlCenter",
+                        "ExplicitLeft": 6,
+                        "ExplicitTop": 43,
+                        "ExplicitWidth": 39,
+                        "ExplicitHeight": 13
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TButton",
+                      "name": "cmdChange",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 678,
+                        "Top": 12,
+                        "Width": 76,
+                        "Height": 21,
+                        "Margins.Top": 11,
+                        "Margins.Bottom": 11,
+                        "Align": "alClient",
+                        "Caption": "Change...",
+                        "TabOrder": 0,
+                        "OnClick": "cmdChangeClick",
+                        "ExplicitLeft": 6,
+                        "ExplicitTop": 16,
+                        "ExplicitWidth": 58
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TCaptionEdit",
+                      "name": "txtSubject",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 68,
+                        "Top": 44,
+                        "Width": 689,
+                        "Height": 22,
+                        "Hint": "Subject is limited to a maximum of 80 characters.",
+                        "Align": "alClient",
+                        "MaxLength": 80,
+                        "ParentShowHint": false,
+                        "ShowHint": true,
+                        "TabOrder": 3,
+                        "Text": "txtSubject",
+                        "Caption": "Subject",
+                        "ExplicitLeft": 46,
+                        "ExplicitTop": 48,
+                        "ExplicitWidth": 717,
+                        "ExplicitHeight": 21
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TCopyPasteDetails",
+              "name": "CPMemNewNote",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 338,
+                "Width": 764,
+                "Height": 100,
+                "Align": "alBottom",
+                "BevelInner": "bvRaised",
+                "BorderStyle": "bsSingle",
+                "Caption": "CPMemNewNote",
+                "Constraints.MinHeight": 32,
+                "ShowCaption": false,
+                "TabOrder": 2,
+                "Visible": false,
+                "CopyMonitor": "frmFrame.CPAppMon",
+                "CollapseBtn.Left": 739,
+                "CollapseBtn.Top": 0,
+                "CollapseBtn.Width": 17,
+                "CollapseBtn.Height": 20,
+                "CollapseBtn.Align": "alRight",
+                "CollapseBtn.Caption": "Ú",
+                "CollapseBtn.Font.Charset": "DEFAULT_CHARSET",
+                "CollapseBtn.Font.Color": "clWindowText",
+                "CollapseBtn.Font.Height": -11,
+                "CollapseBtn.Font.Name": "Wingdings",
+                "CollapseBtn.Font.Style": [],
+                "CollapseBtn.ParentFont": false,
+                "CollapseBtn.TabOrder": 0,
+                "CollapseBtn.TabStop": false,
+                "EditMonitor.CopyMonitor": "frmFrame.CPAppMon",
+                "EditMonitor.OnLoadPastedText": "LoadPastedText",
+                "EditMonitor.OnPasteToMonitor": "PasteToMonitor",
+                "EditMonitor.OnSaveTheMonitor": "SaveTheMonitor",
+                "EditMonitor.RelatedPackage": "8925",
+                "EditMonitor.TrackOnlyEdits": [],
+                "InfoMessage.AlignWithMargins": true,
+                "InfoMessage.Left": 3,
+                "InfoMessage.Top": 3,
+                "InfoMessage.Width": 625,
+                "InfoMessage.Height": 45,
+                "InfoMessage.Align": "alClient",
+                "InfoMessage.Font.Charset": "ANSI_CHARSET",
+                "InfoMessage.Font.Color": "clWindowText",
+                "InfoMessage.Font.Height": -11,
+                "InfoMessage.Font.Name": "MS Sans Serif",
+                "InfoMessage.Font.Style": [],
+                "InfoMessage.Lines.Strings": [
+                  "<-- Please select the desired paste date"
+                ],
+                "InfoMessage.ParentFont": false,
+                "InfoMessage.ReadOnly": true,
+                "InfoMessage.ScrollBars": "ssBoth",
+                "InfoMessage.TabOrder": 0,
+                "InfoMessage.WantReturns": false,
+                "InfoMessage.WordWrap": false,
+                "InfoMessage.Zoom": 100,
+                "InfoSelector.AlignWithMargins": true,
+                "InfoSelector.Left": 3,
+                "InfoSelector.Top": 3,
+                "InfoSelector.Width": 111,
+                "InfoSelector.Height": 45,
+                "InfoSelector.Style": "lbOwnerDrawFixed",
+                "InfoSelector.Align": "alClient",
+                "InfoSelector.ItemHeight": 13,
+                "InfoSelector.TabOrder": 0,
+                "OnHide": "CPHide",
+                "OnShow": "CPShow",
+                "SyncSizes": true,
+                "VisualEdit": "memNewNote",
+                "SaveFindAfter": 0
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlRead",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 764,
+            "Height": 438,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TOROffsetLabel",
+              "name": "lblTitle",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 764,
+                "Height": 19,
+                "Align": "alTop",
+                "Caption": "No Surgery Cases Found",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -12,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "HorzOffset": 2,
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "Transparent": false,
+                "VertOffset": 6,
+                "WordWrap": false,
+                "ExplicitWidth": 120
+              },
+              "children": []
+            },
+            {
+              "class": "TSplitter",
+              "name": "spDetails",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 334,
+                "Width": 764,
+                "Height": 4,
+                "Cursor": "crVSplit",
+                "Align": "alBottom",
+                "AutoSnap": false,
+                "ExplicitTop": 19,
+                "ExplicitWidth": 644
+              },
+              "children": []
+            },
+            {
+              "class": "TRichEdit",
+              "name": "memSurgery",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 19,
+                "Width": 764,
+                "Height": 315,
+                "Align": "alClient",
+                "Color": "clCream",
+                "Ctl3D": true,
+                "Font.Charset": "ANSI_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -12,
+                "Font.Name": "Courier New",
+                "Font.Style": [],
+                "Lines.Strings": [
+                  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRUSTVWXYZabcdefghijklmnopqrstuvwxyz12"
+                ],
+                "ParentCtl3D": false,
+                "ParentFont": false,
+                "PlainText": true,
+                "PopupMenu": "popNoteMemo",
+                "ReadOnly": true,
+                "ScrollBars": "ssBoth",
+                "TabOrder": 0,
+                "WantReturns": false,
+                "WordWrap": false,
+                "Zoom": 100
+              },
+              "children": []
+            },
+            {
+              "class": "TCopyPasteDetails",
+              "name": "CPMemSurgery",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 338,
+                "Width": 764,
+                "Height": 100,
+                "Align": "alBottom",
+                "BevelInner": "bvRaised",
+                "BorderStyle": "bsSingle",
+                "Caption": "CPMemSurgery",
+                "Constraints.MinHeight": 32,
+                "ShowCaption": false,
+                "TabOrder": 1,
+                "Visible": false,
+                "CopyMonitor": "frmFrame.CPAppMon",
+                "CollapseBtn.Left": 739,
+                "CollapseBtn.Top": 0,
+                "CollapseBtn.Width": 17,
+                "CollapseBtn.Height": 20,
+                "CollapseBtn.Align": "alRight",
+                "CollapseBtn.Caption": "Ú",
+                "CollapseBtn.Font.Charset": "DEFAULT_CHARSET",
+                "CollapseBtn.Font.Color": "clWindowText",
+                "CollapseBtn.Font.Height": -11,
+                "CollapseBtn.Font.Name": "Wingdings",
+                "CollapseBtn.Font.Style": [],
+                "CollapseBtn.ParentFont": false,
+                "CollapseBtn.TabOrder": 0,
+                "CollapseBtn.TabStop": false,
+                "EditMonitor.CopyMonitor": "frmFrame.CPAppMon",
+                "EditMonitor.OnCopyToMonitor": "CopyToMonitor",
+                "EditMonitor.OnLoadPastedText": "LoadPastedText",
+                "EditMonitor.RelatedPackage": "8925",
+                "EditMonitor.TrackOnlyEdits": [],
+                "InfoMessage.AlignWithMargins": true,
+                "InfoMessage.Left": 3,
+                "InfoMessage.Top": 3,
+                "InfoMessage.Width": 625,
+                "InfoMessage.Height": 45,
+                "InfoMessage.Align": "alClient",
+                "InfoMessage.Font.Charset": "ANSI_CHARSET",
+                "InfoMessage.Font.Color": "clWindowText",
+                "InfoMessage.Font.Height": -11,
+                "InfoMessage.Font.Name": "MS Sans Serif",
+                "InfoMessage.Font.Style": [],
+                "InfoMessage.Lines.Strings": [
+                  "<-- Please select the desired paste date"
+                ],
+                "InfoMessage.ParentFont": false,
+                "InfoMessage.ReadOnly": true,
+                "InfoMessage.ScrollBars": "ssBoth",
+                "InfoMessage.TabOrder": 0,
+                "InfoMessage.WantReturns": false,
+                "InfoMessage.WordWrap": false,
+                "InfoMessage.Zoom": 100,
+                "InfoSelector.AlignWithMargins": true,
+                "InfoSelector.Left": 3,
+                "InfoSelector.Top": 3,
+                "InfoSelector.Width": 111,
+                "InfoSelector.Height": 45,
+                "InfoSelector.Style": "lbOwnerDrawFixed",
+                "InfoSelector.Align": "alClient",
+                "InfoSelector.ItemHeight": 13,
+                "InfoSelector.TabOrder": 0,
+                "OnHide": "CPHide",
+                "OnShow": "CPShow",
+                "SyncSizes": true,
+                "VisualEdit": "memSurgery",
+                "SaveFindAfter": 0
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = cmdNewNote",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdPCE",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDrawers",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstNotes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = tvSurgery",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlRead",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memSurgery",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memPCEShow",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlWrite",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memNewNote",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlFields",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdChange",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtSubject",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlLeft",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlRight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmSurgery",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = CPMemSurgery",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = CPMemNewNote",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grdFields",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlNewTitle",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TMainMenu",
+      "name": "mnuNotes",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 600,
+        "Top": 304
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuView",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&View",
+            "GroupIndex": 3
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewChart",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Chart &Tab"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartCover",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 1,
+                    "Caption": "Cover &Sheet",
+                    "ShortCut": 16467,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartProbs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 2,
+                    "Caption": "&Problem List",
+                    "ShortCut": 16464,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartMeds",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 3,
+                    "Caption": "&Medications",
+                    "ShortCut": 16461,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartOrders",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 4,
+                    "Caption": "&Orders",
+                    "ShortCut": 16463,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartNotes",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 6,
+                    "Caption": "Progress &Notes",
+                    "ShortCut": 16462,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartCslts",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 7,
+                    "Caption": "Consul&ts",
+                    "ShortCut": 16468,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartSurgery",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 11,
+                    "Caption": "S&urgery",
+                    "ShortCut": 16469,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartDCSumm",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 8,
+                    "Caption": "&Discharge Summaries",
+                    "ShortCut": 16452,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartLabs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 9,
+                    "Caption": "&Laboratory",
+                    "ShortCut": 16460,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartReports",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 10,
+                    "Caption": "&Reports",
+                    "ShortCut": 16466,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewInformation",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Information",
+                "OnClick": "mnuViewInformationClick"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewDemo",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 1,
+                    "Caption": "De&mographics...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewVisits",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 2,
+                    "Caption": "Visits/Pr&ovider...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewPrimaryCare",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 3,
+                    "Caption": "Primary &Care...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewMyHealtheVet",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 4,
+                    "Caption": "MyHealthe&Vet...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuInsurance",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 5,
+                    "Caption": "&Insurance...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewFlags",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 6,
+                    "Caption": "&Flags...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewRemoteData",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 7,
+                    "Caption": "Remote &Data...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewReminders",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 8,
+                    "Caption": "&Reminders...",
+                    "Enabled": false,
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewPostings",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 9,
+                    "Caption": "&Postings...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewAll",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": -1,
+                "Caption": "&All Cases",
+                "OnClick": "mnuViewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewBySurgeon",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": -4,
+                "Caption": "Cases by &Surgeon",
+                "Enabled": false,
+                "Visible": false,
+                "OnClick": "mnuViewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewByDate",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": -5,
+                "Caption": "Cases by Date &Range",
+                "Enabled": false,
+                "Visible": false,
+                "OnClick": "mnuViewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewUncosigned",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": -3,
+                "Caption": "Un&cosigned Notes",
+                "Enabled": false,
+                "Visible": false,
+                "OnClick": "mnuViewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewUnsigned",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": -2,
+                "Caption": "&Unsigned Notes",
+                "Enabled": false,
+                "Visible": false,
+                "OnClick": "mnuViewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewCustom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": -6,
+                "Caption": "Custo&m View",
+                "OnClick": "mnuViewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-",
+                "Enabled": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewSaveAsDefault",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Sa&ve as Default View",
+                "OnClick": "mnuViewSaveAsDefaultClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "ReturntoDefault1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Return to De&fault View",
+                "OnClick": "mnuViewReturntoDefaultClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-",
+                "Enabled": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewDetail",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Details",
+                "OnClick": "mnuViewDetailClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N6",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-",
+                "Enabled": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuIconLegend",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Icon Legend",
+                "OnClick": "mnuIconLegendClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuAct",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Action",
+            "GroupIndex": 4
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuActNew",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&New Report",
+                "Hint": "Creates a new operative summary",
+                "ShortCut": 24654,
+                "Visible": false,
+                "OnClick": "mnuActNewClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActAddend",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Make Addendum...",
+                "Hint": "Makes an addendum for the currently selected report",
+                "ShortCut": 24653,
+                "OnClick": "mnuActAddendClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActAddIDEntry",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Add Ne&w Entry to Interdisciplinary Note",
+                "Enabled": false,
+                "Visible": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActDetachFromIDParent",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Detac&h from Interdisciplinary Note",
+                "Enabled": false,
+                "Visible": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-",
+                "Enabled": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActChange",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Change Title...",
+                "ShortCut": 24643,
+                "OnClick": "mnuActChangeClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActLoadBoiler",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Reload &Boilerplate Text",
+                "OnClick": "mnuActLoadBoilerClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-",
+                "Enabled": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActSignList",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Add to Signature &List",
+                "Hint": "Adds the currently displayed report to list of things to be signed",
+                "OnClick": "mnuActSignListClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActDelete",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Delete Report",
+                "ShortCut": 24644,
+                "OnClick": "mnuActDeleteClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActEdit",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Edit Report...",
+                "ShortCut": 24645,
+                "OnClick": "mnuActEditClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActSave",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "S&ave without Signature",
+                "Hint": "Saves the report that is being edited",
+                "ShortCut": 24641,
+                "OnClick": "mnuActSaveClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActSign",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Si&gn Report Now...",
+                "ShortCut": 24647,
+                "OnClick": "mnuActSignClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActIdentifyAddlSigners",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Identify Additional Signers",
+                "OnClick": "mnuActIdentifyAddlSignersClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuOptions",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Options",
+            "GroupIndex": 4,
+            "OnClick": "mnuOptionsClick"
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuEditTemplates",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Edit &Templates...",
+                "Enabled": false,
+                "OnClick": "mnuEditTemplatesClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuNewTemplate",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Create &New Template...",
+                "Enabled": false,
+                "OnClick": "mnuNewTemplateClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-",
+                "Enabled": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuEditSharedTemplates",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Edit &Shared Templates...",
+                "Enabled": false,
+                "OnClick": "mnuEditSharedTemplatesClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuNewSharedTemplate",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "&Create New Shared Template...",
+                "Enabled": false,
+                "OnClick": "mnuNewSharedTemplateClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-",
+                "Enabled": false,
+                "OnClick": "cmdChangeClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuEditDialgFields",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Edit Template &Fields",
+                "Enabled": false,
+                "OnClick": "mnuEditDialgFieldsClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popNoteMemo",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnPopup": "popNoteMemoPopup",
+        "Left": 540,
+        "Top": 304
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoCut",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Cu&t",
+            "ShortCut": 16472,
+            "OnClick": "popNoteMemoCutClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoCopy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Copy",
+            "ShortCut": 16451,
+            "OnClick": "popNoteMemoCopyClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoPaste",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Paste",
+            "ShortCut": 16470,
+            "OnClick": "popNoteMemoPasteClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoPaste2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Paste2",
+            "ShortCut": 8237,
+            "Visible": false,
+            "OnClick": "popNoteMemoPasteClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoReformat",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Reformat Paragraph",
+            "ShortCut": 24658,
+            "OnClick": "popNoteMemoReformatClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoSaveContinue",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Save && Continue Editing",
+            "ShortCut": 24659,
+            "Visible": false,
+            "OnClick": "popNoteMemoSaveContinueClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "Z11",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoFind",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Find in Selected Document",
+            "OnClick": "popNoteMemoFindClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoReplace",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Replace Text",
+            "OnClick": "popNoteMemoReplaceClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N7",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-",
+            "OnClick": "cmdChangeClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoGrammar",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Check &Grammar",
+            "OnClick": "popNoteMemoGrammarClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoSpell",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "C&heck Spelling",
+            "OnClick": "popNoteMemoSpellClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "Z12",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoTemplate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Copy into New &Template",
+            "OnClick": "popNoteMemoTemplateClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "Z10",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoSignList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Add to Signature &List",
+            "OnClick": "mnuActSignListClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoDelete",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Delete Report",
+            "OnClick": "mnuActDeleteClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoEdit",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Edit Report",
+            "OnClick": "mnuActEditClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoAddend",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Make Addendum",
+            "OnClick": "mnuActAddendClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoSave",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "S&ave without Signature",
+            "OnClick": "mnuActSaveClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoSign",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Sign Report Now",
+            "OnClick": "mnuActSignClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoAddlSign",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Identify Additional Signers",
+            "OnClick": "popNoteMemoAddlSignClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N8",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoPreview",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Previe&w/Print Current Template",
+            "ShortCut": 16471,
+            "OnClick": "popNoteMemoPreviewClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoInsTemplate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Insert Current Template",
+            "ShortCut": 16429,
+            "OnClick": "popNoteMemoInsTemplateClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteMemoEncounter",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Edit Encounter Information",
+            "ShortCut": 16453,
+            "OnClick": "cmdPCEClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popNoteList",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnPopup": "popNoteListPopup",
+        "Left": 500,
+        "Top": 305
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListAll",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Caption": "&All cases",
+            "OnClick": "mnuViewClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListBySurgeon",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 4,
+            "Caption": "Cases by &Surgeon",
+            "Enabled": false,
+            "Visible": false,
+            "OnClick": "mnuViewClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListByDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 5,
+            "Caption": "Cases by Date &Range",
+            "Enabled": false,
+            "OnClick": "mnuViewClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListUncosigned",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 3,
+            "Caption": "Un&cosigned Notes",
+            "Enabled": false,
+            "Visible": false,
+            "OnClick": "mnuViewClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListUnsigned",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "Caption": "&Unsigned Notes",
+            "Enabled": false,
+            "Visible": false,
+            "OnClick": "mnuViewClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListCustom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 6,
+            "Caption": "Cus&tom List",
+            "OnClick": "mnuViewClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N4",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListExpandSelected",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Expand Selected",
+            "OnClick": "popNoteListExpandSelectedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListExpandAll",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "E&xpand All",
+            "OnClick": "popNoteListExpandAllClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListCollapseSelected",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "C&ollapse Selected",
+            "OnClick": "popNoteListCollapseSelectedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListCollapseAll",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Co&llapse All",
+            "OnClick": "popNoteListCollapseAllClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N5",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListAddIDEntry",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Add Ne&w Entry to ID Note",
+            "Enabled": false
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popNoteListDetachFromIDParent",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Detac&h from ID Note",
+            "Enabled": false
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TTimer",
+      "name": "timAutoSave",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Enabled": false,
+        "Interval": 300000,
+        "OnTimer": "timAutoSaveTimer",
+        "Left": 592,
+        "Top": 27
+      },
+      "children": []
+    },
+    {
+      "class": "TFindDialog",
+      "name": "dlgFindText",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Options": [
+          "frDown",
+          "frHideUpDown"
+        ],
+        "OnFind": "dlgFindTextFind",
+        "Left": 452,
+        "Top": 312
+      },
+      "children": []
+    },
+    {
+      "class": "TReplaceDialog",
+      "name": "dlgReplaceText",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnFind": "dlgReplaceTextFind",
+        "OnReplace": "dlgReplaceTextReplace",
+        "Left": 413,
+        "Top": 312
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblImages",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [
+          {
+            "index": null,
+            "properties": {
+              "Component": "tvSurgery"
+            }
+          }
+        ],
+        "Labels": [],
+        "RemoteLabeler": "dmodShared.imgLblImages",
+        "Left": 16,
+        "Top": 139
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ImageListLabeler",
+      "name": "imgLblSurgery",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Components": [
+          {
+            "index": null,
+            "properties": {
+              "Component": "tvSurgery"
+            }
+          }
+        ],
+        "Labels": [],
+        "RemoteLabeler": "dmodShared.imgLblSurgery",
+        "Left": 24,
+        "Top": 203
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "class": "TfrmBase508Form",
+  "name": "frmBase508Form",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 194,
+    "Top": 109,
+    "Caption": "frmBase508Form",
+    "ClientHeight": 135,
+    "ClientWidth": 197,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "MS Sans Serif",
+    "Font.Style": [],
+    "KeyPreview": true,
+    "Position": "poOwnerFormCenter",
+    "OnActivate": "FormActivate",
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "OnDeactivate": "FormDeactivate",
+    "OnHide": "FormHide",
+    "OnHelp": "FormHelp",
+    "OnKeyDown": "FormKeyDown",
+    "OnShow": "FormShow",
+    "OldCreateOrder": false,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = frmBase508Form",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

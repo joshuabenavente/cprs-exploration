@@ -1,0 +1,62 @@
+{
+  "class": "TfrmDbgList",
+  "name": "frmDbgList",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 313,
+    "Top": 248,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "Show ListBox Data",
+    "ClientHeight": 253,
+    "ClientWidth": 472,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "OnKeyUp": "FormKeyUp",
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TMemo",
+      "name": "memData",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 472,
+        "Height": 253,
+        "Align": "alClient",
+        "ReadOnly": true,
+        "TabOrder": 0,
+        "WantReturns": false
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = memData",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmDbgList",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

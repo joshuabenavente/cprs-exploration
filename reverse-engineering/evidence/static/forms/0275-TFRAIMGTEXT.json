@@ -1,0 +1,140 @@
+{
+  "class": "TfraImgText",
+  "name": "fraImgText",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 451,
+    "Height": 20,
+    "Align": "alTop",
+    "AutoScroll": true,
+    "Ctl3D": false,
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Tahoma",
+    "Font.Style": [],
+    "ParentCtl3D": false,
+    "ParentFont": false,
+    "TabOrder": 0,
+    "TabStop": true,
+    "OnEnter": "FrameEnter",
+    "OnExit": "FrameExit"
+  },
+  "children": [
+    {
+      "class": "TGridPanel",
+      "name": "gp",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 451,
+        "Height": 20,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000c00440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "img",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "lblText",
+              "Row": 0
+            }
+          }
+        ],
+        "Ctl3D": false,
+        "ParentCtl3D": false,
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          }
+        ],
+        "ShowCaption": false,
+        "TabOrder": 0,
+        "StyleElements": [
+          "seClient",
+          "seBorder"
+        ]
+      },
+      "children": [
+        {
+          "class": "TImage",
+          "name": "img",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 42,
+            "Height": 14,
+            "Align": "alClient",
+            "AutoSize": true,
+            "ExplicitLeft": 4,
+            "ExplicitTop": 2,
+            "ExplicitWidth": 90,
+            "ExplicitHeight": 16
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblText",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 51,
+            "Top": 3,
+            "Width": 397,
+            "Height": 14,
+            "Align": "alClient",
+            "Caption": "lblText",
+            "TabOrder": 0
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

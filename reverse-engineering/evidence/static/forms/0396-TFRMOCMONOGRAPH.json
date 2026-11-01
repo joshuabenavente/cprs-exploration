@@ -1,0 +1,250 @@
+{
+  "class": "TfrmOCMonograph",
+  "name": "frmOCMonograph",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "Monographs for Order Checks",
+    "ClientHeight": 389,
+    "ClientWidth": 539,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Tahoma",
+    "Font.Style": [],
+    "KeyPreview": true,
+    "OldCreateOrder": false,
+    "Position": "poMainFormCenter",
+    "OnKeyDown": "FormKeyDown",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 348,
+        "Width": 539,
+        "Height": 41,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 2,
+        "DesignSize": [
+          539,
+          41
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 456,
+            "Top": 4,
+            "Width": 75,
+            "Height": 25,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "Caption": "OK",
+            "ModalResult": 1,
+            "TabOrder": 0
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 539,
+        "Height": 48,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TComboBox",
+          "name": "monoCmbLst",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 24,
+            "Width": 225,
+            "Height": 21,
+            "TabOrder": 0,
+            "Text": "monoCmbLst",
+            "OnChange": "monoCmbLstChange"
+          },
+          "children": []
+        },
+        {
+          "class": "TVA508StaticText",
+          "name": "VA508StaticText1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Name": "VA508StaticText1",
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 533,
+            "Height": 15,
+            "Align": "alTop",
+            "Alignment": "taLeftJustify",
+            "Caption": "Choose a Monograph to view",
+            "TabOrder": 1,
+            "ShowAccelChar": true,
+            "WordWrap": false,
+            "LabelAlignment": "taLeftJustify",
+            "LabelLayout": "tlTop"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlCanvas",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 48,
+        "Width": 539,
+        "Height": 300,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TVA508StaticText",
+          "name": "VA508StaticText2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Name": "VA508StaticText2",
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 533,
+            "Height": 15,
+            "Align": "alTop",
+            "Alignment": "taLeftJustify",
+            "Caption": "Monograph Information",
+            "TabOrder": 0,
+            "ShowAccelChar": true,
+            "WordWrap": false,
+            "LabelAlignment": "taLeftJustify",
+            "LabelLayout": "tlTop"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionMemo",
+          "name": "monoMemo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 24,
+            "Width": 533,
+            "Height": 273,
+            "Align": "alClient",
+            "Lines.Strings": [
+              "monoMemo"
+            ],
+            "ReadOnly": true,
+            "ScrollBars": "ssVertical",
+            "TabOrder": 1,
+            "Caption": ""
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 408,
+        "Top": 96,
+        "Data": [
+          [
+            "Component = monoMemo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = monoCmbLst",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOCMonograph",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlCanvas",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508ComponentAccessibility1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Component": "monoCmbLst",
+        "OnCaptionQuery": "VA508ComponentAccessibility1CaptionQuery",
+        "Left": 240,
+        "Top": 96
+      },
+      "children": []
+    }
+  ]
+}

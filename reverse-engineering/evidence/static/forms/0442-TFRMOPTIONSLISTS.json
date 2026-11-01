@@ -1,0 +1,1146 @@
+{
+  "class": "TfrmOptionsLists",
+  "name": "frmOptionsLists",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 354,
+    "Top": 178,
+    "HelpContext": 9070,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "BorderStyle": "bsSingle",
+    "Caption": "Personal Lists",
+    "ClientHeight": 517,
+    "ClientWidth": 570,
+    "HelpFile": "CPRSWT.HLP",
+    "Position": "poScreenCenter",
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "ExplicitWidth": 586,
+    "ExplicitHeight": 556,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TGridPanel",
+      "name": "gpMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 564,
+        "Height": 513,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "Caption": "gpMain",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000c00540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80440"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "radAddByType",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "Panel1",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "lblInfo",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "Panel2",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "Panel3",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "Panel4",
+              "Row": 1
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "Panel5",
+              "Row": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "Panel6",
+              "Row": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "Panel7",
+              "Row": 2
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "Panel8",
+              "Row": 3
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "Panel9",
+              "Row": 3
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "Panel10",
+              "Row": 3
+            }
+          }
+        ],
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "e74a00590413a0a30340"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "b544218d03eb7b870440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "b544218d03eb7b870440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "78eaf4e4da81e0bc0240"
+              }
+            }
+          }
+        ],
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TRadioGroup",
+          "name": "radAddByType",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 228,
+            "Height": 99,
+            "HelpContext": 9071,
+            "Align": "alClient",
+            "Caption": "Select patients by ",
+            "Columns": 2,
+            "ItemIndex": 0,
+            "Items.Strings": [
+              "P&atient",
+              "&Ward",
+              "&Clinic",
+              "&Provider",
+              "&Specialty",
+              "&List",
+              "PCMM &Team"
+            ],
+            "TabOrder": 0,
+            "OnClick": "radAddByTypeClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 234,
+            "Top": 0,
+            "Width": 96,
+            "Height": 105,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TMemo",
+          "name": "lblInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 333,
+            "Top": 3,
+            "Width": 228,
+            "Height": 99,
+            "TabStop": false,
+            "Align": "alClient",
+            "BorderStyle": "bsNone",
+            "Color": "clBtnFace",
+            "Lines.Strings": [
+              "You can change your personal lists ",
+              "by adding or removing patients."
+            ],
+            "ReadOnly": true,
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 105,
+            "Width": 234,
+            "Height": 174,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 3
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblAddBy",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 228,
+                "Height": 13,
+                "Align": "alTop",
+                "Caption": "Provider:",
+                "ExplicitWidth": 42
+              },
+              "children": []
+            },
+            {
+              "class": "TORCheckComboBox",
+              "name": "lstAddBy",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 22,
+                "Width": 228,
+                "Height": 149,
+                "HelpContext": 9072,
+                "Style": "orcsSimple",
+                "Align": "alClient",
+                "AutoSelect": true,
+                "Caption": "Provider:",
+                "Color": "clWindow",
+                "DropDownCount": 8,
+                "ItemHeight": 13,
+                "ItemTipColor": "clWindow",
+                "ItemTipEnable": true,
+                "ListItemsOnly": false,
+                "LongList": true,
+                "LookupPiece": 2,
+                "MaxLength": 0,
+                "Pieces": "2",
+                "Sorted": false,
+                "SynonymChars": "<>",
+                "TabOrder": 0,
+                "Text": "",
+                "FlatCheckBoxes": false,
+                "OnChange": "lstAddByChange",
+                "OnEnter": "lstAddByEnter",
+                "OnExit": "lstAddByExit",
+                "OnKeyDown": "lstAddByKeyDown",
+                "OnMouseClick": "lstAddByMouseClick",
+                "OnNeedData": "lstAddByNeedData",
+                "CharsNeedMatch": 1,
+                "UniqueAutoComplete": true,
+                "MainCheckBoxCaption": "Include Non-VA Providers",
+                "MainCheckBoxAlignment": "calBottom",
+                "OnMainCheckboxClick": "lstAddByMainCheckboxClick",
+                "DropdownStyle": "ddsControl",
+                "ExplicitLeft": 0,
+                "ExplicitTop": 41
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 234,
+            "Top": 105,
+            "Width": 96,
+            "Height": 174,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 4
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnNewList",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 22,
+                "Width": 90,
+                "Height": 22,
+                "HelpContext": 9081,
+                "Margins.Top": 22,
+                "Align": "alTop",
+                "Caption": "New List...",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 0,
+                "OnClick": "btnNewListClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnDeleteList",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 50,
+                "Width": 90,
+                "Height": 22,
+                "HelpContext": 9082,
+                "Align": "alTop",
+                "Caption": "Delete List",
+                "Enabled": false,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 1,
+                "OnClick": "btnDeleteListClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel4",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 330,
+            "Top": 105,
+            "Width": 234,
+            "Height": 174,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 5
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblPersonalLists",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 228,
+                "Height": 13,
+                "Align": "alTop",
+                "Caption": "Personal Lists:",
+                "ExplicitWidth": 68
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lstPersonalLists",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 22,
+                "Width": 228,
+                "Height": 149,
+                "HelpContext": 9074,
+                "Align": "alClient",
+                "ItemHeight": 13,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "Sorted": true,
+                "TabOrder": 0,
+                "Caption": "Personal Lists:",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2",
+                "OnChange": "lstPersonalListsChange",
+                "FlatCheckBoxes": false
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel5",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 279,
+            "Width": 234,
+            "Height": 173,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 6
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblPatientsAdd",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 228,
+                "Height": 13,
+                "Align": "alTop",
+                "Caption": "Patients to add:",
+                "ExplicitWidth": 74
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lstListPats",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 22,
+                "Width": 228,
+                "Height": 148,
+                "HelpContext": 9073,
+                "Align": "alClient",
+                "ItemHeight": 13,
+                "MultiSelect": true,
+                "ParentShowHint": false,
+                "PopupMenu": "mnuPopPatient",
+                "ShowHint": true,
+                "Sorted": true,
+                "TabOrder": 0,
+                "OnClick": "lstListPatsChange",
+                "OnDblClick": "btnListAddClick",
+                "OnMouseDown": "lstListPatsMouseDown",
+                "Caption": "Patients to add:",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2",
+                "OnChange": "lstListPatsChange",
+                "FlatCheckBoxes": false
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel6",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 234,
+            "Top": 279,
+            "Width": 96,
+            "Height": 173,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 7
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnListAdd",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 22,
+                "Width": 90,
+                "Height": 22,
+                "HelpContext": 9076,
+                "Margins.Top": 22,
+                "Align": "alTop",
+                "Caption": "Add",
+                "Enabled": false,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 0,
+                "OnClick": "btnListAddClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnListAddAll",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 50,
+                "Width": 90,
+                "Height": 22,
+                "HelpContext": 9077,
+                "Align": "alTop",
+                "Caption": "Add All",
+                "Enabled": false,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 1,
+                "OnClick": "btnListAddAllClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnPersonalPatientR",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 78,
+                "Width": 90,
+                "Height": 22,
+                "HelpContext": 9078,
+                "Align": "alTop",
+                "Caption": "Remove",
+                "Enabled": false,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 2,
+                "OnClick": "btnPersonalPatientRClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnPersonalPatientRA",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 106,
+                "Width": 90,
+                "Height": 22,
+                "HelpContext": 9079,
+                "Align": "alTop",
+                "Caption": "Remove All",
+                "Enabled": false,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 3,
+                "OnClick": "btnPersonalPatientRAClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnListSaveChanges",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 134,
+                "Width": 90,
+                "Height": 22,
+                "HelpContext": 9080,
+                "Align": "alTop",
+                "Caption": "Save Changes",
+                "Enabled": false,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 4,
+                "OnClick": "btnListSaveChangesClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel7",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 330,
+            "Top": 279,
+            "Width": 234,
+            "Height": 173,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 8
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblPersonalPatientList",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 228,
+                "Height": 13,
+                "Align": "alTop",
+                "Caption": "Patients on personal list:",
+                "ExplicitWidth": 114
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lstPersonalPatients",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 22,
+                "Width": 228,
+                "Height": 148,
+                "HelpContext": 9075,
+                "Align": "alClient",
+                "ItemHeight": 13,
+                "MultiSelect": true,
+                "ParentShowHint": false,
+                "PopupMenu": "mnuPopPatient",
+                "ShowHint": true,
+                "Sorted": true,
+                "TabOrder": 0,
+                "OnClick": "lstPersonalPatientsChange",
+                "OnDblClick": "btnPersonalPatientRClick",
+                "OnMouseDown": "lstPersonalPatientsMouseDown",
+                "Caption": "Patients on personal list:",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2",
+                "OnChange": "lstPersonalPatientsChange",
+                "FlatCheckBoxes": false
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel8",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 234,
+            "Top": 452,
+            "Width": 96,
+            "Height": 61,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 9
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "btnSaveSchanges",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 90,
+                "Height": 55,
+                "HelpContext": 9080,
+                "Align": "alClient",
+                "Caption": "Save Changes",
+                "Enabled": false,
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 0,
+                "Visible": false,
+                "OnClick": "btnListSaveChangesClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel9",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 330,
+            "Top": 452,
+            "Width": 234,
+            "Height": 61,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 10
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "pnlBottom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 32,
+                "Width": 234,
+                "Height": 29,
+                "HelpContext": 9070,
+                "Align": "alBottom",
+                "BevelOuter": "bvNone",
+                "ParentColor": true,
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnOK",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 75,
+                    "Top": 3,
+                    "Width": 75,
+                    "Height": 23,
+                    "HelpContext": 9996,
+                    "Align": "alRight",
+                    "Caption": "OK",
+                    "ModalResult": 1,
+                    "TabOrder": 0,
+                    "OnClick": "btnOKClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnCancel",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 156,
+                    "Top": 3,
+                    "Width": 75,
+                    "Height": 23,
+                    "HelpContext": 9997,
+                    "Align": "alRight",
+                    "Cancel": true,
+                    "Caption": "Cancel",
+                    "ModalResult": 2,
+                    "TabOrder": 1
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel10",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 452,
+            "Width": 234,
+            "Height": 61,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 11
+          },
+          "children": [
+            {
+              "class": "TRadioGroup",
+              "name": "grpVisibility",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 228,
+                "Height": 55,
+                "Align": "alClient",
+                "Caption": "Who should be able to use the selected  list?",
+                "Columns": 2,
+                "ItemIndex": 1,
+                "Items.Strings": [
+                  "&Myself only",
+                  "All CP&RS users"
+                ],
+                "TabOrder": 0,
+                "OnClick": "grpVisibilityClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 273,
+        "Top": 16,
+        "Data": [
+          [
+            "Component = frmOptionsLists",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = gpMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radAddByType",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstAddBy",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnNewList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDeleteList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstPersonalLists",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel5",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel6",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel7",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel8",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel9",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel10",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstListPats",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnListAdd",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnListAddAll",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnPersonalPatientR",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnPersonalPatientRA",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnListSaveChanges",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstPersonalPatients",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grpVisibility",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnSaveSchanges",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "mnuPopPatient",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 265,
+        "Top": 200
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuPatientID",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Patient ID...",
+            "OnClick": "mnuPatientIDClick"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

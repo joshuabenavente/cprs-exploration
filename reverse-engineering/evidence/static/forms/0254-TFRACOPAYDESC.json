@@ -1,0 +1,340 @@
+{
+  "class": "TfraCoPayDesc",
+  "name": "fraCoPayDesc",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 508,
+    "Height": 210,
+    "Anchors": [
+      "akLeft",
+      "akTop",
+      "akRight"
+    ],
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Tahoma",
+    "Font.Style": [],
+    "ParentFont": false,
+    "ParentShowHint": false,
+    "ShowHint": true,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TGridPanel",
+      "name": "gpMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 508,
+        "Height": 210,
+        "Align": "alClient",
+        "BevelEdges": [],
+        "BevelOuter": "bvNone",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80440"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80440"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "pnlSCandRD",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "pnlRight",
+              "Row": 0
+            }
+          }
+        ],
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          }
+        ],
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlSCandRD",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 254,
+            "Height": 210,
+            "Align": "alClient",
+            "Anchors": [],
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblSCDisplay",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 244,
+                "Height": 16,
+                "Align": "alTop",
+                "AutoSize": false,
+                "Caption": "Service Connection && Rated Disabilities",
+                "Layout": "tlCenter",
+                "ExplicitWidth": 237
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlBorderLeft",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 22,
+                "Width": 250,
+                "Height": 179,
+                "Align": "alClient",
+                "BorderStyle": "bsSingle",
+                "TabOrder": 0,
+                "ExplicitWidth": 254,
+                "ExplicitHeight": 188
+              },
+              "children": [
+                {
+                  "class": "TCaptionMemo",
+                  "name": "memSCDisplay",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 1,
+                    "Top": 1,
+                    "Width": 244,
+                    "Height": 173,
+                    "Align": "alClient",
+                    "BevelInner": "bvNone",
+                    "BevelOuter": "bvNone",
+                    "BorderStyle": "bsNone",
+                    "Color": "clBtnFace",
+                    "Lines.Strings": [
+                      ""
+                    ],
+                    "ReadOnly": true,
+                    "ScrollBars": "ssVertical",
+                    "TabOrder": 0,
+                    "Caption": "Service Connection and Rated Disabilities",
+                    "ExplicitLeft": 2
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlRight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 254,
+            "Top": 0,
+            "Width": 254,
+            "Height": 210,
+            "Align": "alClient",
+            "BevelEdges": [],
+            "BevelOuter": "bvNone",
+            "Caption": "pnlRight",
+            "ShowCaption": false,
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TStaticText",
+              "name": "lblCaption",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 244,
+                "Height": 17,
+                "Align": "alTop",
+                "Alignment": "taCenter",
+                "AutoSize": false,
+                "Caption": "Outpatient Medications Related To:",
+                "TabOrder": 0,
+                "ExplicitWidth": 248
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlBorderRight",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 23,
+                "Width": 250,
+                "Height": 178,
+                "Align": "alClient",
+                "BorderStyle": "bsSingle",
+                "TabOrder": 1,
+                "ExplicitWidth": 254,
+                "ExplicitHeight": 187
+              },
+              "children": [
+                {
+                  "class": "TScrollBox",
+                  "name": "sbRight",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 1,
+                    "Top": 1,
+                    "Width": 244,
+                    "Height": 172,
+                    "Align": "alClient",
+                    "BevelOuter": "bvNone",
+                    "TabOrder": 0
+                  },
+                  "children": [
+                    {
+                      "class": "TGridPanel",
+                      "name": "gpRight",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Width": 240,
+                        "Height": 168,
+                        "Align": "alTop",
+                        "BevelOuter": "bvNone",
+                        "ColumnCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "SizeStyle": "ssAbsolute",
+                              "Value": {
+                                "extended80_hex": "00000000000000c80440"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "00000000000000c80540"
+                              }
+                            }
+                          }
+                        ],
+                        "ControlCollection": [],
+                        "RowCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "00000000000000c80540"
+                              }
+                            }
+                          }
+                        ],
+                        "ShowCaption": false,
+                        "TabOrder": 0,
+                        "OnResize": "gpRightResize",
+                        "ExplicitLeft": 1,
+                        "ExplicitTop": -2
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TBalloonHint",
+      "name": "bHint",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Style": "bhsStandard",
+        "Delay": 50,
+        "HideAfter": 15000,
+        "Position": "hpBelow",
+        "Left": 288,
+        "Top": 64
+      },
+      "children": []
+    },
+    {
+      "class": "TApplicationEvents",
+      "name": "appEvents",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnMessage": "appEventsMessage",
+        "Left": 336,
+        "Top": 64
+      },
+      "children": []
+    }
+  ]
+}

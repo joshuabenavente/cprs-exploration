@@ -1,0 +1,222 @@
+{
+  "class": "TfraVimmSelect",
+  "name": "fraVimmSelect",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Width": 717,
+    "Height": 96,
+    "ExplicitWidth": 717,
+    "ExplicitHeight": 96
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlHeader",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 717,
+        "ExplicitWidth": 717
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlWorkspace",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 717,
+        "Height": 67,
+        "ExplicitWidth": 717,
+        "ExplicitHeight": 67
+      },
+      "children": [
+        {
+          "class": "TGridPanel",
+          "name": "gridPanel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 715,
+            "Height": 65,
+            "Align": "alClient",
+            "ColumnCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "00000000000000c80440"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "00000000000000c80440"
+                  }
+                }
+              }
+            ],
+            "ControlCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Column": 0,
+                  "Control": "rgpDocumentation",
+                  "Row": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "Column": 1,
+                  "Control": "pnlImm",
+                  "Row": 0
+                }
+              }
+            ],
+            "ParentColor": true,
+            "RowCollection": [
+              {
+                "index": null,
+                "properties": {
+                  "Value": {
+                    "extended80_hex": "00000000000000c80540"
+                  }
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "SizeStyle": "ssAuto"
+                }
+              }
+            ],
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TRadioGroup",
+              "name": "rgpDocumentation",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 356,
+                "Height": 63,
+                "Align": "alClient",
+                "Caption": "Select Documentation Type",
+                "Columns": 2,
+                "Enabled": false,
+                "Items.Strings": [
+                  "&Administered",
+                  "&Historical",
+                  "&Contraindication/Precaution",
+                  "&Refused"
+                ],
+                "TabOrder": 0,
+                "TabStop": true,
+                "OnClick": "rgpDocumentationClick",
+                "OnEnter": "rgpDocumentationEnter"
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlImm",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 357,
+                "Top": 1,
+                "Width": 357,
+                "Height": 63,
+                "Align": "alClient",
+                "Padding.Right": 10,
+                "ParentColor": true,
+                "TabOrder": 1,
+                "DesignSize": [
+                  357,
+                  63
+                ]
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblImm",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 6,
+                    "Top": 6,
+                    "Width": 119,
+                    "Height": 13,
+                    "Caption": "Select an Immunization *"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboImm",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 6,
+                    "Top": 25,
+                    "Width": 341,
+                    "Height": 21,
+                    "Anchors": [
+                      "akLeft",
+                      "akTop",
+                      "akRight"
+                    ],
+                    "Style": "orcsDropDown",
+                    "AutoSelect": true,
+                    "Caption": "",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "Enabled": false,
+                    "ItemHeight": 13,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": false,
+                    "LongList": false,
+                    "LookupPiece": 2,
+                    "MaxLength": 0,
+                    "ParentShowHint": false,
+                    "Pieces": "2",
+                    "ShowHint": false,
+                    "Sorted": true,
+                    "SynonymChars": "<>",
+                    "TabOrder": 0,
+                    "TabStop": true,
+                    "Text": "",
+                    "OnKeyDown": "cboImmKeyDown",
+                    "OnMouseClick": "cboImmMouseClick",
+                    "CharsNeedMatch": 1,
+                    "SetItemIndexOnChange": false
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

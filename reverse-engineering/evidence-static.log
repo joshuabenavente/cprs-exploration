@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "executable": {
+    "name": "CPRSChart.exe",
+    "path": "/workspace/reverse-engineering/input/cprs/CPRSChart.exe",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "bytes": 18141088,
+    "machine": "0x14c",
+    "image_base": "00400000",
+    "entry": "01224034"
+  },
+  "map_symbols": 65610,
+  "map_module_regions": 1725,
+  "managed_literal_candidates": 26025,
+  "rpc_name_candidates": 1154,
+  "normal_imports": 803,
+  "delayed_imports": 638,
+  "classes_validated": 2554,
+  "exports": 2,
+  "resources": 590,
+  "forms_decoded": 325,
+  "forms_failed": 0,
+  "form_event_bindings": 4371,
+  "archived_function_records": 165,
+  "archived_unique_functions": 147,
+  "archived_instructions_checked": 24793,
+  "archived_literals_checked": 410,
+  "archived_vmt_words_checked": 15,
+  "byte_mismatches": [],
+  "target_executed": false
+}

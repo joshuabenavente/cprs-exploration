@@ -1,0 +1,253 @@
+{
+  "class": "TfrmDCOrdersAllrgsCrrnt",
+  "name": "frmDCOrdersAllrgsCrrnt",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 316,
+    "Top": 226,
+    "Caption": "List of allergies currently recorded for the patient:",
+    "ClientHeight": 315,
+    "ClientWidth": 466,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 474,
+    "ExplicitHeight": 342,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblAllergies",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 460,
+        "Height": 16,
+        "Align": "alTop",
+        "Caption": "Allergy List:",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [
+          "fsBold"
+        ],
+        "ParentFont": false,
+        "WordWrap": true,
+        "ExplicitWidth": 82
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 22,
+        "Width": 466,
+        "Height": 228,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TCaptionListBox",
+          "name": "lstAlleries",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 460,
+            "Height": 222,
+            "Cursor": "crHandPoint",
+            "TabStop": false,
+            "Style": "lbOwnerDrawVariable",
+            "Align": "alClient",
+            "BevelWidth": 3,
+            "ExtendedSelect": false,
+            "ItemHeight": 13,
+            "TabOrder": 0,
+            "StyleElements": [
+              "seFont"
+            ],
+            "OnDrawItem": "lstAlleriesDrawItem",
+            "OnMeasureItem": "lstAlleriesMeasureItem",
+            "Caption": "The following orders will be discontinued "
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 250,
+        "Width": 466,
+        "Height": 65,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "DesignSize": [
+          466,
+          65
+        ]
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblVerifyAllrgyDisc",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 46,
+            "Width": 460,
+            "Height": 16,
+            "Align": "alBottom",
+            "Alignment": "taCenter",
+            "Caption": "Do you want to enter the allergy/adverse drug reaction for the medication being discontinued?\t'",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentFont": false,
+            "Visible": false,
+            "ExplicitTop": 49,
+            "ExplicitWidth": 563
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdYes",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 174,
+            "Top": 36,
+            "Width": 72,
+            "Height": 21,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "Caption": "&Yes",
+            "Default": true,
+            "ModalResult": 6,
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdNo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 252,
+            "Top": 36,
+            "Width": 72,
+            "Height": 21,
+            "Anchors": [
+              "akRight",
+              "akBottom"
+            ],
+            "Cancel": true,
+            "Caption": "&No",
+            "ModalResult": 7,
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TMemo",
+          "name": "mnoVerifyAllrgyDisc",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 466,
+            "Height": 34,
+            "Align": "alTop",
+            "BorderStyle": "bsNone",
+            "Color": "clBtnFace",
+            "Lines.Strings": [
+              "                              Do you want to enter the allergy/adverse drug reaction",
+              "                              for the medication being discontinued?"
+            ],
+            "TabOrder": 2
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 328,
+        "Top": 40,
+        "Data": [
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstAlleries",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdYes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdNo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmDCOrdersAllrgsCrrnt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = mnoVerifyAllrgyDisc",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

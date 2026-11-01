@@ -1,0 +1,5889 @@
+[
+  {
+    "address": "00862ab4",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "XWBHash.Encrypt",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 57,
+    "direct_calls": [
+      {
+        "site": "00862ac8",
+        "target": "0040b0c8",
+        "names": [
+          "System.@UStrAddRef"
+        ],
+        "bytes": "e8fb85baff"
+      },
+      {
+        "site": "00862adb",
+        "target": "00407e34",
+        "names": [
+          "System.Randomize"
+        ],
+        "bytes": "e85453baff"
+      },
+      {
+        "site": "00862ae5",
+        "target": "00407e84",
+        "names": [
+          "System.Random"
+        ],
+        "bytes": "e89a53baff"
+      },
+      {
+        "site": "00862af1",
+        "target": "00407e84",
+        "names": [
+          "System.Random"
+        ],
+        "bytes": "e88e53baff"
+      },
+      {
+        "site": "00862b02",
+        "target": "0040bf44",
+        "names": [
+          "System.@UStrFromWChar"
+        ],
+        "bytes": "e83d94baff"
+      },
+      {
+        "site": "00862b1f",
+        "target": "008617bc",
+        "names": [
+          "MFunStr.Translate"
+        ],
+        "bytes": "e898ecffff"
+      },
+      {
+        "site": "00862b2d",
+        "target": "0040bf44",
+        "names": [
+          "System.@UStrFromWChar"
+        ],
+        "bytes": "e81294baff"
+      },
+      {
+        "site": "00862b3c",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e8d396baff"
+      },
+      {
+        "site": "00862b56",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e8d984baff"
+      }
+    ],
+    "literal_references": [],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "00862b5c",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00862b6c",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "XWBHash.Decrypt",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 58,
+    "direct_calls": [
+      {
+        "site": "00862b82",
+        "target": "0040b0c8",
+        "names": [
+          "System.@UStrAddRef"
+        ],
+        "bytes": "e84185baff"
+      },
+      {
+        "site": "00862bd6",
+        "target": "0040c35c",
+        "names": [
+          "System.@UStrCopy"
+        ],
+        "bytes": "e88197baff"
+      },
+      {
+        "site": "00862bef",
+        "target": "008617bc",
+        "names": [
+          "MFunStr.Translate"
+        ],
+        "bytes": "e8c8ebffff"
+      },
+      {
+        "site": "00862c04",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8cb83baff"
+      },
+      {
+        "site": "00862c0c",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8c383baff"
+      }
+    ],
+    "literal_references": [],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "00862c12",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "0099f5dc",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "Trpcb.TRPCBroker.CreateContext",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 128,
+    "direct_calls": [
+      {
+        "site": "0099f5f6",
+        "target": "0040b0c8",
+        "names": [
+          "System.@UStrAddRef"
+        ],
+        "bytes": "e8cdbaa6ff"
+      },
+      {
+        "site": "0099f635",
+        "target": "0099f1d0",
+        "names": [
+          "Trpcb.TRPCBroker.Create"
+        ],
+        "bytes": "e896fbffff"
+      },
+      {
+        "site": "0099f698",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e827bda6ff"
+      },
+      {
+        "site": "0099f6a5",
+        "target": "0099f124",
+        "names": [
+          "Trpcb.TParams.GetParameter"
+        ],
+        "bytes": "e87afaffff"
+      },
+      {
+        "site": "0099f6b6",
+        "target": "0099f124",
+        "names": [
+          "Trpcb.TParams.GetParameter"
+        ],
+        "bytes": "e869faffff"
+      },
+      {
+        "site": "0099f6c5",
+        "target": "00862ab4",
+        "names": [
+          "XWBHash.Encrypt"
+        ],
+        "bytes": "e8ea33ecff"
+      },
+      {
+        "site": "0099f6ce",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e8f1bca6ff"
+      },
+      {
+        "site": "0099f6f4",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e82bcca6ff"
+      },
+      {
+        "site": "0099f708",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e8b7bca6ff"
+      },
+      {
+        "site": "0099f719",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8b6b8a6ff"
+      },
+      {
+        "site": "0099f78b",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e834bca6ff"
+      },
+      {
+        "site": "0099f7a5",
+        "target": "004090bc",
+        "names": [
+          "System.TObject.Free"
+        ],
+        "bytes": "e81299a6ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "0099f693",
+        "instruction": "MOV EDX,0x99f7f8",
+        "literal": {
+          "address": "0099f7f8",
+          "header_address": "0099f7ec",
+          "file_offset": 5893112,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 18,
+          "text": "XWB CREATE CONTEXT",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0099f6ef",
+        "instruction": "MOV EDX,0x99f82c",
+        "literal": {
+          "address": "0099f82c",
+          "header_address": "0099f820",
+          "file_offset": 5893164,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "1",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "0099f610",
+        "instruction": "CALL dword ptr [ECX + 0x4c]"
+      },
+      {
+        "site": "0099f671",
+        "instruction": "CALL dword ptr [ECX + 0x54]"
+      },
+      {
+        "site": "0099f6e9",
+        "instruction": "CALL dword ptr [ECX + 0x74]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "0099f7ab",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "0099f884",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "Trpcb.TRPCBroker.Call",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 40,
+    "direct_calls": [
+      {
+        "site": "0099f892",
+        "target": "004d81f4",
+        "names": [
+          "System.Classes.TStringList.Create"
+        ],
+        "bytes": "e85d89b3ff"
+      },
+      {
+        "site": "0099f8e1",
+        "target": "004090bc",
+        "names": [
+          "System.TObject.Free"
+        ],
+        "bytes": "e8d697a6ff"
+      }
+    ],
+    "literal_references": [],
+    "indirect_calls": [
+      {
+        "site": "0099f8b4",
+        "instruction": "CALL dword ptr [ECX + 0x48]"
+      },
+      {
+        "site": "0099f8be",
+        "instruction": "CALL dword ptr [ECX + 0x6c]"
+      },
+      {
+        "site": "0099f8c9",
+        "instruction": "CALL dword ptr [ECX + 0x44]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "0099f8e7",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "0099f938",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "Trpcb.TRPCBroker.SetConnected",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 421,
+    "direct_calls": [
+      {
+        "site": "0099f966",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e869b6a6ff"
+      },
+      {
+        "site": "0099f976",
+        "target": "009a1a80",
+        "names": [
+          "Trpcb.TVistaLogin.SetErrorText"
+        ],
+        "bytes": "e805210000"
+      },
+      {
+        "site": "0099f9c3",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e85cc9a6ff"
+      },
+      {
+        "site": "0099f9e3",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8ecb5a6ff"
+      },
+      {
+        "site": "0099f9f0",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8dfb5a6ff"
+      },
+      {
+        "site": "0099f9fd",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8d2b5a6ff"
+      },
+      {
+        "site": "0099fa0a",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8c5b5a6ff"
+      },
+      {
+        "site": "0099fa33",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e88cb9a6ff"
+      },
+      {
+        "site": "0099fa4a",
+        "target": "009a0b90",
+        "names": [
+          "Trpcb.ExistingSocket"
+        ],
+        "bytes": "e841110000"
+      },
+      {
+        "site": "0099fa88",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e87fb9a6ff"
+      },
+      {
+        "site": "0099fa95",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e872b9a6ff"
+      },
+      {
+        "site": "0099faa2",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e865b9a6ff"
+      },
+      {
+        "site": "0099fab8",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e857c7a6ff"
+      },
+      {
+        "site": "0099fac6",
+        "target": "006aa85c",
+        "names": [
+          "Vcl.Dialogs.ShowMessagePos"
+        ],
+        "bytes": "e891add0ff"
+      },
+      {
+        "site": "0099face",
+        "target": "009a2b7c",
+        "names": [
+          "Trpcb.TRPCBroker.CheckSSH"
+        ],
+        "bytes": "e8a9300000"
+      },
+      {
+        "site": "0099fae8",
+        "target": "009a2e38",
+        "names": [
+          "Trpcb.TRPCBroker.StartSecureConnection"
+        ],
+        "bytes": "e84b330000"
+      },
+      {
+        "site": "0099fb01",
+        "target": "0042d1fc",
+        "names": [
+          "System.SysUtils.StrToInt"
+        ],
+        "bytes": "e8f6d6a8ff"
+      },
+      {
+        "site": "0099fb19",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e8eeb8a6ff"
+      },
+      {
+        "site": "0099fb39",
+        "target": "0099094c",
+        "names": [
+          "Wsockc.TXWBWinsock.NetworkConnect"
+        ],
+        "bytes": "e80e0effff"
+      },
+      {
+        "site": "0099fb47",
+        "target": "009a0b94",
+        "names": [
+          "Trpcb.AuthenticateUser"
+        ],
+        "bytes": "e848100000"
+      },
+      {
+        "site": "0099fb4f",
+        "target": "009a0934",
+        "names": [
+          "Trpcb.StoreConnection"
+        ],
+        "bytes": "e8e00d0000"
+      },
+      {
+        "site": "0099fb5c",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e873b4a6ff"
+      },
+      {
+        "site": "0099fb8e",
+        "target": "009a1e10",
+        "names": [
+          "Trpcb.TRPCBroker.GetCCOWHandle"
+        ],
+        "bytes": "e87d220000"
+      },
+      {
+        "site": "0099fb9b",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e824b8a6ff"
+      },
+      {
+        "site": "0099fbd1",
+        "target": "0077a20c",
+        "names": [
+          "Vcl.OleCtrls.TOleControl.Create"
+        ],
+        "bytes": "e836a6ddff"
+      },
+      {
+        "site": "0099fbef",
+        "target": "0040c18c",
+        "names": [
+          "System.@UStrCat3"
+        ],
+        "bytes": "e898c5a6ff"
+      },
+      {
+        "site": "0099fbfa",
+        "target": "0040c028",
+        "names": [
+          "System.@WStrFromUStr"
+        ],
+        "bytes": "e829c4a6ff"
+      },
+      {
+        "site": "0099fc0a",
+        "target": "008638a8",
+        "names": [
+          "VERGENCECONTEXTORLib_TLB.TContextorControl.Run"
+        ],
+        "bytes": "e8993cecff"
+      },
+      {
+        "site": "0099fc33",
+        "target": "009a1f84",
+        "names": [
+          "Trpcb.TRPCBroker.CCOWsetUser"
+        ],
+        "bytes": "e84c230000"
+      },
+      {
+        "site": "0099fc45",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e87ab7a6ff"
+      },
+      {
+        "site": "0099fc58",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e867b7a6ff"
+      },
+      {
+        "site": "0099fc6a",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e855b7a6ff"
+      },
+      {
+        "site": "0099fc83",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e83cb7a6ff"
+      },
+      {
+        "site": "0099fcae",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e811b7a6ff"
+      },
+      {
+        "site": "0099fcc7",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e8f8b6a6ff"
+      },
+      {
+        "site": "0099fccf",
+        "target": "004090bc",
+        "names": [
+          "System.TObject.Free"
+        ],
+        "bytes": "e8e893a6ff"
+      },
+      {
+        "site": "0099fd12",
+        "target": "006b860c",
+        "names": [
+          "Vcl.ExtCtrls.TTimer.SetEnabled"
+        ],
+        "bytes": "e8f588d1ff"
+      },
+      {
+        "site": "0099fd26",
+        "target": "009a0934",
+        "names": [
+          "Trpcb.StoreConnection"
+        ],
+        "bytes": "e8090c0000"
+      },
+      {
+        "site": "0099fd33",
+        "target": "006b860c",
+        "names": [
+          "Vcl.ExtCtrls.TTimer.SetEnabled"
+        ],
+        "bytes": "e8d488d1ff"
+      },
+      {
+        "site": "0099fd5f",
+        "target": "004093a4",
+        "names": [
+          "System.@IsClass"
+        ],
+        "bytes": "e84096a6ff"
+      },
+      {
+        "site": "0099fd6d",
+        "target": "006026ac",
+        "names": [
+          "Vcl.Controls.TControl.GetText"
+        ],
+        "bytes": "e83a29c6ff"
+      },
+      {
+        "site": "0099fd81",
+        "target": "0040c4b0",
+        "names": [
+          "System.@UStrPos"
+        ],
+        "bytes": "e82ac7a6ff"
+      },
+      {
+        "site": "0099fd8f",
+        "target": "006026ac",
+        "names": [
+          "Vcl.Controls.TControl.GetText"
+        ],
+        "bytes": "e81829c6ff"
+      },
+      {
+        "site": "0099fd9c",
+        "target": "0040c134",
+        "names": [
+          "System.@UStrCat"
+        ],
+        "bytes": "e893c3a6ff"
+      },
+      {
+        "site": "0099fda6",
+        "target": "006026fc",
+        "names": [
+          "Vcl.Controls.TControl.SetText"
+        ],
+        "bytes": "e85129c6ff"
+      },
+      {
+        "site": "0099feb5",
+        "target": "006b860c",
+        "names": [
+          "Vcl.ExtCtrls.TTimer.SetEnabled"
+        ],
+        "bytes": "e85287d1ff"
+      },
+      {
+        "site": "0099febd",
+        "target": "009a0aa8",
+        "names": [
+          "Trpcb.RemoveConnection"
+        ],
+        "bytes": "e8e60b0000"
+      },
+      {
+        "site": "0099fed8",
+        "target": "00408cc8",
+        "names": [
+          "System.@BoundErr"
+        ],
+        "bytes": "e8eb8da6ff"
+      },
+      {
+        "site": "0099fee6",
+        "target": "00990a00",
+        "names": [
+          "Wsockc.TXWBWinsock.NetworkDisconnect"
+        ],
+        "bytes": "e8150bffff"
+      },
+      {
+        "site": "0099ff08",
+        "target": "0041b3c8",
+        "names": [
+          "Winapi.Windows.TerminateProcess"
+        ],
+        "bytes": "e8bbb4a7ff"
+      },
+      {
+        "site": "0099ff1d",
+        "target": "004093a4",
+        "names": [
+          "System.@IsClass"
+        ],
+        "bytes": "e88294a6ff"
+      },
+      {
+        "site": "0099ff2f",
+        "target": "006026ac",
+        "names": [
+          "Vcl.Controls.TControl.GetText"
+        ],
+        "bytes": "e87827c6ff"
+      },
+      {
+        "site": "0099ff43",
+        "target": "0040c4b0",
+        "names": [
+          "System.@UStrPos"
+        ],
+        "bytes": "e868c5a6ff"
+      },
+      {
+        "site": "0099ff64",
+        "target": "006026ac",
+        "names": [
+          "Vcl.Controls.TControl.GetText"
+        ],
+        "bytes": "e84327c6ff"
+      },
+      {
+        "site": "0099ff6e",
+        "target": "006026ac",
+        "names": [
+          "Vcl.Controls.TControl.GetText"
+        ],
+        "bytes": "e83927c6ff"
+      },
+      {
+        "site": "0099ff90",
+        "target": "0040c35c",
+        "names": [
+          "System.@UStrCopy"
+        ],
+        "bytes": "e8c7c3a6ff"
+      },
+      {
+        "site": "0099ff9a",
+        "target": "006026fc",
+        "names": [
+          "Vcl.Controls.TControl.SetText"
+        ],
+        "bytes": "e85d27c6ff"
+      },
+      {
+        "site": "0099ffaf",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e820b0a6ff"
+      },
+      {
+        "site": "0099ffd3",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e85cb0a6ff"
+      },
+      {
+        "site": "0099ffdb",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8f4afa6ff"
+      },
+      {
+        "site": "0099ffe3",
+        "target": "0040b01c",
+        "names": [
+          "System.@WStrClr"
+        ],
+        "bytes": "e834b0a6ff"
+      },
+      {
+        "site": "0099fff0",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e83fb0a6ff"
+      },
+      {
+        "site": "0099fffd",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e832b0a6ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "0099fa83",
+        "instruction": "MOV EDX,0x9a0020",
+        "literal": {
+          "address": "009a0020",
+          "header_address": "009a0014",
+          "file_offset": 5895200,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 114,
+          "text": "Control of debugging has been moved from the client to the server. To start a Debug session, do the following:\r\n\r\n",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0099fa90",
+        "instruction": "MOV EDX,0x9a0114",
+        "literal": {
+          "address": "009a0114",
+          "header_address": "009a0108",
+          "file_offset": 5895444,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 162,
+          "text": "1. On the server, set initial breakpoints where desired.\r\n2. DO DEBUG^XWBTCPM.\r\n3. Enter a unique Listener port number (i.e., a port number not in general use).\r\n",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0099fa9d",
+        "instruction": "MOV EDX,0x9a0268",
+        "literal": {
+          "address": "009a0268",
+          "header_address": "009a025c",
+          "file_offset": 5895784,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 75,
+          "text": "4. Connect the client application using the port number entered in Step #3.",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0099fc40",
+        "instruction": "MOV EDX,0x9a0340",
+        "literal": {
+          "address": "009a0340",
+          "header_address": "009a0334",
+          "file_offset": 5896000,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 24,
+          "text": "user.id.logon.vistalogon",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0099fc65",
+        "instruction": "MOV EDX,0x9a0380",
+        "literal": {
+          "address": "009a0380",
+          "header_address": "009a0374",
+          "file_offset": 5896064,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 23,
+          "text": "user.id.logon.vistaname",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0099fca9",
+        "instruction": "MOV EDX,0x9a03bc",
+        "literal": {
+          "address": "009a03bc",
+          "header_address": "009a03b0",
+          "file_offset": 5896124,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 18,
+          "text": "user.id.logon.vpid",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0099fd7c",
+        "instruction": "MOV EAX,0x9a0434",
+        "literal": {
+          "address": "009a0434",
+          "header_address": "009a0428",
+          "file_offset": 5896244,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 23,
+          "text": "(SSH Secure connection)",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0099fd97",
+        "instruction": "MOV EDX,0x9a0470",
+        "literal": {
+          "address": "009a0470",
+          "header_address": "009a0464",
+          "file_offset": 5896304,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 24,
+          "text": " (SSH Secure connection)",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0099ff3e",
+        "instruction": "MOV EAX,0x9a0434",
+        "literal": {
+          "address": "009a0434",
+          "header_address": "009a0428",
+          "file_offset": 5896244,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 23,
+          "text": "(SSH Secure connection)",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "0099fd1e",
+        "instruction": "CALL dword ptr [ECX + 0x78]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "0099ffb5",
+        "instruction": "JMP EAX"
+      },
+      {
+        "site": "009a0003",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "009a2e38",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "Trpcb.TRPCBroker.StartSecureConnection",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 146,
+    "direct_calls": [
+      {
+        "site": "009a2e72",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e84d85a6ff"
+      },
+      {
+        "site": "009a2e86",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e851a1a8ff"
+      },
+      {
+        "site": "009a2e90",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e82f85a6ff"
+      },
+      {
+        "site": "009a2e9a",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e82585a6ff"
+      },
+      {
+        "site": "009a2ead",
+        "target": "009a2dc8",
+        "names": [
+          "Trpcb.TRPCBroker.getSSHUsername"
+        ],
+        "bytes": "e816ffffff"
+      },
+      {
+        "site": "009a2ebb",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e80485a6ff"
+      },
+      {
+        "site": "009a2ed5",
+        "target": "00512534",
+        "names": [
+          "System.StrUtils.AnsiContainsText"
+        ],
+        "bytes": "e85af6b6ff"
+      },
+      {
+        "site": "009a2ef3",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e8e4a0a8ff"
+      },
+      {
+        "site": "009a2f03",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e80c93a6ff"
+      },
+      {
+        "site": "009a2f1f",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e8b8a0a8ff"
+      },
+      {
+        "site": "009a2f2f",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e8e092a6ff"
+      },
+      {
+        "site": "009a2f61",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e8ae92a6ff"
+      },
+      {
+        "site": "009a2f7d",
+        "target": "009a2e00",
+        "names": [
+          "Trpcb.TRPCBroker.getSSHPassWord"
+        ],
+        "bytes": "e87efeffff"
+      },
+      {
+        "site": "009a2f8b",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e83484a6ff"
+      },
+      {
+        "site": "009a2fa4",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e833a0a8ff"
+      },
+      {
+        "site": "009a2fb4",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e85b92a6ff"
+      },
+      {
+        "site": "009a2fe7",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e82892a6ff"
+      },
+      {
+        "site": "009a2ffc",
+        "target": "00996390",
+        "names": [
+          "RpcSLogin.StartProgSLogin"
+        ],
+        "bytes": "e88f33ffff"
+      },
+      {
+        "site": "009a300d",
+        "target": "00996390",
+        "names": [
+          "RpcSLogin.StartProgSLogin"
+        ],
+        "bytes": "e87e33ffff"
+      },
+      {
+        "site": "009a3017",
+        "target": "0041b398",
+        "names": [
+          "Winapi.Windows.Sleep"
+        ],
+        "bytes": "e87c83a7ff"
+      },
+      {
+        "site": "009a3046",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e8e97fa6ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "009a2ed0",
+        "instruction": "MOV EDX,0x9a306c",
+        "literal": {
+          "address": "009a306c",
+          "header_address": "009a3060",
+          "file_offset": 5907564,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": ":",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2ee0",
+        "instruction": "PUSH 0x9a307c",
+        "literal": {
+          "address": "009a307c",
+          "header_address": "009a3070",
+          "file_offset": 5907580,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "/",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2ee8",
+        "instruction": "PUSH 0x9a307c",
+        "literal": {
+          "address": "009a307c",
+          "header_address": "009a3070",
+          "file_offset": 5907580,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "/",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2f0c",
+        "instruction": "PUSH 0x9a306c",
+        "literal": {
+          "address": "009a306c",
+          "header_address": "009a3060",
+          "file_offset": 5907564,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": ":",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2f14",
+        "instruction": "PUSH 0x9a306c",
+        "literal": {
+          "address": "009a306c",
+          "header_address": "009a3060",
+          "file_offset": 5907564,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": ":",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2f34",
+        "instruction": "PUSH 0x9a308c",
+        "literal": {
+          "address": "009a308c",
+          "header_address": "009a3080",
+          "file_offset": 5907596,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 7,
+          "text": "SSH -L ",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2f3c",
+        "instruction": "PUSH 0x9a30a8",
+        "literal": {
+          "address": "009a30a8",
+          "header_address": "009a309c",
+          "file_offset": 5907624,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 29,
+          "text": " -S -o \"TryEmptyPassword yes\"",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2f41",
+        "instruction": "PUSH 0x9a30f0",
+        "literal": {
+          "address": "009a30f0",
+          "header_address": "009a30e4",
+          "file_offset": 5907696,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 18,
+          "text": " -o \"FipsMode yes\"",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2f46",
+        "instruction": "PUSH 0x9a3124",
+        "literal": {
+          "address": "009a3124",
+          "header_address": "009a3118",
+          "file_offset": 5907748,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 55,
+          "text": " -o \"StrictHostKeyChecking no\" -o \"connectionReuse no\" ",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2f51",
+        "instruction": "PUSH 0x9a31a0",
+        "literal": {
+          "address": "009a31a0",
+          "header_address": "009a3194",
+          "file_offset": 5907872,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "@",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2f92",
+        "instruction": "PUSH 0x9a306c",
+        "literal": {
+          "address": "009a306c",
+          "header_address": "009a3060",
+          "file_offset": 5907564,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": ":",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2f99",
+        "instruction": "PUSH 0x9a306c",
+        "literal": {
+          "address": "009a306c",
+          "header_address": "009a3060",
+          "file_offset": 5907564,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": ":",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2fb9",
+        "instruction": "PUSH 0x9a31b0",
+        "literal": {
+          "address": "009a31b0",
+          "header_address": "009a31a4",
+          "file_offset": 5907888,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 13,
+          "text": "plink.exe -L ",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2fc1",
+        "instruction": "PUSH 0x9a31d8",
+        "literal": {
+          "address": "009a31d8",
+          "header_address": "009a31cc",
+          "file_offset": 5907928,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": " ",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2fcc",
+        "instruction": "PUSH 0x9a31a0",
+        "literal": {
+          "address": "009a31a0",
+          "header_address": "009a3194",
+          "file_offset": 5907872,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "@",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009a2fd4",
+        "instruction": "PUSH 0x9a31e8",
+        "literal": {
+          "address": "009a31e8",
+          "header_address": "009a31dc",
+          "file_offset": 5907944,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 5,
+          "text": " -pw ",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "009a304c",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "009ae314",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "ORNet.CallBrokerInContext",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 153,
+    "direct_calls": [
+      {
+        "site": "009ae33e",
+        "target": "009acd20",
+        "names": [
+          "ORNet.LockBroker"
+        ],
+        "bytes": "e8dde9ffff"
+      },
+      {
+        "site": "009ae38c",
+        "target": "009b0784",
+        "names": [
+          "ORUnitTesting.FindMockRPC"
+        ],
+        "bytes": "e8f3230000"
+      },
+      {
+        "site": "009ae3b6",
+        "target": "009b0450",
+        "names": [
+          "ORUnitTesting.ParamToStr"
+        ],
+        "bytes": "e895200000"
+      },
+      {
+        "site": "009ae3c6",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e849dea5ff"
+      },
+      {
+        "site": "009ae3d5",
+        "target": "00435fa0",
+        "names": [
+          "System.SysUtils.Exception.Create"
+        ],
+        "bytes": "e8c67ba8ff"
+      },
+      {
+        "site": "009ae3da",
+        "target": "0040a640",
+        "names": [
+          "System.@RaiseExcept"
+        ],
+        "bytes": "e861c2a5ff"
+      },
+      {
+        "site": "009ae3ed",
+        "target": "0040a734",
+        "names": [
+          "System.@TryFinallyExit"
+        ],
+        "bytes": "e842c3a5ff"
+      },
+      {
+        "site": "009ae44f",
+        "target": "0040c18c",
+        "names": [
+          "System.@UStrCat3"
+        ],
+        "bytes": "e838dda5ff"
+      },
+      {
+        "site": "009ae465",
+        "target": "009b60ec",
+        "names": [
+          "ORFn.StatusText"
+        ],
+        "bytes": "e8827c0000"
+      },
+      {
+        "site": "009ae481",
+        "target": "0040a734",
+        "names": [
+          "System.@TryFinallyExit"
+        ],
+        "bytes": "e8aec2a5ff"
+      },
+      {
+        "site": "009ae486",
+        "target": "0040a734",
+        "names": [
+          "System.@TryFinallyExit"
+        ],
+        "bytes": "e8a9c2a5ff"
+      },
+      {
+        "site": "009ae495",
+        "target": "009b00e8",
+        "names": [
+          "ORNet.TCallList.Lock"
+        ],
+        "bytes": "e84e1c0000"
+      },
+      {
+        "site": "009ae4b1",
+        "target": "009aff74",
+        "names": [
+          "ORNet.TCallList.Delete"
+        ],
+        "bytes": "e8be1a0000"
+      },
+      {
+        "site": "009ae4bb",
+        "target": "009b0020",
+        "names": [
+          "ORNet.TCallList.GetCount"
+        ],
+        "bytes": "e8601b0000"
+      },
+      {
+        "site": "009ae4da",
+        "target": "009b00f4",
+        "names": [
+          "ORNet.TCallList.Unlock"
+        ],
+        "bytes": "e8151c0000"
+      },
+      {
+        "site": "009aebc5",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e86ac4a5ff"
+      },
+      {
+        "site": "009aebd5",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e85ac4a5ff"
+      },
+      {
+        "site": "009aebe2",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e84dc4a5ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "009ae397",
+        "instruction": "PUSH 0x9aec08",
+        "literal": {
+          "address": "009aec08",
+          "header_address": "009aebfc",
+          "file_offset": 5955592,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 9,
+          "text": "No Mock \"",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009ae3a4",
+        "instruction": "PUSH 0x9aec28",
+        "literal": {
+          "address": "009aec28",
+          "header_address": "009aec1c",
+          "file_offset": 5955624,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 22,
+          "text": "\" RPC with parameters:",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009ae44a",
+        "instruction": "MOV ECX,0x9aec64",
+        "literal": {
+          "address": "009aec64",
+          "header_address": "009aec58",
+          "file_offset": 5955684,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 19,
+          "text": " (CallBroker begin)",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "009ae36f",
+        "instruction": "CALL dword ptr [EDX + 0x48]"
+      },
+      {
+        "site": "009ae3e7",
+        "instruction": "CALL dword ptr [ECX + 0x8]"
+      },
+      {
+        "site": "009ae41f",
+        "instruction": "CALL dword ptr [ECX + 0x44]"
+      },
+      {
+        "site": "009ae47e",
+        "instruction": "CALL dword ptr [ECX + 0x48]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "009ae4e0",
+        "instruction": "JMP EAX"
+      },
+      {
+        "site": "009aebe8",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "009af1ec",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "ORNet.CallBroker",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 28,
+    "direct_calls": [
+      {
+        "site": "009af1f6",
+        "target": "009acd20",
+        "names": [
+          "ORNet.LockBroker"
+        ],
+        "bytes": "e825dbffff"
+      },
+      {
+        "site": "009af20e",
+        "target": "009ae170",
+        "names": [
+          "ORNet.UpdateContext"
+        ],
+        "bytes": "e85defffff"
+      },
+      {
+        "site": "009af217",
+        "target": "009ae314",
+        "names": [
+          "ORNet.CallBrokerInContext"
+        ],
+        "bytes": "e8f8f0ffff"
+      },
+      {
+        "site": "009af22c",
+        "target": "009acd2c",
+        "names": [
+          "ORNet.UnlockBroker"
+        ],
+        "bytes": "e8fbdaffff"
+      }
+    ],
+    "literal_references": [],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "009af232",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "009af2c4",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "ORNet.ConnectToServer",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 161,
+    "direct_calls": [
+      {
+        "site": "009af303",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8ccbca5ff"
+      },
+      {
+        "site": "009af30b",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8c4bca5ff"
+      },
+      {
+        "site": "009af310",
+        "target": "00407d54",
+        "names": [
+          "System.ParamCount"
+        ],
+        "bytes": "e83f8aa5ff"
+      },
+      {
+        "site": "009af329",
+        "target": "00407db8",
+        "names": [
+          "System.ParamStr"
+        ],
+        "bytes": "e88a8aa5ff"
+      },
+      {
+        "site": "009af334",
+        "target": "0042c1a8",
+        "names": [
+          "System.SysUtils.UpperCase"
+        ],
+        "bytes": "e86fcea7ff"
+      },
+      {
+        "site": "009af341",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8decfa5ff"
+      },
+      {
+        "site": "009af357",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8c8cfa5ff"
+      },
+      {
+        "site": "009af36d",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8b2cfa5ff"
+      },
+      {
+        "site": "009af380",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e89fcfa5ff"
+      },
+      {
+        "site": "009af396",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e889cfa5ff"
+      },
+      {
+        "site": "009af3b1",
+        "target": "009b2f6c",
+        "names": [
+          "ORFn.Piece"
+        ],
+        "bytes": "e8b63b0000"
+      },
+      {
+        "site": "009af3be",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e861cfa5ff"
+      },
+      {
+        "site": "009af3cd",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e852cfa5ff"
+      },
+      {
+        "site": "009af3dd",
+        "target": "00407db8",
+        "names": [
+          "System.ParamStr"
+        ],
+        "bytes": "e8d689a5ff"
+      },
+      {
+        "site": "009af3ee",
+        "target": "009b2f6c",
+        "names": [
+          "ORFn.Piece"
+        ],
+        "bytes": "e8793b0000"
+      },
+      {
+        "site": "009af3fb",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e824cfa5ff"
+      },
+      {
+        "site": "009af40a",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e815cfa5ff"
+      },
+      {
+        "site": "009af41a",
+        "target": "00407db8",
+        "names": [
+          "System.ParamStr"
+        ],
+        "bytes": "e89989a5ff"
+      },
+      {
+        "site": "009af42b",
+        "target": "009b2f6c",
+        "names": [
+          "ORFn.Piece"
+        ],
+        "bytes": "e83c3b0000"
+      },
+      {
+        "site": "009af44a",
+        "target": "0099916c",
+        "names": [
+          "Rpcconf1.GetServerInfo"
+        ],
+        "bytes": "e81d9dfeff"
+      },
+      {
+        "site": "009af466",
+        "target": "009ace6c",
+        "names": [
+          "ORNet.EnsureBroker"
+        ],
+        "bytes": "e801daffff"
+      },
+      {
+        "site": "009af47f",
+        "target": "0042d238",
+        "names": [
+          "System.SysUtils.StrToIntDef"
+        ],
+        "bytes": "e8b4dda7ff"
+      },
+      {
+        "site": "009af48d",
+        "target": "009af244",
+        "names": [
+          "ORNet.SetBrokerServer"
+        ],
+        "bytes": "e8b2fdffff"
+      },
+      {
+        "site": "009af495",
+        "target": "009af288",
+        "names": [
+          "ORNet.AuthorizedOption"
+        ],
+        "bytes": "e8eefdffff"
+      },
+      {
+        "site": "009af52a",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e805bba5ff"
+      },
+      {
+        "site": "009af537",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e8f8baa5ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "009af33c",
+        "instruction": "MOV EDX,0x9af55c",
+        "literal": {
+          "address": "009af55c",
+          "header_address": "009af550",
+          "file_offset": 5957980,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 12,
+          "text": "RPCRETRYTEST",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009af352",
+        "instruction": "MOV EDX,0x9af584",
+        "literal": {
+          "address": "009af584",
+          "header_address": "009af578",
+          "file_offset": 5958020,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 12,
+          "text": "RPCRETRYFAIL",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009af368",
+        "instruction": "MOV EDX,0x9af5ac",
+        "literal": {
+          "address": "009af5ac",
+          "header_address": "009af5a0",
+          "file_offset": 5958060,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 5,
+          "text": "DEBUG",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009af37b",
+        "instruction": "MOV EDX,0x9af5c4",
+        "literal": {
+          "address": "009af5c4",
+          "header_address": "009af5b8",
+          "file_offset": 5958084,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 8,
+          "text": "SHOWRPCS",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009af391",
+        "instruction": "MOV EDX,0x9af5e4",
+        "literal": {
+          "address": "009af5e4",
+          "header_address": "009af5d8",
+          "file_offset": 5958116,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 9,
+          "text": "SHOWCERTS",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009af3b9",
+        "instruction": "MOV EDX,0x9af604",
+        "literal": {
+          "address": "009af604",
+          "header_address": "009af5f8",
+          "file_offset": 5958148,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "S",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009af3c8",
+        "instruction": "MOV EDX,0x9af614",
+        "literal": {
+          "address": "009af614",
+          "header_address": "009af608",
+          "file_offset": 5958164,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 6,
+          "text": "SERVER",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009af3f6",
+        "instruction": "MOV EDX,0x9af630",
+        "literal": {
+          "address": "009af630",
+          "header_address": "009af624",
+          "file_offset": 5958192,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "P",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "009af405",
+        "instruction": "MOV EDX,0x9af640",
+        "literal": {
+          "address": "009af640",
+          "header_address": "009af634",
+          "file_offset": 5958208,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 4,
+          "text": "PORT",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "009af4b5",
+        "instruction": "CALL dword ptr [ECX + 0x58]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "009af53d",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00a0b3e0",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rTIU.CosignDocument",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 35,
+    "direct_calls": [
+      {
+        "site": "00a0b413",
+        "target": "009ad924",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e80c25faff"
+      },
+      {
+        "site": "00a0b420",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8ff0ea0ff"
+      },
+      {
+        "site": "00a0b438",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e897fb9fff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "00a0b40e",
+        "instruction": "MOV EAX,0xa0b45c",
+        "literal": {
+          "address": "00a0b45c",
+          "header_address": "00a0b450",
+          "file_offset": 6334556,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 26,
+          "text": "TIU WHICH SIGNATURE ACTION",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00a0b41b",
+        "instruction": "MOV EDX,0xa0b4a0",
+        "literal": {
+          "address": "00a0b4a0",
+          "header_address": "00a0b494",
+          "file_offset": 6334624,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 11,
+          "text": "COSIGNATURE",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "00a0b43e",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00a0c6fc",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rTIU.SignDocument",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 63,
+    "direct_calls": [
+      {
+        "site": "00a0c747",
+        "target": "009ad924",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e8d811faff"
+      },
+      {
+        "site": "00a0c75c",
+        "target": "009b2f6c",
+        "names": [
+          "ORFn.Piece"
+        ],
+        "bytes": "e80b68faff"
+      },
+      {
+        "site": "00a0c769",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8b6fb9fff"
+      },
+      {
+        "site": "00a0c783",
+        "target": "009b2f6c",
+        "names": [
+          "ORFn.Piece"
+        ],
+        "bytes": "e8e467faff"
+      },
+      {
+        "site": "00a0c78e",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e831ec9fff"
+      },
+      {
+        "site": "00a0c7a8",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e887e89fff"
+      },
+      {
+        "site": "00a0c7b0",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e81fe89fff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "00a0c742",
+        "instruction": "MOV EAX,0xa0c7d4",
+        "literal": {
+          "address": "00a0c7d4",
+          "header_address": "00a0c7c8",
+          "file_offset": 6339540,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 15,
+          "text": "TIU SIGN RECORD",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00a0c764",
+        "instruction": "MOV EDX,0xa0c800",
+        "literal": {
+          "address": "00a0c800",
+          "header_address": "00a0c7f4",
+          "file_offset": 6339584,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "0",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "00a0c7b6",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00a0d360",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rTIU.Submit",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 86,
+    "direct_calls": [
+      {
+        "site": "00a0d384",
+        "target": "004d81f4",
+        "names": [
+          "System.Classes.TStringList.Create"
+        ],
+        "bytes": "e86baeacff"
+      },
+      {
+        "site": "00a0d3fd",
+        "target": "009ada80",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e87e06faff"
+      },
+      {
+        "site": "00a0d428",
+        "target": "009b2f6c",
+        "names": [
+          "ORFn.Piece"
+        ],
+        "bytes": "e83f5bfaff"
+      },
+      {
+        "site": "00a0d436",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e889df9fff"
+      },
+      {
+        "site": "00a0d44b",
+        "target": "004090bc",
+        "names": [
+          "System.TObject.Free"
+        ],
+        "bytes": "e86cbc9fff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "00a0d3f8",
+        "instruction": "MOV EAX,0xa0d48c",
+        "literal": {
+          "address": "00a0d48c",
+          "header_address": "00a0d480",
+          "file_offset": 6342796,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 21,
+          "text": "TIU SET DOCUMENT TEXT",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00a0d431",
+        "instruction": "MOV EDX,0xa0d4c4",
+        "literal": {
+          "address": "00a0d4c4",
+          "header_address": "00a0d4b8",
+          "file_offset": 6342852,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 32,
+          "text": "An error occurred on the server.",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "00a0d407",
+        "instruction": "CALL dword ptr [EDX + 0x14]"
+      },
+      {
+        "site": "00a0d419",
+        "instruction": "CALL dword ptr [EBX + 0xc]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "00a0d451",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00ae6cb0",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "uVitals.ViewPatientVitals",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 237,
+    "direct_calls": [
+      {
+        "site": "00ae6cd5",
+        "target": "0040b0c8",
+        "names": [
+          "System.@UStrAddRef"
+        ],
+        "bytes": "e8ee4392ff"
+      },
+      {
+        "site": "00ae6ce3",
+        "target": "0040c99c",
+        "names": [
+          "System.@InitializeRecord"
+        ],
+        "bytes": "e8b45c92ff"
+      },
+      {
+        "site": "00ae6cfe",
+        "target": "0040b4b4",
+        "names": [
+          "System.@LStrLAsg"
+        ],
+        "bytes": "e8b14792ff"
+      },
+      {
+        "site": "00ae6d09",
+        "target": "00ae6bd4",
+        "names": [
+          "uVitals.LoadVitalsDLL"
+        ],
+        "bytes": "e8c6feffff"
+      },
+      {
+        "site": "00ae6d48",
+        "target": "0040b920",
+        "names": [
+          "System.@LStrToPChar"
+        ],
+        "bytes": "e8d34b92ff"
+      },
+      {
+        "site": "00ae6d54",
+        "target": "0041b080",
+        "names": [
+          "Winapi.Windows.GetProcAddress"
+        ],
+        "bytes": "e8274393ff"
+      },
+      {
+        "site": "00ae6d70",
+        "target": "00431328",
+        "names": [
+          "System.SysUtils.Now"
+        ],
+        "bytes": "e8b3a594ff"
+      },
+      {
+        "site": "00ae6d93",
+        "target": "00432550",
+        "names": [
+          "System.SysUtils.FormatDateTime"
+        ],
+        "bytes": "e8b8b794ff"
+      },
+      {
+        "site": "00ae6d9a",
+        "target": "00431328",
+        "names": [
+          "System.SysUtils.Now"
+        ],
+        "bytes": "e889a594ff"
+      },
+      {
+        "site": "00ae6dab",
+        "target": "00431378",
+        "names": [
+          "System.SysUtils.IncMonth"
+        ],
+        "bytes": "e8c8a594ff"
+      },
+      {
+        "site": "00ae6dc8",
+        "target": "00432550",
+        "names": [
+          "System.SysUtils.FormatDateTime"
+        ],
+        "bytes": "e883b794ff"
+      },
+      {
+        "site": "00ae6dd7",
+        "target": "009a1744",
+        "names": [
+          "Trpcb.GetAppHandle"
+        ],
+        "bytes": "e868a9ebff"
+      },
+      {
+        "site": "00ae6df2",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e8e56194ff"
+      },
+      {
+        "site": "00ae6e15",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e8d23ecbff"
+      },
+      {
+        "site": "00ae6e25",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e8ea5392ff"
+      },
+      {
+        "site": "00ae6e46",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e8916194ff"
+      },
+      {
+        "site": "00ae6e4b",
+        "target": "00431328",
+        "names": [
+          "System.SysUtils.Now"
+        ],
+        "bytes": "e8d8a494ff"
+      },
+      {
+        "site": "00ae6e5a",
+        "target": "011d4f18",
+        "names": [
+          "uCore.TEncounter.GetLocationName"
+        ],
+        "bytes": "e8b9e06e00"
+      },
+      {
+        "site": "00ae6e72",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e89d5392ff"
+      },
+      {
+        "site": "00ae6ea6",
+        "target": "0042ef18",
+        "names": [
+          "System.SysUtils.Format"
+        ],
+        "bytes": "e86d8094ff"
+      },
+      {
+        "site": "00ae6ecf",
+        "target": "00432550",
+        "names": [
+          "System.SysUtils.FormatDateTime"
+        ],
+        "bytes": "e87cb694ff"
+      },
+      {
+        "site": "00ae6eed",
+        "target": "0040c028",
+        "names": [
+          "System.@WStrFromUStr"
+        ],
+        "bytes": "e8365192ff"
+      },
+      {
+        "site": "00ae6f0a",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8c54092ff"
+      },
+      {
+        "site": "00ae6f2f",
+        "target": "006aa580",
+        "names": [
+          "Vcl.Dialogs.MessageDlgPosHelp"
+        ],
+        "bytes": "e84c36bcff"
+      },
+      {
+        "site": "00ae6fa4",
+        "target": "006aa788",
+        "names": [
+          "Vcl.Dialogs.TaskMessageDlgPosHelp"
+        ],
+        "bytes": "e8df37bcff"
+      },
+      {
+        "site": "00ae6fcb",
+        "target": "006aa788",
+        "names": [
+          "Vcl.Dialogs.TaskMessageDlgPosHelp"
+        ],
+        "bytes": "e8b837bcff"
+      },
+      {
+        "site": "00ae6fdd",
+        "target": "00ae6c90",
+        "names": [
+          "uVitals.UnloadVitalsDLL"
+        ],
+        "bytes": "e8aefcffff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "00ae6cf9",
+        "instruction": "MOV EDX,0xae7068",
+        "literal": {
+          "address": "00ae7068",
+          "header_address": "00ae705c",
+          "file_offset": 7234664,
+          "codepage": 1252,
+          "element_width": 1,
+          "length": 21,
+          "text": "GMV_ViewPatientVitals",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6d8e",
+        "instruction": "MOV EAX,0xae7090",
+        "literal": {
+          "address": "00ae7090",
+          "header_address": "00ae7084",
+          "file_offset": 7234704,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 8,
+          "text": "mm/dd/yy",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6dc3",
+        "instruction": "MOV EAX,0xae7090",
+        "literal": {
+          "address": "00ae7090",
+          "header_address": "00ae7084",
+          "file_offset": 7234704,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 8,
+          "text": "mm/dd/yy",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6dcd",
+        "instruction": "PUSH 0xae70b0",
+        "literal": {
+          "address": "00ae70b0",
+          "header_address": "00ae70a4",
+          "file_offset": 7234736,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 18,
+          "text": "OR CPRS GUI CHART^",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6ddf",
+        "instruction": "PUSH 0xae70e4",
+        "literal": {
+          "address": "00ae70e4",
+          "header_address": "00ae70d8",
+          "file_offset": 7234788,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "^",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6de7",
+        "instruction": "PUSH 0xae70e4",
+        "literal": {
+          "address": "00ae70e4",
+          "header_address": "00ae70d8",
+          "file_offset": 7234788,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "^",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6dfa",
+        "instruction": "PUSH 0xae70e4",
+        "literal": {
+          "address": "00ae70e4",
+          "header_address": "00ae70d8",
+          "file_offset": 7234788,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "^",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6e62",
+        "instruction": "PUSH 0xae70e4",
+        "literal": {
+          "address": "00ae70e4",
+          "header_address": "00ae70d8",
+          "file_offset": 7234788,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "^",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6ea1",
+        "instruction": "MOV EAX,0xae70f4",
+        "literal": {
+          "address": "00ae70f4",
+          "header_address": "00ae70e8",
+          "file_offset": 7234804,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 8,
+          "text": "%s    %d",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6eb6",
+        "instruction": "PUSH 0xae7114",
+        "literal": {
+          "address": "00ae7114",
+          "header_address": "00ae7108",
+          "file_offset": 7234836,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 4,
+          "text": "CPRS",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6eca",
+        "instruction": "MOV EAX,0xae7090",
+        "literal": {
+          "address": "00ae7090",
+          "header_address": "00ae7084",
+          "file_offset": 7234704,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 8,
+          "text": "mm/dd/yy",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6f2a",
+        "instruction": "MOV EAX,0xae7130",
+        "literal": {
+          "address": "00ae7130",
+          "header_address": "00ae7124",
+          "file_offset": 7234864,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 44,
+          "text": "Can't find function \"GMV_ViewPatientVitals\".",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6f9f",
+        "instruction": "MOV EAX,0xae71dc",
+        "literal": {
+          "address": "00ae71dc",
+          "header_address": "00ae71d0",
+          "file_offset": 7235036,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 23,
+          "text": "File Missing or Invalid",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00ae6fc6",
+        "instruction": "MOV EAX,0xae7218",
+        "literal": {
+          "address": "00ae7218",
+          "header_address": "00ae720c",
+          "file_offset": 7235096,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 23,
+          "text": "Incorrect Version Found",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "00ae6ef6",
+        "instruction": "CALL ESI"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "00ae6f10",
+        "instruction": "JMP EAX"
+      },
+      {
+        "site": "00ae6fe3",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00cf2a44",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "fSignItem.TfrmSignItem.cmdOKClick",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 54,
+    "direct_calls": [
+      {
+        "site": "00cf2a67",
+        "target": "006026ac",
+        "names": [
+          "Vcl.Controls.TControl.GetText"
+        ],
+        "bytes": "e840fc90ff"
+      },
+      {
+        "site": "00cf2a6f",
+        "target": "011cb4d8",
+        "names": [
+          "rCore.ValidESCode"
+        ],
+        "bytes": "e8648a4d00"
+      },
+      {
+        "site": "00cf2a84",
+        "target": "009b44a8",
+        "names": [
+          "ORFn.InfoBox"
+        ],
+        "bytes": "e81f1accff"
+      },
+      {
+        "site": "00cf2a9d",
+        "target": "00629660",
+        "names": [
+          "Vcl.StdCtrls.TCustomEdit.SelectAll"
+        ],
+        "bytes": "e8be6b93ff"
+      },
+      {
+        "site": "00cf2aad",
+        "target": "006026ac",
+        "names": [
+          "Vcl.Controls.TControl.GetText"
+        ],
+        "bytes": "e8fafb90ff"
+      },
+      {
+        "site": "00cf2ab8",
+        "target": "00862ab4",
+        "names": [
+          "XWBHash.Encrypt"
+        ],
+        "bytes": "e8f7ffb6ff"
+      },
+      {
+        "site": "00cf2ac6",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e8f98871ff"
+      },
+      {
+        "site": "00cf2acd",
+        "target": "00727128",
+        "names": [
+          "Vcl.Forms.TCustomForm.Close"
+        ],
+        "bytes": "e85646a3ff"
+      },
+      {
+        "site": "00cf2ae2",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8ed8471ff"
+      },
+      {
+        "site": "00cf2aea",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8e58471ff"
+      },
+      {
+        "site": "00cf2af2",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8dd8471ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "00cf2a7a",
+        "instruction": "MOV EDX,0xcf2b14",
+        "literal": {
+          "address": "00cf2b14",
+          "header_address": "00cf2b08",
+          "file_offset": 9379604,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 27,
+          "text": "Unrecognized Signature Code",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00cf2a7f",
+        "instruction": "MOV EAX,0xcf2b58",
+        "literal": {
+          "address": "00cf2b58",
+          "header_address": "00cf2b4c",
+          "file_offset": 9379672,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 75,
+          "text": "Not a valid electronic signature code.  Enter a valid code or press Cancel.",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "00cf2a91",
+        "instruction": "CALL dword ptr [EDX + 0x164]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "00cf2af8",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00e13350",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "fNotes.TfrmNotes.acSaveNoSigExecute",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 70,
+    "direct_calls": [
+      {
+        "site": "00e13382",
+        "target": "007b1014",
+        "names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ],
+        "bytes": "e88ddc99ff"
+      },
+      {
+        "site": "00e133a1",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e8467998ff"
+      },
+      {
+        "site": "00e133af",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e810805fff"
+      },
+      {
+        "site": "00e133b9",
+        "target": "00e1946c",
+        "names": [
+          "fNotes.TfrmNotes.SaveCurrentNote"
+        ],
+        "bytes": "e8ae600000"
+      },
+      {
+        "site": "00e133da",
+        "target": "00e21f14",
+        "names": [
+          "fNotes.TfrmNotes.LoadNotes"
+        ],
+        "bytes": "e835eb0000"
+      },
+      {
+        "site": "00e133eb",
+        "target": "0066fb68",
+        "names": [
+          "Vcl.ComCtrls.TTreeNodes.GetFirstNode"
+        ],
+        "bytes": "e878c785ff"
+      },
+      {
+        "site": "00e133fa",
+        "target": "007b5f00",
+        "names": [
+          "ORCtrls.TORTreeView.FindPieceNode"
+        ],
+        "bytes": "e8012b9aff"
+      },
+      {
+        "site": "00e13403",
+        "target": "00672184",
+        "names": [
+          "Vcl.ComCtrls.TCustomTreeView.SetSelected"
+        ],
+        "bytes": "e87ced85ff"
+      },
+      {
+        "site": "00e13418",
+        "target": "009b44a8",
+        "names": [
+          "ORFn.InfoBox"
+        ],
+        "bytes": "e88b10baff"
+      },
+      {
+        "site": "00e1342d",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8a27b5fff"
+      },
+      {
+        "site": "00e13435",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e89a7b5fff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "00e1340e",
+        "instruction": "MOV EDX,0xe13458",
+        "literal": {
+          "address": "00e13458",
+          "header_address": "00e1344c",
+          "file_offset": 10561624,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 18,
+          "text": "Save Progress Note",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e13413",
+        "instruction": "MOV EAX,0xe1348c",
+        "literal": {
+          "address": "00e1348c",
+          "header_address": "00e13480",
+          "file_offset": 10561676,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 42,
+          "text": "No progress note is currently being edited",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "00e13392",
+        "instruction": "CALL dword ptr [ESI + 0xc]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "00e1343b",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "00e134e4",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "fNotes.TfrmNotes.acSignExecute",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 407,
+    "direct_calls": [
+      {
+        "site": "00e13502",
+        "target": "0040c99c",
+        "names": [
+          "System.@InitializeRecord"
+        ],
+        "bytes": "e895945fff"
+      },
+      {
+        "site": "00e13510",
+        "target": "0040c99c",
+        "names": [
+          "System.@InitializeRecord"
+        ],
+        "bytes": "e887945fff"
+      },
+      {
+        "site": "00e1352c",
+        "target": "007ae008",
+        "names": [
+          "ORCtrls.TORListBox.GetItemID"
+        ],
+        "bytes": "e8d7aa99ff"
+      },
+      {
+        "site": "00e13537",
+        "target": "0044973c",
+        "names": [
+          "System.Variants.@VarToUStr"
+        ],
+        "bytes": "e8006263ff"
+      },
+      {
+        "site": "00e13545",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e87a7e5fff"
+      },
+      {
+        "site": "00e1356e",
+        "target": "00e1946c",
+        "names": [
+          "fNotes.TfrmNotes.SaveCurrentNote"
+        ],
+        "bytes": "e8f95e0000"
+      },
+      {
+        "site": "00e13595",
+        "target": "007b1014",
+        "names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ],
+        "bytes": "e87ada99ff"
+      },
+      {
+        "site": "00e135b8",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e82f7798ff"
+      },
+      {
+        "site": "00e135c3",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e814a699ff"
+      },
+      {
+        "site": "00e135c8",
+        "target": "00a0ed10",
+        "names": [
+          "rTIU.NoteHasText"
+        ],
+        "bytes": "e843b7bfff"
+      },
+      {
+        "site": "00e135df",
+        "target": "009b44a8",
+        "names": [
+          "ORFn.InfoBox"
+        ],
+        "bytes": "e8c40ebaff"
+      },
+      {
+        "site": "00e135ef",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e8e8a599ff"
+      },
+      {
+        "site": "00e135f6",
+        "target": "00a0c188",
+        "names": [
+          "rTIU.LastSaveClean"
+        ],
+        "bytes": "e88d8bbfff"
+      },
+      {
+        "site": "00e1360d",
+        "target": "009b44a8",
+        "names": [
+          "ORFn.InfoBox"
+        ],
+        "bytes": "e8960ebaff"
+      },
+      {
+        "site": "00e13621",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e8b6a599ff"
+      },
+      {
+        "site": "00e13626",
+        "target": "00a0b3e0",
+        "names": [
+          "rTIU.CosignDocument"
+        ],
+        "bytes": "e8b57dbfff"
+      },
+      {
+        "site": "00e13637",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e8d07d5fff"
+      },
+      {
+        "site": "00e13644",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e8c37d5fff"
+      },
+      {
+        "site": "00e13653",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e8b47d5fff"
+      },
+      {
+        "site": "00e13660",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e8a77d5fff"
+      },
+      {
+        "site": "00e1366b",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e86ca599ff"
+      },
+      {
+        "site": "00e13674",
+        "target": "00e16210",
+        "names": [
+          "fNotes.TfrmNotes.LockConsultRequestAndNote"
+        ],
+        "bytes": "e8972b0000"
+      },
+      {
+        "site": "00e1368d",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e84aa599ff"
+      },
+      {
+        "site": "00e1369a",
+        "target": "00a0b1e8",
+        "names": [
+          "rTIU.ActOnDocument"
+        ],
+        "bytes": "e8497bbfff"
+      },
+      {
+        "site": "00e136af",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e828a599ff"
+      },
+      {
+        "site": "00e136bb",
+        "target": "011f3bfc",
+        "names": [
+          "uPCE.IsOK2Sign"
+        ],
+        "bytes": "e83c053e00"
+      },
+      {
+        "site": "00e136ef",
+        "target": "00e19480",
+        "names": [
+          "fNotes.TfrmNotes.lstNotesClick"
+        ],
+        "bytes": "e88c5d0000"
+      },
+      {
+        "site": "00e136fa",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e8dda499ff"
+      },
+      {
+        "site": "00e136ff",
+        "target": "00a0b304",
+        "names": [
+          "rTIU.AuthorSignedDocument"
+        ],
+        "bytes": "e8007cbfff"
+      },
+      {
+        "site": "00e1371d",
+        "target": "00e15850",
+        "names": [
+          "fNotes.TfrmNotes.GetTitleText"
+        ],
+        "bytes": "e82e210000"
+      },
+      {
+        "site": "00e1372d",
+        "target": "0040c18c",
+        "names": [
+          "System.@UStrCat3"
+        ],
+        "bytes": "e85a8a5fff"
+      },
+      {
+        "site": "00e1373e",
+        "target": "009b44a8",
+        "names": [
+          "ORFn.InfoBox"
+        ],
+        "bytes": "e8650dbaff"
+      },
+      {
+        "site": "00e1376f",
+        "target": "007b1014",
+        "names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ],
+        "bytes": "e8a0d899ff"
+      },
+      {
+        "site": "00e13783",
+        "target": "00a14ad8",
+        "names": [
+          "uTIU.MakeNoteDisplayText"
+        ],
+        "bytes": "e85013c0ff"
+      },
+      {
+        "site": "00e1378f",
+        "target": "005cdd74",
+        "names": [
+          "Vcl.Graphics.TFont.GetSize"
+        ],
+        "bytes": "e8e0a57bff"
+      },
+      {
+        "site": "00e13798",
+        "target": "00cf29a4",
+        "names": [
+          "fSignItem.SignatureForItem"
+        ],
+        "bytes": "e807f2edff"
+      },
+      {
+        "site": "00e137b5",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e822a499ff"
+      },
+      {
+        "site": "00e137c2",
+        "target": "00a0c6fc",
+        "names": [
+          "rTIU.SignDocument"
+        ],
+        "bytes": "e8358fbfff"
+      },
+      {
+        "site": "00e137cd",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e80aa499ff"
+      },
+      {
+        "site": "00e137d8",
+        "target": "00e1c124",
+        "names": [
+          "fNotes.TfrmNotes.RemovePCEFromChanges"
+        ],
+        "bytes": "e847890000"
+      },
+      {
+        "site": "00e137e6",
+        "target": "007ae008",
+        "names": [
+          "ORCtrls.TORListBox.GetItemID"
+        ],
+        "bytes": "e81da899ff"
+      },
+      {
+        "site": "00e137f1",
+        "target": "0044973c",
+        "names": [
+          "System.Variants.@VarToUStr"
+        ],
+        "bytes": "e8465f63ff"
+      },
+      {
+        "site": "00e13805",
+        "target": "011d5c38",
+        "names": [
+          "uCore.TChanges.Exist"
+        ],
+        "bytes": "e82e243c00"
+      },
+      {
+        "site": "00e13816",
+        "target": "007ae008",
+        "names": [
+          "ORCtrls.TORListBox.GetItemID"
+        ],
+        "bytes": "e8eda799ff"
+      },
+      {
+        "site": "00e13821",
+        "target": "0044973c",
+        "names": [
+          "System.Variants.@VarToUStr"
+        ],
+        "bytes": "e8165f63ff"
+      },
+      {
+        "site": "00e13835",
+        "target": "011d5ee8",
+        "names": [
+          "uCore.TChanges.Remove"
+        ],
+        "bytes": "e8ae263c00"
+      },
+      {
+        "site": "00e13860",
+        "target": "0060ca58",
+        "names": [
+          "Vcl.Controls.TWinControl.GetHandle"
+        ],
+        "bytes": "e8f3917fff"
+      },
+      {
+        "site": "00e13866",
+        "target": "0041c028",
+        "names": [
+          "Winapi.Windows.SendMessage"
+        ],
+        "bytes": "e8bd8760ff"
+      },
+      {
+        "site": "00e1386f",
+        "target": "00e19480",
+        "names": [
+          "fNotes.TfrmNotes.lstNotesClick"
+        ],
+        "bytes": "e80c5c0000"
+      },
+      {
+        "site": "00e13880",
+        "target": "009b44a8",
+        "names": [
+          "ORFn.InfoBox"
+        ],
+        "bytes": "e8230cbaff"
+      },
+      {
+        "site": "00e13893",
+        "target": "007ae008",
+        "names": [
+          "ORCtrls.TORListBox.GetItemID"
+        ],
+        "bytes": "e870a799ff"
+      },
+      {
+        "site": "00e138a1",
+        "target": "0044973c",
+        "names": [
+          "System.Variants.@VarToUStr"
+        ],
+        "bytes": "e8965e63ff"
+      },
+      {
+        "site": "00e138b5",
+        "target": "011d5c38",
+        "names": [
+          "uCore.TChanges.Exist"
+        ],
+        "bytes": "e87e233c00"
+      },
+      {
+        "site": "00e138cb",
+        "target": "009b44a8",
+        "names": [
+          "ORFn.InfoBox"
+        ],
+        "bytes": "e8d80bbaff"
+      },
+      {
+        "site": "00e138dc",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e8fba299ff"
+      },
+      {
+        "site": "00e138e3",
+        "target": "00a0c130",
+        "names": [
+          "rTIU.UnlockDocument"
+        ],
+        "bytes": "e84888bfff"
+      },
+      {
+        "site": "00e138ee",
+        "target": "007adbdc",
+        "names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ],
+        "bytes": "e8e9a299ff"
+      },
+      {
+        "site": "00e138f9",
+        "target": "00e1644c",
+        "names": [
+          "fNotes.TfrmNotes.UnlockConsultRequest"
+        ],
+        "bytes": "e84e2b0000"
+      },
+      {
+        "site": "00e1390a",
+        "target": "00e21f14",
+        "names": [
+          "fNotes.TfrmNotes.LoadNotes"
+        ],
+        "bytes": "e805e60000"
+      },
+      {
+        "site": "00e1391f",
+        "target": "007b1014",
+        "names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ],
+        "bytes": "e8f0d699ff"
+      },
+      {
+        "site": "00e13933",
+        "target": "00a125bc",
+        "names": [
+          "uDocTree.MakeNoteTreeObject"
+        ],
+        "bytes": "e884ecbfff"
+      },
+      {
+        "site": "00e13947",
+        "target": "0066fb68",
+        "names": [
+          "Vcl.ComCtrls.TTreeNodes.GetFirstNode"
+        ],
+        "bytes": "e81cc285ff"
+      },
+      {
+        "site": "00e13955",
+        "target": "0066f7e8",
+        "names": [
+          "Vcl.ComCtrls.TTreeNodes.AddObjectFirst"
+        ],
+        "bytes": "e88ebe85ff"
+      },
+      {
+        "site": "00e13963",
+        "target": "007b5794",
+        "names": [
+          "ORCtrls.TORTreeNode.SetStringData"
+        ],
+        "bytes": "e82c1e9aff"
+      },
+      {
+        "site": "00e1396c",
+        "target": "0066dc74",
+        "names": [
+          "Vcl.ComCtrls.TTreeNode.SetImageIndex"
+        ],
+        "bytes": "e803a385ff"
+      },
+      {
+        "site": "00e13974",
+        "target": "00a125bc",
+        "names": [
+          "uDocTree.MakeNoteTreeObject"
+        ],
+        "bytes": "e843ecbfff"
+      },
+      {
+        "site": "00e13983",
+        "target": "00a14ad8",
+        "names": [
+          "uTIU.MakeNoteDisplayText"
+        ],
+        "bytes": "e85011c0ff"
+      },
+      {
+        "site": "00e1399c",
+        "target": "0066f798",
+        "names": [
+          "Vcl.ComCtrls.TTreeNodes.AddChildObjectFirst"
+        ],
+        "bytes": "e8f7bd85ff"
+      },
+      {
+        "site": "00e139aa",
+        "target": "007b5794",
+        "names": [
+          "ORCtrls.TORTreeNode.SetStringData"
+        ],
+        "bytes": "e8e51d9aff"
+      },
+      {
+        "site": "00e139bc",
+        "target": "00a10e14",
+        "names": [
+          "uDocTree.SetTreeNodeImagesAndFormatting"
+        ],
+        "bytes": "e853d4bfff"
+      },
+      {
+        "site": "00e139ca",
+        "target": "007ae0d4",
+        "names": [
+          "ORCtrls.TORListBox.SelectByID"
+        ],
+        "bytes": "e805a799ff"
+      },
+      {
+        "site": "00e139d3",
+        "target": "00e1e48c",
+        "names": [
+          "fNotes.TfrmNotes.SetEditingIndex"
+        ],
+        "bytes": "e8b4aa0000"
+      },
+      {
+        "site": "00e139e4",
+        "target": "0066fb68",
+        "names": [
+          "Vcl.ComCtrls.TTreeNodes.GetFirstNode"
+        ],
+        "bytes": "e87fc185ff"
+      },
+      {
+        "site": "00e139f6",
+        "target": "007b5f00",
+        "names": [
+          "ORCtrls.TORTreeView.FindPieceNode"
+        ],
+        "bytes": "e805259aff"
+      },
+      {
+        "site": "00e139ff",
+        "target": "00672184",
+        "names": [
+          "Vcl.ComCtrls.TCustomTreeView.SetSelected"
+        ],
+        "bytes": "e880e785ff"
+      },
+      {
+        "site": "00e13a0a",
+        "target": "0067213c",
+        "names": [
+          "Vcl.ComCtrls.TCustomTreeView.GetSelected"
+        ],
+        "bytes": "e82de785ff"
+      },
+      {
+        "site": "00e13a19",
+        "target": "0067213c",
+        "names": [
+          "Vcl.ComCtrls.TCustomTreeView.GetSelected"
+        ],
+        "bytes": "e81ee785ff"
+      },
+      {
+        "site": "00e13a24",
+        "target": "00e1e870",
+        "names": [
+          "fNotes.TfrmNotes.tvNotesChange"
+        ],
+        "bytes": "e847ae0000"
+      },
+      {
+        "site": "00e13a37",
+        "target": "0066f6b0",
+        "names": [
+          "Vcl.ComCtrls.TTreeNodes.GetCount"
+        ],
+        "bytes": "e874bc85ff"
+      },
+      {
+        "site": "00e13a4e",
+        "target": "0066fb94",
+        "names": [
+          "Vcl.ComCtrls.TTreeNodes.GetNodeFromIndex"
+        ],
+        "bytes": "e841c185ff"
+      },
+      {
+        "site": "00e13a57",
+        "target": "00672184",
+        "names": [
+          "Vcl.ComCtrls.TCustomTreeView.SetSelected"
+        ],
+        "bytes": "e828e785ff"
+      },
+      {
+        "site": "00e13a60",
+        "target": "00e23934",
+        "names": [
+          "fNotes.TfrmNotes.UpdateNotesCaption"
+        ],
+        "bytes": "e8cffe0000"
+      },
+      {
+        "site": "00e13a78",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e857755fff"
+      },
+      {
+        "site": "00e13a83",
+        "target": "00443770",
+        "names": [
+          "System.Variants.@VarClr"
+        ],
+        "bytes": "e8e8fc62ff"
+      },
+      {
+        "site": "00e13a8b",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e844755fff"
+      },
+      {
+        "site": "00e13a93",
+        "target": "00443770",
+        "names": [
+          "System.Variants.@VarClr"
+        ],
+        "bytes": "e8d8fc62ff"
+      },
+      {
+        "site": "00e13a9b",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e834755fff"
+      },
+      {
+        "site": "00e13aa3",
+        "target": "00443770",
+        "names": [
+          "System.Variants.@VarClr"
+        ],
+        "bytes": "e8c8fc62ff"
+      },
+      {
+        "site": "00e13ab0",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e87f755fff"
+      },
+      {
+        "site": "00e13ab8",
+        "target": "00443770",
+        "names": [
+          "System.Variants.@VarClr"
+        ],
+        "bytes": "e8b3fc62ff"
+      },
+      {
+        "site": "00e13acb",
+        "target": "0040d1c4",
+        "names": [
+          "System.@FinalizeArray"
+        ],
+        "bytes": "e8f4965fff"
+      },
+      {
+        "site": "00e13ad8",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e857755fff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "00e135d5",
+        "instruction": "MOV EDX,0xe13afc",
+        "literal": {
+          "address": "00e13afc",
+          "header_address": "00e13af0",
+          "file_offset": 10563324,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 10,
+          "text": "Empty Note",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e135da",
+        "instruction": "MOV EAX,0xe13b20",
+        "literal": {
+          "address": "00e13b20",
+          "header_address": "00e13b14",
+          "file_offset": 10563360,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 49,
+          "text": "This note contains no text and can not be signed.",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e13603",
+        "instruction": "MOV EDX,0xe13b90",
+        "literal": {
+          "address": "00e13b90",
+          "header_address": "00e13b84",
+          "file_offset": 10563472,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 21,
+          "text": "Possible Missing Text",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e13608",
+        "instruction": "MOV EAX,0xe13bc8",
+        "literal": {
+          "address": "00e13bc8",
+          "header_address": "00e13bbc",
+          "file_offset": 10563528,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 158,
+          "text": "It appears the session terminated abnormally when this\r\nnote was last edited. Some text may not have been saved.\r\n\r\nDo you wish to continue and sign the note?",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e13632",
+        "instruction": "MOV EDX,0xe13d14",
+        "literal": {
+          "address": "00e13d14",
+          "header_address": "00e13d08",
+          "file_offset": 10563860,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 11,
+          "text": "Cosign Note",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e1363f",
+        "instruction": "MOV EDX,0xe13d38",
+        "literal": {
+          "address": "00e13d38",
+          "header_address": "00e13d2c",
+          "file_offset": 10563896,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 11,
+          "text": "COSIGNATURE",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e1364e",
+        "instruction": "MOV EDX,0xe13d5c",
+        "literal": {
+          "address": "00e13d5c",
+          "header_address": "00e13d50",
+          "file_offset": 10563932,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 9,
+          "text": "Sign Note",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e1365b",
+        "instruction": "MOV EDX,0xe13d7c",
+        "literal": {
+          "address": "00e13d7c",
+          "header_address": "00e13d70",
+          "file_offset": 10563964,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 9,
+          "text": "SIGNATURE",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e13728",
+        "instruction": "MOV EDX,0xe13d9c",
+        "literal": {
+          "address": "00e13d9c",
+          "header_address": "00e13d90",
+          "file_offset": 10563996,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 55,
+          "text": "Author has not signed, are you SURE you want to sign.\r\n",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e13739",
+        "instruction": "MOV EDX,0xe13d5c",
+        "literal": {
+          "address": "00e13d5c",
+          "header_address": "00e13d50",
+          "file_offset": 10563932,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 9,
+          "text": "Sign Note",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e13878",
+        "instruction": "MOV EDX,0xe13e18",
+        "literal": {
+          "address": "00e13e18",
+          "header_address": "00e13e0c",
+          "file_offset": 10564120,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 19,
+          "text": "Unable to Sign Note",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e138c3",
+        "instruction": "MOV EDX,0xe13e4c",
+        "literal": {
+          "address": "00e13e4c",
+          "header_address": "00e13e40",
+          "file_offset": 10564172,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 26,
+          "text": "Insufficient Authorization",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e1392e",
+        "instruction": "MOV EAX,0xe13e90",
+        "literal": {
+          "address": "00e13e90",
+          "header_address": "00e13e84",
+          "file_offset": 10564240,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 36,
+          "text": "EDIT^Note being edited^^^^^^^^^^^%^0",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e13950",
+        "instruction": "MOV ECX,0xe13ee8",
+        "literal": {
+          "address": "00e13ee8",
+          "header_address": "00e13edc",
+          "file_offset": 10564328,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 17,
+          "text": "Note being edited",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "00e1395c",
+        "instruction": "MOV EDX,0xe13e90",
+        "literal": {
+          "address": "00e13e90",
+          "header_address": "00e13e84",
+          "file_offset": 10564240,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 36,
+          "text": "EDIT^Note being edited^^^^^^^^^^^%^0",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "00e13552",
+        "instruction": "CALL dword ptr [EDX + 0x16c]"
+      },
+      {
+        "site": "00e135a5",
+        "instruction": "CALL dword ptr [EBX + 0xc]"
+      },
+      {
+        "site": "00e13710",
+        "instruction": "CALL dword ptr [EDX + 0x16c]"
+      },
+      {
+        "site": "00e13762",
+        "instruction": "CALL dword ptr [EDX + 0x16c]"
+      },
+      {
+        "site": "00e1377a",
+        "instruction": "CALL dword ptr [EDI + 0xc]"
+      },
+      {
+        "site": "00e1392b",
+        "instruction": "CALL dword ptr [EBX + 0x64]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "00e13ade",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "01011c80",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "uWriteAccess.WriteAccess",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 31,
+    "direct_calls": [
+      {
+        "site": "01011c92",
+        "target": "0040b0c8",
+        "names": [
+          "System.@UStrAddRef"
+        ],
+        "bytes": "e831943fff"
+      },
+      {
+        "site": "01011cb4",
+        "target": "01011280",
+        "names": [
+          "uWriteAccess.TWriteAccess.WriteAccess"
+        ],
+        "bytes": "e8c7f5ffff"
+      },
+      {
+        "site": "01011ccb",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e804933fff"
+      }
+    ],
+    "literal_references": [],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "01011cd1",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "01011ce4",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "uWriteAccess.WriteAccess",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 33,
+    "direct_calls": [
+      {
+        "site": "01011cf4",
+        "target": "0040b0c8",
+        "names": [
+          "System.@UStrAddRef"
+        ],
+        "bytes": "e8cf933fff"
+      },
+      {
+        "site": "01011d1b",
+        "target": "010112e4",
+        "names": [
+          "uWriteAccess.TWriteAccess.WriteAccess"
+        ],
+        "bytes": "e8c4f5ffff"
+      },
+      {
+        "site": "01011d32",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e89d923fff"
+      }
+    ],
+    "literal_references": [],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "01011d38",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "010f2488",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "fODBase.TResponses.SaveOrder",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 486,
+    "direct_calls": [
+      {
+        "site": "010f24af",
+        "target": "0040c99c",
+        "names": [
+          "System.@InitializeRecord"
+        ],
+        "bytes": "e8e8a431ff"
+      },
+      {
+        "site": "010f24e9",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e8eeaa33ff"
+      },
+      {
+        "site": "010f24f4",
+        "target": "011db684",
+        "names": [
+          "rOrders.CheckQOGroup"
+        ],
+        "bytes": "e88b910e00"
+      },
+      {
+        "site": "010f250a",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e8b58e31ff"
+      },
+      {
+        "site": "010f2526",
+        "target": "0040c18c",
+        "names": [
+          "System.@UStrCat3"
+        ],
+        "bytes": "e8619c31ff"
+      },
+      {
+        "site": "010f2536",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e8d18e31ff"
+      },
+      {
+        "site": "010f2544",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e8c38e31ff"
+      },
+      {
+        "site": "010f2552",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e8b58e31ff"
+      },
+      {
+        "site": "010f25aa",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e85d8e31ff"
+      },
+      {
+        "site": "010f25da",
+        "target": "011e8bf8",
+        "names": [
+          "rOrders.IsValidIMOLoc"
+        ],
+        "bytes": "e819660f00"
+      },
+      {
+        "site": "010f25f0",
+        "target": "0040c4b0",
+        "names": [
+          "System.@UStrPos"
+        ],
+        "bytes": "e8bb9e31ff"
+      },
+      {
+        "site": "010f2612",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e80d9d31ff"
+      },
+      {
+        "site": "010f262d",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8f29c31ff"
+      },
+      {
+        "site": "010f26b2",
+        "target": "004d2ff0",
+        "names": [
+          "System.Classes.TList.Get"
+        ],
+        "bytes": "e839093eff"
+      },
+      {
+        "site": "010f26c0",
+        "target": "0042c1a8",
+        "names": [
+          "System.SysUtils.UpperCase"
+        ],
+        "bytes": "e8e39a33ff"
+      },
+      {
+        "site": "010f26d0",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e84f9c31ff"
+      },
+      {
+        "site": "010f26e0",
+        "target": "004d2e68",
+        "names": [
+          "System.Classes.TList.Delete"
+        ],
+        "bytes": "e883073eff"
+      },
+      {
+        "site": "010f2724",
+        "target": "011e8a04",
+        "names": [
+          "rOrders.EventExist"
+        ],
+        "bytes": "e8db620f00"
+      },
+      {
+        "site": "010f2741",
+        "target": "011e8a04",
+        "names": [
+          "rOrders.EventExist"
+        ],
+        "bytes": "e8be620f00"
+      },
+      {
+        "site": "010f2749",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e88ea833ff"
+      },
+      {
+        "site": "010f2754",
+        "target": "0040b40c",
+        "names": [
+          "System.@UStrLAsg"
+        ],
+        "bytes": "e8b38c31ff"
+      },
+      {
+        "site": "010f2765",
+        "target": "010eb48c",
+        "names": [
+          "rODBase.PutNewOrder"
+        ],
+        "bytes": "e8228dffff"
+      },
+      {
+        "site": "010f2782",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e83d8c31ff"
+      },
+      {
+        "site": "010f2797",
+        "target": "011db390",
+        "names": [
+          "rOrders.EventInfo"
+        ],
+        "bytes": "e8f48b0e00"
+      },
+      {
+        "site": "010f27ab",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e83c856aff"
+      },
+      {
+        "site": "010f27be",
+        "target": "009b2a68",
+        "names": [
+          "ORFn.MixedCase"
+        ],
+        "bytes": "e8a5028cff"
+      },
+      {
+        "site": "010f27d6",
+        "target": "0040c18c",
+        "names": [
+          "System.@UStrCat3"
+        ],
+        "bytes": "e8b19931ff"
+      },
+      {
+        "site": "010f27ec",
+        "target": "010eb48c",
+        "names": [
+          "rODBase.PutNewOrder"
+        ],
+        "bytes": "e89b8cffff"
+      },
+      {
+        "site": "010f2830",
+        "target": "011e8930",
+        "names": [
+          "rOrders.SaveEvtForOrder"
+        ],
+        "bytes": "e8fb600f00"
+      },
+      {
+        "site": "010f2845",
+        "target": "011e8a04",
+        "names": [
+          "rOrders.EventExist"
+        ],
+        "bytes": "e8ba610f00"
+      },
+      {
+        "site": "010f2856",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e881a733ff"
+      },
+      {
+        "site": "010f2869",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e8568b31ff"
+      },
+      {
+        "site": "010f287e",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e859a733ff"
+      },
+      {
+        "site": "010f288f",
+        "target": "011db390",
+        "names": [
+          "rOrders.EventInfo"
+        ],
+        "bytes": "e8fc8a0e00"
+      },
+      {
+        "site": "010f28a3",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e844846aff"
+      },
+      {
+        "site": "010f28b6",
+        "target": "009b2a68",
+        "names": [
+          "ORFn.MixedCase"
+        ],
+        "bytes": "e8ad018cff"
+      },
+      {
+        "site": "010f28ce",
+        "target": "0040c18c",
+        "names": [
+          "System.@UStrCat3"
+        ],
+        "bytes": "e8b99831ff"
+      },
+      {
+        "site": "010f28e5",
+        "target": "011e8930",
+        "names": [
+          "rOrders.SaveEvtForOrder"
+        ],
+        "bytes": "e846600f00"
+      },
+      {
+        "site": "010f28fa",
+        "target": "011e8a04",
+        "names": [
+          "rOrders.EventExist"
+        ],
+        "bytes": "e805610f00"
+      },
+      {
+        "site": "010f2939",
+        "target": "011e8930",
+        "names": [
+          "rOrders.SaveEvtForOrder"
+        ],
+        "bytes": "e8f25f0f00"
+      },
+      {
+        "site": "010f294e",
+        "target": "011e8a04",
+        "names": [
+          "rOrders.EventExist"
+        ],
+        "bytes": "e8b1600f00"
+      },
+      {
+        "site": "010f295f",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e878a633ff"
+      },
+      {
+        "site": "010f2972",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e84d8a31ff"
+      },
+      {
+        "site": "010f2987",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e850a633ff"
+      },
+      {
+        "site": "010f2998",
+        "target": "011db390",
+        "names": [
+          "rOrders.EventInfo"
+        ],
+        "bytes": "e8f3890e00"
+      },
+      {
+        "site": "010f29ac",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e83b836aff"
+      },
+      {
+        "site": "010f29bf",
+        "target": "009b2a68",
+        "names": [
+          "ORFn.MixedCase"
+        ],
+        "bytes": "e8a4008cff"
+      },
+      {
+        "site": "010f29d7",
+        "target": "0040c18c",
+        "names": [
+          "System.@UStrCat3"
+        ],
+        "bytes": "e8b09731ff"
+      },
+      {
+        "site": "010f29f6",
+        "target": "007b1014",
+        "names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ],
+        "bytes": "e819e66bff"
+      },
+      {
+        "site": "010f2a2e",
+        "target": "007b1014",
+        "names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ],
+        "bytes": "e8e1e56bff"
+      },
+      {
+        "site": "010f2a50",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e897826aff"
+      },
+      {
+        "site": "010f2a64",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e883826aff"
+      },
+      {
+        "site": "010f2a6f",
+        "target": "0042d1fc",
+        "names": [
+          "System.SysUtils.StrToInt"
+        ],
+        "bytes": "e888a733ff"
+      },
+      {
+        "site": "010f2a89",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e84ea533ff"
+      },
+      {
+        "site": "010f2aad",
+        "target": "007b1014",
+        "names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ],
+        "bytes": "e862e56bff"
+      },
+      {
+        "site": "010f2acf",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e818826aff"
+      },
+      {
+        "site": "010f2ae5",
+        "target": "0040c214",
+        "names": [
+          "System.@UStrCatN"
+        ],
+        "bytes": "e82a9731ff"
+      },
+      {
+        "site": "010f2afe",
+        "target": "007b1014",
+        "names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ],
+        "bytes": "e811e56bff"
+      },
+      {
+        "site": "010f2b35",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e89a8431ff"
+      },
+      {
+        "site": "010f2b48",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e8778831ff"
+      },
+      {
+        "site": "010f2b4d",
+        "target": "00d82fdc",
+        "names": [
+          "UBACore.rpcGetBAMasterSwStatus"
+        ],
+        "bytes": "e88a04c9ff"
+      },
+      {
+        "site": "010f2b5b",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8748431ff"
+      },
+      {
+        "site": "010f2b6d",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e8528831ff"
+      },
+      {
+        "site": "010f2b8a",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e8a58431ff"
+      },
+      {
+        "site": "010f2b98",
+        "target": "0040cd88",
+        "names": [
+          "System.@FinalizeRecord"
+        ],
+        "bytes": "e8eba131ff"
+      },
+      {
+        "site": "010f2ba0",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e82f8431ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "010f2521",
+        "instruction": "MOV ECX,0x10f2bc4",
+        "literal": {
+          "address": "010f2bc4",
+          "header_address": "010f2bb8",
+          "file_offset": 13574084,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 2,
+          "text": "^O",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "010f25eb",
+        "instruction": "MOV EAX,0x10f2bd8",
+        "literal": {
+          "address": "010f2bd8",
+          "header_address": "010f2bcc",
+          "file_offset": 13574104,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 31,
+          "text": "OR GXTEXT WORD PROCESSING ORDER",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "010f260d",
+        "instruction": "MOV EDX,0x10f2c24",
+        "literal": {
+          "address": "010f2c24",
+          "header_address": "010f2c18",
+          "file_offset": 13574180,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 17,
+          "text": "OR GXMISC GENERAL",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "010f2628",
+        "instruction": "MOV EDX,0x10f2c54",
+        "literal": {
+          "address": "010f2c54",
+          "header_address": "010f2c48",
+          "file_offset": 13574228,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 25,
+          "text": "OR GXTEXT TEXT ONLY ORDER",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "010f26cb",
+        "instruction": "MOV EDX,0x10f2c94",
+        "literal": {
+          "address": "010f2c94",
+          "header_address": "010f2c88",
+          "file_offset": 13574292,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 6,
+          "text": "PICKUP",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "010f27d1",
+        "instruction": "MOV EDX,0x10f2cb0",
+        "literal": {
+          "address": "010f2cb0",
+          "header_address": "010f2ca4",
+          "file_offset": 13574320,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 8,
+          "text": "Delayed ",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "010f28c9",
+        "instruction": "MOV EDX,0x10f2cb0",
+        "literal": {
+          "address": "010f2cb0",
+          "header_address": "010f2ca4",
+          "file_offset": 13574320,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 8,
+          "text": "Delayed ",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "010f29d2",
+        "instruction": "MOV EDX,0x10f2cb0",
+        "literal": {
+          "address": "010f2cb0",
+          "header_address": "010f2ca4",
+          "file_offset": 13574320,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 8,
+          "text": "Delayed ",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "010f2a94",
+        "instruction": "PUSH 0x10f2cd0",
+        "literal": {
+          "address": "010f2cd0",
+          "header_address": "010f2cc4",
+          "file_offset": 13574352,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "^",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "010f29fd",
+        "instruction": "CALL dword ptr [EDX + 0x14]"
+      },
+      {
+        "site": "010f2a3e",
+        "instruction": "CALL dword ptr [EBX + 0xc]"
+      },
+      {
+        "site": "010f2abd",
+        "instruction": "CALL dword ptr [EBX + 0xc]"
+      },
+      {
+        "site": "010f2b09",
+        "instruction": "CALL dword ptr [EBX + 0x20]"
+      },
+      {
+        "site": "010f2b1e",
+        "instruction": "CALL dword ptr [ECX + 0x170]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "010f2ba6",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "011e0544",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rOrders.SendOrders",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 122,
+    "direct_calls": [
+      {
+        "site": "011e0577",
+        "target": "004d81f4",
+        "names": [
+          "System.Classes.TStringList.Create"
+        ],
+        "bytes": "e8787c2fff"
+      },
+      {
+        "site": "011e05d1",
+        "target": "0040c18c",
+        "names": [
+          "System.@UStrCat3"
+        ],
+        "bytes": "e8b6bb22ff"
+      },
+      {
+        "site": "011e05f7",
+        "target": "009ada80",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e884d47cff"
+      },
+      {
+        "site": "011e063e",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e8a9a65bff"
+      },
+      {
+        "site": "011e064b",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8d4bc22ff"
+      },
+      {
+        "site": "011e0670",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e877a65bff"
+      },
+      {
+        "site": "011e0699",
+        "target": "009b3eb4",
+        "names": [
+          "ORFn.FastAssign"
+        ],
+        "bytes": "e816387dff"
+      },
+      {
+        "site": "011e06ae",
+        "target": "004090bc",
+        "names": [
+          "System.TObject.Free"
+        ],
+        "bytes": "e8098a22ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "011e05cc",
+        "instruction": "MOV EDX,0x11e06f4",
+        "literal": {
+          "address": "011e06f4",
+          "header_address": "011e06e8",
+          "file_offset": 14547700,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": " ",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "011e05f2",
+        "instruction": "MOV EAX,0x11e0704",
+        "literal": {
+          "address": "011e0704",
+          "header_address": "011e06f8",
+          "file_offset": 14547716,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 10,
+          "text": "ORWDX SEND",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "011e0646",
+        "instruction": "MOV EDX,0x11e0728",
+        "literal": {
+          "address": "011e0728",
+          "header_address": "011e071c",
+          "file_offset": 14547752,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 32,
+          "text": "This order requires a signature.",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "011e0605",
+        "instruction": "CALL dword ptr [EDX + 0x48]"
+      },
+      {
+        "site": "011e060d",
+        "instruction": "CALL dword ptr [EDX + 0x14]"
+      },
+      {
+        "site": "011e062f",
+        "instruction": "CALL dword ptr [EBX + 0xc]"
+      },
+      {
+        "site": "011e0661",
+        "instruction": "CALL dword ptr [EBX + 0xc]"
+      },
+      {
+        "site": "011e0680",
+        "instruction": "CALL dword ptr [EBX + 0x20]"
+      },
+      {
+        "site": "011e0690",
+        "instruction": "CALL dword ptr [EDX + 0x48]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "011e06b4",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "011e076c",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rOrders.SendReleaseOrders",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 79,
+    "direct_calls": [
+      {
+        "site": "011e079f",
+        "target": "011e6418",
+        "names": [
+          "rOrders.GetCurrentSpec"
+        ],
+        "bytes": "e8745c0000"
+      },
+      {
+        "site": "011e07b0",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e837a55bff"
+      },
+      {
+        "site": "011e07ba",
+        "target": "0042d238",
+        "names": [
+          "System.SysUtils.StrToIntDef"
+        ],
+        "bytes": "e879ca24ff"
+      },
+      {
+        "site": "011e07cf",
+        "target": "0042cfdc",
+        "names": [
+          "System.SysUtils.IntToStr"
+        ],
+        "bytes": "e808c824ff"
+      },
+      {
+        "site": "011e07db",
+        "target": "004d81f4",
+        "names": [
+          "System.Classes.TStringList.Create"
+        ],
+        "bytes": "e8147a2fff"
+      },
+      {
+        "site": "011e0822",
+        "target": "009ada80",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e859d27cff"
+      },
+      {
+        "site": "011e0841",
+        "target": "009b3eb4",
+        "names": [
+          "ORFn.FastAssign"
+        ],
+        "bytes": "e86e367dff"
+      },
+      {
+        "site": "011e0856",
+        "target": "004090bc",
+        "names": [
+          "System.TObject.Free"
+        ],
+        "bytes": "e8618822ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "011e081d",
+        "instruction": "MOV EAX,0x11e08a4",
+        "literal": {
+          "address": "011e08a4",
+          "header_address": "011e0898",
+          "file_offset": 14548132,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 12,
+          "text": "ORWDX SENDED",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [
+      {
+        "site": "011e0830",
+        "instruction": "CALL dword ptr [EDX + 0x48]"
+      },
+      {
+        "site": "011e0838",
+        "instruction": "CALL dword ptr [EDX + 0x48]"
+      }
+    ],
+    "control_flow_limits": [
+      {
+        "site": "011e085c",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "011e0df4",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rOrders.LockPatient",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 82,
+    "direct_calls": [
+      {
+        "site": "011e0e36",
+        "target": "009ad924",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e8e9ca7cff"
+      },
+      {
+        "site": "011e0e47",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e878a522ff"
+      },
+      {
+        "site": "011e0e5e",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e8899e5bff"
+      },
+      {
+        "site": "011e0e6b",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8b4b422ff"
+      },
+      {
+        "site": "011e0e75",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e85aa122ff"
+      },
+      {
+        "site": "011e0e8e",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e8599e5bff"
+      },
+      {
+        "site": "011e0e99",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e826a522ff"
+      },
+      {
+        "site": "011e0ece",
+        "target": "011e95c0",
+        "names": [
+          "rOrders.TLockList.AddLock"
+        ],
+        "bytes": "e8ed860000"
+      },
+      {
+        "site": "011e0ee8",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e847a122ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "011e0e31",
+        "instruction": "MOV EAX,0x11e0f08",
+        "literal": {
+          "address": "011e0f08",
+          "header_address": "011e0efc",
+          "file_offset": 14549768,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 10,
+          "text": "ORWDX LOCK",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "011e0e42",
+        "instruction": "MOV EDX,0x11e0f2c",
+        "literal": {
+          "address": "011e0f2c",
+          "header_address": "011e0f20",
+          "file_offset": 14549804,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 26,
+          "text": "3^Error caling \"ORWDX LOC\"",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "011e0e66",
+        "instruction": "MOV EDX,0x11e0f70",
+        "literal": {
+          "address": "011e0f70",
+          "header_address": "011e0f64",
+          "file_offset": 14549872,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "1",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "011e0eee",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "011e0fe0",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rOrders.LockOrder",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 85,
+    "direct_calls": [
+      {
+        "site": "011e0ffb",
+        "target": "0040b0c8",
+        "names": [
+          "System.@UStrAddRef"
+        ],
+        "bytes": "e8c8a022ff"
+      },
+      {
+        "site": "011e102a",
+        "target": "009ad924",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e8f5c87cff"
+      },
+      {
+        "site": "011e103b",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e884a322ff"
+      },
+      {
+        "site": "011e1052",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e8959c5bff"
+      },
+      {
+        "site": "011e105f",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e8c0b222ff"
+      },
+      {
+        "site": "011e1069",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8669f22ff"
+      },
+      {
+        "site": "011e1082",
+        "target": "0079acec",
+        "names": [
+          "VAUtils.Piece"
+        ],
+        "bytes": "e8659c5bff"
+      },
+      {
+        "site": "011e108d",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e832a322ff"
+      },
+      {
+        "site": "011e10bc",
+        "target": "011e95c0",
+        "names": [
+          "rOrders.TLockList.AddLock"
+        ],
+        "bytes": "e8ff840000"
+      },
+      {
+        "site": "011e10d6",
+        "target": "0040b034",
+        "names": [
+          "System.@UStrArrayClr"
+        ],
+        "bytes": "e8599f22ff"
+      },
+      {
+        "site": "011e10de",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8f19e22ff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "011e1025",
+        "instruction": "MOV EAX,0x11e1100",
+        "literal": {
+          "address": "011e1100",
+          "header_address": "011e10f4",
+          "file_offset": 14550272,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 16,
+          "text": "ORWDX LOCK ORDER",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "011e1036",
+        "instruction": "MOV EDX,0x11e1130",
+        "literal": {
+          "address": "011e1130",
+          "header_address": "011e1124",
+          "file_offset": 14550320,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 33,
+          "text": "3^Error caling \"ORWDX LOCK ORDER\"",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "011e105a",
+        "instruction": "MOV EDX,0x11e1180",
+        "literal": {
+          "address": "011e1180",
+          "header_address": "011e1174",
+          "file_offset": 14550400,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 1,
+          "text": "1",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "011e10e4",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "011e12a0",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "rOrders.ValidateOrderAction",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 43,
+    "direct_calls": [
+      {
+        "site": "011e12b7",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e868b022ff"
+      },
+      {
+        "site": "011e1319",
+        "target": "009ad924",
+        "names": [
+          "ORNet.CallVistA"
+        ],
+        "bytes": "e806c67cff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "011e12b2",
+        "instruction": "MOV EDX,0x11e1330",
+        "literal": {
+          "address": "011e1330",
+          "header_address": "011e1324",
+          "file_offset": 14550832,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 2,
+          "text": "ES",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "011e1314",
+        "instruction": "MOV EAX,0x11e1344",
+        "literal": {
+          "address": "011e1344",
+          "header_address": "011e1338",
+          "file_offset": 14550852,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 12,
+          "text": "ORWDXA VALID",
+          "rpc_name_candidate": true,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [],
+    "control_flow_limits": [],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  },
+  {
+    "address": "01224034",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "name": "CPRSChart.CPRSChart",
+    "export_status": "decompiled",
+    "error": "",
+    "analysis_status": "unresolved",
+    "uncertainties": [
+      "Export only; verify function boundaries, ABI, paths and semantics"
+    ],
+    "instructions_verified": 97,
+    "direct_calls": [
+      {
+        "site": "01224048",
+        "target": "00413340",
+        "names": [
+          "SysInit.@InitExe"
+        ],
+        "bytes": "e8f3f21eff"
+      },
+      {
+        "site": "01224061",
+        "target": "009b8440",
+        "names": [
+          "ORSystem.BorlandDLLVersionOK"
+        ],
+        "bytes": "e8da4379ff"
+      },
+      {
+        "site": "0122406e",
+        "target": "00df6cc4",
+        "names": [
+          "uEventHooks.RegisterCPRSTypeLibrary"
+        ],
+        "bytes": "e8512cbdff"
+      },
+      {
+        "site": "01224078",
+        "target": "009bd230",
+        "names": [
+          "ORRedirect.TORRedirect.Start"
+        ],
+        "bytes": "e8b39179ff"
+      },
+      {
+        "site": "0122407f",
+        "target": "0072cb10",
+        "names": [
+          "Vcl.Forms.TApplication.Initialize"
+        ],
+        "bytes": "e88c8a50ff"
+      },
+      {
+        "site": "01224095",
+        "target": "009b82b0",
+        "names": [
+          "ORSystem.ParamSearch"
+        ],
+        "bytes": "e8164279ff"
+      },
+      {
+        "site": "012240a2",
+        "target": "0040c324",
+        "names": [
+          "System.@UStrEqual"
+        ],
+        "bytes": "e87d821eff"
+      },
+      {
+        "site": "012240b2",
+        "target": "011c5f98",
+        "names": [
+          "fBase508Form.TfrmBase508Form.Create"
+        ],
+        "bytes": "e8e11efaff"
+      },
+      {
+        "site": "012240c6",
+        "target": "0072762c",
+        "names": [
+          "Vcl.Forms.TCustomForm.Show"
+        ],
+        "bytes": "e8613550ff"
+      },
+      {
+        "site": "012240d2",
+        "target": "00602d00",
+        "names": [
+          "Vcl.Controls.TControl.Refresh"
+        ],
+        "bytes": "e829ec3dff"
+      },
+      {
+        "site": "012240de",
+        "target": "0072c548",
+        "names": [
+          "Vcl.Forms.TApplication.SetTitle"
+        ],
+        "bytes": "e8658450ff"
+      },
+      {
+        "site": "012240ed",
+        "target": "0040b3c4",
+        "names": [
+          "System.@UStrAsg"
+        ],
+        "bytes": "e8d2721eff"
+      },
+      {
+        "site": "012240f6",
+        "target": "0072eafc",
+        "names": [
+          "Vcl.Forms.TApplication.SetMainFormOnTaskBar"
+        ],
+        "bytes": "e801aa50ff"
+      },
+      {
+        "site": "01224109",
+        "target": "0072cb28",
+        "names": [
+          "Vcl.Forms.TApplication.CreateForm"
+        ],
+        "bytes": "e81a8a50ff"
+      },
+      {
+        "site": "0122411c",
+        "target": "0072cb28",
+        "names": [
+          "Vcl.Forms.TApplication.CreateForm"
+        ],
+        "bytes": "e8078a50ff"
+      },
+      {
+        "site": "0122412b",
+        "target": "006026ac",
+        "names": [
+          "Vcl.Controls.TControl.GetText"
+        ],
+        "bytes": "e87ce53dff"
+      },
+      {
+        "site": "01224135",
+        "target": "0072c548",
+        "names": [
+          "Vcl.Forms.TApplication.SetTitle"
+        ],
+        "bytes": "e80e8450ff"
+      },
+      {
+        "site": "01224148",
+        "target": "0072cb28",
+        "names": [
+          "Vcl.Forms.TApplication.CreateForm"
+        ],
+        "bytes": "e8db8950ff"
+      },
+      {
+        "site": "0122415e",
+        "target": "004090bc",
+        "names": [
+          "System.TObject.Free"
+        ],
+        "bytes": "e8594f1eff"
+      },
+      {
+        "site": "0122416e",
+        "target": "0072cc88",
+        "names": [
+          "Vcl.Forms.TApplication.Run"
+        ],
+        "bytes": "e8158b50ff"
+      },
+      {
+        "site": "01224183",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e84c6e1eff"
+      },
+      {
+        "site": "0122418b",
+        "target": "0040afd4",
+        "names": [
+          "System.@UStrClr"
+        ],
+        "bytes": "e8446e1eff"
+      }
+    ],
+    "literal_references": [
+      {
+        "site": "01224090",
+        "instruction": "MOV EAX,0x12241ac",
+        "literal": {
+          "address": "012241ac",
+          "header_address": "012241a0",
+          "file_offset": 14824876,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 6,
+          "text": "SPLASH",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "0122409d",
+        "instruction": "MOV EDX,0x12241c8",
+        "literal": {
+          "address": "012241c8",
+          "header_address": "012241bc",
+          "file_offset": 14824904,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 3,
+          "text": "OFF",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "012240d9",
+        "instruction": "MOV EDX,0x12241dc",
+        "literal": {
+          "address": "012241dc",
+          "header_address": "012241d0",
+          "file_offset": 14824924,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 20,
+          "text": "CPRS - Patient Chart",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      },
+      {
+        "site": "012240e8",
+        "instruction": "MOV EDX,0x1224214",
+        "literal": {
+          "address": "01224214",
+          "header_address": "01224208",
+          "file_offset": 14824980,
+          "codepage": 1200,
+          "element_width": 2,
+          "length": 13,
+          "text": "help\\cprs.chm",
+          "rpc_name_candidate": false,
+          "validation": "header-and-file-bytes; use sites require separate review"
+        }
+      }
+    ],
+    "indirect_calls": [],
+    "control_flow_limits": [
+      {
+        "site": "01224191",
+        "instruction": "JMP EAX"
+      }
+    ],
+    "scope": "Call/literal annotations verified; full behavioral/ABI recovery remains partial"
+  }
+]

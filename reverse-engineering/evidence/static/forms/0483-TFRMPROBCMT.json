@@ -1,0 +1,130 @@
+{
+  "class": "TfrmProbCmt",
+  "name": "frmProbCmt",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 205,
+    "Top": 220,
+    "Caption": "Annotate a problem",
+    "ClientHeight": 101,
+    "ClientWidth": 403,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 411,
+    "ExplicitHeight": 128,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TOROffsetLabel",
+      "name": "lblComment",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 397,
+        "Height": 33,
+        "Align": "alTop",
+        "Caption": "Enter a new comment (up to 200 characters):",
+        "HorzOffset": 2,
+        "Transparent": false,
+        "VertOffset": 2,
+        "WordWrap": false,
+        "ExplicitLeft": 0,
+        "ExplicitTop": 0,
+        "ExplicitWidth": 403
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionEdit",
+      "name": "edComment",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 11,
+        "Top": 30,
+        "Width": 386,
+        "Height": 24,
+        "MaxLength": 200,
+        "TabOrder": 0,
+        "Caption": "Enter a new comment (up to 200 characters)"
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "bbOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 115,
+        "Top": 60,
+        "Width": 75,
+        "Height": 25,
+        "Caption": "OK",
+        "Default": true,
+        "ModalResult": 1,
+        "TabOrder": 1,
+        "OnClick": "bbOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TBitBtn",
+      "name": "bbCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 200,
+        "Top": 60,
+        "Width": 75,
+        "Height": 25,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "ModalResult": 2,
+        "NumGlyphs": 2,
+        "TabOrder": 2,
+        "OnClick": "bbCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = edComment",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = bbOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = bbCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmProbCmt",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "class": "TfraGrid",
+  "name": "fraGrid",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Height": 114,
+    "ExplicitHeight": 114
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlHeader",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {},
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblHeader",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Top": 10,
+            "Width": 82,
+            "Caption": "Immunization List",
+            "ExplicitTop": 10,
+            "ExplicitWidth": 82
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnAdd",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 664,
+            "Top": 6,
+            "Width": 129,
+            "Height": 20,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Caption": "Add Record",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentFont": false,
+            "TabOrder": 0,
+            "OnClick": "btnAddClick",
+            "OnKeyPress": "btnAddKeyPress"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlWorkspace",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Height": 85,
+        "ExplicitHeight": 85
+      },
+      "children": [
+        {
+          "class": "TListView",
+          "name": "lstView",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 807,
+            "Height": 83,
+            "Align": "alClient",
+            "Color": "clBtnHighlight",
+            "Columns": [
+              {
+                "index": null,
+                "properties": {
+                  "Caption": "id",
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "AutoSize": true,
+                  "Caption": "Immunization"
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "AutoSize": true,
+                  "Caption": "Documentation Type"
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "AutoSize": true,
+                  "Caption": "Documentation Status"
+                }
+              }
+            ],
+            "ReadOnly": true,
+            "RowSelect": true,
+            "PopupMenu": "popMenu",
+            "TabOrder": 0,
+            "ViewStyle": "vsReport"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TImageList",
+      "name": "imgLst",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Bitmap": {
+          "binary_bytes": 4390
+        }
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popMenu",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "OnPopup": "popMenuPopup",
+        "Left": 416
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "addImm",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Add New Immunization",
+            "OnClick": "addImmClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "editImm",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Edit Immunization",
+            "OnClick": "editImmClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "delImm",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Delete Immunization",
+            "OnClick": "delImmClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "viewImm",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "View Immunization Record",
+            "OnClick": "viewImmClick"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

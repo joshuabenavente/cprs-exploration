@@ -1,0 +1,506 @@
+{
+  "class": "TfrmOptionsTitles",
+  "name": "frmOptionsTitles",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 271,
+    "Top": 271,
+    "HelpContext": 9230,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "BorderStyle": "bsSingle",
+    "Caption": "Document Titles",
+    "ClientHeight": 237,
+    "ClientWidth": 533,
+    "HelpFile": "CPRSWT.HLP",
+    "Position": "poScreenCenter",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 539,
+    "ExplicitHeight": 270,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblDocumentClass",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 8,
+        "Top": 17,
+        "Width": 79,
+        "Height": 13,
+        "Caption": "Document class:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblDocumentTitles",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 8,
+        "Top": 57,
+        "Width": 76,
+        "Height": 13,
+        "Caption": "Document titles:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblYourTitles",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 299,
+        "Top": 78,
+        "Width": 76,
+        "Height": 13,
+        "Caption": "Your list of titles:"
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "lblDefaultTitle",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 299,
+        "Top": 43,
+        "Width": 41,
+        "Height": 17,
+        "Caption": "Default:",
+        "TabOrder": 10
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "lblDefault",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 299,
+        "Top": 59,
+        "Width": 108,
+        "Height": 17,
+        "Caption": "<no default specified>",
+        "ShowAccelChar": false,
+        "TabOrder": 11
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "lblDocumentPreference",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 199,
+        "Top": 6,
+        "Width": 132,
+        "Height": 17,
+        "Caption": "Document List Preferences",
+        "TabOrder": 12
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboDocumentClass",
+      "inherited": false,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 8,
+        "Top": 31,
+        "Width": 200,
+        "Height": 21,
+        "HelpContext": 9231,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Document class",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 0,
+        "Text": "",
+        "OnClick": "cboDocumentClassClick",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORListBox",
+      "name": "lstYourTitles",
+      "inherited": false,
+      "inline": false,
+      "child_position": 7,
+      "properties": {
+        "Left": 299,
+        "Top": 93,
+        "Width": 200,
+        "Height": 108,
+        "HelpContext": 9237,
+        "ItemHeight": 13,
+        "MultiSelect": true,
+        "ParentShowHint": false,
+        "ShowHint": true,
+        "TabOrder": 6,
+        "OnClick": "lstYourTitlesClick",
+        "OnDblClick": "btnRemoveClick",
+        "Caption": "Your list of titles",
+        "ItemTipColor": "clWindow",
+        "LongList": false,
+        "Pieces": "2",
+        "OnChange": "lstYourTitlesChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnAdd",
+      "inherited": false,
+      "inline": false,
+      "child_position": 8,
+      "properties": {
+        "Left": 211,
+        "Top": 93,
+        "Width": 85,
+        "Height": 22,
+        "HelpContext": 9233,
+        "Caption": "Add",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 2,
+        "OnClick": "btnAddClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnRemove",
+      "inherited": false,
+      "inline": false,
+      "child_position": 9,
+      "properties": {
+        "Left": 211,
+        "Top": 121,
+        "Width": 85,
+        "Height": 22,
+        "HelpContext": 9234,
+        "Caption": "Remove",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 3,
+        "OnClick": "btnRemoveClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnDefault",
+      "inherited": false,
+      "inline": false,
+      "child_position": 10,
+      "properties": {
+        "Left": 211,
+        "Top": 178,
+        "Width": 85,
+        "Height": 22,
+        "HelpContext": 9236,
+        "Caption": "Set as Default",
+        "Enabled": false,
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 5,
+        "OnClick": "btnDefaultClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnSaveChanges",
+      "inherited": false,
+      "inline": false,
+      "child_position": 11,
+      "properties": {
+        "Left": 211,
+        "Top": 150,
+        "Width": 85,
+        "Height": 22,
+        "HelpContext": 9235,
+        "Caption": "Save Changes",
+        "Enabled": false,
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "TabOrder": 4,
+        "OnClick": "btnSaveChangesClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 12,
+      "properties": {
+        "Left": 0,
+        "Top": 204,
+        "Width": 533,
+        "Height": 33,
+        "HelpContext": 9230,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ParentColor": true,
+        "TabOrder": 9,
+        "ExplicitWidth": 527
+      },
+      "children": [
+        {
+          "class": "TBevel",
+          "name": "bvlBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 533,
+            "Height": 2,
+            "Align": "alTop",
+            "ExplicitWidth": 527
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 367,
+            "Top": 7,
+            "Width": 75,
+            "Height": 22,
+            "HelpContext": 9996,
+            "Caption": "OK",
+            "Default": true,
+            "ModalResult": 1,
+            "TabOrder": 0,
+            "OnClick": "btnOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 448,
+            "Top": 7,
+            "Width": 75,
+            "Height": 22,
+            "HelpContext": 9997,
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboDocumentTitles",
+      "inherited": false,
+      "inline": false,
+      "child_position": 13,
+      "properties": {
+        "Left": 8,
+        "Top": 72,
+        "Width": 200,
+        "Height": 129,
+        "HelpContext": 9232,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "Document titles",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 1,
+        "Text": "",
+        "OnChange": "cboDocumentTitlesChange",
+        "OnDblClick": "btnAddClick",
+        "OnNeedData": "cboDocumentTitlesNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnUp",
+      "inherited": false,
+      "inline": false,
+      "child_position": 14,
+      "properties": {
+        "Left": 504,
+        "Top": 110,
+        "Width": 22,
+        "Height": 22,
+        "HelpContext": 9021,
+        "Caption": "^",
+        "TabOrder": 7,
+        "OnClick": "btnUpClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnDown",
+      "inherited": false,
+      "inline": false,
+      "child_position": 15,
+      "properties": {
+        "Left": 504,
+        "Top": 150,
+        "Width": 22,
+        "Height": 22,
+        "HelpContext": 9022,
+        "Caption": "v",
+        "TabOrder": 8,
+        "OnClick": "btnDownClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lblDefaultTitle",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDefault",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDocumentPreference",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboDocumentClass",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstYourTitles",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAdd",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemove",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDefault",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnSaveChanges",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboDocumentTitles",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnUp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDown",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOptionsTitles",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

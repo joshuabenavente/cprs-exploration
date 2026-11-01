@@ -1,0 +1,408 @@
+{
+  "class": "TfrmOptionsReportsCustom",
+  "name": "frmOptionsReportsCustom",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 414,
+    "Top": 329,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Individual CPRS Report Settings",
+    "ClientHeight": 381,
+    "ClientWidth": 514,
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 520,
+    "ExplicitHeight": 406,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TBevel",
+      "name": "Bevel3",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 347,
+        "Width": 514,
+        "Height": 2,
+        "Align": "alBottom",
+        "ExplicitTop": 356,
+        "ExplicitWidth": 503
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 349,
+        "Width": 514,
+        "Height": 32,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "ExplicitTop": 358,
+        "ExplicitWidth": 503
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnApply",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 433,
+            "Top": 3,
+            "Width": 78,
+            "Height": 26,
+            "Hint": "Click to save new settings",
+            "Align": "alRight",
+            "Caption": "Apply",
+            "Enabled": false,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 2,
+            "OnClick": "btnApplyClick",
+            "ExplicitLeft": 432
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 345,
+            "Top": 3,
+            "Width": 82,
+            "Height": 26,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 1,
+            "OnClick": "btnCancelClick",
+            "ExplicitLeft": 344
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 243,
+            "Top": 3,
+            "Width": 96,
+            "Height": 26,
+            "Align": "alRight",
+            "Caption": "OK",
+            "TabOrder": 0,
+            "OnClick": "btnOKClick",
+            "ExplicitLeft": 264
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 514,
+        "Height": 347,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0,
+        "ExplicitWidth": 503,
+        "ExplicitHeight": 353
+      },
+      "children": [
+        {
+          "class": "TCaptionStringGrid",
+          "name": "grdReport",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 60,
+            "Width": 508,
+            "Height": 284,
+            "Align": "alClient",
+            "ColCount": 4,
+            "DefaultRowHeight": 20,
+            "DefaultDrawing": false,
+            "FixedCols": 0,
+            "RowCount": 16,
+            "Options": [
+              "goFixedVertLine",
+              "goFixedHorzLine",
+              "goVertLine",
+              "goHorzLine",
+              "goDrawFocusSelected",
+              "goTabs"
+            ],
+            "ScrollBars": "ssVertical",
+            "TabOrder": 5,
+            "OnDrawCell": "grdReportDrawCell",
+            "OnKeyDown": "grdReportKeyDown",
+            "OnKeyPress": "grdReportKeyPress",
+            "OnMouseDown": "grdReportMouseDown",
+            "Caption": "Report Grid",
+            "ExplicitLeft": 1,
+            "ExplicitTop": 73,
+            "ExplicitWidth": 501,
+            "ExplicitHeight": 272,
+            "ColWidths": [
+              219,
+              97,
+              89,
+              71
+            ]
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "edtMax",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 264,
+            "Top": 328,
+            "Width": 89,
+            "Height": 20,
+            "BorderStyle": "bsNone",
+            "TabOrder": 1,
+            "Visible": false,
+            "OnExit": "edtMaxExit",
+            "OnKeyPress": "edtMaxKeyPress",
+            "Caption": ""
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "odbStop",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 136,
+            "Top": 328,
+            "Width": 113,
+            "Height": 24,
+            "TabOrder": 3,
+            "Visible": false,
+            "OnExit": "odbStopExit",
+            "OnKeyPress": "odbStopKeyPress",
+            "DateOnly": true,
+            "RequireTime": false,
+            "Caption": "Stop Date"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "odbStart",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 328,
+            "Width": 113,
+            "Height": 24,
+            "TabOrder": 2,
+            "Visible": false,
+            "OnExit": "odbStartExit",
+            "OnKeyPress": "odbStartKeyPress",
+            "DateOnly": true,
+            "RequireTime": false,
+            "Caption": "Start Date"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "odbTool",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 360,
+            "Top": 328,
+            "Width": 121,
+            "Height": 24,
+            "TabOrder": 4,
+            "Visible": false,
+            "DateOnly": true,
+            "RequireTime": false,
+            "Caption": "Date"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 514,
+            "Height": 57,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0,
+            "ExplicitWidth": 503
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "Label1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 508,
+                "Height": 16,
+                "Align": "alTop",
+                "Caption": "Type the first few letters of the report you are looking for:",
+                "ExplicitLeft": 16,
+                "ExplicitTop": 8,
+                "ExplicitWidth": 327
+              },
+              "children": []
+            },
+            {
+              "class": "TCaptionEdit",
+              "name": "edtSearch",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 25,
+                "Width": 508,
+                "Height": 24,
+                "Align": "alTop",
+                "TabOrder": 0,
+                "OnChange": "edtSearchChange",
+                "OnKeyPress": "edtSearchKeyPress",
+                "Caption": "Type the first few letters of the report you are looking for:",
+                "ExplicitLeft": 24,
+                "ExplicitTop": 32,
+                "ExplicitWidth": 433
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 48,
+        "Top": 136,
+        "Data": [
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnApply",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grdReport",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtMax",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = odbStop",
+            "Text = Stop Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = odbStart",
+            "Text = start Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = odbTool",
+            "Text = Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtSearch",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOptionsReportsCustom",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

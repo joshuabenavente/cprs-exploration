@@ -1,0 +1,275 @@
+{
+  "class": "TfraCoverSheetDisplayPanel_Web",
+  "name": "fraCoverSheetDisplayPanel_Web",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Width": 584,
+    "Height": 444,
+    "ExplicitWidth": 584,
+    "ExplicitHeight": 444
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 584,
+        "Height": 444,
+        "ExplicitWidth": 584,
+        "ExplicitHeight": 444
+      },
+      "children": [
+        {
+          "class": "TImage",
+          "name": "img",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Height": 413,
+            "ExplicitHeight": 407
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlHeader",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Width": 578,
+            "ExplicitWidth": 578
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblTitle",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 522
+              },
+              "children": []
+            },
+            {
+              "class": "TSpeedButton",
+              "name": "sbtnRefresh",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 556,
+                "ExplicitLeft": 549
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlWorkspace",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Width": 552,
+            "Height": 413,
+            "ExplicitWidth": 552,
+            "ExplicitHeight": 413
+          },
+          "children": [
+            {
+              "class": "TWebBrowser",
+              "name": "brwsr",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 30,
+                "Width": 546,
+                "Height": 380,
+                "Margins.Top": 0,
+                "Align": "alClient",
+                "TabOrder": 0,
+                "SelectedEngine": "EdgeIfAvailable",
+                "OnNavigateComplete2": "brwsrNavigateComplete2",
+                "ExplicitWidth": 437,
+                "ExplicitHeight": 304,
+                "ControlData": {
+                  "binary_bytes": 156
+                }
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlNavigator",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 3,
+                "Width": 546,
+                "Height": 27,
+                "Margins.Bottom": 0,
+                "Align": "alTop",
+                "BevelOuter": "bvNone",
+                "Caption": "pnlNavigator",
+                "Color": "clInactiveCaption",
+                "ParentBackground": false,
+                "TabOrder": 1,
+                "Visible": false
+              },
+              "children": [
+                {
+                  "class": "TSpeedButton",
+                  "name": "sbtnBack",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 1,
+                    "Top": 3,
+                    "Width": 23,
+                    "Height": 21,
+                    "Margins.Left": 1,
+                    "Margins.Right": 0,
+                    "Align": "alLeft",
+                    "Caption": "<",
+                    "ExplicitLeft": 22,
+                    "ExplicitTop": 11,
+                    "ExplicitHeight": 22
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TSpeedButton",
+                  "name": "sbtnForward",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 24,
+                    "Top": 3,
+                    "Width": 23,
+                    "Height": 21,
+                    "Margins.Left": 0,
+                    "Margins.Right": 0,
+                    "Align": "alLeft",
+                    "Caption": ">",
+                    "ExplicitLeft": 162,
+                    "ExplicitTop": 11,
+                    "ExplicitHeight": 22
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TSpeedButton",
+                  "name": "sbtnGO",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 465,
+                    "Top": 3,
+                    "Width": 40,
+                    "Height": 21,
+                    "Margins.Left": 0,
+                    "Margins.Right": 0,
+                    "Align": "alRight",
+                    "Caption": "> Go",
+                    "OnClick": "sbtnGOClick",
+                    "ExplicitLeft": 441,
+                    "ExplicitHeight": 23
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TSpeedButton",
+                  "name": "sbtnHome",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 505,
+                    "Top": 3,
+                    "Width": 40,
+                    "Height": 21,
+                    "Margins.Left": 0,
+                    "Margins.Right": 1,
+                    "Align": "alRight",
+                    "Caption": "Home",
+                    "OnClick": "sbtnGOClick",
+                    "ExplicitLeft": 487,
+                    "ExplicitHeight": 23
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TEdit",
+                  "name": "edtURL",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 49,
+                    "Top": 3,
+                    "Width": 414,
+                    "Height": 21,
+                    "Margins.Left": 2,
+                    "Margins.Right": 2,
+                    "Align": "alClient",
+                    "TabOrder": 0,
+                    "OnKeyDown": "edtURLKeyDown"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlVertHeader",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Height": 413,
+            "ExplicitHeight": 413
+          },
+          "children": [
+            {
+              "class": "TImage",
+              "name": "img",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Height": 413,
+                "ExplicitHeight": 407
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

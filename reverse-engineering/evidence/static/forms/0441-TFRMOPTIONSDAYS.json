@@ -1,0 +1,977 @@
+{
+  "class": "TfrmOptionsDays",
+  "name": "frmOptionsDays",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 516,
+    "Top": 90,
+    "HelpContext": 9010,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "BorderStyle": "bsSingle",
+    "Caption": "Date Range Defaults on Cover Sheet",
+    "ClientHeight": 349,
+    "ClientWidth": 288,
+    "HelpFile": "CPRSWT.HLP",
+    "OnCreate": "FormCreate",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 294,
+    "ExplicitHeight": 377,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 317,
+        "Width": 288,
+        "Height": 32,
+        "HelpContext": 9010,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ParentColor": true,
+        "TabOrder": 0,
+        "ExplicitTop": 275,
+        "ExplicitWidth": 314
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 132,
+            "Top": 3,
+            "Width": 73,
+            "Height": 26,
+            "HelpContext": 9996,
+            "Align": "alRight",
+            "Caption": "OK",
+            "ModalResult": 1,
+            "TabOrder": 0,
+            "OnClick": "btnOKClick",
+            "ExplicitLeft": 158,
+            "ExplicitTop": 5,
+            "ExplicitHeight": 24
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 211,
+            "Top": 3,
+            "Width": 74,
+            "Height": 26,
+            "HelpContext": 9997,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 1,
+            "ExplicitLeft": 237,
+            "ExplicitTop": 5,
+            "ExplicitHeight": 24
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel11",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 288,
+        "Height": 317,
+        "Align": "alClient",
+        "ShowCaption": false,
+        "TabOrder": 1,
+        "ExplicitLeft": 72,
+        "ExplicitTop": 144,
+        "ExplicitWidth": 185,
+        "ExplicitHeight": 41
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "Panel1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 286,
+            "Height": 155,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "Panel2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 286,
+                "Height": 30,
+                "Align": "alTop",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel1",
+                "ShowCaption": false,
+                "TabOrder": 0,
+                "ExplicitWidth": 314
+              },
+              "children": [
+                {
+                  "class": "TBevel",
+                  "name": "bvlTop",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 78,
+                    "Top": 12,
+                    "Width": 205,
+                    "Height": 15,
+                    "Margins.Top": 12,
+                    "Align": "alClient",
+                    "Shape": "bsTopLine",
+                    "ExplicitLeft": 11,
+                    "ExplicitTop": 9,
+                    "ExplicitWidth": 305,
+                    "ExplicitHeight": 2
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TStaticText",
+                  "name": "lblLab",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 69,
+                    "Height": 24,
+                    "Align": "alLeft",
+                    "Caption": "Lab results",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel5",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 30,
+                "Width": 129,
+                "Height": 93,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel5",
+                "ShowCaption": false,
+                "TabOrder": 1,
+                "ExplicitHeight": 107
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblLabInpatient",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 123,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Inpatient days:",
+                    "ExplicitWidth": 86
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblLabOutpatient",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 49,
+                    "Width": 129,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Outpatient days:",
+                    "ExplicitWidth": 96
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TPanel",
+                  "name": "Panel7",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 22,
+                    "Width": 129,
+                    "Height": 27,
+                    "Align": "alTop",
+                    "BevelOuter": "bvNone",
+                    "Caption": "Panel7",
+                    "ShowCaption": false,
+                    "TabOrder": 0,
+                    "DesignSize": [
+                      129,
+                      27
+                    ]
+                  },
+                  "children": [
+                    {
+                      "class": "TCaptionEdit",
+                      "name": "txtLabInpatient",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 3,
+                        "Top": 3,
+                        "Width": 78,
+                        "Height": 21,
+                        "HelpContext": 9013,
+                        "Align": "alLeft",
+                        "TabOrder": 0,
+                        "Text": "1",
+                        "OnChange": "txtLabInpatientChange",
+                        "OnExit": "txtLabInpatientExit",
+                        "OnKeyPress": "txtLabInpatientKeyPress",
+                        "Caption": "Inpatient days"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TUpDown",
+                      "name": "spnLabInpatient",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 81,
+                        "Top": 3,
+                        "Width": 16,
+                        "Height": 21,
+                        "HelpContext": 9013,
+                        "Anchors": [
+                          "akTop",
+                          "akRight"
+                        ],
+                        "Associate": "txtLabInpatient",
+                        "Max": 999,
+                        "Position": 1,
+                        "TabOrder": 1,
+                        "Thousands": false,
+                        "OnClick": "spnLabInpatientClick"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "class": "TPanel",
+                  "name": "Panel8",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 65,
+                    "Width": 129,
+                    "Height": 27,
+                    "Align": "alTop",
+                    "BevelOuter": "bvNone",
+                    "Caption": "Panel8",
+                    "ShowCaption": false,
+                    "TabOrder": 1,
+                    "DesignSize": [
+                      129,
+                      27
+                    ]
+                  },
+                  "children": [
+                    {
+                      "class": "TCaptionEdit",
+                      "name": "txtLabOutpatient",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 3,
+                        "Top": 3,
+                        "Width": 78,
+                        "Height": 21,
+                        "HelpContext": 9014,
+                        "Align": "alLeft",
+                        "TabOrder": 0,
+                        "Text": "1",
+                        "OnChange": "txtLabOutpatientChange",
+                        "OnExit": "txtLabOutpatientExit",
+                        "OnKeyPress": "txtLabInpatientKeyPress",
+                        "Caption": "Outpatient days"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TUpDown",
+                      "name": "spnLabOutpatient",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 81,
+                        "Top": 3,
+                        "Width": 16,
+                        "Height": 21,
+                        "HelpContext": 9014,
+                        "Anchors": [
+                          "akTop",
+                          "akRight"
+                        ],
+                        "Associate": "txtLabOutpatient",
+                        "Max": 999,
+                        "Position": 1,
+                        "TabOrder": 1,
+                        "Thousands": false,
+                        "OnClick": "spnLabOutpatientClick"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel12",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 123,
+                "Width": 286,
+                "Height": 32,
+                "Align": "alBottom",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel12",
+                "ShowCaption": false,
+                "TabOrder": 2
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnLabDefaults",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 132,
+                    "Top": 3,
+                    "Width": 151,
+                    "Height": 26,
+                    "HelpContext": 9011,
+                    "Margins.Left": 132,
+                    "Align": "alBottom",
+                    "Caption": "Use Defaults",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -12,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "TabOrder": 0,
+                    "OnClick": "btnLabDefaultsClick",
+                    "ExplicitLeft": 3,
+                    "ExplicitTop": 72,
+                    "ExplicitWidth": 123
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMemo",
+              "name": "lblLabValue",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 132,
+                "Top": 33,
+                "Width": 151,
+                "Height": 87,
+                "TabStop": false,
+                "Align": "alClient",
+                "BorderStyle": "bsNone",
+                "Color": "clBtnFace",
+                "Lines.Strings": [
+                  "lblLabValue"
+                ],
+                "ReadOnly": true,
+                "TabOrder": 3,
+                "ExplicitTop": 36,
+                "ExplicitHeight": 89
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 156,
+            "Width": 286,
+            "Height": 160,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 1,
+            "ExplicitLeft": 0,
+            "ExplicitTop": 0,
+            "ExplicitWidth": 314,
+            "ExplicitHeight": 135
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "Panel4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 286,
+                "Height": 30,
+                "Align": "alTop",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel1",
+                "ShowCaption": false,
+                "TabOrder": 0,
+                "ExplicitWidth": 314
+              },
+              "children": [
+                {
+                  "class": "TBevel",
+                  "name": "bvlMiddle",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 154,
+                    "Top": 12,
+                    "Width": 129,
+                    "Height": 15,
+                    "Margins.Top": 12,
+                    "Align": "alClient",
+                    "Shape": "bsTopLine",
+                    "ExplicitLeft": 11,
+                    "ExplicitTop": 29,
+                    "ExplicitWidth": 305,
+                    "ExplicitHeight": 1
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TStaticText",
+                  "name": "lblVisit",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 145,
+                    "Height": 24,
+                    "Align": "alLeft",
+                    "Caption": "Appointments and visits",
+                    "TabOrder": 0
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel6",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 30,
+                "Width": 129,
+                "Height": 98,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel5",
+                "ShowCaption": false,
+                "TabOrder": 1,
+                "ExplicitHeight": 105
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblVisitStart",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 123,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Start:",
+                    "ExplicitWidth": 30
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TLabel",
+                  "name": "lblVisitStop",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 52,
+                    "Width": 123,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Stop:",
+                    "ExplicitWidth": 31
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TPanel",
+                  "name": "Panel9",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 22,
+                    "Width": 129,
+                    "Height": 27,
+                    "Align": "alTop",
+                    "BevelOuter": "bvNone",
+                    "Caption": "Panel7",
+                    "ShowCaption": false,
+                    "TabOrder": 0,
+                    "DesignSize": [
+                      129,
+                      27
+                    ]
+                  },
+                  "children": [
+                    {
+                      "class": "TCaptionEdit",
+                      "name": "txtVisitStart",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Tag": -180,
+                        "AlignWithMargins": true,
+                        "Left": 3,
+                        "Top": 3,
+                        "Width": 79,
+                        "Height": 21,
+                        "HelpContext": 9015,
+                        "Align": "alLeft",
+                        "MaxLength": 12,
+                        "TabOrder": 0,
+                        "Text": "0",
+                        "OnExit": "txtVisitStartExit",
+                        "OnKeyPress": "txtVisitStartKeyPress",
+                        "OnKeyUp": "txtVisitStartKeyUp",
+                        "Caption": "Start"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TUpDown",
+                      "name": "spnVisitStart",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Tag": -180,
+                        "Left": 82,
+                        "Top": 3,
+                        "Width": 16,
+                        "Height": 21,
+                        "HelpContext": 9015,
+                        "Anchors": [
+                          "akTop",
+                          "akRight"
+                        ],
+                        "Associate": "txtVisitStart",
+                        "Min": -999,
+                        "Max": 999,
+                        "TabOrder": 1,
+                        "Thousands": false,
+                        "OnClick": "spnVisitStartClick"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "class": "TPanel",
+                  "name": "Panel10",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 71,
+                    "Width": 129,
+                    "Height": 27,
+                    "Align": "alTop",
+                    "BevelOuter": "bvNone",
+                    "Caption": "Panel8",
+                    "ShowCaption": false,
+                    "TabOrder": 1
+                  },
+                  "children": [
+                    {
+                      "class": "TCaptionEdit",
+                      "name": "txtVisitStop",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Tag": 30,
+                        "AlignWithMargins": true,
+                        "Left": 3,
+                        "Top": 3,
+                        "Width": 79,
+                        "Height": 21,
+                        "HelpContext": 9015,
+                        "Align": "alLeft",
+                        "MaxLength": 12,
+                        "TabOrder": 0,
+                        "Text": "0",
+                        "OnExit": "txtVisitStopExit",
+                        "OnKeyPress": "txtVisitStopKeyPress",
+                        "OnKeyUp": "txtVisitStopKeyUp",
+                        "Caption": "Stop"
+                      },
+                      "children": []
+                    },
+                    {
+                      "class": "TUpDown",
+                      "name": "spnVisitStop",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Tag": 30,
+                        "Left": 82,
+                        "Top": 3,
+                        "Width": 16,
+                        "Height": 21,
+                        "HelpContext": 9015,
+                        "Associate": "txtVisitStop",
+                        "Min": -999,
+                        "Max": 999,
+                        "TabOrder": 1,
+                        "Thousands": false,
+                        "OnClick": "spnVisitStopClick"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel13",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 128,
+                "Width": 286,
+                "Height": 32,
+                "Align": "alBottom",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel13",
+                "ShowCaption": false,
+                "TabOrder": 2,
+                "ExplicitTop": 86
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnVisitDefaults",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 132,
+                    "Top": 3,
+                    "Width": 151,
+                    "Height": 26,
+                    "HelpContext": 9012,
+                    "Margins.Left": 132,
+                    "Align": "alBottom",
+                    "Caption": "Use Defaults",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -12,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ParentFont": false,
+                    "TabOrder": 0,
+                    "OnClick": "btnVisitDefaultsClick",
+                    "ExplicitLeft": 3,
+                    "ExplicitTop": 80
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMemo",
+              "name": "lblVisitValue",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 132,
+                "Top": 33,
+                "Width": 151,
+                "Height": 92,
+                "TabStop": false,
+                "Align": "alClient",
+                "BorderStyle": "bsNone",
+                "Color": "clBtnFace",
+                "Lines.Strings": [
+                  "lblVisitValue"
+                ],
+                "ReadOnly": true,
+                "TabOrder": 3,
+                "ExplicitLeft": 3,
+                "ExplicitTop": 3,
+                "ExplicitHeight": 50
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 16,
+        "Top": 664,
+        "Data": [
+          [
+            "Component = lblVisitValue",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLabValue",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblVisit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLab",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtLabInpatient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = spnLabInpatient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtLabOutpatient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = spnLabOutpatient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtVisitStart",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = spnVisitStart",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtVisitStop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = spnVisitStop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnLabDefaults",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnVisitDefaults",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOptionsDays",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel5",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel6",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel7",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel8",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel9",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel10",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel11",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel12",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel13",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

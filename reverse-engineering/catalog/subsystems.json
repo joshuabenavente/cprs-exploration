@@ -1,0 +1,1338 @@
+{
+  "compiler-runtime-and-libraries": {
+    "functions": 23858,
+    "status": {
+      "analyzed": 1977,
+      "unresolved": 21881
+    },
+    "modules": [
+      "Data.Bind.Components",
+      "Data.Bind.EngExt",
+      "Data.Bind.Grid",
+      "Data.DB",
+      "Data.DBCommon",
+      "Data.FmtBcd",
+      "Data.SqlTimSt",
+      "Datasnap.DBClient",
+      "Datasnap.DSIntf",
+      "Datasnap.Provider",
+      "IdException",
+      "IdGlobal",
+      "IdGlobalProtocols",
+      "IdHash",
+      "IdHashSHA",
+      "IdIDN",
+      "IdStack",
+      "IdStackBSDBase",
+      "IdStackWindows",
+      "IdStreamVCL",
+      "IdURI",
+      "IdUriUtils",
+      "IdWinsock2",
+      "IdWship6",
+      "MidasLib",
+      "Soap.HTTPUtil",
+      "Soap.IntfInfo",
+      "Soap.InvokeRegistry",
+      "Soap.OPToSOAPDomConv",
+      "Soap.Rio",
+      "Soap.SOAPAttach",
+      "Soap.SOAPAttachIntf",
+      "Soap.SOAPDomConv",
+      "Soap.SOAPEnv",
+      "Soap.SOAPHTTPClient",
+      "Soap.SOAPHTTPTrans",
+      "Soap.TypeTrans",
+      "Soap.UDDIHelper",
+      "Soap.WSDLBind",
+      "Soap.WSDLIntf",
+      "Soap.WSDLItems",
+      "Soap.WSDLLookup",
+      "Soap.WSDLNode",
+      "Soap.WebServExp",
+      "Soap.XSBuiltIns",
+      "Soap.inquire_v1",
+      "SysInit",
+      "System",
+      "System.Actions",
+      "System.AnsiStrings",
+      "System.Bindings.CustomScope",
+      "System.Bindings.CustomWrapper",
+      "System.Bindings.EvalProtocol",
+      "System.Bindings.EvalSys",
+      "System.Bindings.Evaluator",
+      "System.Bindings.Expression",
+      "System.Bindings.ExpressionDefaults",
+      "System.Bindings.Factories",
+      "System.Bindings.Graph",
+      "System.Bindings.Helper",
+      "System.Bindings.Manager",
+      "System.Bindings.ManagerDefaults",
+      "System.Bindings.Methods",
+      "System.Bindings.NotifierDefaults",
+      "System.Bindings.ObjEval",
+      "System.Bindings.Outputs",
+      "System.Bindings.Search",
+      "System.Character",
+      "System.Classes",
+      "System.Contnrs",
+      "System.DateUtils",
+      "System.Diagnostics",
+      "System.Generics.Collections",
+      "System.Generics.Defaults",
+      "System.Hash",
+      "System.HelpIntfs",
+      "System.IOUtils",
+      "System.ImageList",
+      "System.IniFiles",
+      "System.JSON",
+      "System.JSON.Builders",
+      "System.JSON.Converters",
+      "System.JSON.Readers",
+      "System.JSON.Serializers",
+      "System.JSON.Types",
+      "System.JSON.Utils",
+      "System.JSON.Writers",
+      "System.MaskUtils",
+      "System.Masks",
+      "System.Math",
+      "System.Math.Vectors",
+      "System.Messaging",
+      "System.Net.HttpClient",
+      "System.Net.HttpClient.Win",
+      "System.Net.HttpClientComponent",
+      "System.Net.Mime",
+      "System.Net.URLClient",
+      "System.NetEncoding",
+      "System.RegularExpressions",
+      "System.RegularExpressionsAPI",
+      "System.RegularExpressionsCore",
+      "System.Rtti",
+      "System.ShareMem",
+      "System.StrUtils",
+      "System.SyncObjs",
+      "System.SysUtils",
+      "System.Threading",
+      "System.TimeSpan",
+      "System.TypInfo",
+      "System.Types",
+      "System.UIConsts",
+      "System.VarUtils",
+      "System.Variants",
+      "System.WideStrUtils",
+      "System.Win.ComObj",
+      "System.Win.Crtl",
+      "System.Win.Registry",
+      "System.ZLib",
+      "System.Zip",
+      "Vcl.ActnList",
+      "Vcl.AppEvnts",
+      "Vcl.AxCtrls",
+      "Vcl.BaseImageCollection",
+      "Vcl.Bind.DBEngExt",
+      "Vcl.Buttons",
+      "Vcl.CaptionedDockTree",
+      "Vcl.CheckLst",
+      "Vcl.Clipbrd",
+      "Vcl.ComCtrls",
+      "Vcl.Controls",
+      "Vcl.DBCtrls",
+      "Vcl.DBGrids",
+      "Vcl.DBLogDlg",
+      "Vcl.DBPWDlg",
+      "Vcl.Dialogs",
+      "Vcl.DockTabSet",
+      "Vcl.Edge",
+      "Vcl.ExtCtrls",
+      "Vcl.Forms",
+      "Vcl.GraphUtil",
+      "Vcl.Graphics",
+      "Vcl.Grids",
+      "Vcl.ImageCollection",
+      "Vcl.Imaging.jpeg",
+      "Vcl.Imaging.pngimage",
+      "Vcl.ImgList",
+      "Vcl.ListActns",
+      "Vcl.Mask",
+      "Vcl.Menus",
+      "Vcl.OleCtrls",
+      "Vcl.OleServer",
+      "Vcl.Printers",
+      "Vcl.Samples.Calendar",
+      "Vcl.Samples.Gauges",
+      "Vcl.Samples.Spin",
+      "Vcl.StdActns",
+      "Vcl.StdCtrls",
+      "Vcl.Themes",
+      "Vcl.ToolWin",
+      "Vcl.VirtualImageList",
+      "Vcl.WinHelpViewer",
+      "Vcl.WinXCtrls",
+      "Web.HTTPApp",
+      "Winapi.ActiveX",
+      "Winapi.CommCtrl",
+      "Winapi.Dwmapi",
+      "Winapi.EdgeUtils",
+      "Winapi.FlatSB",
+      "Winapi.GDIPAPI",
+      "Winapi.GDIPOBJ",
+      "Winapi.Imm",
+      "Winapi.Messages",
+      "Winapi.MsCTF",
+      "Winapi.MsCTF.PkgHelper",
+      "Winapi.MultiMon",
+      "Winapi.PsAPI",
+      "Winapi.RichEdit",
+      "Winapi.SHFolder",
+      "Winapi.ShLwApi",
+      "Winapi.ShellAPI",
+      "Winapi.ShellScaling",
+      "Winapi.ShlObj",
+      "Winapi.TlHelp32",
+      "Winapi.UxTheme",
+      "Winapi.WinHTTP",
+      "Winapi.WinSock",
+      "Winapi.WinSpool",
+      "Winapi.Wincodec",
+      "Winapi.Windows",
+      "Winapi.Windows.PkgHelper",
+      "Winapi.Winsock2",
+      "Winapi.Wtsapi32",
+      "Xml.Win.msxmldom",
+      "Xml.XMLDoc",
+      "Xml.XMLSchema",
+      "Xml.xmldom",
+      "Xml.xmlutil"
+    ],
+    "representative_entries": [
+      {
+        "address": "00405798",
+        "name": "System.CloseHandle"
+      },
+      {
+        "address": "004057a0",
+        "name": "System.GetStdHandle"
+      },
+      {
+        "address": "004057a8",
+        "name": "System.WriteFile"
+      },
+      {
+        "address": "004057b0",
+        "name": "System.FindClose"
+      },
+      {
+        "address": "004057b8",
+        "name": "System.FindFirstFile"
+      },
+      {
+        "address": "004057c0",
+        "name": "System.InitializeCriticalSection"
+      },
+      {
+        "address": "004057c8",
+        "name": "System.EnterCriticalSection"
+      },
+      {
+        "address": "004057d0",
+        "name": "System.LeaveCriticalSection"
+      },
+      {
+        "address": "004057d8",
+        "name": "System.DeleteCriticalSection"
+      },
+      {
+        "address": "004057e0",
+        "name": "System.CreateThread"
+      },
+      {
+        "address": "004057e8",
+        "name": "System.GetCurrentThreadId"
+      },
+      {
+        "address": "004057f0",
+        "name": "System.SwitchToThread"
+      }
+    ]
+  },
+  "other-application-modules": {
+    "functions": 9924,
+    "status": {
+      "unresolved": 9756,
+      "analyzed": 159,
+      "partially_analyzed": 9
+    },
+    "modules": [
+      "AVCatcher",
+      "ActivityLogDisplay",
+      "CPRSChart",
+      "CPUID",
+      "DDetours",
+      "InstDecode",
+      "Loginfrm",
+      "MFunStr",
+      "MSXML_TLB",
+      "OR2006Compatibility",
+      "ORCheckComboBox",
+      "ORDtTm",
+      "ORDtTmCal",
+      "ORDtTmListBox",
+      "ORDtTmRng",
+      "OREventCache",
+      "ORExtensions",
+      "ORRedirect",
+      "ORStaticText",
+      "ORSymbolLabel",
+      "ORSystem",
+      "ORUnitTesting",
+      "Outlook2010",
+      "REST.Json",
+      "REST.Json.Interceptors",
+      "REST.Json.Types",
+      "REST.JsonReflect",
+      "RequestSecurityTokenSVC",
+      "SHDocVw",
+      "SelDiv",
+      "SgnonCnf",
+      "UBACore",
+      "UBAGlobals",
+      "UExceptHook",
+      "ULockBroker",
+      "UMHDll",
+      "UMemoTools",
+      "UNewPersonParams",
+      "UORForm",
+      "UResponsiveGUI",
+      "UThreadPool",
+      "UWinMsgNames",
+      "U_CPTAppMonitor",
+      "U_CPTCommon",
+      "U_CPTEditMonitor",
+      "U_CPTExtended",
+      "U_CPTPasteDetails",
+      "U_CPTUtils",
+      "VA2006Utils",
+      "VAClasses",
+      "VAHelpers",
+      "VAPieceHelper",
+      "VAShared.CursorHelper",
+      "VAShared.ScreenHelper",
+      "VAShared.UDataTracker",
+      "VAShared.UJSONParameters",
+      "VAShared.UJSONValueHelper",
+      "VAShared.UTStringsHelper",
+      "VAUtils",
+      "VCEdit",
+      "VCLTee.ArrowCha",
+      "VCLTee.Chart",
+      "VCLTee.GanttCh",
+      "VCLTee.Series",
+      "VCLTee.TeCanvas",
+      "VCLTee.TeEngine",
+      "VCLTee.TeeConst",
+      "VCLTee.TeeFilters",
+      "VCLTee.TeeGDIPlus",
+      "VCLTee.TeeHtml",
+      "VCLTee.TeeProcs",
+      "VCLTee.TeeSpline",
+      "WinSCard",
+      "Word2000",
+      "WordXP",
+      "XMLUtils",
+      "XlfMime",
+      "XlfSid",
+      "dRequiredFields",
+      "dShared",
+      "fARTFreeTextMsg",
+      "fAResize",
+      "fAbout",
+      "fActivateDeactivate",
+      "fAddlSigners",
+      "fAlertForward",
+      "fAlertRangeEdit",
+      "fAlertsProcessed",
+      "fAllgyAR",
+      "fAllgyFind",
+      "fAutoSz",
+      "fBALocalDiagnoses",
+      "fBAOptionsDiagnoses",
+      "fCSRemaining",
+      "fCombatVet",
+      "fDSTView",
+      "fDateRange",
+      "fDeferDialog",
+      "fDeviceSelect",
+      "fDiagnoses",
+      "fDrawers",
+      "fEditProc",
+      "fEffectDate",
+      "fEncnt",
+      "fExam",
+      "fFindingTemplates",
+      "fGAF",
+      "fHFSearch",
+      "fHTMLDialog",
+      "fHealthFactor",
+      "fIVRoutes",
+      "fIconLegend",
+      "fImmunization",
+      "fLabCollTimes",
+      "fLabInfo",
+      "fLabPrint",
+      "fLabTest",
+      "fLabTestGroups",
+      "fLabTests",
+      "fLkUpLocation",
+      "fMHTest",
+      "fMedCopy",
+      "fNewAllergyCheck",
+      "fOCAccept",
+      "fOCSession",
+      "fOMAction",
+      "fOMHTML",
+      "fOMNavA",
+      "fOMSet",
+      "fOMVerify",
+      "fOptions",
+      "fOptionsCombinations",
+      "fOptionsDays",
+      "fOptionsLists",
+      "fOptionsNewList",
+      "fOptionsOther",
+      "fOptionsPatientSelection",
+      "fOptionsProcessedAlerts",
+      "fOptionsSurrogate",
+      "fOptionsTeams",
+      "fOptionsTitles",
+      "fOtherSchedule",
+      "fPDMPCosigner",
+      "fPDMPMgr",
+      "fPDMPUser",
+      "fPDMPView",
+      "fPlinkpw",
+      "fPreReq",
+      "fPrintList",
+      "fPrintLocation",
+      "fProbCmt",
+      "fProbEdt",
+      "fProbFreetext",
+      "fProbLex",
+      "fProbflt",
+      "fProbs",
+      "fProcedure",
+      "fPtCWAD",
+      "fPtDemo",
+      "fRemVisitInfo",
+      "fRename",
+      "fRenewOutMed",
+      "fReview",
+      "fSSHUsername",
+      "fSkinTest",
+      "fSpellNotify",
+      "fSplash",
+      "fStandardCodes",
+      "fSurrogateEdit",
+      "fTemplateAutoGen",
+      "fTemplateDialog",
+      "fTemplateEditor",
+      "fTemplateFieldEditor",
+      "fTemplateFields",
+      "fTemplateImport",
+      "fTemplateObjects",
+      "fTemplateView",
+      "fTimeout",
+      "fViewNotifications",
+      "fVimm",
+      "fVisitType",
+      "fWVEIEReasonsDlg",
+      "fWVPregLacStatusUpdate",
+      "frmSignonMessage",
+      "fxLists",
+      "iGridPanelIntf",
+      "iWVInterface",
+      "mCoPayDesc",
+      "mDrawers",
+      "mEditBase",
+      "mEvntDelay",
+      "mGridPanelFrame",
+      "mImgText",
+      "mODAnatPathBuilder",
+      "mODAnatPathSpecimen",
+      "mPDMPReviewItem",
+      "mPDMPReviewOptions",
+      "mPtInfoPanel",
+      "mPtSelDemog",
+      "mPtSelOptns",
+      "mRequiredFieldsNavigator",
+      "mTemplateFieldButton",
+      "mTreeGrid",
+      "mVImmBase",
+      "mVimmEdit",
+      "mVimmEditGrid",
+      "mVimmGrid",
+      "mVimmICE",
+      "mVimmSelect",
+      "mVisitRelated",
+      "oDST",
+      "oDelimitedString",
+      "oGridPanelDisplay",
+      "oGridPanelFunctions",
+      "oODAnatPath",
+      "oPDMPData",
+      "oPKIEncryption",
+      "oPKIEncryptionCertificate",
+      "oPKIEncryptionData",
+      "oPKIEncryptionEngine",
+      "oWVController",
+      "oWVWebSite",
+      "oleacc2",
+      "rECS",
+      "rEditObject",
+      "rEventHooks",
+      "rHTMLDialog",
+      "rMisc",
+      "rOCSession",
+      "rODAllergy",
+      "rODAnatPath",
+      "rODBase",
+      "rODDiet",
+      "rODLab",
+      "rODRTC",
+      "rODRad",
+      "rOTH",
+      "rOptions",
+      "rPDMP",
+      "rProbs",
+      "rSpecialAuthority",
+      "rTemplates",
+      "rVimm",
+      "uCaseTree",
+      "uCombatVet",
+      "uComboBoxMessageAdapter",
+      "uComponentNexus",
+      "uConst",
+      "uDlgComponents",
+      "uDocTree",
+      "uEditObject",
+      "uEventHooks",
+      "uFMDateTimeMessageAdapter",
+      "uFormMonitor",
+      "uFormUtils",
+      "uHelpManager",
+      "uHelpNetworkMGR",
+      "uIndications",
+      "uInfoBoxWithBtnControls",
+      "uInit",
+      "uMapParser",
+      "uMessageAdapterManager",
+      "uMisc",
+      "uModuleParser",
+      "uORRESTClient",
+      "uOptions",
+      "uOwnerWrapper",
+      "uPDMP",
+      "uPaPI",
+      "uPrinting",
+      "uProbs",
+      "uPtInfoCommon",
+      "uPtInfoCore",
+      "uPtInfoSplitView",
+      "uSignItems",
+      "uSimilarNames",
+      "uSizing",
+      "uSpecialAuthority",
+      "uSpecialAuthorityEx",
+      "uSpecialAuthorityTypes",
+      "uSpecialAuthorityTypesEx",
+      "uSpell",
+      "uTemplateFields",
+      "uTemplates",
+      "uUserInfo",
+      "uVersionCheck",
+      "uVimmEditObject",
+      "uWriteAccess"
+    ],
+    "representative_entries": [
+      {
+        "address": "0077226c",
+        "name": "VAClasses.TVABaseMethodList.Add"
+      },
+      {
+        "address": "007722a4",
+        "name": "VAClasses.TVABaseMethodList.Clear"
+      },
+      {
+        "address": "007722c0",
+        "name": "VAClasses.TVABaseMethodList.Count"
+      },
+      {
+        "address": "007722c8",
+        "name": "VAClasses.TVABaseMethodList.Create"
+      },
+      {
+        "address": "00772318",
+        "name": "VAClasses.TVABaseMethodList.Delete"
+      },
+      {
+        "address": "0077233c",
+        "name": "VAClasses.TVABaseMethodList.Destroy"
+      },
+      {
+        "address": "00772398",
+        "name": "VAClasses.TVABaseMethodList.GetMethod"
+      },
+      {
+        "address": "007723c4",
+        "name": "VAClasses.TVABaseMethodList.IndexOf"
+      },
+      {
+        "address": "00772430",
+        "name": "VAClasses.TVABaseMethodList.Remove"
+      },
+      {
+        "address": "00772464",
+        "name": "VAClasses.TVAMethodList.Add"
+      },
+      {
+        "address": "00772484",
+        "name": "VAClasses.TVAMethodList.Count"
+      },
+      {
+        "address": "00772490",
+        "name": "VAClasses.TVAMethodList.Create"
+      }
+    ]
+  },
+  "shared-controls-and-accessibility": {
+    "functions": 1241,
+    "status": {
+      "unresolved": 1228,
+      "analyzed": 13
+    },
+    "modules": [
+      "ORClasses",
+      "ORCtrls",
+      "ORCtrls.ActivityLog",
+      "ORCtrls.ActivityLogger",
+      "ORCtrls.FormFontScaler",
+      "ORCtrls.MessageReceiver",
+      "ORCtrls.ORRichEdit",
+      "ORCtrls.UORJSONParameters",
+      "ORCtrlsVA508Compatibility",
+      "ORFn",
+      "U508CaptionEdit",
+      "U508CheckBox",
+      "U508Extensions",
+      "U508ORCheckComboBox",
+      "U508ORComboBox",
+      "UCaptionListView508Manager",
+      "VA508AccessibilityManager",
+      "VA508AccessibilityRouter",
+      "VA508Classes",
+      "VA508DelphiCompatibility",
+      "VA508ImageListLabeler",
+      "VA508MSAASupport",
+      "VA508ScreenReaderDLLLinker",
+      "fBase508Form",
+      "fBase508Frame",
+      "u508Button",
+      "uORLists",
+      "uVA508CPRSCompatibility"
+    ],
+    "representative_entries": [
+      {
+        "address": "00776068",
+        "name": "ORCtrls.MessageReceiver.TMessageReceiver.Create"
+      },
+      {
+        "address": "0077613c",
+        "name": "ORCtrls.MessageReceiver.TMessageReceiver.GetHandle"
+      },
+      {
+        "address": "0077615c",
+        "name": "ORCtrls.MessageReceiver.TMessageReceiver.WndProc"
+      },
+      {
+        "address": "00797c68",
+        "name": "ORCtrls.ORRichEdit.TORCopyPasteRichEdit.WMKeyDown"
+      },
+      {
+        "address": "00797cb0",
+        "name": "ORCtrls.ORRichEdit.TORCopyPasteRichEdit.WMPaste"
+      },
+      {
+        "address": "00798068",
+        "name": "ORCtrls.ORRichEdit.TORRichEdit.Create"
+      },
+      {
+        "address": "007981a0",
+        "name": "ORCtrls.ORRichEdit.TORRichEdit.Destroy"
+      },
+      {
+        "address": "0079821c",
+        "name": "ORCtrls.ORRichEdit.TORRichEdit.BeforeLinesInsert"
+      },
+      {
+        "address": "0079864c",
+        "name": "ORCtrls.ORRichEdit.FindUniqueSubText"
+      },
+      {
+        "address": "00798710",
+        "name": "ORCtrls.ORRichEdit.TORRichEdit.StringToRTFString"
+      },
+      {
+        "address": "00798894",
+        "name": "ORCtrls.ORRichEdit.TORRichEdit.AddString"
+      },
+      {
+        "address": "007989d8",
+        "name": "ORCtrls.ORRichEdit.RTFHeaderSize"
+      }
+    ]
+  },
+  "transport-authentication-and-integration": {
+    "functions": 737,
+    "status": {
+      "unresolved": 657,
+      "partially_analyzed": 20,
+      "analyzed": 60
+    },
+    "modules": [
+      "CCOW.CCOWManager",
+      "ORCtrls.RPCList",
+      "ORNet",
+      "ORNetIntf",
+      "ORNetMult",
+      "RpcSLogin",
+      "Rpcconf1",
+      "Rpcnet",
+      "Trpcb",
+      "VERGENCECONTEXTORLib_TLB",
+      "Wsockc",
+      "XWBHash",
+      "XWBLoginForm",
+      "XWBRich20",
+      "XWBSSOi",
+      "XWBut1",
+      "fGN_RPCLog",
+      "fNotificationProcessor",
+      "fRPCBErrMsg",
+      "rPCE",
+      "uGN_RPCLog",
+      "wcrypt2"
+    ],
+    "representative_entries": [
+      {
+        "address": "00861314",
+        "name": "XWBut1.ReadRegData"
+      },
+      {
+        "address": "008613f4",
+        "name": "XWBut1.WriteRegData"
+      },
+      {
+        "address": "008614d8",
+        "name": "XWBut1.DeleteRegData"
+      },
+      {
+        "address": "008615a8",
+        "name": "XWBut1.ReadRegDataDefault"
+      },
+      {
+        "address": "00861644",
+        "name": "XWBut1.ReadRegValues"
+      },
+      {
+        "address": "00862ab4",
+        "name": "XWBHash.Encrypt"
+      },
+      {
+        "address": "00862b6c",
+        "name": "XWBHash.Decrypt"
+      },
+      {
+        "address": "00863764",
+        "name": "VERGENCECONTEXTORLib_TLB.TContextorControl.InitControlData"
+      },
+      {
+        "address": "00863780",
+        "name": "VERGENCECONTEXTORLib_TLB.DoCreate"
+      },
+      {
+        "address": "00863804",
+        "name": "VERGENCECONTEXTORLib_TLB.TContextorControl.CreateControl"
+      },
+      {
+        "address": "00863824",
+        "name": "VERGENCECONTEXTORLib_TLB.TContextorControl.GetControlInterface"
+      },
+      {
+        "address": "00863848",
+        "name": "VERGENCECONTEXTORLib_TLB.TContextorControl.Get_CurrentContext"
+      }
+    ]
+  },
+  "documentation-encounters-and-reminders": {
+    "functions": 1434,
+    "status": {
+      "unresolved": 1399,
+      "partially_analyzed": 27,
+      "analyzed": 8
+    },
+    "modules": [
+      "VAShared.RttiUtils",
+      "fCsltNote",
+      "fDCSumm",
+      "fDCSummProps",
+      "fEncounterFrame",
+      "fNoteBA",
+      "fNoteBD",
+      "fNoteCPFields",
+      "fNoteDR",
+      "fNoteIDParents",
+      "fNoteProps",
+      "fNotePrt",
+      "fNoteST",
+      "fNoteSTStop",
+      "fNotes",
+      "fNotesBP",
+      "fOptionsNotes",
+      "fOptionsReminders",
+      "fOptionsTIUTemplates",
+      "fPCEBase",
+      "fPCEBaseGrid",
+      "fPCEBaseMain",
+      "fPCEEdit",
+      "fPCELex",
+      "fPCEOther",
+      "fPCEProvider",
+      "fReminderDialog",
+      "fReminderTree",
+      "fSignItem",
+      "fTIUView",
+      "mVimmReminders",
+      "rDCSumm",
+      "rReminders",
+      "rTIU",
+      "uDCSumm",
+      "uPCE",
+      "uReminders",
+      "uTIU"
+    ],
+    "representative_entries": [
+      {
+        "address": "00a0a2ac",
+        "name": "rTIU.LoadNoteTitles"
+      },
+      {
+        "address": "00a0a490",
+        "name": "rTIU.ResetNoteTitles"
+      },
+      {
+        "address": "00a0a4b4",
+        "name": "rTIU.DfltNoteTitle"
+      },
+      {
+        "address": "00a0a4d0",
+        "name": "rTIU.DfltNoteTitleName"
+      },
+      {
+        "address": "00a0a4f8",
+        "name": "rTIU.IsConsultTitle"
+      },
+      {
+        "address": "00a0a5c8",
+        "name": "rTIU.IsPRFTitle"
+      },
+      {
+        "address": "00a0a67c",
+        "name": "rTIU.IsClinProcTitle"
+      },
+      {
+        "address": "00a0a74c",
+        "name": "rTIU.ListNoteTitlesShort"
+      },
+      {
+        "address": "00a0a854",
+        "name": "rTIU.LoadBoilerPlate"
+      },
+      {
+        "address": "00a0a918",
+        "name": "rTIU.PrintNameForTitle"
+      },
+      {
+        "address": "00a0a974",
+        "name": "rTIU.SubSetOfNoteTitles"
+      },
+      {
+        "address": "00a0aa44",
+        "name": "rTIU.LoadTIUPrefs"
+      }
+    ]
+  },
+  "orders-medications-and-consults": {
+    "functions": 3078,
+    "status": {
+      "unresolved": 3037,
+      "partially_analyzed": 33,
+      "analyzed": 8
+    },
+    "modules": [
+      "VAInfoDialog",
+      "fClinicWardMeds",
+      "fConsMedRslt",
+      "fConsult513Prt",
+      "fConsultAct",
+      "fConsultAlertTo",
+      "fConsultBD",
+      "fConsultBS",
+      "fConsultBSt",
+      "fConsults",
+      "fConsultsView",
+      "fEditConsult",
+      "fMeds",
+      "fODActive",
+      "fODAllergyCheck",
+      "fODAnatPath",
+      "fODAnatPathPreview",
+      "fODAuto",
+      "fODBBank",
+      "fODBase",
+      "fODChangeEvtDisp",
+      "fODChangeUnreleasedRenew",
+      "fODChild",
+      "fODConsult",
+      "fODDiet",
+      "fODDietAccess",
+      "fODDietLT",
+      "fODGen",
+      "fODLab",
+      "fODLabImmedColl",
+      "fODLabOthCollSamp",
+      "fODLabOthSpec",
+      "fODMedComplex",
+      "fODMedFA",
+      "fODMedIV",
+      "fODMedIn",
+      "fODMedNVA",
+      "fODMedOIFA",
+      "fODMedOut",
+      "fODMeds",
+      "fODMisc",
+      "fODProc",
+      "fODRTC",
+      "fODRad",
+      "fODRadApproval",
+      "fODRadConShRes",
+      "fODReleaseEvent",
+      "fODText",
+      "fODValidateAction",
+      "fOrderComment",
+      "fOrderFlagEditor",
+      "fOrderFlagNotificationRecipients",
+      "fOrderListManager",
+      "fOrderSaveQuick",
+      "fOrderVw",
+      "fOrders",
+      "fOrdersAlert",
+      "fOrdersCV",
+      "fOrdersComplete",
+      "fOrdersCopy",
+      "fOrdersDC",
+      "fOrdersEvntRelease",
+      "fOrdersHold",
+      "fOrdersOnChart",
+      "fOrdersPark",
+      "fOrdersPickEvent",
+      "fOrdersPrint",
+      "fOrdersRefill",
+      "fOrdersRelease",
+      "fOrdersRenew",
+      "fOrdersSign",
+      "fOrdersTS",
+      "fOrdersUnPark",
+      "fOrdersUnhold",
+      "fOrdersVerify",
+      "fPtInfoDetails",
+      "fSurgery",
+      "fSurgeryView",
+      "frmDCOrdersAllrgsCrrnt",
+      "oPKIEncryptionDataDEAOrder",
+      "rConsults",
+      "rMeds",
+      "rODMeds",
+      "rOrders",
+      "rSurgery",
+      "uConsults",
+      "uODBase",
+      "uOrderFlag",
+      "uOrders",
+      "uPtInfoData",
+      "uSurgery"
+    ],
+    "representative_entries": [
+      {
+        "address": "00a16aac",
+        "name": "uConsults.TConsultTitles.Create"
+      },
+      {
+        "address": "00a16af4",
+        "name": "uConsults.TConsultTitles.Destroy"
+      },
+      {
+        "address": "00a16b24",
+        "name": "uConsults.TClinProcTitles.Create"
+      },
+      {
+        "address": "00a16b6c",
+        "name": "uConsults.TClinProcTitles.Destroy"
+      },
+      {
+        "address": "00a16b9c",
+        "name": "uConsults.MakeConsultListItem"
+      },
+      {
+        "address": "00a17054",
+        "name": "uConsults.MakeConsultListDisplayText"
+      },
+      {
+        "address": "00a17148",
+        "name": "uConsults.MakeConsultNoteDisplayText"
+      },
+      {
+        "address": "00a17438",
+        "name": "uConsults.getParentByID"
+      },
+      {
+        "address": "00a174e4",
+        "name": "uConsults.RemoveUnwanted"
+      },
+      {
+        "address": "00a1758c",
+        "name": "uConsults.MapTheParent"
+      },
+      {
+        "address": "00a17794",
+        "name": "uConsults.AddItemsToTree"
+      },
+      {
+        "address": "00a179a4",
+        "name": "uConsults.BuildServiceTree"
+      }
+    ]
+  },
+  "results-reports-and-graphs": {
+    "functions": 849,
+    "status": {
+      "unresolved": 834,
+      "partially_analyzed": 12,
+      "analyzed": 3
+    },
+    "modules": [
+      "FTemplateReport",
+      "fDebugReport",
+      "fGraphData",
+      "fGraphOthers",
+      "fGraphProfiles",
+      "fGraphSettings",
+      "fGraphs",
+      "fLabs",
+      "fOCMonograph",
+      "fOptionsReportsCustom",
+      "fOptionsReportsDefault",
+      "fReports",
+      "fReportsAdhocComponent1",
+      "fReportsAdhocSubItem1",
+      "fReportsPrint",
+      "fRptBox",
+      "rGraphs",
+      "rLabs",
+      "rPtInfo",
+      "rReports",
+      "uGraphs",
+      "uOrPtf",
+      "uReports"
+    ],
+    "representative_entries": [
+      {
+        "address": "00a8833c",
+        "name": "fDebugReport.LogBrokerErrors"
+      },
+      {
+        "address": "00a887f0",
+        "name": "fDebugReport.TfrmDebugReport.ActionMemoChange"
+      },
+      {
+        "address": "00a88864",
+        "name": "fDebugReport.TfrmDebugReport.btnCancelClick"
+      },
+      {
+        "address": "00a88870",
+        "name": "fDebugReport.TfrmDebugReport.btnSendClick"
+      },
+      {
+        "address": "00a889fc",
+        "name": "fDebugReport.TfrmDebugReport.Create"
+      },
+      {
+        "address": "00a88a48",
+        "name": "fDebugReport.TfrmDebugReport.FormShow"
+      },
+      {
+        "address": "00a88a8c",
+        "name": "fDebugReport.TfrmDebugReport.GetTopRPCNumber"
+      },
+      {
+        "address": "00a88a98",
+        "name": "fDebugReport.Piece"
+      },
+      {
+        "address": "00a88b1c",
+        "name": "fDebugReport.tDebugThread.Create"
+      },
+      {
+        "address": "00a88d3c",
+        "name": "fDebugReport.tDebugThread.Destroy"
+      },
+      {
+        "address": "00a88de4",
+        "name": "fDebugReport.FilteredString"
+      },
+      {
+        "address": "00a88f90",
+        "name": "fDebugReport.SendTheRpc"
+      }
+    ]
+  },
+  "cover-sheet-and-vitals": {
+    "functions": 297,
+    "status": {
+      "unresolved": 232,
+      "partially_analyzed": 50,
+      "analyzed": 15
+    },
+    "modules": [
+      "fCoverSheet",
+      "fEncVitals",
+      "fODVitals",
+      "fRemCoverPreview",
+      "fRemCoverSheet",
+      "fVitalsDate",
+      "iCoverSheetIntf",
+      "mCoverSheetDisplayPanel",
+      "mCoverSheetDisplayPanel_CPRS",
+      "mCoverSheetDisplayPanel_CPRS_ActiveMeds",
+      "mCoverSheetDisplayPanel_CPRS_Allergies",
+      "mCoverSheetDisplayPanel_CPRS_Appts",
+      "mCoverSheetDisplayPanel_CPRS_Immunizations",
+      "mCoverSheetDisplayPanel_CPRS_Labs",
+      "mCoverSheetDisplayPanel_CPRS_Postings",
+      "mCoverSheetDisplayPanel_CPRS_ProblemList",
+      "mCoverSheetDisplayPanel_CPRS_Reminders",
+      "mCoverSheetDisplayPanel_CPRS_Vitals",
+      "mCoverSheetDisplayPanel_CPRS_WH",
+      "mCoverSheetDisplayPanel_Web",
+      "mCoverSheetDisplayPanel_WidgetClock",
+      "oCoverSheet",
+      "oCoverSheetGrid",
+      "oCoverSheetParam",
+      "oCoverSheetParamEnumerator",
+      "oCoverSheetParamList",
+      "oCoverSheetParam_CPRS",
+      "oCoverSheetParam_CPRS_ActiveMeds",
+      "oCoverSheetParam_CPRS_Allergies",
+      "oCoverSheetParam_CPRS_Appts",
+      "oCoverSheetParam_CPRS_Immunizations",
+      "oCoverSheetParam_CPRS_Labs",
+      "oCoverSheetParam_CPRS_Postings",
+      "oCoverSheetParam_CPRS_ProblemList",
+      "oCoverSheetParam_CPRS_Reminders",
+      "oCoverSheetParam_CPRS_Vitals",
+      "oCoverSheetParam_CPRS_WH",
+      "oCoverSheetParam_Web",
+      "oCoverSheetParam_WidgetClock",
+      "rCover",
+      "rVitals",
+      "uVitals"
+    ],
+    "representative_entries": [
+      {
+        "address": "00ae4360",
+        "name": "rVitals.VerifyVital"
+      },
+      {
+        "address": "00ae4460",
+        "name": "rVitals.ValAndStoreVitals"
+      },
+      {
+        "address": "00ae46c4",
+        "name": "rVitals.GetVitalFromNoteIEN"
+      },
+      {
+        "address": "00ae4788",
+        "name": "rVitals.GetVitalsFromEncDateTime"
+      },
+      {
+        "address": "00ae4c4c",
+        "name": "fVitalsDate.TfrmVitalsDate.btnNowClick"
+      },
+      {
+        "address": "00ae4c78",
+        "name": "fVitalsDate.TfrmVitalsDate.FormCreate"
+      },
+      {
+        "address": "00ae51b4",
+        "name": "uVitals.CloseVitalsDLL"
+      },
+      {
+        "address": "00ae51fc",
+        "name": "uVitals.VitalErrorText"
+      },
+      {
+        "address": "00ae52f0",
+        "name": "uVitals.InitPainCombo"
+      },
+      {
+        "address": "00ae554c",
+        "name": "uVitals.ConvertVital"
+      },
+      {
+        "address": "00ae596c",
+        "name": "uVitals.TrimControl"
+      },
+      {
+        "address": "00ae59d4",
+        "name": "uVitals.VitalInvalid"
+      }
+    ]
+  },
+  "patient-context-and-shell": {
+    "functions": 530,
+    "status": {
+      "unresolved": 496,
+      "partially_analyzed": 32,
+      "analyzed": 2
+    },
+    "modules": [
+      "fDupPts",
+      "fFrame",
+      "fPage",
+      "fPatientEd",
+      "fPatientFlagMulti",
+      "fPtSel",
+      "fPtSelMsg",
+      "fPtSelOptSave",
+      "rCore",
+      "uCore"
+    ],
+    "representative_entries": [
+      {
+        "address": "00b91c68",
+        "name": "fPatientEd.TfrmPatientEd.cboPatUnderstandingChange"
+      },
+      {
+        "address": "00b91d68",
+        "name": "fPatientEd.TfrmPatientEd.edtMagChange"
+      },
+      {
+        "address": "00b91df8",
+        "name": "fPatientEd.TfrmPatientEd.edtMagExit"
+      },
+      {
+        "address": "00b91e08",
+        "name": "fPatientEd.TfrmPatientEd.edtMagKeyPress"
+      },
+      {
+        "address": "00b91ea4",
+        "name": "fPatientEd.TfrmPatientEd.FormShow"
+      },
+      {
+        "address": "00b91ec8",
+        "name": "fPatientEd.TfrmPatientEd.Loaded"
+      },
+      {
+        "address": "00b91edc",
+        "name": "fPatientEd.TfrmPatientEd.UpdateNewItemStr"
+      },
+      {
+        "address": "00b91f08",
+        "name": "fPatientEd.TfrmPatientEd.UpdateControls"
+      },
+      {
+        "address": "00e40390",
+        "name": "fPtSelOptSave.TfrmPtSelOptSave.btnCancelClick"
+      },
+      {
+        "address": "00e4039c",
+        "name": "fPtSelOptSave.TfrmPtSelOptSave.btnOKClick"
+      },
+      {
+        "address": "00e4046c",
+        "name": "fPtSelOptSave.TfrmPtSelOptSave.rGrpClinSaveClick"
+      },
+      {
+        "address": "00e7067c",
+        "name": "fPatientFlagMulti.ShowFlags"
+      }
+    ]
+  },
+  "external-libraries": {
+    "functions": 1423,
+    "status": {
+      "unresolved": 1423
+    },
+    "modules": [
+      "external"
+    ],
+    "representative_entries": [
+      {
+        "address": "EXTERNAL:00000001",
+        "name": "BORLNDMM.DLL::@Borlndmm@SysGetMem$qqri"
+      },
+      {
+        "address": "EXTERNAL:00000002",
+        "name": "SHLWAPI.DLL::SHCreateStreamOnFileW"
+      },
+      {
+        "address": "EXTERNAL:00000003",
+        "name": "WINSPOOL.DRV::DocumentPropertiesW"
+      },
+      {
+        "address": "EXTERNAL:00000004",
+        "name": "WINSPOOL.DRV::ClosePrinter"
+      },
+      {
+        "address": "EXTERNAL:00000005",
+        "name": "WINSPOOL.DRV::OpenPrinterW"
+      },
+      {
+        "address": "EXTERNAL:00000006",
+        "name": "WINSPOOL.DRV::GetDefaultPrinterW"
+      },
+      {
+        "address": "EXTERNAL:00000007",
+        "name": "WINSPOOL.DRV::EnumPrintersW"
+      },
+      {
+        "address": "EXTERNAL:0000000f",
+        "name": "COMCTL32.DLL::ImageList_GetImageInfo"
+      },
+      {
+        "address": "EXTERNAL:00000010",
+        "name": "COMCTL32.DLL::FlatSB_SetScrollInfo"
+      },
+      {
+        "address": "EXTERNAL:00000011",
+        "name": "COMCTL32.DLL::InitCommonControls"
+      },
+      {
+        "address": "EXTERNAL:00000012",
+        "name": "COMCTL32.DLL::ImageList_DragMove"
+      },
+      {
+        "address": "EXTERNAL:00000013",
+        "name": "COMCTL32.DLL::ImageList_Destroy"
+      }
+    ]
+  }
+}

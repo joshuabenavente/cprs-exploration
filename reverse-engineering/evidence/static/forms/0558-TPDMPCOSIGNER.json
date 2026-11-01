@@ -1,0 +1,190 @@
+{
+  "class": "TpdmpCosigner",
+  "name": "pdmpCosigner",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Caption": "Select PDMP Note Cosigner",
+    "ClientHeight": 326,
+    "ClientWidth": 372,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "Tahoma",
+    "Font.Style": [],
+    "KeyPreview": true,
+    "OldCreateOrder": false,
+    "OnCloseQuery": "FormCloseQuery",
+    "OnCreate": "FormCreate",
+    "OnKeyDown": "FormKeyDown",
+    "OnShow": "FormShow",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 287,
+        "Width": 372,
+        "Height": 39,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ParentBackground": false,
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 213,
+            "Top": 3,
+            "Width": 75,
+            "Height": 33,
+            "Align": "alRight",
+            "Caption": "&Cancel",
+            "ModalResult": 2,
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnAccept",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 294,
+            "Top": 3,
+            "Width": 75,
+            "Height": 33,
+            "Align": "alRight",
+            "Caption": "&Accept",
+            "Default": true,
+            "ModalResult": 1,
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnDebug",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 126,
+            "Height": 33,
+            "Align": "alLeft",
+            "Caption": "&Debug: No Selection",
+            "TabOrder": 0,
+            "TabStop": false,
+            "Visible": false,
+            "OnClick": "btnDebugClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 372,
+        "Height": 287,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblCosigner",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 366,
+            "Height": 13,
+            "Align": "alTop",
+            "Caption": "&Select Cosigner:",
+            "FocusControl": "cboCosigner",
+            "ExplicitWidth": 78
+          },
+          "children": []
+        },
+        {
+          "class": "TORCheckComboBox",
+          "name": "cboCosigner",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 22,
+            "Width": 366,
+            "Height": 262,
+            "Style": "orcsSimple",
+            "Align": "alClient",
+            "AutoSelect": true,
+            "Caption": "",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": true,
+            "LookupPiece": 2,
+            "MaxLength": 0,
+            "Pieces": "2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "TabStop": true,
+            "Text": "",
+            "OnDblClick": "cboCosignerDblClick",
+            "OnExit": "cboCosignerExit",
+            "OnNeedData": "cboCosignerNeedData",
+            "CharsNeedMatch": 1,
+            "MainCheckBoxCaption": "Include Non-VA Providers",
+            "MainCheckBoxVisible": true,
+            "MainCheckBoxAlignment": "calBottom",
+            "OnMainCheckboxClick": "cboCosignerMainCheckboxClick",
+            "DropdownStyle": "ddsControl"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "class": "TfrmMHTest",
+  "name": "frmMHTest",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 217,
+    "Top": 156,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "frmMHTest",
+    "ClientHeight": 433,
+    "ClientWidth": 500,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 516,
+    "ExplicitHeight": 472,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TScrollBox",
+      "name": "sbMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 500,
+        "Height": 408,
+        "HorzScrollBar.Visible": false,
+        "VertScrollBar.Tracking": true,
+        "Align": "alClient",
+        "TabOrder": 0,
+        "OnResize": "sbMainResize"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 408,
+        "Width": 500,
+        "Height": 25,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "DesignSize": [
+          500,
+          25
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 425,
+            "Top": 3,
+            "Width": 75,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 347,
+            "Top": 3,
+            "Width": 75,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Caption": "&OK",
+            "TabOrder": 1,
+            "OnClick": "btnOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnClear",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 3,
+            "Width": 75,
+            "Height": 21,
+            "Caption": "Clear",
+            "TabOrder": 0,
+            "OnClick": "btnClearClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = sbMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClear",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmMHTest",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

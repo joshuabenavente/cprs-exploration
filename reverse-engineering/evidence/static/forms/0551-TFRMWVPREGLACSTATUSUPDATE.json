@@ -1,0 +1,1344 @@
+{
+  "class": "TfrmWVPregLacStatusUpdate",
+  "name": "frmWVPregLacStatusUpdate",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Caption": "Women's Health - Pregnancy and Lactation Status Update",
+    "ClientHeight": 502,
+    "ClientWidth": 767,
+    "Color": "clWhite",
+    "Constraints.MinHeight": 300,
+    "Constraints.MinWidth": 300,
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "MS Sans Serif",
+    "Font.Style": [],
+    "OldCreateOrder": true,
+    "OnClose": "FormClose",
+    "OnCreate": "FormCreate",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TStaticText",
+      "name": "stxtReaderStop",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 136,
+        "Top": 0,
+        "Width": 4,
+        "Height": 4,
+        "TabOrder": 0,
+        "TabStop": true
+      },
+      "children": []
+    },
+    {
+      "class": "TScrollBox",
+      "name": "scrollBox",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 767,
+        "Height": 502,
+        "Align": "alClient",
+        "BevelEdges": [],
+        "BevelInner": "bvNone",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "OnResize": "scrollBoxResize"
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlForm",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 763,
+            "Height": 497,
+            "Align": "alTop",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TGridPanel",
+              "name": "grdLayout",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 761,
+                "Height": 460,
+                "Align": "alClient",
+                "BevelEdges": [],
+                "BevelOuter": "bvNone",
+                "ColumnCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "00000000000000c80540"
+                      }
+                    }
+                  }
+                ],
+                "ControlCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 0,
+                      "Control": "pnlConveive",
+                      "Row": 0
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 0,
+                      "Control": "pnlPregnant",
+                      "Row": 1
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Column": 0,
+                      "Control": "pnlLactationStatus",
+                      "Row": 2
+                    }
+                  }
+                ],
+                "RowCollection": [
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "33fe2ef543751ae80340"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "885a52a3d44d0ab20440"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "Value": {
+                        "extended80_hex": "bc4c2cc412efd0d30340"
+                      }
+                    }
+                  },
+                  {
+                    "index": null,
+                    "properties": {
+                      "SizeStyle": "ssAuto"
+                    }
+                  }
+                ],
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TPanel",
+                  "name": "pnlConveive",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 761,
+                    "Height": 133,
+                    "Align": "alClient",
+                    "BevelEdges": [],
+                    "BevelOuter": "bvNone",
+                    "TabOrder": 0
+                  },
+                  "children": [
+                    {
+                      "class": "TPanel",
+                      "name": "pnlConeiveLabel",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Width": 761,
+                        "Height": 30,
+                        "Align": "alTop",
+                        "BevelEdges": [],
+                        "BevelOuter": "bvNone",
+                        "Color": "clActiveCaption",
+                        "ParentBackground": false,
+                        "TabOrder": 0
+                      },
+                      "children": [
+                        {
+                          "class": "TStaticText",
+                          "name": "stxtAbleToConceive",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "AlignWithMargins": true,
+                            "Left": 5,
+                            "Top": 1,
+                            "Width": 753,
+                            "Height": 28,
+                            "Margins.Left": 5,
+                            "Margins.Top": 1,
+                            "Margins.Bottom": 1,
+                            "Align": "alClient",
+                            "Caption": "Medically Able To Conceive",
+                            "Font.Charset": "DEFAULT_CHARSET",
+                            "Font.Color": "clWindowText",
+                            "Font.Height": -11,
+                            "Font.Name": "Tahoma",
+                            "Font.Style": [
+                              "fsBold"
+                            ],
+                            "ParentFont": false,
+                            "TabOrder": 0,
+                            "Transparent": false
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TGridPanel",
+                      "name": "grdConceive",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 30,
+                        "Width": 761,
+                        "Height": 103,
+                        "Margins.Top": 0,
+                        "Margins.Right": 0,
+                        "Margins.Bottom": 0,
+                        "Align": "alClient",
+                        "BevelEdges": [],
+                        "BevelOuter": "bvNone",
+                        "ColumnCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "c4c8f048733d07e10340"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "e9063a6dbf3d25ce0340"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "3a9d14a90abacdbc0340"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "9ea9c0a0c2ca05b40340"
+                              }
+                            }
+                          }
+                        ],
+                        "ControlCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 1,
+                              "Control": "ckbxHysterectomy",
+                              "Row": 0
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 2,
+                              "Control": "ckbxMenopause",
+                              "Row": 0
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 3,
+                              "Control": "ckbxPermanent",
+                              "Row": 0
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 0,
+                              "Control": "robnAbleToConceiveNo",
+                              "Row": 0
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 0,
+                              "Control": "robnAbleToConceiveYes",
+                              "Row": 2
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 1,
+                              "ColumnSpan": 3,
+                              "Control": "pnlOther",
+                              "Row": 1
+                            }
+                          }
+                        ],
+                        "Padding.Left": 4,
+                        "RowCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "e879d60b5741e2940440"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "c5f067c29f097fc60340"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "b68df512d939de970440"
+                              }
+                            }
+                          }
+                        ],
+                        "TabOrder": 1
+                      },
+                      "children": [
+                        {
+                          "class": "TCheckBox",
+                          "name": "ckbxHysterectomy",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 220,
+                            "Top": 39,
+                            "Width": 191,
+                            "Height": 38,
+                            "Align": "alClient",
+                            "Caption": "Hysterectomy",
+                            "Enabled": false,
+                            "TabOrder": 1,
+                            "OnClick": "CheckOkToSave"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TCheckBox",
+                          "name": "ckbxMenopause",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 415,
+                            "Top": 39,
+                            "Width": 174,
+                            "Height": 38,
+                            "Align": "alClient",
+                            "Caption": "Menopause",
+                            "Enabled": false,
+                            "TabOrder": 2,
+                            "OnClick": "CheckOkToSave"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TCheckBox",
+                          "name": "ckbxPermanent",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 593,
+                            "Top": 39,
+                            "Width": 168,
+                            "Height": 38,
+                            "Align": "alClient",
+                            "Caption": "Permanent female sterilization",
+                            "Enabled": false,
+                            "TabOrder": 3,
+                            "OnClick": "CheckOkToSave"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TRadioButton",
+                          "name": "robnAbleToConceiveNo",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 8,
+                            "Top": 39,
+                            "Width": 208,
+                            "Height": 38,
+                            "Align": "alClient",
+                            "Caption": "Not able to conceive",
+                            "TabOrder": 0,
+                            "OnClick": "AbleToConceiveYesNo"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TRadioButton",
+                          "name": "robnAbleToConceiveYes",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 8,
+                            "Top": 0,
+                            "Width": 208,
+                            "Height": 39,
+                            "Align": "alClient",
+                            "Caption": "Able to conceive",
+                            "TabOrder": 5,
+                            "TabStop": true,
+                            "OnClick": "AbleToConceiveYesNo"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TPanel",
+                          "name": "pnlOther",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 220,
+                            "Top": 77,
+                            "Width": 541,
+                            "Height": 26,
+                            "Align": "alClient",
+                            "BevelEdges": [],
+                            "BevelOuter": "bvNone",
+                            "TabOrder": 4
+                          },
+                          "children": [
+                            {
+                              "class": "TStaticText",
+                              "name": "ststxtOther",
+                              "inherited": false,
+                              "inline": false,
+                              "child_position": null,
+                              "properties": {
+                                "AlignWithMargins": true,
+                                "Left": 3,
+                                "Top": 6,
+                                "Width": 33,
+                                "Height": 17,
+                                "Margins.Top": 6,
+                                "Align": "alLeft",
+                                "Caption": "Other:",
+                                "Enabled": false,
+                                "TabOrder": 0,
+                                "TabStop": true
+                              },
+                              "children": []
+                            },
+                            {
+                              "class": "TEdit",
+                              "name": "edtOther",
+                              "inherited": false,
+                              "inline": false,
+                              "child_position": null,
+                              "properties": {
+                                "AlignWithMargins": true,
+                                "Left": 42,
+                                "Top": 3,
+                                "Width": 479,
+                                "Height": 20,
+                                "Margins.Right": 20,
+                                "Margins.Bottom": 30,
+                                "Align": "alClient",
+                                "Constraints.MinHeight": 20,
+                                "Constraints.MinWidth": 100,
+                                "Enabled": false,
+                                "TabOrder": 1,
+                                "OnChange": "CheckOkToSave",
+                                "ExplicitHeight": 21
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "class": "TPanel",
+                  "name": "pnlPregnant",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 133,
+                    "Width": 761,
+                    "Height": 204,
+                    "Align": "alClient",
+                    "BevelEdges": [],
+                    "BevelOuter": "bvNone",
+                    "TabOrder": 1
+                  },
+                  "children": [
+                    {
+                      "class": "TPanel",
+                      "name": "pnlPregStatusLabel",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Width": 761,
+                        "Height": 25,
+                        "Align": "alTop",
+                        "BevelEdges": [],
+                        "BevelOuter": "bvNone",
+                        "Color": "clActiveCaption",
+                        "ParentBackground": false,
+                        "TabOrder": 0
+                      },
+                      "children": [
+                        {
+                          "class": "TStaticText",
+                          "name": "stxtCurrentlyPregnant",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "AlignWithMargins": true,
+                            "Left": 5,
+                            "Top": 1,
+                            "Width": 753,
+                            "Height": 23,
+                            "Margins.Left": 5,
+                            "Margins.Top": 1,
+                            "Margins.Bottom": 1,
+                            "Align": "alClient",
+                            "BevelEdges": [],
+                            "BevelOuter": "bvNone",
+                            "Caption": "Pregnancy Status",
+                            "Font.Charset": "DEFAULT_CHARSET",
+                            "Font.Color": "clWindowText",
+                            "Font.Height": -11,
+                            "Font.Name": "Tahoma",
+                            "Font.Style": [
+                              "fsBold"
+                            ],
+                            "ParentFont": false,
+                            "TabOrder": 0,
+                            "TabStop": true,
+                            "Transparent": false
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TGridPanel",
+                      "name": "grdPregStatus",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 25,
+                        "Width": 761,
+                        "Height": 179,
+                        "Margins.Top": 0,
+                        "Margins.Right": 0,
+                        "Margins.Bottom": 0,
+                        "Align": "alClient",
+                        "BevelEdges": [],
+                        "BevelOuter": "bvNone",
+                        "ColumnCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "eb3585566e5207f10340"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "e728542534fef78f0440"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "243c69af945884870440"
+                              }
+                            }
+                          }
+                        ],
+                        "ControlCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 0,
+                              "Control": "robnPregnantUnsure",
+                              "Row": 2
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 0,
+                              "Control": "robnPregnantNo",
+                              "Row": 1
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 0,
+                              "Control": "robnPregnantYes",
+                              "Row": 0
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 1,
+                              "Control": "pnlLMP",
+                              "Row": 0
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 2,
+                              "Control": "pnlEDD",
+                              "Row": 0
+                            }
+                          }
+                        ],
+                        "Padding.Left": 4,
+                        "Padding.Top": 3,
+                        "RowCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "6d770a236c2d25850440"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "a9b483dc0a8ad0850440"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "a8c8710089480a850440"
+                              }
+                            }
+                          }
+                        ],
+                        "TabOrder": 1
+                      },
+                      "children": [
+                        {
+                          "class": "TRadioButton",
+                          "name": "robnPregnantUnsure",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 8,
+                            "Top": 122,
+                            "Width": 224,
+                            "Height": 57,
+                            "Align": "alClient",
+                            "Caption": "Does not know",
+                            "Enabled": false,
+                            "TabOrder": 2,
+                            "OnClick": "PregnantYesNoUnsure"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TRadioButton",
+                          "name": "robnPregnantNo",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 8,
+                            "Top": 64,
+                            "Width": 224,
+                            "Height": 55,
+                            "Align": "alClient",
+                            "Caption": "Not pregnant",
+                            "Enabled": false,
+                            "TabOrder": 1,
+                            "TabStop": true,
+                            "OnClick": "PregnantYesNoUnsure"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TRadioButton",
+                          "name": "robnPregnantYes",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 8,
+                            "Top": 6,
+                            "Width": 224,
+                            "Height": 55,
+                            "Margins.Left": 0,
+                            "Margins.Top": 0,
+                            "Margins.Right": 0,
+                            "Margins.Bottom": 0,
+                            "Align": "alClient",
+                            "Caption": "Pregnant",
+                            "Enabled": false,
+                            "TabOrder": 0,
+                            "TabStop": true,
+                            "OnClick": "PregnantYesNoUnsure"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TPanel",
+                          "name": "pnlLMP",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 236,
+                            "Top": 6,
+                            "Width": 268,
+                            "Height": 55,
+                            "Margins.Bottom": 35,
+                            "Align": "alClient",
+                            "BevelEdges": [],
+                            "BevelOuter": "bvNone",
+                            "DoubleBuffered": true,
+                            "ParentDoubleBuffered": false,
+                            "TabOrder": 3
+                          },
+                          "children": [
+                            {
+                              "class": "TStaticText",
+                              "name": "stxtLastMenstrualPeriod",
+                              "inherited": false,
+                              "inline": false,
+                              "child_position": null,
+                              "properties": {
+                                "AlignWithMargins": true,
+                                "Left": 3,
+                                "Top": 8,
+                                "Width": 104,
+                                "Height": 44,
+                                "Margins.Top": 8,
+                                "Align": "alLeft",
+                                "Caption": "Last menstrual period",
+                                "Enabled": false,
+                                "TabOrder": 0
+                              },
+                              "children": []
+                            },
+                            {
+                              "class": "TORDateBox",
+                              "name": "dteLMPD",
+                              "inherited": false,
+                              "inline": false,
+                              "child_position": null,
+                              "properties": {
+                                "AlignWithMargins": true,
+                                "Left": 113,
+                                "Top": 5,
+                                "Width": 150,
+                                "Height": 18,
+                                "Margins.Top": 5,
+                                "Margins.Right": 5,
+                                "Margins.Bottom": 32,
+                                "Align": "alClient",
+                                "AutoSize": false,
+                                "Constraints.MinHeight": 17,
+                                "Constraints.MinWidth": 31,
+                                "TabOrder": 1,
+                                "OnChange": "dteLMPDChange",
+                                "OnExit": "dteLMPDExit",
+                                "OnMouseLeave": "dteLMPDMouseLeave",
+                                "DateOnly": true,
+                                "RequireTime": false,
+                                "Caption": "",
+                                "OnDateDialogClosed": "dteLMPDDateDialogClosed"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "class": "TPanel",
+                          "name": "pnlEDD",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "Left": 508,
+                            "Top": 6,
+                            "Width": 253,
+                            "Height": 55,
+                            "Align": "alClient",
+                            "Anchors": [],
+                            "BevelEdges": [],
+                            "BevelOuter": "bvNone",
+                            "DoubleBuffered": true,
+                            "ParentDoubleBuffered": false,
+                            "TabOrder": 4
+                          },
+                          "children": [
+                            {
+                              "class": "TStaticText",
+                              "name": "stxtEDDMethod",
+                              "inherited": false,
+                              "inline": false,
+                              "child_position": null,
+                              "properties": {
+                                "AlignWithMargins": true,
+                                "Left": 3,
+                                "Top": 8,
+                                "Width": 98,
+                                "Height": 44,
+                                "Margins.Top": 8,
+                                "Align": "alLeft",
+                                "Caption": "Expected due date*",
+                                "Enabled": false,
+                                "TabOrder": 0
+                              },
+                              "children": []
+                            },
+                            {
+                              "class": "TORDateBox",
+                              "name": "dteEDD",
+                              "inherited": false,
+                              "inline": false,
+                              "child_position": null,
+                              "properties": {
+                                "AlignWithMargins": true,
+                                "Left": 107,
+                                "Top": 5,
+                                "Width": 141,
+                                "Height": 18,
+                                "Margins.Top": 5,
+                                "Margins.Right": 5,
+                                "Margins.Bottom": 32,
+                                "Align": "alClient",
+                                "AutoSize": false,
+                                "Constraints.MinHeight": 17,
+                                "Constraints.MinWidth": 31,
+                                "TabOrder": 1,
+                                "OnChange": "dteEDDChange",
+                                "DateOnly": true,
+                                "RequireTime": false,
+                                "Caption": ""
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "class": "TPanel",
+                  "name": "pnlLactationStatus",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 337,
+                    "Width": 761,
+                    "Height": 121,
+                    "Align": "alClient",
+                    "BevelEdges": [],
+                    "BevelOuter": "bvNone",
+                    "Caption": "Lactation Status",
+                    "ParentColor": true,
+                    "ShowCaption": false,
+                    "TabOrder": 2
+                  },
+                  "children": [
+                    {
+                      "class": "TPanel",
+                      "name": "pnlLactationLabel",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Width": 761,
+                        "Height": 25,
+                        "Align": "alTop",
+                        "BevelEdges": [],
+                        "BevelOuter": "bvNone",
+                        "Color": "clActiveCaption",
+                        "ParentBackground": false,
+                        "TabOrder": 0
+                      },
+                      "children": [
+                        {
+                          "class": "TStaticText",
+                          "name": "stxtLactationStatus",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "AlignWithMargins": true,
+                            "Left": 5,
+                            "Top": 1,
+                            "Width": 753,
+                            "Height": 23,
+                            "Margins.Left": 5,
+                            "Margins.Top": 1,
+                            "Margins.Bottom": 1,
+                            "Align": "alClient",
+                            "Caption": "Lactation Status",
+                            "Font.Charset": "DEFAULT_CHARSET",
+                            "Font.Color": "clWindowText",
+                            "Font.Height": -11,
+                            "Font.Name": "Tahoma",
+                            "Font.Style": [
+                              "fsBold"
+                            ],
+                            "ParentFont": false,
+                            "TabOrder": 0,
+                            "Transparent": false
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "class": "TGridPanel",
+                      "name": "grdLactation",
+                      "inherited": false,
+                      "inline": false,
+                      "child_position": null,
+                      "properties": {
+                        "AlignWithMargins": true,
+                        "Left": 4,
+                        "Top": 28,
+                        "Width": 757,
+                        "Height": 93,
+                        "Margins.Left": 4,
+                        "Margins.Right": 0,
+                        "Margins.Bottom": 0,
+                        "Align": "alClient",
+                        "BevelEdges": [],
+                        "ColumnCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "00000000000000c80540"
+                              }
+                            }
+                          }
+                        ],
+                        "ControlCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 0,
+                              "Control": "robnLactatingNo",
+                              "Row": 1
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Column": 0,
+                              "Control": "robnLactatingYes",
+                              "Row": 0
+                            }
+                          }
+                        ],
+                        "RowCollection": [
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "00000000000000c80440"
+                              }
+                            }
+                          },
+                          {
+                            "index": null,
+                            "properties": {
+                              "Value": {
+                                "extended80_hex": "00000000000000c80440"
+                              }
+                            }
+                          }
+                        ],
+                        "TabOrder": 1
+                      },
+                      "children": [
+                        {
+                          "class": "TRadioButton",
+                          "name": "robnLactatingNo",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "AlignWithMargins": true,
+                            "Left": 4,
+                            "Top": 49,
+                            "Width": 749,
+                            "Height": 40,
+                            "Align": "alClient",
+                            "Caption": "Not currently lactating",
+                            "TabOrder": 1,
+                            "OnClick": "robnLactatingYesNoClick"
+                          },
+                          "children": []
+                        },
+                        {
+                          "class": "TRadioButton",
+                          "name": "robnLactatingYes",
+                          "inherited": false,
+                          "inline": false,
+                          "child_position": null,
+                          "properties": {
+                            "AlignWithMargins": true,
+                            "Left": 4,
+                            "Top": 4,
+                            "Width": 749,
+                            "Height": 39,
+                            "Align": "alClient",
+                            "Caption": "Currently lactating",
+                            "TabOrder": 0,
+                            "TabStop": true,
+                            "OnClick": "robnLactatingYesNoClick"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlOptions",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 461,
+                "Width": 761,
+                "Height": 35,
+                "Align": "alBottom",
+                "BevelOuter": "bvNone",
+                "ParentBackground": false,
+                "TabOrder": 1,
+                "DesignSize": [
+                  761,
+                  35
+                ]
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnSave",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 601,
+                    "Top": 1,
+                    "Width": 75,
+                    "Height": 25,
+                    "Anchors": [
+                      "akRight",
+                      "akBottom"
+                    ],
+                    "Caption": "Save",
+                    "Enabled": false,
+                    "ModalResult": 1,
+                    "TabOrder": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnCancel",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 682,
+                    "Top": 1,
+                    "Width": 75,
+                    "Height": 25,
+                    "Anchors": [
+                      "akRight",
+                      "akBottom"
+                    ],
+                    "Cancel": true,
+                    "Caption": "Cancel",
+                    "ModalResult": 2,
+                    "TabOrder": 1
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 240,
+        "Top": 448,
+        "Data": [
+          [
+            "Component = frmWVPregLacStatusUpdate",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stxtReaderStop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = scrollBox",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlForm",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grdLayout",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlConveive",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlConeiveLabel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stxtAbleToConceive",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grdConceive",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ckbxHysterectomy",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ckbxMenopause",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ckbxPermanent",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = robnAbleToConceiveNo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = robnAbleToConceiveYes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlOther",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ststxtOther",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edtOther",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPregnant",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlPregStatusLabel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stxtCurrentlyPregnant",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grdPregStatus",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlLactationStatus",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlLactationLabel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stxtLactationStatus",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grdLactation",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = robnLactatingNo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlOptions",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnSave",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = robnLactatingYes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = robnPregnantUnsure",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = robnPregnantNo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = robnPregnantYes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlLMP",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stxtLastMenstrualPeriod",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = dteLMPD",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlEDD",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = stxtEDDMethod",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = dteEDD",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

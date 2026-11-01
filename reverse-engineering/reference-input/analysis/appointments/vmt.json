@@ -1,0 +1,47 @@
+{
+  "scope": "Bounded Appts class pointer and four display/clear VMT slots",
+  "executable_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+  "class_pointer": {
+    "address": "00bd7520",
+    "file_offset": 8218912,
+    "bytes": "7875bd00",
+    "value": "00bd7578"
+  },
+  "slots": [
+    {
+      "address": "00bd7784",
+      "file_offset": 8219524,
+      "bytes": "5479bd00",
+      "value": "00bd7954",
+      "slot": "20c",
+      "map_name": "mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnAddItems"
+    },
+    {
+      "address": "00bd7788",
+      "file_offset": 8219528,
+      "bytes": "b87cbd00",
+      "value": "00bd7cb8",
+      "slot": "210",
+      "map_name": "mCoverSheetDisplayPanel_CPRS_Appts.TfraCoverSheetDisplayPanel_CPRS_Appts.OnGetDetail"
+    },
+    {
+      "address": "00bd778c",
+      "file_offset": 8219532,
+      "bytes": "0849bd00",
+      "value": "00bd4908",
+      "slot": "214",
+      "map_name": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.OnShowDetail"
+    },
+    {
+      "address": "00bd7794",
+      "file_offset": 8219540,
+      "bytes": "d035bd00",
+      "value": "00bd35d0",
+      "slot": "21c",
+      "map_name": "mCoverSheetDisplayPanel_CPRS.TfraCoverSheetDisplayPanel_CPRS.ClearListView"
+    }
+  ],
+  "limits": [
+    "Does not establish complete Delphi types, effective permissions or runtime site dispatch."
+  ]
+}

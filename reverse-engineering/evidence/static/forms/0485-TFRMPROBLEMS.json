@@ -1,0 +1,1584 @@
+{
+  "class": "TfrmProblems",
+  "name": "frmProblems",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 303,
+    "Top": 268,
+    "HelpContext": 2000,
+    "Caption": "Problems List Page",
+    "ClientHeight": 423,
+    "ClientWidth": 722,
+    "HelpFile": "overvw",
+    "Menu": "mnuProbs",
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "OnMouseMove": "FormMouseMove",
+    "ExplicitWidth": 738,
+    "ExplicitHeight": 482,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TShape",
+      "name": "shpPageBottom",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 418,
+        "Width": 722,
+        "Margins.Left": 5,
+        "Margins.Top": 5,
+        "Margins.Right": 5,
+        "Margins.Bottom": 5,
+        "Constraints.MinHeight": 5,
+        "ExplicitTop": 350,
+        "ExplicitWidth": 631
+      },
+      "children": []
+    },
+    {
+      "class": "TSplitter",
+      "name": "sptHorz",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 159,
+        "Width": 2,
+        "Height": 418,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "OnMoved": "sptHorzMoved",
+        "ExplicitLeft": 159,
+        "ExplicitWidth": 2,
+        "ExplicitHeight": 350
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlLeft",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 159,
+        "Height": 418,
+        "Margins.Left": 4,
+        "Margins.Top": 4,
+        "Margins.Right": 4,
+        "Margins.Bottom": 4,
+        "Constraints.MinWidth": 37,
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ],
+        "ExplicitWidth": 159,
+        "ExplicitHeight": 418
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlProbEnt",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 159,
+            "Height": 372,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 2,
+            "Visible": false,
+            "OnResize": "pnlProbEntResize"
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblProbEnt",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 338,
+                "Width": 159,
+                "Height": 13,
+                "Align": "alBottom",
+                "AutoSize": false,
+                "Caption": "Enter new problem:",
+                "ExplicitTop": 270
+              },
+              "children": []
+            },
+            {
+              "class": "TCaptionEdit",
+              "name": "edProbEnt",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 351,
+                "Width": 159,
+                "Height": 21,
+                "Align": "alBottom",
+                "TabOrder": 0,
+                "OnExit": "lstViewExit",
+                "OnKeyPress": "edProbEntKeyPress",
+                "Caption": "Enter new problem"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlButtons",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 372,
+            "Width": 159,
+            "Height": 46,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "Constraints.MinHeight": 46,
+            "TabOrder": 3
+          },
+          "children": [
+            {
+              "class": "TORAlignButton",
+              "name": "bbOtherProb",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 2,
+                "Width": 159,
+                "Height": 22,
+                "Align": "alBottom",
+                "Caption": "Other Problem",
+                "TabOrder": 0,
+                "OnClick": "bbOtherProbClick",
+                "OnExit": "bbNewProbExit",
+                "OnMouseMove": "FormMouseMove"
+              },
+              "children": []
+            },
+            {
+              "class": "TORAlignButton",
+              "name": "bbCancel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 24,
+                "Width": 159,
+                "Height": 22,
+                "Align": "alBottom",
+                "Caption": "Cancel",
+                "TabOrder": 1,
+                "OnClick": "bbCancelClick",
+                "OnExit": "bbNewProbExit",
+                "OnMouseMove": "FormMouseMove"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlView",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 159,
+            "Height": 372,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TOROffsetLabel",
+              "name": "lblView",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 159,
+                "Height": 19,
+                "Align": "alTop",
+                "Caption": "View options",
+                "HorzOffset": 2,
+                "Transparent": false,
+                "VertOffset": 6,
+                "WordWrap": false
+              },
+              "children": []
+            },
+            {
+              "class": "TORListBox",
+              "name": "lstView",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 19,
+                "Width": 159,
+                "Height": 97,
+                "Align": "alTop",
+                "ExtendedSelect": false,
+                "ItemHeight": 13,
+                "Items.Strings": [
+                  "A^Active",
+                  "I^Inactive",
+                  "B^Both active and inactive",
+                  "R^Removed"
+                ],
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "TabOrder": 0,
+                "OnClick": "lstViewClick",
+                "OnExit": "lstViewExit",
+                "OnMouseMove": "FormMouseMove",
+                "Caption": "View options",
+                "ItemTipColor": "clWindow",
+                "LongList": false,
+                "Pieces": "2",
+                "FlatCheckBoxes": false
+              },
+              "children": []
+            },
+            {
+              "class": "TORAlignButton",
+              "name": "bbNewProb",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 100,
+                "Left": 0,
+                "Top": 116,
+                "Width": 159,
+                "Height": 24,
+                "Align": "alTop",
+                "Caption": "New problem",
+                "TabOrder": 1,
+                "OnClick": "lstProbActsClick",
+                "OnExit": "bbNewProbExit",
+                "OnMouseMove": "FormMouseMove"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TORAutoPanel",
+          "name": "pnlProbList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 159,
+            "Height": 372,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Constraints.MinHeight": 90,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TSplitter",
+              "name": "sptProbPanel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 157,
+                "Width": 159,
+                "Height": 3,
+                "Cursor": "crVSplit",
+                "Align": "alTop"
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlProbCats",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 159,
+                "Height": 157,
+                "Align": "alTop",
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblProbCats",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 153,
+                    "Height": 13,
+                    "Align": "alTop",
+                    "AutoSize": false,
+                    "Caption": "Problem categories",
+                    "ExplicitLeft": 2,
+                    "ExplicitTop": 0
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORListBox",
+                  "name": "lstCatPick",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 19,
+                    "Width": 159,
+                    "Height": 138,
+                    "Hint": "Select problem category",
+                    "TabStop": false,
+                    "Align": "alClient",
+                    "ExtendedSelect": false,
+                    "ItemHeight": 13,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 0,
+                    "OnClick": "lstCatPickClick",
+                    "OnExit": "lstViewExit",
+                    "OnMouseMove": "FormMouseMove",
+                    "Caption": "Problem categories",
+                    "ItemTipColor": "clWindow",
+                    "LongList": false,
+                    "Pieces": "2",
+                    "FlatCheckBoxes": false
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlProbs",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 160,
+                "Width": 159,
+                "Height": 212,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblProblems",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 159,
+                    "Height": 13,
+                    "Align": "alTop",
+                    "AutoSize": false,
+                    "Caption": "Problems",
+                    "Constraints.MaxHeight": 16,
+                    "Constraints.MinHeight": 13
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORListBox",
+                  "name": "lstProbPick",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 13,
+                    "Width": 159,
+                    "Height": 199,
+                    "Hint": "Select problem to add",
+                    "Align": "alClient",
+                    "BevelInner": "bvNone",
+                    "Ctl3D": false,
+                    "ExtendedSelect": false,
+                    "ItemHeight": 13,
+                    "ParentCtl3D": false,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 0,
+                    "OnClick": "lstProbPickClick",
+                    "OnDblClick": "lstProbPickDblClick",
+                    "Caption": "Problems",
+                    "ItemTipColor": "clWindow",
+                    "LongList": false,
+                    "Pieces": "2,3",
+                    "FlatCheckBoxes": false,
+                    "ExplicitTop": 19,
+                    "ExplicitHeight": 193
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlRight",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 161,
+        "Width": 561,
+        "Height": 418,
+        "Constraints.MinWidth": 30,
+        "Ctl3D": false,
+        "ParentCtl3D": false,
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ],
+        "OnExit": "pnlRightExit",
+        "OnResize": "pnlRightResize",
+        "ExplicitLeft": 161,
+        "ExplicitWidth": 561,
+        "ExplicitHeight": 418
+      },
+      "children": [
+        {
+          "class": "TOROffsetLabel",
+          "name": "lblProbList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 555,
+            "Height": 13,
+            "Align": "alTop",
+            "Caption": "Active Problems List",
+            "HorzOffset": 2,
+            "Transparent": false,
+            "VertOffset": 0,
+            "WordWrap": false,
+            "ExplicitTop": 0
+          },
+          "children": []
+        },
+        {
+          "class": "THeaderControl",
+          "name": "HeaderControl",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 19,
+            "Width": 555,
+            "Height": 17,
+            "Margins.Top": 0,
+            "Margins.Bottom": 0,
+            "Sections": [
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Column 0",
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Stat/Ver",
+                  "Width": 65
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 20,
+                  "Text": "Description",
+                  "Width": 65
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 16,
+                  "Text": "Onset Date",
+                  "Width": 65
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "MinWidth": 16,
+                  "Text": "Last Updated",
+                  "Width": 80
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Column 5",
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Location",
+                  "Width": 65
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Provider",
+                  "Width": 65
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Service",
+                  "Width": 65
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Column 9",
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Column 10",
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Column 11",
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Column12",
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Column 13",
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Column 14",
+                  "Width": 0
+                }
+              },
+              {
+                "index": null,
+                "properties": {
+                  "ImageIndex": -1,
+                  "Text": "Inactive Flag",
+                  "Width": 0
+                }
+              }
+            ],
+            "OnSectionClick": "HeaderControlSectionClick",
+            "OnSectionResize": "HeaderControlSectionResize",
+            "OnMouseDown": "HeaderControlMouseDown",
+            "OnMouseUp": "HeaderControlMouseUp"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionListBox",
+          "name": "wgProbData",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 39,
+            "Width": 555,
+            "Height": 376,
+            "Style": "lbOwnerDrawVariable",
+            "Align": "alClient",
+            "BevelInner": "bvNone",
+            "BevelOuter": "bvNone",
+            "Color": "clCream",
+            "ItemHeight": 13,
+            "MultiSelect": true,
+            "ParentShowHint": false,
+            "PopupMenu": "popProb",
+            "ShowHint": true,
+            "TabOrder": 1,
+            "StyleElements": [
+              "seFont",
+              "seBorder"
+            ],
+            "OnClick": "wgProbDataClick",
+            "OnDblClick": "wgProbDataDblClick",
+            "OnDrawItem": "wgProbDataDrawItem",
+            "OnMeasureItem": "wgProbDataMeasureItem",
+            "OnMouseMove": "FormMouseMove",
+            "Caption": "Active Problems List"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlProbDlg",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 36,
+            "Width": 561,
+            "Height": 382,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "BorderStyle": "bsSingle",
+            "Ctl3D": false,
+            "ParentCtl3D": false,
+            "TabOrder": 0,
+            "Visible": false,
+            "OnMouseMove": "FormMouseMove"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = bbOtherProb",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = bbCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlView",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstView",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = bbNewProb",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlProbEnt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = edProbEnt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlProbList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlProbCats",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstCatPick",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlProbs",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstProbPick",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlProbDlg",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = wgProbData",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = HeaderControl",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlLeft",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlRight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmProblems",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popProb",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 82,
+        "Top": 185
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "popChange",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 400,
+            "Caption": "&Change...",
+            "Enabled": false,
+            "OnClick": "lstProbActsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popInactivate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 200,
+            "Caption": "&Inactivate",
+            "Enabled": false,
+            "OnClick": "lstProbActsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popVerify",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 250,
+            "Caption": "&Verify...",
+            "Enabled": false,
+            "OnClick": "lstProbActsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N36",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-",
+            "Enabled": false
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popAnnotate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 600,
+            "Caption": "&Annotate...",
+            "Enabled": false,
+            "OnClick": "lstProbActsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N37",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-",
+            "Enabled": false,
+            "Visible": false
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popRemove",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 500,
+            "Caption": "&Remove...",
+            "Enabled": false,
+            "OnClick": "lstProbActsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popRestore",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 550,
+            "Caption": "Re&store",
+            "Enabled": false,
+            "OnClick": "lstProbActsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "N3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "-"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "popViewDetails",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 300,
+            "Caption": "View Details",
+            "OnClick": "lstProbActsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuOptimizeFields",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Adjust Column Size",
+            "Visible": false,
+            "OnClick": "mnuOptimizeFieldsClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TMainMenu",
+      "name": "mnuProbs",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 19,
+        "Top": 185
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuView",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&View",
+            "GroupIndex": 3
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewChart",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Chart &Tab"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartCover",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 1,
+                    "Caption": "Cover &Sheet",
+                    "ShortCut": 16467,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartProbs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 2,
+                    "Caption": "&Problem List",
+                    "ShortCut": 16464,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartMeds",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 3,
+                    "Caption": "&Medications",
+                    "ShortCut": 16461,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartOrders",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 4,
+                    "Caption": "&Orders",
+                    "ShortCut": 16463,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartNotes",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 6,
+                    "Caption": "Progress &Notes",
+                    "ShortCut": 16462,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartCslts",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 7,
+                    "Caption": "Consul&ts",
+                    "ShortCut": 16468,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartSurgery",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 11,
+                    "Caption": "S&urgery",
+                    "ShortCut": 16469,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartDCSumm",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 8,
+                    "Caption": "&Discharge Summaries",
+                    "ShortCut": 16452,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartLabs",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 9,
+                    "Caption": "&Laboratory",
+                    "ShortCut": 16460,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuChartReports",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 10,
+                    "Caption": "&Reports",
+                    "ShortCut": 16466,
+                    "OnClick": "mnuChartTabClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewInformation",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Information",
+                "OnClick": "mnuViewInformationClick"
+              },
+              "children": [
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewDemo",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 1,
+                    "Caption": "De&mographics...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewVisits",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 2,
+                    "Caption": "Visits/Pr&ovider...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewPrimaryCare",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 3,
+                    "Caption": "Primary &Care...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewMyHealtheVet",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 4,
+                    "Caption": "MyHealthe&Vet...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuInsurance",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 5,
+                    "Caption": "&Insurance...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewFlags",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 6,
+                    "Caption": "&Flags...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewRemoteData",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 7,
+                    "Caption": "Remote &Data...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewReminders",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 8,
+                    "Caption": "&Reminders...",
+                    "Enabled": false,
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TMenuItem",
+                  "name": "mnuViewPostings",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Tag": 9,
+                    "Caption": "&Postings...",
+                    "OnClick": "ViewInfo"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewActive",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 700,
+                "Caption": "&Active Problems",
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewInactive",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 800,
+                "Caption": "&Inactive Problems",
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewBoth",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 900,
+                "Caption": "&Both Active/Inactive Problems",
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewRemoved",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 950,
+                "Caption": "&Removed Problems",
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewFilters",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 975,
+                "Caption": "Fi&lters...",
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewComments",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Show &Comments",
+                "OnClick": "mnuViewCommentsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewSave",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Sa&ve as Default View",
+                "OnClick": "mnuViewSaveClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuViewRestoreDefault",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "Return to De&fault View",
+                "OnClick": "mnuViewRestoreDefaultClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuAct",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Action",
+            "GroupIndex": 4
+          },
+          "children": [
+            {
+              "class": "TMenuItem",
+              "name": "mnuActNew",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 100,
+                "Caption": "&New Problem...",
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActChange",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 400,
+                "Caption": "&Change...",
+                "Enabled": false,
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActInactivate",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 200,
+                "Caption": "&Inactivate",
+                "Enabled": false,
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActVerify",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 250,
+                "Caption": "&Verify...",
+                "Enabled": false,
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActAnnotate",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 600,
+                "Caption": "&Annotate...",
+                "Enabled": false,
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "Z4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-",
+                "Visible": false
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActRemove",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 500,
+                "Caption": "&Remove",
+                "Enabled": false,
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActRestore",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 550,
+                "Caption": "Re&store",
+                "Enabled": false,
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "N4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Caption": "-"
+              },
+              "children": []
+            },
+            {
+              "class": "TMenuItem",
+              "name": "mnuActDetails",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Tag": 300,
+                "Caption": "View &Details",
+                "Enabled": false,
+                "OnClick": "lstProbActsClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

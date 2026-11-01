@@ -1,0 +1,214 @@
+{
+  "class": "TfrmRenewOrders",
+  "name": "frmRenewOrders",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 434,
+    "Top": 232,
+    "HorzScrollBar.Tracking": true,
+    "HorzScrollBar.Visible": true,
+    "VertScrollBar.Tracking": true,
+    "Caption": "Renew Orders",
+    "ClientHeight": 412,
+    "ClientWidth": 613,
+    "Position": "poScreenCenter",
+    "Scaled": false,
+    "OnShow": null,
+    "ExplicitWidth": 631,
+    "ExplicitHeight": 457,
+    "PixelsPerInch": 120,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "THeaderControl",
+      "name": "hdrOrders",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 613,
+        "Height": 17,
+        "Constraints.MinHeight": 17,
+        "Sections": [
+          {
+            "index": null,
+            "properties": {
+              "AutoSize": true,
+              "ImageIndex": -1,
+              "Text": "Order to be Renewed",
+              "Width": 307
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "AutoSize": true,
+              "ImageIndex": -1,
+              "Text": "Start/Stop Time",
+              "Width": 306
+            }
+          }
+        ],
+        "OnSectionResize": "hdrOrdersSectionResize"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 365,
+        "Width": 613,
+        "Height": 47,
+        "Align": "alBottom",
+        "TabOrder": 2,
+        "DesignSize": [
+          613,
+          47
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 529,
+            "Top": 9,
+            "Width": 72,
+            "Height": 29,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Cancel": true,
+            "Caption": "Cancel",
+            "Constraints.MinHeight": 21,
+            "TabOrder": 0,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdChange",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 9,
+            "Top": 9,
+            "Width": 153,
+            "Height": 29,
+            "Caption": "Change...",
+            "Constraints.MinHeight": 21,
+            "Enabled": false,
+            "TabOrder": 1,
+            "OnClick": "cmdChangeClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 438,
+            "Top": 9,
+            "Width": 72,
+            "Height": 29,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Caption": "OK",
+            "Constraints.MinHeight": 21,
+            "Default": true,
+            "TabOrder": 2,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TCaptionListBox",
+      "name": "lstOrders",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 17,
+        "Width": 613,
+        "Height": 348,
+        "Style": "lbOwnerDrawVariable",
+        "Align": "alClient",
+        "Color": "clCream",
+        "Ctl3D": true,
+        "ParentCtl3D": false,
+        "ParentShowHint": false,
+        "ShowHint": true,
+        "TabOrder": 1,
+        "OnClick": "lstOrdersClick",
+        "OnDrawItem": "lstOrdersDrawItem",
+        "OnMeasureItem": "lstOrdersMeasureItem",
+        "Caption": ""
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = hdrOrders",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdChange",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmRenewOrders",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstOrders",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

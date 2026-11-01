@@ -1,0 +1,336 @@
+{
+  "class": "TfrmODGen",
+  "name": "frmODGen",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 223,
+    "Top": 290,
+    "Width": 689,
+    "Height": 629,
+    "Caption": "frmODGen",
+    "ExplicitWidth": 689,
+    "ExplicitHeight": 629,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblOrderSig",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 6,
+        "Top": 430,
+        "Width": 661,
+        "Height": 13,
+        "Margins.Left": 6,
+        "Margins.Right": 6,
+        "Align": "alBottom",
+        "Caption": "Order Sig",
+        "Color": "clMoneyGreen",
+        "ParentColor": false,
+        "OnClick": "lblOrderSigClick",
+        "ExplicitWidth": 44
+      },
+      "children": []
+    },
+    {
+      "class": "TScrollBox",
+      "name": "sbxMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 6,
+        "Top": 3,
+        "Width": 661,
+        "Height": 421,
+        "Margins.Left": 6,
+        "Margins.Right": 6,
+        "Align": "alClient",
+        "BevelInner": "bvNone",
+        "BevelOuter": "bvNone",
+        "Ctl3D": false,
+        "ParentCtl3D": false,
+        "TabOrder": 4,
+        "ExplicitLeft": 11
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdAccept",
+      "inherited": true,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Top": 257,
+        "Margins.Left": 5,
+        "Margins.Top": 5,
+        "Margins.Right": 5,
+        "Margins.Bottom": 5,
+        "ExplicitTop": 257
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdQuit",
+      "inherited": true,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Top": 288,
+        "Margins.Left": 5,
+        "Margins.Top": 5,
+        "Margins.Right": 5,
+        "Margins.Bottom": 5,
+        "ExplicitTop": 288
+      },
+      "children": []
+    },
+    {
+      "class": "TGridPanel",
+      "name": "gpMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 449,
+        "Width": 667,
+        "Height": 59,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000c00540"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [],
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000800540"
+              }
+            }
+          }
+        ],
+        "ShowCaption": false,
+        "TabOrder": 6
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionMemo",
+      "name": "memOrder",
+      "inherited": true,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Top": 257,
+        "Margins.Left": 3,
+        "Margins.Top": 5,
+        "Margins.Right": 3,
+        "Margins.Bottom": 3,
+        "ExplicitTop": 257
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 535,
+        "Top": 449,
+        "Width": 113,
+        "Height": 41,
+        "BevelOuter": "bvNone",
+        "ParentColor": true,
+        "ShowCaption": false,
+        "TabOrder": 7
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlGridMessage",
+      "inherited": false,
+      "inline": false,
+      "child_position": 7,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 514,
+        "Width": 667,
+        "Height": 73,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "Ctl3D": false,
+        "ParentBackground": false,
+        "ParentColor": true,
+        "ParentCtl3D": false,
+        "ShowCaption": false,
+        "TabOrder": 8
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMessage",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Top": 235,
+        "Margins.Left": 3,
+        "Margins.Top": 3,
+        "Margins.Right": 3,
+        "Margins.Bottom": 3,
+        "BevelInner": "bvNone",
+        "BevelOuter": "bvNone",
+        "Ctl3D": false,
+        "ParentCtl3D": false,
+        "ExplicitTop": 235
+      },
+      "children": [
+        {
+          "class": "TImage",
+          "name": "imgMessage",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 5,
+            "Top": 5,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alLeft",
+            "ExplicitLeft": 5,
+            "ExplicitTop": 5
+          },
+          "children": []
+        },
+        {
+          "class": "TRichEdit",
+          "name": "memMessage",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 47,
+            "Top": 5,
+            "Width": 327,
+            "Margins.Left": 5,
+            "Margins.Top": 5,
+            "Margins.Right": 5,
+            "Margins.Bottom": 5,
+            "Align": "alClient",
+            "ExplicitLeft": 47,
+            "ExplicitTop": 5,
+            "ExplicitWidth": 327
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = sbxMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memOrder",
+            "Label = lblOrderSig",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdAccept",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdQuit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memMessage",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmODGen",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = gpMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButtons",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlGridMessage",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508CompMemOrder",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Component": "memOrder",
+        "OnStateQuery": "VA508CompMemOrderStateQuery",
+        "Left": 88,
+        "Top": 232
+      },
+      "children": []
+    }
+  ]
+}

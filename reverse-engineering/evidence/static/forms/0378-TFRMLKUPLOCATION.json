@@ -1,0 +1,149 @@
+{
+  "class": "TfrmLkUpLocation",
+  "name": "frmLkUpLocation",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 377,
+    "Top": 314,
+    "Caption": "Select Location",
+    "ClientHeight": 212,
+    "ClientWidth": 356,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 364,
+    "ExplicitHeight": 239,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblLocation",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 8,
+        "Top": 8,
+        "Width": 41,
+        "Height": 13,
+        "Caption": "Location"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblInfo",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 8,
+        "Top": 176,
+        "Width": 341,
+        "Height": 28,
+        "AutoSize": false,
+        "WordWrap": true
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboLocation",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 8,
+        "Top": 22,
+        "Width": 193,
+        "Height": 143,
+        "Style": "orcsSimple",
+        "AutoSelect": true,
+        "Caption": "Location",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": false,
+        "SynonymChars": "<>",
+        "TabOrder": 0,
+        "OnNeedData": "cboLocationNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 276,
+        "Top": 22,
+        "Width": 72,
+        "Height": 21,
+        "Caption": "OK",
+        "Default": true,
+        "TabOrder": 1,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 276,
+        "Top": 51,
+        "Width": 72,
+        "Height": 21,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 2,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = cboLocation",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmLkUpLocation",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "schema_version": 1,
+  "title": "CPRSChart.exe evidence-backed static specification",
+  "identity": {
+    "name": "CPRSChart.exe",
+    "path": "/workspace/reverse-engineering/input/cprs/CPRSChart.exe",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "bytes": 18141088,
+    "machine": "0x14c",
+    "image_base": "00400000",
+    "entry": "01224034",
+    "file_version": "1.33.214.5",
+    "file_version_evidence_address": "0155ba84"
+  },
+  "coverage": {
+    "schema_version": 1,
+    "target_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "inventory_source": "evidence/inventory-reviewed",
+    "internal_functions": 41948,
+    "external_functions": 1423,
+    "total_functions": 43371,
+    "statuses": {
+      "analyzed": 2245,
+      "unresolved": 40943,
+      "partially_analyzed": 183
+    },
+    "all_inventory_entries_classified": true,
+    "full_behavioral_recovery_complete": false,
+    "discovery_complete_for_executable": false,
+    "analysis_timeout": false,
+    "automatic_analysis_enabled": true,
+    "final_snapshot_analysis_enabled": false,
+    "static_call_sites": 243857,
+    "unresolved_indirect_call_sites": 38574,
+    "verified_import_thunks": 1518,
+    "verified_small_function_semantics": 727,
+    "literal_use_sites": 27151,
+    "rpc_literal_use_sites": 1097,
+    "verified_archived_direct_call_sites": 3355,
+    "historical_entries_absent_from_current_function_inventory": 0,
+    "subsystems": {
+      "compiler-runtime-and-libraries": {
+        "functions": 23858,
+        "status": {
+          "analyzed": 1977,
+          "unresolved": 21881
+        }
+      },
+      "other-application-modules": {
+        "functions": 9924,
+        "status": {
+          "unresolved": 9756,
+          "analyzed": 159,
+          "partially_analyzed": 9
+        }
+      },
+      "shared-controls-and-accessibility": {
+        "functions": 1241,
+        "status": {
+          "unresolved": 1228,
+          "analyzed": 13
+        }
+      },
+      "transport-authentication-and-integration": {
+        "functions": 737,
+        "status": {
+          "unresolved": 657,
+          "partially_analyzed": 20,
+          "analyzed": 60
+        }
+      },
+      "documentation-encounters-and-reminders": {
+        "functions": 1434,
+        "status": {
+          "unresolved": 1399,
+          "partially_analyzed": 27,
+          "analyzed": 8
+        }
+      },
+      "orders-medications-and-consults": {
+        "functions": 3078,
+        "status": {
+          "unresolved": 3037,
+          "partially_analyzed": 33,
+          "analyzed": 8
+        }
+      },
+      "results-reports-and-graphs": {
+        "functions": 849,
+        "status": {
+          "unresolved": 834,
+          "partially_analyzed": 12,
+          "analyzed": 3
+        }
+      },
+      "cover-sheet-and-vitals": {
+        "functions": 297,
+        "status": {
+          "unresolved": 232,
+          "partially_analyzed": 50,
+          "analyzed": 15
+        }
+      },
+      "patient-context-and-shell": {
+        "functions": 530,
+        "status": {
+          "unresolved": 496,
+          "partially_analyzed": 32,
+          "analyzed": 2
+        }
+      },
+      "external-libraries": {
+        "functions": 1423,
+        "status": {
+          "unresolved": 1423
+        }
+      }
+    },
+    "limits": [
+      "Classification is not behavioral recovery",
+      "Automatic discovery may include false functions and miss code",
+      "A direct call/reference is a static edge, not proof of runtime reachability",
+      "MAP labels include data, RTTI and literals; only function manager entries counted as functions"
+    ]
+  },
+  "documents": {
+    "architecture": "ARCHITECTURE.md",
+    "function_inventory": "FUNCTION-INVENTORY.md",
+    "data_structures": "DATA-STRUCTURES.md",
+    "external_interfaces": "EXTERNAL-INTERFACES.md",
+    "behavior": "BEHAVIOR.md",
+    "bounded_reviews": "REVIEW-NOTES.md",
+    "reimplementation": "REIMPLEMENTATION-PLAN.md",
+    "reproduction": "REPRODUCE.md"
+  },
+  "architecture": {
+    "subsystem_catalog": "catalog/subsystems.json",
+    "physical_module_regions": "evidence/static/map-modules.json",
+    "call_graph": "catalog/subsystem-call-graph.json",
+    "forms": "evidence/static/resources.json",
+    "event_bindings": "evidence/static/form-bindings.jsonl"
+  },
+  "functions": {
+    "json": "catalog/function-inventory.json",
+    "jsonl": "catalog/function-inventory.jsonl",
+    "tsv": "catalog/function-inventory.tsv",
+    "relationships": "catalog/function-relationships.jsonl"
+  },
+  "data_structures": [
+    {
+      "name": "DelphiManagedStringHeader",
+      "size_bytes": 12,
+      "fields": [
+        {
+          "offset": 0,
+          "width": 2,
+          "name": "code_page"
+        },
+        {
+          "offset": 2,
+          "width": 2,
+          "name": "element_width"
+        },
+        {
+          "offset": 4,
+          "width": 4,
+          "name": "reference_count",
+          "signed": true
+        },
+        {
+          "offset": 8,
+          "width": 4,
+          "name": "length_elements",
+          "signed": true
+        }
+      ],
+      "applications": 32,
+      "evidence": "evidence/metadata-changes.json",
+      "limit": "Validated static literal prefix; full runtime ownership semantics unresolved"
+    },
+    {
+      "name": "PartialDelphiClassMetadataPrefix",
+      "size_bytes": 44,
+      "fields": [
+        {
+          "offset": 0,
+          "width": 4,
+          "name": "self_vmt_va"
+        },
+        {
+          "offset": 4,
+          "width": 28,
+          "name": "unresolved_words"
+        },
+        {
+          "offset": 32,
+          "width": 4,
+          "name": "class_name_va"
+        },
+        {
+          "offset": 36,
+          "width": 4,
+          "name": "instance_size_bytes"
+        },
+        {
+          "offset": 40,
+          "width": 4,
+          "name": "parent_reference_va"
+        }
+      ],
+      "applications": 2554,
+      "catalog": "evidence/static/classes.jsonl",
+      "limit": "Metadata prefix only; instance field layouts unresolved"
+    },
+    {
+      "name": "TIUSignResultPrefix",
+      "size_bytes": 8,
+      "fields": [
+        {
+          "offset": 0,
+          "width": 1,
+          "name": "first_piece_equals_zero"
+        },
+        {
+          "offset": 1,
+          "width": 3,
+          "name": "unresolved_alignment"
+        },
+        {
+          "offset": 4,
+          "width": 4,
+          "name": "second_piece_text",
+          "type": "managed UTF16 string pointer"
+        }
+      ],
+      "evidence_addresses": [
+        "00a0c76e",
+        "00a0c771",
+        "00a0c783",
+        "00a0c78e"
+      ],
+      "limit": "Type definition added to Ghidra; no unverified function prototype forced"
+    }
+  ],
+  "external_interfaces": {
+    "normal_imports": 803,
+    "delayed_imports": 638,
+    "import_catalog": "evidence/static/imports.jsonl",
+    "export_catalog": "evidence/static/exports.json",
+    "component_catalog": "catalog/components.json",
+    "rpc_name_candidates": 1154,
+    "rpc_literal_use_sites": "catalog/rpc-literal-use-sites.jsonl",
+    "complete_server_contracts_recovered": false
+  },
+  "verified_claims": [
+    {
+      "id": "START-01",
+      "statement": "Entry calls Delphi initialization helper",
+      "instruction_address": "01224048",
+      "target_address": "00413340",
+      "bytes": "e8f3f21eff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "START-02",
+      "statement": "Entry calls a boolean-tested startup helper",
+      "instruction_address": "01224061",
+      "target_address": "009b8440",
+      "bytes": "e8da4379ff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "CTX-01",
+      "statement": "New-patient menu calls patient selector",
+      "instruction_address": "00ff50d3",
+      "target_address": "00e81038",
+      "bytes": "e860bfe8ff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "CTX-02",
+      "statement": "New-patient menu calls chart patient setup",
+      "instruction_address": "00ff5276",
+      "target_address": "00ff1f14",
+      "bytes": "e899ccffff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "CTX-03",
+      "statement": "OK handler calls sensitive-patient access helper",
+      "instruction_address": "00e82e08",
+      "target_address": "011d3630",
+      "bytes": "e823083500",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "CTX-04",
+      "statement": "OK handler calls death-date helper",
+      "instruction_address": "00e82e14",
+      "target_address": "011ce34c",
+      "bytes": "e833b53400",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "CTX-05",
+      "statement": "Commit helper calls patient setter",
+      "instruction_address": "00e830cb",
+      "target_address": "011d4918",
+      "bytes": "e848183500",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "CTX-06",
+      "statement": "Commit helper calls encounter clearing",
+      "instruction_address": "00e830d7",
+      "target_address": "011d4e80",
+      "bytes": "e8a41d3500",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "CTX-07",
+      "statement": "Commit helper calls change clearing",
+      "instruction_address": "00e830e3",
+      "target_address": "011d5ac8",
+      "bytes": "e8e0293500",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "CTX-08",
+      "statement": "Patient setter calls patient retrieval wrapper",
+      "instruction_address": "011d496c",
+      "target_address": "011cec4c",
+      "bytes": "e8dba2ffff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "RPC-01",
+      "statement": "Subset wrapper calls central CallVistA overload",
+      "instruction_address": "011cdedd",
+      "target_address": "009ada80",
+      "bytes": "e89efb7dff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "RPC-02",
+      "statement": "CallVistA overload creates temporary TStringList",
+      "instruction_address": "009ad78e",
+      "target_address": "004d81f4",
+      "bytes": "e861aab2ff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "RPC-03",
+      "statement": "CallVistA overload calls central overload",
+      "instruction_address": "009ad7b3",
+      "target_address": "009ada80",
+      "bytes": "e8c8020000",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "RPC-04",
+      "statement": "CallVistA overload frees temporary object",
+      "instruction_address": "009ad7d0",
+      "target_address": "004090bc",
+      "bytes": "e8e7b8a5ff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "NOTE-01",
+      "statement": "Note selection calls document text wrapper",
+      "instruction_address": "00e196f8",
+      "target_address": "00a0b870",
+      "bytes": "e87321bfff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "ORDER-01",
+      "statement": "Order double-click calls detail handler",
+      "instruction_address": "0117f5ee",
+      "target_address": "0117cc00",
+      "bytes": "e80dd6ffff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "LAB-01",
+      "statement": "Lab date selection calls interim wrapper",
+      "instruction_address": "00eaa438",
+      "target_address": "00c867c8",
+      "bytes": "e88bc3ddff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "LAB-02",
+      "statement": "Selected-test branch calls interim-selection wrapper",
+      "instruction_address": "00eaa533",
+      "target_address": "00c86c80",
+      "bytes": "e848c7ddff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "VITAL-01",
+      "statement": "Vitals action calls write-access helper",
+      "instruction_address": "00be2356",
+      "target_address": "01011c80",
+      "bytes": "e825f94200",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "VITAL-02",
+      "statement": "Vitals action calls external-integration wrapper",
+      "instruction_address": "00be23d5",
+      "target_address": "00ae6cb0",
+      "bytes": "e8d648f0ff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "VIEW-01",
+      "statement": "Common Cover Sheet show handler calls report viewer",
+      "instruction_address": "00bd4979",
+      "target_address": "01007fec",
+      "bytes": "e86e364300",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "MED-01",
+      "statement": "Medication population calls medication preprocessing",
+      "instruction_address": "00bd5f72",
+      "target_address": "00add94c",
+      "bytes": "e8d579f0ff",
+      "verification": "E8 rel32 decoded independently from uploaded bytes",
+      "status": "verified-static-edge",
+      "limits": [
+        "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+      ]
+    },
+    {
+      "id": "IDENTITY-01",
+      "statement": "File version is 1.33.214.5",
+      "data_address": "0155ba84",
+      "verification": "VS_FIXEDFILEINFO signature and file-version words decoded from resource bytes",
+      "status": "verified-static-data"
+    }
+  ],
+  "direct_call_validation": {
+    "direct_E8_destinations_verified": 204270,
+    "other_instruction_form": 39587
+  },
+  "review_evidence": [
+    "evidence/batch-0001/annotations.json",
+    "evidence/batch-0002/annotations.json",
+    "evidence/batch-0003/annotations.json"
+  ],
+  "uncertainties": [
+    {
+      "id": "U01",
+      "scope": "semantic coverage",
+      "detail": "40943 inventoried functions remain semantically unresolved; analyzed status for small functions is limited to documented machine-level scope.",
+      "evidence": "catalog/function-inventory.jsonl"
+    },
+    {
+      "id": "U02",
+      "scope": "indirect dispatch",
+      "detail": "38574 static call sites have no resolved call-reference target.",
+      "evidence": "catalog/unresolved-indirect-calls.jsonl"
+    },
+    {
+      "id": "U03",
+      "scope": "discovery",
+      "detail": "Function inventory exhausts current Ghidra function entries, not all possible executable code. Missed/false boundaries, inline data and callback/exception continuations remain possible.",
+      "evidence": "evidence/discovery-seeds.jsonl"
+    },
+    {
+      "id": "U04",
+      "scope": "server interfaces",
+      "detail": "RPC names and use sites do not recover parameter/response grammars, permissions, registrations, versions, endpoints or complete effects. Dynamic RPC bindings remain unresolved.",
+      "evidence": "catalog/rpc-literal-use-sites.jsonl"
+    },
+    {
+      "id": "U05",
+      "scope": "types and ABI",
+      "detail": "Class metadata prefixes and selected projections are recovered; complete instance fields, register ABI, hidden outputs, variant arrays and lifetimes remain unresolved.",
+      "evidence": "DATA-STRUCTURES.md"
+    },
+    {
+      "id": "U06",
+      "scope": "external components",
+      "detail": "Five supplied DLLs have dependency/export metadata, but their implementations and dynamic ABI contracts are unresolved.",
+      "evidence": "catalog/components.json"
+    },
+    {
+      "id": "U07",
+      "scope": "clinical write workflows",
+      "detail": "Selected signing/order/save/locking edges are verified; full state machines, policy, response parsing and error cleanup remain partial.",
+      "evidence": "REVIEW-NOTES.md"
+    },
+    {
+      "id": "U08",
+      "scope": "configuration and UI",
+      "detail": "Stored forms do not establish inherited/effective properties, reassigned handlers, runtime focus, site configuration or accessibility parity.",
+      "evidence": "evidence/static/form-bindings.jsonl"
+    },
+    {
+      "id": "U09",
+      "scope": "exception paths",
+      "detail": "Five verified finally-continuation repairs do not resolve all Delphi cleanup/control-flow ambiguities.",
+      "evidence": "evidence/function-boundary-changes.json"
+    },
+    {
+      "id": "U10",
+      "scope": "source and provenance",
+      "detail": "Input identity is hash pinned. Distribution authenticity and exact original Pascal/server source match are not independently established. No target execution occurred.",
+      "evidence": "evidence/static/summary.json"
+    }
+  ],
+  "next_batch": [
+    {
+      "address": "009ad030",
+      "name": "ORNet.SetParams",
+      "purpose": "Recover exact broker argument construction and overload contract"
+    },
+    {
+      "address": "00e19034",
+      "name": "fNotes.TfrmNotes.SaveEditedNote",
+      "purpose": "Recover note-save branches beneath SaveCurrentNote"
+    },
+    {
+      "address": "009916c8",
+      "name": "Wsockc.TXWBWinsock.NetStart",
+      "purpose": "Recover transport startup beneath NetworkConnect"
+    },
+    {
+      "address": "00996390",
+      "name": "RpcSLogin.StartProgSLogin",
+      "purpose": "Recover secure-connection program construction and launch boundary"
+    },
+    {
+      "address": "01192018",
+      "name": "rMisc.LoadDll",
+      "purpose": "Recover plugin search/loading and error behavior"
+    }
+  ],
+  "target_executed": false,
+  "external_systems_modified": false,
+  "reimplementation_phases": [
+    "Pin reproducible evidence",
+    "Finish semantic requirements",
+    "Define typed compatibility boundary",
+    "Implement evidence-backed components",
+    "Validate using meaningful oracles",
+    "Close or scope remaining uncertainties"
+  ]
+}

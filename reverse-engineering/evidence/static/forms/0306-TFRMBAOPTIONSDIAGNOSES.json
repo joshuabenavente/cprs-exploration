@@ -1,0 +1,642 @@
+{
+  "class": "TfrmBAOptionsDiagnoses",
+  "name": "frmBAOptionsDiagnoses",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 231,
+    "Top": 183,
+    "Caption": "Personal Diagnoses List",
+    "ClientHeight": 530,
+    "ClientWidth": 739,
+    "Constraints.MinHeight": 100,
+    "Constraints.MinWidth": 200,
+    "OnActivate": "FormActivate",
+    "OnCreate": "FormCreate",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 747,
+    "ExplicitHeight": 557,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 739,
+        "Height": 530,
+        "Align": "alClient",
+        "Constraints.MinHeight": 344,
+        "Constraints.MinWidth": 576,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "Panel2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 16,
+            "Top": 10,
+            "Width": 713,
+            "Height": 519,
+            "Caption": "Panel1",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TSplitter",
+              "name": "Splitter1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 458,
+                "Top": 26,
+                "Width": -3,
+                "Height": 463
+              },
+              "children": []
+            },
+            {
+              "class": "TSplitter",
+              "name": "Splitter2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 169,
+                "Top": 26,
+                "Width": 7,
+                "Height": 463
+              },
+              "children": []
+            },
+            {
+              "class": "TSplitter",
+              "name": "Splitter3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 457,
+                "Top": 26,
+                "Width": 1,
+                "Height": 463
+              },
+              "children": []
+            },
+            {
+              "class": "TSplitter",
+              "name": "Splitter5",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 455,
+                "Top": 26,
+                "Width": 2,
+                "Height": 463
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlBottom",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 489,
+                "Width": 711,
+                "Height": 29,
+                "Align": "alBottom",
+                "BevelOuter": "bvNone",
+                "Caption": " ",
+                "TabOrder": 0,
+                "DesignSize": [
+                  711,
+                  29
+                ]
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnOther",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 13,
+                    "Top": 3,
+                    "Width": 129,
+                    "Height": 23,
+                    "Anchors": [
+                      "akLeft",
+                      "akBottom"
+                    ],
+                    "Caption": "Other &Diagnoses",
+                    "Constraints.MinHeight": 23,
+                    "Constraints.MinWidth": 115,
+                    "TabOrder": 0,
+                    "OnClick": "btnOtherClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnOK",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 523,
+                    "Top": 3,
+                    "Width": 75,
+                    "Height": 23,
+                    "Anchors": [
+                      "akRight",
+                      "akBottom"
+                    ],
+                    "Caption": "&OK",
+                    "TabOrder": 1,
+                    "OnClick": "btnOKClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "Button1",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 632,
+                    "Top": 4,
+                    "Width": 75,
+                    "Height": 21,
+                    "Anchors": [
+                      "akRight",
+                      "akBottom"
+                    ],
+                    "Caption": "&Cancel",
+                    "TabOrder": 2,
+                    "OnClick": "Button1Click"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 26,
+                "Width": 168,
+                "Height": 463,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 1
+              },
+              "children": [
+                {
+                  "class": "TORListBox",
+                  "name": "lbSections",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 17,
+                    "Width": 161,
+                    "Height": 446,
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [],
+                    "ItemHeight": 13,
+                    "ParentFont": false,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 0,
+                    "OnClick": "lbSectionsClick",
+                    "OnEnter": "lbSectionsEnter",
+                    "ItemTipColor": "clWindow",
+                    "LongList": false,
+                    "Pieces": "3"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "THeaderControl",
+                  "name": "hdrCntlDxSections",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 168,
+                    "Height": 17,
+                    "Sections": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "Alignment": "taCenter",
+                          "ImageIndex": -1,
+                          "Text": "Diagnoses Sections",
+                          "Width": 50
+                        }
+                      }
+                    ]
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 176,
+                "Top": 26,
+                "Width": 201,
+                "Height": 463,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 2
+              },
+              "children": [
+                {
+                  "class": "TORListBox",
+                  "name": "lbDiagnosis",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 17,
+                    "Width": 201,
+                    "Height": 446,
+                    "Align": "alClient",
+                    "ItemHeight": 13,
+                    "MultiSelect": true,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "Sorted": true,
+                    "TabOrder": 0,
+                    "OnClick": "lbDiagnosisChange",
+                    "OnEnter": "lbDiagnosisEnter",
+                    "ItemTipColor": "clWindow",
+                    "LongList": false,
+                    "Pieces": "1,2,3",
+                    "OnChange": "lbDiagnosisChange"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "THeaderControl",
+                  "name": "hdrCntlDxAdd",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 201,
+                    "Height": 17,
+                    "Sections": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "Alignment": "taCenter",
+                          "ImageIndex": -1,
+                          "Text": "Diagnoses to add",
+                          "Width": 50
+                        }
+                      }
+                    ]
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel5",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 455,
+                "Top": 26,
+                "Width": 257,
+                "Height": 463,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel5",
+                "TabOrder": 3
+              },
+              "children": [
+                {
+                  "class": "TORListBox",
+                  "name": "lbPersonalDx",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 17,
+                    "Width": 257,
+                    "Height": 446,
+                    "Align": "alClient",
+                    "Anchors": [
+                      "akRight"
+                    ],
+                    "Color": "clInfoBk",
+                    "ItemHeight": 13,
+                    "MultiSelect": true,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "Sorted": true,
+                    "TabOrder": 0,
+                    "OnClick": "lbPersonalDxClick",
+                    "ItemTipColor": "clWindow",
+                    "LongList": false,
+                    "Pieces": "2,1,3"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "THeaderControl",
+                  "name": "hdrCntlDx",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 0,
+                    "Top": 0,
+                    "Width": 257,
+                    "Height": 17,
+                    "Sections": [
+                      {
+                        "index": null,
+                        "properties": {
+                          "Alignment": "taCenter",
+                          "ImageIndex": -1,
+                          "MinWidth": 150,
+                          "Text": "Diagnoses Codes",
+                          "Width": 150
+                        }
+                      }
+                    ],
+                    "OnSectionClick": "hdrCntlDxSectionClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlTop",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 711,
+                "Height": 25,
+                "Align": "alTop",
+                "BevelOuter": "bvNone",
+                "TabOrder": 4
+              },
+              "children": [
+                {
+                  "class": "TStaticText",
+                  "name": "StaticText3",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 472,
+                    "Top": 8,
+                    "Width": 140,
+                    "Height": 17,
+                    "Caption": "Personal Diagnoses List",
+                    "Font.Charset": "DEFAULT_CHARSET",
+                    "Font.Color": "clWindowText",
+                    "Font.Height": -11,
+                    "Font.Name": "MS Sans Serif",
+                    "Font.Style": [
+                      "fsBold"
+                    ],
+                    "ParentFont": false,
+                    "TabOrder": 0,
+                    "TabStop": true
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel7",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 377,
+                "Top": 26,
+                "Width": 78,
+                "Height": 463,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "TabOrder": 5,
+                "DesignSize": [
+                  78,
+                  463
+                ]
+              },
+              "children": [
+                {
+                  "class": "TBitBtn",
+                  "name": "btnAdd",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 1,
+                    "Top": 88,
+                    "Width": 75,
+                    "Height": 25,
+                    "Anchors": [
+                      "akLeft",
+                      "akTop",
+                      "akRight"
+                    ],
+                    "Caption": "&Add",
+                    "Constraints.MinHeight": 25,
+                    "Constraints.MinWidth": 70,
+                    "Enabled": false,
+                    "TabOrder": 0,
+                    "OnClick": "btnAddClick",
+                    "NumGlyphs": 2
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TBitBtn",
+                  "name": "btnDelete",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 2,
+                    "Top": 136,
+                    "Width": 75,
+                    "Height": 25,
+                    "Caption": "&Remove",
+                    "Constraints.MinHeight": 25,
+                    "Constraints.MinWidth": 70,
+                    "Enabled": false,
+                    "TabOrder": 1,
+                    "OnClick": "btnDeleteClick",
+                    "NumGlyphs": 2
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOther",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Button1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lbSections",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = hdrCntlDxSections",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lbDiagnosis",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = hdrCntlDxAdd",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel5",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lbPersonalDx",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = hdrCntlDx",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = StaticText3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel7",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAdd",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnDelete",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmBAOptionsDiagnoses",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,1207 @@
+{
+  "class": "TfrmOptionsPatientSelection",
+  "name": "frmOptionsPatientSelection",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 345,
+    "Top": 133,
+    "HelpContext": 9060,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Patient Selection Defaults",
+    "ClientHeight": 501,
+    "ClientWidth": 474,
+    "HelpFile": "CPRSWT.HLP",
+    "Position": "poScreenCenter",
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "ExplicitWidth": 490,
+    "ExplicitHeight": 540,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblClinicDays",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 183,
+        "Top": 237,
+        "Width": 101,
+        "Height": 13,
+        "Caption": "Clinic for day of week"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblMonday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 183,
+        "Top": 268,
+        "Width": 41,
+        "Height": 13,
+        "Caption": "Monday:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblTuesday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 183,
+        "Top": 295,
+        "Width": 44,
+        "Height": 13,
+        "Caption": "Tuesday:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblWednesday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 183,
+        "Top": 322,
+        "Width": 60,
+        "Height": 13,
+        "Caption": "Wednesday:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblThursday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 4,
+      "properties": {
+        "Left": 183,
+        "Top": 349,
+        "Width": 47,
+        "Height": 13,
+        "Caption": "Thursday:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblFriday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 5,
+      "properties": {
+        "Left": 183,
+        "Top": 376,
+        "Width": 31,
+        "Height": 13,
+        "Caption": "Friday:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblSaturday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 6,
+      "properties": {
+        "Left": 183,
+        "Top": 403,
+        "Width": 45,
+        "Height": 13,
+        "Caption": "Saturday:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblSunday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 7,
+      "properties": {
+        "Left": 183,
+        "Top": 430,
+        "Width": 39,
+        "Height": 13,
+        "Caption": "Sunday:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblVisitStart",
+      "inherited": false,
+      "inline": false,
+      "child_position": 8,
+      "properties": {
+        "Left": 20,
+        "Top": 402,
+        "Width": 25,
+        "Height": 13,
+        "Alignment": "taRightJustify",
+        "Caption": "Start:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblVisitStop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 9,
+      "properties": {
+        "Left": 20,
+        "Top": 429,
+        "Width": 25,
+        "Height": 13,
+        "Alignment": "taRightJustify",
+        "Caption": "Stop:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblWard",
+      "inherited": false,
+      "inline": false,
+      "child_position": 10,
+      "properties": {
+        "Left": 183,
+        "Top": 186,
+        "Width": 29,
+        "Height": 13,
+        "Caption": "Ward:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblTeam",
+      "inherited": false,
+      "inline": false,
+      "child_position": 11,
+      "properties": {
+        "Left": 183,
+        "Top": 157,
+        "Width": 51,
+        "Height": 13,
+        "Caption": "Team/List:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblTreating",
+      "inherited": false,
+      "inline": false,
+      "child_position": 12,
+      "properties": {
+        "Left": 183,
+        "Top": 130,
+        "Width": 88,
+        "Height": 13,
+        "Caption": "Treating Specialty:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblProvider",
+      "inherited": false,
+      "inline": false,
+      "child_position": 13,
+      "properties": {
+        "Left": 183,
+        "Top": 79,
+        "Width": 79,
+        "Height": 13,
+        "Caption": "Primary Provider:"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblPcmm",
+      "inherited": false,
+      "inline": false,
+      "child_position": 14,
+      "properties": {
+        "Left": 183,
+        "Top": 211,
+        "Width": 65,
+        "Height": 13,
+        "Caption": "PCMM Team:"
+      },
+      "children": []
+    },
+    {
+      "class": "TBevel",
+      "name": "Bevel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 15,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 60,
+        "Width": 468,
+        "Height": 8,
+        "Align": "alTop",
+        "Shape": "bsTopLine",
+        "ExplicitTop": 63,
+        "ExplicitWidth": 449
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "lblVisitDateRange",
+      "inherited": false,
+      "inline": false,
+      "child_position": 16,
+      "properties": {
+        "Left": 16,
+        "Top": 354,
+        "Width": 153,
+        "Height": 44,
+        "TabStop": false,
+        "BorderStyle": "bsNone",
+        "Color": "clBtnFace",
+        "Lines.Strings": [
+          "Display patients that have ",
+          "clinic appointments within ",
+          "this date range."
+        ],
+        "ReadOnly": true,
+        "TabOrder": 2
+      },
+      "children": []
+    },
+    {
+      "class": "TMemo",
+      "name": "lblInfo",
+      "inherited": false,
+      "inline": false,
+      "child_position": 17,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 468,
+        "Height": 51,
+        "TabStop": false,
+        "Align": "alTop",
+        "Alignment": "taCenter",
+        "BorderStyle": "bsNone",
+        "Color": "clBtnFace",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clWindowText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "Lines.Strings": [
+          "The values on the right will be defaults for selecting patients ",
+          "depending on the list source selected. ",
+          "Combination uses the criteria defined using Source Combinations."
+        ],
+        "ParentFont": false,
+        "ReadOnly": true,
+        "TabOrder": 20
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 18,
+      "properties": {
+        "Left": 0,
+        "Top": 469,
+        "Width": 474,
+        "Height": 32,
+        "HelpContext": 9060,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ParentColor": true,
+        "TabOrder": 17
+      },
+      "children": [
+        {
+          "class": "TBevel",
+          "name": "bvlBottom",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 474,
+            "Height": 2,
+            "Align": "alTop",
+            "ExplicitWidth": 414
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 307,
+            "Top": 5,
+            "Width": 75,
+            "Height": 24,
+            "HelpContext": 9996,
+            "Align": "alRight",
+            "Caption": "OK",
+            "ModalResult": 1,
+            "TabOrder": 0,
+            "OnClick": "btnOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 388,
+            "Top": 5,
+            "Width": 75,
+            "Height": 24,
+            "HelpContext": 9997,
+            "Margins.Right": 11,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TORCheckComboBox",
+      "name": "cboProvider",
+      "inherited": false,
+      "inline": false,
+      "child_position": 19,
+      "properties": {
+        "Left": 307,
+        "Top": 76,
+        "Width": 156,
+        "Height": 40,
+        "HelpContext": 9063,
+        "Style": "orcsDropDown",
+        "AutoSelect": false,
+        "Caption": "Primary Provider",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 2,
+        "MaxLength": 0,
+        "Pieces": "2,3",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 5,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "OnNeedData": "cboProviderNeedData",
+        "CharsNeedMatch": 1,
+        "MainCheckBoxCaption": "Include Non-VA Providers",
+        "MainCheckBoxVisible": true,
+        "MainCheckBoxAlignment": "calBottom",
+        "OnMainCheckboxClick": "cboProviderMainCheckboxClick",
+        "DropdownStyle": "ddsControl"
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboTreating",
+      "inherited": false,
+      "inline": false,
+      "child_position": 20,
+      "properties": {
+        "Left": 307,
+        "Top": 127,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9064,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Treating Specialty",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 6,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboTeam",
+      "inherited": false,
+      "inline": false,
+      "child_position": 21,
+      "properties": {
+        "Left": 307,
+        "Top": 154,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9065,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Team/List",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 7,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboWard",
+      "inherited": false,
+      "inline": false,
+      "child_position": 22,
+      "properties": {
+        "Left": 307,
+        "Top": 181,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9066,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Ward",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 8,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboMonday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 23,
+      "properties": {
+        "Left": 307,
+        "Top": 264,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9067,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Monday",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 10,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "OnNeedData": "cboMondayNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboTuesday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 24,
+      "properties": {
+        "Left": 307,
+        "Top": 291,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9067,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Tuesday",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 11,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "OnNeedData": "cboMondayNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboWednesday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 25,
+      "properties": {
+        "Left": 307,
+        "Top": 318,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9067,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Wednesday",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 12,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "OnNeedData": "cboMondayNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboThursday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 26,
+      "properties": {
+        "Left": 307,
+        "Top": 345,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9067,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Thursday",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 13,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "OnNeedData": "cboMondayNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboFriday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 27,
+      "properties": {
+        "Left": 307,
+        "Top": 372,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9067,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Friday",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 14,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "OnNeedData": "cboMondayNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboSaturday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 28,
+      "properties": {
+        "Left": 307,
+        "Top": 399,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9067,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Saturday",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 15,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "OnNeedData": "cboMondayNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboSunday",
+      "inherited": false,
+      "inline": false,
+      "child_position": 29,
+      "properties": {
+        "Left": 307,
+        "Top": 426,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9067,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "Sunday",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": true,
+        "LongList": true,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 16,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "OnNeedData": "cboMondayNeedData",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionEdit",
+      "name": "txtVisitStart",
+      "inherited": false,
+      "inline": false,
+      "child_position": 30,
+      "properties": {
+        "Tag": -180,
+        "Left": 49,
+        "Top": 399,
+        "Width": 79,
+        "Height": 21,
+        "HelpContext": 9068,
+        "TabOrder": 3,
+        "Text": "0",
+        "OnExit": "txtVisitStartExit",
+        "OnKeyPress": "txtVisitStartKeyPress",
+        "OnKeyUp": "txtVisitStartKeyUp",
+        "Caption": "Start"
+      },
+      "children": []
+    },
+    {
+      "class": "TCaptionEdit",
+      "name": "txtVisitStop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 31,
+      "properties": {
+        "Tag": 30,
+        "Left": 48,
+        "Top": 426,
+        "Width": 79,
+        "Height": 21,
+        "HelpContext": 9069,
+        "TabOrder": 4,
+        "Text": "0",
+        "OnExit": "txtVisitStopExit",
+        "OnKeyPress": "txtVisitStopKeyPress",
+        "OnKeyUp": "txtVisitStopKeyUp",
+        "Caption": "Stop"
+      },
+      "children": []
+    },
+    {
+      "class": "TUpDown",
+      "name": "spnVisitStart",
+      "inherited": false,
+      "inline": false,
+      "child_position": 32,
+      "properties": {
+        "Tag": -180,
+        "Left": 128,
+        "Top": 399,
+        "Width": 16,
+        "Height": 21,
+        "HelpContext": 9068,
+        "Associate": "txtVisitStart",
+        "Min": -999,
+        "Max": 999,
+        "TabOrder": 18,
+        "Thousands": false,
+        "OnClick": "spnVisitStartClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUpDown",
+      "name": "spnVisitStop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 33,
+      "properties": {
+        "Tag": 30,
+        "Left": 127,
+        "Top": 426,
+        "Width": 16,
+        "Height": 21,
+        "HelpContext": 9069,
+        "Associate": "txtVisitStop",
+        "Min": -999,
+        "Max": 999,
+        "TabOrder": 19,
+        "Thousands": false,
+        "OnClick": "spnVisitStopClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TRadioGroup",
+      "name": "radListSource",
+      "inherited": false,
+      "inline": false,
+      "child_position": 34,
+      "properties": {
+        "Left": 16,
+        "Top": 76,
+        "Width": 145,
+        "Height": 151,
+        "HelpContext": 9061,
+        "Caption": "List Source ",
+        "ItemIndex": 0,
+        "Items.Strings": [
+          "Primary &Provider",
+          "Treating &Specialty",
+          "Team/&List",
+          "&Ward",
+          "&Clinic",
+          "PC&MM Team",
+          "C&ombination"
+        ],
+        "TabOrder": 0,
+        "OnClick": "radListSourceClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TGroupBox",
+      "name": "grpSortOrder",
+      "inherited": false,
+      "inline": false,
+      "child_position": 35,
+      "properties": {
+        "Left": 16,
+        "Top": 237,
+        "Width": 145,
+        "Height": 113,
+        "HelpContext": 9062,
+        "Caption": "Sort Order ",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TRadioButton",
+          "name": "radAlphabetical",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 15,
+            "Width": 113,
+            "Height": 17,
+            "HelpContext": 9062,
+            "Caption": "&Alphabetical",
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TRadioButton",
+          "name": "radRoomBed",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 34,
+            "Width": 113,
+            "Height": 17,
+            "HelpContext": 9062,
+            "Caption": "&Room/Bed",
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TRadioButton",
+          "name": "radAppointmentDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 53,
+            "Width": 113,
+            "Height": 17,
+            "HelpContext": 9062,
+            "Caption": "Appointment &Date",
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TRadioButton",
+          "name": "radTerminalDigit",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 72,
+            "Width": 113,
+            "Height": 17,
+            "HelpContext": 9062,
+            "Caption": "&Terminal Digit",
+            "TabOrder": 3
+          },
+          "children": []
+        },
+        {
+          "class": "TRadioButton",
+          "name": "radSource",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 91,
+            "Width": 113,
+            "Height": 17,
+            "HelpContext": 9062,
+            "Caption": "So&urce",
+            "TabOrder": 4
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TORComboBox",
+      "name": "cboPCMM",
+      "inherited": false,
+      "inline": false,
+      "child_position": 36,
+      "properties": {
+        "Left": 307,
+        "Top": 208,
+        "Width": 156,
+        "Height": 21,
+        "HelpContext": 9065,
+        "Style": "orcsDropDown",
+        "AutoSelect": true,
+        "Caption": "PCMM Team",
+        "Color": "clWindow",
+        "DropDownCount": 8,
+        "ItemHeight": 13,
+        "ItemTipColor": "clWindow",
+        "ItemTipEnable": true,
+        "ListItemsOnly": false,
+        "LongList": false,
+        "LookupPiece": 0,
+        "MaxLength": 0,
+        "Pieces": "2",
+        "Sorted": true,
+        "SynonymChars": "<>",
+        "TabOrder": 9,
+        "Text": "",
+        "FlatCheckBoxes": false,
+        "OnExit": "cboProviderExit",
+        "OnKeyUp": "cboProviderKeyUp",
+        "CharsNeedMatch": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 8,
+        "Data": [
+          [
+            "Component = lblVisitDateRange",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboProvider",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboTreating",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboTeam",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboWard",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboMonday",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboTuesday",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboWednesday",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboThursday",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboFriday",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSaturday",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSunday",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtVisitStart",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtVisitStop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = spnVisitStart",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = spnVisitStop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radListSource",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grpSortOrder",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radAlphabetical",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radRoomBed",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radAppointmentDate",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radTerminalDigit",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radSource",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOptionsPatientSelection",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboPCMM",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

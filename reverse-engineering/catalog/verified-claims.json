@@ -1,0 +1,273 @@
+[
+  {
+    "id": "START-01",
+    "statement": "Entry calls Delphi initialization helper",
+    "instruction_address": "01224048",
+    "target_address": "00413340",
+    "bytes": "e8f3f21eff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "START-02",
+    "statement": "Entry calls a boolean-tested startup helper",
+    "instruction_address": "01224061",
+    "target_address": "009b8440",
+    "bytes": "e8da4379ff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "CTX-01",
+    "statement": "New-patient menu calls patient selector",
+    "instruction_address": "00ff50d3",
+    "target_address": "00e81038",
+    "bytes": "e860bfe8ff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "CTX-02",
+    "statement": "New-patient menu calls chart patient setup",
+    "instruction_address": "00ff5276",
+    "target_address": "00ff1f14",
+    "bytes": "e899ccffff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "CTX-03",
+    "statement": "OK handler calls sensitive-patient access helper",
+    "instruction_address": "00e82e08",
+    "target_address": "011d3630",
+    "bytes": "e823083500",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "CTX-04",
+    "statement": "OK handler calls death-date helper",
+    "instruction_address": "00e82e14",
+    "target_address": "011ce34c",
+    "bytes": "e833b53400",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "CTX-05",
+    "statement": "Commit helper calls patient setter",
+    "instruction_address": "00e830cb",
+    "target_address": "011d4918",
+    "bytes": "e848183500",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "CTX-06",
+    "statement": "Commit helper calls encounter clearing",
+    "instruction_address": "00e830d7",
+    "target_address": "011d4e80",
+    "bytes": "e8a41d3500",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "CTX-07",
+    "statement": "Commit helper calls change clearing",
+    "instruction_address": "00e830e3",
+    "target_address": "011d5ac8",
+    "bytes": "e8e0293500",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "CTX-08",
+    "statement": "Patient setter calls patient retrieval wrapper",
+    "instruction_address": "011d496c",
+    "target_address": "011cec4c",
+    "bytes": "e8dba2ffff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "RPC-01",
+    "statement": "Subset wrapper calls central CallVistA overload",
+    "instruction_address": "011cdedd",
+    "target_address": "009ada80",
+    "bytes": "e89efb7dff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "RPC-02",
+    "statement": "CallVistA overload creates temporary TStringList",
+    "instruction_address": "009ad78e",
+    "target_address": "004d81f4",
+    "bytes": "e861aab2ff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "RPC-03",
+    "statement": "CallVistA overload calls central overload",
+    "instruction_address": "009ad7b3",
+    "target_address": "009ada80",
+    "bytes": "e8c8020000",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "RPC-04",
+    "statement": "CallVistA overload frees temporary object",
+    "instruction_address": "009ad7d0",
+    "target_address": "004090bc",
+    "bytes": "e8e7b8a5ff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "NOTE-01",
+    "statement": "Note selection calls document text wrapper",
+    "instruction_address": "00e196f8",
+    "target_address": "00a0b870",
+    "bytes": "e87321bfff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "ORDER-01",
+    "statement": "Order double-click calls detail handler",
+    "instruction_address": "0117f5ee",
+    "target_address": "0117cc00",
+    "bytes": "e80dd6ffff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "LAB-01",
+    "statement": "Lab date selection calls interim wrapper",
+    "instruction_address": "00eaa438",
+    "target_address": "00c867c8",
+    "bytes": "e88bc3ddff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "LAB-02",
+    "statement": "Selected-test branch calls interim-selection wrapper",
+    "instruction_address": "00eaa533",
+    "target_address": "00c86c80",
+    "bytes": "e848c7ddff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "VITAL-01",
+    "statement": "Vitals action calls write-access helper",
+    "instruction_address": "00be2356",
+    "target_address": "01011c80",
+    "bytes": "e825f94200",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "VITAL-02",
+    "statement": "Vitals action calls external-integration wrapper",
+    "instruction_address": "00be23d5",
+    "target_address": "00ae6cb0",
+    "bytes": "e8d648f0ff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "VIEW-01",
+    "statement": "Common Cover Sheet show handler calls report viewer",
+    "instruction_address": "00bd4979",
+    "target_address": "01007fec",
+    "bytes": "e86e364300",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "MED-01",
+    "statement": "Medication population calls medication preprocessing",
+    "instruction_address": "00bd5f72",
+    "target_address": "00add94c",
+    "bytes": "e8d579f0ff",
+    "verification": "E8 rel32 decoded independently from uploaded bytes",
+    "status": "verified-static-edge",
+    "limits": [
+      "Does not prove runtime reachability, branch predicates, argument meanings or downstream effects"
+    ]
+  },
+  {
+    "id": "IDENTITY-01",
+    "statement": "File version is 1.33.214.5",
+    "data_address": "0155ba84",
+    "verification": "VS_FIXEDFILEINFO signature and file-version words decoded from resource bytes",
+    "status": "verified-static-data"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "class": "TfraCoverSheetDisplayPanel_CPRS_WH",
+  "name": "fraCoverSheetDisplayPanel_CPRS_WH",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {},
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {},
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlHeader",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {},
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblTitle",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 443,
+                "Height": 19
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "class": "TfrmTemplateImport",
+  "name": "frmTemplateImport",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 273,
+    "Top": 195,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Importing Word Document",
+    "ClientHeight": 132,
+    "ClientWidth": 288,
+    "FormStyle": "fsStayOnTop",
+    "Position": "poScreenCenter",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TGauge",
+      "name": "gaugeImport",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 8,
+        "Top": 82,
+        "Width": 272,
+        "Height": 21,
+        "BackColor": "clHighlightText",
+        "ForeColor": "clHighlight",
+        "Font.Charset": "DEFAULT_CHARSET",
+        "Font.Color": "clCaptionText",
+        "Font.Height": -11,
+        "Font.Name": "MS Sans Serif",
+        "Font.Style": [],
+        "ParentFont": false,
+        "Progress": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TStaticText",
+      "name": "lblImporting",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 8,
+        "Top": 4,
+        "Width": 272,
+        "Height": 13,
+        "AutoSize": false,
+        "Caption": "Importing ",
+        "ParentShowHint": false,
+        "ShowHint": true,
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TAnimate",
+      "name": "animImport",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 8,
+        "Top": 20,
+        "Width": 272,
+        "Height": 60,
+        "Active": true,
+        "CommonAVI": "aviCopyFile",
+        "StopFrame": 20
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "btnCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 106,
+        "Top": 106,
+        "Width": 75,
+        "Height": 25,
+        "Cancel": true,
+        "Caption": "&Cancel",
+        "Default": true,
+        "TabOrder": 1,
+        "OnClick": "btnCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lblImporting",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = animImport",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmTemplateImport",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

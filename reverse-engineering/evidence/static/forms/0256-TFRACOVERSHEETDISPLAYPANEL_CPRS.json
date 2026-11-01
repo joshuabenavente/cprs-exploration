@@ -1,0 +1,115 @@
+{
+  "class": "TfraCoverSheetDisplayPanel_CPRS",
+  "name": "fraCoverSheetDisplayPanel_CPRS",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {},
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {},
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlHeader",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {},
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblTitle",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 443,
+                "Height": 19
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlWorkspace",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {},
+          "children": [
+            {
+              "class": "TListView",
+              "name": "lvData",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 2,
+                "Top": 2,
+                "Width": 469,
+                "Height": 350,
+                "Margins.Left": 2,
+                "Margins.Top": 2,
+                "Margins.Right": 2,
+                "Margins.Bottom": 2,
+                "Align": "alClient",
+                "BorderStyle": "bsNone",
+                "Columns": [],
+                "ColumnClick": false,
+                "HotTrack": true,
+                "HotTrackStyles": [
+                  "htHandPoint",
+                  "htUnderlineHot"
+                ],
+                "ReadOnly": true,
+                "RowSelect": true,
+                "TabOrder": 0,
+                "ViewStyle": "vsReport",
+                "OnDeletion": "lvDataDeletion",
+                "OnEnter": "lvDataEnter",
+                "OnExit": "lvDataExit",
+                "OnKeyDown": "lvDataKeyDown",
+                "OnMouseDown": "lvDataMouseDown",
+                "OnSelectItem": "lvDataSelectItem"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "pmn",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 120
+      },
+      "children": []
+    },
+    {
+      "class": "TTimer",
+      "name": "tmr",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Enabled": false,
+        "OnTimer": "tmrTimer",
+        "Left": 72,
+        "Top": 56
+      },
+      "children": []
+    }
+  ]
+}

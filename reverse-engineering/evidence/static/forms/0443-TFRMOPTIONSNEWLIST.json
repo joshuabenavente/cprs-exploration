@@ -1,0 +1,230 @@
+{
+  "class": "TfrmOptionsNewList",
+  "name": "frmOptionsNewList",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 623,
+    "Top": 446,
+    "HelpContext": 9085,
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "New Personal List",
+    "ClientHeight": 152,
+    "ClientWidth": 314,
+    "HelpFile": "CPRSWT.HLP",
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitHeight": 180,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 120,
+        "Width": 314,
+        "Height": 32,
+        "HelpContext": 9085,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "ParentColor": true,
+        "TabOrder": 0,
+        "ExplicitTop": 145
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 155,
+            "Top": 3,
+            "Width": 75,
+            "Height": 26,
+            "HelpContext": 9996,
+            "Align": "alRight",
+            "Caption": "OK",
+            "Default": true,
+            "Enabled": false,
+            "TabOrder": 0,
+            "OnClick": "btnOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 236,
+            "Top": 3,
+            "Width": 75,
+            "Height": 26,
+            "HelpContext": 9997,
+            "Align": "alRight",
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 314,
+        "Height": 120,
+        "Align": "alClient",
+        "ShowCaption": false,
+        "TabOrder": 1,
+        "ExplicitLeft": 72,
+        "ExplicitTop": 80,
+        "ExplicitWidth": 185,
+        "ExplicitHeight": 41
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblEnter",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 4,
+            "Width": 306,
+            "Height": 16,
+            "Align": "alTop",
+            "Caption": "Enter the name of a new personal list",
+            "ExplicitLeft": 3,
+            "ExplicitTop": 3,
+            "ExplicitWidth": 216
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "txtNewList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 26,
+            "Width": 306,
+            "Height": 24,
+            "HelpContext": 9086,
+            "Align": "alTop",
+            "MaxLength": 30,
+            "TabOrder": 0,
+            "OnChange": "txtNewListChange",
+            "OnKeyPress": "txtNewListKeyPress",
+            "Caption": "Enter the name of a new personal list",
+            "ExplicitLeft": 3,
+            "ExplicitTop": 3,
+            "ExplicitWidth": 308
+          },
+          "children": []
+        },
+        {
+          "class": "TRadioGroup",
+          "name": "grpVisibility",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 56,
+            "Width": 306,
+            "Height": 60,
+            "Align": "alClient",
+            "Caption": "Who should be able to see and use this list?",
+            "Columns": 2,
+            "ItemIndex": 1,
+            "Items.Strings": [
+              "&Myself only",
+              "&All CPRS users"
+            ],
+            "TabOrder": 1,
+            "ExplicitLeft": 3,
+            "ExplicitTop": 25,
+            "ExplicitWidth": 308,
+            "ExplicitHeight": 52
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 232,
+        "Top": 8,
+        "Data": [
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtNewList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = grpVisibility",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmOptionsNewList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

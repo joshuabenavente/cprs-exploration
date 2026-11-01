@@ -1,0 +1,62 @@
+[
+  {
+    "id": "U01",
+    "scope": "semantic coverage",
+    "detail": "40943 inventoried functions remain semantically unresolved; analyzed status for small functions is limited to documented machine-level scope.",
+    "evidence": "catalog/function-inventory.jsonl"
+  },
+  {
+    "id": "U02",
+    "scope": "indirect dispatch",
+    "detail": "38574 static call sites have no resolved call-reference target.",
+    "evidence": "catalog/unresolved-indirect-calls.jsonl"
+  },
+  {
+    "id": "U03",
+    "scope": "discovery",
+    "detail": "Function inventory exhausts current Ghidra function entries, not all possible executable code. Missed/false boundaries, inline data and callback/exception continuations remain possible.",
+    "evidence": "evidence/discovery-seeds.jsonl"
+  },
+  {
+    "id": "U04",
+    "scope": "server interfaces",
+    "detail": "RPC names and use sites do not recover parameter/response grammars, permissions, registrations, versions, endpoints or complete effects. Dynamic RPC bindings remain unresolved.",
+    "evidence": "catalog/rpc-literal-use-sites.jsonl"
+  },
+  {
+    "id": "U05",
+    "scope": "types and ABI",
+    "detail": "Class metadata prefixes and selected projections are recovered; complete instance fields, register ABI, hidden outputs, variant arrays and lifetimes remain unresolved.",
+    "evidence": "DATA-STRUCTURES.md"
+  },
+  {
+    "id": "U06",
+    "scope": "external components",
+    "detail": "Five supplied DLLs have dependency/export metadata, but their implementations and dynamic ABI contracts are unresolved.",
+    "evidence": "catalog/components.json"
+  },
+  {
+    "id": "U07",
+    "scope": "clinical write workflows",
+    "detail": "Selected signing/order/save/locking edges are verified; full state machines, policy, response parsing and error cleanup remain partial.",
+    "evidence": "REVIEW-NOTES.md"
+  },
+  {
+    "id": "U08",
+    "scope": "configuration and UI",
+    "detail": "Stored forms do not establish inherited/effective properties, reassigned handlers, runtime focus, site configuration or accessibility parity.",
+    "evidence": "evidence/static/form-bindings.jsonl"
+  },
+  {
+    "id": "U09",
+    "scope": "exception paths",
+    "detail": "Five verified finally-continuation repairs do not resolve all Delphi cleanup/control-flow ambiguities.",
+    "evidence": "evidence/function-boundary-changes.json"
+  },
+  {
+    "id": "U10",
+    "scope": "source and provenance",
+    "detail": "Input identity is hash pinned. Distribution authenticity and exact original Pascal/server source match are not independently established. No target execution occurred.",
+    "evidence": "evidence/static/summary.json"
+  }
+]

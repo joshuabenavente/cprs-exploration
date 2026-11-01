@@ -1,0 +1,2718 @@
+[
+  {
+    "function": "rReports.LoadReportText",
+    "address": "00c03f50",
+    "status": "decompiled",
+    "file": "rReports.LoadReportText_00c03f50.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c35c",
+        "map_names": [
+          "System.@UStrCopy"
+        ]
+      },
+      {
+        "address": "009b1bc4",
+        "map_names": [
+          "ORFn.CharAt"
+        ]
+      },
+      {
+        "address": "009b2f6c",
+        "map_names": [
+          "ORFn.Piece"
+        ]
+      },
+      {
+        "address": "009b3114",
+        "map_names": [
+          "ORFn.SetPiece"
+        ]
+      },
+      {
+        "address": "011ca88c",
+        "map_names": [
+          "rCore.StrToFMDateTime"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00c04254",
+        "file_offset": 8402516,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "~"
+      },
+      {
+        "address": "00c04264",
+        "file_offset": 8402532,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 52,
+        "text": "RPC is missing from report definition (file 101.24)."
+      },
+      {
+        "address": "00c042dc",
+        "file_offset": 8402652,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 33,
+        "text": "Please contact Technical Support."
+      }
+    ]
+  },
+  {
+    "function": "rLabs.Interim",
+    "address": "00c867c8",
+    "status": "decompiled",
+    "file": "rLabs.Interim_00c867c8.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00c86884",
+        "file_offset": 8936580,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 52,
+        "text": "RPC is missing from report definition (file 101.24)."
+      },
+      {
+        "address": "00c868fc",
+        "file_offset": 8936700,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 33,
+        "text": "Please contact Technical Support."
+      }
+    ]
+  },
+  {
+    "function": "rLabs.setInterimSelect",
+    "address": "00c86c80",
+    "status": "decompiled",
+    "file": "rLabs.setInterimSelect_00c86c80.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": [
+      {
+        "address": "00c86cf0",
+        "file_offset": 8937712,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 15,
+        "text": "ORWLRR INTERIMS"
+      }
+    ]
+  },
+  {
+    "function": "rLabs.GetNewestOldest",
+    "address": "00c87324",
+    "status": "decompiled",
+    "file": "rLabs.GetNewestOldest_00c87324.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b3c4",
+        "map_names": [
+          "System.@UStrAsg"
+        ]
+      },
+      {
+        "address": "009b2f6c",
+        "map_names": [
+          "ORFn.Piece"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00c873e4",
+        "file_offset": 8939492,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 13,
+        "text": "ORWLRR NEWOLD"
+      }
+    ]
+  },
+  {
+    "function": "fLabs.TfrmLabs.ClearPtData",
+    "address": "00ea4440",
+    "status": "decompiled",
+    "file": "fLabs.TfrmLabs.ClearPtData_00ea4440.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "00669150",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomTabControl.GetTabs"
+        ]
+      },
+      {
+        "address": "0068263c",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.SetSmallImages"
+        ]
+      },
+      {
+        "address": "006b860c",
+        "map_names": [
+          "Vcl.ExtCtrls.TTimer.SetEnabled"
+        ]
+      },
+      {
+        "address": "00768fac",
+        "map_names": [
+          "Vcl.Grids.TCustomGrid.SetColCount"
+        ]
+      },
+      {
+        "address": "00769474",
+        "map_names": [
+          "Vcl.Grids.TCustomGrid.SetRowCount"
+        ]
+      },
+      {
+        "address": "0076d3a0",
+        "map_names": [
+          "Vcl.Grids.TStringGrid.SetCells"
+        ]
+      },
+      {
+        "address": "00eb4234",
+        "map_names": [
+          "fLabs.TfrmLabs.BlankWeb"
+        ]
+      },
+      {
+        "address": "00ebd980",
+        "map_names": [
+          "fLabs.TfrmLabs.HideTabControl"
+        ]
+      },
+      {
+        "address": "012034d0",
+        "map_names": [
+          "fPage.TfrmPage.ClearPtData"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fLabs.TfrmLabs.DisplayPage",
+    "address": "00ea4504",
+    "status": "decompiled",
+    "file": "fLabs.TfrmLabs.DisplayPage_00ea4504.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040ba58",
+        "map_names": [
+          "System.@LStrFromUStr"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0042cfdc",
+        "map_names": [
+          "System.SysUtils.IntToStr"
+        ]
+      },
+      {
+        "address": "004d2ff0",
+        "map_names": [
+          "System.Classes.TList.Get"
+        ]
+      },
+      {
+        "address": "004d4e14",
+        "map_names": [
+          "System.Classes.TCollection.Clear"
+        ]
+      },
+      {
+        "address": "006015e8",
+        "map_names": [
+          "Vcl.Controls.TControl.SetAlign"
+        ]
+      },
+      {
+        "address": "006025b0",
+        "map_names": [
+          "Vcl.Controls.TControl.SetVisible"
+        ]
+      },
+      {
+        "address": "006026fc",
+        "map_names": [
+          "Vcl.Controls.TControl.SetText"
+        ]
+      },
+      {
+        "address": "0066f6b0",
+        "map_names": [
+          "Vcl.ComCtrls.TTreeNodes.GetCount"
+        ]
+      },
+      {
+        "address": "0066fb68",
+        "map_names": [
+          "Vcl.ComCtrls.TTreeNodes.GetFirstNode"
+        ]
+      },
+      {
+        "address": "00672184",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomTreeView.SetSelected"
+        ]
+      },
+      {
+        "address": "0067cfe0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.Clear"
+        ]
+      },
+      {
+        "address": "0068263c",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.SetSmallImages"
+        ]
+      },
+      {
+        "address": "00709128",
+        "map_names": [
+          "Vcl.Menus.TMenuItem.SetEnabled"
+        ]
+      },
+      {
+        "address": "009b60ec",
+        "map_names": [
+          "ORFn.StatusText"
+        ]
+      },
+      {
+        "address": "00c87c4c",
+        "map_names": [
+          "rLabs.UseRadioButtons"
+        ]
+      },
+      {
+        "address": "00ea631c",
+        "map_names": [
+          "fLabs.TfrmLabs.LoadTreeView"
+        ]
+      },
+      {
+        "address": "00eb2ebc",
+        "map_names": [
+          "fLabs.TfrmLabs.ProcessNotifications"
+        ]
+      },
+      {
+        "address": "00ebd8f4",
+        "map_names": [
+          "fLabs.TfrmLabs.RightTopHeader"
+        ]
+      },
+      {
+        "address": "011d700c",
+        "map_names": [
+          "uCore.TRemoteSite.ReportClear"
+        ]
+      },
+      {
+        "address": "012034e8",
+        "map_names": [
+          "fPage.TfrmPage.DisplayPage"
+        ]
+      },
+      {
+        "address": "012035ec",
+        "map_names": [
+          "fPage.TfrmPage.GetInitPage"
+        ]
+      },
+      {
+        "address": "0120360c",
+        "map_names": [
+          "fPage.TfrmPage.GetInitPatient"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00ea49a0",
+        "file_offset": 11156896,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 134,
+        "text": "<DIV align left><TABLE width=\"75%\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\"><TR valign=\"bottom\" align=\"left\"><TD nowrap><B>Patient: "
+      },
+      {
+        "address": "00ea4abc",
+        "file_offset": 11157180,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 9,
+        "text": "</B></TD>"
+      },
+      {
+        "address": "00ea4adc",
+        "file_offset": 11157212,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": "<TD nowrap><B>"
+      },
+      {
+        "address": "00ea4b08",
+        "file_offset": 11157256,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 19,
+        "text": "<TD nowrap><B>Age: "
+      },
+      {
+        "address": "00ea4b3c",
+        "file_offset": 11157308,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 23,
+        "text": "</TR></TABLE></DIV><HR>"
+      },
+      {
+        "address": "00ea4b78",
+        "file_offset": 11157368,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "M"
+      }
+    ]
+  },
+  {
+    "function": "fLabs.TfrmLabs.LoadListView",
+    "address": "00ea4d6c",
+    "status": "decompiled",
+    "file": "fLabs.TfrmLabs.LoadListView_00ea4d6c.c",
+    "numeric_callee_references": [
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b3c4",
+        "map_names": [
+          "System.@UStrAsg"
+        ]
+      },
+      {
+        "address": "0040b40c",
+        "map_names": [
+          "System.@UStrLAsg"
+        ]
+      },
+      {
+        "address": "0040c134",
+        "map_names": [
+          "System.@UStrCat"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0040c35c",
+        "map_names": [
+          "System.@UStrCopy"
+        ]
+      },
+      {
+        "address": "0040c4b0",
+        "map_names": [
+          "System.@UStrPos"
+        ]
+      },
+      {
+        "address": "0042cfdc",
+        "map_names": [
+          "System.SysUtils.IntToStr"
+        ]
+      },
+      {
+        "address": "0042d1fc",
+        "map_names": [
+          "System.SysUtils.StrToInt"
+        ]
+      },
+      {
+        "address": "0042d238",
+        "map_names": [
+          "System.SysUtils.StrToIntDef"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "0067c4d8",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.SetCaption"
+        ]
+      },
+      {
+        "address": "0067c6d8",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.SetState"
+        ]
+      },
+      {
+        "address": "0067cc40",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.SetSubItemImage"
+        ]
+      },
+      {
+        "address": "0067cde0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.Add"
+        ]
+      },
+      {
+        "address": "0067ce80",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.GetCount"
+        ]
+      },
+      {
+        "address": "0067ced0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.GetItem"
+        ]
+      },
+      {
+        "address": "0068263c",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.SetSmallImages"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "0079c19c",
+        "map_names": [
+          "VAUtils.ShowMsg"
+        ]
+      },
+      {
+        "address": "009d8d18",
+        "map_names": [
+          "VA508ImageListLabeler.TVA508ImageListLabeler.ComponentImageListChanged"
+        ]
+      },
+      {
+        "address": "00c02470",
+        "map_names": [
+          "uReports.TLabRowObject.Add"
+        ]
+      },
+      {
+        "address": "011d431c",
+        "map_names": [
+          "uCore.TUser.HasKey"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00ea59cc",
+        "file_offset": 11161036,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 2,
+        "text": "-1"
+      },
+      {
+        "address": "00ea59e0",
+        "file_offset": 11161056,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 19,
+        "text": "<No Data Available>"
+      },
+      {
+        "address": "00ea5a14",
+        "file_offset": 11161108,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": ":"
+      },
+      {
+        "address": "00ea5a24",
+        "file_offset": 11161124,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "1"
+      },
+      {
+        "address": "00ea5a34",
+        "file_offset": 11161140,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 3,
+        "text": "..."
+      },
+      {
+        "address": "00ea5a48",
+        "file_offset": 11161160,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "^"
+      },
+      {
+        "address": "00ea5a58",
+        "file_offset": 11161176,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "OR_APL"
+      },
+      {
+        "address": "00ea5a74",
+        "file_offset": 11161204,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "OR_CYL"
+      },
+      {
+        "address": "00ea5a90",
+        "file_offset": 11161232,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "OR_EML"
+      },
+      {
+        "address": "00ea5aac",
+        "file_offset": 11161260,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "OR_SPL"
+      },
+      {
+        "address": "00ea5ac8",
+        "file_offset": 11161288,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 10,
+        "text": "XUPROGMODE"
+      },
+      {
+        "address": "00ea5aec",
+        "file_offset": 11161324,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 101,
+        "text": "Programmer message: One or more Column ID's in file 101.24 do not match ID's coded in extract routine"
+      }
+    ]
+  },
+  {
+    "function": "fLabs.TfrmLabs.lstHeadersClick",
+    "address": "00ea67e0",
+    "status": "decompiled",
+    "file": "fLabs.TfrmLabs.lstHeadersClick_00ea67e0.c",
+    "numeric_callee_references": [
+      {
+        "address": "0041c028",
+        "map_names": [
+          "Winapi.Windows.SendMessage"
+        ]
+      },
+      {
+        "address": "006025b0",
+        "map_names": [
+          "Vcl.Controls.TControl.SetVisible"
+        ]
+      },
+      {
+        "address": "0060ca58",
+        "map_names": [
+          "Vcl.Controls.TWinControl.GetHandle"
+        ]
+      },
+      {
+        "address": "007adbdc",
+        "map_names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fLabs.TfrmLabs.lstDatesClick",
+    "address": "00ea9ee4",
+    "status": "decompiled",
+    "file": "fLabs.TfrmLabs.lstDatesClick_00ea9ee4.c",
+    "numeric_callee_references": [
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040bff4",
+        "map_names": [
+          "System.@UStrFromLStr"
+        ]
+      },
+      {
+        "address": "0040c18c",
+        "map_names": [
+          "System.@UStrCat3"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0040c35c",
+        "map_names": [
+          "System.@UStrCopy"
+        ]
+      },
+      {
+        "address": "0040d1c4",
+        "map_names": [
+          "System.@FinalizeArray"
+        ]
+      },
+      {
+        "address": "0042c1a8",
+        "map_names": [
+          "System.SysUtils.UpperCase"
+        ]
+      },
+      {
+        "address": "0042cfdc",
+        "map_names": [
+          "System.SysUtils.IntToStr"
+        ]
+      },
+      {
+        "address": "0042d1fc",
+        "map_names": [
+          "System.SysUtils.StrToInt"
+        ]
+      },
+      {
+        "address": "00430914",
+        "map_names": [
+          "System.SysUtils.FloatToStr"
+        ]
+      },
+      {
+        "address": "0044973c",
+        "map_names": [
+          "System.Variants.@VarToUStr"
+        ]
+      },
+      {
+        "address": "0044a008",
+        "map_names": [
+          "System.Variants.@VarFromWChar"
+        ]
+      },
+      {
+        "address": "0044e1a0",
+        "map_names": [
+          "System.Variants.@VarAdd"
+        ]
+      },
+      {
+        "address": "0044e1b8",
+        "map_names": [
+          "System.Variants.@VarCmpEQ"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "006015e8",
+        "map_names": [
+          "Vcl.Controls.TControl.SetAlign"
+        ]
+      },
+      {
+        "address": "00601944",
+        "map_names": [
+          "Vcl.Controls.TControl.SetLeft"
+        ]
+      },
+      {
+        "address": "00601978",
+        "map_names": [
+          "Vcl.Controls.TControl.SetTop"
+        ]
+      },
+      {
+        "address": "006019e4",
+        "map_names": [
+          "Vcl.Controls.TControl.SetHeight"
+        ]
+      },
+      {
+        "address": "006025b0",
+        "map_names": [
+          "Vcl.Controls.TControl.SetVisible"
+        ]
+      },
+      {
+        "address": "006026ac",
+        "map_names": [
+          "Vcl.Controls.TControl.GetText"
+        ]
+      },
+      {
+        "address": "006026fc",
+        "map_names": [
+          "Vcl.Controls.TControl.SetText"
+        ]
+      },
+      {
+        "address": "0060cdec",
+        "map_names": [
+          "Vcl.Controls.TWinControl.SetTabStop"
+        ]
+      },
+      {
+        "address": "00668488",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomTabControl.GetTabIndex"
+        ]
+      },
+      {
+        "address": "006b861c",
+        "map_names": [
+          "Vcl.ExtCtrls.TTimer.SetInterval"
+        ]
+      },
+      {
+        "address": "00729a50",
+        "map_names": [
+          "Vcl.Forms.TScreen.SetCursor"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "007ab6d8",
+        "map_names": [
+          "ORCtrls.TORListBox.GetDisplayText"
+        ]
+      },
+      {
+        "address": "007adbdc",
+        "map_names": [
+          "ORCtrls.TORListBox.GetItemIEN"
+        ]
+      },
+      {
+        "address": "007ae008",
+        "map_names": [
+          "ORCtrls.TORListBox.GetItemID"
+        ]
+      },
+      {
+        "address": "007b1014",
+        "map_names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ]
+      },
+      {
+        "address": "008235c0",
+        "map_names": [
+          "VCLTee.TeEngine.TChartAxis.SetAutomatic"
+        ]
+      },
+      {
+        "address": "009b0d84",
+        "map_names": [
+          "ORFn.DateTimeToFMDateTime"
+        ]
+      },
+      {
+        "address": "009b3d64",
+        "map_names": [
+          "ORFn.QuickCopy"
+        ]
+      },
+      {
+        "address": "009b60ec",
+        "map_names": [
+          "ORFn.StatusText"
+        ]
+      },
+      {
+        "address": "00ad9eac",
+        "map_names": [
+          "ORDtTmRng.TORDateRangeDlg.Execute"
+        ]
+      },
+      {
+        "address": "00c86560",
+        "map_names": [
+          "rLabs.Cumulative"
+        ]
+      },
+      {
+        "address": "00c86a24",
+        "map_names": [
+          "rLabs.Micro"
+        ]
+      },
+      {
+        "address": "00c86d9c",
+        "map_names": [
+          "rLabs.setWorksheet"
+        ]
+      },
+      {
+        "address": "00c86e6c",
+        "map_names": [
+          "rLabs.Reports"
+        ]
+      },
+      {
+        "address": "00c87400",
+        "map_names": [
+          "rLabs.setGetChart"
+        ]
+      },
+      {
+        "address": "00ea5bd0",
+        "map_names": [
+          "fLabs.TfrmLabs.DisplayHeading"
+        ]
+      },
+      {
+        "address": "00eabd04",
+        "map_names": [
+          "fLabs.TfrmLabs.GraphList"
+        ]
+      },
+      {
+        "address": "00eac294",
+        "map_names": [
+          "fLabs.TfrmLabs.HGrid"
+        ]
+      },
+      {
+        "address": "00eaca0c",
+        "map_names": [
+          "fLabs.TfrmLabs.VGrid"
+        ]
+      },
+      {
+        "address": "00ead170",
+        "map_names": [
+          "fLabs.TfrmLabs.GridComments"
+        ]
+      },
+      {
+        "address": "00eafe78",
+        "map_names": [
+          "fLabs.TfrmLabs.FMToDateTime"
+        ]
+      },
+      {
+        "address": "00eb0104",
+        "map_names": [
+          "fLabs.TfrmLabs.GraphChart"
+        ]
+      },
+      {
+        "address": "00eb0c24",
+        "map_names": [
+          "fLabs.TfrmLabs.ragCorGClick"
+        ]
+      },
+      {
+        "address": "00eb279c",
+        "map_names": [
+          "fLabs.TfrmLabs.chkGraphZoomClick"
+        ]
+      },
+      {
+        "address": "00eb3fac",
+        "map_names": [
+          "fLabs.TfrmLabs.BeginEndDates"
+        ]
+      },
+      {
+        "address": "00eb4234",
+        "map_names": [
+          "fLabs.TfrmLabs.BlankWeb"
+        ]
+      },
+      {
+        "address": "00ebc24c",
+        "map_names": [
+          "fLabs.TfrmLabs.GoRemoteOld"
+        ]
+      },
+      {
+        "address": "00ebd410",
+        "map_names": [
+          "fLabs.TfrmLabs.ChkBrowser"
+        ]
+      },
+      {
+        "address": "011ca688",
+        "map_names": [
+          "rCore.FMToday"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00eab470",
+        "file_offset": 11184240,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": ";"
+      },
+      {
+        "address": "00eab480",
+        "file_offset": 11184256,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "^"
+      },
+      {
+        "address": "00eab490",
+        "file_offset": 11184272,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 4,
+        "text": " to "
+      },
+      {
+        "address": "00eab4b4",
+        "file_offset": 11184308,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 2,
+        "text": "21"
+      },
+      {
+        "address": "00eab4c8",
+        "file_offset": 11184328,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 40,
+        "text": "Retrieving data for cumulative report..."
+      },
+      {
+        "address": "00eab528",
+        "file_offset": 11184424,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": " "
+      },
+      {
+        "address": "00eab538",
+        "file_offset": 11184440,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "3"
+      },
+      {
+        "address": "00eab548",
+        "file_offset": 11184456,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 37,
+        "text": "Retrieving data for interim report..."
+      },
+      {
+        "address": "00eab5a0",
+        "file_offset": 11184544,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 33,
+        "text": "<No results for this date range.>"
+      },
+      {
+        "address": "00eab5f0",
+        "file_offset": 11184624,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "4"
+      },
+      {
+        "address": "00eab600",
+        "file_offset": 11184640,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 37,
+        "text": "Retrieving data for selected tests..."
+      },
+      {
+        "address": "00eab658",
+        "file_offset": 11184728,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 51,
+        "text": "<No results for selected tests in this date range.>"
+      },
+      {
+        "address": "00eab6cc",
+        "file_offset": 11184844,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "5"
+      },
+      {
+        "address": "00eab6dc",
+        "file_offset": 11184860,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 32,
+        "text": "Retrieving data for worksheet..."
+      },
+      {
+        "address": "00eab72c",
+        "file_offset": 11184940,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "6"
+      },
+      {
+        "address": "00eab73c",
+        "file_offset": 11184956,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 28,
+        "text": "Retrieving data for graph..."
+      },
+      {
+        "address": "00eab784",
+        "file_offset": 11185028,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 27,
+        "text": "<No comments on specimens.>"
+      },
+      {
+        "address": "00eab7c8",
+        "file_offset": 11185096,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "0"
+      },
+      {
+        "address": "00eab7d8",
+        "file_offset": 11185112,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 31,
+        "text": "<No results can be graphed for "
+      },
+      {
+        "address": "00eab824",
+        "file_offset": 11185188,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 22,
+        "text": " in this date range.> "
+      },
+      {
+        "address": "00eab860",
+        "file_offset": 11185248,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 78,
+        "text": "Results may be available, but cannot be graphed. Please try an alternate view."
+      },
+      {
+        "address": "00eab90c",
+        "file_offset": 11185420,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 2,
+        "text": " ("
+      },
+      {
+        "address": "00eab920",
+        "file_offset": 11185440,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 23,
+        "text": ") in this date range.> "
+      },
+      {
+        "address": "00eab95c",
+        "file_offset": 11185500,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "9"
+      },
+      {
+        "address": "00eab96c",
+        "file_offset": 11185516,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 31,
+        "text": "Retrieving microbiology data..."
+      },
+      {
+        "address": "00eab9b8",
+        "file_offset": 11185592,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 46,
+        "text": "<No microbiology results for this date range.>"
+      },
+      {
+        "address": "00eaba24",
+        "file_offset": 11185700,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 2,
+        "text": "10"
+      },
+      {
+        "address": "00eaba38",
+        "file_offset": 11185720,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 29,
+        "text": "Retrieving lab status data..."
+      },
+      {
+        "address": "00eaba80",
+        "file_offset": 11185792,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 4,
+        "text": "L:10"
+      },
+      {
+        "address": "00eaba98",
+        "file_offset": 11185816,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 43,
+        "text": "<No laboratory orders for this date range.>"
+      },
+      {
+        "address": "00eabafc",
+        "file_offset": 11185916,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 22,
+        "text": "Retrieving lab data..."
+      },
+      {
+        "address": "00eabb38",
+        "file_offset": 11185976,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 2,
+        "text": "L:"
+      },
+      {
+        "address": "00eabb4c",
+        "file_offset": 11185996,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 30,
+        "text": "<No data for this date range.>"
+      },
+      {
+        "address": "00eabb98",
+        "file_offset": 11186072,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "R"
+      },
+      {
+        "address": "00eabba8",
+        "file_offset": 11186088,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 108,
+        "text": "<html><head><style>\r\nPRE {font-size:8pt;font-family: \"Courier New\", \"monospace\"}\r\n</style></head><body><pre>"
+      },
+      {
+        "address": "00eabc90",
+        "file_offset": 11186320,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 22,
+        "text": "\r\n</pre></body></html>"
+      },
+      {
+        "address": "00eabccc",
+        "file_offset": 11186380,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 13,
+        "text": "1:MOST RECENT"
+      },
+      {
+        "address": "00eabcf4",
+        "file_offset": 11186420,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "T"
+      }
+    ]
+  },
+  {
+    "function": "fLabs.TfrmLabs.lvReportsSelectItem",
+    "address": "00eb1a30",
+    "status": "decompiled",
+    "file": "fLabs.TfrmLabs.lvReportsSelectItem_00eb1a30.c",
+    "numeric_callee_references": [
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b40c",
+        "map_names": [
+          "System.@UStrLAsg"
+        ]
+      },
+      {
+        "address": "0040bf44",
+        "map_names": [
+          "System.@UStrFromWChar"
+        ]
+      },
+      {
+        "address": "0040c18c",
+        "map_names": [
+          "System.@UStrCat3"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0042d238",
+        "map_names": [
+          "System.SysUtils.StrToIntDef"
+        ]
+      },
+      {
+        "address": "004d2ff0",
+        "map_names": [
+          "System.Classes.TList.Get"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "0067c668",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.GetState"
+        ]
+      },
+      {
+        "address": "0067cc34",
+        "map_names": [
+          "Vcl.ComCtrls.TListItem.GetSubItemImage"
+        ]
+      },
+      {
+        "address": "0067ce80",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.GetCount"
+        ]
+      },
+      {
+        "address": "0067ced0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.GetItem"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "0079af38",
+        "map_names": [
+          "VAUtils.SetPiece"
+        ]
+      },
+      {
+        "address": "009b3eb4",
+        "map_names": [
+          "ORFn.FastAssign"
+        ]
+      },
+      {
+        "address": "011d3f74",
+        "map_names": [
+          "uCore.NotifyOtherApps"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00eb23b4",
+        "file_offset": 11212724,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "1"
+      },
+      {
+        "address": "00eb23c4",
+        "file_offset": 11212740,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": " "
+      },
+      {
+        "address": "00eb23d4",
+        "file_offset": 11212756,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 10,
+        "text": "Facility: "
+      },
+      {
+        "address": "00eb23f8",
+        "file_offset": 11212792,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 79,
+        "text": "==============================================================================="
+      },
+      {
+        "address": "00eb24a4",
+        "file_offset": 11212964,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": "OR_R18:IMAGING"
+      },
+      {
+        "address": "00eb24d0",
+        "file_offset": 11213008,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 3,
+        "text": "RA^"
+      },
+      {
+        "address": "00eb24e4",
+        "file_offset": 11213028,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "^"
+      },
+      {
+        "address": "00eb24f4",
+        "file_offset": 11213044,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 3,
+        "text": "RPT"
+      },
+      {
+        "address": "00eb2508",
+        "file_offset": 11213064,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 5,
+        "text": "RA^^^"
+      },
+      {
+        "address": "00eb2520",
+        "file_offset": 11213088,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 39,
+        "text": "<Imaging links not active at this site>"
+      },
+      {
+        "address": "00eb257c",
+        "file_offset": 11213180,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 20,
+        "text": "OR_PN:PROGRESS NOTES"
+      },
+      {
+        "address": "00eb25b4",
+        "file_offset": 11213236,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "0"
+      },
+      {
+        "address": "00eb25c4",
+        "file_offset": 11213252,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 3,
+        "text": "PN^"
+      },
+      {
+        "address": "00eb25d8",
+        "file_offset": 11213272,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "OR_APL"
+      },
+      {
+        "address": "00eb25f4",
+        "file_offset": 11213300,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "OR_CYL"
+      },
+      {
+        "address": "00eb2610",
+        "file_offset": 11213328,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "OR_EML"
+      },
+      {
+        "address": "00eb262c",
+        "file_offset": 11213356,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "OR_SPL"
+      },
+      {
+        "address": "00eb2648",
+        "file_offset": 11213384,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 4,
+        "text": "TIU^"
+      }
+    ]
+  },
+  {
+    "function": "fLabs.TfrmLabs.tvReportsClick",
+    "address": "00eb4c1c",
+    "status": "decompiled",
+    "file": "fLabs.TfrmLabs.tvReportsClick_00eb4c1c.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b3c4",
+        "map_names": [
+          "System.@UStrAsg"
+        ]
+      },
+      {
+        "address": "0040b40c",
+        "map_names": [
+          "System.@UStrLAsg"
+        ]
+      },
+      {
+        "address": "0040bf44",
+        "map_names": [
+          "System.@UStrFromWChar"
+        ]
+      },
+      {
+        "address": "0040bff4",
+        "map_names": [
+          "System.@UStrFromLStr"
+        ]
+      },
+      {
+        "address": "0040c134",
+        "map_names": [
+          "System.@UStrCat"
+        ]
+      },
+      {
+        "address": "0040c18c",
+        "map_names": [
+          "System.@UStrCat3"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0040c35c",
+        "map_names": [
+          "System.@UStrCopy"
+        ]
+      },
+      {
+        "address": "0040d1c4",
+        "map_names": [
+          "System.@FinalizeArray"
+        ]
+      },
+      {
+        "address": "0041c028",
+        "map_names": [
+          "Winapi.Windows.SendMessage"
+        ]
+      },
+      {
+        "address": "0042c1f4",
+        "map_names": [
+          "System.SysUtils.LowerCase"
+        ]
+      },
+      {
+        "address": "0042cfdc",
+        "map_names": [
+          "System.SysUtils.IntToStr"
+        ]
+      },
+      {
+        "address": "0042d1fc",
+        "map_names": [
+          "System.SysUtils.StrToInt"
+        ]
+      },
+      {
+        "address": "0042d238",
+        "map_names": [
+          "System.SysUtils.StrToIntDef"
+        ]
+      },
+      {
+        "address": "00443770",
+        "map_names": [
+          "System.Variants.@VarClr"
+        ]
+      },
+      {
+        "address": "0044973c",
+        "map_names": [
+          "System.Variants.@VarToUStr"
+        ]
+      },
+      {
+        "address": "00449fdc",
+        "map_names": [
+          "System.Variants.@VarFromUStr"
+        ]
+      },
+      {
+        "address": "0044e1b8",
+        "map_names": [
+          "System.Variants.@VarCmpEQ"
+        ]
+      },
+      {
+        "address": "004d2ff0",
+        "map_names": [
+          "System.Classes.TList.Get"
+        ]
+      },
+      {
+        "address": "004d4e14",
+        "map_names": [
+          "System.Classes.TCollection.Clear"
+        ]
+      },
+      {
+        "address": "005cdd74",
+        "map_names": [
+          "Vcl.Graphics.TFont.GetSize"
+        ]
+      },
+      {
+        "address": "006015e8",
+        "map_names": [
+          "Vcl.Controls.TControl.SetAlign"
+        ]
+      },
+      {
+        "address": "00601978",
+        "map_names": [
+          "Vcl.Controls.TControl.SetTop"
+        ]
+      },
+      {
+        "address": "006019b0",
+        "map_names": [
+          "Vcl.Controls.TControl.SetWidth"
+        ]
+      },
+      {
+        "address": "006019e4",
+        "map_names": [
+          "Vcl.Controls.TControl.SetHeight"
+        ]
+      },
+      {
+        "address": "006025b0",
+        "map_names": [
+          "Vcl.Controls.TControl.SetVisible"
+        ]
+      },
+      {
+        "address": "006026ac",
+        "map_names": [
+          "Vcl.Controls.TControl.GetText"
+        ]
+      },
+      {
+        "address": "006026fc",
+        "map_names": [
+          "Vcl.Controls.TControl.SetText"
+        ]
+      },
+      {
+        "address": "0060297c",
+        "map_names": [
+          "Vcl.Controls.TControl.BringToFront"
+        ]
+      },
+      {
+        "address": "0060298c",
+        "map_names": [
+          "Vcl.Controls.TControl.SendToBack"
+        ]
+      },
+      {
+        "address": "00608594",
+        "map_names": [
+          "Vcl.Controls.TWinControl.LockDrawing"
+        ]
+      },
+      {
+        "address": "006085cc",
+        "map_names": [
+          "Vcl.Controls.TWinControl.UnlockDrawing"
+        ]
+      },
+      {
+        "address": "0060ca58",
+        "map_names": [
+          "Vcl.Controls.TWinControl.GetHandle"
+        ]
+      },
+      {
+        "address": "0060cdec",
+        "map_names": [
+          "Vcl.Controls.TWinControl.SetTabStop"
+        ]
+      },
+      {
+        "address": "0062f404",
+        "map_names": [
+          "Vcl.StdCtrls.TCustomButton.SetDefault"
+        ]
+      },
+      {
+        "address": "00668488",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomTabControl.GetTabIndex"
+        ]
+      },
+      {
+        "address": "00669150",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomTabControl.GetTabs"
+        ]
+      },
+      {
+        "address": "0066aae8",
+        "map_names": [
+          "Vcl.ComCtrls.TStatusPanel.SetText"
+        ]
+      },
+      {
+        "address": "0066ab8c",
+        "map_names": [
+          "Vcl.ComCtrls.TStatusPanels.GetItem"
+        ]
+      },
+      {
+        "address": "006720ec",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomTreeView.SetTopItem"
+        ]
+      },
+      {
+        "address": "0067213c",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomTreeView.GetSelected"
+        ]
+      },
+      {
+        "address": "00672184",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomTreeView.SetSelected"
+        ]
+      },
+      {
+        "address": "0067b444",
+        "map_names": [
+          "Vcl.ComCtrls.TListColumn.SetCaption"
+        ]
+      },
+      {
+        "address": "0067b46c",
+        "map_names": [
+          "Vcl.ComCtrls.TListColumn.GetWidth"
+        ]
+      },
+      {
+        "address": "0067b548",
+        "map_names": [
+          "Vcl.ComCtrls.TListColumn.SetWidth"
+        ]
+      },
+      {
+        "address": "0067b614",
+        "map_names": [
+          "Vcl.ComCtrls.TListColumn.SetMinWidth"
+        ]
+      },
+      {
+        "address": "0067b704",
+        "map_names": [
+          "Vcl.ComCtrls.TListColumns.GetItem"
+        ]
+      },
+      {
+        "address": "0067b720",
+        "map_names": [
+          "Vcl.ComCtrls.TListColumns.Add"
+        ]
+      },
+      {
+        "address": "0067cfe0",
+        "map_names": [
+          "Vcl.ComCtrls.TListItems.Clear"
+        ]
+      },
+      {
+        "address": "0068263c",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.SetSmallImages"
+        ]
+      },
+      {
+        "address": "00682768",
+        "map_names": [
+          "Vcl.ComCtrls.TCustomListView.GetColumnFromIndex"
+        ]
+      },
+      {
+        "address": "006b860c",
+        "map_names": [
+          "Vcl.ExtCtrls.TTimer.SetEnabled"
+        ]
+      },
+      {
+        "address": "006b861c",
+        "map_names": [
+          "Vcl.ExtCtrls.TTimer.SetInterval"
+        ]
+      },
+      {
+        "address": "006bd808",
+        "map_names": [
+          "Vcl.ExtCtrls.TCustomRadioGroup.SetItemIndex"
+        ]
+      },
+      {
+        "address": "00729a50",
+        "map_names": [
+          "Vcl.Forms.TScreen.SetCursor"
+        ]
+      },
+      {
+        "address": "00793808",
+        "map_names": [
+          "SHDocVw.TWebBrowser.Get_Visible"
+        ]
+      },
+      {
+        "address": "00793a5c",
+        "map_names": [
+          "SHDocVw.TWebBrowser.Set_Visible"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "0079af38",
+        "map_names": [
+          "VAUtils.SetPiece"
+        ]
+      },
+      {
+        "address": "007ae008",
+        "map_names": [
+          "ORCtrls.TORListBox.GetItemID"
+        ]
+      },
+      {
+        "address": "007b1014",
+        "map_names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ]
+      },
+      {
+        "address": "007b10c8",
+        "map_names": [
+          "ORCtrls.TORListBox.SetCaption"
+        ]
+      },
+      {
+        "address": "007b9e10",
+        "map_names": [
+          "ORCtrls.TCaptionListView.ResetTinyColumns"
+        ]
+      },
+      {
+        "address": "009b1bc4",
+        "map_names": [
+          "ORFn.CharAt"
+        ]
+      },
+      {
+        "address": "009b23dc",
+        "map_names": [
+          "ORFn.ExtractInteger"
+        ]
+      },
+      {
+        "address": "009b3d64",
+        "map_names": [
+          "ORFn.QuickCopy"
+        ]
+      },
+      {
+        "address": "009b44a8",
+        "map_names": [
+          "ORFn.InfoBox"
+        ]
+      },
+      {
+        "address": "009b60ec",
+        "map_names": [
+          "ORFn.StatusText"
+        ]
+      },
+      {
+        "address": "009d61a8",
+        "map_names": [
+          "VA508AccessibilityRouter.ScreenReaderSystemActive"
+        ]
+      },
+      {
+        "address": "009fffc4",
+        "map_names": [
+          "VA508AccessibilityManager.TVA508StaticText.SetLabelCaption"
+        ]
+      },
+      {
+        "address": "00a02a20",
+        "map_names": [
+          "uMisc.AssignedAndHasData"
+        ]
+      },
+      {
+        "address": "00c02510",
+        "map_names": [
+          "uReports.TLabRowObject.Clear"
+        ]
+      },
+      {
+        "address": "00c03400",
+        "map_names": [
+          "rReports.ListReportDateRanges"
+        ]
+      },
+      {
+        "address": "00c034c0",
+        "map_names": [
+          "rReports.ColumnHeaders"
+        ]
+      },
+      {
+        "address": "00c0355c",
+        "map_names": [
+          "rReports.SaveColumnSizes"
+        ]
+      },
+      {
+        "address": "00c86e6c",
+        "map_names": [
+          "rLabs.Reports"
+        ]
+      },
+      {
+        "address": "00c87c4c",
+        "map_names": [
+          "rLabs.UseRadioButtons"
+        ]
+      },
+      {
+        "address": "00e98eb4",
+        "map_names": [
+          "fLabTest.SelectTest"
+        ]
+      },
+      {
+        "address": "00e99cec",
+        "map_names": [
+          "fLabTests.SelectTests"
+        ]
+      },
+      {
+        "address": "00e9b2c8",
+        "map_names": [
+          "fLabTestGroups.SelectTestGroups"
+        ]
+      },
+      {
+        "address": "00ea5bd0",
+        "map_names": [
+          "fLabs.TfrmLabs.DisplayHeading"
+        ]
+      },
+      {
+        "address": "00ea6848",
+        "map_names": [
+          "fLabs.TfrmLabs.lstQualifierClick"
+        ]
+      },
+      {
+        "address": "00eafa5c",
+        "map_names": [
+          "fLabs.TfrmLabs.cmdRecentClick"
+        ]
+      },
+      {
+        "address": "00eafd10",
+        "map_names": [
+          "fLabs.TfrmLabs.FormResize"
+        ]
+      },
+      {
+        "address": "00eb274c",
+        "map_names": [
+          "fLabs.TfrmLabs.chkGraphValuesClick"
+        ]
+      },
+      {
+        "address": "00eb2778",
+        "map_names": [
+          "fLabs.TfrmLabs.chkGraph3DClick"
+        ]
+      },
+      {
+        "address": "00eb279c",
+        "map_names": [
+          "fLabs.TfrmLabs.chkGraphZoomClick"
+        ]
+      },
+      {
+        "address": "00eb2cbc",
+        "map_names": [
+          "fLabs.TfrmLabs.LockDrawing"
+        ]
+      },
+      {
+        "address": "00eb2d74",
+        "map_names": [
+          "fLabs.TfrmLabs.UnlockDrawing"
+        ]
+      },
+      {
+        "address": "00eb4234",
+        "map_names": [
+          "fLabs.TfrmLabs.BlankWeb"
+        ]
+      },
+      {
+        "address": "00eba940",
+        "map_names": [
+          "fLabs.TfrmLabs.GoRemote"
+        ]
+      },
+      {
+        "address": "00ebc24c",
+        "map_names": [
+          "fLabs.TfrmLabs.GoRemoteOld"
+        ]
+      },
+      {
+        "address": "00ebd410",
+        "map_names": [
+          "fLabs.TfrmLabs.ChkBrowser"
+        ]
+      },
+      {
+        "address": "00ebd49c",
+        "map_names": [
+          "fLabs.TfrmLabs.CommonComponentVisible"
+        ]
+      },
+      {
+        "address": "00ebd89c",
+        "map_names": [
+          "fLabs.TfrmLabs.ShowTabControl"
+        ]
+      },
+      {
+        "address": "00ebd8f4",
+        "map_names": [
+          "fLabs.TfrmLabs.RightTopHeader"
+        ]
+      },
+      {
+        "address": "00ebd980",
+        "map_names": [
+          "fLabs.TfrmLabs.HideTabControl"
+        ]
+      },
+      {
+        "address": "0100399c",
+        "map_names": [
+          "fFrame.TfrmFrame.mnuToolsGraphingClick"
+        ]
+      },
+      {
+        "address": "011d6a8c",
+        "map_names": [
+          "uCore.TNotifications.GetAlertData"
+        ]
+      },
+      {
+        "address": "011d702c",
+        "map_names": [
+          "uCore.TRemoteSite.LabClear"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "00eba07c",
+        "file_offset": 11244668,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 33,
+        "text": "To sort, click on column headers|"
+      },
+      {
+        "address": "00eba0cc",
+        "file_offset": 11244748,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": ","
+      },
+      {
+        "address": "00eba0dc",
+        "file_offset": 11244764,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "^"
+      },
+      {
+        "address": "00eba0ec",
+        "file_offset": 11244780,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "M"
+      },
+      {
+        "address": "00eba0fc",
+        "file_offset": 11244796,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "R"
+      },
+      {
+        "address": "00eba10c",
+        "file_offset": 11244812,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "1"
+      },
+      {
+        "address": "00eba14c",
+        "file_offset": 11244876,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "2"
+      },
+      {
+        "address": "00eba15c",
+        "file_offset": 11244892,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "V"
+      },
+      {
+        "address": "00eba16c",
+        "file_offset": 11244908,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "H"
+      },
+      {
+        "address": "00eba17c",
+        "file_offset": 11244924,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 2,
+        "text": "0,"
+      },
+      {
+        "address": "00eba190",
+        "file_offset": 11244944,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 4,
+        "text": ";101"
+      },
+      {
+        "address": "00eba1a8",
+        "file_offset": 11244968,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 69,
+        "text": "The Date Range selected is greater than the\r\nMaximum Days Allowed of "
+      },
+      {
+        "address": "00eba240",
+        "file_offset": 11245120,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 17,
+        "text": " for this report."
+      },
+      {
+        "address": "00eba270",
+        "file_offset": 11245168,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 2,
+        "text": "\r\n"
+      },
+      {
+        "address": "00eba284",
+        "file_offset": 11245188,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 35,
+        "text": "Please reselect a valid Date Range."
+      },
+      {
+        "address": "00eba2d8",
+        "file_offset": 11245272,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 19,
+        "text": "No Report Generated"
+      },
+      {
+        "address": "00eba30c",
+        "file_offset": 11245324,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "d"
+      },
+      {
+        "address": "00eba31c",
+        "file_offset": 11245340,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": ";"
+      },
+      {
+        "address": "00eba32c",
+        "file_offset": 11245356,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 4,
+        "text": " to "
+      },
+      {
+        "address": "00eba344",
+        "file_offset": 11245380,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 13,
+        "text": "1:MOST RECENT"
+      },
+      {
+        "address": "00eba36c",
+        "file_offset": 11245420,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 24,
+        "text": "4:SELECTED TESTS BY DATE"
+      },
+      {
+        "address": "00eba3ac",
+        "file_offset": 11245484,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 11,
+        "text": "5:WORKSHEET"
+      },
+      {
+        "address": "00eba3d0",
+        "file_offset": 11245520,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 97,
+        "text": "  KEY: \"L\" = Abnormal Low, \"H\" = Abnormal High, \"*\" = Critical Value, \"**\" = Comments on Specimen"
+      },
+      {
+        "address": "00eba4a0",
+        "file_offset": 11245728,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 7,
+        "text": "6:GRAPH"
+      },
+      {
+        "address": "00eba4bc",
+        "file_offset": 11245756,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": " "
+      },
+      {
+        "address": "00eba4cc",
+        "file_offset": 11245772,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 18,
+        "text": "Graphing activated"
+      },
+      {
+        "address": "00eba500",
+        "file_offset": 11245824,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": "9:MICROBIOLOGY"
+      },
+      {
+        "address": "00eba52c",
+        "file_offset": 11245868,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 21,
+        "text": "20:ANATOMIC PATHOLOGY"
+      },
+      {
+        "address": "00eba564",
+        "file_offset": 11245924,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 12,
+        "text": "2:BLOOD BANK"
+      },
+      {
+        "address": "00eba58c",
+        "file_offset": 11245964,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 13,
+        "text": "10:LAB STATUS"
+      },
+      {
+        "address": "00eba5b4",
+        "file_offset": 11246004,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 19,
+        "text": "3:ALL TESTS BY DATE"
+      },
+      {
+        "address": "00eba5e8",
+        "file_offset": 11246056,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 13,
+        "text": "21:CUMULATIVE"
+      },
+      {
+        "address": "00eba610",
+        "file_offset": 11246096,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 10,
+        "text": "27:AUTOPSY"
+      },
+      {
+        "address": "00eba634",
+        "file_offset": 11246132,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 18,
+        "text": "Retrieving data..."
+      },
+      {
+        "address": "00eba668",
+        "file_offset": 11246184,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "0"
+      },
+      {
+        "address": "00eba678",
+        "file_offset": 11246200,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 4,
+        "text": "9999"
+      },
+      {
+        "address": "00eba690",
+        "file_offset": 11246224,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 2,
+        "text": "L:"
+      },
+      {
+        "address": "00eba6a4",
+        "file_offset": 11246244,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 108,
+        "text": "<html><head><style>\r\nPRE {font-size:8pt;font-family: \"Courier New\", \"monospace\"}\r\n</style></head><body><pre>"
+      },
+      {
+        "address": "00eba78c",
+        "file_offset": 11246476,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 22,
+        "text": "\r\n</pre></body></html>"
+      },
+      {
+        "address": "00eba7c8",
+        "file_offset": 11246536,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 11,
+        "text": "Retrieving "
+      },
+      {
+        "address": "00eba7ec",
+        "file_offset": 11246572,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 3,
+        "text": "..."
+      },
+      {
+        "address": "00eba800",
+        "file_offset": 11246592,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 20,
+        "text": "\r\nRetrieving data..."
+      },
+      {
+        "address": "00eba838",
+        "file_offset": 11246648,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 10,
+        "text": "Date Range"
+      },
+      {
+        "address": "00eba85c",
+        "file_offset": 11246684,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 34,
+        "text": "T-37000;T+37000^T-37000 to T+37000"
+      },
+      {
+        "address": "00eba8b0",
+        "file_offset": 11246768,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 21,
+        "text": "<No Report Available>"
+      },
+      {
+        "address": "00eba8e8",
+        "file_offset": 11246824,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "5"
+      }
+    ]
+  },
+  {
+    "function": "fLabs.TfrmLabs.Memo1Enter",
+    "address": "00ebda94",
+    "status": "decompiled",
+    "file": "fLabs.TfrmLabs.Memo1Enter_00ebda94.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "006026ac",
+        "map_names": [
+          "Vcl.Controls.TControl.GetText"
+        ]
+      },
+      {
+        "address": "009d6144",
+        "map_names": [
+          "VA508AccessibilityRouter.GetScreenReader"
+        ]
+      },
+      {
+        "address": "009d619c",
+        "map_names": [
+          "VA508AccessibilityRouter.ScreenReaderActive"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  }
+]

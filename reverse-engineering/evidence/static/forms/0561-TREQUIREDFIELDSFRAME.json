@@ -1,0 +1,407 @@
+{
+  "class": "TRequiredFieldsFrame",
+  "name": "RequiredFieldsFrame",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 659,
+    "Height": 25,
+    "Color": "clSilver",
+    "Ctl3D": true,
+    "ParentBackground": false,
+    "ParentColor": false,
+    "ParentCtl3D": false,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TGridPanel",
+      "name": "gpButtons",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 0,
+        "Width": 643,
+        "Height": 25,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ColumnCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000960540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000960540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000960540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "SizeStyle": "ssAbsolute",
+              "Value": {
+                "extended80_hex": "00000000000000960540"
+              }
+            }
+          }
+        ],
+        "ControlCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Column": 1,
+              "Control": "btnFirst",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 2,
+              "Control": "btnPrev",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 3,
+              "Control": "btnNext",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 4,
+              "Control": "btnLast",
+              "Row": 0
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Column": 0,
+              "Control": "stxtTotalRequired",
+              "Row": 0
+            }
+          }
+        ],
+        "ParentBackground": false,
+        "PopupMenu": "PopupMenu1",
+        "RowCollection": [
+          {
+            "index": null,
+            "properties": {
+              "Value": {
+                "extended80_hex": "00000000000000c80540"
+              }
+            }
+          },
+          {
+            "index": null,
+            "properties": {}
+          },
+          {
+            "index": null,
+            "properties": {}
+          },
+          {
+            "index": null,
+            "properties": {}
+          },
+          {
+            "index": null,
+            "properties": {}
+          },
+          {
+            "index": null,
+            "properties": {}
+          }
+        ],
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnFirst",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 343,
+            "Top": 0,
+            "Width": 75,
+            "Height": 25,
+            "Action": "acFirst",
+            "Align": "alClient",
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnPrev",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 418,
+            "Top": 0,
+            "Width": 75,
+            "Height": 25,
+            "Action": "acPrev",
+            "Align": "alClient",
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnNext",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 493,
+            "Top": 0,
+            "Width": 75,
+            "Height": 25,
+            "Action": "acNext",
+            "Align": "alClient",
+            "TabOrder": 3
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnLast",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 568,
+            "Top": 0,
+            "Width": 75,
+            "Height": 25,
+            "Action": "acLast",
+            "Align": "alClient",
+            "TabOrder": 4
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "stxtTotalRequired",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 5,
+            "Width": 337,
+            "Height": 17,
+            "Margins.Top": 5,
+            "Align": "alClient",
+            "BevelInner": "bvSpace",
+            "BevelKind": "bkSoft",
+            "BevelOuter": "bvNone",
+            "Caption": "All Required Fields have Values",
+            "Color": "clBtnFace",
+            "ParentColor": false,
+            "TabOrder": 0
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlLmargin",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 8,
+        "Height": 25,
+        "Align": "alLeft",
+        "BevelOuter": "bvNone",
+        "ParentBackground": false,
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlRMargin",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 651,
+        "Top": 0,
+        "Width": 8,
+        "Height": 25,
+        "Align": "alRight",
+        "BevelOuter": "bvNone",
+        "ParentBackground": false,
+        "TabOrder": 2
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "PopupMenu1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 264
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "T1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Top",
+            "OnClick": "T1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "L1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Left",
+            "OnClick": "T1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "R1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Right",
+            "OnClick": "T1Click"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "B1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Bottom",
+            "OnClick": "T1Click"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TActionList",
+      "name": "ActionList1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 312
+      },
+      "children": [
+        {
+          "class": "TAction",
+          "name": "acFirst",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&First",
+            "OnExecute": "acFirstExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acPrev",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "< Pre&v",
+            "OnExecute": "acPrevExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acNext",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Nex&t >",
+            "OnExecute": "acNextExecute"
+          },
+          "children": []
+        },
+        {
+          "class": "TAction",
+          "name": "acLast",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Last",
+            "OnExecute": "acLastExecute"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

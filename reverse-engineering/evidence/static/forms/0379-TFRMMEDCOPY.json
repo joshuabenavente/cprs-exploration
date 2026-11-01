@@ -1,0 +1,465 @@
+{
+  "class": "TfrmMedCopy",
+  "name": "frmMedCopy",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 157,
+    "Top": 62,
+    "Caption": "Copy Medication Orders",
+    "ClientHeight": 401,
+    "ClientWidth": 485,
+    "Constraints.MinHeight": 150,
+    "Constraints.MinWidth": 240,
+    "OldCreateOrder": true,
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 493,
+    "ExplicitHeight": 428,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 485,
+        "Height": 80,
+        "Align": "alTop",
+        "AutoSize": true,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TVA508StaticText",
+          "name": "lblPtInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Name": "lblPtInfo",
+            "Left": 1,
+            "Top": 1,
+            "Width": 464,
+            "Height": 40,
+            "Alignment": "taLeftJustify",
+            "AutoSize": true,
+            "Caption": "",
+            "Constraints.MinHeight": 40,
+            "TabOrder": 1,
+            "ShowAccelChar": true,
+            "WordWrap": false,
+            "LabelAlignment": "taLeftJustify",
+            "LabelLayout": "tlTop"
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlInpatient",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 46,
+            "Width": 483,
+            "Height": 33,
+            "Align": "alBottom",
+            "AutoSize": true,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TImage",
+              "name": "Image1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 1,
+                "Top": 1,
+                "Width": 24,
+                "Height": 31,
+                "Align": "alLeft",
+                "AutoSize": true,
+                "Enabled": false,
+                "Picture.Data": {
+                  "binary_bytes": 394
+                },
+                "Transparent": true
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblInstruction",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 30,
+                "Top": 1,
+                "Width": 337,
+                "Height": 17,
+                "Caption": "  Use Admit: if patient is newly admitted to the hospital or nursing home.",
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblInstruction2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 30,
+                "Top": 15,
+                "Width": 371,
+                "Height": 17,
+                "Caption": "  Use Transfer: if inpatient will move from one ward or treating team to another.",
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlMiddle",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 80,
+        "Width": 485,
+        "Height": 65,
+        "Align": "alTop",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TGroupBox",
+          "name": "gboxMain",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 483,
+            "Height": 63,
+            "Align": "alClient",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TRadioButton",
+              "name": "radDelayed",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 20,
+                "Top": 37,
+                "Width": 321,
+                "Height": 17,
+                "Caption": "&Delay release of copied orders until",
+                "TabOrder": 1,
+                "OnClick": "radDelayedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TRadioButton",
+              "name": "radRelease",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 20,
+                "Top": 16,
+                "Width": 319,
+                "Height": 17,
+                "Caption": "&Release copied orders immediately",
+                "Checked": true,
+                "TabOrder": 0,
+                "TabStop": true,
+                "OnClick": "radReleaseClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "cmdOK",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 365,
+                "Top": 14,
+                "Width": 72,
+                "Height": 19,
+                "Caption": "OK",
+                "Constraints.MaxWidth": 73,
+                "Default": true,
+                "TabOrder": 2,
+                "OnClick": "cmdOKClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "cmdCancel",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 365,
+                "Top": 38,
+                "Width": 72,
+                "Height": 19,
+                "Cancel": true,
+                "Caption": "Cancel",
+                "Constraints.MaxWidth": 73,
+                "TabOrder": 3,
+                "OnClick": "cmdCancelClick"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 145,
+        "Width": 485,
+        "Height": 256,
+        "Align": "alClient",
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TfraEvntDelayList",
+          "name": "fraEvntDelayList",
+          "inherited": false,
+          "inline": true,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 1,
+            "Width": 483,
+            "Height": 254,
+            "Align": "alBottom",
+            "AutoScroll": true,
+            "TabOrder": 0,
+            "TabStop": true,
+            "Visible": false,
+            "ExplicitLeft": 1,
+            "ExplicitTop": 1,
+            "ExplicitWidth": 483,
+            "ExplicitHeight": 254
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "pnlDate",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 378,
+                "Height": 254,
+                "ExplicitLeft": 378,
+                "ExplicitHeight": 254
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblEffective",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 446,
+                    "Width": 71,
+                    "ExplicitLeft": 446,
+                    "ExplicitWidth": 71
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORDateBox",
+                  "name": "orDateBox",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Left": 446,
+                    "ExplicitLeft": 446
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlList",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 378,
+                "Height": 254,
+                "ExplicitWidth": 378,
+                "ExplicitHeight": 254
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblEvntDelayList",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Width": 376,
+                    "ExplicitWidth": 80
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORListBox",
+                  "name": "mlstEvents",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Width": 376,
+                    "Height": 218,
+                    "OnDblClick": "cmdOKClick",
+                    "ExplicitWidth": 376,
+                    "ExplicitHeight": 218
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TCaptionEdit",
+                  "name": "edtSearch",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Width": 376,
+                    "ExplicitWidth": 376
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlInpatient",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblInstruction",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblInstruction2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlMiddle",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = gboxMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radDelayed",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = radRelease",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEvntDelayList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEvntDelayList.pnlDate",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEvntDelayList.orDateBox",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEvntDelayList.pnlList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEvntDelayList.mlstEvents",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = fraEvntDelayList.edtSearch",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmMedCopy",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

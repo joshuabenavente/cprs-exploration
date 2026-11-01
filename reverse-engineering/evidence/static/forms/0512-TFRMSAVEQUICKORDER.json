@@ -1,0 +1,403 @@
+{
+  "class": "TfrmSaveQuickOrder",
+  "name": "frmSaveQuickOrder",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 308,
+    "Top": 171,
+    "Caption": "Add to Common List (Meds, Inpatient)",
+    "ClientHeight": 335,
+    "ClientWidth": 355,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 371,
+    "ExplicitHeight": 373,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "Panel1",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 355,
+        "Height": 113,
+        "Align": "alTop",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblDisplayName",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 70,
+            "Width": 261,
+            "Height": 13,
+            "Caption": "Enter the name that should be used for this quick order.",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentFont": false
+          },
+          "children": []
+        },
+        {
+          "class": "TMemo",
+          "name": "memOrder",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 8,
+            "Width": 340,
+            "Height": 46,
+            "Color": "clBtnFace",
+            "ReadOnly": true,
+            "TabOrder": 0,
+            "WantReturns": false
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "txtDisplayName",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 84,
+            "Width": 340,
+            "Height": 21,
+            "TabOrder": 1,
+            "OnChange": "txtDisplayNameChange",
+            "Caption": "Enter the name that should be used for this quick order."
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel2",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 113,
+        "Width": 355,
+        "Height": 181,
+        "Align": "alClient",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblQuickList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 8,
+            "Width": 136,
+            "Height": 13,
+            "Caption": "Meds, Inpatient Common List"
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "lstQuickList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 30,
+            "Width": 270,
+            "Height": 141,
+            "ItemHeight": 13,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 0,
+            "Caption": "Meds, Inpatient Common List",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2"
+          },
+          "children": []
+        },
+        {
+          "class": "TKeyClickPanel",
+          "name": "pnlUpButton",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 292,
+            "Top": 42,
+            "Width": 30,
+            "Height": 27,
+            "BevelOuter": "bvNone",
+            "Caption": "Display selected medication earlier",
+            "TabOrder": 2,
+            "TabStop": true,
+            "OnEnter": "pnlUpButtonEnter",
+            "OnExit": "pnlUpButtonExit",
+            "OnMouseDown": "pnlUpButtonMouseDown",
+            "OnMouseUp": "pnlUpButtonMouseUp",
+            "DesignSize": [
+              30,
+              27
+            ]
+          },
+          "children": [
+            {
+              "class": "TSpeedButton",
+              "name": "cmdUp",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 30,
+                "Height": 24,
+                "Anchors": [
+                  "akLeft",
+                  "akTop",
+                  "akRight",
+                  "akBottom"
+                ],
+                "Glyph.Data": {
+                  "binary_bytes": 250
+                },
+                "OnMouseDown": "cmdUpMouseDown",
+                "OnMouseUp": "cmdUpMouseUp"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TKeyClickPanel",
+          "name": "pnlDownButton",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 292,
+            "Top": 76,
+            "Width": 31,
+            "Height": 26,
+            "BevelOuter": "bvNone",
+            "Caption": "Display selected medication  later",
+            "TabOrder": 3,
+            "TabStop": true,
+            "OnEnter": "pnlUpButtonEnter",
+            "OnExit": "pnlUpButtonExit",
+            "OnMouseDown": "pnlDownButtonMouseDown",
+            "OnMouseUp": "pnlDownButtonMouseUp",
+            "DesignSize": [
+              31,
+              26
+            ]
+          },
+          "children": [
+            {
+              "class": "TSpeedButton",
+              "name": "cmdDown",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": -1,
+                "Width": 31,
+                "Height": 22,
+                "Anchors": [
+                  "akLeft",
+                  "akTop",
+                  "akRight",
+                  "akBottom"
+                ],
+                "Glyph.Data": {
+                  "binary_bytes": 250
+                },
+                "OnMouseDown": "cmdDownMouseDown",
+                "OnMouseUp": "cmdDownMouseUp"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TButton",
+          "name": "cmdRename",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 286,
+            "Top": 128,
+            "Width": 62,
+            "Height": 21,
+            "Caption": "Rename",
+            "TabOrder": 4,
+            "OnClick": "cmdRenameClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdDelete",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 286,
+            "Top": 153,
+            "Width": 62,
+            "Height": 21,
+            "Caption": "Delete",
+            "TabOrder": 5,
+            "OnClick": "cmdDeleteClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "Panel3",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 294,
+        "Width": 355,
+        "Height": 41,
+        "Align": "alBottom",
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 98,
+            "Top": 11,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "OK",
+            "TabOrder": 0,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 186,
+            "Top": 11,
+            "Width": 72,
+            "Height": 21,
+            "Cancel": true,
+            "Caption": "Cancel",
+            "TabOrder": 1,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memOrder",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtDisplayName",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstQuickList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlUpButton",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlDownButton",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdRename",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdDelete",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmSaveQuickOrder",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

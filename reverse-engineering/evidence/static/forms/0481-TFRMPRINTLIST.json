@@ -1,0 +1,126 @@
+{
+  "class": "TfrmPrintList",
+  "name": "frmPrintList",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 364,
+    "Top": 191,
+    "Caption": "Print Selected Items",
+    "ClientHeight": 361,
+    "ClientWidth": 455,
+    "OnCreate": "FormCreate",
+    "ExplicitLeft": 364,
+    "ExplicitTop": 191,
+    "ExplicitWidth": 463,
+    "ExplicitHeight": 388,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "lblListName",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 16,
+        "Top": 8,
+        "Width": 54,
+        "Height": 13,
+        "Caption": "lblListName"
+      },
+      "children": []
+    },
+    {
+      "class": "TORListBox",
+      "name": "lbIDParents",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 9,
+        "Top": 22,
+        "Width": 434,
+        "Height": 267,
+        "ItemHeight": 13,
+        "MultiSelect": true,
+        "ParentShowHint": false,
+        "ShowHint": true,
+        "TabOrder": 0,
+        "TabWidth": 8,
+        "Caption": "Select a list of notes for printing",
+        "ItemTipColor": "clWindow",
+        "LongList": false,
+        "Pieces": "2",
+        "TabPositions": "30"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 131,
+        "Top": 312,
+        "Width": 75,
+        "Height": 25,
+        "Caption": "OK",
+        "TabOrder": 2,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 237,
+        "Top": 312,
+        "Width": 75,
+        "Height": 25,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 3,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lbIDParents",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmPrintList",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

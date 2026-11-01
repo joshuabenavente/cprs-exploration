@@ -1,0 +1,957 @@
+{
+  "class": "TfrmVit",
+  "name": "frmVit",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 451,
+    "Top": 208,
+    "Caption": "frmVit",
+    "ClientHeight": 334,
+    "ClientWidth": 491,
+    "Position": "poScreenCenter",
+    "OnActivate": "FormActivate",
+    "OnCreate": "FormCreate",
+    "OnKeyPress": "FormKeyPress",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 507,
+    "ExplicitHeight": 372,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 319,
+        "Top": 276,
+        "Width": 75,
+        "Height": 22,
+        "Caption": "OK",
+        "TabOrder": 1,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 406,
+        "Top": 276,
+        "Width": 75,
+        "Height": 22,
+        "Cancel": true,
+        "Caption": "Cancel",
+        "TabOrder": 2,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlmain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 8,
+        "Top": 24,
+        "Width": 473,
+        "Height": 241,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TOROffsetLabel",
+          "name": "lblVitPointer",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 418,
+            "Top": 48,
+            "Width": 17,
+            "Height": 15,
+            "Caption": "<--",
+            "Color": "clBtnFace",
+            "HorzOffset": 5,
+            "ParentColor": false,
+            "Transparent": false,
+            "VertOffset": 2,
+            "WordWrap": false
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 32,
+            "Top": 23,
+            "Width": 31,
+            "Height": 17,
+            "Caption": "Date",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false,
+            "TabOrder": 11
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblDateBP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 3,
+            "Left": 26,
+            "Top": 122,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 12,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblDateTemp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 26,
+            "Top": 52,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 13,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblDateResp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "Left": 26,
+            "Top": 98,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 14,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblDatePulse",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Left": 26,
+            "Top": 75,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 15,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblDateHeight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 4,
+            "Left": 26,
+            "Top": 145,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 16,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblDateWeight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 5,
+            "Left": 26,
+            "Top": 169,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 17,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblLstMeas",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 116,
+            "Top": 23,
+            "Width": 80,
+            "Height": 17,
+            "Caption": "Last Measure",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false,
+            "TabOrder": 18
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lbllastBP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 3,
+            "Left": 124,
+            "Top": 122,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 19,
+            "OnClick": "lbllastClick",
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblLastTemp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 124,
+            "Top": 52,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 20,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblLastResp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "Left": 124,
+            "Top": 98,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 21,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblLastPulse",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Left": 124,
+            "Top": 75,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 22,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblLastHeight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 4,
+            "Left": 124,
+            "Top": 145,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 23,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblLastWeight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 5,
+            "Left": 124,
+            "Top": 169,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 24,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblVital",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 256,
+            "Top": 23,
+            "Width": 29,
+            "Height": 17,
+            "Caption": "Vital",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false,
+            "TabOrder": 25
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblVitBP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 256,
+            "Top": 122,
+            "Width": 23,
+            "Height": 17,
+            "Caption": "B/P",
+            "TabOrder": 26
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lnlVitTemp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 256,
+            "Top": 52,
+            "Width": 31,
+            "Height": 17,
+            "Caption": "Temp",
+            "TabOrder": 27
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblVitResp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 256,
+            "Top": 98,
+            "Width": 29,
+            "Height": 17,
+            "Caption": "Resp",
+            "TabOrder": 28
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblVitPulse",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 256,
+            "Top": 75,
+            "Width": 30,
+            "Height": 17,
+            "Caption": "Pulse",
+            "TabOrder": 29
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblVitHeight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 256,
+            "Top": 145,
+            "Width": 35,
+            "Height": 17,
+            "Caption": "Height",
+            "TabOrder": 30
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblVitWeight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 256,
+            "Top": 169,
+            "Width": 38,
+            "Height": 17,
+            "Caption": "Weight",
+            "TabOrder": 31
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblDatePain",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 5,
+            "Left": 26,
+            "Top": 193,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 32,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblLastPain",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 5,
+            "Left": 124,
+            "Top": 193,
+            "Width": 24,
+            "Height": 17,
+            "Caption": "N/A",
+            "TabOrder": 33,
+            "OnDblClick": "lbllastClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblVitPain",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 256,
+            "Top": 193,
+            "Width": 55,
+            "Height": 17,
+            "Caption": "Pain Scale",
+            "TabOrder": 34
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "txtMeasBP",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "Left": 318,
+            "Top": 119,
+            "Width": 100,
+            "Height": 21,
+            "TabOrder": 5,
+            "OnEnter": "SetVitPointer",
+            "OnExit": "txtMeasBPExit",
+            "OnKeyPress": "FormKeyPress",
+            "Caption": "Blood Pressure"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionComboBox",
+          "name": "cboTemp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 7,
+            "Left": 360,
+            "Top": 48,
+            "Width": 59,
+            "Height": 21,
+            "DropDownCount": 2,
+            "ItemHeight": 13,
+            "TabOrder": 2,
+            "OnChange": "cboTempChange",
+            "OnEnter": "SetVitPointer",
+            "OnExit": "cboTempExit",
+            "OnKeyPress": "FormKeyPress",
+            "Items.Strings": [
+              "F",
+              "C"
+            ],
+            "Caption": "Temperature"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "txtMeasTemp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 2,
+            "Left": 318,
+            "Top": 48,
+            "Width": 43,
+            "Height": 21,
+            "TabOrder": 1,
+            "OnEnter": "SetVitPointer",
+            "OnExit": "txtMeasTempExit",
+            "OnKeyPress": "FormKeyPress",
+            "Caption": "Temperature"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "txtMeasResp",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 3,
+            "Left": 318,
+            "Top": 95,
+            "Width": 100,
+            "Height": 21,
+            "TabOrder": 4,
+            "OnEnter": "SetVitPointer",
+            "OnExit": "txtMeasRespExit",
+            "OnKeyPress": "FormKeyPress",
+            "Caption": "Resp"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "txtMeasPulse",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 4,
+            "Left": 318,
+            "Top": 72,
+            "Width": 100,
+            "Height": 21,
+            "TabOrder": 3,
+            "OnEnter": "SetVitPointer",
+            "OnExit": "txtMeasPulseExit",
+            "OnKeyPress": "FormKeyPress",
+            "Caption": "Pulse"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "txtMeasHt",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 5,
+            "Left": 318,
+            "Top": 142,
+            "Width": 43,
+            "Height": 21,
+            "TabOrder": 6,
+            "OnEnter": "SetVitPointer",
+            "OnExit": "txtMeasHtExit",
+            "OnKeyPress": "FormKeyPress",
+            "Caption": "Height"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionComboBox",
+          "name": "cboHeight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 8,
+            "Left": 361,
+            "Top": 142,
+            "Width": 58,
+            "Height": 21,
+            "ItemHeight": 13,
+            "TabOrder": 7,
+            "OnChange": "cboHeightChange",
+            "OnEnter": "SetVitPointer",
+            "OnExit": "cboHeightExit",
+            "OnKeyPress": "FormKeyPress",
+            "Items.Strings": [
+              "IN",
+              "CM"
+            ],
+            "Caption": "Height"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionEdit",
+          "name": "txtMeasWt",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 6,
+            "Left": 318,
+            "Top": 166,
+            "Width": 43,
+            "Height": 21,
+            "TabOrder": 8,
+            "OnEnter": "SetVitPointer",
+            "OnExit": "txtMeasWtExit",
+            "OnKeyPress": "FormKeyPress",
+            "Caption": "Weight"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionComboBox",
+          "name": "cboWeight",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 9,
+            "Left": 361,
+            "Top": 166,
+            "Width": 58,
+            "Height": 21,
+            "ItemHeight": 13,
+            "TabOrder": 9,
+            "OnChange": "cboWeightChange",
+            "OnEnter": "SetVitPointer",
+            "OnExit": "cboWeightExit",
+            "OnKeyPress": "FormKeyPress",
+            "Items.Strings": [
+              "LB",
+              "KG"
+            ],
+            "Caption": "Weight"
+          },
+          "children": []
+        },
+        {
+          "class": "TORDateBox",
+          "name": "txtMeasDate",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 11,
+            "Left": 312,
+            "Top": 16,
+            "Width": 121,
+            "Height": 21,
+            "TabOrder": 0,
+            "Text": "txtMeasDate",
+            "OnEnter": "SetVitPointer",
+            "OnKeyPress": "FormKeyPress",
+            "DateOnly": false,
+            "RequireTime": false,
+            "Caption": "Vital Measured Date"
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboPain",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 10,
+            "Left": 318,
+            "Top": 190,
+            "Width": 102,
+            "Height": 21,
+            "Style": "orcsDropDown",
+            "AutoSelect": true,
+            "Caption": "Pain Scale",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": false,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "Pieces": "1,2",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 10,
+            "Text": "",
+            "OnEnter": "SetVitPointer",
+            "OnKeyPress": "FormKeyPress",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlmain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDate",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDateBP",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDateTemp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDateResp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDatePulse",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDateHeight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDateWeight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLstMeas",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lbllastBP",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLastTemp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLastResp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLastPulse",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLastHeight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLastWeight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblVital",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblVitBP",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lnlVitTemp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblVitResp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblVitPulse",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblVitHeight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblVitWeight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblDatePain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLastPain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblVitPain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtMeasBP",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboTemp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtMeasTemp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtMeasResp",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtMeasPulse",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtMeasHt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboHeight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtMeasWt",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboWeight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtMeasDate",
+            "Text = Vital Measured Date/Time. Press the enter key to access.",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cboPain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmVit",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "class": "TfraVimmEditGrid",
+  "name": "fraVimmEditGrid",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Width": 672,
+    "Height": 411,
+    "ExplicitWidth": 672,
+    "ExplicitHeight": 411
+  },
+  "children": [
+    {
+      "class": "TScrollBox",
+      "name": "ScrollBox1",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Width": 672,
+        "Height": 411,
+        "ExplicitWidth": 672,
+        "ExplicitHeight": 411
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlForm",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Width": 668,
+            "Height": 407,
+            "Align": "alTop",
+            "StyleElements": [
+              "seFont",
+              "seClient",
+              "seBorder"
+            ],
+            "ExplicitWidth": 668,
+            "ExplicitHeight": 407
+          },
+          "children": [
+            {
+              "class": "TGridPanel",
+              "name": "grdEditPanel",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Width": 668,
+                "Height": 358,
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitWidth": 668,
+                "ExplicitHeight": 358
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "pnlButtons",
+              "inherited": true,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Top": 358,
+                "Width": 668,
+                "StyleElements": [
+                  "seFont",
+                  "seClient",
+                  "seBorder"
+                ],
+                "ExplicitTop": 358,
+                "ExplicitWidth": 668
+              },
+              "children": [
+                {
+                  "class": "TButton",
+                  "name": "btnSave",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Enabled": false,
+                    "Visible": false
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TButton",
+                  "name": "btnCancel",
+                  "inherited": true,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "Enabled": false,
+                    "Visible": false
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

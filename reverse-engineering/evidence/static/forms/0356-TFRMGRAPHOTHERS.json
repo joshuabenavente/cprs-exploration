@@ -1,0 +1,460 @@
+{
+  "class": "TfrmGraphOthers",
+  "name": "frmGraphOthers",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "Select Other Views and Lab Groups",
+    "ClientHeight": 452,
+    "ClientWidth": 474,
+    "Position": "poScreenCenter",
+    "OnShow": "FormShow",
+    "ExplicitWidth": 480,
+    "ExplicitHeight": 480,
+    "PixelsPerInch": 96,
+    "TextHeight": 16
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlMain",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 474,
+        "Height": 420,
+        "Align": "alClient",
+        "TabOrder": 0,
+        "ExplicitHeight": 241
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 4,
+            "Width": 466,
+            "Height": 16,
+            "Align": "alTop",
+            "Caption": "You can copy other user's views and lab groups for your own use. ",
+            "ExplicitLeft": 3,
+            "ExplicitTop": 3,
+            "ExplicitWidth": 389
+          },
+          "children": []
+        },
+        {
+          "class": "TRichEdit",
+          "name": "memReport",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 4,
+            "Top": 323,
+            "Width": 466,
+            "Height": 93,
+            "Align": "alBottom",
+            "BevelInner": "bvNone",
+            "Color": "clCream",
+            "Font.Charset": "ANSI_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "Courier New",
+            "Font.Style": [],
+            "Lines.Strings": [
+              ""
+            ],
+            "ParentFont": false,
+            "ReadOnly": true,
+            "ScrollBars": "ssBoth",
+            "TabOrder": 1,
+            "WantReturns": false,
+            "WordWrap": false,
+            "Zoom": 100,
+            "ExplicitLeft": 3,
+            "ExplicitTop": 256,
+            "ExplicitWidth": 468
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 23,
+            "Width": 472,
+            "Height": 259,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 2,
+            "ExplicitTop": 304,
+            "ExplicitHeight": 217
+          },
+          "children": [
+            {
+              "class": "TPanel",
+              "name": "Panel2",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 209,
+                "Height": 259,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel1",
+                "ShowCaption": false,
+                "TabOrder": 0,
+                "ExplicitHeight": 217
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblOthers",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 203,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Select or enter name:",
+                    "ExplicitLeft": 12,
+                    "ExplicitTop": 29,
+                    "ExplicitWidth": 126
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORComboBox",
+                  "name": "cboOthers",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 25,
+                    "Width": 203,
+                    "Height": 231,
+                    "Style": "orcsSimple",
+                    "Align": "alClient",
+                    "AutoSelect": true,
+                    "Caption": "Select or enter name",
+                    "Color": "clWindow",
+                    "DropDownCount": 8,
+                    "ItemHeight": 16,
+                    "ItemTipColor": "clWindow",
+                    "ItemTipEnable": true,
+                    "ListItemsOnly": true,
+                    "LongList": true,
+                    "LookupPiece": 2,
+                    "MaxLength": 0,
+                    "Pieces": "2,3",
+                    "Sorted": false,
+                    "SynonymChars": "<>",
+                    "TabOrder": 0,
+                    "Text": "",
+                    "OnClick": "cboOthersClick",
+                    "OnNeedData": "cboOthersNeedData",
+                    "CharsNeedMatch": 1,
+                    "ExplicitLeft": 12,
+                    "ExplicitTop": 47,
+                    "ExplicitWidth": 144,
+                    "ExplicitHeight": 170
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel3",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 209,
+                "Top": 0,
+                "Width": 38,
+                "Height": 259,
+                "Align": "alLeft",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel1",
+                "ShowCaption": false,
+                "TabOrder": 1,
+                "ExplicitLeft": 155,
+                "ExplicitHeight": 217
+              },
+              "children": []
+            },
+            {
+              "class": "TPanel",
+              "name": "Panel4",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 247,
+                "Top": 0,
+                "Width": 225,
+                "Height": 259,
+                "Align": "alClient",
+                "BevelOuter": "bvNone",
+                "Caption": "Panel4",
+                "ShowCaption": false,
+                "TabOrder": 2,
+                "ExplicitLeft": 144,
+                "ExplicitTop": 88,
+                "ExplicitWidth": 185,
+                "ExplicitHeight": 41
+              },
+              "children": [
+                {
+                  "class": "TLabel",
+                  "name": "lblViews",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 3,
+                    "Width": 219,
+                    "Height": 16,
+                    "Align": "alTop",
+                    "Caption": "Views and Lab Groups:",
+                    "ExplicitLeft": -100,
+                    "ExplicitTop": 29,
+                    "ExplicitWidth": 138
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TORListBox",
+                  "name": "lstViews",
+                  "inherited": false,
+                  "inline": false,
+                  "child_position": null,
+                  "properties": {
+                    "AlignWithMargins": true,
+                    "Left": 3,
+                    "Top": 25,
+                    "Width": 219,
+                    "Height": 231,
+                    "Align": "alClient",
+                    "MultiSelect": true,
+                    "ParentShowHint": false,
+                    "ShowHint": true,
+                    "TabOrder": 0,
+                    "OnClick": "lstViewsClick",
+                    "Caption": "Currently selected recipients",
+                    "ItemTipColor": "clWindow",
+                    "LongList": false,
+                    "Pieces": "2",
+                    "ExplicitLeft": -58,
+                    "ExplicitTop": 51,
+                    "ExplicitWidth": 283,
+                    "ExplicitHeight": 137
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "Panel5",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 1,
+            "Top": 282,
+            "Width": 472,
+            "Height": 38,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "Caption": "Panel1",
+            "ShowCaption": false,
+            "TabOrder": 3,
+            "ExplicitTop": 23,
+            "ExplicitWidth": 281
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblDefinitions",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 16,
+                "Width": 214,
+                "Height": 19,
+                "Margins.Top": 16,
+                "Align": "alLeft",
+                "Caption": "Definitions:",
+                "ExplicitTop": 3,
+                "ExplicitHeight": 32
+              },
+              "children": []
+            },
+            {
+              "class": "TButton",
+              "name": "btnCopy",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 395,
+                "Top": 3,
+                "Width": 74,
+                "Height": 32,
+                "Align": "alRight",
+                "Caption": "Copy",
+                "TabOrder": 0
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 420,
+        "Width": 474,
+        "Height": 32,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "ExplicitTop": 352
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 396,
+            "Top": 3,
+            "Width": 75,
+            "Height": 26,
+            "Align": "alRight",
+            "Caption": "Close",
+            "TabOrder": 0
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 120,
+        "Top": 272,
+        "Data": [
+          [
+            "Component = pnlMain",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboOthers",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstViews",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCopy",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memReport",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmGraphOthers",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Panel5",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

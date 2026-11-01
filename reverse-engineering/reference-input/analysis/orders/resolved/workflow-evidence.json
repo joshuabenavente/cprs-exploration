@@ -1,0 +1,2032 @@
+[
+  {
+    "function": "fOrders.TfrmOrders.ClearPtData",
+    "address": "01179ba0",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.ClearPtData_01179ba0.c",
+    "numeric_callee_references": [
+      {
+        "address": "00d2cff4",
+        "map_names": [
+          "uODBase.ClearFillerAppList"
+        ]
+      },
+      {
+        "address": "0117d800",
+        "map_names": [
+          "fOrders.TfrmOrders.ClearOrderSheets"
+        ]
+      },
+      {
+        "address": "011db7c0",
+        "map_names": [
+          "rOrders.ClearOrders"
+        ]
+      },
+      {
+        "address": "012034d0",
+        "map_names": [
+          "fPage.TfrmPage.ClearPtData"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fOrders.TfrmOrders.DisplayPage",
+    "address": "01179c00",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.DisplayPage_01179c00.c",
+    "numeric_callee_references": [
+      {
+        "address": "00709128",
+        "map_names": [
+          "Vcl.Menus.TMenuItem.SetEnabled"
+        ]
+      },
+      {
+        "address": "007091fc",
+        "map_names": [
+          "Vcl.Menus.TMenuItem.GetCount"
+        ]
+      },
+      {
+        "address": "0070920c",
+        "map_names": [
+          "Vcl.Menus.TMenuItem.GetItem"
+        ]
+      },
+      {
+        "address": "00709244",
+        "map_names": [
+          "Vcl.Menus.TMenuItem.SetVisible"
+        ]
+      },
+      {
+        "address": "007b1014",
+        "map_names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ]
+      },
+      {
+        "address": "009a9728",
+        "map_names": [
+          "UResponsiveGUI.TResponsiveGUI.ProcessMessages"
+        ]
+      },
+      {
+        "address": "00ffdcd8",
+        "map_names": [
+          "fFrame.TfrmFrame.ShowHideChartTabMenus"
+        ]
+      },
+      {
+        "address": "0117adbc",
+        "map_names": [
+          "fOrders.TfrmOrders.RedrawOrderList"
+        ]
+      },
+      {
+        "address": "0117c3e0",
+        "map_names": [
+          "fOrders.TfrmOrders.mnuViewDfltShowClick"
+        ]
+      },
+      {
+        "address": "0117d870",
+        "map_names": [
+          "fOrders.TfrmOrders.InitOrderSheets"
+        ]
+      },
+      {
+        "address": "01185e1c",
+        "map_names": [
+          "fOrders.TfrmOrders.ProcessNotifications"
+        ]
+      },
+      {
+        "address": "011e0340",
+        "map_names": [
+          "rOrders.LoadWriteOrders"
+        ]
+      },
+      {
+        "address": "012034e8",
+        "map_names": [
+          "fPage.TfrmPage.DisplayPage"
+        ]
+      },
+      {
+        "address": "012035ec",
+        "map_names": [
+          "fPage.TfrmPage.GetInitPage"
+        ]
+      },
+      {
+        "address": "0120360c",
+        "map_names": [
+          "fPage.TfrmPage.GetInitPatient"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fOrders.TfrmOrders.RefreshOrderList",
+    "address": "0117b000",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.RefreshOrderList_0117b000.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "004d2e10",
+        "map_names": [
+          "System.Classes.TList.Add"
+        ]
+      },
+      {
+        "address": "004d2ff0",
+        "map_names": [
+          "System.Classes.TList.Get"
+        ]
+      },
+      {
+        "address": "00608594",
+        "map_names": [
+          "Vcl.Controls.TWinControl.LockDrawing"
+        ]
+      },
+      {
+        "address": "006085cc",
+        "map_names": [
+          "Vcl.Controls.TWinControl.UnlockDrawing"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "009b60ec",
+        "map_names": [
+          "ORFn.StatusText"
+        ]
+      },
+      {
+        "address": "0117b878",
+        "map_names": [
+          "fOrders.TfrmOrders.SetCannedView"
+        ]
+      },
+      {
+        "address": "01187b88",
+        "map_names": [
+          "fOrders.TfrmOrders.CompressEventSection"
+        ]
+      },
+      {
+        "address": "01187c08",
+        "map_names": [
+          "fOrders.TfrmOrders.ExpandEventSection"
+        ]
+      },
+      {
+        "address": "0118a5e4",
+        "map_names": [
+          "fOrders.TfrmOrders.AddToListBox"
+        ]
+      },
+      {
+        "address": "0118d8e8",
+        "map_names": [
+          "fOrders.TfrmOrders.SetOrderRevwCol"
+        ]
+      },
+      {
+        "address": "011d6b48",
+        "map_names": [
+          "uCore.TNotifications.GetRecordID"
+        ]
+      },
+      {
+        "address": "011d6c8c",
+        "map_names": [
+          "uCore.TNotifications.GetIndOrderDisplay"
+        ]
+      },
+      {
+        "address": "011db7c0",
+        "map_names": [
+          "rOrders.ClearOrders"
+        ]
+      },
+      {
+        "address": "011dc634",
+        "map_names": [
+          "rOrders.LoadOrdersAbbr"
+        ]
+      },
+      {
+        "address": "011dcb68",
+        "map_names": [
+          "rOrders.LoadOrdersAbbr"
+        ]
+      },
+      {
+        "address": "011dccc0",
+        "map_names": [
+          "rOrders.LoadOrdersAbbr"
+        ]
+      },
+      {
+        "address": "011de8dc",
+        "map_names": [
+          "rOrders.SortOrders"
+        ]
+      },
+      {
+        "address": "011de93c",
+        "map_names": [
+          "rOrders.DGroupAll"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0117b48c",
+        "file_offset": 14133388,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 25,
+        "text": "Retrieving orders list..."
+      },
+      {
+        "address": "0117b4cc",
+        "file_offset": 14133452,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 65,
+        "text": "Active Orders (includes Pending & Recent Activity) - ALL SERVICES"
+      },
+      {
+        "address": "0117b55c",
+        "file_offset": 14133596,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 11,
+        "text": "ORTO DGROUP"
+      },
+      {
+        "address": "0117b580",
+        "file_offset": 14133632,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 12,
+        "text": "PHARMACY UAP"
+      },
+      {
+        "address": "0117b5a8",
+        "file_offset": 14133672,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": "DISCHARGE MEDS"
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.SetOrderView",
+    "address": "0117b7d4",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.SetOrderView_0117b7d4.c",
+    "numeric_callee_references": [
+      {
+        "address": "0117b678",
+        "map_names": [
+          "fOrders.TfrmOrders.CanChangeOrderView"
+        ]
+      },
+      {
+        "address": "0117b878",
+        "map_names": [
+          "fOrders.TfrmOrders.SetCannedView"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fOrders.TfrmOrders.SetCannedView",
+    "address": "0117b878",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.SetCannedView_0117b878.c",
+    "numeric_callee_references": [
+      {
+        "address": "004085a0",
+        "map_names": [
+          "System.@TRUNC"
+        ]
+      },
+      {
+        "address": "0040908c",
+        "map_names": [
+          "System.TObject.Create"
+        ]
+      },
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b3c4",
+        "map_names": [
+          "System.@UStrAsg"
+        ]
+      },
+      {
+        "address": "0040c18c",
+        "map_names": [
+          "System.@UStrCat3"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "00431328",
+        "map_names": [
+          "System.SysUtils.Now"
+        ]
+      },
+      {
+        "address": "00602684",
+        "map_names": [
+          "Vcl.Controls.TControl.SetPopupMenu"
+        ]
+      },
+      {
+        "address": "00709128",
+        "map_names": [
+          "Vcl.Menus.TMenuItem.SetEnabled"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "0079b0f0",
+        "map_names": [
+          "VAUtils.ShowMessage"
+        ]
+      },
+      {
+        "address": "007b1014",
+        "map_names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ]
+      },
+      {
+        "address": "009b0d84",
+        "map_names": [
+          "ORFn.DateTimeToFMDateTime"
+        ]
+      },
+      {
+        "address": "009b0e14",
+        "map_names": [
+          "ORFn.FMDateTimeToDateTime"
+        ]
+      },
+      {
+        "address": "0117b608",
+        "map_names": [
+          "fOrders.TfrmOrders.UseDefaultSort"
+        ]
+      },
+      {
+        "address": "0117b678",
+        "map_names": [
+          "fOrders.TfrmOrders.CanChangeOrderView"
+        ]
+      },
+      {
+        "address": "011ca6ac",
+        "map_names": [
+          "rCore.FMNow"
+        ]
+      },
+      {
+        "address": "011ca88c",
+        "map_names": [
+          "rCore.StrToFMDateTime"
+        ]
+      },
+      {
+        "address": "011d6b48",
+        "map_names": [
+          "uCore.TNotifications.GetRecordID"
+        ]
+      },
+      {
+        "address": "011db22c",
+        "map_names": [
+          "rOrders.ExpiredOrdersStartDT"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0117bcc0",
+        "file_offset": 14135488,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 4,
+        "text": "C;0^"
+      },
+      {
+        "address": "0117bcdc",
+        "file_offset": 14135516,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 67,
+        "text": "Error searching for FM date/time to begin search for expired orders"
+      },
+      {
+        "address": "0117bd70",
+        "file_offset": 14135664,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 22,
+        "text": "Unified Action Profile"
+      },
+      {
+        "address": "0117bdac",
+        "file_offset": 14135724,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 17,
+        "text": "ORTO SET UAP FLAG"
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.mnuViewActiveClick",
+    "address": "0117bdd0",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.mnuViewActiveClick_0117bdd0.c",
+    "numeric_callee_references": [
+      {
+        "address": "0066bd3c",
+        "map_names": [
+          "Vcl.ComCtrls.THeaderSection.SetText"
+        ]
+      },
+      {
+        "address": "0066bfe0",
+        "map_names": [
+          "Vcl.ComCtrls.THeaderSections.GetItem"
+        ]
+      },
+      {
+        "address": "0117d7c4",
+        "map_names": [
+          "fOrders.TfrmOrders.OrderViewReset"
+        ]
+      },
+      {
+        "address": "011de93c",
+        "map_names": [
+          "rOrders.DGroupAll"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0117be34",
+        "file_offset": 14135860,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 65,
+        "text": "Active Orders (includes Pending & Recent Activity) - ALL SERVICES"
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.mnuViewCurrentClick",
+    "address": "0117beb8",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.mnuViewCurrentClick_0117beb8.c",
+    "numeric_callee_references": [
+      {
+        "address": "0066bd3c",
+        "map_names": [
+          "Vcl.ComCtrls.THeaderSection.SetText"
+        ]
+      },
+      {
+        "address": "0066bfe0",
+        "map_names": [
+          "Vcl.ComCtrls.THeaderSections.GetItem"
+        ]
+      },
+      {
+        "address": "0117d7c4",
+        "map_names": [
+          "fOrders.TfrmOrders.OrderViewReset"
+        ]
+      },
+      {
+        "address": "011de93c",
+        "map_names": [
+          "rOrders.DGroupAll"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0117bf1c",
+        "file_offset": 14136092,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 60,
+        "text": "Current Orders (Active & Pending Status Only) - ALL SERVICES"
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.mnuViewDetailClick",
+    "address": "0117cc00",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.mnuViewDetailClick_0117cc00.c",
+    "numeric_callee_references": [
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040a734",
+        "map_names": [
+          "System.@TryFinallyExit"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b40c",
+        "map_names": [
+          "System.@UStrLAsg"
+        ]
+      },
+      {
+        "address": "0040c18c",
+        "map_names": [
+          "System.@UStrCat3"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0040c4b0",
+        "map_names": [
+          "System.@UStrPos"
+        ]
+      },
+      {
+        "address": "0040c74c",
+        "map_names": [
+          "System.StringOfChar"
+        ]
+      },
+      {
+        "address": "0042c1a8",
+        "map_names": [
+          "System.SysUtils.UpperCase"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "00631c70",
+        "map_names": [
+          "Vcl.StdCtrls.TCustomListBox.GetSelected"
+        ]
+      },
+      {
+        "address": "00631cb4",
+        "map_names": [
+          "Vcl.StdCtrls.TCustomListBox.SetSelected"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "0079c19c",
+        "map_names": [
+          "VAUtils.ShowMsg"
+        ]
+      },
+      {
+        "address": "009b1b30",
+        "map_names": [
+          "ORFn.StrToFloatDef"
+        ]
+      },
+      {
+        "address": "009b4030",
+        "map_names": [
+          "ORFn.FastAddStrings"
+        ]
+      },
+      {
+        "address": "009b60ec",
+        "map_names": [
+          "ORFn.StatusText"
+        ]
+      },
+      {
+        "address": "00adde04",
+        "map_names": [
+          "rMeds.MedAdminHistory"
+        ]
+      },
+      {
+        "address": "00febee8",
+        "map_names": [
+          "fFrame.TfrmFrame.GetTimedOut"
+        ]
+      },
+      {
+        "address": "010048d0",
+        "map_names": [
+          "fFrame.TfrmFrame.GetCCOWDriveChange"
+        ]
+      },
+      {
+        "address": "01007fec",
+        "map_names": [
+          "fRptBox.ReportBox"
+        ]
+      },
+      {
+        "address": "01181714",
+        "map_names": [
+          "fOrders.TfrmOrders.NoneSelected"
+        ]
+      },
+      {
+        "address": "011dabac",
+        "map_names": [
+          "rOrders.getDetailOrder"
+        ]
+      },
+      {
+        "address": "011db5e4",
+        "map_names": [
+          "rOrders.CheckOrderGroup"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0117cf94",
+        "file_offset": 14140308,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 77,
+        "text": "No orders are highlighted.  Highlight the orders\r\nyou wish to take action on."
+      },
+      {
+        "address": "0117d03c",
+        "file_offset": 14140476,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 27,
+        "text": "Retrieving order details..."
+      },
+      {
+        "address": "0117d080",
+        "file_offset": 14140544,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 48,
+        "text": "Detail view is not available for selected order."
+      },
+      {
+        "address": "0117d0f0",
+        "file_offset": 14140656,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 10,
+        "text": "Inpt. Meds"
+      },
+      {
+        "address": "0117d114",
+        "file_offset": 14140692,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 9,
+        "text": "Out. Meds"
+      },
+      {
+        "address": "0117d134",
+        "file_offset": 14140724,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 16,
+        "text": "Clinic Infusions"
+      },
+      {
+        "address": "0117d164",
+        "file_offset": 14140772,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 18,
+        "text": "Clinic Medications"
+      },
+      {
+        "address": "0117d198",
+        "file_offset": 14140824,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 8,
+        "text": "Infusion"
+      },
+      {
+        "address": "0117d1b8",
+        "file_offset": 14140856,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 7,
+        "text": "PICK UP"
+      },
+      {
+        "address": "0117d1d4",
+        "file_offset": 14140884,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 16,
+        "text": "Order Details - "
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.lstSheetsClick",
+    "address": "0117dc1c",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.lstSheetsClick_0117dc1c.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040908c",
+        "map_names": [
+          "System.TObject.Create"
+        ]
+      },
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040c18c",
+        "map_names": [
+          "System.@UStrCat3"
+        ]
+      },
+      {
+        "address": "0042cfdc",
+        "map_names": [
+          "System.SysUtils.IntToStr"
+        ]
+      },
+      {
+        "address": "0042d238",
+        "map_names": [
+          "System.SysUtils.StrToIntDef"
+        ]
+      },
+      {
+        "address": "006026ac",
+        "map_names": [
+          "Vcl.Controls.TControl.GetText"
+        ]
+      },
+      {
+        "address": "006026fc",
+        "map_names": [
+          "Vcl.Controls.TControl.SetText"
+        ]
+      },
+      {
+        "address": "00709244",
+        "map_names": [
+          "Vcl.Menus.TMenuItem.SetVisible"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "007b1014",
+        "map_names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ]
+      },
+      {
+        "address": "007b10c8",
+        "map_names": [
+          "ORCtrls.TORListBox.SetCaption"
+        ]
+      },
+      {
+        "address": "009b44a8",
+        "map_names": [
+          "ORFn.InfoBox"
+        ]
+      },
+      {
+        "address": "010e36b0",
+        "map_names": [
+          "uOrders.CloseOrdering"
+        ]
+      },
+      {
+        "address": "01187cdc",
+        "map_names": [
+          "fOrders.TfrmOrders.InitOrderSheetsForEvtDelay"
+        ]
+      },
+      {
+        "address": "0118a6b4",
+        "map_names": [
+          "fOrders.TfrmOrders.ChangesUpdate"
+        ]
+      },
+      {
+        "address": "0118a80c",
+        "map_names": [
+          "fOrders.TfrmOrders.PtEvtCompleted"
+        ]
+      },
+      {
+        "address": "011e0340",
+        "map_names": [
+          "rOrders.LoadWriteOrders"
+        ]
+      },
+      {
+        "address": "011e03b0",
+        "map_names": [
+          "rOrders.LoadWriteOrdersED"
+        ]
+      },
+      {
+        "address": "011e3810",
+        "map_names": [
+          "rOrders.DeletePtEvent"
+        ]
+      },
+      {
+        "address": "011e3bc0",
+        "map_names": [
+          "rOrders.PtEvtEmpty"
+        ]
+      },
+      {
+        "address": "011e6e9c",
+        "map_names": [
+          "rOrders.DeleteEmptyEvt"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0117e2f8",
+        "file_offset": 14145272,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "Write "
+      },
+      {
+        "address": "0117e314",
+        "file_offset": 14145300,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 12,
+        "text": "Confirmation"
+      },
+      {
+        "address": "0117e33c",
+        "file_offset": 14145340,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 68,
+        "text": "There are no orders tied to this event, would you like to cancel it?"
+      },
+      {
+        "address": "0117e3d4",
+        "file_offset": 14145492,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 12,
+        "text": "Write Orders"
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.RetrieveVisibleOrders",
+    "address": "0117e3f0",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.RetrieveVisibleOrders_0117e3f0.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040908c",
+        "map_names": [
+          "System.TObject.Create"
+        ]
+      },
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "004d2e10",
+        "map_names": [
+          "System.Classes.TList.Add"
+        ]
+      },
+      {
+        "address": "004d2ff0",
+        "map_names": [
+          "System.Classes.TList.Get"
+        ]
+      },
+      {
+        "address": "011ddc0c",
+        "map_names": [
+          "rOrders.RetrieveOrderFields"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fOrders.TfrmOrders.GetPlainText",
+    "address": "0117e4e8",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.GetPlainText_0117e4e8.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0066bfe0",
+        "map_names": [
+          "Vcl.ComCtrls.THeaderSections.GetItem"
+        ]
+      },
+      {
+        "address": "0117ea50",
+        "map_names": [
+          "fOrders.TfrmOrders.GetOrderText"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0117e5e4",
+        "file_offset": 14146020,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 5,
+        "text": "Event"
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.GetStartStopText",
+    "address": "0117e84c",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.GetStartStopText_0117e84c.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      },
+      {
+        "address": "0040b3c4",
+        "map_names": [
+          "System.@UStrAsg"
+        ]
+      },
+      {
+        "address": "0040b40c",
+        "map_names": [
+          "System.@UStrLAsg"
+        ]
+      },
+      {
+        "address": "0040c18c",
+        "map_names": [
+          "System.@UStrCat3"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "009b1794",
+        "map_names": [
+          "ORFn.FormatFMDateTimeStr"
+        ]
+      },
+      {
+        "address": "009b17dc",
+        "map_names": [
+          "ORFn.IsFMDateTime"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0117e9e4",
+        "file_offset": 14147044,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": "mm/dd/yy hh:nn"
+      },
+      {
+        "address": "0117ea10",
+        "file_offset": 14147088,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 7,
+        "text": "Start: "
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.GetOrderText",
+    "address": "0117ea50",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.GetOrderText_0117ea50.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b034",
+        "map_names": [
+          "System.@UStrArrayClr"
+        ]
+      },
+      {
+        "address": "0040b3c4",
+        "map_names": [
+          "System.@UStrAsg"
+        ]
+      },
+      {
+        "address": "0040c134",
+        "map_names": [
+          "System.@UStrCat"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0042c5fc",
+        "map_names": [
+          "System.SysUtils.Trim"
+        ]
+      },
+      {
+        "address": "0042ef18",
+        "map_names": [
+          "System.SysUtils.Format"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "007b1014",
+        "map_names": [
+          "ORCtrls.TORListBox.GetMItems"
+        ]
+      },
+      {
+        "address": "009b2a68",
+        "map_names": [
+          "ORFn.MixedCase"
+        ]
+      },
+      {
+        "address": "011dad98",
+        "map_names": [
+          "rOrders.NameOfStatus"
+        ]
+      },
+      {
+        "address": "011dd930",
+        "map_names": [
+          "rOrders.LoadFlagReasons"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0117ed88",
+        "file_offset": 14147976,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 26,
+        "text": "C;0^Unified Action Profile"
+      },
+      {
+        "address": "0117edcc",
+        "file_offset": 14148044,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "%s\r\n%s"
+      },
+      {
+        "address": "0117ede8",
+        "file_offset": 14148072,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 11,
+        "text": "  *Flagged*"
+      },
+      {
+        "address": "0117ee0c",
+        "file_offset": 14148108,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": ","
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.lstOrdersDblClick",
+    "address": "0117f5dc",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.lstOrdersDblClick_0117f5dc.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "fOrders.TfrmOrders.NoneSelected",
+    "address": "01181714",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.NoneSelected_01181714.c",
+    "numeric_callee_references": [
+      {
+        "address": "009b44a8",
+        "map_names": [
+          "ORFn.InfoBox"
+        ]
+      },
+      {
+        "address": "0117b81c",
+        "map_names": [
+          "fOrders.TfrmOrders.SelCount"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "0118175c",
+        "file_offset": 14158684,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 18,
+        "text": "No Orders Selected"
+      }
+    ]
+  },
+  {
+    "function": "fOrders.TfrmOrders.hdrOrdersSectionClick",
+    "address": "0118c37c",
+    "status": "decompiled",
+    "file": "fOrders.TfrmOrders.hdrOrdersSectionClick_0118c37c.c",
+    "numeric_callee_references": [
+      {
+        "address": "004d367c",
+        "map_names": [
+          "System.Classes.TList.Sort"
+        ]
+      },
+      {
+        "address": "0066bfe0",
+        "map_names": [
+          "Vcl.ComCtrls.THeaderSections.GetItem"
+        ]
+      },
+      {
+        "address": "0117adbc",
+        "map_names": [
+          "fOrders.TfrmOrders.RedrawOrderList"
+        ]
+      },
+      {
+        "address": "0118bfb0",
+        "map_names": [
+          "fOrders.TfrmOrders.mnuOptimizeFieldsClick"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "rOrders.getDetailOrder",
+    "address": "011dabac",
+    "status": "decompiled",
+    "file": "rOrders.getDetailOrder_011dabac.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": [
+      {
+        "address": "011dac04",
+        "file_offset": 14524420,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 12,
+        "text": "ORQOR DETAIL"
+      }
+    ]
+  },
+  {
+    "function": "rOrders.NameOfStatus",
+    "address": "011dad98",
+    "status": "decompiled",
+    "file": "rOrders.NameOfStatus_011dad98.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b3c4",
+        "map_names": [
+          "System.@UStrAsg"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "011daf80",
+        "file_offset": 14525312,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 5,
+        "text": "error"
+      },
+      {
+        "address": "011daf98",
+        "file_offset": 14525336,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 12,
+        "text": "discontinued"
+      },
+      {
+        "address": "011dafc0",
+        "file_offset": 14525376,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 8,
+        "text": "complete"
+      },
+      {
+        "address": "011dafe0",
+        "file_offset": 14525408,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 4,
+        "text": "hold"
+      },
+      {
+        "address": "011daff8",
+        "file_offset": 14525432,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 7,
+        "text": "flagged"
+      },
+      {
+        "address": "011db014",
+        "file_offset": 14525460,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 7,
+        "text": "pending"
+      },
+      {
+        "address": "011db030",
+        "file_offset": 14525488,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "active"
+      },
+      {
+        "address": "011db04c",
+        "file_offset": 14525516,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 7,
+        "text": "expired"
+      },
+      {
+        "address": "011db068",
+        "file_offset": 14525544,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 9,
+        "text": "scheduled"
+      },
+      {
+        "address": "011db088",
+        "file_offset": 14525576,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 15,
+        "text": "partial results"
+      },
+      {
+        "address": "011db0b4",
+        "file_offset": 14525620,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 7,
+        "text": "delayed"
+      },
+      {
+        "address": "011db0d0",
+        "file_offset": 14525648,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 10,
+        "text": "unreleased"
+      },
+      {
+        "address": "011db0f4",
+        "file_offset": 14525684,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 7,
+        "text": "dc/edit"
+      },
+      {
+        "address": "011db110",
+        "file_offset": 14525712,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 9,
+        "text": "cancelled"
+      },
+      {
+        "address": "011db130",
+        "file_offset": 14525744,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 6,
+        "text": "lapsed"
+      },
+      {
+        "address": "011db14c",
+        "file_offset": 14525772,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 7,
+        "text": "renewed"
+      },
+      {
+        "address": "011db168",
+        "file_offset": 14525800,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 3,
+        "text": "new"
+      },
+      {
+        "address": "011db17c",
+        "file_offset": 14525820,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 9,
+        "text": "no status"
+      }
+    ]
+  },
+  {
+    "function": "rOrders.GetOrderStatus",
+    "address": "011db190",
+    "status": "decompiled",
+    "file": "rOrders.GetOrderStatus_011db190.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040afd4",
+        "map_names": [
+          "System.@UStrClr"
+        ]
+      },
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "011db20c",
+        "file_offset": 14525964,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 15,
+        "text": "OREVNTX1 GETSTS"
+      }
+    ]
+  },
+  {
+    "function": "rOrders.ClearOrders",
+    "address": "011db7c0",
+    "status": "decompiled",
+    "file": "rOrders.ClearOrders_011db7c0.c",
+    "numeric_callee_references": [
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "004d2ff0",
+        "map_names": [
+          "System.Classes.TList.Get"
+        ]
+      }
+    ],
+    "delphi_string_literals": []
+  },
+  {
+    "function": "rOrders.LoadOrdersAbbr",
+    "address": "011dc634",
+    "status": "decompiled",
+    "file": "rOrders.LoadOrdersAbbr_011dc634.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040908c",
+        "map_names": [
+          "System.TObject.Create"
+        ]
+      },
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      },
+      {
+        "address": "0040c18c",
+        "map_names": [
+          "System.@UStrCat3"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0042cfdc",
+        "map_names": [
+          "System.SysUtils.IntToStr"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "0079b0f0",
+        "map_names": [
+          "VAUtils.ShowMessage"
+        ]
+      },
+      {
+        "address": "011ca6ac",
+        "map_names": [
+          "rCore.FMNow"
+        ]
+      },
+      {
+        "address": "011dad28",
+        "map_names": [
+          "rOrders.LoadDGroupMap"
+        ]
+      },
+      {
+        "address": "011db22c",
+        "map_names": [
+          "rOrders.ExpiredOrdersStartDT"
+        ]
+      },
+      {
+        "address": "011dbf3c",
+        "map_names": [
+          "rOrders.ConvertOrders"
+        ]
+      },
+      {
+        "address": "011dc258",
+        "map_names": [
+          "rOrders.RefreshOrders"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "011dca0c",
+        "file_offset": 14532108,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "^"
+      },
+      {
+        "address": "011dca1c",
+        "file_offset": 14532124,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 11,
+        "text": "ORWORR AGET"
+      },
+      {
+        "address": "011dca40",
+        "file_offset": 14532160,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "0"
+      },
+      {
+        "address": "011dca50",
+        "file_offset": 14532176,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 67,
+        "text": "ERROR searching for FM date/time to begin search for expired orders"
+      },
+      {
+        "address": "011dcae4",
+        "file_offset": 14532324,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 4,
+        "text": "27^0"
+      },
+      {
+        "address": "011dcafc",
+        "file_offset": 14532348,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 52,
+        "text": "Recently Expired Orders (No Expiring Orders Found) -"
+      }
+    ]
+  },
+  {
+    "function": "rOrders.LoadOrdersAbbr",
+    "address": "011dcb68",
+    "status": "decompiled",
+    "file": "rOrders.LoadOrdersAbbr_011dcb68.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040908c",
+        "map_names": [
+          "System.TObject.Create"
+        ]
+      },
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "011dad28",
+        "map_names": [
+          "rOrders.LoadDGroupMap"
+        ]
+      },
+      {
+        "address": "011dbf3c",
+        "map_names": [
+          "rOrders.ConvertOrders"
+        ]
+      },
+      {
+        "address": "011dc258",
+        "map_names": [
+          "rOrders.RefreshOrders"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "011dcc98",
+        "file_offset": 14532760,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 19,
+        "text": "ORB FOLLOW-UP ARRAY"
+      }
+    ]
+  },
+  {
+    "function": "rOrders.LoadOrdersAbbr",
+    "address": "011dccc0",
+    "status": "decompiled",
+    "file": "rOrders.LoadOrdersAbbr_011dccc0.c",
+    "numeric_callee_references": [
+      {
+        "address": "0040908c",
+        "map_names": [
+          "System.TObject.Create"
+        ]
+      },
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "0040b0c8",
+        "map_names": [
+          "System.@UStrAddRef"
+        ]
+      },
+      {
+        "address": "0040b3c4",
+        "map_names": [
+          "System.@UStrAsg"
+        ]
+      },
+      {
+        "address": "0040c214",
+        "map_names": [
+          "System.@UStrCatN"
+        ]
+      },
+      {
+        "address": "0040c324",
+        "map_names": [
+          "System.@UStrEqual"
+        ]
+      },
+      {
+        "address": "0042c528",
+        "map_names": [
+          "System.SysUtils.AnsiCompareText"
+        ]
+      },
+      {
+        "address": "0042cfdc",
+        "map_names": [
+          "System.SysUtils.IntToStr"
+        ]
+      },
+      {
+        "address": "0042d238",
+        "map_names": [
+          "System.SysUtils.StrToIntDef"
+        ]
+      },
+      {
+        "address": "004d2e10",
+        "map_names": [
+          "System.Classes.TList.Add"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      },
+      {
+        "address": "0079acec",
+        "map_names": [
+          "VAUtils.Piece"
+        ]
+      },
+      {
+        "address": "009b18cc",
+        "map_names": [
+          "ORFn.MakeFMDateTime"
+        ]
+      },
+      {
+        "address": "011ca6ac",
+        "map_names": [
+          "rCore.FMNow"
+        ]
+      },
+      {
+        "address": "011dad28",
+        "map_names": [
+          "rOrders.LoadDGroupMap"
+        ]
+      },
+      {
+        "address": "011db550",
+        "map_names": [
+          "rOrders.SeqOfDGroup"
+        ]
+      },
+      {
+        "address": "011dc258",
+        "map_names": [
+          "rOrders.RefreshOrders"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "011dd1a0",
+        "file_offset": 14534048,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "^"
+      },
+      {
+        "address": "011dd1b0",
+        "file_offset": 14534064,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 11,
+        "text": "ORWORR RGET"
+      },
+      {
+        "address": "011dd1d4",
+        "file_offset": 14534100,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 1,
+        "text": "0"
+      },
+      {
+        "address": "011dd1e4",
+        "file_offset": 14534116,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 16,
+        "text": "No orders found."
+      },
+      {
+        "address": "011dd214",
+        "file_offset": 14534164,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 8,
+        "text": "DC START"
+      }
+    ]
+  },
+  {
+    "function": "rOrders.RetrieveOrderFields",
+    "address": "011ddc0c",
+    "status": "decompiled",
+    "file": "rOrders.RetrieveOrderFields_011ddc0c.c",
+    "numeric_callee_references": [
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "004d2ff0",
+        "map_names": [
+          "System.Classes.TList.Get"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "011de0d8",
+        "file_offset": 14537944,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": "ORWORR GET4LST"
+      }
+    ]
+  },
+  {
+    "function": "rOrders.ListOrderFiltersAll",
+    "address": "011df26c",
+    "status": "decompiled",
+    "file": "rOrders.ListOrderFiltersAll_011df26c.c",
+    "numeric_callee_references": [],
+    "delphi_string_literals": [
+      {
+        "address": "011df2a4",
+        "file_offset": 14542500,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 14,
+        "text": "ORWORDG REVSTS"
+      }
+    ]
+  },
+  {
+    "function": "rOrders.TextForOrder",
+    "address": "011e3c68",
+    "status": "decompiled",
+    "file": "rOrders.TextForOrder_011e3c68.c",
+    "numeric_callee_references": [
+      {
+        "address": "004090bc",
+        "map_names": [
+          "System.TObject.Free"
+        ]
+      },
+      {
+        "address": "004d81f4",
+        "map_names": [
+          "System.Classes.TStringList.Create"
+        ]
+      }
+    ],
+    "delphi_string_literals": [
+      {
+        "address": "011e3cf0",
+        "file_offset": 14561520,
+        "codepage": 1200,
+        "element_width": 2,
+        "length": 13,
+        "text": "ORWORR GETTXT"
+      }
+    ]
+  }
+]

@@ -1,0 +1,379 @@
+{
+  "class": "TfrmTimeout",
+  "name": "frmTimeout",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 418,
+    "Top": 200,
+    "BorderIcons": [],
+    "BorderStyle": "bsDialog",
+    "Caption": "CPRS Timeout",
+    "ClientHeight": 192,
+    "ClientWidth": 270,
+    "FormStyle": "fsStayOnTop",
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 282,
+    "ExplicitHeight": 230,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 270,
+        "Height": 41,
+        "Align": "alTop",
+        "Anchors": [
+          "akLeft",
+          "akTop",
+          "akRight",
+          "akBottom"
+        ],
+        "BevelOuter": "bvNone",
+        "TabOrder": 0,
+        "DesignSize": [
+          270,
+          41
+        ]
+      },
+      "children": [
+        {
+          "class": "TStaticText",
+          "name": "Label1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 8,
+            "Width": 235,
+            "Height": 17,
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akBottom"
+            ],
+            "Caption": "VistA CPRS has been idle and will close!",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false,
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "Label2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 24,
+            "Width": 234,
+            "Height": 17,
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akBottom"
+            ],
+            "Caption": "Press the button to continue working with CPRS.",
+            "TabOrder": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 151,
+        "Width": 270,
+        "Height": 41,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "TabOrder": 1,
+        "DesignSize": [
+          270,
+          41
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 182,
+            "Top": 8,
+            "Width": 75,
+            "Height": 25,
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akBottom"
+            ],
+            "Caption": "Close CPRS",
+            "ModalResult": 1,
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdContinue",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 71,
+            "Top": 8,
+            "Width": 105,
+            "Height": 25,
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akBottom"
+            ],
+            "Cancel": true,
+            "Caption": "Don't Close CPRS",
+            "Default": true,
+            "ModalResult": 2,
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TStaticText",
+          "name": "lblCount",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 8,
+            "Width": 30,
+            "Height": 33,
+            "Alignment": "taRightJustify",
+            "Anchors": [
+              "akLeft",
+              "akTop",
+              "akBottom"
+            ],
+            "Caption": "10",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -24,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [],
+            "ParentFont": false,
+            "TabOrder": 2
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlWarning",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 41,
+        "Width": 270,
+        "Height": 110,
+        "Align": "alTop",
+        "BevelOuter": "bvNone",
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TImage",
+          "name": "imgWarning",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 4,
+            "Width": 41,
+            "Height": 33,
+            "Picture.Data": {
+              "binary_bytes": 5538
+            }
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblWarning",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 90,
+            "Top": 13,
+            "Width": 67,
+            "Height": 20,
+            "Caption": "Warning",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -16,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblWarningMultiple",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 47,
+            "Width": 182,
+            "Height": 13,
+            "Caption": "Multiple sessions of CPRS are running."
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblWarningContinue",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 62,
+            "Width": 177,
+            "Height": 13,
+            "Caption": "This session applies to patient:",
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblWarningPatient",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 90,
+            "Width": 5,
+            "Height": 13,
+            "Font.Charset": "DEFAULT_CHARSET",
+            "Font.Color": "clWindowText",
+            "Font.Height": -11,
+            "Font.Name": "MS Sans Serif",
+            "Font.Style": [
+              "fsBold"
+            ],
+            "ParentFont": false
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 235,
+        "Top": 88,
+        "Data": [
+          [
+            "Component = frmTimeout",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Label1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = Label2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdContinue",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblCount",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlWarning",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TTimer",
+      "name": "timCountDown",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Interval": 5000,
+        "OnTimer": "timCountDownTimer",
+        "Left": 236,
+        "Top": 52
+      },
+      "children": []
+    }
+  ]
+}

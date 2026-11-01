@@ -1,0 +1,62 @@
+{
+  "class": "TfrDSTMgr",
+  "name": "frDSTMgr",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 199,
+    "Height": 50,
+    "Color": "clBtnFace",
+    "ParentBackground": false,
+    "ParentColor": false,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TButton",
+      "name": "btnLaunchToolbox",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "AlignWithMargins": true,
+        "Left": 3,
+        "Top": 3,
+        "Width": 193,
+        "Height": 44,
+        "Action": "acDST",
+        "Align": "alClient",
+        "TabOrder": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TActionList",
+      "name": "alDST",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 160,
+        "Top": 8
+      },
+      "children": [
+        {
+          "class": "TAction",
+          "name": "acDST",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Launch DST",
+            "OnExecute": "acDSTExecute"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

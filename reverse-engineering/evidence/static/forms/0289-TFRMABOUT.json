@@ -1,0 +1,545 @@
+{
+  "class": "TfrmAbout",
+  "name": "frmAbout",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 346,
+    "Top": 50,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "BorderStyle": "bsDialog",
+    "Caption": "About CPRS",
+    "ClientHeight": 386,
+    "ClientWidth": 665,
+    "ExplicitWidth": 671,
+    "ExplicitHeight": 415,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 199,
+        "Width": 665,
+        "Height": 187,
+        "Margins.Left": 2,
+        "Margins.Top": 2,
+        "Margins.Right": 2,
+        "Margins.Bottom": 2,
+        "Align": "alBottom",
+        "BevelEdges": [],
+        "BevelOuter": "bvNone",
+        "Locked": true,
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlButton",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 149,
+            "Width": 659,
+            "Height": 35,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "Locked": true,
+            "TabOrder": 2
+          },
+          "children": [
+            {
+              "class": "TButton",
+              "name": "cmdOK",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 564,
+                "Top": 3,
+                "Width": 71,
+                "Height": 24,
+                "Margins.Left": 2,
+                "Margins.Right": 24,
+                "Margins.Bottom": 8,
+                "Align": "alRight",
+                "Cancel": true,
+                "Caption": "OK",
+                "Default": true,
+                "ModalResult": 1,
+                "TabOrder": 0
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlCopyright",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 24,
+            "Top": 0,
+            "Width": 617,
+            "Height": 41,
+            "Margins.Left": 24,
+            "Margins.Top": 0,
+            "Margins.Right": 24,
+            "Margins.Bottom": 0,
+            "Align": "alTop",
+            "BevelOuter": "bvLowered",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TMemo",
+              "name": "lblLegalCopyright",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 4,
+                "Top": 4,
+                "Width": 609,
+                "Height": 33,
+                "Align": "alClient",
+                "BevelInner": "bvNone",
+                "BevelOuter": "bvNone",
+                "BorderStyle": "bsNone",
+                "Color": "clBtnFace",
+                "Lines.Strings": [
+                  "lblLegalCopyright"
+                ],
+                "ReadOnly": true,
+                "TabOrder": 0
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnl508Disclaimer",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 24,
+            "Top": 41,
+            "Width": 617,
+            "Height": 97,
+            "Margins.Left": 24,
+            "Margins.Top": 0,
+            "Margins.Right": 24,
+            "Margins.Bottom": 8,
+            "Align": "alClient",
+            "BevelOuter": "bvLowered",
+            "Locked": true,
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TMemo",
+              "name": "lbl508Notice",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 4,
+                "Top": 4,
+                "Width": 609,
+                "Height": 89,
+                "Align": "alClient",
+                "BorderStyle": "bsNone",
+                "Color": "clBtnFace",
+                "Lines.Strings": [
+                  "Department of Veterans Affairs staff have made every effort during the design, development and testing of this application ",
+                  "to ensure full accessibility to all users in compliance with Section 508 of the Rehabilitation Act of 1973, as amended.  ",
+                  "If any issues are encountered while running this application, please contact your local help desk for support."
+                ],
+                "ReadOnly": true,
+                "TabOrder": 0,
+                "WantReturns": false
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlTop",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 665,
+        "Height": 199,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlLogo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 24,
+            "Top": 24,
+            "Width": 289,
+            "Height": 151,
+            "Margins.Left": 24,
+            "Margins.Top": 24,
+            "Margins.Right": 0,
+            "Margins.Bottom": 24,
+            "Align": "alLeft",
+            "BevelInner": "bvLowered",
+            "BorderWidth": 1,
+            "Caption": "pnlLogo",
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TImage",
+              "name": "Image1",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 3,
+                "Top": 3,
+                "Width": 283,
+                "Height": 145,
+                "Margins.Left": 2,
+                "Margins.Top": 2,
+                "Margins.Right": 2,
+                "Margins.Bottom": 2,
+                "Align": "alClient",
+                "Center": true,
+                "Picture.Data": {
+                  "binary_bytes": 48790
+                },
+                "Proportional": true,
+                "Stretch": true,
+                "ExplicitLeft": 10,
+                "ExplicitTop": 10,
+                "ExplicitWidth": 300,
+                "ExplicitHeight": 161
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 316,
+            "Top": 24,
+            "Width": 346,
+            "Height": 172,
+            "Margins.Top": 24,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "ShowCaption": false,
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TStaticText",
+              "name": "lblFileVersion",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 2,
+                "Top": 30,
+                "Width": 320,
+                "Height": 17,
+                "Margins.Left": 2,
+                "Margins.Top": 2,
+                "Margins.Right": 24,
+                "Margins.Bottom": 2,
+                "Align": "alTop",
+                "Alignment": "taRightJustify",
+                "Caption": "lblFileVersion",
+                "TabOrder": 1,
+                "TabStop": true,
+                "Visible": false
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblComments",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 2,
+                "Top": 51,
+                "Width": 320,
+                "Height": 17,
+                "Margins.Left": 2,
+                "Margins.Top": 2,
+                "Margins.Right": 24,
+                "Margins.Bottom": 2,
+                "Align": "alTop",
+                "Alignment": "taRightJustify",
+                "Caption": "lblComments",
+                "TabOrder": 2,
+                "TabStop": true
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblInternalName",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 2,
+                "Top": 72,
+                "Width": 320,
+                "Height": 17,
+                "Margins.Left": 2,
+                "Margins.Top": 2,
+                "Margins.Right": 24,
+                "Margins.Bottom": 2,
+                "Align": "alTop",
+                "Alignment": "taRightJustify",
+                "Caption": "lblInternalName",
+                "TabOrder": 3,
+                "TabStop": true
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblProductName",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 24,
+                "Top": 2,
+                "Width": 298,
+                "Height": 24,
+                "Margins.Left": 24,
+                "Margins.Top": 2,
+                "Margins.Right": 24,
+                "Margins.Bottom": 2,
+                "Align": "alTop",
+                "Alignment": "taRightJustify",
+                "Caption": "lblProductName",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -16,
+                "Font.Name": "MS Sans Serif",
+                "Font.Style": [],
+                "ParentFont": false,
+                "TabOrder": 0,
+                "TabStop": true
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblCompanyName",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 24,
+                "Top": 93,
+                "Width": 298,
+                "Height": 17,
+                "Margins.Left": 24,
+                "Margins.Top": 2,
+                "Margins.Right": 24,
+                "Margins.Bottom": 2,
+                "Align": "alTop",
+                "Alignment": "taRightJustify",
+                "Caption": "lblCompanyName",
+                "TabOrder": 4,
+                "TabStop": true
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblOriginalFileName",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 24,
+                "Top": 114,
+                "Width": 298,
+                "Height": 17,
+                "Margins.Left": 24,
+                "Margins.Top": 2,
+                "Margins.Right": 24,
+                "Margins.Bottom": 2,
+                "Align": "alTop",
+                "Alignment": "taRightJustify",
+                "Caption": "lblOriginalFileName",
+                "TabOrder": 5,
+                "TabStop": true
+              },
+              "children": []
+            },
+            {
+              "class": "TStaticText",
+              "name": "lblCRC",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 24,
+                "Top": 135,
+                "Width": 298,
+                "Height": 17,
+                "Margins.Left": 24,
+                "Margins.Top": 2,
+                "Margins.Right": 24,
+                "Margins.Bottom": 2,
+                "Align": "alTop",
+                "Alignment": "taRightJustify",
+                "Caption": "lblCRC",
+                "TabOrder": 6,
+                "TabStop": true
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 48,
+        "Top": 32,
+        "Data": [
+          [
+            "Component = lblProductName",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblFileVersion",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblCompanyName",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblComments",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblCRC",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblInternalName",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblOriginalFileName",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlLogo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmAbout",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlButton",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlCopyright",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lblLegalCopyright",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnl508Disclaimer",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lbl508Notice",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlInfo",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlTop",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

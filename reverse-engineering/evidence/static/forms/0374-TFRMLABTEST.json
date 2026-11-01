@@ -1,0 +1,229 @@
+{
+  "class": "TfrmLabTest",
+  "name": "frmLabTest",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 776,
+    "Top": 338,
+    "Caption": "Select Lab Test for Graph",
+    "ClientHeight": 281,
+    "ClientWidth": 277,
+    "OldCreateOrder": true,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "ExplicitWidth": 285,
+    "ExplicitHeight": 308,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlLabTest",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 277,
+        "Height": 281,
+        "Align": "alClient",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblTest",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 8,
+            "Width": 74,
+            "Height": 13,
+            "Caption": "Laboratory Test"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblSpecimen",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 238,
+            "Width": 47,
+            "Height": 13,
+            "Caption": "Specimen"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "lblSpecInfo",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 180,
+            "Top": 222,
+            "Width": 89,
+            "Height": 55,
+            "AutoSize": false,
+            "Caption": "A specimen can be selected to restrict values only for that specimen.",
+            "WordWrap": true
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 197,
+            "Top": 22,
+            "Width": 72,
+            "Height": 21,
+            "Caption": "OK",
+            "TabOrder": 2,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 197,
+            "Top": 49,
+            "Width": 72,
+            "Height": 21,
+            "Cancel": true,
+            "Caption": "Cancel",
+            "ModalResult": 2,
+            "TabOrder": 3
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 22,
+            "Width": 160,
+            "Height": 200,
+            "Style": "orcsSimple",
+            "AutoSelect": true,
+            "Caption": "Laboratory Test",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": true,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "ParentShowHint": false,
+            "Pieces": "2",
+            "ShowHint": true,
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 0,
+            "OnDblClick": "cmdOKClick",
+            "OnEnter": "cboListEnter",
+            "OnExit": "cboListExit",
+            "OnNeedData": "cboListNeedData",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TORComboBox",
+          "name": "cboSpecimen",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 8,
+            "Top": 252,
+            "Width": 160,
+            "Height": 21,
+            "Style": "orcsDropDown",
+            "AutoSelect": true,
+            "Caption": "Specimen",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": true,
+            "LongList": true,
+            "LookupPiece": 0,
+            "MaxLength": 0,
+            "ParentShowHint": false,
+            "Pieces": "2",
+            "ShowHint": true,
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 1,
+            "OnNeedData": "cboSpecimenNeedData",
+            "CharsNeedMatch": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = pnlLabTest",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSpecimen",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmLabTest",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

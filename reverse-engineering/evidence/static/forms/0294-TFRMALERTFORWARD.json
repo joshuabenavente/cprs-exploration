@@ -1,0 +1,337 @@
+{
+  "class": "TfrmAlertForward",
+  "name": "frmAlertForward",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 297,
+    "Top": 206,
+    "BorderStyle": "bsDialog",
+    "Caption": "Forward Alert",
+    "ClientHeight": 382,
+    "ClientWidth": 385,
+    "Position": "poScreenCenter",
+    "ExplicitWidth": 393,
+    "ExplicitHeight": 410,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TORAutoPanel",
+      "name": "pnlBase",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 385,
+        "Height": 382,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "SrcLabel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 12,
+            "Top": 136,
+            "Width": 123,
+            "Height": 13,
+            "Caption": "Select one or more names"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "DstLabel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 231,
+            "Top": 136,
+            "Width": 132,
+            "Height": 13,
+            "Caption": "Currently selected recipients"
+          },
+          "children": []
+        },
+        {
+          "class": "TLabel",
+          "name": "Label1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 12,
+            "Top": 47,
+            "Width": 44,
+            "Height": 13,
+            "Caption": "Comment"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdOK",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 105,
+            "Top": 349,
+            "Width": 75,
+            "Height": 25,
+            "Caption": "&OK",
+            "TabOrder": 7,
+            "OnClick": "cmdOKClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "cmdCancel",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 193,
+            "Top": 349,
+            "Width": 75,
+            "Height": 25,
+            "Cancel": true,
+            "Caption": "&Cancel",
+            "TabOrder": 8,
+            "OnClick": "cmdCancelClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TORCheckComboBox",
+          "name": "cboSrcList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 12,
+            "Top": 155,
+            "Width": 144,
+            "Height": 188,
+            "Style": "orcsSimple",
+            "AutoSelect": true,
+            "Caption": "",
+            "Color": "clWindow",
+            "DropDownCount": 8,
+            "ItemHeight": 13,
+            "ItemTipColor": "clWindow",
+            "ItemTipEnable": true,
+            "ListItemsOnly": false,
+            "LongList": true,
+            "LookupPiece": 2,
+            "MaxLength": 0,
+            "Pieces": "2,3",
+            "Sorted": false,
+            "SynonymChars": "<>",
+            "TabOrder": 2,
+            "Text": "",
+            "OnChange": "cboSrcListChange",
+            "OnDblClick": "cboSrcListMouseClick",
+            "OnKeyDown": "cboSrcListKeyDown",
+            "OnNeedData": "NewPersonNeedData",
+            "CharsNeedMatch": 1,
+            "UniqueAutoComplete": true,
+            "MainCheckBoxCaption": "Include Non-VA Providers",
+            "MainCheckBoxVisible": true,
+            "MainCheckBoxAlignment": "calBottom",
+            "OnMainCheckboxClick": "cboSrcListMainCheckboxClick",
+            "DropdownStyle": "ddsControl"
+          },
+          "children": []
+        },
+        {
+          "class": "TORListBox",
+          "name": "DstList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 231,
+            "Top": 155,
+            "Width": 144,
+            "Height": 185,
+            "ItemHeight": 13,
+            "MultiSelect": true,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 4,
+            "OnClick": "DstListChange",
+            "Caption": "Currently selected recipients",
+            "ItemTipColor": "clWindow",
+            "LongList": false,
+            "Pieces": "2",
+            "OnChange": "DstListChange"
+          },
+          "children": []
+        },
+        {
+          "class": "TMemo",
+          "name": "memAlert",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 12,
+            "Top": 8,
+            "Width": 363,
+            "Height": 33,
+            "TabStop": false,
+            "Color": "clBtnFace",
+            "Lines.Strings": [
+              "memAlert"
+            ],
+            "ReadOnly": true,
+            "TabOrder": 0,
+            "WantReturns": false
+          },
+          "children": []
+        },
+        {
+          "class": "TMemo",
+          "name": "memComment",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 12,
+            "Top": 64,
+            "Width": 363,
+            "Height": 66,
+            "MaxLength": 180,
+            "ScrollBars": "ssVertical",
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnAddAlert",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 162,
+            "Top": 200,
+            "Width": 63,
+            "Height": 25,
+            "Caption": "&Add",
+            "TabOrder": 3,
+            "OnClick": "btnAddAlertClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnRemoveAlertFwrd",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 162,
+            "Top": 231,
+            "Width": 63,
+            "Height": 25,
+            "Caption": "&Remove",
+            "Enabled": false,
+            "TabOrder": 5,
+            "OnClick": "btnRemoveAlertFwrdClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnRemoveAllAlertFwrd",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 162,
+            "Top": 262,
+            "Width": 63,
+            "Height": 25,
+            "Caption": "R&emove All",
+            "Enabled": false,
+            "TabOrder": 6,
+            "OnClick": "btnRemoveAllAlertFwrdClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 32,
+        "Top": 64,
+        "Data": [
+          [
+            "Component = pnlBase",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cboSrcList",
+            "Label = SrcLabel",
+            "Status = stsOK"
+          ],
+          [
+            "Component = DstList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memAlert",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memComment",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnAddAlert",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemoveAlertFwrd",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmAlertForward",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnRemoveAllAlertFwrd",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

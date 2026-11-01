@@ -1,0 +1,206 @@
+{
+  "class": "TfrmPtCWAD",
+  "name": "frmPtCWAD",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 245,
+    "Top": 268,
+    "BorderIcons": [
+      "biSystemMenu"
+    ],
+    "Caption": "Patient Postings",
+    "ClientHeight": 288,
+    "ClientWidth": 508,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "OnKeyUp": "FormKeyUp",
+    "ExplicitWidth": 524,
+    "ExplicitHeight": 326,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TOROffsetLabel",
+      "name": "lblNotes",
+      "inherited": false,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "Left": 0,
+        "Top": 129,
+        "Width": 508,
+        "Height": 24,
+        "Align": "alTop",
+        "Caption": "Crisis Notes, Warning Notes, Directives",
+        "HorzOffset": 2,
+        "Transparent": false,
+        "VertOffset": 6,
+        "WordWrap": false,
+        "ExplicitLeft": 80,
+        "ExplicitTop": 265,
+        "ExplicitWidth": 435
+      },
+      "children": []
+    },
+    {
+      "class": "TORListBox",
+      "name": "lstNotes",
+      "inherited": false,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "Left": 0,
+        "Top": 153,
+        "Width": 508,
+        "Height": 108,
+        "Align": "alClient",
+        "ItemHeight": 13,
+        "ParentShowHint": false,
+        "ShowHint": true,
+        "TabOrder": 1,
+        "OnClick": "lstNotesClick",
+        "Caption": "Crisis Notes, Warning Notes, Directives",
+        "ItemTipColor": "clWindow",
+        "LongList": false,
+        "Pieces": "2,3",
+        "TabPositions": "20"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottom",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Left": 0,
+        "Top": 261,
+        "Width": 508,
+        "Height": 27,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "TabOrder": 3,
+        "DesignSize": [
+          508,
+          27
+        ]
+      },
+      "children": [
+        {
+          "class": "TButton",
+          "name": "btnClose",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 432,
+            "Top": 4,
+            "Width": 75,
+            "Height": 21,
+            "Anchors": [
+              "akTop",
+              "akRight"
+            ],
+            "Cancel": true,
+            "Caption": "Close",
+            "TabOrder": 0,
+            "OnClick": "btnCloseClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TCaptionListView",
+      "name": "lstAllergies",
+      "inherited": false,
+      "inline": false,
+      "child_position": 3,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 508,
+        "Height": 129,
+        "Margins.Left": 8,
+        "Margins.Right": 8,
+        "Align": "alTop",
+        "Columns": [
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Allergies",
+              "Width": 180
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Severity",
+              "Tag": 1,
+              "Width": 100
+            }
+          },
+          {
+            "index": null,
+            "properties": {
+              "Caption": "Signs / Symptoms",
+              "Tag": 2,
+              "Width": 160
+            }
+          }
+        ],
+        "HideSelection": false,
+        "HoverTime": 0,
+        "IconOptions.WrapText": false,
+        "ReadOnly": true,
+        "RowSelect": true,
+        "ParentShowHint": false,
+        "ShowWorkAreas": true,
+        "ShowHint": true,
+        "TabOrder": 0,
+        "ViewStyle": "vsReport",
+        "OnClick": "lstAllergiesClick",
+        "OnKeyDown": "lstAllergiesKeyDown",
+        "Caption": "Allergies",
+        "Pieces": "2,3,4"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lstNotes",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlBottom",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnClose",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmPtCWAD",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstAllergies",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

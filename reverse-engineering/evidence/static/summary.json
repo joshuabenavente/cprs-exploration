@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "executable": {
+    "name": "CPRSChart.exe",
+    "path": "/workspace/reverse-engineering/input/cprs/CPRSChart.exe",
+    "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+    "bytes": 18141088,
+    "machine": "0x14c",
+    "image_base": "00400000",
+    "entry": "01224034"
+  },
+  "inputs": [
+    {
+      "path": "input/cprs/CPRSChart.exe",
+      "bytes": 18141088,
+      "sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544"
+    },
+    {
+      "path": "input/cprs/CPRSChart.map",
+      "bytes": 23636974,
+      "sha256": "70fa1e8287a30895778711fe2a38d33eb095962b290b9985ec084700d9f4d08a"
+    },
+    {
+      "path": "input/cprs/CRC.TXT",
+      "bytes": 36,
+      "sha256": "800ee3c48d8e8a894b6d2ef782cabf3ec0588954bd727f90f6aefe6325de9c5d"
+    },
+    {
+      "path": "input/cprs/GMV_VitalsViewEnter.chm",
+      "bytes": 81286,
+      "sha256": "0aa3dd0244b0b3e5dc452bf77a0d5a6fe798840e54f4a1e0a44c42b27e01286d"
+    },
+    {
+      "path": "input/cprs/GMV_VitalsViewEnter.dll",
+      "bytes": 7810976,
+      "sha256": "9b3db7ab1ca092b0fefd1fa756f9f0f1e02f3462f3e644b898b8dc9ef331623f"
+    },
+    {
+      "path": "input/cprs/GMV_VitalsViewEnter.map",
+      "bytes": 6044113,
+      "sha256": "3e8b815a72dde067d929a6bed7b42aa9f6dc58d16ce151252bffc476d5c21341"
+    },
+    {
+      "path": "input/cprs/RoboEx32.dll",
+      "bytes": 1044480,
+      "sha256": "1eba268dc7b387e83e6a422bd9f26072566c9cad80f890778cb9dfcdd979df00"
+    },
+    {
+      "path": "input/cprs/WebView2Loader.dll",
+      "bytes": 115128,
+      "sha256": "57abef0622d1cd646eb9efe1cd58c8e59192a51fbc4bba0a6f9e7db3e99ac3c1"
+    },
+    {
+      "path": "input/cprs/YS_MHA_A_XE10.dll",
+      "bytes": 9714080,
+      "sha256": "04d093acac06c8e7861b6b014d84d9472d8bf2119fa57f986268f811c34d3e09"
+    },
+    {
+      "path": "input/cprs/borlndmm.dll",
+      "bytes": 74736,
+      "sha256": "844e082b2a96631b2ea21c871c47efd0d82ebd930a9659798b3f2f004b3448b2"
+    },
+    {
+      "path": "input/cprs/help/CPRS.chm",
+      "bytes": 12935459,
+      "sha256": "f62e503f5f06fc228d4971fa6a7f35be5c394d2ffc498c714a9c1f948687ceef"
+    }
+  ],
+  "map_symbols": 65610,
+  "map_module_regions": 1725,
+  "managed_literal_candidates": 26025,
+  "rpc_name_candidates": 1154,
+  "normal_imports": 803,
+  "delayed_imports": 638,
+  "classes_validated": 2554,
+  "exports": 2,
+  "resources": 590,
+  "forms_decoded": 325,
+  "forms_failed": 0,
+  "form_event_bindings": 4371,
+  "archived_function_records": 165,
+  "archived_unique_functions": 147,
+  "archived_instructions_checked": 24793,
+  "archived_literals_checked": 410,
+  "archived_vmt_words_checked": 15,
+  "byte_mismatches": [],
+  "target_executed": false
+}

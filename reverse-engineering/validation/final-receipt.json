@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "target_sha256": "7e8800aeafc0ccff347d04d9a64b51bb64a04a6935131f06ce1e730392493544",
+  "function_count": 43371,
+  "statuses": {
+    "analyzed": 2245,
+    "unresolved": 40943,
+    "partially_analyzed": 183
+  },
+  "direct_call_counts": {
+    "direct_E8_destinations_verified": 204270,
+    "other_instruction_form": 39587
+  },
+  "bounded_exports": 44,
+  "bounded_instructions_checked": 4953,
+  "checks": [
+    "All uploaded input hashes and sizes match pinned manifest",
+    "All function entries are unique, classified, linked to existing evidence and carry uncertainty",
+    "Subsystem and status counts reconcile with complete JSON/JSONL inventory",
+    "All analyzed-scope proof bytes match target; independent bounded objdump samples cover every small-body pattern kind",
+    "All 204270 direct E8 destinations independently verified against uploaded bytes",
+    "All 44 bounded exports and their instruction bytes validated; five continuation repairs recorded",
+    "Class/literal type-application counts and historical byte validation reconcile",
+    "Readable/structured specifications and checkpoint agree; document links exist; next exact batch is recorded",
+    "All Python sources parse and all Java scripts compile against Ghidra 12.2 APIs"
+  ],
+  "target_executed": false,
+  "runtime_behavior_verified": false,
+  "script_hashes": {
+    "scripts/ApplyRecoveredMetadata.java": "6390a6dd7f69133dde6ad714b7e26c16a38dddc66cc6092e159c5767da10ab00",
+    "scripts/ConfigureBoundedAnalysis.java": "8f0d93811a02c621d0a5c0515776fb187f597f133753d9eeb2d07a9710dd29b1",
+    "scripts/ExportFunctionBatch.java": "9fa5883567e330d63469718ad67099aa915f59757e692beebedd2ec239214a3e",
+    "scripts/ExportProgramInventory.java": "637a1e568333b1be468b259444bd1578c57b393bb76e0520145883e301cf0a3e",
+    "scripts/ImportChartMap.java": "ab2d556644db4bb00cc1c79b3e0d4d3cb10f45c2686e38797905211e1a346598",
+    "scripts/RepairReviewedFunctions.java": "2c19f724bc3348bb0b881d20fa4c4d01d8736366d99913c13fc37601b01367d7",
+    "scripts/SeedEvidenceFunctions.java": "fe1f05c26c9bf85c709a8b56a23d633f6dabd820dc51375de3dd069142f817e2",
+    "scripts/catalog_components.py": "fa8c40e8378ce4132c91899e4e24b800ae8e987117d06f7d03cf29a53dd0c9df",
+    "scripts/consolidate.py": "904ae8cab6f055a37dc1b68e6a4b0c3c8e6bb96149154d57a75f0fe5ac81a548",
+    "scripts/extract_static.py": "f7da56c24812890a4130aea1a6090684d0852c1991b117f6db665c4028a9a1a6",
+    "scripts/leaf_semantics.py": "64424787b4c829d3f4a4e7b0d229f5467e61913c3596d2b6f9685ca09a5c98d7",
+    "scripts/package_results.py": "f258597ce1d259d8b52b6d424762ee9343ec94ff8d4c27eebdd9c3619ba5cabe",
+    "scripts/prepare_discovery.py": "42f5b5b5fdad353ef9b9e2a3b0f754e57b5b08d2448bcdcd3e8d7f7daafbc91e",
+    "scripts/run-ghidra.sh": "c385c3abf2389d161e0a7f2782111b4c6da34b07416f02abc3060d3b0ad9c2a0",
+    "scripts/summarize_batch.py": "a740bf6747d17a2c0f144d9f27731a86d54ad45dfa2e223a577a38f0d69778f6",
+    "scripts/support/decode_dfm.py": "ba7186733621bb13a27fb06ead3c9c57d5884b3d5761e5a4f7e5b34555903541",
+    "scripts/support/inspect_chart.py": "2522570f547c9cd5d90e4566910d8d48429180ed7a3cc958330da646d3173035",
+    "scripts/validate_deliverables.py": "110ed8fe56019cadb69d2f3fd9c7fbebba0235bf991327bcf394ae426cb34ec7",
+    "scripts/verify_claims.py": "564cc8a34d8f7df368ec716a0a389ec10e0071883595d234d6c5c86b622a2075",
+    "scripts/write_reports.py": "04c300db54fa75163aec4b050cecd4f0abfe62e3d5acac71dd65e066b021c29e"
+  },
+  "document_hashes": {
+    "ARCHITECTURE.md": "13a5a05d2ed331167cac8163f16c606f07f878aba7212ad7e9c746ba26b3f137",
+    "BEHAVIOR.md": "000bb2aeea949d7e096462692facb464f90e4d685ddf40118004fd51473255cc",
+    "DATA-STRUCTURES.md": "07d00d2a5a7a569d054b23dd0220e93aee14348e54b74ab53697a4fa40a11149",
+    "EXTERNAL-INTERFACES.md": "db3f7b323747dea25c7bfd5a8f5d023bb1bad84de69bd8a6528fd895c8628cd2",
+    "FUNCTION-INVENTORY.md": "cc9443e96624272767c6580b814c10169bb02afa3998f5c138f42db839ba1c38",
+    "PROGRESS.md": "3caee8014d7de870d292c60caff6d5af222c38a54dab2536623e73958c0dbfdb",
+    "README.md": "5743c0cbe19cab313b36dc5365763378d03bc1f9087a17eb8ac2d8e5855442af",
+    "REIMPLEMENTATION-PLAN.md": "6ae86c68b4e879c64bf74f96262cd0c471685382de513dc9da7f499b83cbb07a",
+    "REPRODUCE.md": "f47100a080c7fa3e3f7893e582827089aa35cb78a7e0ef1e0470fde5909b4873",
+    "REVIEW-NOTES.md": "0bb11b7876c13590666524327a9cc21f2ca0851dba3b184e92ad5405050c1135"
+  }
+}

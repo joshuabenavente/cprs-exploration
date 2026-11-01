@@ -1,0 +1,439 @@
+{
+  "class": "TfraAnatPathBuilder",
+  "name": "fraAnatPathBuilder",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Align": "alClient",
+    "BorderIcons": [],
+    "BorderStyle": "bsNone",
+    "ClientHeight": 219,
+    "ClientWidth": 877,
+    "Color": "clWindow",
+    "ParentFont": true,
+    "OldCreateOrder": true,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnl1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 220,
+        "Height": 219,
+        "Align": "alLeft",
+        "BevelOuter": "bvNone",
+        "Color": "clWindow",
+        "DoubleBuffered": false,
+        "ParentBackground": false,
+        "ParentDoubleBuffered": false,
+        "TabOrder": 0,
+        "Visible": false
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlSpacer4",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 220,
+            "Height": 14,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TScrollBox",
+          "name": "sbx1",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 14,
+            "Width": 220,
+            "Height": 205,
+            "Align": "alClient",
+            "BevelInner": "bvNone",
+            "BevelOuter": "bvNone",
+            "BorderStyle": "bsNone",
+            "DoubleBuffered": false,
+            "ParentDoubleBuffered": false,
+            "TabOrder": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnl2",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 220,
+        "Top": 0,
+        "Width": 220,
+        "Height": 219,
+        "Align": "alLeft",
+        "BevelOuter": "bvNone",
+        "Color": "clWindow",
+        "DoubleBuffered": false,
+        "ParentBackground": false,
+        "ParentDoubleBuffered": false,
+        "TabOrder": 1,
+        "Visible": false
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlSpacer5",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 220,
+            "Height": 14,
+            "Align": "alTop",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TScrollBox",
+          "name": "sbx2",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 14,
+            "Width": 220,
+            "Height": 205,
+            "Align": "alClient",
+            "BevelInner": "bvNone",
+            "BevelOuter": "bvNone",
+            "BorderStyle": "bsNone",
+            "DoubleBuffered": false,
+            "ParentDoubleBuffered": false,
+            "TabOrder": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnl3",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 440,
+        "Top": 0,
+        "Width": 220,
+        "Height": 219,
+        "Align": "alLeft",
+        "BevelOuter": "bvNone",
+        "Color": "clWindow",
+        "DoubleBuffered": false,
+        "ParentBackground": false,
+        "ParentDoubleBuffered": false,
+        "TabOrder": 2,
+        "Visible": false
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblCheckList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 6,
+            "Top": 6,
+            "Width": 3,
+            "Height": 13,
+            "Margins.Left": 6,
+            "Margins.Top": 6,
+            "Margins.Right": 6,
+            "Align": "alTop"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionCheckListBox",
+          "name": "lstCheckList",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 6,
+            "Top": 25,
+            "Width": 208,
+            "Height": 178,
+            "Margins.Left": 6,
+            "Margins.Right": 6,
+            "Margins.Bottom": 6,
+            "Align": "alClient",
+            "ItemHeight": 13,
+            "TabOrder": 0,
+            "OnKeyUp": "lstCheckListKeyUp",
+            "Caption": ""
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlSpacer3",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 209,
+            "Width": 220,
+            "Height": 10,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnl4",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 660,
+        "Top": 0,
+        "Width": 217,
+        "Height": 219,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "Color": "clWindow",
+        "DoubleBuffered": false,
+        "ParentBackground": false,
+        "ParentDoubleBuffered": false,
+        "TabOrder": 3,
+        "OnResize": "pnl4Resize"
+      },
+      "children": [
+        {
+          "class": "TLabel",
+          "name": "lblWPField",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Tag": 1,
+            "AlignWithMargins": true,
+            "Left": 6,
+            "Top": 6,
+            "Width": 3,
+            "Height": 13,
+            "Margins.Left": 6,
+            "Margins.Top": 6,
+            "Margins.Right": 6,
+            "Align": "alTop"
+          },
+          "children": []
+        },
+        {
+          "class": "TCaptionMemo",
+          "name": "memNote",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 6,
+            "Top": 25,
+            "Width": 205,
+            "Height": 188,
+            "Margins.Left": 6,
+            "Margins.Right": 6,
+            "Margins.Bottom": 6,
+            "Align": "alClient",
+            "MaxLength": 2147483645,
+            "PopupMenu": "mnuNoteMemo",
+            "ScrollBars": "ssVertical",
+            "TabOrder": 0,
+            "OnEnter": "memNoteEnter",
+            "OnExit": "memNoteExit",
+            "Caption": ""
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 56,
+        "Top": 30,
+        "Data": [
+          [
+            "Component = fraAnatPathBuilder",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnl1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSpacer4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = sbx1",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnl2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSpacer5",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = sbx2",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnl3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = lstCheckList",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnlSpacer3",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = pnl4",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = memNote",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "mnuNoteMemo",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 772,
+        "Top": 72
+      },
+      "children": [
+        {
+          "class": "TMenuItem",
+          "name": "mnuNoteMemoCut",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "Cu&t",
+            "ShortCut": 16472,
+            "OnClick": "mnuNoteMemoCutClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuNoteMemoCopy",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Copy",
+            "ShortCut": 16451,
+            "OnClick": "mnuNoteMemoCopyClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuNoteMemoPaste",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Paste",
+            "ShortCut": 16470,
+            "OnClick": "mnuNoteMemoPasteClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TMenuItem",
+          "name": "mnuNoteMenuInsert",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Caption": "&Insert",
+            "ShortCut": 8237,
+            "OnClick": "mnuNoteMemoPasteClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508ComponentAccessibility",
+      "name": "VA508ListBox",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Tag": 1,
+        "Component": "lstCheckList",
+        "OnCaptionQuery": "VA508CaptionQuery",
+        "Left": 528,
+        "Top": 96
+      },
+      "children": []
+    }
+  ]
+}

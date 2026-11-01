@@ -1,0 +1,93 @@
+{
+  "class": "TfraCoverSheetDisplayPanel_WidgetClock",
+  "name": "fraCoverSheetDisplayPanel_WidgetClock",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {},
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {},
+      "children": [
+        {
+          "class": "TImage",
+          "name": "img",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "ExplicitHeight": 291
+          },
+          "children": []
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlWorkspace",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 34,
+            "Top": 33,
+            "Width": 469,
+            "Height": 350,
+            "PopupMenu": "pmn",
+            "ExplicitLeft": 34,
+            "ExplicitTop": 33,
+            "ExplicitWidth": 469,
+            "ExplicitHeight": 350
+          },
+          "children": [
+            {
+              "class": "TStaticText",
+              "name": "lblTime",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 469,
+                "Height": 350,
+                "Align": "alClient",
+                "Alignment": "taCenter",
+                "Caption": "lblTime",
+                "Color": "clWhite",
+                "Font.Charset": "ANSI_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -27,
+                "Font.Name": "Arial Rounded MT Bold",
+                "Font.Style": [],
+                "ParentColor": false,
+                "ParentFont": false,
+                "TabOrder": 0,
+                "Transparent": false
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TTimer",
+      "name": "tmrClock",
+      "inherited": false,
+      "inline": false,
+      "child_position": 2,
+      "properties": {
+        "Enabled": false,
+        "OnTimer": "tmrClockTimer",
+        "Left": 144,
+        "Top": 8
+      },
+      "children": []
+    }
+  ]
+}

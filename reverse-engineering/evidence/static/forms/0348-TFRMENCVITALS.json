@@ -1,0 +1,155 @@
+{
+  "class": "TfrmEncVitals",
+  "name": "frmEncVitals",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 353,
+    "Top": 210,
+    "Caption": "Vitals",
+    "Constraints.MinHeight": 320,
+    "Constraints.MinWidth": 400,
+    "StyleElements": [
+      "seFont",
+      "seClient",
+      "seBorder"
+    ],
+    "ScaleMethod": "smManual",
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlMainAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": 0,
+      "properties": {
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ]
+      },
+      "children": [
+        {
+          "class": "TCaptionListView",
+          "name": "lvVitals",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 614,
+            "Height": 366,
+            "Align": "alClient",
+            "Columns": [],
+            "Constraints.MinHeight": 50,
+            "HideSelection": false,
+            "MultiSelect": true,
+            "ReadOnly": true,
+            "RowSelect": true,
+            "ParentShowHint": false,
+            "ShowHint": true,
+            "TabOrder": 0,
+            "ViewStyle": "vsReport",
+            "AutoSize": false
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlBottomAncestor",
+      "inherited": true,
+      "inline": false,
+      "child_position": 1,
+      "properties": {
+        "StyleElements": [
+          "seFont",
+          "seClient",
+          "seBorder"
+        ]
+      },
+      "children": [
+        {
+          "class": "TBitBtn",
+          "name": "btnOK",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "TabOrder": 1
+          },
+          "children": []
+        },
+        {
+          "class": "TBitBtn",
+          "name": "btnCancel",
+          "inherited": true,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "TabOrder": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TButton",
+          "name": "btnEnterVitals",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "AlignWithMargins": true,
+            "Left": 3,
+            "Top": 3,
+            "Width": 75,
+            "Height": 21,
+            "Align": "alLeft",
+            "Caption": "Enter Vitals",
+            "TabOrder": 0,
+            "OnClick": "btnEnterVitalsClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = lvVitals",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnEnterVitals",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = btnCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = frmEncVitals",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

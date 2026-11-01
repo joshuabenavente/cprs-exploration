@@ -1,0 +1,413 @@
+{
+  "class": "TORfrmDtTm",
+  "name": "ORfrmDtTm",
+  "inherited": false,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 586,
+    "Top": 483,
+    "BorderIcons": [],
+    "BorderStyle": "bsDialog",
+    "Caption": "Select Date/Time",
+    "ClientHeight": 235,
+    "ClientWidth": 398,
+    "Color": "clBtnFace",
+    "Font.Charset": "DEFAULT_CHARSET",
+    "Font.Color": "clWindowText",
+    "Font.Height": -11,
+    "Font.Name": "MS Sans Serif",
+    "Font.Style": [],
+    "KeyPreview": true,
+    "Position": "poScreenCenter",
+    "OnCreate": "FormCreate",
+    "OnKeyDown": "FormKeyDown",
+    "DesignSize": [
+      398,
+      235
+    ],
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TLabel",
+      "name": "TxtDateSelected",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 110,
+        "Top": 181,
+        "Width": 80,
+        "Height": 13,
+        "Caption": "TxtDateSelected",
+        "Visible": false
+      },
+      "children": []
+    },
+    {
+      "class": "TBevel",
+      "name": "bvlFrame",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 8,
+        "Top": 6,
+        "Width": 211,
+        "Height": 221,
+        "Shape": "bsFrame",
+        "Style": "bsRaised"
+      },
+      "children": []
+    },
+    {
+      "class": "TLabel",
+      "name": "lblCalendar",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 66,
+        "Top": 204,
+        "Width": 200,
+        "Height": 13,
+        "AutoSize": false,
+        "Caption": "Date calendar selector. Use the page up and down buttons to cycle through the months.",
+        "Visible": false
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "pnlDate",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 18,
+        "Top": 18,
+        "Width": 192,
+        "Height": 22,
+        "BevelOuter": "bvNone",
+        "BorderStyle": "bsSingle",
+        "Caption": "October 20, 1998",
+        "Color": "clWindow",
+        "Ctl3D": false,
+        "ParentCtl3D": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TBitBtn",
+          "name": "bbtnPrevMonth",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 25,
+            "Height": 20,
+            "Align": "alLeft",
+            "Glyph.Data": {
+              "binary_bytes": 242
+            },
+            "TabOrder": 0,
+            "OnClick": "bbtnPrevMonthClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TBitBtn",
+          "name": "bbtnNextMonth",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 165,
+            "Top": 0,
+            "Width": 25,
+            "Height": 20,
+            "Align": "alRight",
+            "Glyph.Data": {
+              "binary_bytes": 242
+            },
+            "TabOrder": 1,
+            "OnClick": "bbtnNextMonthClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TEdit",
+      "name": "txtTime",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 218,
+        "Top": 18,
+        "Width": 81,
+        "Height": 21,
+        "TabOrder": 3,
+        "OnChange": "txtTimeChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TORDtTmListBox",
+      "name": "lstHour",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 218,
+        "Top": 38,
+        "Width": 45,
+        "Height": 160,
+        "Style": "lbOwnerDrawVariable",
+        "Items.Strings": [
+          "  0",
+          "  1",
+          "  2",
+          "  3",
+          "  4",
+          "  5",
+          "  6",
+          "  7",
+          "  8",
+          "  9",
+          "10",
+          "11",
+          "12 --",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "TabOrder": 4,
+        "OnClick": "lstHourClick",
+        "OnEnter": "lstHourEnter"
+      },
+      "children": []
+    },
+    {
+      "class": "TORDtTmListBox",
+      "name": "lstMinute",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 266,
+        "Top": 38,
+        "Width": 33,
+        "Height": 160,
+        "Style": "lbOwnerDrawVariable",
+        "Items.Strings": [
+          ":00 --",
+          ":05",
+          ":10",
+          ":15 --",
+          ":20",
+          ":25",
+          ":30 --",
+          ":35",
+          ":40",
+          ":45 --",
+          ":50",
+          ":55"
+        ],
+        "TabOrder": 5,
+        "OnClick": "lstMinuteClick",
+        "OnEnter": "lstMinuteEnter"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdOK",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 318,
+        "Top": 8,
+        "Width": 72,
+        "Height": 21,
+        "Caption": "OK",
+        "Default": true,
+        "TabOrder": 8,
+        "OnClick": "cmdOKClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdCancel",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 318,
+        "Top": 37,
+        "Width": 72,
+        "Height": 21,
+        "Caption": "Cancel",
+        "TabOrder": 9,
+        "OnClick": "cmdCancelClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TORCalendar",
+      "name": "calSelect",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 18,
+        "Top": 38,
+        "Width": 192,
+        "Height": 160,
+        "Color": "clScrollBar",
+        "StartOfWeek": 0,
+        "TabOrder": 1,
+        "UseCurrentDate": false,
+        "OnChange": "calSelectChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdToday",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 18,
+        "Top": 200,
+        "Width": 42,
+        "Height": 23,
+        "Caption": "Today",
+        "TabOrder": 2,
+        "OnClick": "cmdTodayClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdNow",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 225,
+        "Top": 200,
+        "Width": 31,
+        "Height": 23,
+        "Caption": "Now",
+        "TabOrder": 6,
+        "OnClick": "cmdNowClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TButton",
+      "name": "cmdMidnight",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 262,
+        "Top": 200,
+        "Width": 50,
+        "Height": 23,
+        "Caption": "Midnight",
+        "TabOrder": 7,
+        "OnClick": "cmdMidnightClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "VA508AccessibilityManager1",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 344,
+        "Top": 152,
+        "Data": [
+          [
+            "Component = pnlDate",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = txtTime",
+            "Text = Time selected",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lstHour",
+            "Text = Hours",
+            "Status = stsOK"
+          ],
+          [
+            "Component = lstMinute",
+            "Text = Minutes",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdOK",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdCancel",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = calSelect",
+            "Label = TxtDateSelected",
+            "Status = stsOK"
+          ],
+          [
+            "Component = cmdNow",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdToday",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = cmdMidnight",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = ORfrmDtTm",
+            "Status = stsDefault"
+          ],
+          [
+            "Component = bbtnPrevMonth",
+            "Text = Previous month",
+            "Status = stsOK"
+          ],
+          [
+            "Component = bbtnNextMonth",
+            "Text = Next month",
+            "Status = stsOK"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}

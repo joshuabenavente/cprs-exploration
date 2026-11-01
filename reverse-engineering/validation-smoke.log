@@ -1,0 +1,242 @@
+2026-11-01 14:48:51 INFO  (LoggingInitialization) Using log config file: jar:file:/workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-11-01 14:48:51 INFO  (LoggingInitialization) Using log file: /workspace/reverse-engineering/validation-smoke.log  
+2026-11-01 14:48:51 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-11-01 14:48:51 INFO  (Preferences) Loading user preferences: /workspace/cprs-exploration/.local/cloud/ghidra-user/agent-ghidra/ghidra_12.2_PUBLIC/preferences  
+2026-11-01 14:48:51 INFO  (ClassSearcher) Searching for classes...  
+2026-11-01 14:48:52 INFO  (ClassSearcher) Class search complete (1074 ms)  
+2026-11-01 14:48:52 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-11-01 14:48:52 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-11-01 14:48:52 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-11-01 14:48:52 INFO  (UnixSystemTrustKeyStoreUtil) Loaded 154 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt  
+2026-11-01 14:48:52 INFO  (DefaultTrustManagerFactory) Loaded 154 trusted CA certificates from the OS trust store.  
+2026-11-01 14:48:52 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-11-01 14:48:53 INFO  (AnalyzeHeadless) Headless startup complete (2592 ms)  
+2026-11-01 14:48:53 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-11-01 14:48:53 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /workspace/reverse-engineering/scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts  
+2026-11-01 14:48:53 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-11-01 14:48:53 INFO  (HeadlessAnalyzer) Opening existing project: /workspace/cprs-exploration/analysis/projects/cloud-smoke/CloudSmoke  
+2026-11-01 14:48:53 INFO  (HeadlessProject) Opening project: /workspace/cprs-exploration/analysis/projects/cloud-smoke/CloudSmoke  
+2026-11-01 14:48:54 DEBUG (SleighLanguage) Took 367ms (139ms inside lock) to initialize language /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86-64.slaspec -> /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86-64.sla  
+2026-11-01 14:48:54 INFO  (HeadlessAnalyzer) REPORT: Processing read-only project file: /sample  
+2026-11-01 14:48:55 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportProgramInventory.java '/workspace/reverse-engineering/validation/smoke/inventory'   
+2026-11-01 14:48:56 ERROR (HeadlessAnalyzer) ExportProgramInventory.java:67: error: incompatible types: ghidra.program.model.symbol.Reference[] cannot be converted to ghidra.program.model.symbol.ReferenceIterator
+                ReferenceIterator incoming=getReferencesTo(f.getEntryPoint());
+                                                          ^
+skipping /workspace/reverse-engineering/scripts/ExportProgramInventory.java
+  
+2026-11-01 14:48:56 ERROR (HeadlessAnalyzer) REPORT SCRIPT ERROR: ExportProgramInventory.java : The class could not be found. It must be the public class of the .java file: ExportProgramInventory not found by 5daf5558 [1] ghidra.app.script.GhidraScriptLoadException: The class could not be found. It must be the public class of the .java file: ExportProgramInventory not found by 5daf5558 [1]
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:114)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScriptsList(HeadlessAnalyzer.java:929)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1107)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileNoImport(HeadlessAnalyzer.java:1206)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFolderNoImport(HeadlessAnalyzer.java:1376)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processNoImport(HeadlessAnalyzer.java:1405)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:461)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:211)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:41)
+Caused by: java.lang.ClassNotFoundException: ExportProgramInventory not found by 5daf5558 [1]
+	at org.apache.felix.framework.BundleWiringImpl.findClassOrResourceByDelegation(BundleWiringImpl.java:1591)
+	at org.apache.felix.framework.BundleWiringImpl.access$300(BundleWiringImpl.java:79)
+	at org.apache.felix.framework.BundleWiringImpl$BundleClassLoader.loadClass(BundleWiringImpl.java:1976)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at org.apache.felix.framework.Felix.loadBundleClass(Felix.java:2116)
+	at org.apache.felix.framework.BundleImpl.loadClass(BundleImpl.java:986)
+	at ghidra.app.script.JavaScriptProvider.loadClass(JavaScriptProvider.java:166)
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:97)
+	... 9 more
+ 
+2026-11-01 14:50:56 INFO  (LoggingInitialization) Using log config file: jar:file:/workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-11-01 14:50:56 INFO  (LoggingInitialization) Using log file: /workspace/reverse-engineering/validation-smoke.log  
+2026-11-01 14:50:56 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-11-01 14:50:56 INFO  (Preferences) Loading user preferences: /workspace/cprs-exploration/.local/cloud/ghidra-user/agent-ghidra/ghidra_12.2_PUBLIC/preferences  
+2026-11-01 14:50:56 INFO  (ClassSearcher) Searching for classes...  
+2026-11-01 14:50:57 INFO  (ClassSearcher) Class search complete (1025 ms)  
+2026-11-01 14:50:57 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-11-01 14:50:57 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-11-01 14:50:57 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-11-01 14:50:57 INFO  (UnixSystemTrustKeyStoreUtil) Loaded 154 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt  
+2026-11-01 14:50:57 INFO  (DefaultTrustManagerFactory) Loaded 154 trusted CA certificates from the OS trust store.  
+2026-11-01 14:50:58 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-11-01 14:50:58 INFO  (AnalyzeHeadless) Headless startup complete (2125 ms)  
+2026-11-01 14:50:58 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-11-01 14:50:58 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /workspace/reverse-engineering/scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts  
+2026-11-01 14:50:58 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-11-01 14:50:58 INFO  (HeadlessAnalyzer) Opening existing project: /workspace/cprs-exploration/analysis/projects/cloud-smoke/CloudSmoke  
+2026-11-01 14:50:58 INFO  (HeadlessProject) Opening project: /workspace/cprs-exploration/analysis/projects/cloud-smoke/CloudSmoke  
+2026-11-01 14:50:59 DEBUG (SleighLanguage) Took 371ms (159ms inside lock) to initialize language /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86-64.slaspec -> /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86-64.sla  
+2026-11-01 14:51:00 INFO  (HeadlessAnalyzer) REPORT: Processing read-only project file: /sample  
+2026-11-01 14:51:00 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportProgramInventory.java '/workspace/reverse-engineering/validation/smoke/inventory'   
+2026-11-01 14:51:01 INFO  (HeadlessAnalyzer) SCRIPT: /workspace/reverse-engineering/scripts/ExportProgramInventory.java  
+2026-11-01 14:51:01 ERROR (HeadlessAnalyzer) REPORT SCRIPT ERROR:  java.lang.NullPointerException: Cannot invoke "ghidra.program.model.address.Address.toString()" because the return value of "ghidra.program.model.address.AddressSetView.getMinAddress()" is null
+	at ExportProgramInventory.run(ExportProgramInventory.java:62)
+	at ghidra.app.script.GhidraScript.executeNormal(GhidraScript.java:460)
+	at ghidra.app.script.GhidraScript.doExecute(GhidraScript.java:314)
+	at ghidra.app.script.GhidraScript.execute(GhidraScript.java:290)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScript(HeadlessAnalyzer.java:597)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScriptsList(HeadlessAnalyzer.java:949)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1107)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileNoImport(HeadlessAnalyzer.java:1206)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFolderNoImport(HeadlessAnalyzer.java:1376)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processNoImport(HeadlessAnalyzer.java:1405)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:461)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:211)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:41)
+ 
+2026-11-01 14:51:19 INFO  (LoggingInitialization) Using log config file: jar:file:/workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-11-01 14:51:19 INFO  (LoggingInitialization) Using log file: /workspace/reverse-engineering/validation-smoke.log  
+2026-11-01 14:51:19 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-11-01 14:51:19 INFO  (Preferences) Loading user preferences: /workspace/cprs-exploration/.local/cloud/ghidra-user/agent-ghidra/ghidra_12.2_PUBLIC/preferences  
+2026-11-01 14:51:19 INFO  (ClassSearcher) Searching for classes...  
+2026-11-01 14:51:20 INFO  (ClassSearcher) Class search complete (1248 ms)  
+2026-11-01 14:51:20 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-11-01 14:51:20 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-11-01 14:51:20 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-11-01 14:51:20 INFO  (UnixSystemTrustKeyStoreUtil) Loaded 154 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt  
+2026-11-01 14:51:20 INFO  (DefaultTrustManagerFactory) Loaded 154 trusted CA certificates from the OS trust store.  
+2026-11-01 14:51:20 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-11-01 14:51:21 INFO  (AnalyzeHeadless) Headless startup complete (2508 ms)  
+2026-11-01 14:51:21 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-11-01 14:51:21 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /workspace/reverse-engineering/scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts  
+2026-11-01 14:51:21 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-11-01 14:51:21 INFO  (HeadlessAnalyzer) Opening existing project: /workspace/cprs-exploration/analysis/projects/cloud-smoke/CloudSmoke  
+2026-11-01 14:51:21 INFO  (HeadlessProject) Opening project: /workspace/cprs-exploration/analysis/projects/cloud-smoke/CloudSmoke  
+2026-11-01 14:51:22 DEBUG (SleighLanguage) Took 464ms (192ms inside lock) to initialize language /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86-64.slaspec -> /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86-64.sla  
+2026-11-01 14:51:23 INFO  (HeadlessAnalyzer) REPORT: Processing read-only project file: /sample  
+2026-11-01 14:51:23 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportProgramInventory.java '/workspace/reverse-engineering/validation/smoke/inventory'   
+2026-11-01 14:51:24 INFO  (HeadlessAnalyzer) SCRIPT: /workspace/reverse-engineering/scripts/ExportProgramInventory.java  
+2026-11-01 14:51:24 INFO  (GhidraScript) ExportProgramInventory.java> INVENTORY internal=14 external=5 calls=8  
+2026-11-01 14:51:35 INFO  (LoggingInitialization) Using log config file: jar:file:/workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-11-01 14:51:35 INFO  (LoggingInitialization) Using log file: /workspace/reverse-engineering/validation-smoke.log  
+2026-11-01 14:51:35 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-11-01 14:51:35 INFO  (Preferences) Loading user preferences: /workspace/cprs-exploration/.local/cloud/ghidra-user/agent-ghidra/ghidra_12.2_PUBLIC/preferences  
+2026-11-01 14:51:35 INFO  (ClassSearcher) Searching for classes...  
+2026-11-01 14:51:36 INFO  (ClassSearcher) Class search complete (1131 ms)  
+2026-11-01 14:51:36 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-11-01 14:51:36 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-11-01 14:51:36 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2026-11-01 14:51:36 INFO  (UnixSystemTrustKeyStoreUtil) Loaded 154 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt  
+2026-11-01 14:51:36 INFO  (DefaultTrustManagerFactory) Loaded 154 trusted CA certificates from the OS trust store.  
+2026-11-01 14:51:36 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-11-01 14:51:36 INFO  (AnalyzeHeadless) Headless startup complete (2355 ms)  
+2026-11-01 14:51:36 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-11-01 14:51:37 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /workspace/reverse-engineering/scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts  
+2026-11-01 14:51:37 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-11-01 14:51:37 INFO  (HeadlessAnalyzer) Opening existing project: /workspace/cprs-exploration/analysis/projects/cloud-smoke/CloudSmoke  
+2026-11-01 14:51:37 INFO  (HeadlessProject) Opening project: /workspace/cprs-exploration/analysis/projects/cloud-smoke/CloudSmoke  
+2026-11-01 14:51:38 DEBUG (SleighLanguage) Took 401ms (139ms inside lock) to initialize language /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86-64.slaspec -> /workspace/cprs-exploration/.tools/ghidra_12.2_PUBLIC/Ghidra/Processors/x86/data/languages/x86-64.sla  
+2026-11-01 14:51:38 INFO  (HeadlessAnalyzer) REPORT: Processing read-only project file: /sample  
+2026-11-01 14:51:39 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportFunctionBatch.java '/workspace/reverse-engineering/validation/smoke/batch' '/workspace/reverse-engineering/validation/smoke/addresses.txt' '9e2820049a36890bdc4cf438cfd7359910f2f9ebd37bae84429544eae4cd0581'   
+2026-11-01 14:51:39 INFO  (HeadlessAnalyzer) SCRIPT: /workspace/reverse-engineering/scripts/ExportFunctionBatch.java  
+2026-11-01 14:51:39 INFO  (GhidraScript) ExportFunctionBatch.java> BATCH exported_entries=1  
+2026-11-01 14:51:39 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportFunctionBatch.java '/workspace/reverse-engineering/validation/smoke/wrong-hash' '/workspace/reverse-engineering/validation/smoke/addresses.txt' '0000000000000000000000000000000000000000000000000000000000000000'   
+2026-11-01 14:51:39 INFO  (HeadlessAnalyzer) SCRIPT: /workspace/reverse-engineering/scripts/ExportFunctionBatch.java  
+2026-11-01 14:51:39 ERROR (HeadlessAnalyzer) REPORT SCRIPT ERROR:  java.lang.IllegalStateException: Program SHA256 does not match expected target
+	at ExportFunctionBatch.run(ExportFunctionBatch.java:20)
+	at ghidra.app.script.GhidraScript.executeNormal(GhidraScript.java:460)
+	at ghidra.app.script.GhidraScript.doExecute(GhidraScript.java:314)
+	at ghidra.app.script.GhidraScript.execute(GhidraScript.java:290)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScript(HeadlessAnalyzer.java:597)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScriptsList(HeadlessAnalyzer.java:949)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1107)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileNoImport(HeadlessAnalyzer.java:1206)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFolderNoImport(HeadlessAnalyzer.java:1376)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processNoImport(HeadlessAnalyzer.java:1405)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:461)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:211)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:41)
+ 

@@ -1,0 +1,166 @@
+{
+  "class": "TfrPDMPReviewItem",
+  "name": "frPDMPReviewItem",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 461,
+    "Height": 99,
+    "Ctl3D": false,
+    "ParentBackground": false,
+    "ParentCtl3D": false,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TPanel",
+      "name": "pnlItem",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 461,
+        "Height": 99,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "ParentColor": true,
+        "ShowCaption": false,
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TPanel",
+          "name": "pnlRequired",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 13,
+            "Height": 99,
+            "Align": "alLeft",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlRequired",
+            "ShowCaption": false,
+            "TabOrder": 0
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblRequired",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 6,
+                "Top": 3,
+                "Width": 7,
+                "Height": 13,
+                "Hint": "Required comments should not be blank or exceed 25 chars",
+                "Margins.Left": 6,
+                "Margins.Right": 0,
+                "Align": "alTop",
+                "Caption": "*",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clWindowText",
+                "Font.Height": -11,
+                "Font.Name": "Tahoma",
+                "Font.Style": [
+                  "fsBold"
+                ],
+                "ParentFont": false,
+                "ParentShowHint": false,
+                "ShowHint": true,
+                "ExplicitLeft": 3,
+                "ExplicitWidth": 6
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TPanel",
+          "name": "pnlCanvas",
+          "inherited": false,
+          "inline": false,
+          "child_position": null,
+          "properties": {
+            "Left": 13,
+            "Top": 0,
+            "Width": 448,
+            "Height": 99,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "Caption": "pnlCanvas",
+            "ShowCaption": false,
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TLabel",
+              "name": "lblInfo",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 83,
+                "Width": 3,
+                "Height": 13,
+                "Align": "alBottom",
+                "Caption": " ",
+                "Font.Charset": "DEFAULT_CHARSET",
+                "Font.Color": "clRed",
+                "Font.Height": -11,
+                "Font.Name": "Tahoma",
+                "Font.Style": [],
+                "ParentFont": false,
+                "WordWrap": true
+              },
+              "children": []
+            },
+            {
+              "class": "TMemo",
+              "name": "mm",
+              "inherited": false,
+              "inline": false,
+              "child_position": null,
+              "properties": {
+                "AlignWithMargins": true,
+                "Left": 3,
+                "Top": 0,
+                "Width": 442,
+                "Height": 77,
+                "Margins.Top": 0,
+                "Align": "alClient",
+                "ScrollBars": "ssVertical",
+                "TabOrder": 0
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TPopupMenu",
+      "name": "popBlank",
+      "inherited": false,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Left": 216,
+        "Top": 32
+      },
+      "children": []
+    }
+  ]
+}

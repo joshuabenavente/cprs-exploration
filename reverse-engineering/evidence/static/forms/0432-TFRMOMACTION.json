@@ -1,0 +1,32 @@
+{
+  "class": "TfrmOMAction",
+  "name": "frmOMAction",
+  "inherited": true,
+  "inline": false,
+  "child_position": null,
+  "properties": {
+    "Caption": "frmOMAction",
+    "ExplicitWidth": 320,
+    "ExplicitHeight": 240,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TVA508AccessibilityManager",
+      "name": "amgrMain",
+      "inherited": true,
+      "inline": false,
+      "child_position": null,
+      "properties": {
+        "Data": [
+          [
+            "Component = frmOMAction",
+            "Status = stsDefault"
+          ]
+        ]
+      },
+      "children": []
+    }
+  ]
+}
