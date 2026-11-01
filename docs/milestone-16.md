@@ -34,8 +34,9 @@ default/minimum size/scale samples passed. All 2,517 startup evidence files rema
 byte-identical. See [acceptance](../validation/milestone-16/acceptance.json) and
 [technical review](../validation/milestone-16/technical-review.json).
 
-Exact next action: publish, verify final-head code/build CI, merge and prune under
-standing authorization. The [project overview](project-overview-m16.md) records
+Published as [draft PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11).
+Exact next action: verify final-head code/build CI, merge and prune under standing
+authorization. The [project overview](project-overview-m16.md) records
 implemented features, evidence limits, fidelity gaps and recommended next work.
 No M17 implementation is started. Fresh combined native Windows/listening
 acceptance remains not run.

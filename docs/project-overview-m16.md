@@ -1,5 +1,8 @@
 # Project state after M16
 
+M16 is implemented and locally validated in [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11).
+Final-head hosted checks and authorized merge/prune are pending at this checkpoint.
+
 The project is a working synthetic offline Rust/Slint chart prototype. Its
 patient selection, chart navigation and read-only readers are implemented and
 covered by automated regression checks. Native acceptance of the current combined

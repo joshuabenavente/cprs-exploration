@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M16 implemented and complete Linux matrix passed; publication/final-head CI and authorized merge/prune next; current native acceptance pending",
+  "condition": "M16 implemented and Linux validated; published as draft PR #11; final-head CI and authorized merge/prune next",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -191,7 +191,7 @@
     }
   ],
   "next_action": {
-    "task": "Publish M16 draft PR, verify final-head CI, merge/prune, then deliver the requested project overview; fresh combined native Windows acceptance remains the next priority",
+    "task": "Verify final-head CI on PR #11, merge/prune and finish the requested project overview; next priority is fresh combined current-build native acceptance",
     "standing_delivery_authorization": "docs/delivery-workflow.md",
     "native_dependency": "Windows desktop and fresh combined M16 build"
   },
@@ -314,18 +314,21 @@
     "startup_evidence_files_unchanged": 2517,
     "acceptance_receipt": "validation/milestone-16/acceptance.json",
     "synthetic_visual_review": "minimum-200 selector capture inspected; not native acceptance",
-    "windows_code_build_ci": "not run yet",
+    "windows_code_build_ci": "Pending final head of PR #11",
     "windows_native_visual_keyboard": "not run",
     "narrator_listening": "not run",
     "milestone_complete": false
   },
   "publication": {
-    "state": "M16 implemented/validated locally; publication next",
+    "state": "Published as draft PR #11",
     "branch": "m16-search-page-validation",
     "destination": "https://github.com/joshuabenavente/cprs-exploration",
     "merge_authorized": true,
     "standing_authorization": "docs/delivery-workflow.md",
-    "implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24"
+    "implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24",
+    "branch_published": true,
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/11",
+    "receipt": "validation/milestone-16/publication.json"
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
