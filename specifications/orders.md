@@ -16,7 +16,7 @@ The focused exporter processes 24 requested MAP names at 26 distinct MAP address
 | Double-click opens the existing detail handler. | `lstOrdersDblClick` at `0117f5dc` directly calls `mnuViewDetailClick` at `0117cc00`. That handler checks selection, loops selected items, calls `getDetailOrder` at `011dabac`, and reaches MAP-resolved `fRptBox.ReportBox` at `01007fec`. | Delphi register ABI, type recovery, indirect dispatch, exception continuations, package-specific detail additions, and full original dialog behavior remain uncertain. The mock supports one selected item and an authored in-window detail pane. |
 | Detail retrieval differs from abbreviated-list and plain-text retrieval. | `getDetailOrder` retains `ORQOR DETAIL`; the three abbreviated-list wrappers retain `ORWORR AGET`, `ORB FOLLOW-UP ARRAY`, and `ORWORR RGET`; `RetrieveOrderFields` retains `ORWORR GET4LST`; `TextForOrder` retains `ORWORR GETTXT`. | These are static interface clues. Argument/response types, registrations, permissions, site behavior, and runtime compatibility are not established. |
 | Patient clearing explicitly clears Orders state. | `ClearPtData` at `01179ba0` calls its inherited clearing path, an indirect list operation, `ClearOrderSheets`, and `rOrders.ClearOrders`, plus other cleanup. | The Rust clearing and generation rules are authored; no original process is executed. |
-| Custom status/service/date/sort choices exist. | `TFRMORDERVIEW`: read-only status and service trees, date-range controls, Reverse Chronological Sequence, Group Orders by Service, OK/Cancel. `ListOrderFiltersAll` retains `ORWORDG REVSTS`. | No custom-view dialog, date-range filter, service grouping, persisted default, or live status catalog is implemented. |
+| Custom status/service/date/sort choices exist. | `TFRMORDERVIEW`: read-only status and service trees, date-range controls, Reverse Chronological Sequence, Group Orders by Service, OK/Cancel. `ListOrderFiltersAll` retains `ORWORDG REVSTS`. | M15 adds authored inline calendar bounds and Reset (orders-filtering.md); no custom-view dialog, service grouping, persisted default, or live status catalog is implemented. |
 
 `GetOrderText`, `GetPlainText`, `GetStartStopText`, and `NameOfStatus` provide additional rendering/literal evidence. The original status literals do not give the mock's three statuses clinical meaning. All prototype status labels explicitly say Mock.
 
@@ -26,14 +26,22 @@ One flat invented order list is sorted by fixed invented timestamp descending, w
 
 Selection only highlights a row and updates its patient/order identity. Enter, double-click, or View order detail explicitly requests read-only detail. Escape or Close detail clears the document, invalidates pending detail replies, retains the selection, and restores list focus. Ctrl+F focuses the Orders filter; Ctrl+O opens patient selection. Document text is selectable and scrollable; it has no editing or clinical-action callbacks.
 
-List keys include generation, patient ID, text filter, and status filter. Detail keys include an independent generation, patient ID, and order ID. Applying a reply requires the matching pending request, active patient, Orders tab, and selected order; detail response owner and ID must also match. Old and duplicate successes and failures are discarded. A list rejects foreign owners, duplicate IDs, blank descriptions/services, malformed invented timestamps, and rows outside the requested filters.
+List keys include generation, patient ID, text/status/date filter tuple. Detail keys include an independent generation, patient ID, and order ID. Applying a reply requires the matching pending request, active patient, Orders tab, and selected order; detail response owner and ID must also match. Old and duplicate successes and failures are discarded. A list rejects foreign owners, duplicate IDs, blank required metadata, malformed invented timestamps, and rows outside the requested filters.
 
-Changing text/status filters clears rows, selection, and detail before the new list loads. Selecting another order clears old detail immediately. Leaving Orders, opening patient selection, or committing a new chart clears all Orders transient state. Canceling patient selection preserves the committed patient/tab and reloads a fresh all-status list, without restoring old selection or detail.
+Changing text/status/date filters clears rows, selection, and detail before the new list loads. Selecting another order clears old detail immediately. Leaving Orders, opening patient selection, or committing a new chart clears all Orders transient state. Canceling patient selection preserves the committed patient/tab and reloads a fresh all-status list, without restoring old selection or detail.
 
-Loading, successful empty lists, no filter matches, list failure, closed detail, detail loading, detail failure/retry, and a successful empty detail response are distinct. Retry repeats only the indicated mock operation. Scenario controls provide list failure, detail failure, and delayed responses. In the slow scenario ORDER-01 detail is delayed longer than ORDER-02 to exercise races.
+Input validation (no provider request), loading, successful empty lists, no filter matches, list failure, closed detail, detail loading, detail failure/retry, and a successful empty detail response are distinct. Retry repeats only the indicated mock operation. Scenario controls provide list failure, detail failure, and delayed responses. In the slow scenario ORDER-01 detail is delayed longer than ORDER-02 to exercise races.
 
 SYNTH-002 has no invented orders. Other accessible fixtures have four records: duplicate descriptions with distinct IDs, a long Unicode detail, and a successful empty-detail fixture. IDs deliberately repeat across patients so tests must preserve the patient key. All text is invented training content, not clinical instructions.
 
 ## Acceptance
 
 OT01–OT15 cover exact identity, duplicate descriptions, deterministic sorting, stale/duplicate replies, cross-patient collisions, tab/selector cancellation, filtering, explicit detail activation/close, malformed records, empty/error/retry states, Unicode/long text, and denied/unavailable fixtures. Native visual/keyboard checks, user-reported Narrator results, and source/static evidence remain separate from core and callback checks. Existing Milestone 4 listening results do not establish speech behavior for the new Orders controls.
+
+## M15 Orders calendar extension
+
+[OF01–OF08](orders-filtering.md) defines strict inclusive bounds on the invented
+order timestamp and Reset to query/date blanks plus All mock statuses. Invalid
+edits immediately clear both list and detail generations; retries and scenario
+changes retain inputs. This does not implement Start / Stop interval semantics
+or original order-placement dates. Existing explicit activation remains intact.

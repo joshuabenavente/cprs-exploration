@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M14 published as draft PR #9; final-head code/build CI pending; user authorized subsequent merge/prune and an M15 draft",
+  "condition": "M15 published as draft PR #10 after explicit standing delivery approval; final-head CI and authorized merge/prune next",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -24,10 +24,31 @@
   },
   "prioritized_backlog": [
     {
+      "id": "M15-WINDOWS",
+      "priority": "P1",
+      "task": "Collect fresh M15 Windows source/build matrix and separate native visual/keyboard/Narrator observations",
+      "status": "not run",
+      "dependency": "fresh M15 Windows executable and native session"
+    },
+    {
+      "id": "M14-WINDOWS",
+      "priority": "P1",
+      "task": "Collect fresh M14 Windows matrix and native visual/keyboard/Narrator observations with exact source/build/EXE bindings",
+      "status": "pending; final-head hosted code/build CI passed",
+      "dependency": "Windows desktop session and fresh M14 executable"
+    },
+    {
+      "id": "OF-CONTRACT",
+      "priority": "P2",
+      "task": "Write proposed OF01\u2013OF08 contract for M15 read-only Orders date bounds and Reset",
+      "status": "OF01\u2013OF08 contract implemented; Rust/protocol/complete Linux matrix passed",
+      "dependency": "docs/milestone-15.md and merged M14 baseline"
+    },
+    {
       "id": "M13-WINDOWS",
       "priority": "P1",
       "task": "Run new Windows source/build/matrix checks and affected native/Narrator checklist across ten combinations",
-      "status": "pending; independent of historical M12 acceptance",
+      "status": "source/build CI passed on M13 final head; fresh native matrix/visual/keyboard/Narrator remain pending",
       "dependency": "new M13 Windows executable and native desktop session"
     },
     {
@@ -115,6 +136,11 @@
       "id": "D09",
       "decision": "M14 adds only authored Results calendar bounds and Reset; share smallest strict calendar helper with Notes",
       "rationale": "TFRMLABS date controls support direction, while exact original date semantics remain unresolved"
+    },
+    {
+      "id": "D10",
+      "decision": "Draft M15 as bounded read-only Orders date filtering and Reset, using existing order timestamp and query/status tuple",
+      "rationale": "Stored Custom Order View has date controls; exact inclusive calendar/reset semantics remain authored policy, and native acceptance backlog remains explicit"
     }
   ],
   "risks": [
@@ -150,10 +176,9 @@
     }
   ],
   "next_action": {
-    "task": "Verify final M14 head CI, mark ready and merge PR #9, prune merged branches, then draft M15",
+    "task": "Verify final-head CI on M15 PR #10, mark ready, merge, synchronize main and prune the merged topic branch; then fresh native Windows/listening follow-up",
     "blocked_by": null,
-    "implementation_state": "M14 core/UI, 116 Rust tests, 16 protocol tests and full Linux matrix delivered locally",
-    "independent_native_followup": "Windows M14 matrix, native visual/keyboard and Narrator checklist remain not run",
+    "independent_native_followup": "Fresh M15 Windows matrix/native keyboard/visual/Narrator remain not run; M13/M14 receipts remain unchanged",
     "merge_authorized": true
   },
   "artifacts": {
@@ -245,54 +270,57 @@
     ]
   },
   "implementation": {
-    "milestone": 14,
-    "branch": "m14-results-date-filters",
-    "baseline": "62bd340501f0d7753e1807cec12d7a967f8fb403",
-    "approval": "merge, prune, then start on M14 with a new agent",
-    "contract": "specifications/results-filtering.md",
+    "milestone": 15,
+    "branch": "m15-orders-date-filters",
+    "baseline": "b8e1f21",
+    "runtime_baseline": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+    "approval": "Approved",
+    "contract": "specifications/orders-filtering.md",
     "features": [
-      "inclusive strict Gregorian calendar bounds with open ends",
-      "query/date tuple generation and patient ownership",
-      "invalid edit clears rows/selection/detail and rejects late success/failure",
-      "Reset and patient/tab/cancel defaults",
-      "explicit report activation and read-only detail preserved",
-      "intrinsic Results height and geometry checks"
+      "typed query/status/inclusive calendar tuple",
+      "invalid edits clear list/detail before validation",
+      "Reset/defaults and owned response predicates",
+      "strict Orders timestamps",
+      "intrinsic Orders height and filter/reading geometry"
     ],
-    "runtime_scope": "nine invented patients, one report type, offline/read-only",
-    "local_implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028"
+    "runtime_scope": "nine invented patients; existing four orders/three mock statuses; offline read-only",
+    "local_implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720"
   },
   "current_validation": {
     "platform": "Linux Xvfb/software renderer",
-    "core_tests_passed": 116,
-    "protocol_tests_passed": 16,
+    "core_tests_passed": 132,
+    "protocol_tests_passed": 17,
     "workspace_format": "passed",
     "warning_denied_workspace_clippy": "passed",
     "desktop_build": "passed",
     "callback_smoke": "passed",
     "real_timer_journey": "passed",
-    "checkpoints": 100,
-    "deliveries": 122,
-    "rejected": 53,
+    "checkpoints": 112,
+    "deliveries": 145,
+    "rejected": 65,
     "default_minimum_scale_matrix_passed": 10,
-    "historical_files_unchanged": 2447,
-    "acceptance_receipt": "validation/milestone-14/acceptance.json",
-    "synthetic_visual_review": "minimum-200 captured/inspected; not native acceptance",
-    "windows_code_build_ci": "Pending on PR #9; native visual/keyboard and Narrator remain not run",
+    "startup_evidence_files_unchanged": 2481,
+    "acceptance_receipt": "validation/milestone-15/acceptance.json",
+    "synthetic_visual_review": "minimum-200 captured and inspected; not native acceptance",
+    "first_full_attempt": "Retained assertion failure corrected; final full run passed",
+    "windows_code_build_ci": "Pending on PR #10; native and listening remain separate and not run",
     "windows_native_visual_keyboard": "not run",
     "narrator_listening": "not run",
     "milestone_complete": false
   },
   "publication": {
-    "state": "published as draft PR",
+    "state": "published as draft PR #10; historical block resolved",
     "destination": "https://github.com/joshuabenavente/cprs-exploration",
-    "branch": "m14-results-date-filters",
-    "implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
+    "branch": "m15-orders-date-filters",
     "branch_published": true,
-    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/9",
-    "reason": "Explicit user approval received for M14 publication and subsequent merge/prune.",
-    "receipt": "validation/milestone-14/publication.json",
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/10",
     "merge_authorized": true,
-    "historical_block_receipt": "validation/milestone-14/publication-block.json"
+    "implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720",
+    "user_approval": "I approve the action and the commit push merge and prune going forward",
+    "planned_action": "Publish approved M15 implementation/code/docs/evidence and create a draft PR; no merge",
+    "receipt": "validation/milestone-15/publication.json",
+    "reason": "Explicit M15 publication and standing commit/push/merge/prune authorization received",
+    "historical_block_receipt": "validation/milestone-15/publication-block.json"
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
@@ -370,9 +398,125 @@
     "ci": "Current run conclusions are tracked on PR #8; code/build checks are separate from native/listening"
   },
   "root_review": {
-    "receipt": "validation/milestone-14/root-review.json",
-    "result": "read-only binding/receipt checks and scoped technical review passed",
-    "next_step": "Verify final-head code/build CI, then carry out authorized merge/prune and draft M15",
-    "automatic_approval_review": "Rejected M14 git push before execution; previous publication permission classified as M13-only, and move to next step was not accepted as explicit M14 export permission."
+    "receipt": "validation/milestone-15/technical-review.json",
+    "result": "Technical review and read-only receipt/history binding checks passed",
+    "next_step": "Final-head CI, authorized merge/prune and separate native/listening follow-up"
+  },
+  "m14_merge": {
+    "recorded_at_utc": "2026-11-01T19:53:32.088963+00:00",
+    "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/9",
+    "merged": true,
+    "merge_commit": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+    "merged_head": "d934582891bf99c5c9d0d4d2fcee7867a6852be4",
+    "ci_run": 41343365509,
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41343365509",
+    "ci_head": "d934582891bf99c5c9d0d4d2fcee7867a6852be4",
+    "jobs": [
+      {
+        "id": 124957897501,
+        "name": "portable-core",
+        "conclusion": "success"
+      },
+      {
+        "id": 124957897764,
+        "name": "windows-desktop-build",
+        "conclusion": "success"
+      }
+    ],
+    "local_main_synced": true,
+    "local_m14_branch_pruned": true,
+    "remote_m14_branch_pruned": true,
+    "obsolete_local_branch_removed": {
+      "name": "work",
+      "head": "64280376dfc7dc5c32679c941a542b6ef3ebf54b",
+      "commits_not_in_main": 0,
+      "separate_worktree": false,
+      "method": "git branch -d after ancestry check"
+    },
+    "remaining_remote_branches": [
+      "main"
+    ],
+    "remaining_local_branches": [
+      "main",
+      "m15-plan"
+    ],
+    "m15_scope": "Local planning draft only; no M15 implementation, publication or acceptance run",
+    "native_windows_and_narrator": "M13/M14 new-build observations remain pending; CI/merge does not establish acceptance"
+  },
+  "milestone_15_draft": {
+    "title": "Read-only Orders date filtering",
+    "plan": "docs/milestone-15.md",
+    "requirements": "OF01\u2013OF08 proposed; contract not yet implemented",
+    "branch": "m15-plan",
+    "baseline": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+    "runtime_changes_started": true,
+    "published": false,
+    "validation": "Documentation consistency checks only; no new Rust or native test claims",
+    "evidence": "analysis/orders/resources/TFRMORDERVIEW.dfm.json: chkDateRange, calFrom, calThru; original date semantics unresolved",
+    "next_implementation_action": "Pin baseline and historical evidence; write OF01\u2013OF08 contract on an implementation branch",
+    "state": "Approved plan implemented and Linux validated locally; capture-time planning receipt preserved",
+    "planning_branch_pruned": true
+  },
+  "previous_m14_implementation": {
+    "milestone": 14,
+    "branch": "m14-results-date-filters",
+    "baseline": "62bd340501f0d7753e1807cec12d7a967f8fb403",
+    "approval": "merge, prune, then start on M14 with a new agent",
+    "contract": "specifications/results-filtering.md",
+    "features": [
+      "inclusive strict Gregorian calendar bounds with open ends",
+      "query/date tuple generation and patient ownership",
+      "invalid edit clears rows/selection/detail and rejects late success/failure",
+      "Reset and patient/tab/cancel defaults",
+      "explicit report activation and read-only detail preserved",
+      "intrinsic Results height and geometry checks"
+    ],
+    "runtime_scope": "nine invented patients, one report type, offline/read-only",
+    "local_implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
+    "state": "M14 merged; M15 planning only"
+  },
+  "previous_m14_validation": {
+    "platform": "Linux Xvfb/software renderer",
+    "core_tests_passed": 116,
+    "protocol_tests_passed": 16,
+    "workspace_format": "passed",
+    "warning_denied_workspace_clippy": "passed",
+    "desktop_build": "passed",
+    "callback_smoke": "passed",
+    "real_timer_journey": "passed",
+    "checkpoints": 100,
+    "deliveries": 122,
+    "rejected": 53,
+    "default_minimum_scale_matrix_passed": 10,
+    "historical_files_unchanged": 2447,
+    "acceptance_receipt": "validation/milestone-14/acceptance.json",
+    "synthetic_visual_review": "minimum-200 captured/inspected; not native acceptance",
+    "windows_code_build_ci": "Passed on M14 final head d934582; run 41343365509; native matrix and listening are separate and pending",
+    "windows_native_visual_keyboard": "not run",
+    "narrator_listening": "not run",
+    "milestone_complete": false
+  },
+  "previous_m14_publication": {
+    "state": "M14 merged; topic branch pruned locally and remotely",
+    "destination": "https://github.com/joshuabenavente/cprs-exploration",
+    "branch": "m14-results-date-filters",
+    "implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
+    "branch_published": true,
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/9",
+    "reason": "Explicit user approval received for M14 publication and subsequent merge/prune.",
+    "receipt": "validation/milestone-14/publication.json",
+    "merge_authorized": true,
+    "historical_block_receipt": "validation/milestone-14/publication-block.json",
+    "branch_pruned": true,
+    "merge_commit": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41343365509"
+  },
+  "standing_delivery_authorization": {
+    "recorded_at_utc": "2026-11-01T20:39:15.843613+00:00",
+    "user_instruction": "I approve the action and the commit push merge and prune going forward",
+    "repository": "https://github.com/joshuabenavente/cprs-exploration",
+    "scope": "M15 publication and routine commit/push/PR/merge/prune going forward within the established synthetic offline project",
+    "merge_after_appropriate_checks": true,
+    "policy": "docs/delivery-workflow.md"
   }
 }

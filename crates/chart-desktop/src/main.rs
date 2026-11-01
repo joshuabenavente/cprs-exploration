@@ -267,6 +267,9 @@ fn sync(app: &AppWindow, controller: &Controller) {
     app.set_placeholder(state.tab.placeholder().into());
     let o = &state.orders;
     app.set_orders_query(o.query.clone().into());
+    app.set_orders_beginning(o.beginning_input.clone().into());
+    app.set_orders_ending(o.ending_input.clone().into());
+    app.set_orders_invalid_filter(matches!(o.list_status, OrdersListStatus::Invalid(_)));
     app.set_orders_status_filter(order_filter_index(o.status_filter));
     let rows = o
         .rows
@@ -305,7 +308,9 @@ fn sync(app: &AppWindow, controller: &Controller) {
         OrdersListStatus::Empty => {
             "No invented orders match this view. This is not a clinical finding.".into()
         }
-        OrdersListStatus::Error(message) => message.clone().into(),
+        OrdersListStatus::Error(message) | OrdersListStatus::Invalid(message) => {
+            message.clone().into()
+        }
     });
     app.set_order_identity(
         o.selected
@@ -870,6 +875,13 @@ fn load_orders(
         c.last_order_click = None;
         c.state.begin_orders_list(query, filter)
     };
+    deliver_orders_list(weak, shared, request);
+}
+fn deliver_orders_list(
+    weak: slint::Weak<AppWindow>,
+    shared: Shared,
+    request: Option<OrdersListRequest>,
+) {
     paint(&weak, &shared);
     let Some(request) = request else {
         return;
@@ -893,7 +905,7 @@ fn load_orders(
             &shared,
             "orders-list",
             request.patient_id.as_str(),
-            request.query.as_str(),
+            &format!("{:?}", request.filter),
             request.generation,
             applied,
         );
@@ -1156,6 +1168,27 @@ fn wire(app: &AppWindow, shared: &Shared) {
     app.on_orders_filter_edited(move |query| {
         let filter = data.borrow().state.orders.status_filter;
         load_orders(weak.clone(), data.clone(), query.to_string(), filter);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_orders_dates_edited(move |beginning, ending| {
+        let request = {
+            let mut c = data.borrow_mut();
+            c.last_order_click = None;
+            let query = c.state.orders.query.clone();
+            let status = c.state.orders.status_filter;
+            c.state
+                .begin_orders_filter(query, status, beginning.to_string(), ending.to_string())
+        };
+        deliver_orders_list(weak.clone(), data.clone(), request);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_orders_reset_filters(move || {
+        let request = {
+            let mut c = data.borrow_mut();
+            c.last_order_click = None;
+            c.state.reset_orders_filters()
+        };
+        deliver_orders_list(weak.clone(), data.clone(), request);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_orders_status_changed(move |index| {
@@ -1674,6 +1707,27 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     assert_eq!(app.get_orders_rows().row_count(), 0);
     assert!(app.get_order_body().is_empty());
     app.invoke_orders_status_changed(0);
+    app.invoke_orders_dates_edited("2026-10-29".into(), "2026-10-29".into());
+    assert_eq!(app.get_orders_rows().row_count(), 0);
+    assert!(!app.get_orders_list_error());
+    app.invoke_orders_reset_filters();
+    assert_eq!(app.get_orders_rows().row_count(), 4);
+    app.invoke_orders_dates_edited("2026-10-28".into(), "2026-10-29".into());
+    assert_eq!(app.get_orders_rows().row_count(), 2);
+    app.invoke_orders_status_changed(1);
+    assert_eq!(app.get_orders_rows().row_count(), 1);
+    app.invoke_orders_dates_edited("bad".into(), "".into());
+    assert!(app.get_orders_invalid_filter());
+    assert!(!app.get_orders_list_error() && !app.get_orders_loading());
+    assert_eq!(app.get_orders_rows().row_count(), 0);
+    app.invoke_orders_scenario_changed(1);
+    assert!(app.get_orders_invalid_filter() && !app.get_orders_list_error());
+    app.invoke_orders_reset_filters();
+    assert!(app.get_orders_list_error());
+    app.invoke_orders_scenario_changed(0);
+    assert_eq!(app.get_orders_rows().row_count(), 4);
+    assert_eq!(app.get_orders_status_filter(), 0);
+    app.invoke_orders_filter_edited("李".into());
     app.invoke_orders_scenario_changed(2);
     app.invoke_order_selected(0);
     app.invoke_order_activated();

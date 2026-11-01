@@ -26,12 +26,12 @@ jobs:
         with:
           name: windows-code-checks
           path: |
-            validation/milestone-14/windows/code-checks.json
-            validation/milestone-14/windows/bootstrap.log
-            validation/milestone-14/windows/format.log
-            validation/milestone-14/windows/clippy.log
-            validation/milestone-14/windows/tests.log
-            validation/milestone-14/windows/build.log
+            validation/milestone-15/windows/code-checks.json
+            validation/milestone-15/windows/bootstrap.log
+            validation/milestone-15/windows/format.log
+            validation/milestone-15/windows/clippy.log
+            validation/milestone-15/windows/tests.log
+            validation/milestone-15/windows/build.log
   portable-core:
     runs-on: ubuntu-latest
     timeout-minutes: 15

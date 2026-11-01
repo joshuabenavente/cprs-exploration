@@ -177,6 +177,7 @@ class ProtocolTests(unittest.TestCase):
 
 
 def main():
+    raise SystemExit("M14 is frozen history; use the M15 runner in this checkout.")
     output = io.StringIO()
     result = unittest.TextTestRunner(stream=output, verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(ProtocolTests))
     runner.BASE.mkdir(parents=True, exist_ok=True)

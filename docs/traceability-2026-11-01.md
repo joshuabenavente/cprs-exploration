@@ -64,3 +64,13 @@ adds evidence to the existing feature rows without changing prototype policies.
 | Orders explicit detail / Results report slice | `BEHAVIOR.md` Orders/Results sections and exact historical copies; `EXTERNAL-INTERFACES.md` fixed/configured RPC distinction | Original multi-select/configured report/status behavior remains broader; no feature parity inferred. |
 | TIU excluded sign boundary | `evidence/batch-0003/00a0b3e0.asm`, `00a0c6fc.asm`, annotations and five boundary repairs | Bounded query/sign distinction B; complete authorization/ABI/server effects U. |
 | Keyboard/layout/native/listening | Full forms/event census supports stored controls; `catalog/uncertainties.json` U08 explicitly limits runtime UI claims | No new native or speech evidence. Retained M12 user reports and targeted captures keep their recorded scope. |
+
+## M15 implementation checkpoint
+
+| Feature | Requirement and evidence | Implementation | Verification and remaining gap |
+| --- | --- | --- | --- |
+| Orders calendar/text/status filtering and Reset | [OF01–OF08](../specifications/orders-filtering.md). B: stored TFRMORDERVIEW chkDateRange/calFrom/calThru and change/OK/Cancel bindings. P: inclusive ISO days on invented order timestamp, Reset and invalidation. I: bounded reader extension. U: original placement/start-stop semantics, server rules and runtime accessibility. | orders.rs OrdersFilter/begin_orders_filter/reset_orders_filters, strict timestamp and response predicates; main.rs callbacks; orders-view.slint inputs/intrinsic height; CalendarDay reused. | Sixteen focused OF tests plus retained OT suite; twelve added delayed-reply/geometry checkpoints, M15 protocol/isolation tools and fresh ten-sample matrix passed (132 Rust / 17 protocol tests; 112 checkpoints per journey). Native Windows/keyboard/Narrator remain not run; no parity claim. |
+
+M14 merged after final-head CI; its capture-time receipts and pending native
+acceptance remain distinct from M15. Five prepared transport/save/login/DLL RE
+targets remain deferred. No original execution or new static recovery is claimed.

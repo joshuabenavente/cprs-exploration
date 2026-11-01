@@ -1,0 +1,41 @@
+{
+  "recorded_at_utc": "2026-11-01T19:53:32.088963+00:00",
+  "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/9",
+  "merged": true,
+  "merge_commit": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+  "merged_head": "d934582891bf99c5c9d0d4d2fcee7867a6852be4",
+  "ci_run": 41343365509,
+  "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41343365509",
+  "ci_head": "d934582891bf99c5c9d0d4d2fcee7867a6852be4",
+  "jobs": [
+    {
+      "id": 124957897501,
+      "name": "portable-core",
+      "conclusion": "success"
+    },
+    {
+      "id": 124957897764,
+      "name": "windows-desktop-build",
+      "conclusion": "success"
+    }
+  ],
+  "local_main_synced": true,
+  "local_m14_branch_pruned": true,
+  "remote_m14_branch_pruned": true,
+  "obsolete_local_branch_removed": {
+    "name": "work",
+    "head": "64280376dfc7dc5c32679c941a542b6ef3ebf54b",
+    "commits_not_in_main": 0,
+    "separate_worktree": false,
+    "method": "git branch -d after ancestry check"
+  },
+  "remaining_remote_branches": [
+    "main"
+  ],
+  "remaining_local_branches": [
+    "main",
+    "m15-plan"
+  ],
+  "m15_scope": "Local planning draft only; no M15 implementation, publication or acceptance run",
+  "native_windows_and_narrator": "M13/M14 new-build observations remain pending; CI/merge does not establish acceptance"
+}

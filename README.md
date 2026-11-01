@@ -4,56 +4,58 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-The development branch is `main`. M13 PR #8 is merged at `62bd340`; its branch
-is pruned and final-head portable/Windows code-build CI passed. Native/Narrator
-acceptance for M13 remains pending. Active M14 work is on
-`m14-results-date-filters` from that merge. The [published reverse-engineering
-folder](reverse-engineering/README.md) is retained without changes. See the
-[current handoff](docs/handoff.md), [feature traceability](docs/traceability-2026-11-01.md)
-and [M14 Results filtering milestone](docs/milestone-14.md).
-Original reference binaries and the Ghidra database are excluded from the publication.
+The development branch is `main`. M14 PR #9 is merged at `e93c9a0` after
+portable/Windows code-build CI passed; obsolete branches were pruned. M13/M14
+native/Narrator acceptance remains pending. Approved M15 work is on
+`m15-orders-date-filters`, based on the local planning commit `b8e1f21` and merged
+M14 runtime. See the [handoff](docs/handoff.md), [traceability](docs/traceability-2026-11-01.md)
+and [M15 Orders milestone](docs/milestone-15.md). The
+[published reverse-engineering folder](reverse-engineering/README.md) is retained.
+Original reference binaries and the Ghidra database are excluded.
 
-## Run the current M14 Rust mock
+## Run the current M15 Rust mock
 
-M14 adds optional inclusive beginning/ending YYYY-MM-DD dates and Reset to the
-existing Results substring filter. Blank dates are open bounds; invalid dates
-clear rows and detail with a patient-scoped message. Highlighting selects a report;
-View, Enter or double-click opens its read-only detail. Notes retains the M13
-author/date filtering and automatic reading behavior. Date semantics are authored
-prototype policy; no original FileMan, timezone or server rules are inferred.
+M15 adds optional inclusive beginning/ending YYYY-MM-DD dates and Reset to Orders,
+combined with its existing text and mock-status filters. Blank dates are open;
+invalid edits clear list/detail immediately with patient-scoped validation. Reset
+clears query/dates and restores All mock statuses. Highlighting selects an order;
+View/Enter/double-click explicitly opens read-only detail. Dates filter the
+invented order timestamp; all date/reset semantics are authored prototype policy.
+Notes retains author/date filtering and automatic reading. Results retains M14
+dates and explicit activation. No original FileMan/timezone/server rules are inferred.
 
 ```powershell
 .\scripts\Start-MockChart.ps1 -Rebuild
 .\scripts\Test-MockChart.ps1 -Matrix
 python scripts\verify_integrated.py
-python scripts\test_m14_protocol.py
+python scripts\test_m15_protocol.py
 ```
 
-The active runner accepts only M14 and writes platform-specific
-`validation/milestone-14/windows/` or `linux/` evidence. `-CodeOnly` omits desktop
+The active runner accepts only M15 and writes platform-specific
+`validation/milestone-15/windows/` or `linux/` evidence. `-CodeOnly` omits desktop
 execution; `-Bootstrap` fetches locked dependencies before offline checks;
 `-Python` selects the installed Windows interpreter. Linux can run
-`python3 scripts/validate_m14.py --matrix` with Rust 1.99.1, native build libraries
+`python3 scripts/validate_m15.py --matrix` with Rust 1.99.1, native build libraries
 and an X11 display (a virtual display establishes only synthetic UI evidence).
 Unset SLINT_SCALE_FACTOR while compiling; the runner applies it only at runtime.
 
-The journey retains all 91 M13 checkpoints and adds nine Results filtering
-checks (100 total). Source/build/executable/log bindings and ten requested
-size/scale samples are verified together. See [M14](docs/milestone-14.md), the
-[Results filter contract](specifications/results-filtering.md) and
-[native/listening checklist](validation/milestone-14/native-checklist.md).
+The journey retains all 100 M14 checkpoints and adds twelve Orders filtering
+checks (112 total). Source/build/executable/log bindings and ten requested
+size/scale samples are verified together. See [M15](docs/milestone-15.md), the
+[Orders filter contract](specifications/orders-filtering.md) and
+[native/listening checklist](validation/milestone-15/native-checklist.md).
 Windows native and Narrator results must be recorded separately on the new build.
 
-Use `scripts/Review-ResultsFilters.ps1 -Size minimum -ScaleFactor 2` after the full
+Use `scripts/Review-OrdersFilters.ps1 -Size minimum -ScaleFactor 2` after the full
 Windows matrix to prepare a native sample. Repeat both sizes at 100%, 125%, 150%,
-175% and 200%. The launcher leaves Results open and records preparation only.
+175% and 200%. The launcher leaves Orders open and records preparation only.
 Close the app between samples. The largest-scale default remains 1180x700
 logical pixels; minimum is 980x680, other defaults 1180x800. These application
 scale overrides do not change Windows display settings.
 
 The earlier M2–M13 commands/receipts are historical. Do not run old validation
 writers or the M12 follow-up runner with the changed executable. The historical
-M12 user-reported acceptance remains bound to `a88c…`; a new M14 build needs its
+M12 user-reported acceptance remains bound to `a88c…`; a new M15 build needs its
 own acceptance. Earlier source-bound verifiers can be run in their historical
 checkout. All raw evidence and receipts are preserved.
 
@@ -113,7 +115,7 @@ Keep the GUI project closed during headless processing. Logs are in `analysis/lo
 
 ## Milestone documents
 
-- [Current M14 Results filters and validation checkpoint](docs/milestone-14.md)
+- [Current M15 Orders filters and validation checkpoint](docs/milestone-15.md)
 - [Merged M13 Notes filters (native/listening pending)](docs/milestone-13.md)
 - [Historical M12 evidence protocol and review checkpoint](docs/milestone-12.md)
 - [Historical M11 shared Cover Sheet hardening](docs/milestone-11.md)

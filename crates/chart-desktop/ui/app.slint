@@ -1,7 +1,7 @@
 import { Button, ComboBox, LineEdit, StandardTableView, ScrollView, TextEdit } from "std-widgets.slint";
 import { CoverPanel, CoverGeometry } from "cover-panel.slint";
 import { NotesView, NoteFilterGeometry } from "notes-view.slint";
-import { OrdersView } from "orders-view.slint";
+import { OrdersView, OrdersFilterGeometry } from "orders-view.slint";
 import { ResultsView, ResultsFilterGeometry } from "results-view.slint";
 
 component Field inherits VerticalLayout {
@@ -101,6 +101,9 @@ export component AppWindow inherits Window {
     in property <[[StandardListViewItem]]> orders-rows;
     in-out property <int> selected-order: -1;
     in-out property <string> orders-query;
+    in-out property <string> orders-beginning;
+    in-out property <string> orders-ending;
+    in property <bool> orders-invalid-filter;
     in property <int> orders-status-filter;
     in property <int> orders-scenario;
     in property <bool> orders-loading;
@@ -113,6 +116,8 @@ export component AppWindow inherits Window {
     in property <bool> order-body-ready;
     in property <bool> order-detail-open;
     callback orders-filter-edited(string);
+    callback orders-dates-edited(string, string);
+    callback orders-reset-filters();
     callback orders-status-changed(int);
     callback orders-scenario-changed(int);
     callback order-selected(int);
@@ -210,6 +215,7 @@ export component AppWindow inherits Window {
     public function focus-detail() { detail-text.focus(); }
     public function focus-notes-filter() { notes-view.focus-filter(); }
     public function focus-notes-body() { notes-view.focus-body(); }
+    public function orders-geometry() -> OrdersFilterGeometry { return orders-view.geometry(); }
     public function results-geometry() -> ResultsFilterGeometry { return results-view.geometry(); }
     public function notes-geometry() -> NoteFilterGeometry { return notes-view.geometry(); }
     public function focus-orders-filter() { orders-view.focus-filter(); }
@@ -558,13 +564,17 @@ export component AppWindow inherits Window {
                         }
                         orders-view := OrdersView {
                             visible: root.has-active && root.tab-index == 2;
-                            min-height: 0px; max-height: root.has-active && root.tab-index == 2 ? 10000px : 0px;
+                            min-height: root.has-active && root.tab-index == 2 ? self.required-height : 0px; max-height: root.has-active && root.tab-index == 2 ? 10000px : 0px;
                             rows: root.orders-rows; selected-row <=> root.selected-order; query <=> root.orders-query;
+                            beginning <=> root.orders-beginning; ending <=> root.orders-ending;
+                            patient-id: root.active-id; invalid-filter: root.orders-invalid-filter;
                             status-filter: root.orders-status-filter; scenario: root.orders-scenario; loading: root.orders-loading;
                             list-error: root.orders-list-error; list-status: root.orders-list-status;
                             identity: root.order-identity; body: root.order-body; body-status: root.order-body-status;
                             body-error: root.order-body-error; body-ready: root.order-body-ready; detail-open: root.order-detail-open;
                             filter-edited(query) => { root.orders-filter-edited(query); }
+                            dates-edited(beginning, ending) => { root.orders-dates-edited(beginning, ending); }
+                            reset-filters => { root.orders-reset-filters(); }
                             status-changed(index) => { root.orders-status-changed(index); }
                             scenario-changed(index) => { root.orders-scenario-changed(index); }
                             selected(index) => { root.order-selected(index); }

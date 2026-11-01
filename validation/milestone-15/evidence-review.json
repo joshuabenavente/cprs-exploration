@@ -1,0 +1,35 @@
+{
+  "protocol": "M15",
+  "scope": "Bounded static contract and implementation review; no original execution or new reverse engineering",
+  "evidence_file": "analysis/orders/resources/TFRMORDERVIEW.dfm.json",
+  "evidence_sha256": "fb2679334f4a9ea9ab5dd9bcd2a0a00090e9a7493eb45052951a84d9e37a6101",
+  "observations": [
+    "chkDateRange caption Only List Orders Placed During Time Period",
+    "calFrom/calThru TORDateBox with calChange; OK and Cancel bindings"
+  ],
+  "classification": {
+    "B": "Stored form controls and event names; existing Orders detail/clear addresses retained in prior specification",
+    "P": "Strict inclusive Gregorian days on invented order timestamp, defaults/Reset, ownership/generations and asynchronous rejection",
+    "I": "Bounded extension of the existing reader",
+    "U": "Original date semantics, placement/start-stop relation, server rules, permissions and runtime accessibility"
+  },
+  "reviewed_paths": [
+    "crates/chart-core/src/orders.rs",
+    "crates/chart-core/src/lib.rs orders provider",
+    "crates/chart-desktop/src/main.rs Orders callbacks",
+    "crates/chart-desktop/ui/orders-view.slint",
+    "scripts/validate_m15.py",
+    "scripts/verify_m15.py",
+    "scripts/test_m15_protocol.py"
+  ],
+  "findings": "No blocking finding in inspected filter/ownership/invalidation/response paths. Final automated matrix passed; first full-run assertion error retained separately.",
+  "deferred_targets": [
+    "009ad030",
+    "00e19034",
+    "009916c8",
+    "00996390",
+    "01192018"
+  ],
+  "exclusions": "No new patients/services/grouping/multiselect, persistence, live calls/credentials, original/DLL execution or clinical writes",
+  "implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720"
+}

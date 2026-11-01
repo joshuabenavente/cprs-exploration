@@ -1,16 +1,39 @@
 # CPRS Chart recreation: current handoff
 
-M14 implementation and Linux validation are complete. [PR #9](https://github.com/joshuabenavente/cprs-exploration/pull/9)
-was published as a draft after explicit M14 publication approval. The user then
-authorized merging after checks, pruning obsolete merged branches and drafting
-M15. Exact next action: verify final-head portable and Windows code/build CI,
-mark ready and merge, synchronize main, prune merged branches, then draft M15.
-See the [publication receipt](../validation/milestone-14/publication.json).
-The earlier [blocked attempt](../validation/milestone-14/publication-block.json)
-is retained as history and is resolved by the explicit approval.
+M14 [PR #9](https://github.com/joshuabenavente/cprs-exploration/pull/9) merged at
+`e93c9a03c8ae802d54a7252c0ff95fedec4385b4` after portable-core and Windows
+code/build CI passed on final head `d934582`. Local main matches origin/main.
+The merged M14 branch was deleted locally/remotely; obsolete local `work` was
+removed after verifying it had no unique commits or separate worktree. Remote
+branches now contain only main. See the
+[merge/cleanup checkpoint](../validation/milestone-15/m14-merge-checkpoint.json).
+Historical publication/blocked-attempt receipts retain their capture-time status.
 
-M14 is on `m14-results-date-filters`, based on `62bd340` (merged M13 PR #8).
-M13 branches were pruned. M13 native/Narrator acceptance remains pending.
+M15 [Orders date filtering](milestone-15.md) was approved and is implemented on
+`m15-orders-date-filters`, from planning commit `b8e1f21` over merged M14. The
+[OF01–OF08 contract](../specifications/orders-filtering.md) adds inclusive calendar
+bounds and Reset to query/mock-status filtering. Invalid edits clear both pending
+channels without a provider request; detail activation remains explicit. All 132
+Rust tests, 17 protocol/isolation tests and sixteen automated steps passed.
+Eleven journeys each passed 112 checkpoints with 145 deliveries / 65 rejections;
+all ten scale samples passed and 2,481 startup evidence files remain unchanged.
+See the [acceptance checkpoint](../validation/milestone-15/acceptance.json).
+M15 is published as [draft PR #10](https://github.com/joshuabenavente/cprs-exploration/pull/10).
+The user explicitly approved this action and commit/push/merge/prune going forward;
+[standing delivery authorization](delivery-workflow.md) applies to routine work
+within this project's established scope. The prior publication block is resolved;
+its raw receipt is retained as history. See the
+[publication receipt](../validation/milestone-15/publication.json).
+Exact next action: verify final-head CI, mark ready and merge PR #10, synchronize
+main and prune the topic branch. Fresh Windows native/keyboard/Narrator acceptance
+remains not run and is separate from merge/code-build checks.
+New validation uses `validate_m15.py`, `verify_m15.py` / `verify_integrated.py`,
+`test_m15_protocol.py`, `Test-MockChart.ps1`, `Review-OrdersFilters.ps1`, and
+`validation/milestone-15/`. M14 writer entry points are frozen in this checkout.
+Fresh Windows native/keyboard/Narrator acceptance remains separate and not run.
+
+The following M14 paragraphs retain that milestone's completed validation
+checkpoint; they do not describe results of the current M15 executable.
 
 M14 adds query plus optional inclusive beginning/ending strict calendar bounds,
 Reset, invalid-input clearing and full owned filter/generation validation to the
@@ -23,9 +46,9 @@ Each journey has 100 checkpoints, 122 deliveries and 53 stale-reply rejections.
 All 2,447 pre-M14 evidence files remain byte-identical. See the
 [acceptance checkpoint](../validation/milestone-14/acceptance.json) and
 [targeted synthetic visual review](../validation/milestone-14/linux/synthetic-visual-review.json).
-Code/build CI is pending on PR #9. Windows matrix and separate native/Narrator
-checks remain pending; the authorized merge does not promote them to passed.
-New validation uses `validate_m14.py`, `verify_m14.py` (also available through
+Final-head code/build CI passed on PR #9. Windows matrix and separate native/
+Narrator checks remain pending; merge does not promote them to passed.
+At the M14 checkout, validation used `validate_m14.py`, `verify_m14.py` (also available through
 `verify_integrated.py`), `Test-MockChart.ps1`, `Review-ResultsFilters.ps1`, and
 `validation/milestone-14/`. Historical M13 writers now fail before writing.
 Windows native/listening checks require a fresh Windows build and the

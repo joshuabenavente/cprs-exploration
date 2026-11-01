@@ -3,6 +3,7 @@ param([ValidateSet('default', 'minimum')][string]$Size = 'default',
       [ValidateSet('1', '1.25', '1.5', '1.75', '2')][string]$ScaleFactor = '1',
       [string]$Python = 'python')
 $ErrorActionPreference = 'Stop'
+throw 'M14 is frozen history; use Review-OrdersFilters.ps1 in this checkout.'
 $root = Split-Path -Parent $PSScriptRoot
 $base = Join-Path $root 'validation/milestone-14/windows'
 $receipt = Get-Content -LiteralPath (Join-Path $base 'automated.json') -Raw | ConvertFrom-Json

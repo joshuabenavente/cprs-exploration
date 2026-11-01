@@ -1,0 +1,43 @@
+{
+  "protocol": "M15",
+  "recorded_at_utc": "2026-11-01T20:17:12.873885+00:00",
+  "runtime_baseline": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+  "planning_baseline": "b8e1f21111930d05db4d5d9366bb2d12ccd53043",
+  "implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720",
+  "m15_implementation_complete": true,
+  "linux_automated_passed": true,
+  "linux_executable_sha256": "b60f1ef41dd09b6fed9008e995161db1fd5d3059a9aa8735d737578287a088f4",
+  "rust_tests_passed": 132,
+  "protocol_tests_passed": 17,
+  "automated_steps": 16,
+  "journeys_verified": 11,
+  "checkpoints_each": 112,
+  "deliveries_each": 145,
+  "rejected_each": 65,
+  "default_minimum_scale_samples_passed": 10,
+  "startup_evidence_files_unchanged": 2481,
+  "receipts_sha256": {
+    "validation/milestone-15/linux/automated.json": "840a67f4fe23ad333a8966e15c36faaa822b098426ed55cdaaf9fba12983aa5f",
+    "validation/milestone-15/linux/integrated.json": "9f67c24024f8c08b3e0a77ca936dd2d855b2c55bb2b1271256d4e1f12b01c695",
+    "validation/milestone-15/linux/tooling-review.json": "a9b79071dab62031bed36be1a3bf9b47372d684be075d89663eed95cccbd78ff",
+    "validation/milestone-15/linux/synthetic-visual-review.json": "cf4e2046973fbb3f82191898cdbda4fa4beacef806d86349c4217a79ab02218a",
+    "validation/milestone-15/evidence-review.json": "5786d2ec2da414143a797317b43d75f5a5705f57cc2fc77fca07a7276515378a",
+    "validation/milestone-15/technical-review.json": "754132bef3a382d008a33e446c403bc6d167373c45cf4a353df4339d11a682eb",
+    "validation/milestone-15/startup-history.json": "1e4df7af10acf360141d8cd34325c7a9224ebd21cf7f754fb7ab127feb546d1e",
+    "validation/milestone-15/native-checklist.md": "85dffae6fbb02cce4cb9c8d15eb3118217d3a866834be6610c16c9f6c3e4c1d6",
+    "validation/milestone-15/m14-merge-checkpoint.json": "36dee4c93ecdca3dc5cd236f92c0cf0ba81f471f7cf2f0bcfcd3aabe72a62a19",
+    "validation/milestone-15/planning-review.json": "ca4dd7d16de843b9047b26da36c857fde4f26d7ff515990b5ce63693210ff6a5",
+    "validation/milestone-15/linux/attempt-1/automated.json": "4c7d654218af23c04f71d0b95c82145b3b573d92adc2ff36a3a5f0766b3b4562",
+    "validation/milestone-15/linux/attempt-1/integrated.log": "ea43082e068d3ef45bb4705525a95b42a035656a114883420892f154629b8f88",
+    "validation/milestone-15/linux/attempt-1/review.json": "a489fa3119bd4ad21b78b4083a027a5544669195805d505ec483b06fccbad704"
+  },
+  "windows_code_build_ci": "not run yet; draft publication/checks next",
+  "windows_native_visual_keyboard": "not run",
+  "narrator_listening": "not run",
+  "milestone_acceptance_complete": false,
+  "merge_authorized": false,
+  "limits": [
+    "Linux callbacks/timers/geometry and screenshot are synthetic, not Windows native or speech acceptance.",
+    "Date filtering/reset semantics are authored mock policy; no original-client parity, clinical/live/write behavior claimed."
+  ]
+}

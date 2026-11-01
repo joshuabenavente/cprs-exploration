@@ -1,0 +1,10 @@
+{
+  "scope": "Failed first full validation retained as history, not acceptance",
+  "failure": "orders-filter-combined-empty asserted status index 0 after preceding step deliberately selected index 1",
+  "correction": "Only the assertion changes to expect retained Mock active index 1; application behavior was correct",
+  "original_files_sha256": {
+    "automated.json": "4c7d654218af23c04f71d0b95c82145b3b573d92adc2ff36a3a5f0766b3b4562",
+    "integrated.log": "ea43082e068d3ef45bb4705525a95b42a035656a114883420892f154629b8f88"
+  },
+  "raw_automated_log_paths": "Capture-time paths; integrated.log archived here with unchanged bytes"
+}
