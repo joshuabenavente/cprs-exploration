@@ -1,7 +1,9 @@
 # Project state after M16
 
-M16 is implemented and locally validated in [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11).
-Final-head hosted checks and authorized merge/prune are pending at this checkpoint.
+M16 [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11) is merged
+after final-head portable-core and Windows code/build CI passed. Topic branches
+are pruned; only main remains. The delivery follow-up updates documentation only,
+with runtime/build files identical to the checked PR head.
 
 The project is a working synthetic offline Rust/Slint chart prototype. Its
 patient selection, chart navigation and read-only readers are implemented and
@@ -30,7 +32,7 @@ unchanged. Structural validation does not prove provider dataset completeness.
 ## What the evidence establishes
 
 The M16 [acceptance checkpoint](../validation/milestone-16/acceptance.json) and
-[delivery status](milestone-16.md) identify
+[delivery checkpoint](../validation/milestone-16/merge-checkpoint.json) identify
 their checked source/build/executable and CI commits. The final Linux run passed
 148 Rust tests, 18 protocol/isolation tests, format, warning-denied Clippy,
 desktop build and callback smoke. Eleven verified journeys each passed 121
@@ -38,7 +40,8 @@ checkpoints with 158 deliveries and 70 rejected replies. All ten default/minimum
 size samples at 100/125/150/175/200% scale passed; all 2,517 startup evidence files
 were preserved. The targeted minimum-200 capture is synthetic visual evidence.
 
-Hosted Windows code/build CI is tracked separately in the milestone delivery record.
+Hosted Windows code/build CI passed on the exact PR head recorded in the
+delivery checkpoint.
 It does not establish interactive keyboard, layout, UIA or speech acceptance.
 Current M16 Windows native visual/keyboard and Narrator observations remain not
 run. M12's historical user-reported acceptance stays bound to its old executable;

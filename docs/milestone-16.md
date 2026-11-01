@@ -1,10 +1,12 @@
 # M16: patient-search page integrity
 
-Status: implemented; complete Linux matrix passed; hosted CI and native follow-up pending on `m16-search-page-validation`, from merged
+Status: merged after final-head portable/Windows code-build CI and full Linux
+matrix passed; native/listening pending. Implementation used
+`m16-search-page-validation`, from merged
 M15 delivery `223fb96`. Standing commit/push/merge/prune authorization applies.
 
-The matching-request guard in `apply_search` currently accepts arbitrary typed
-pages. M16 closes backlog C01 by validating candidate metadata/filter membership,
+At the baseline, the matching-request guard in `apply_search` accepted arbitrary
+typed pages. M16 closes backlog C01 by validating candidate metadata/filter membership,
 unique IDs, bounded page lengths, exact requested offsets and scoped previous/next
 cursors before exposing rows. It adds one authored invalid-page simulation to
 exercise the boundary through normal callbacks/timers. No patient fixtures,
@@ -34,9 +36,10 @@ default/minimum size/scale samples passed. All 2,517 startup evidence files rema
 byte-identical. See [acceptance](../validation/milestone-16/acceptance.json) and
 [technical review](../validation/milestone-16/technical-review.json).
 
-Published as [draft PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11).
-Exact next action: verify final-head code/build CI, merge and prune under standing
-authorization. The [project overview](project-overview-m16.md) records
-implemented features, evidence limits, fidelity gaps and recommended next work.
-No M17 implementation is started. Fresh combined native Windows/listening
-acceptance remains not run.
+M16 [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11) merged
+after final-head CI passed; its topic branch is pruned locally/remotely. See the
+[delivery record](../validation/milestone-16/merge-checkpoint.json) and
+[project overview](project-overview-m16.md). No M17 implementation has started.
+Exact next action: fresh combined-build Windows matrix and the
+[native/listening checklist](../validation/milestone-16/native-checklist.md).
+These observations remain not run; merge and code/build CI do not establish them.

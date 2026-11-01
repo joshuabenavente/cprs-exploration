@@ -4,11 +4,13 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-The development branch is `main`. M15 PR #10 is merged; approved M16 work is on
-`m16-search-page-validation` from delivery `223fb96`. See the
-[current handoff](docs/handoff.md), [M16 milestone](docs/milestone-16.md),
+The development branch is `main`. M16 [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11)
+is merged after final-head portable/Windows code-build CI passed; its topic branch
+is pruned. See the [project overview after M16](docs/project-overview-m16.md),
+[handoff](docs/handoff.md), [M16 milestone](docs/milestone-16.md),
 [traceability](docs/traceability-2026-11-01.md) and
-[standing delivery authorization](docs/delivery-workflow.md). The
+[standing delivery authorization](docs/delivery-workflow.md). Fresh current-build
+native Windows/keyboard/Narrator acceptance remains pending. The
 [published reverse-engineering folder](reverse-engineering/README.md) is retained.
 Original reference binaries/Ghidra database are excluded.
 

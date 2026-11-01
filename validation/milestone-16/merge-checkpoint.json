@@ -1,0 +1,31 @@
+{
+  "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/11",
+  "merged": true,
+  "merge_commit": "2573dca9cd25454ee5016525a7d7255a483e9b02",
+  "tested_head": "34019be9aa7a867f9d4d3022c125e26e704db73e",
+  "run_id": 41351388624,
+  "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41351388624",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 124982110753,
+      "name": "portable-core",
+      "conclusion": "success"
+    },
+    {
+      "id": 124982111123,
+      "name": "windows-desktop-build",
+      "conclusion": "success"
+    }
+  ],
+  "local_topic_branch_pruned": true,
+  "remote_topic_branch_pruned": true,
+  "remaining_local_branches": [
+    "main"
+  ],
+  "remaining_remote_branches": [
+    "main"
+  ],
+  "native_windows_and_narrator": "Not run for the combined M16 build; hosted CI and merge are not native acceptance",
+  "followup_scope": "Delivery records and project overview only; runtime/build files unchanged from tested PR head"
+}

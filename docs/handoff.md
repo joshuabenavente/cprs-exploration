@@ -1,21 +1,30 @@
 # CPRS Chart recreation: current handoff
 
-M16 [patient-search page integrity](milestone-16.md) is implemented on
-`m16-search-page-validation` from merged M15 delivery `223fb96`. SP01–SP08 closes
-backlog C01: typed replies now validate candidate fields/query/roster membership,
-IDs, counts/offsets and scoped cursors before exposing candidates. One new mock
-simulation exercises inconsistent typed pages; nine fixtures and all readers are
-retained. The full Linux matrix passed: 148 Rust tests, 18 protocol tests and eleven
-121-checkpoint journeys (158 deliveries / 70 rejections each); all ten scale
-samples passed and 2,517 startup evidence files remain unchanged. Exact next
-action: verify final-head CI on [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11),
-merge/prune under standing authorization, then deliver the requested
-[project overview](project-overview-m16.md).
-New tools are `validate_m16.py`, `verify_m16.py` / `verify_integrated.py`,
-`test_m16_protocol.py`, `Test-MockChart.ps1`, and `Review-SearchPages.ps1`.
-M15 writers are frozen in this checkout. Native Windows/listening remain not run;
-the [M16 checklist](../validation/milestone-16/native-checklist.md) covers this
-combined build without promoting historical receipts.
+M16 [patient-search page integrity](milestone-16.md) is merged in
+[PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11) after both
+portable-core and Windows code/build CI passed on final head `34019be9aa7a867f9d4d3022c125e26e704db73e`.
+The topic branch is pruned locally/remotely; only main remains. See the
+[merge checkpoint](../validation/milestone-16/merge-checkpoint.json) and requested
+[project overview](project-overview-m16.md). Standing delivery authorization
+remains in force; no M17 implementation has started.
+
+SP01–SP08 closes C01 through candidate metadata/query/roster/ID validation,
+exact page/offset/scoped-cursor checks, safe arithmetic and fail-closed malformed
+replies. The existing nine invented patients and read-only readers are retained.
+All 148 Rust tests, 18 protocol tests and sixteen automated steps passed. Eleven
+journeys each passed 121 checkpoints / 158 deliveries / 70 rejections; all ten
+scale samples passed and 2,517 startup evidence files remain unchanged.
+The new source-bound [acceptance checkpoint](../validation/milestone-16/acceptance.json)
+retains its capture-time limits. Later delivery records do not rewrite it.
+
+Exact next action: a fresh M16 Windows matrix and the
+[combined native/listening checklist](../validation/milestone-16/native-checklist.md).
+Current native Windows/keyboard/Narrator observations remain not run. The combined
+checklist covers current Notes/Orders/Results filters and selection; it cannot
+retroactively accept historical builds. Linux virtual displays and hosted builds
+are separate evidence. M16 tools are validate_m16.py, verify_m16.py /
+verify_integrated.py, test_m16_protocol.py, Test-MockChart.ps1 and
+Review-SearchPages.ps1. Historical M15 writers are frozen in this checkout.
 
 The following M15 paragraphs retain its completed delivery checkpoint.
 
