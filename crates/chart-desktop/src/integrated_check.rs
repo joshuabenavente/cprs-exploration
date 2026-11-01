@@ -1420,6 +1420,13 @@ fn journey() -> VecDeque<Step> {
                     g.table_bottom <= g.view_top && g.help_bottom <= g.bottom,
                     "panel controls overlap or escape card"
                 );
+                // The three-row synthetic panels must leave room below their
+                // content for Fluent's 14px overlay horizontal scrollbar.
+                // Outer card bounds alone missed the native row clipping.
+                require!(
+                    g.table_visible_height >= g.table_content_height + 14.0,
+                    "fixture rows overlap the table's overlay scrollbar"
+                );
                 println!("M12_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
                 Ok(())
             },

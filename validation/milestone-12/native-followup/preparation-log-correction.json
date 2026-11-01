@@ -1,0 +1,9 @@
+{
+  "scope": "Evidence provenance correction; original native index is preserved",
+  "sample": "minimum-200",
+  "path": "validation/milestone-12/layout-minimum-200.log",
+  "original_sha256": "ececc24459a87ab20788e90568e57eb43950a2c63953a9956bc73e8ea31e2f16",
+  "rerun_sha256": "97edd2f2d4020b1a67ae7ee2d89dfde5e80550f62e4680e7bf4e5c8df973a74e",
+  "reason": "The baseline Review-CoverSheet.ps1 launcher reused its fixed output path during this follow-up. Original untracked preparation log bytes were overwritten; the original hash and all native-review captures remain. This log is rerun preparation evidence and cannot substantiate the original index hash.",
+  "other_nine_preparation_logs_match_original_index": true
+}

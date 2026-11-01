@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-01T02:22:30.879Z",
+  "window": {
+    "app": "process:C:\\Users\\soapo\\Documents\\AI-Work\\projects\\cprs-exploration\\target\\debug\\cprs-chart-mock.exe",
+    "id": 7670228,
+    "title": "CPRS Chart — Mock-only Rust prototype"
+  },
+  "accessibility": {
+    "focused_element": "10 button Select new synthetic patient",
+    "tree": "Window: \"CPRS Chart — Mock-only Rust prototype\", App: cprs-chart-mock.exe.\n\t0 region CPRS Chart — Mock-only Rust prototype Secondary Actions: Raise\n\t\t1 title bar (settable, string) Value: CPRS Chart — Mock-only Rust prototype\n\t\t\t2 menu bar System ID: MenuBar\n\t\t\t\t3 menu item System\n\t\t\t4 button Minimize\n\t\t\t5 button Maximize\n\t\t\t6 button Close\n\t\t7 text CPRS Chart\n\t\t8 text Rust desktop prototype\n\t\t9 text MOCK ONLY · All patient records are invented · No live connection\n\t\t10 button Select new synthetic patient\n\t\t11 text Ctrl+O Select patient\n\t\t12 text Read-only demonstration\n\t\t13 text NGUYEN, RILEY\n\t\t14 text Fixture DOB: 1991-10-22 · Training clinic A · Invented record\n\t\t15 text CURRENT CHART\n\t\t16 text SYNTH-002\n\t\t1032 text Cover Sheet\n\t\t1033 group Problem List for synthetic patient SYNTH-002\n\t\t\t1034 text Problem List\n\t\t\t1035 table Problem List synthetic items for SYNTH-002. No item selected\n\t\t\t\t1036 text Problem List\n\t\t\t\t1037 list\n\t\t\t\t\t1038 text Training problem Alpha · SYNTH-002\n\t\t\t\t\t1039 text Training problem Beta · SYNTH-002\n\t\t\t1040 button (disabled) View selected Problem List item detail\n\t\t\t1041 text Enter or Space opens the selected item.\n\t\t1042 group Allergies for synthetic patient SYNTH-002. No synthetic entries in this panel. This is not a clinical finding.\n\t\t\t1043 text Allergies\n\t\t\t1044 table Allergies synthetic items for SYNTH-002. No item selected\n\t\t\t\t1045 text Agent\n\t\t\t\t1046 text Severity\n\t\t\t\t1047 text Signs/Symptoms\n\t\t\t\t1048 list\n\t\t\t1049 text No synthetic entries in this panel. This is not a clinical finding.\n\t\t\t1050 button (disabled) View selected Allergies item detail\n\t\t\t1051 text Enter or Space opens the selected item.\n\t\t1052 group Vitals for synthetic patient SYNTH-002. No synthetic entries in this panel. This is not a clinical finding.\n\t\t\t1053 text Vitals\n\t\t\t1054 table Vitals synthetic items for SYNTH-002. No item selected\n\t\t\t\t1055 text Vital\n\t\t\t\t1056 text Value\n\t\t\t\t1057 text Date Taken\n\t\t\t\t1058 text Quals\n\t\t\t\t1059 list\n\t\t\t1060 text No synthetic entries in this panel. This is not a clinical finding.\n\t\t30 button Cover Sheet\n\t\t31 button Notes\n\t\t32 button Orders\n\t\t33 button Results\n\t\t34 text Prototype navigation\n\t\t35 text Synthetic chart loaded. All information is invented.\n\nThe focused UI element is 10 button Select new synthetic patient."
+  },
+  "screenshots": [
+    {
+      "height": 16,
+      "id": "screenshot-0",
+      "originX": 0,
+      "originY": 0,
+      "width": 16,
+      "zIndex": 0
+    },
+    {
+      "height": 832,
+      "id": "screenshot-1",
+      "originX": 7,
+      "originY": 0,
+      "width": 1182,
+      "zIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-01T03:01:37.190Z",
+  "label": "corrected-minimum-200-post-size-settled",
+  "window": {
+    "app": "process:C:\\Users\\soapo\\Documents\\AI-Work\\projects\\cprs-exploration\\target\\debug\\cprs-chart-mock.exe",
+    "id": 10094918,
+    "title": "CPRS Chart — Mock-only Rust prototype"
+  },
+  "accessibility": {
+    "focused_element": "338 edit (settable, string) Search invented patients Description: Name, SYNTH-001, or demo lookup x1001",
+    "tree": "Window: \"CPRS Chart — Mock-only Rust prototype\", App: cprs-chart-mock.exe.\n\t0 region CPRS Chart — Mock-only Rust prototype Secondary Actions: Raise\n\t\t1 title bar (settable, string) Value: CPRS Chart — Mock-only Rust prototype\n\t\t\t2 menu bar System ID: MenuBar\n\t\t\t\t3 menu item System\n\t\t\t4 button Minimize\n\t\t\t5 button Maximize\n\t\t\t6 button Close\n\t\t7 text CPRS Chart\n\t\t8 text Rust desktop prototype\n\t\t9 text MOCK ONLY · All patient records are invented · No live connection\n\t\t10 button (disabled) Select new synthetic patient\n\t\t11 text Ctrl+F Patient search\n\t\t12 text Read-only demonstration\n\t\t13 text CARTER, JAMIE\n\t\t14 text Fixture DOB: 1980-03-14 · Training clinic A · Invented record\n\t\t15 text CURRENT CHART\n\t\t16 text SYNTH-001\n\t\t336 text Patient selection\n\t\t337 text Current chart stays open until confirmation\n\t\t338 edit (settable, string) Search invented patients Description: Name, SYNTH-001, or demo lookup x1001\n\t\t339 combo box (settable, string) Synthetic patient list Value: All fixtures\n\t\t340 combo box (settable, string) Mock simulation scenario Value: Normal simulation\n\t\t341 table Invented patient search results. No patient selected\n\t\t\t342 text Patient\n\t\t\t343 text Synthetic ID\n\t\t\t344 text Fixture DOB\n\t\t\t345 text Demo lookup\n\t\t\t346 list\n\t\t\t\t347 text CARTER, JAMIE\n\t\t\t\t348 text SYNTH-001\n\t\t\t\t349 text 1980-03-14\n\t\t\t\t350 text x1001\n\t\t\t\t351 text MORGAN, ALEX\n\t\t\t\t352 text SYNTH-003\n\t\t\t\t353 text 1972-04-12\n\t\t\t\t354 text x2001\n\t\t\t\t355 text MORGAN, ALEX\n\t\t\t\t356 text SYNTH-004\n\t\t\t\t357 text 1986-09-23\n\t\t\t\t358 text x2002\n\t\t\t\t359 text NGUYEN, RILEY\n\t\t\t\t360 text SYNTH-002\n\t\t\t\t361 text 1991-10-22\n\t\t\t\t362 text x1002\n\t\t363 text 1–4 of 9 fixtures\n\t\t364 button (disabled) Previous\n\t\t365 button Next\n\t\t366 text Patient demographics\n\t\t367 text Select a patient row\n\t\t368 text Synthetic identifier\n\t\t369 text —\n\t\t370 text Fixture date of birth\n\t\t371 text —\n\t\t372 text Training location\n\t\t373 text —\n\t\t374 text Demo lookup code · not an SSN\n\t\t33 button (disabled) Cover Sheet\n\t\t34 button (disabled) Notes\n\t\t35 button (disabled) Orders\n\t\t36 button (disabled) Results\n\t\t37 text Prototype navigation\n\t\t38 text Select a row to preview. OK or double-click opens its mock chart.\n\nThe focused UI element is 338 edit (settable, string) Search invented patients Description: Name, SYNTH-001, or demo lookup x1001."
+  },
+  "screenshots": [
+    {
+      "height": 16,
+      "id": "screenshot-0",
+      "originX": 0,
+      "originY": 0,
+      "width": 16,
+      "zIndex": 0
+    },
+    {
+      "height": 1392,
+      "id": "screenshot-1",
+      "originX": 7,
+      "originY": 0,
+      "width": 1973,
+      "zIndex": 1
+    }
+  ]
+}
