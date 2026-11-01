@@ -3,6 +3,8 @@
 //! Synthetic patient workflow. No broker, endpoint, credential, or file-import API.
 use std::collections::HashSet;
 use std::fmt;
+mod calendar_day;
+pub use calendar_day::*;
 mod cover_sheet;
 pub use cover_sheet::*;
 mod notes;
@@ -302,6 +304,12 @@ impl PatientProvider for MockProvider {
         {
             return Err(ProviderError::Unavailable(reason));
         }
+        if request.query != request.filter.query {
+            return Err(ProviderError::Malformed(
+                "Report query/filter mismatch.".into(),
+            ));
+        }
+        request.filter.validate()?;
         Ok(results::mock_results(
             &self.preview(&request.patient_id)?,
             request,

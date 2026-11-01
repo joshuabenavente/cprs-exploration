@@ -2,7 +2,7 @@ import { Button, ComboBox, LineEdit, StandardTableView, ScrollView, TextEdit } f
 import { CoverPanel, CoverGeometry } from "cover-panel.slint";
 import { NotesView, NoteFilterGeometry } from "notes-view.slint";
 import { OrdersView } from "orders-view.slint";
-import { ResultsView } from "results-view.slint";
+import { ResultsView, ResultsFilterGeometry } from "results-view.slint";
 
 component Field inherits VerticalLayout {
     in property <string> label;
@@ -125,6 +125,9 @@ export component AppWindow inherits Window {
     in property <[[StandardListViewItem]]> results-rows;
     in-out property <int> selected-report: -1;
     in-out property <string> results-query;
+    in-out property <string> results-beginning;
+    in-out property <string> results-ending;
+    in property <bool> results-invalid-filter;
     in property <int> results-scenario;
     in property <bool> results-loading;
     in property <bool> results-list-error;
@@ -136,6 +139,8 @@ export component AppWindow inherits Window {
     in property <bool> report-body-ready;
     in property <bool> report-detail-open;
     callback results-filter-edited(string);
+    callback results-dates-edited(string, string);
+    callback results-reset-filters();
     callback results-scenario-changed(int);
     callback report-selected(int);
     callback report-released(int);
@@ -205,6 +210,7 @@ export component AppWindow inherits Window {
     public function focus-detail() { detail-text.focus(); }
     public function focus-notes-filter() { notes-view.focus-filter(); }
     public function focus-notes-body() { notes-view.focus-body(); }
+    public function results-geometry() -> ResultsFilterGeometry { return results-view.geometry(); }
     public function notes-geometry() -> NoteFilterGeometry { return notes-view.geometry(); }
     public function focus-orders-filter() { orders-view.focus-filter(); }
     public function focus-order-body() { orders-view.focus-body(); }
@@ -572,13 +578,17 @@ export component AppWindow inherits Window {
                         }
                         results-view := ResultsView {
                             visible: root.has-active && root.tab-index == 3;
-                            min-height: 0px; max-height: root.has-active && root.tab-index == 3 ? 10000px : 0px;
+                            min-height: root.has-active && root.tab-index == 3 ? self.required-height : 0px; max-height: root.has-active && root.tab-index == 3 ? 10000px : 0px;
                             rows: root.results-rows; selected-row <=> root.selected-report; query <=> root.results-query;
+                            beginning <=> root.results-beginning; ending <=> root.results-ending;
+                            patient-id: root.active-id; invalid-filter: root.results-invalid-filter;
                             scenario: root.results-scenario; loading: root.results-loading;
                             list-error: root.results-list-error; list-status: root.results-list-status;
                             identity: root.report-identity; body: root.report-body; body-status: root.report-body-status;
                             body-error: root.report-body-error; body-ready: root.report-body-ready; detail-open: root.report-detail-open;
                             filter-edited(query) => { root.results-filter-edited(query); }
+                            dates-edited(beginning, ending) => { root.results-dates-edited(beginning, ending); }
+                            reset-filters => { root.results-reset-filters(); }
                             scenario-changed(index) => { root.results-scenario-changed(index); }
                             selected(index) => { root.report-selected(index); }
                             released(index) => { root.report-released(index); }

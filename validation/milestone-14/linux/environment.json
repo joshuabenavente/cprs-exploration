@@ -1,0 +1,18 @@
+{
+  "protocol": "M14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "versions": {
+    "python": "Python 3.13.5",
+    "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-unknown-linux-gnu\nrelease: 1.99.1\nLLVM version: 23.1.1",
+    "python_scope": "Runner used Python 3.13.5 under the build PATH; protocol tests and Pillow capture used the tool default Python 3.12.14."
+  },
+  "display": ":94",
+  "display_backend": "workspace-extracted Xvfb, local Unix socket, -nolisten tcp, software rendering",
+  "native_libraries": "workspace-extracted /workspace/.cloud-setup/m13-sysroot; not installed to system",
+  "dependency_mode": "locked/offline for Cargo after prior cached provisioning",
+  "network": "Unix display socket access enabled; no clinical/live provider; proxy configuration preserved",
+  "windows_native": "not available/not run",
+  "narrator_listening": "not available/not run",
+  "additional_review_display": ":95, same extracted Xvfb; minimum-200 sample closed normally"
+}

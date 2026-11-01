@@ -1,0 +1,28 @@
+{
+  "protocol": "M14",
+  "scope": "Targeted synthetic X11 screenshot inspection only; not Windows/native keyboard or Narrator acceptance",
+  "sample": "minimum-200",
+  "observed_client_pixels": [
+    1960,
+    1360
+  ],
+  "virtual_screen_pixels": [
+    2560,
+    1600
+  ],
+  "application_scale": 2,
+  "executable_sha256": "fd78b2b257519e4083ff98173ee8d2f350cdbb7812eb72c16cd53621ac9d173a",
+  "journey_log": "validation/milestone-14/linux/review-minimum-200.log",
+  "journey_log_sha256": "095c91a03b660f3e0d8b873b553a61b79be156e40ca9e42d5ff5f1d79ff37fd7",
+  "capture": "validation/milestone-14/linux/review-minimum-200.png",
+  "capture_sha256": "da611a65a1abf555a788f55b03231f3aadfb9684fb25d7c41d4b3ff9c680383d",
+  "observations": [
+    "Date field labels/placeholders, Reset and blank-date instructions readable at minimum size/200 percent.",
+    "Current invented patient header and fixed navigation/status visible.",
+    "Four-row list scrolls; long report description is elided in table, full identity/detail available through explicit open.",
+    "Timer geometry separately checks date controls when editing and reading pane after explicit activation."
+  ],
+  "closure": "Normal WM_DELETE_WINDOW event; mock exited zero before log hash was captured.",
+  "native_physical_keyboard": "not run",
+  "narrator_listening": "not run"
+}

@@ -1,9 +1,17 @@
 import { Button, ComboBox, LineEdit, StandardTableView, TextEdit } from "std-widgets.slint";
 
+export struct ResultsFilterGeometry {
+    dates-top: length, dates-bottom: length, body-top: length, body-bottom: length,
+}
 export component ResultsView inherits Rectangle {
     in property <[[StandardListViewItem]]> rows;
     in-out property <int> selected-row: -1;
     in-out property <string> query;
+    in-out property <string> beginning;
+    in-out property <string> ending;
+    in property <string> patient-id;
+    in property <bool> invalid-filter;
+    out property <length> required-height: max(450px, results-layout.min-height);
     in property <int> scenario;
     in property <bool> loading;
     in property <bool> list-error;
@@ -15,6 +23,8 @@ export component ResultsView inherits Rectangle {
     in property <bool> body-ready;
     in property <bool> detail-open;
     callback filter-edited(string);
+    callback dates-edited(string, string);
+    callback reset-filters();
     callback scenario-changed(int);
     callback selected(int);
     callback released(int);
@@ -28,9 +38,13 @@ export component ResultsView inherits Rectangle {
     public function focus-filter() { root.top-focused(); filter.focus(); }
     public function focus-list() { root.top-focused(); list.focus(); }
     public function focus-body() { root.body-focused(); report-text.focus(); }
+    public function geometry() -> ResultsFilterGeometry {
+        return { dates-top: date-row.absolute-position.y, dates-bottom: date-row.absolute-position.y + date-row.height,
+            body-top: report-text.absolute-position.y, body-bottom: report-text.absolute-position.y + report-text.height };
+    }
     changed body => { report-text.content-x = 0px; report-text.content-y = 0px; report-text.clear-selection(); }
     background: white; border-color: #c9d5df; border-width: 1px;
-    min-width: 800px; min-height: 450px;
+    min-width: 800px; min-height: root.required-height;
     focus := FocusScope {
         width: parent.width; height: parent.height;
         focus-on-tab-navigation: false; focus-on-click: false;
@@ -39,7 +53,7 @@ export component ResultsView inherits Rectangle {
             if event.text == Key.Return && root.selected-row >= 0 { root.activated(); return accept; }
             reject
         }
-        VerticalLayout {
+        results-layout := VerticalLayout {
             padding: 12px; spacing: 8px;
             Text { text: "Results · Invented interim-style reports"; font-size: 19px; font-weight: 600; color: #23445b; }
             HorizontalLayout {
@@ -47,7 +61,7 @@ export component ResultsView inherits Rectangle {
                 filter := LineEdit {
                     text <=> root.query;
                     placeholder-text: "Filter invented results by report title, specimen, location, or report ID";
-                    accessible-label: "Filter invented results";
+                    accessible-label: "Filter invented results for " + root.patient-id;
                     edited => { root.filter-edited(self.text); }
                     accepted => { list.focus(); }
                     changed has-focus => { if self.has-focus { root.top-focused(); } }
@@ -60,7 +74,33 @@ export component ResultsView inherits Rectangle {
                     changed has-focus => { if self.has-focus { root.top-focused(); } }
                 }
             }
-            Text { text: root.list-status; color: root.list-error ? #9b3027 : #526879; wrap: word-wrap; font-size: 12px; }
+            date-row := HorizontalLayout {
+                spacing: 8px;
+                Text { text: "Beginning date"; vertical-alignment: center; }
+                LineEdit {
+                    text <=> root.beginning; placeholder-text: "YYYY-MM-DD";
+                    accessible-label: "Beginning Results date, inclusive, YYYY-MM-DD, for " + root.patient-id;
+                    edited => { root.dates-edited(self.text, root.ending); }
+                    accepted => { list.focus(); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+                Text { text: "Ending date"; vertical-alignment: center; }
+                LineEdit {
+                    text <=> root.ending; placeholder-text: "YYYY-MM-DD";
+                    accessible-label: "Ending Results date, inclusive, YYYY-MM-DD, for " + root.patient-id;
+                    edited => { root.dates-edited(root.beginning, self.text); }
+                    accepted => { list.focus(); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+                Button {
+                    text: "Reset filters";
+                    accessible-label: "Reset all Results filters for " + root.patient-id;
+                    clicked => { root.reset-filters(); root.focus-filter(); }
+                    changed has-focus => { if self.has-focus { root.top-focused(); } }
+                }
+            }
+            Text { text: "Blank dates include all days. Report dates are invented fixture data."; color: #526879; wrap: word-wrap; font-size: 12px; }
+            Text { text: root.list-status; accessible-label: "Results filter status for " + root.patient-id + ": " + root.list-status; color: root.list-error || root.invalid-filter ? #9b3027 : #526879; wrap: word-wrap; font-size: 12px; }
             list := StandardTableView {
                 height: 160px;
                 enabled: !root.loading && root.rows.length > 0;

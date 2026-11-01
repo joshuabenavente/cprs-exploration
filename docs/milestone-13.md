@@ -1,10 +1,10 @@
 # M13: read-only Notes author/date filtering
 
-Status: **approved and implemented; Linux automated validation passed;
-Windows native/listening acceptance pending**. Work branch: `m13-notes-filters`.
+Status: **merged as PR #8; Linux automated validation and final-head Windows code/build CI passed;
+Windows native/listening acceptance pending**. Former branch: `m13-notes-filters` (pruned).
 Baseline:
-`64280376dfc7dc5c32679c941a542b6ef3ebf54b`; runtime source is unchanged from the
-96-test `8fec66d` baseline. Owner: project manager / technical reviewer.
+`64280376dfc7dc5c32679c941a542b6ef3ebf54b`; the implemented Notes filters added ten tests to the
+96-test `8fec66d` baseline (106 total). Merge: `62bd340501f0d7753e1807cec12d7a967f8fb403`. Owner: project manager / technical reviewer.
 
 The published analysis intake and current-feature reconciliation are complete at
 their stated static-evidence level. See the [continuation review](analysis-review-2026-11-01.md).

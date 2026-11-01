@@ -1,0 +1,33 @@
+{
+  "protocol": "M14",
+  "scope": "Read-only address-filtered review of existing published/derived static evidence; no original binary byte check or original execution",
+  "inputs_sha256": {
+    "reverse-engineering/evidence/static/forms/0373-TFRMLABS.json": "05cdffdcf38902119f33ea8635778ea88675abcc50f9e6cc2443c4822515dac6",
+    "analysis/results/decompiled/fLabs.TfrmLabs.lstDatesClick_00ea9ee4.asm": "acff9eb0ecfdbbcee3587f1c17b33bc53750d23515e889e12bf00e50cb23565a",
+    "analysis/results/decompiled/rLabs.Interim_00c867c8.asm": "da2577d7bae3dc80c8ee334b6d1bb40647da06f091060d33011794ced89582c1",
+    "analysis/results/decompiled/workflow-calls.tsv": "1877e9e013b5fdfe78e903653298b0c105104af1812ff472918dd2e60e619f0c",
+    "analysis/results/resolved/workflow-evidence.json": "fd34f7e85dbfbf2c4f7032085f306f9ed949550dee906ef631f2efc9ad2d9f38"
+  },
+  "bounded_observations": [
+    "TFRMLABS lstDates is captioned Date Range and stores custom/relative/all list entries, bound to lstDatesClick.",
+    "Focused lstDatesClick export contains direct call at 00eaa438 to rLabs.Interim 00c867c8.",
+    "Separate literal annotations include <No results for this date range.>; branch/static clue only.",
+    "Interim export reaches CallVistA at 00c86832 with a supplied RPC name; original server filter contract is not established."
+  ],
+  "authored_policy": [
+    "Optional inclusive strict Gregorian YYYY-MM-DD bounds and open blank ends",
+    "Combined substring/date predicates, whole-list rejection, Reset, exact generation/owner/filter identity",
+    "Invalid edits clear rows/selection/detail and issue no provider request"
+  ],
+  "inference": [
+    "Date controls fit a bounded extension of the already-owned synthetic Results reader."
+  ],
+  "unresolved": [
+    "Original date defaults/inclusivity/relative rules/timezone/FileMan conversion",
+    "RPC request/response grammar, site configuration, permissions and clinical meaning",
+    "Original runtime UI/keyboard/speech equivalence"
+  ],
+  "exclusions": [
+    "No original executable/DLL execution, raw specimen recovery, live transport, new report types, clinical data or writes/signing"
+  ]
+}

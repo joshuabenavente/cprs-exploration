@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "Approved M13 Notes filtering implemented; Linux code/build/synthetic matrix passed; Windows native and Narrator acceptance pending",
+  "condition": "M14 published as draft PR #9; final-head code/build CI pending; user authorized subsequent merge/prune and an M15 draft",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -110,6 +110,11 @@
       "id": "D08",
       "decision": "Keep excluded raw-reference and accepted old Windows EXE recovery as archival work",
       "rationale": "Their absence limits fresh historical verification but does not block a new authored feature with its own new-build evidence"
+    },
+    {
+      "id": "D09",
+      "decision": "M14 adds only authored Results calendar bounds and Reset; share smallest strict calendar helper with Notes",
+      "rationale": "TFRMLABS date controls support direction, while exact original date semantics remain unresolved"
     }
   ],
   "risks": [
@@ -137,23 +142,29 @@
       "id": "R05",
       "risk": "Copying signed-note captions, date-time controls or author labels as recovered mock semantics",
       "mitigation": "NF01-NF08 declare synthetic identities/date policies and exclude original permissions, FileMan and timezones"
+    },
+    {
+      "id": "R06",
+      "risk": "Results filter edits expose old selected report or accept out-of-range rows",
+      "mitigation": "full typed filter/generation/owner equality, response predicates and list/detail invalidation tests"
     }
   ],
   "next_action": {
-    "task": "Verify current Windows code/build/matrix then perform validation/milestone-13/native-checklist.md using Review-NotesFilters.ps1, binding results to the new Windows EXE at ten size/scale combinations",
-    "blocked_by": "Windows native desktop/Narrator not available in Linux cloud",
-    "implementation_state": "M13 code and Linux automated evidence delivered",
-    "independent_followup": "Exact old accepted Windows EXE remains archival E03; never overwrite old evidence"
+    "task": "Verify final M14 head CI, mark ready and merge PR #9, prune merged branches, then draft M15",
+    "blocked_by": null,
+    "implementation_state": "M14 core/UI, 116 Rust tests, 16 protocol tests and full Linux matrix delivered locally",
+    "independent_native_followup": "Windows M14 matrix, native visual/keyboard and Narrator checklist remain not run",
+    "merge_authorized": true
   },
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
     "traceability": "docs/traceability-2026-11-01.md",
-    "next_milestone": "docs/milestone-13.md",
+    "next_milestone": "docs/milestone-14.md",
     "review_evidence": "validation/project-review-2026-11-01/",
     "initial_review": "docs/project-review-2026-11-01.md",
     "analysis_evidence": "validation/analysis-review-2026-11-01/",
-    "implementation_contract": "specifications/notes-filtering.md",
-    "implementation_evidence": "validation/milestone-13/"
+    "implementation_contract": "specifications/results-filtering.md",
+    "implementation_evidence": "validation/milestone-14/"
   },
   "analysis_review": {
     "workspace": "reverse-engineering/",
@@ -234,6 +245,83 @@
     ]
   },
   "implementation": {
+    "milestone": 14,
+    "branch": "m14-results-date-filters",
+    "baseline": "62bd340501f0d7753e1807cec12d7a967f8fb403",
+    "approval": "merge, prune, then start on M14 with a new agent",
+    "contract": "specifications/results-filtering.md",
+    "features": [
+      "inclusive strict Gregorian calendar bounds with open ends",
+      "query/date tuple generation and patient ownership",
+      "invalid edit clears rows/selection/detail and rejects late success/failure",
+      "Reset and patient/tab/cancel defaults",
+      "explicit report activation and read-only detail preserved",
+      "intrinsic Results height and geometry checks"
+    ],
+    "runtime_scope": "nine invented patients, one report type, offline/read-only",
+    "local_implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028"
+  },
+  "current_validation": {
+    "platform": "Linux Xvfb/software renderer",
+    "core_tests_passed": 116,
+    "protocol_tests_passed": 16,
+    "workspace_format": "passed",
+    "warning_denied_workspace_clippy": "passed",
+    "desktop_build": "passed",
+    "callback_smoke": "passed",
+    "real_timer_journey": "passed",
+    "checkpoints": 100,
+    "deliveries": 122,
+    "rejected": 53,
+    "default_minimum_scale_matrix_passed": 10,
+    "historical_files_unchanged": 2447,
+    "acceptance_receipt": "validation/milestone-14/acceptance.json",
+    "synthetic_visual_review": "minimum-200 captured/inspected; not native acceptance",
+    "windows_code_build_ci": "Pending on PR #9; native visual/keyboard and Narrator remain not run",
+    "windows_native_visual_keyboard": "not run",
+    "narrator_listening": "not run",
+    "milestone_complete": false
+  },
+  "publication": {
+    "state": "published as draft PR",
+    "destination": "https://github.com/joshuabenavente/cprs-exploration",
+    "branch": "m14-results-date-filters",
+    "implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
+    "branch_published": true,
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/9",
+    "reason": "Explicit user approval received for M14 publication and subsequent merge/prune.",
+    "receipt": "validation/milestone-14/publication.json",
+    "merge_authorized": true,
+    "historical_block_receipt": "validation/milestone-14/publication-block.json"
+  },
+  "m13_merge": {
+    "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
+    "merged": true,
+    "merge_commit": "62bd340501f0d7753e1807cec12d7a967f8fb403",
+    "merged_head": "af512fa3b4242aa49eb80f16bb2138c905de5bc7",
+    "main": "62bd340501f0d7753e1807cec12d7a967f8fb403",
+    "local_branch_pruned": true,
+    "remote_branch_pruned": true,
+    "ci_run": 41336042182,
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41336042182",
+    "ci_head": "af512fa3b4242aa49eb80f16bb2138c905de5bc7",
+    "jobs": [
+      {
+        "id": 124935965651,
+        "name": "portable-core",
+        "conclusion": "success"
+      },
+      {
+        "id": 124935965868,
+        "name": "windows-desktop-build",
+        "conclusion": "success"
+      }
+    ],
+    "native_windows_and_narrator": "still pending new-build acceptance; merge is not a native/speech pass",
+    "next_agent": "m14_results_date_filters",
+    "m14_scope": "Read-only Results inclusive authored date bounds and Reset over invented reports"
+  },
+  "previous_m13_implementation": {
     "milestone": 13,
     "branch": "m13-notes-filters",
     "baseline": "64280376dfc7dc5c32679c941a542b6ef3ebf54b",
@@ -249,7 +337,7 @@
     ],
     "runtime_scope": "synthetic offline read-only; no clinical writes, credentials, transport or original/DLL execution"
   },
-  "current_validation": {
+  "previous_m13_validation": {
     "platform": "Linux Xvfb/software renderer",
     "core_tests_passed": 106,
     "protocol_tests_passed": 14,
@@ -269,7 +357,7 @@
     "milestone_complete": false,
     "windows_ci": "Tracked separately on PR #8; native/listening still pending"
   },
-  "publication": {
+  "previous_m13_publication": {
     "state": "published as draft PR",
     "planned_destination": "https://github.com/joshuabenavente/cprs-exploration",
     "planned_branch": "m13-notes-filters",
@@ -280,5 +368,11 @@
     "branch_url": "https://github.com/joshuabenavente/cprs-exploration/tree/m13-notes-filters",
     "implementation_commit": "3ea234aa7a96bbcd986a341c27cba6c2b43c5d8d",
     "ci": "Current run conclusions are tracked on PR #8; code/build checks are separate from native/listening"
+  },
+  "root_review": {
+    "receipt": "validation/milestone-14/root-review.json",
+    "result": "read-only binding/receipt checks and scoped technical review passed",
+    "next_step": "Verify final-head code/build CI, then carry out authorized merge/prune and draft M15",
+    "automatic_approval_review": "Rejected M14 git push before execution; previous publication permission classified as M13-only, and move to next step was not accepted as explicit M14 export permission."
   }
 }

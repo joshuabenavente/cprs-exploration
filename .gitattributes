@@ -28,3 +28,6 @@ scripts/verify_cover_followup.py -text
 validation/milestone-13/** -text -whitespace
 validation/project-review-2026-11-01/** -text -whitespace
 validation/analysis-review-2026-11-01/** -text -whitespace
+
+# M14 evidence is separate and byte-preserved.
+validation/milestone-14/** -text -whitespace
