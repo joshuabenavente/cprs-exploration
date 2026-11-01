@@ -220,6 +220,214 @@ fn journey() -> VecDeque<Step> {
         |a, s| owned(a, s, "SYNTH-004", ChartTab::CoverSheet),
     ));
     q.push_back(Step::new(
+        "search-page-invalid",
+        |a, _| {
+            a.invoke_open_selection();
+            a.invoke_simulation_changed(15);
+            Ok(())
+        },
+        |a, _, _| !a.get_search_loading() && a.get_search_state() == 5,
+        |a, _| {
+            require!(
+                a.get_patient_rows().row_count() == 0
+                    && !a.get_has_preview()
+                    && !a.get_can_confirm(),
+                "malformed page exposed candidates"
+            );
+            require!(
+                !a.get_can_next() && !a.get_can_previous(),
+                "malformed page exposed cursors"
+            );
+            a.invoke_row_selected(0);
+            a.invoke_confirm_selection();
+            require!(
+                a.get_selector_open() && a.get_active_id() == "SYNTH-004",
+                "malformed page changed committed chart"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "search-page-recovery-race",
+        |a, _| {
+            a.invoke_simulation_changed(15);
+            a.invoke_query_edited("M".into());
+            a.invoke_simulation_changed(0);
+            a.invoke_query_edited("".into());
+            Ok(())
+        },
+        |a, s, i| {
+            !a.get_search_loading()
+                && a.get_patient_rows().row_count() == 4
+                && s.borrow().delivery_audit.as_ref().is_some_and(|v| {
+                    v[i..]
+                        .iter()
+                        .filter(|d| d.operation == "search" && !d.applied)
+                        .count()
+                        >= 3
+                })
+        },
+        |a, s| {
+            require!(
+                a.get_search_state() == 2 && a.get_can_next() && !a.get_can_previous(),
+                "recovery page metadata wrong"
+            );
+            require!(
+                s.borrow()
+                    .state
+                    .page
+                    .as_ref()
+                    .is_some_and(|p| p.start == 0 && p.total == 9),
+                "first page bounds wrong"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "search-page-next",
+        |a, _| {
+            a.invoke_next_page();
+            Ok(())
+        },
+        |a, s, _| {
+            !a.get_search_loading() && s.borrow().state.page.as_ref().is_some_and(|p| p.start == 4)
+        },
+        |a, s| {
+            require!(
+                a.get_patient_rows().row_count() == 4 && a.get_can_previous() && a.get_can_next(),
+                "middle page navigation wrong"
+            );
+            require!(
+                s.borrow().state.page.as_ref().unwrap().rows[0].id.as_str() == "SYNTH-005",
+                "middle page identity wrong"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "search-page-final",
+        |a, _| {
+            a.invoke_next_page();
+            Ok(())
+        },
+        |a, s, _| {
+            !a.get_search_loading() && s.borrow().state.page.as_ref().is_some_and(|p| p.start == 8)
+        },
+        |a, _| {
+            require!(
+                a.get_patient_rows().row_count() == 1 && a.get_can_previous() && !a.get_can_next(),
+                "final page shape wrong"
+            );
+            a.invoke_row_selected(0);
+            require!(
+                a.get_preview_id() == "SYNTH-009",
+                "final Unicode candidate wrong"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "search-page-backward",
+        |a, _| {
+            a.invoke_previous_page();
+            Ok(())
+        },
+        |a, s, _| {
+            !a.get_search_loading() && s.borrow().state.page.as_ref().is_some_and(|p| p.start == 4)
+        },
+        |a, _| {
+            require!(
+                !a.get_has_preview() && a.get_patient_rows().row_count() == 4,
+                "paging retained preview"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "search-page-first",
+        |a, _| {
+            a.invoke_previous_page();
+            Ok(())
+        },
+        |a, s, _| {
+            !a.get_search_loading() && s.borrow().state.page.as_ref().is_some_and(|p| p.start == 0)
+        },
+        |a, _| {
+            require!(
+                !a.get_can_previous() && a.get_can_next(),
+                "backward first page cursors wrong"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "search-page-demo-roster",
+        |a, _| {
+            a.invoke_mode_changed(1);
+            Ok(())
+        },
+        |a, _, _| !a.get_search_loading() && a.get_patient_rows().row_count() == 4,
+        |a, s| {
+            require!(
+                s.borrow()
+                    .state
+                    .page
+                    .as_ref()
+                    .unwrap()
+                    .rows
+                    .iter()
+                    .map(|p| p.id.as_str())
+                    .collect::<Vec<_>>()
+                    == ["SYNTH-001", "SYNTH-003", "SYNTH-005", "SYNTH-006"],
+                "demo roster mismatch"
+            );
+            require!(
+                !a.get_can_next() && !a.get_can_previous(),
+                "roster cursors wrong"
+            );
+            a.invoke_row_selected(3);
+            a.invoke_confirm_selection();
+            require!(
+                a.get_active_id() == "SYNTH-004"
+                    && a.get_selector_open()
+                    && a.get_message().contains("denies"),
+                "roster bypassed access rule"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "search-page-empty",
+        |a, _| {
+            a.invoke_mode_changed(0);
+            a.invoke_query_edited("absent fixture".into());
+            Ok(())
+        },
+        |a, _, _| !a.get_search_loading() && a.get_search_state() == 3,
+        |a, _| {
+            require!(
+                a.get_patient_rows().row_count() == 0
+                    && !a.get_can_confirm()
+                    && !a.get_can_next()
+                    && !a.get_can_previous(),
+                "empty page confused with error or selection"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "search-page-cancel",
+        |a, _| {
+            a.invoke_cancel_selection();
+            Ok(())
+        },
+        now,
+        |a, s| {
+            owned(a, s, "SYNTH-004", ChartTab::CoverSheet)?;
+            empty_text(a, s)
+        },
+    ));
+    q.push_back(Step::new(
         "cover-close-rejects-late-detail",
         |a, _| {
             a.invoke_cover_selected(0, 0);
@@ -785,7 +993,7 @@ fn journey() -> VecDeque<Step> {
                 "filtered reading focus/body mismatch"
             );
             let g = a.invoke_notes_geometry();
-            println!("M15_NOTES_GEOMETRY card_top={} card_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.top, g.bottom, g.body_top, g.body_bottom, a.get_workspace_top(), a.get_workspace_visible_height());
+            println!("M16_NOTES_GEOMETRY card_top={} card_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.top, g.bottom, g.body_top, g.body_bottom, a.get_workspace_top(), a.get_workspace_visible_height());
             require!(
                 g.body_top >= g.top
                     && g.body_bottom <= g.bottom
@@ -1670,7 +1878,7 @@ fn journey() -> VecDeque<Step> {
             require!(!a.get_report_detail_open(), "filtered highlight opened detail");
             a.invoke_report_activated();
             let g = a.invoke_results_geometry();
-            println!("M15_RESULTS_GEOMETRY dates_top={} dates_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.dates_top,g.dates_bottom,g.body_top,g.body_bottom,a.get_workspace_top(),a.get_workspace_visible_height());
+            println!("M16_RESULTS_GEOMETRY dates_top={} dates_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.dates_top,g.dates_bottom,g.body_top,g.body_bottom,a.get_workspace_top(),a.get_workspace_visible_height());
             require!(g.body_top >= a.get_workspace_top() - 1.0 && g.body_bottom <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0, "filtered reading pane outside viewport");
             Ok(())
         },
@@ -1928,7 +2136,7 @@ fn journey() -> VecDeque<Step> {
             require!(!a.get_order_detail_open(), "filtered highlight opened detail");
             a.invoke_order_activated();
             let g = a.invoke_orders_geometry();
-            println!("M15_ORDERS_GEOMETRY dates_top={} dates_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.dates_top,g.dates_bottom,g.body_top,g.body_bottom,a.get_workspace_top(),a.get_workspace_visible_height());
+            println!("M16_ORDERS_GEOMETRY dates_top={} dates_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.dates_top,g.dates_bottom,g.body_top,g.body_bottom,a.get_workspace_top(),a.get_workspace_visible_height());
             require!(g.body_top >= a.get_workspace_top() - 1.0 && g.body_bottom <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0, "filtered reading pane outside viewport");
             Ok(())
         },
@@ -2119,7 +2327,7 @@ fn journey() -> VecDeque<Step> {
                     g.table_visible_height >= g.table_content_height + 14.0,
                     "fixture rows overlap the table's overlay scrollbar"
                 );
-                println!("M15_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
+                println!("M16_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
                 Ok(())
             },
         ));
@@ -2261,12 +2469,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M15_DELIVERY {} {} {:?} generation={} applied={}",
+                "M16_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M15_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M16_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -2275,7 +2483,7 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M15_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M16_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
@@ -2284,14 +2492,14 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         drop(c);
         if driver.keep_open {
             if let Some(app) = driver.weak.upgrade() {
-                app.invoke_tab_changed(2);
+                app.invoke_open_selection();
             }
             println!(
-                "M15_REVIEW_READY SYNTH-001 Orders; wait for the list, then review filters; close the mock to exit."
+                "M16_REVIEW_READY SYNTH-001 patient selector; wait for candidates, then review page integrity; close the mock to exit."
             );
         }
     } else if let Err(error) = &result {
-        eprintln!("M15_INTEGRATED_FAIL {error}");
+        eprintln!("M16_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -2342,7 +2550,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M15_CHECK {} PASS elapsed_ms={}",
+            "M16_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );

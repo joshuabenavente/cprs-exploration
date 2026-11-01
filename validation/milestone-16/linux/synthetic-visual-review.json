@@ -1,0 +1,25 @@
+{
+  "protocol": "M16",
+  "scope": "Targeted synthetic Linux minimum-size 200% visual inspection; not native acceptance",
+  "executable_sha256": "331c857c692606d0445a0b5ebc7a447cb136c763a0b4d2e55dca5a0cbf3132c5",
+  "screenshot": "review-minimum-200.png",
+  "screenshot_sha256": "8946958fe7aa0a8e2864ae8cb76fbc35111eea05bf5d3146e82f0e8bb1ad50c2",
+  "preparation_log": "review-minimum-200.log",
+  "preparation_log_sha256": "373afd86f71b6d6820cc73e2059df472f651f417bb4897300abc973bc1a6a328",
+  "requested_client_pixels": [
+    1960,
+    1360
+  ],
+  "application_scale": 2,
+  "inspected": true,
+  "observations": [
+    "Search/mode/scenario controls and four candidate rows are readable",
+    "1\u20134 of 9 and Previous/Next are visible with expected enabled states",
+    "Current committed patient header, mock-only banner, navigation and status remain visible; no preview is selected"
+  ],
+  "limits": [
+    "Rendered virtual display only; no physical keyboard, Windows UIA or Narrator observation",
+    "Selection/confirmation controls below the visible region are subject to the separate native reachability checklist"
+  ],
+  "cleanup": "Owned review mock and virtual display stopped after capture; no native-close test claimed"
+}

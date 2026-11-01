@@ -106,6 +106,86 @@ pub struct SearchPage {
     pub total: usize,
 }
 
+impl PatientSummary {
+    fn valid_candidate(&self) -> bool {
+        !self.name.trim().is_empty()
+            && !self.location.trim().is_empty()
+            && !self.name.chars().any(char::is_control)
+            && !self.location.chars().any(char::is_control)
+            && valid_date(&self.birth_date)
+            && self.demo_lookup.len() == 5
+            && self.demo_lookup.starts_with('x')
+            && self.demo_lookup.as_bytes()[1..]
+                .iter()
+                .all(u8::is_ascii_digit)
+    }
+
+    fn matches_search(&self, query: &str, mode: ListMode) -> bool {
+        (mode == ListMode::All
+            || matches!(
+                self.id.as_str(),
+                "SYNTH-001" | "SYNTH-003" | "SYNTH-005" | "SYNTH-006"
+            ))
+            && (query.is_empty()
+                || self.name.to_uppercase().contains(query)
+                || self.id.as_str() == query
+                || self.demo_lookup.to_uppercase() == query)
+    }
+}
+
+impl SearchRequest {
+    fn validate(&self) -> Result<(), ProviderError> {
+        let query = self.query.trim().to_uppercase();
+        let valid = match &self.cursor {
+            Some(c) => {
+                c.query == query && c.mode == self.mode && c.offset.is_multiple_of(PAGE_SIZE)
+            }
+            None => self.direction == Direction::Forward,
+        };
+        if valid {
+            Ok(())
+        } else {
+            Err(ProviderError::Malformed(
+                "Invalid mock search cursor or direction.".into(),
+            ))
+        }
+    }
+}
+
+impl SearchPage {
+    pub fn validate(&self, request: &SearchRequest) -> Result<(), ProviderError> {
+        request.validate()?;
+        let query = request.query.trim().to_uppercase();
+        let start = request.cursor.as_ref().map_or(0, |c| c.offset);
+        let end = self.start.checked_add(self.rows.len());
+        let cursor = |offset| PageCursor {
+            offset,
+            query: query.clone(),
+            mode: request.mode,
+        };
+        let mut ids = HashSet::new();
+        let valid = self.start == start
+            && self.start.is_multiple_of(PAGE_SIZE)
+            && self.rows.len() <= PAGE_SIZE
+            && end.is_some_and(|end| end <= self.total)
+            && (self.total == 0 && self.start == 0 || self.start < self.total)
+            && self.rows.len() == self.total.saturating_sub(self.start).min(PAGE_SIZE)
+            && self.previous
+                == (self.start > 0).then(|| cursor(self.start.saturating_sub(PAGE_SIZE)))
+            && self.next == end.filter(|end| *end < self.total).map(cursor)
+            && self.rows.iter().all(|p| {
+                p.valid_candidate()
+                    && p.matches_search(&query, request.mode)
+                    && ids.insert(p.id.clone())
+            });
+        if valid {
+            Ok(())
+        } else {
+            Err(ProviderError::Malformed("Mock patient-search page identity, filters, or paging metadata mismatch. No candidates displayed.".into()))
+        }
+    }
+}
+
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum AccessDecision {
     Allow,
@@ -160,6 +240,7 @@ pub enum Simulation {
     ResultsListUnavailable,
     ReportDetailUnavailable,
     SlowResults,
+    InconsistentSearchPage,
 }
 
 #[derive(Clone, Debug, Default)]
@@ -397,6 +478,7 @@ impl PatientProvider for MockProvider {
         notes::mock_note_body(&self.preview(&request.patient_id)?, request)
     }
     fn search(&self, request: &SearchRequest) -> Result<SearchPage, ProviderError> {
+        request.validate()?;
         match self.simulation {
             Simulation::SearchUnavailable => {
                 return Err(ProviderError::Unavailable(
@@ -412,17 +494,7 @@ impl PatientProvider for MockProvider {
         let rows: Vec<_> = fixtures()?
             .into_iter()
             .map(|f| f.patient)
-            .filter(|p| {
-                (request.mode == ListMode::All
-                    || matches!(
-                        p.id.as_str(),
-                        "SYNTH-001" | "SYNTH-003" | "SYNTH-005" | "SYNTH-006"
-                    ))
-                    && (query.is_empty()
-                        || p.name.contains(&query)
-                        || p.id.as_str() == query
-                        || p.demo_lookup.to_uppercase() == query)
-            })
+            .filter(|p| p.matches_search(&query, request.mode))
             .collect();
         let start = match &request.cursor {
             Some(cursor) if cursor.query == query && cursor.mode == request.mode => cursor.offset,
@@ -444,13 +516,19 @@ impl PatientProvider for MockProvider {
             query: query.clone(),
             mode: request.mode,
         };
-        Ok(SearchPage {
+        let mut page = SearchPage {
             rows: rows[start..end].to_vec(),
             previous: (start > 0).then(|| cursor(start.saturating_sub(PAGE_SIZE))),
             next: (end < rows.len()).then(|| cursor(end)),
             start,
             total: rows.len(),
-        })
+        };
+        page.validate(request)?;
+        if self.simulation == Simulation::InconsistentSearchPage {
+            // Deliberately corrupt a typed reply to exercise the state boundary.
+            page.start += 1;
+        }
+        Ok(page)
     }
 
     fn preview(&self, id: &PatientId) -> Result<PatientSummary, ProviderError> {
@@ -658,6 +736,10 @@ impl AppState {
             return false;
         }
         self.active_search = None;
+        let result = result.and_then(|page| {
+            page.validate(request)?;
+            Ok(page)
+        });
         match result {
             Ok(page) => {
                 self.search_status = if page.rows.is_empty() {
@@ -673,6 +755,9 @@ impl AppState {
                 self.page = Some(page);
             }
             Err(error) => {
+                self.page = None;
+                self.pending = None;
+                self.confirmation = None;
                 self.message = error.to_string();
                 self.search_status = SearchStatus::Error(error);
             }

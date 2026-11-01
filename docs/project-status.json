@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M15 merged after final-head portable and Windows code/build CI passed; topic branch pruned; standing delivery authorization recorded",
+  "condition": "M16 implemented and Linux validated; published as draft PR #11; final-head CI and authorized merge/prune next",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -24,18 +24,27 @@
   },
   "prioritized_backlog": [
     {
+      "id": "M16-WINDOWS",
+      "priority": "P1",
+      "task": "Fresh combined current-build Windows matrix and native visual/keyboard/Narrator acceptance covering selector and all current readers",
+      "status": "not run",
+      "dependency": "Windows desktop session and fresh M16 executable"
+    },
+    {
       "id": "M15-WINDOWS",
       "priority": "P1",
       "task": "Collect fresh M15 Windows source/build matrix and separate native visual/keyboard/Narrator observations",
       "status": "Final-head hosted code/build CI passed; Windows matrix/native visual/keyboard/Narrator remain not run",
-      "dependency": "fresh M15 Windows executable and native session"
+      "dependency": "fresh M15 Windows executable and native session",
+      "forward_acceptance": "Current feature acceptance moves to the fresh combined M16 checklist; historical build receipts remain not run"
     },
     {
       "id": "M14-WINDOWS",
       "priority": "P1",
       "task": "Collect fresh M14 Windows matrix and native visual/keyboard/Narrator observations with exact source/build/EXE bindings",
       "status": "pending; final-head hosted code/build CI passed",
-      "dependency": "Windows desktop session and fresh M14 executable"
+      "dependency": "Windows desktop session and fresh M14 executable",
+      "forward_acceptance": "Current feature acceptance moves to the fresh combined M16 checklist; historical build receipts remain not run"
     },
     {
       "id": "OF-CONTRACT",
@@ -49,7 +58,8 @@
       "priority": "P1",
       "task": "Run new Windows source/build/matrix checks and affected native/Narrator checklist across ten combinations",
       "status": "source/build CI passed on M13 final head; fresh native matrix/visual/keyboard/Narrator remain pending",
-      "dependency": "new M13 Windows executable and native desktop session"
+      "dependency": "new M13 Windows executable and native desktop session",
+      "forward_acceptance": "Current feature acceptance moves to the fresh combined M16 checklist; historical build receipts remain not run"
     },
     {
       "id": "NF-CONTRACT",
@@ -95,10 +105,10 @@
     },
     {
       "id": "C01",
-      "priority": "P3",
-      "task": "Notes filter-tuple response validation in M13 NF03; search-page structural validation stays deferred",
-      "status": "Notes full-filter response validation implemented/tested; generic search-page changes remain deferred",
-      "dependency": "M13 filter contract"
+      "priority": "P1",
+      "task": "Validate patient-search reply metadata, predicates and page/cursor structure",
+      "status": "Closed by M16 SP01\u2013SP08 implementation and automated validation; current native acceptance remains separate",
+      "dependency": "specifications/search-page-integrity.md"
     }
   ],
   "decisions": [
@@ -141,6 +151,11 @@
       "id": "D10",
       "decision": "Draft M15 as bounded read-only Orders date filtering and Reset, using existing order timestamp and query/status tuple",
       "rationale": "Stored Custom Order View has date controls; exact inclusive calendar/reset semantics remain authored policy, and native acceptance backlog remains explicit"
+    },
+    {
+      "id": "D11",
+      "decision": "M16 closes C01 through structural patient-search reply validation and preserves authored provider boundaries",
+      "rationale": "Matching-generation replies had no candidate/paging validation; fixed within offline scope without needing more original reverse engineering"
     }
   ],
   "risks": [
@@ -176,10 +191,9 @@
     }
   ],
   "next_action": {
-    "task": "Collect fresh M15 Windows source/build-bound matrix and separate native visual/keyboard/Narrator observations using the M15 checklist",
-    "dependency": "Windows desktop session and fresh M15 executable",
+    "task": "Verify final-head CI on PR #11, merge/prune and finish the requested project overview; next priority is fresh combined current-build native acceptance",
     "standing_delivery_authorization": "docs/delivery-workflow.md",
-    "historical_acceptance": "M13/M14 observations remain pending for their own builds; no retrospective promotion"
+    "native_dependency": "Windows desktop and fresh combined M16 build"
   },
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
@@ -270,61 +284,51 @@
     ]
   },
   "implementation": {
-    "milestone": 15,
-    "branch": "m15-orders-date-filters",
-    "baseline": "b8e1f21",
-    "runtime_baseline": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
-    "approval": "Approved",
-    "contract": "specifications/orders-filtering.md",
+    "milestone": 16,
+    "branch": "m16-search-page-validation",
+    "baseline": "223fb96583bdada0a81d6ad982ccfbb33dcea30a",
+    "approval": "Go to the next step. After 16 give me an over view of the projects state",
+    "contract": "specifications/search-page-integrity.md",
     "features": [
-      "typed query/status/inclusive calendar tuple",
-      "invalid edits clear list/detail before validation",
-      "Reset/defaults and owned response predicates",
-      "strict Orders timestamps",
-      "intrinsic Orders height and filter/reading geometry"
+      "candidate metadata/filter/roster/ID checks",
+      "bounded exact page shape and scoped cursor checks",
+      "safe overflow handling and fail-closed response state",
+      "invalid typed page simulation and nine new desktop checkpoints"
     ],
-    "runtime_scope": "nine invented patients; existing four orders/three mock statuses; offline read-only",
-    "local_implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720",
-    "state": "M15 merged; no next milestone implementation started"
+    "runtime_scope": "existing nine invented patients, offline/read-only; no new clinical interface",
+    "local_implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24"
   },
   "current_validation": {
     "platform": "Linux Xvfb/software renderer",
-    "core_tests_passed": 132,
-    "protocol_tests_passed": 17,
+    "core_tests_passed": 148,
+    "protocol_tests_passed": 18,
     "workspace_format": "passed",
     "warning_denied_workspace_clippy": "passed",
     "desktop_build": "passed",
     "callback_smoke": "passed",
     "real_timer_journey": "passed",
-    "checkpoints": 112,
-    "deliveries": 145,
-    "rejected": 65,
+    "checkpoints": 121,
+    "deliveries": 158,
+    "rejected": 70,
     "default_minimum_scale_matrix_passed": 10,
-    "startup_evidence_files_unchanged": 2481,
-    "acceptance_receipt": "validation/milestone-15/acceptance.json",
-    "synthetic_visual_review": "minimum-200 captured and inspected; not native acceptance",
-    "first_full_attempt": "Retained assertion failure corrected; final full run passed",
-    "windows_code_build_ci": "Passed on M15 final PR head 6e575c97d2f0f1a6e1622632ff962ca10d2702d7; run 41347969241; native/speech separate",
+    "startup_evidence_files_unchanged": 2517,
+    "acceptance_receipt": "validation/milestone-16/acceptance.json",
+    "synthetic_visual_review": "minimum-200 selector capture inspected; not native acceptance",
+    "windows_code_build_ci": "Pending final head of PR #11",
     "windows_native_visual_keyboard": "not run",
     "narrator_listening": "not run",
     "milestone_complete": false
   },
   "publication": {
-    "state": "M15 merged; topic branch pruned locally/remotely",
+    "state": "Published as draft PR #11",
+    "branch": "m16-search-page-validation",
     "destination": "https://github.com/joshuabenavente/cprs-exploration",
-    "branch": "m15-orders-date-filters",
-    "branch_published": true,
-    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/10",
     "merge_authorized": true,
-    "implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720",
-    "user_approval": "I approve the action and the commit push merge and prune going forward",
-    "receipt": "validation/milestone-15/publication.json",
-    "reason": "Explicit M15 publication and standing commit/push/merge/prune authorization received",
-    "historical_block_receipt": "validation/milestone-15/publication-block.json",
-    "merge_commit": "518a1ab890413eb678394ac65b2cf93e21f0b7aa",
-    "branch_pruned": true,
-    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41347969241",
-    "completed_action": "Published M15, verified final-head CI, merged PR #10 and pruned topic branches under explicit standing delivery authorization"
+    "standing_authorization": "docs/delivery-workflow.md",
+    "implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24",
+    "branch_published": true,
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/11",
+    "receipt": "validation/milestone-16/publication.json"
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
@@ -402,9 +406,9 @@
     "ci": "Current run conclusions are tracked on PR #8; code/build checks are separate from native/listening"
   },
   "root_review": {
-    "receipt": "validation/milestone-15/technical-review.json",
-    "result": "Technical review and read-only receipt/history binding checks passed",
-    "next_step": "M15 delivery complete; fresh Windows native/listening follow-up remains"
+    "receipt": "validation/milestone-16/technical-review.json",
+    "result": "Technical review and read-only source/executable/log/history binding checks passed",
+    "next_step": "Final-head CI and authorized delivery, then project overview and current native acceptance follow-up"
   },
   "m14_merge": {
     "recorded_at_utc": "2026-11-01T19:53:32.088963+00:00",
@@ -553,5 +557,63 @@
     ],
     "native_windows_and_narrator": "Not run for M15; CI and merge do not establish native/speech acceptance",
     "followup_scope": "Delivery records and documentation only; source/build inputs identical to tested PR head"
-  }
+  },
+  "previous_m15_implementation": {
+    "milestone": 15,
+    "branch": "m15-orders-date-filters",
+    "baseline": "b8e1f21",
+    "runtime_baseline": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+    "approval": "Approved",
+    "contract": "specifications/orders-filtering.md",
+    "features": [
+      "typed query/status/inclusive calendar tuple",
+      "invalid edits clear list/detail before validation",
+      "Reset/defaults and owned response predicates",
+      "strict Orders timestamps",
+      "intrinsic Orders height and filter/reading geometry"
+    ],
+    "runtime_scope": "nine invented patients; existing four orders/three mock statuses; offline read-only",
+    "local_implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720",
+    "state": "M15 merged; no next milestone implementation started"
+  },
+  "previous_m15_validation": {
+    "platform": "Linux Xvfb/software renderer",
+    "core_tests_passed": 132,
+    "protocol_tests_passed": 17,
+    "workspace_format": "passed",
+    "warning_denied_workspace_clippy": "passed",
+    "desktop_build": "passed",
+    "callback_smoke": "passed",
+    "real_timer_journey": "passed",
+    "checkpoints": 112,
+    "deliveries": 145,
+    "rejected": 65,
+    "default_minimum_scale_matrix_passed": 10,
+    "startup_evidence_files_unchanged": 2481,
+    "acceptance_receipt": "validation/milestone-15/acceptance.json",
+    "synthetic_visual_review": "minimum-200 captured and inspected; not native acceptance",
+    "first_full_attempt": "Retained assertion failure corrected; final full run passed",
+    "windows_code_build_ci": "Passed on M15 final PR head 6e575c97d2f0f1a6e1622632ff962ca10d2702d7; run 41347969241; native/speech separate",
+    "windows_native_visual_keyboard": "not run",
+    "narrator_listening": "not run",
+    "milestone_complete": false
+  },
+  "previous_m15_publication": {
+    "state": "M15 merged; topic branch pruned locally/remotely",
+    "destination": "https://github.com/joshuabenavente/cprs-exploration",
+    "branch": "m15-orders-date-filters",
+    "branch_published": true,
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/10",
+    "merge_authorized": true,
+    "implementation_commit": "75b7121be8e2587f36f55092e12fb4b313701720",
+    "user_approval": "I approve the action and the commit push merge and prune going forward",
+    "receipt": "validation/milestone-15/publication.json",
+    "reason": "Explicit M15 publication and standing commit/push/merge/prune authorization received",
+    "historical_block_receipt": "validation/milestone-15/publication-block.json",
+    "merge_commit": "518a1ab890413eb678394ac65b2cf93e21f0b7aa",
+    "branch_pruned": true,
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41347969241",
+    "completed_action": "Published M15, verified final-head CI, merged PR #10 and pruned topic branches under explicit standing delivery authorization"
+  },
+  "project_overview": "docs/project-overview-m16.md"
 }

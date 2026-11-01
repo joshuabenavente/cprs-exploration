@@ -53,6 +53,7 @@ fn simulation(index: i32) -> Simulation {
         12 => Simulation::ResultsListUnavailable,
         13 => Simulation::ReportDetailUnavailable,
         14 => Simulation::SlowResults,
+        15 => Simulation::InconsistentSearchPage,
         _ => Simulation::Normal,
     }
 }
@@ -73,6 +74,7 @@ fn simulation_index(value: Simulation) -> i32 {
         Simulation::ResultsListUnavailable => 12,
         Simulation::ReportDetailUnavailable => 13,
         Simulation::SlowResults => 14,
+        Simulation::InconsistentSearchPage => 15,
     }
 }
 fn tab(index: i32) -> ChartTab {
@@ -1795,6 +1797,12 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_confirm_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-001");
     assert!(app.get_selector_open());
+    app.invoke_simulation_changed(15);
+    assert_eq!(app.get_search_state(), 5);
+    assert_eq!(app.get_patient_rows().row_count(), 0);
+    assert!(!app.get_has_preview() && !app.get_can_confirm());
+    assert!(!app.get_can_next() && !app.get_can_previous());
+    assert_eq!(app.get_active_id().as_str(), "SYNTH-001");
     app.invoke_simulation_changed(2);
     assert_eq!(app.get_search_state(), 5);
     assert!(!app.get_can_confirm());

@@ -74,3 +74,15 @@ adds evidence to the existing feature rows without changing prototype policies.
 M14 merged after final-head CI; its capture-time receipts and pending native
 acceptance remain distinct from M15. Five prepared transport/save/login/DLL RE
 targets remain deferred. No original execution or new static recovery is claimed.
+
+## M16 patient-search integrity
+
+[SP01–SP08](../specifications/search-page-integrity.md) closes C01. B: previously
+recorded patient subset/direction operations, not a server row limit. P: row
+metadata/query/roster checks, PAGE_SIZE=4 shape and exact scoped cursors. I:
+bounded hardening of provider/state boundary. U: original server paging/alias
+semantics and authoritative completeness. Implementation is in lib.rs
+PatientSummary/SearchRequest/SearchPage validation and apply_search; desktop
+simulation 15 and nine added timer checkpoints exercise malformed replies and
+recovery/paging. Sixteen focused Rust tests plus retained suite (148 total), 18 protocol tests
+and the complete ten-sample M16 matrix passed (121 checkpoints per journey). Native Windows/Narrator remain not run.

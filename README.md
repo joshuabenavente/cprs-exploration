@@ -4,25 +4,21 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-The development branch is `main`. M15 [PR #10](https://github.com/joshuabenavente/cprs-exploration/pull/10)
-is merged after final-head portable/Windows code-build CI passed; its topic branch
-is pruned. M13/M14/M15 native/Narrator observations remain pending for their own
-builds. See the [handoff](docs/handoff.md), [M15 milestone](docs/milestone-15.md),
-[traceability](docs/traceability-2026-11-01.md), and
+The development branch is `main`. M15 PR #10 is merged; approved M16 work is on
+`m16-search-page-validation` from delivery `223fb96`. See the
+[current handoff](docs/handoff.md), [M16 milestone](docs/milestone-16.md),
+[traceability](docs/traceability-2026-11-01.md) and
 [standing delivery authorization](docs/delivery-workflow.md). The
 [published reverse-engineering folder](reverse-engineering/README.md) is retained.
-Original reference binaries and the Ghidra database are excluded.
+Original reference binaries/Ghidra database are excluded.
 
-## Run the current M15 Rust mock
+## Run the current M16 Rust mock
 
-M15 adds optional inclusive beginning/ending YYYY-MM-DD dates and Reset to Orders,
-combined with its existing text and mock-status filters. Blank dates are open;
-invalid edits clear list/detail immediately with patient-scoped validation. Reset
-clears query/dates and restores All mock statuses. Highlighting selects an order;
-View/Enter/double-click explicitly opens read-only detail. Dates filter the
-invented order timestamp; all date/reset semantics are authored prototype policy.
-Notes retains author/date filtering and automatic reading. Results retains M14
-dates and explicit activation. No original FileMan/timezone/server rules are inferred.
+M16 validates patient-search rows and paging before displaying candidates.
+The Invalid search page scenario exercises response rejection without changing
+the committed chart. The nine invented fixtures and Notes/Orders/Results filters,
+read-only details, paging, access demonstrations and fixed frame are retained.
+Exact page/date/filter rules are authored mock policies, not original server rules.
 
 ```powershell
 .\scripts\Start-MockChart.ps1 -Rebuild
@@ -31,31 +27,31 @@ python scripts\verify_integrated.py
 python scripts\test_m15_protocol.py
 ```
 
-The active runner accepts only M15 and writes platform-specific
-`validation/milestone-15/windows/` or `linux/` evidence. `-CodeOnly` omits desktop
+The active runner accepts only M16 and writes platform-specific
+`validation/milestone-16/windows/` or `linux/` evidence. `-CodeOnly` omits desktop
 execution; `-Bootstrap` fetches locked dependencies before offline checks;
 `-Python` selects the installed Windows interpreter. Linux can run
-`python3 scripts/validate_m15.py --matrix` with Rust 1.99.1, native build libraries
+`python3 scripts/validate_m16.py --matrix` with Rust 1.99.1, native build libraries
 and an X11 display (a virtual display establishes only synthetic UI evidence).
 Unset SLINT_SCALE_FACTOR while compiling; the runner applies it only at runtime.
 
-The journey retains all 100 M14 checkpoints and adds twelve Orders filtering
-checks (112 total). Source/build/executable/log bindings and ten requested
-size/scale samples are verified together. See [M15](docs/milestone-15.md), the
-[Orders filter contract](specifications/orders-filtering.md) and
+The journey retains all 112 M15 checkpoints and adds nine search-page
+checks (121 total). Source/build/executable/log bindings and ten requested
+size/scale samples are verified together. See [M16](docs/milestone-16.md), the
+[Search-page contract](specifications/search-page-integrity.md) and
 [native/listening checklist](validation/milestone-15/native-checklist.md).
 Windows native and Narrator results must be recorded separately on the new build.
 
-Use `scripts/Review-OrdersFilters.ps1 -Size minimum -ScaleFactor 2` after the full
+Use `scripts/Review-SearchPages.ps1 -Size minimum -ScaleFactor 2` after the full
 Windows matrix to prepare a native sample. Repeat both sizes at 100%, 125%, 150%,
-175% and 200%. The launcher leaves Orders open and records preparation only.
+175% and 200%. The launcher leaves the patient selector open and records preparation only.
 Close the app between samples. The largest-scale default remains 1180x700
 logical pixels; minimum is 980x680, other defaults 1180x800. These application
 scale overrides do not change Windows display settings.
 
 The earlier M2–M13 commands/receipts are historical. Do not run old validation
 writers or the M12 follow-up runner with the changed executable. The historical
-M12 user-reported acceptance remains bound to `a88c…`; a new M15 build needs its
+M12 user-reported acceptance remains bound to `a88c…`; a new M16 build needs its
 own acceptance. Earlier source-bound verifiers can be run in their historical
 checkout. All raw evidence and receipts are preserved.
 
@@ -115,7 +111,7 @@ Keep the GUI project closed during headless processing. Logs are in `analysis/lo
 
 ## Milestone documents
 
-- [Current M15 Orders filters and validation checkpoint](docs/milestone-15.md)
+- [Current M16 search-page integrity and validation checkpoint](docs/milestone-16.md)
 - [Merged M13 Notes filters (native/listening pending)](docs/milestone-13.md)
 - [Historical M12 evidence protocol and review checkpoint](docs/milestone-12.md)
 - [Historical M11 shared Cover Sheet hardening](docs/milestone-11.md)
