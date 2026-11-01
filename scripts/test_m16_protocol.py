@@ -196,6 +196,7 @@ class ProtocolTests(unittest.TestCase):
 
 
 def main():
+    raise SystemExit("M16 full-scale validation is frozen history; use the active 100% functional runner.")
     output = io.StringIO()
     result = unittest.TextTestRunner(stream=output, verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(ProtocolTests))
     runner.BASE.mkdir(parents=True, exist_ok=True)

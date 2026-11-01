@@ -1,5 +1,28 @@
 # CPRS Chart recreation: current handoff
 
+Active phase: **functionality at 100% application scale only**, default/minimum
+sizes. The user excluded keyboard/focus/navigation and screen-reader/Narrator
+checks and deferred other scales until functional work is finished. These are
+not current acceptance blockers. See [policy](validation-policy.md) and the
+[functional checklist](../validation/milestone-16/functional-100/manual-checklist.md).
+
+The active protocol M16F100 has isolated receipts under
+`validation/milestone-16/functional-100/{linux,windows}/`. Test-MockChart.ps1,
+verify_integrated.py and Review-Functional.ps1 use it; old full-scale M16 writers
+are frozen before writes. Application keyboard/scaling features remain intact.
+The functional journey retains 109 data/workflow/race checkpoints and removes
+navigation/focus/geometry probes. Linux validation passed: 148 Rust tests, 20 protocol tests, eight automated steps
+and three journeys, each 109 checkpoints / 158 deliveries / 70 rejections. Both
+window sizes were tested at 100%; all 2,554 startup evidence files remain unchanged.
+Exact next action: publish/CI/merge/prune, then obtain the new Windows
+functional receipt and manual functional results at both sizes. Do not request
+other scales or keyboard/Narrator acceptance in this phase.
+
+The user confirmed interaction/window switching during the historical 200% focus
+failure. The [interruption review](../validation/milestone-16/windows/focus-interruption/review.json)
+preserves that fact and the pasted tail. It is not an application bug fix or a
+retroactive pass. The remaining paragraphs retain earlier scope checkpoints.
+
 Latest Windows update: a new M16 matrix receipt summary reports passed=False,
 matrix_requested=True and executable SHA256
 `0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758`.

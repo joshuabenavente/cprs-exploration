@@ -1,0 +1,15 @@
+{
+  "protocol": "M16",
+  "scope": "User-reported failure/interference on historical full-scale/focus validation; no application defect confirmed",
+  "recorded_at_utc": "2026-11-01T22:18:05.185412+00:00",
+  "reported_check": "probe-default-200",
+  "reported_exit_code": 1,
+  "reported_checkpoint": "reports-explicit-and-out-of-order",
+  "reported_error": "report delivery stole filter focus",
+  "user_interference_report": "Interacted or switched windows",
+  "log_capture": "observed-log-tail.txt",
+  "log_capture_sha256": "0086f05a253ffae29b6b74d4da47b8ddf63432119efb537d2cee48ec46152dac",
+  "capture_kind": "User-pasted log tail; not original Windows file bytes or complete runner receipt",
+  "interpretation": "Focus assertion can fail after external interaction/window deactivation; this interrupted run does not establish application focus stealing. Original failure stays failed.",
+  "superseding_policy": "User now requests only 100% functionality, excludes keyboard navigation/screen readers and defers other scales."
+}

@@ -1,5 +1,5 @@
 //! Opt-in callback/timer journey. It uses the normal desktop adapter and mock provider.
-//! This checks Slint bindings, not physical keyboard input or spoken output.
+//! Active scope: functional callbacks/timers at 100%; no keyboard, focus or speech tests.
 use super::*;
 use std::collections::VecDeque;
 
@@ -454,10 +454,6 @@ fn journey() -> VecDeque<Step> {
                 a.get_detail_body().contains("SYNTH-004"),
                 "cover detail owner wrong"
             );
-            require!(
-                a.get_keyboard_focus() == "cover-detail",
-                "cover detail did not focus reading pane"
-            );
             Ok(())
         },
     ));
@@ -483,10 +479,6 @@ fn journey() -> VecDeque<Step> {
                 a.get_detail_body().contains("118/76 mmHg")
                     && a.get_detail_body().contains("Zoë 李"),
                 "Vitals display strings changed"
-            );
-            require!(
-                a.get_keyboard_focus() == "cover-detail",
-                "Vitals initial reading focus wrong"
             );
             Ok(())
         },
@@ -597,10 +589,6 @@ fn journey() -> VecDeque<Step> {
                 a.get_detail_body().contains("Demo active C")
                     && a.get_detail_body().contains("Zoë 李"),
                 "Active Medications display strings changed"
-            );
-            require!(
-                a.get_keyboard_focus() == "cover-detail",
-                "Active Medications initial reading focus wrong"
             );
             Ok(())
         },
@@ -713,10 +701,6 @@ fn journey() -> VecDeque<Step> {
                 a.get_detail_body().contains("Demo action C")
                     && a.get_detail_body().contains("Zoë 李"),
                 "Appointments display strings changed"
-            );
-            require!(
-                a.get_keyboard_focus() == "cover-detail",
-                "Appointments initial reading focus wrong"
             );
             Ok(())
         },
@@ -838,15 +822,6 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
-        "notes-reading-focus",
-        |a, _| {
-            a.invoke_focus_notes_body();
-            Ok(())
-        },
-        |a, _, _| a.get_keyboard_focus() == "notes-body",
-        noop,
-    ));
-    q.push_back(Step::new(
         "notes-filter-author-race",
         |a, _| {
             a.invoke_notes_author_changed(1);
@@ -909,14 +884,6 @@ fn journey() -> VecDeque<Step> {
                 !a.get_notes_invalid_filter()
                     && s.borrow().state.notes.rows[0].id.as_str() == "NOTE-02",
                 "inclusive filter recovery failed"
-            );
-            a.invoke_focus_notes_filter();
-            let g = a.invoke_notes_geometry();
-            require!(
-                g.author_top >= g.top
-                    && g.dates_bottom <= g.bottom
-                    && in_viewport(a, g.author_top, g.dates_bottom),
-                "Notes author/date filters are unreachable or clipped"
             );
             Ok(())
         },
@@ -983,22 +950,13 @@ fn journey() -> VecDeque<Step> {
         "notes-filter-reading",
         |a, _| {
             a.invoke_note_selected(0);
-            a.invoke_focus_notes_body();
             Ok(())
         },
         |a, _, _| a.get_note_body().contains("END OF INVENTED LONG NOTE"),
         |a, _| {
             require!(
-                a.get_note_body().contains("NOTE-03") && a.get_keyboard_focus() == "notes-body",
-                "filtered reading focus/body mismatch"
-            );
-            let g = a.invoke_notes_geometry();
-            println!("M16_NOTES_GEOMETRY card_top={} card_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.top, g.bottom, g.body_top, g.body_bottom, a.get_workspace_top(), a.get_workspace_visible_height());
-            require!(
-                g.body_top >= g.top
-                    && g.body_bottom <= g.bottom
-                    && in_viewport(a, g.body_top, g.body_bottom),
-                "filtered Notes reading pane is clipped or unreachable"
+                a.get_note_body().contains("NOTE-03"),
+                "filtered note body mismatch"
             );
             Ok(())
         },
@@ -1020,8 +978,7 @@ fn journey() -> VecDeque<Step> {
                     && a.get_notes_beginning().is_empty()
                     && a.get_notes_ending().is_empty()
                     && a.get_note_body().is_empty()
-                    && !a.get_notes_invalid_filter()
-                    && a.get_keyboard_focus() == "notes-filter",
+                    && !a.get_notes_invalid_filter(),
                 "selector cancellation retained filters"
             );
             owned(a, s, "SYNTH-004", ChartTab::Notes)
@@ -1205,7 +1162,6 @@ fn journey() -> VecDeque<Step> {
             a.invoke_report_activated();
             a.invoke_report_selected(1);
             a.invoke_report_activated();
-            a.invoke_focus_results_filter();
             Ok(())
         },
         |_, s, i| {
@@ -1216,10 +1172,6 @@ fn journey() -> VecDeque<Step> {
             require!(
                 a.get_report_body().contains("REPORT-02"),
                 "late report replaced selection"
-            );
-            require!(
-                a.get_keyboard_focus() == "results-filter",
-                "report delivery stole filter focus"
             );
             Ok(())
         },
@@ -1431,10 +1383,6 @@ fn journey() -> VecDeque<Step> {
             require!(
                 a.get_selected_order() == -1,
                 "cancel restored prior order selection"
-            );
-            require!(
-                a.get_keyboard_focus() == "orders-filter",
-                "cancel did not restore local filter focus"
             );
             Ok(())
         },
@@ -1675,17 +1623,13 @@ fn journey() -> VecDeque<Step> {
         noop,
     ));
     q.push_back(Step::new(
-        "results-cancel-focus",
+        "results-cancel",
         |a, _| {
             a.invoke_open_selection();
             a.invoke_cancel_selection();
             Ok(())
         },
-        |a, _, _| {
-            !a.get_results_loading()
-                && a.get_results_rows().row_count() == 4
-                && a.get_keyboard_focus() == "results-filter"
-        },
+        |a, _, _| !a.get_results_loading() && a.get_results_rows().row_count() == 4,
         empty_text,
     ));
     q.push_back(Step::new(
@@ -1715,13 +1659,6 @@ fn journey() -> VecDeque<Step> {
                 a.get_results_rows().row_count() == 1
                     && s.borrow().state.results.rows[0].id.as_str() == "REPORT-02",
                 "date race exposed wrong rows"
-            );
-            let g = a.invoke_results_geometry();
-            require!(
-                g.dates_top >= a.get_workspace_top() - 1.0
-                    && g.dates_bottom
-                        <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0,
-                "date controls outside viewport"
             );
             Ok(())
         },
@@ -1806,7 +1743,6 @@ fn journey() -> VecDeque<Step> {
             a.invoke_results_scenario_changed(3);
             a.invoke_results_filter_edited("Alpha".into());
             a.invoke_results_reset_filters();
-            a.invoke_focus_results_filter();
             Ok(())
         },
         |a, s, i| {
@@ -1869,17 +1805,28 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
-        "results-filter-reading-geometry",
+        "results-filter-reading",
         noop,
-        |a, s, i| !a.get_results_loading() && a.get_results_rows().row_count() == 1 && s.borrow().delivery_audit.as_ref().is_some_and(|v| v[i..].iter().any(|d| d.operation == "results-list" && !d.applied)),
+        |a, s, i| {
+            !a.get_results_loading()
+                && a.get_results_rows().row_count() == 1
+                && s.borrow().delivery_audit.as_ref().is_some_and(|v| {
+                    v[i..]
+                        .iter()
+                        .any(|d| d.operation == "results-list" && !d.applied)
+                })
+        },
         |a, _| {
-            require!(!a.get_results_list_error(), "late retry failure replaced date-filter recovery");
+            require!(
+                !a.get_results_list_error(),
+                "late retry failure replaced date-filter recovery"
+            );
             a.invoke_report_selected(0);
-            require!(!a.get_report_detail_open(), "filtered highlight opened detail");
+            require!(
+                !a.get_report_detail_open(),
+                "filtered highlight opened detail"
+            );
             a.invoke_report_activated();
-            let g = a.invoke_results_geometry();
-            println!("M16_RESULTS_GEOMETRY dates_top={} dates_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.dates_top,g.dates_bottom,g.body_top,g.body_bottom,a.get_workspace_top(),a.get_workspace_visible_height());
-            require!(g.body_top >= a.get_workspace_top() - 1.0 && g.body_bottom <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0, "filtered reading pane outside viewport");
             Ok(())
         },
     ));
@@ -1902,9 +1849,8 @@ fn journey() -> VecDeque<Step> {
                     && a.get_results_beginning().is_empty()
                     && a.get_results_ending().is_empty()
                     && !a.get_results_invalid_filter()
-                    && a.get_selected_report() == -1
-                    && a.get_keyboard_focus() == "results-filter",
-                "cancel retained Results filters or lost focus"
+                    && a.get_selected_report() == -1,
+                "cancel retained Results filters"
             );
             empty_text(a, s)
         },
@@ -1948,13 +1894,6 @@ fn journey() -> VecDeque<Step> {
                 a.get_orders_rows().row_count() == 1
                     && s.borrow().state.orders.rows[0].id.as_str() == "ORDER-02",
                 "date race exposed wrong rows"
-            );
-            let g = a.invoke_orders_geometry();
-            require!(
-                g.dates_top >= a.get_workspace_top() - 1.0
-                    && g.dates_bottom
-                        <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0,
-                "date controls outside viewport"
             );
             Ok(())
         },
@@ -2061,7 +2000,6 @@ fn journey() -> VecDeque<Step> {
             a.invoke_orders_filter_edited("Alpha".into());
             a.invoke_orders_status_changed(2);
             a.invoke_orders_reset_filters();
-            a.invoke_focus_orders_filter();
             Ok(())
         },
         |a, s, i| {
@@ -2127,17 +2065,28 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
-        "orders-filter-reading-geometry",
+        "orders-filter-reading",
         noop,
-        |a, s, i| !a.get_orders_loading() && a.get_orders_rows().row_count() == 1 && s.borrow().delivery_audit.as_ref().is_some_and(|v| v[i..].iter().any(|d| d.operation == "orders-list" && !d.applied)),
+        |a, s, i| {
+            !a.get_orders_loading()
+                && a.get_orders_rows().row_count() == 1
+                && s.borrow().delivery_audit.as_ref().is_some_and(|v| {
+                    v[i..]
+                        .iter()
+                        .any(|d| d.operation == "orders-list" && !d.applied)
+                })
+        },
         |a, _| {
-            require!(!a.get_orders_list_error(), "late retry failure replaced date-filter recovery");
+            require!(
+                !a.get_orders_list_error(),
+                "late retry failure replaced date-filter recovery"
+            );
             a.invoke_order_selected(0);
-            require!(!a.get_order_detail_open(), "filtered highlight opened detail");
+            require!(
+                !a.get_order_detail_open(),
+                "filtered highlight opened detail"
+            );
             a.invoke_order_activated();
-            let g = a.invoke_orders_geometry();
-            println!("M16_ORDERS_GEOMETRY dates_top={} dates_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.dates_top,g.dates_bottom,g.body_top,g.body_bottom,a.get_workspace_top(),a.get_workspace_visible_height());
-            require!(g.body_top >= a.get_workspace_top() - 1.0 && g.body_bottom <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0, "filtered reading pane outside viewport");
             Ok(())
         },
     ));
@@ -2161,9 +2110,8 @@ fn journey() -> VecDeque<Step> {
                     && a.get_orders_ending().is_empty()
                     && !a.get_orders_invalid_filter()
                     && a.get_orders_status_filter() == 0
-                    && a.get_selected_order() == -1
-                    && a.get_keyboard_focus() == "orders-filter",
-                "cancel retained Orders filters or lost focus"
+                    && a.get_selected_order() == -1,
+                "cancel retained Orders filters"
             );
             empty_text(a, s)
         },
@@ -2191,10 +2139,6 @@ fn journey() -> VecDeque<Step> {
         |a, s| {
             owned(a, s, "SYNTH-001", ChartTab::Results)?;
             require!(
-                a.get_keyboard_focus() == "results-body",
-                "report activation did not focus reading pane"
-            );
-            require!(
                 a.get_report_body()
                     .contains("END OF INVENTED REPORT DETAIL"),
                 "long report incomplete"
@@ -2203,7 +2147,7 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q.push_back(Step::new(
-        "review-vitals-layout",
+        "review-vitals-detail",
         |a, _| {
             a.invoke_close_report_detail();
             a.invoke_tab_changed(0);
@@ -2229,7 +2173,7 @@ fn journey() -> VecDeque<Step> {
         noop,
     ));
     q.push_back(Step::new(
-        "review-medications-layout",
+        "review-medications-detail",
         |a, _| {
             a.invoke_close_detail();
             a.invoke_tab_changed(0);
@@ -2255,7 +2199,7 @@ fn journey() -> VecDeque<Step> {
         noop,
     ));
     q.push_back(Step::new(
-        "review-appointments-layout",
+        "review-appointments-detail",
         |a, _| {
             a.invoke_close_detail();
             a.invoke_tab_changed(0);
@@ -2280,106 +2224,7 @@ fn journey() -> VecDeque<Step> {
         |a, _, _| !a.get_detail_open() && a.get_detail_body().is_empty(),
         noop,
     ));
-    // Reveal probes: focus placement and scrolling are setup only. Each target
-    // region is first moved out of the viewport, then a dispatched Tab or
-    // Shift+Tab moves focus, so only the panels' own focus handlers can bring
-    // it back. Removing those handlers must fail these checkpoints.
-    for (panel, name) in [
-        (0, "layout-problems"),
-        (1, "layout-allergies"),
-        (2, "layout-vitals"),
-        (3, "layout-medications"),
-        (4, "layout-appointments"),
-    ] {
-        q.push_back(Step::new(
-            name,
-            move |a, _| {
-                a.invoke_cover_selected(panel, 0);
-                a.invoke_focus_cover_view(panel);
-                require!(
-                    a.invoke_cover_geometry(panel).view_focused,
-                    "setup could not focus View"
-                );
-                // Put View at the viewport top so the heading/table sit above it.
-                let view_top = content_y(a, a.invoke_cover_geometry(panel).view_top);
-                a.invoke_set_cover_scroll(-view_top);
-                dispatch_tab(a, true);
-                Ok(())
-            },
-            now,
-            move |a, _| {
-                let g = a.invoke_cover_geometry(panel);
-                let top = a.get_workspace_top();
-                let bottom = top + a.get_workspace_visible_height();
-                require!(!g.view_focused, "Shift+Tab did not leave View");
-                require!(
-                    in_viewport(a, g.top, g.table_bottom),
-                    "Shift+Tab table entry left heading/table clipped"
-                );
-                require!(
-                    g.table_bottom <= g.view_top && g.help_bottom <= g.bottom,
-                    "panel controls overlap or escape card"
-                );
-                // The three-row synthetic panels must leave room below their
-                // content for Fluent's 14px overlay horizontal scrollbar.
-                // Outer card bounds alone missed the native row clipping.
-                require!(
-                    g.table_visible_height >= g.table_content_height + 14.0,
-                    "fixture rows overlap the table's overlay scrollbar"
-                );
-                println!("M16_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
-                Ok(())
-            },
-        ));
-    }
-    for (panel, name) in [
-        (4, "reveal-appointments-view"),
-        (3, "reveal-medications-view"),
-        (2, "reveal-vitals-view"),
-        (1, "reveal-allergies-view"),
-        (0, "reveal-problems-view"),
-    ] {
-        q.push_back(Step::new(
-            name,
-            move |a, _| {
-                a.invoke_focus_cover(panel);
-                // Put the table bottom at the viewport bottom so View/help sit below it.
-                let table_bottom = content_y(a, a.invoke_cover_geometry(panel).table_bottom);
-                a.invoke_set_cover_scroll(a.get_workspace_visible_height() - table_bottom);
-                dispatch_tab(a, false);
-                Ok(())
-            },
-            now,
-            move |a, _| {
-                let g = a.invoke_cover_geometry(panel);
-                require!(g.view_focused, "Tab from table did not focus View");
-                require!(
-                    in_viewport(a, g.view_top, g.help_bottom),
-                    "Tab-focused View/help clipped by workspace"
-                );
-                Ok(())
-            },
-        ));
-    }
-    q.push_back(Step::new(
-        "layout-fixture-footer",
-        |a, _| {
-            a.invoke_scroll_workspace_bottom();
-            Ok(())
-        },
-        now,
-        |a, _| {
-            let g = a.invoke_cover_geometry(4);
-            require!(
-                a.get_fixture_footer_top() >= g.bottom
-                    && a.get_fixture_footer_bottom()
-                        <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0,
-                "fixture footer overlaps card or is unreachable"
-            );
-            Ok(())
-        },
-    ));
-    // Restore the documented review state that the layout probes disturbed:
+    // Restore the documented functional review state:
     // only the review checkpoint's VITAL-03, MED-03 and APPT-03 selections.
     q.push_back(Step::new(
         "review-final-state",
@@ -2387,14 +2232,12 @@ fn journey() -> VecDeque<Step> {
             for (panel, index) in [(0, -1), (1, -1), (2, 2), (3, 2), (4, 2)] {
                 a.invoke_cover_selected(panel, index);
             }
-            a.invoke_focus_cover(4);
             Ok(())
         },
         now,
         |a, s| {
             owned(a, s, "SYNTH-001", ChartTab::CoverSheet)?;
             // Pin every panel: native review starts from exactly this state.
-            // Table focus is not asserted; the Cover Sheet focus probe is generic.
             require!(
                 a.get_selected_problem() == -1
                     && a.get_selected_allergy() == -1
@@ -2411,37 +2254,6 @@ fn journey() -> VecDeque<Step> {
         },
     ));
     q
-}
-
-/// Synthetic Slint key events through the normal window dispatch path. This
-/// exercises focus traversal and key handlers; it is not native OS input.
-fn dispatch_tab(a: &AppWindow, reverse: bool) {
-    use slint::platform::{Key, WindowEvent};
-    let window = a.window();
-    if reverse {
-        window.dispatch_event(WindowEvent::KeyPressed {
-            text: Key::Shift.into(),
-        });
-    }
-    window.dispatch_event(WindowEvent::KeyPressed {
-        text: Key::Tab.into(),
-    });
-    window.dispatch_event(WindowEvent::KeyReleased {
-        text: Key::Tab.into(),
-    });
-    if reverse {
-        window.dispatch_event(WindowEvent::KeyReleased {
-            text: Key::Shift.into(),
-        });
-    }
-}
-/// Converts an absolute y into workspace content coordinates.
-fn content_y(a: &AppWindow, absolute: f32) -> f32 {
-    absolute - a.get_workspace_top() - a.get_cover_scroll_y()
-}
-fn in_viewport(a: &AppWindow, top: f32, bottom: f32) -> bool {
-    let viewport_top = a.get_workspace_top();
-    top >= viewport_top - 1.0 && bottom <= viewport_top + a.get_workspace_visible_height() + 1.0
 }
 
 struct Running {
@@ -2469,12 +2281,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M16_DELIVERY {} {} {:?} generation={} applied={}",
+                "M16F100_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M16_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M16F100_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -2483,7 +2295,7 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M16_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M16F100_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
@@ -2495,11 +2307,11 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
                 app.invoke_open_selection();
             }
             println!(
-                "M16_REVIEW_READY SYNTH-001 patient selector; wait for candidates, then review page integrity; close the mock to exit."
+                "M16F100_REVIEW_READY SYNTH-001 patient selector; wait for candidates, then review page integrity; close the mock to exit."
             );
         }
     } else if let Err(error) = &result {
-        eprintln!("M16_INTEGRATED_FAIL {error}");
+        eprintln!("M16F100_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -2550,7 +2362,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M16_CHECK {} PASS elapsed_ms={}",
+            "M16F100_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );
@@ -2559,9 +2371,8 @@ fn tick(d: Rc<RefCell<Driver>>) {
         finish(
             &d,
             Err(format!(
-                "{}: timeout waiting for real deliveries/UI bindings (focus={})",
-                running.step.name,
-                app.get_keyboard_focus()
+                "{}: timeout waiting for real deliveries/UI bindings",
+                running.step.name
             )),
         );
         return;

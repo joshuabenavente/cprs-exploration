@@ -3,6 +3,7 @@ param([ValidateSet('default', 'minimum')][string]$Size = 'default',
       [ValidateSet('1', '1.25', '1.5', '1.75', '2')][string]$ScaleFactor = '1',
       [string]$Python = 'python')
 $ErrorActionPreference = 'Stop'
+throw 'Full-scale/keyboard review is frozen; use Review-Functional.ps1 at 100%.'
 $root = Split-Path -Parent $PSScriptRoot
 $base = Join-Path $root 'validation/milestone-16/windows'
 $receipt = Get-Content -LiteralPath (Join-Path $base 'automated.json') -Raw | ConvertFrom-Json

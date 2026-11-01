@@ -1,5 +1,20 @@
 # Project state after M16
 
+Current policy update: functional testing is now limited to 100%, at default
+and minimum sizes. Keyboard/focus/navigation and screen-reader checks are
+excluded; other scales are deferred until functional work is finished. The
+[active policy](validation-policy.md) and
+[functional checklist](../validation/milestone-16/functional-100/manual-checklist.md)
+supersede previous acceptance gates below. Application features are retained.
+
+Current Linux functional policy verification passed 148 Rust tests, 20 protocol
+checks and three 100% journeys of 109 checkpoints. Both default/minimum sizes
+passed. See the [current acceptance record](../validation/milestone-16/functional-100/acceptance.json).
+Windows functional results for the new policy/build remain to be collected;
+excluded keyboard/screen-reader checks do not block this phase.
+
+The following sections retain the earlier M16 delivery/evidence context.
+
 M16 [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11) is merged
 after final-head portable-core and Windows code/build CI passed. Topic branches
 are pruned; only main remains. The delivery follow-up updates documentation only,
@@ -83,16 +98,14 @@ writes and DLL/original execution remain outside this project's runtime scope.
 
 ## Recommended next work
 
-1. Diagnose the failed Windows M16 matrix attempt from its failure field and
-   failed-check log while preserving the receipt and logs. Fix the identified
-   problem, verify the resulting source/EXE/matrix bindings, then repeat native/
-   listening samples on the verified build. Retain earlier reports separately.
-2. Choose the next bounded read-only feature from the remaining fidelity gaps,
-   with an authored contract and supporting static evidence where available.
-   Keep the five transport/save/login/DLL investigation targets deferred while
-   they have no dependency in that scope.
-3. Retain exact old Windows-EXE recovery as archival follow-up. It limits fresh
-   historical binding, but does not prevent validating a new current build.
+1. Complete and verify the new Windows M16F100 functional receipt, then report
+   manual functional results for default-100 and minimum-100. Preserve previous
+   attempts and use the [update/rebuild guide](m16-windows-rebuild.md).
+2. Continue the next bounded read-only feature after functional acceptance.
+   Keyboard navigation/focus and screen readers are excluded from this phase;
+   revisit other scales only after functional work is finished.
+3. Retain old Windows artifact recovery as archival follow-up. Original server/
+   alias/paging semantics and five transport/save/login/DLL targets remain deferred.
 
 Standing commit/push/merge/prune approval is recorded in
 [delivery workflow](delivery-workflow.md). M16 delivery status and branch cleanup

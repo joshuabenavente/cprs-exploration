@@ -1,18 +1,17 @@
-# Rebuild the Windows M16 executable
+# Update to the 100% functional M16 runner
 
-The user reported Windows Git HEAD `1617e03b65f2f869b4a37e99e2d41f5766cf77d9`,
-an executable hash matching historical M12, and no
-`validation/milestone-16/windows/automated.json`. The reported commit has the
-same tracked runtime/build inputs as the checked M16 PR head. Being on that
-commit does not establish which executable was built or launched. Current native
-acceptance remains unresolved; retain the existing pass report as user-reported.
+The active policy now tests functionality at 100% only. Keyboard/focus/navigation
+and screen readers are excluded, and other scales are deferred. The previous
+Windows full-scale attempt and its reported focus failure remain historical.
+Update to the delivered functional-policy source; old 1617e03 uses the former
+full-scale runner. Do not repeat its native/Narrator checklist during this phase.
 
 Close the mock first. From the Windows repository, run the following in
 PowerShell. It preserves the existing executable and any current M16 Windows
-evidence outside the repository, then clears only generated desktop-package
-artifacts to force a new executable. Older milestone receipts are not rewritten.
-The confirmed source commit is sufficient; a Git reset, cleanup or pull is not
-needed for this rebuild.
+evidence outside the repository, then updates source and builds the new functional
+executable. Older milestone receipts are not rewritten.
+Update normally using fast-forward Git commands; no Git reset or working-tree
+cleanup is needed. Stop if Git reports local changes or cannot fast-forward.
 
 ```powershell
 $ErrorActionPreference = 'Stop'
@@ -28,29 +27,36 @@ if (Test-Path '.\target\debug\cprs-chart-mock.exe') {
 if (Test-Path '.\validation\milestone-16\windows') {
     Copy-Item '.\validation\milestone-16\windows' (Join-Path $cprsArchive 'windows') -Recurse
 }
+if (Test-Path '.\validation\milestone-16\functional-100\windows') {
+    Copy-Item '.\validation\milestone-16\functional-100\windows' (Join-Path $cprsArchive 'functional-100-windows') -Recurse
+}
 Write-Host "Preserved existing build/evidence in $cprsArchive"
 
-cargo clean -p cprs-chart-mock
-if ($LASTEXITCODE -ne 0) { throw 'Package cleanup failed; stop here.' }
+git switch main
+if ($LASTEXITCODE -ne 0) { throw 'Git switch failed; stop here.' }
+git pull --ff-only
+if ($LASTEXITCODE -ne 0) { throw 'Git pull failed; stop here.' }
 .\scripts\Test-MockChart.ps1 -Matrix -Bootstrap
 
 python scripts/verify_integrated.py
 if ($LASTEXITCODE -ne 0) { throw 'M16 binding verification failed; stop here.' }
 
-Get-Content '.\validation\milestone-16\windows\automated.json' -Raw |
+Get-Content '.\validation\milestone-16\functional-100\windows\automated.json' -Raw |
     ConvertFrom-Json |
     Select-Object protocol, passed, matrix_requested, executable_sha256, executable
 Get-FileHash '.\target\debug\cprs-chart-mock.exe' -Algorithm SHA256
 ```
 
-Send the final receipt fields and executable hash. The receipt must say M16,
+Send the final receipt fields and executable hash. The receipt must say M16F100,
 passed=True, matrix_requested=True, and its executable hash must match the file.
-The verifier checks the current source, executable, step logs and every matrix
-sample. On failure, stop and send the first error plus the referenced step log;
+The verifier checks the current source, executable, step logs and both 100% matrix
+samples. On failure, stop and send the first error plus the referenced step log;
 do not use the earlier pass report to bypass the failed check.
 
-After the new build is verified, repeat the ten native visual/keyboard and Narrator
-samples against that executable using `Review-SearchPages.ps1` and the
-[M16 checklist](../validation/milestone-16/native-checklist.md). Automated matrix
-success is separate from those observations. Preserve the archived old executable
-for historical M12 artifact follow-up; it is not the current M16 test target.
+After the new build is verified, use `Review-Functional.ps1 -Size default`, then
+close and repeat with `-Size minimum`. Both are 100%. This launches the normal
+app for manual functional checks without a background automatic journey. Follow
+the [functional checklist](../validation/milestone-16/functional-100/manual-checklist.md).
+Do not run keyboard navigation, Narrator or other-scale tests during this phase.
+Preserve prior EXEs and receipts for archival follow-up; do not apply their pass
+reports to the new executable without a matching build binding.

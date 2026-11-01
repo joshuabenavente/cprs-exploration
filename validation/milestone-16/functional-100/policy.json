@@ -1,0 +1,22 @@
+{
+  "protocol": "M16F100",
+  "recorded_at_utc": "2026-11-01T22:22:50.844910+00:00",
+  "verbatim_user_instruction": "from now on i only want to test 100% scale for functionality. also drop any keyboard navigation tests and any screen reader tests. after we finish we can go back and test different scales",
+  "active_scope": {
+    "application_scales": [
+      1.0
+    ],
+    "sizes": [
+      "default",
+      "minimum"
+    ],
+    "functional_workflows": true,
+    "keyboard_navigation": false,
+    "focus_assertions": false,
+    "screen_readers": false,
+    "layout_reveal_probes": false
+  },
+  "deferred": "Other scales until functional work is finished",
+  "historical_evidence": "Preserved; former failures and not-run statuses are not reclassified as passed",
+  "runtime_features": "Keyboard and scaling capabilities retained; only validation scope changes"
+}

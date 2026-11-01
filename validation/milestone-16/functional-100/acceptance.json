@@ -1,0 +1,39 @@
+{
+  "protocol": "M16F100",
+  "recorded_at_utc": "2026-11-01T22:24:46.949649+00:00",
+  "active_scope": "100% functional only; default/minimum sizes",
+  "keyboard_navigation": "excluded by user",
+  "focus_assertions": "excluded by user",
+  "screen_readers": "excluded by user",
+  "other_scales": "deferred until functional work is finished",
+  "passed_linux_automated": true,
+  "rust_tests": 148,
+  "protocol_tests": 20,
+  "automated_steps": 8,
+  "journeys": 3,
+  "checkpoints_each": 109,
+  "deliveries_each": 158,
+  "rejected_each": 70,
+  "sample_scales": [
+    1.0
+  ],
+  "matrix_sizes": [
+    "default",
+    "minimum"
+  ],
+  "executable_sha256": "5aa5f460344053c4e45a2531da516b64fa02f6523d0e3ffe638e8acbe4527fa3",
+  "historical_files_unchanged": 2554,
+  "policy_sha256": "5c7563cb16c732a872ac8f252dc9f22c4355dc9110584c51299965f51f7b8db3",
+  "agent_instructions_sha256": "b592e5b820f3965415acfffc01dd8878fdf89cb33f9b5467bd5539380e38051b",
+  "bound_receipts_sha256": {
+    "validation/milestone-16/functional-100/linux/automated.json": "161e2f3c3074fc3412aeb1f9fccd71d68b83ac2b9672a8357d65252384cf9ee5",
+    "validation/milestone-16/functional-100/linux/integrated.json": "eb1f049919842456dc1da43660a0424c90bf5d83fc2d97f9112dc79cc00077bd",
+    "validation/milestone-16/functional-100/linux/tooling-review.json": "abcff836904c6421276eb1e8e096e547986cde6c37ea1c93bee0319034497442",
+    "validation/milestone-16/functional-100/startup-history.json": "4673fe3e1d6a3e0af89bb6e3e9c6fefd997805a8ed686f9bf0f5cd4fb5b85245",
+    "validation/milestone-16/functional-100/policy.json": "5c7563cb16c732a872ac8f252dc9f22c4355dc9110584c51299965f51f7b8db3",
+    "validation/milestone-16/functional-100/manual-checklist.md": "fa6459f4ffd246dd116fe7a44cfa9a44b8a41b8599744f4fc8d1f2e9d44be4cc"
+  },
+  "windows_functional": "not run for new policy/build",
+  "functional_acceptance_complete": false,
+  "review": "Active journey contains no focus assertions, dispatched key/navigation events or geometry probes. Runtime keyboard/scaling features are unchanged. Old 200% focus failure retains failed/interrupted historical status; no focus bug fix claimed."
+}

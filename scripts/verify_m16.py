@@ -217,6 +217,7 @@ def verify(code_only=False):
 
 
 def main(argv=None):
+    raise SystemExit("M16 full-scale validation is frozen history; use the active 100% functional runner.")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--code-only', action='store_true')
     args = parser.parse_args(argv)
