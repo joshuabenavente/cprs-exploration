@@ -1,0 +1,310 @@
+Fontconfig error: No writable cache directories
+Error watching for xdg desktop settings: Failed to connect to address `unix:path=/run/user/1000/bus`: No such file or directory (os error 2)
+M17F100_CHECK search-out-of-order PASS elapsed_ms=901
+M17F100_CHECK commit-exact-duplicate PASS elapsed_ms=1355
+M17F100_CHECK search-page-invalid PASS elapsed_ms=1568
+M17F100_CHECK search-page-recovery-race PASS elapsed_ms=1843
+M17F100_CHECK search-page-next PASS elapsed_ms=2116
+M17F100_CHECK search-page-final PASS elapsed_ms=2352
+M17F100_CHECK search-page-backward PASS elapsed_ms=2625
+M17F100_CHECK search-page-first PASS elapsed_ms=2896
+M17F100_CHECK search-page-demo-roster PASS elapsed_ms=3165
+M17F100_CHECK search-page-empty PASS elapsed_ms=3403
+M17F100_CHECK search-page-cancel PASS elapsed_ms=3430
+M17F100_CHECK cover-close-rejects-late-detail PASS elapsed_ms=3833
+M17F100_CHECK vitals-explicit-close-race PASS elapsed_ms=4226
+M17F100_CHECK vitals-close-retains-row PASS elapsed_ms=4252
+M17F100_CHECK vitals-error PASS elapsed_ms=4663
+M17F100_CHECK vitals-retry-real-timer PASS elapsed_ms=5044
+M17F100_CHECK vitals-late-error-tab PASS elapsed_ms=5426
+M17F100_CHECK vitals-selector-cancel PASS elapsed_ms=5819
+M17F100_CHECK medications-explicit-close-race PASS elapsed_ms=6247
+M17F100_CHECK medications-close-retains-row PASS elapsed_ms=6273
+M17F100_CHECK medications-error PASS elapsed_ms=6689
+M17F100_CHECK medications-retry-real-timer PASS elapsed_ms=7076
+M17F100_CHECK medications-late-error-tab PASS elapsed_ms=7465
+M17F100_CHECK medications-selector-cancel PASS elapsed_ms=7849
+M17F100_CHECK appointments-explicit-close-race PASS elapsed_ms=8243
+M17F100_CHECK appointments-close-retains-row PASS elapsed_ms=8269
+M17F100_CHECK appointments-error PASS elapsed_ms=8679
+M17F100_CHECK appointments-retry-real-timer PASS elapsed_ms=9064
+M17F100_CHECK appointments-late-error-tab PASS elapsed_ms=9446
+M17F100_CHECK appointments-selector-cancel PASS elapsed_ms=9849
+M17F100_CHECK notes-list-real-delay PASS elapsed_ms=10784
+M17F100_CHECK notes-out-of-order PASS elapsed_ms=11962
+M17F100_CHECK notes-filter-author-race PASS elapsed_ms=12903
+M17F100_CHECK notes-filter-invalid-date PASS elapsed_ms=13844
+M17F100_CHECK notes-filter-date-recovery PASS elapsed_ms=14816
+M17F100_CHECK notes-filter-combined-empty PASS elapsed_ms=15759
+M17F100_CHECK notes-filter-reset-race PASS elapsed_ms=16699
+M17F100_CHECK notes-filter-unicode-author PASS elapsed_ms=17673
+M17F100_CHECK notes-filter-reading PASS elapsed_ms=18196
+M17F100_CHECK notes-filter-selector-reset PASS elapsed_ms=19128
+M17F100_CHECK pending-note-open-selector PASS elapsed_ms=19433
+M17F100_CHECK patient-commit-before-old-note PASS elapsed_ms=20309
+M17F100_CHECK vitals-same-id-new-owner PASS elapsed_ms=20703
+M17F100_CHECK medications-same-id-new-owner PASS elapsed_ms=21106
+M17F100_CHECK appointments-same-id-new-owner PASS elapsed_ms=21512
+M17F100_CHECK new-patient-notes-list PASS elapsed_ms=21822
+M17F100_CHECK same-note-id-new-owner PASS elapsed_ms=22173
+M17F100_CHECK late-orders-list-after-tab-change PASS elapsed_ms=23127
+M17F100_CHECK results-list-real-delay PASS elapsed_ms=24130
+M17F100_CHECK reports-explicit-and-out-of-order PASS elapsed_ms=25269
+M17F100_CHECK report-close-invalidates-inflight PASS elapsed_ms=25615
+M17F100_CHECK empty-report-is-success PASS elapsed_ms=25947
+M17F100_CHECK filter-invalidates-pending-report PASS elapsed_ms=27086
+M17F100_CHECK results-list-error PASS elapsed_ms=27346
+M17F100_CHECK results-list-retry-real-timer PASS elapsed_ms=27579
+M17F100_CHECK late-list-error-after-recovery PASS elapsed_ms=27809
+M17F100_CHECK recover-then-orders-error PASS elapsed_ms=28027
+M17F100_CHECK order-selection-is-explicit PASS elapsed_ms=28414
+M17F100_CHECK order-detail-retry-real-timer PASS elapsed_ms=28745
+M17F100_CHECK late-order-error-after-tab-change PASS elapsed_ms=29071
+M17F100_CHECK order-recovery-and-slow-list PASS elapsed_ms=30102
+M17F100_CHECK pending-order-cancel-selector PASS elapsed_ms=31248
+M17F100_CHECK acknowledgment-search PASS elapsed_ms=31462
+M17F100_CHECK acknowledgment-required PASS elapsed_ms=31491
+M17F100_CHECK acknowledgment-decline PASS elapsed_ms=31535
+M17F100_CHECK acknowledgment-accept PASS elapsed_ms=31843
+M17F100_CHECK denied-patient-search PASS elapsed_ms=32092
+M17F100_CHECK denied-patient-keeps-chart PASS elapsed_ms=32128
+M17F100_CHECK empty-patient-search PASS elapsed_ms=32341
+M17F100_CHECK empty-patient-commit PASS elapsed_ms=32701
+M17F100_CHECK empty-vitals PASS elapsed_ms=32726
+M17F100_CHECK empty-medications PASS elapsed_ms=32754
+M17F100_CHECK empty-appointments PASS elapsed_ms=32779
+M17F100_CHECK empty-notes PASS elapsed_ms=33007
+M17F100_CHECK empty-results PASS elapsed_ms=33225
+M17F100_CHECK empty-orders PASS elapsed_ms=33444
+M17F100_CHECK review-patient-search PASS elapsed_ms=33696
+M17F100_CHECK review-patient-commit PASS elapsed_ms=34095
+M17F100_CHECK review-results-list PASS elapsed_ms=34366
+M17F100_CHECK results-cancel PASS elapsed_ms=34585
+M17F100_CHECK results-filter-date-race PASS elapsed_ms=35562
+M17F100_CHECK results-filter-invalid-date PASS elapsed_ms=35896
+M17F100_CHECK results-filter-inclusive-recovery PASS elapsed_ms=36143
+M17F100_CHECK results-filter-combined-empty PASS elapsed_ms=36353
+M17F100_CHECK results-filter-reset-race PASS elapsed_ms=37355
+M17F100_CHECK results-filter-unicode-combined PASS elapsed_ms=37571
+M17F100_CHECK results-filter-retry-keeps-dates PASS elapsed_ms=37816
+M17F100_CHECK results-filter-reading PASS elapsed_ms=38040
+M17F100_CHECK results-filter-selector-reset PASS elapsed_ms=38346
+M17F100_CHECK orders-filter-open PASS elapsed_ms=38631
+M17F100_CHECK orders-filter-date-race PASS elapsed_ms=39562
+M17F100_CHECK orders-filter-invalid-date PASS elapsed_ms=39917
+M17F100_CHECK orders-filter-inclusive-recovery PASS elapsed_ms=40134
+M17F100_CHECK orders-filter-status-combined PASS elapsed_ms=40411
+M17F100_CHECK orders-filter-combined-empty PASS elapsed_ms=40642
+M17F100_CHECK orders-filter-reset-race PASS elapsed_ms=41583
+M17F100_CHECK orders-filter-unicode-combined PASS elapsed_ms=41858
+M17F100_CHECK orders-filter-retry-keeps-dates PASS elapsed_ms=42107
+M17F100_CHECK orders-filter-reading PASS elapsed_ms=42331
+M17F100_CHECK orders-filter-selector-reset PASS elapsed_ms=42656
+M17F100_CHECK orders-group-list-race PASS elapsed_ms=43591
+M17F100_CHECK orders-group-heading-inert PASS elapsed_ms=43675
+M17F100_CHECK orders-group-exact-detail PASS elapsed_ms=44027
+M17F100_CHECK orders-group-detail-race PASS elapsed_ms=45044
+M17F100_CHECK orders-group-filter-intersection PASS elapsed_ms=45265
+M17F100_CHECK orders-group-unicode-detail PASS elapsed_ms=45754
+M17F100_CHECK orders-group-empty PASS elapsed_ms=45982
+M17F100_CHECK orders-group-invalid-and-reset PASS elapsed_ms=46192
+M17F100_CHECK orders-group-error-and-retry PASS elapsed_ms=46467
+M17F100_CHECK orders-group-retry-recovery PASS elapsed_ms=46712
+M17F100_CHECK orders-group-selector-reset PASS elapsed_ms=47043
+M17F100_CHECK orders-group-tab-reset PASS elapsed_ms=47273
+M17F100_CHECK orders-filter-return-results PASS elapsed_ms=47603
+M17F100_CHECK review-long-unicode-report PASS elapsed_ms=48118
+M17F100_CHECK review-vitals-detail PASS elapsed_ms=48511
+M17F100_CHECK review-vitals-closed PASS elapsed_ms=48561
+M17F100_CHECK review-medications-detail PASS elapsed_ms=48951
+M17F100_CHECK review-medications-closed PASS elapsed_ms=48995
+M17F100_CHECK review-appointments-detail PASS elapsed_ms=49385
+M17F100_CHECK review-appointments-closed PASS elapsed_ms=49432
+M17F100_CHECK review-final-state PASS elapsed_ms=49458
+M17F100_DELIVERY search  "" generation=1 applied=false
+M17F100_DELIVERY search  "MORGAN" generation=4 applied=true
+M17F100_DELIVERY search  "" generation=2 applied=false
+M17F100_DELIVERY search  "M" generation=3 applied=false
+M17F100_DELIVERY chart SYNTH-004 "SYNTH-004" generation=5 applied=true
+M17F100_DELIVERY search  "" generation=5 applied=false
+M17F100_DELIVERY search  "" generation=6 applied=true
+M17F100_DELIVERY search  "" generation=10 applied=true
+M17F100_DELIVERY search  "M" generation=9 applied=false
+M17F100_DELIVERY search  "M" generation=8 applied=false
+M17F100_DELIVERY search  "" generation=7 applied=false
+M17F100_DELIVERY search  "" generation=11 applied=true
+M17F100_DELIVERY search  "" generation=12 applied=true
+M17F100_DELIVERY search  "" generation=13 applied=true
+M17F100_DELIVERY search  "" generation=14 applied=true
+M17F100_DELIVERY search  "" generation=15 applied=true
+M17F100_DELIVERY search  "absent fixture" generation=17 applied=true
+M17F100_DELIVERY search  "" generation=16 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "PROB-01" generation=4 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "ALLERGY-01" generation=6 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "VITAL-01" generation=8 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "VITAL-03" generation=10 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "VITAL-03" generation=12 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "VITAL-03" generation=13 applied=true
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=5 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "VITAL-03" generation=14 applied=false
+M17F100_DELIVERY search  "" generation=19 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "VITAL-01" generation=17 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "MED-01" generation=20 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "MED-03" generation=22 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "MED-03" generation=24 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "MED-03" generation=25 applied=true
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=9 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "MED-03" generation=27 applied=false
+M17F100_DELIVERY search  "" generation=21 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "MED-01" generation=30 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "APPT-01" generation=33 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "APPT-03" generation=35 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "APPT-03" generation=37 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "APPT-03" generation=38 applied=true
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=13 applied=true
+M17F100_DELIVERY cover-detail SYNTH-004 "APPT-03" generation=40 applied=false
+M17F100_DELIVERY search  "" generation=23 applied=false
+M17F100_DELIVERY cover-detail SYNTH-004 "APPT-01" generation=43 applied=false
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=17 applied=false
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=18 applied=true
+M17F100_DELIVERY note-body SYNTH-004 "NOTE-02" generation=20 applied=true
+M17F100_DELIVERY note-body SYNTH-004 "NOTE-01" generation=19 applied=false
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=20 applied=true
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=19 applied=false
+M17F100_DELIVERY note-body SYNTH-004 "NOTE-02" generation=23 applied=false
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=21 applied=false
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=23 applied=true
+M17F100_DELIVERY notes-list SYNTH-004 "Zoë 李" generation=24 applied=true
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=26 applied=true
+M17F100_DELIVERY notes-list SYNTH-004 "progress" generation=25 applied=false
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=27 applied=true
+M17F100_DELIVERY note-body SYNTH-004 "NOTE-03" generation=31 applied=true
+M17F100_DELIVERY search  "" generation=25 applied=false
+M17F100_DELIVERY notes-list SYNTH-004 "" generation=30 applied=true
+M17F100_DELIVERY search  "" generation=27 applied=false
+M17F100_DELIVERY search  "MORGAN" generation=28 applied=true
+M17F100_DELIVERY chart SYNTH-003 "SYNTH-003" generation=30 applied=true
+M17F100_DELIVERY note-body SYNTH-004 "NOTE-01" generation=35 applied=false
+M17F100_DELIVERY cover-detail SYNTH-003 "VITAL-01" generation=50 applied=true
+M17F100_DELIVERY cover-detail SYNTH-003 "MED-01" generation=52 applied=true
+M17F100_DELIVERY cover-detail SYNTH-003 "APPT-01" generation=54 applied=true
+M17F100_DELIVERY notes-list SYNTH-003 "" generation=35 applied=true
+M17F100_DELIVERY note-body SYNTH-003 "NOTE-01" generation=41 applied=true
+M17F100_DELIVERY orders-list SYNTH-003 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=19 applied=false
+M17F100_DELIVERY results-list SYNTH-003 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=20 applied=true
+M17F100_DELIVERY notes-list SYNTH-003 "" generation=34 applied=false
+M17F100_DELIVERY orders-list SYNTH-003 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=20 applied=false
+M17F100_DELIVERY results-list SYNTH-003 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=21 applied=true
+M17F100_DELIVERY report-body SYNTH-003 "REPORT-02" generation=25 applied=true
+M17F100_DELIVERY report-body SYNTH-003 "REPORT-01" generation=23 applied=false
+M17F100_DELIVERY report-body SYNTH-003 "REPORT-04" generation=27 applied=false
+M17F100_DELIVERY report-body SYNTH-003 "REPORT-04" generation=29 applied=true
+M17F100_DELIVERY results-list SYNTH-003 "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }" generation=22 applied=true
+M17F100_DELIVERY report-body SYNTH-003 "REPORT-01" generation=31 applied=false
+M17F100_DELIVERY results-list SYNTH-003 "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }" generation=23 applied=true
+M17F100_DELIVERY results-list SYNTH-003 "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }" generation=24 applied=true
+M17F100_DELIVERY results-list SYNTH-003 "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }" generation=25 applied=false
+M17F100_DELIVERY results-list SYNTH-003 "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }" generation=26 applied=true
+M17F100_DELIVERY orders-list SYNTH-003 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=23 applied=false
+M17F100_DELIVERY results-list SYNTH-003 "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }" generation=27 applied=false
+M17F100_DELIVERY orders-list SYNTH-003 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=24 applied=true
+M17F100_DELIVERY order-body SYNTH-003 "ORDER-01" generation=26 applied=true
+M17F100_DELIVERY order-body SYNTH-003 "ORDER-01" generation=27 applied=true
+M17F100_DELIVERY results-list SYNTH-003 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=30 applied=true
+M17F100_DELIVERY order-body SYNTH-003 "ORDER-01" generation=28 applied=false
+M17F100_DELIVERY orders-list SYNTH-003 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=27 applied=false
+M17F100_DELIVERY orders-list SYNTH-003 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=28 applied=true
+M17F100_DELIVERY search  "" generation=29 applied=false
+M17F100_DELIVERY orders-list SYNTH-003 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=30 applied=true
+M17F100_DELIVERY order-body SYNTH-003 "ORDER-01" generation=34 applied=false
+M17F100_DELIVERY search  "" generation=31 applied=false
+M17F100_DELIVERY search  "PATEL" generation=32 applied=true
+M17F100_DELIVERY chart SYNTH-005 "SYNTH-005" generation=35 applied=true
+M17F100_DELIVERY search  "" generation=33 applied=false
+M17F100_DELIVERY search  "RIVERA" generation=34 applied=true
+M17F100_DELIVERY search  "SYNTH-002" generation=35 applied=true
+M17F100_DELIVERY chart SYNTH-002 "SYNTH-002" generation=39 applied=true
+M17F100_DELIVERY notes-list SYNTH-002 "" generation=47 applied=false
+M17F100_DELIVERY notes-list SYNTH-002 "" generation=48 applied=true
+M17F100_DELIVERY results-list SYNTH-002 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=39 applied=true
+M17F100_DELIVERY orders-list SYNTH-002 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=38 applied=true
+M17F100_DELIVERY search  "" generation=36 applied=false
+M17F100_DELIVERY search  "SYNTH-001" generation=37 applied=true
+M17F100_DELIVERY chart SYNTH-001 "SYNTH-001" generation=42 applied=true
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=44 applied=true
+M17F100_DELIVERY search  "" generation=38 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=46 applied=true
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=47 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=48 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=49 applied=true
+M17F100_DELIVERY report-body SYNTH-001 "REPORT-02" generation=61 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=52 applied=true
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"Empty\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=53 applied=true
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=56 applied=true
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"Alpha\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=55 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"Empty\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=54 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"zoë 李\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=59 applied=true
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=58 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=57 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"zoë 李\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=60 applied=true
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"zoë 李\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=62 applied=true
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"zoë 李\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=61 applied=false
+M17F100_DELIVERY search  "" generation=40 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=64 applied=true
+M17F100_DELIVERY report-body SYNTH-001 "REPORT-03" generation=76 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=45 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=48 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=47 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=46 applied=false
+M17F100_DELIVERY order-body SYNTH-001 "ORDER-02" generation=56 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=51 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=52 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Empty\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=53 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Empty\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=54 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Alpha\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=55 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Alpha\", status: Pending, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=56 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=57 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=58 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=59 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"zoë 李\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=60 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"zoë 李\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=61 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"zoë 李\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=62 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"zoë 李\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=63 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"zoë 李\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }" generation=64 applied=true
+M17F100_DELIVERY search  "" generation=42 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=66 applied=true
+M17F100_DELIVERY order-body SYNTH-001 "ORDER-03" generation=74 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=70 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=69 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=68 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=67 applied=false
+M17F100_DELIVERY order-body SYNTH-001 "ORDER-02" generation=82 applied=true
+M17F100_DELIVERY order-body SYNTH-001 "ORDER-03" generation=85 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=71 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=72 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=73 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=74 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"zoë 李\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=76 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=75 applied=false
+M17F100_DELIVERY order-body SYNTH-001 "ORDER-03" generation=93 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Missing\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=77 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=81 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=82 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Alpha\", status: All, beginning: None, ending: None }" generation=83 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=84 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=85 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=87 applied=true
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }" generation=86 applied=false
+M17F100_DELIVERY search  "" generation=44 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=89 applied=true
+M17F100_DELIVERY order-body SYNTH-001 "ORDER-02" generation=106 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=90 applied=false
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=69 applied=false
+M17F100_DELIVERY orders-list SYNTH-001 "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }" generation=93 applied=true
+M17F100_DELIVERY results-list SYNTH-001 "ResultsFilter { query: \"\", beginning: None, ending: None }" generation=72 applied=true
+M17F100_DELIVERY report-body SYNTH-001 "REPORT-03" generation=88 applied=true
+M17F100_DELIVERY cover-detail SYNTH-001 "VITAL-03" generation=82 applied=true
+M17F100_DELIVERY cover-detail SYNTH-001 "MED-03" generation=85 applied=true
+M17F100_DELIVERY cover-detail SYNTH-001 "APPT-03" generation=88 applied=true
+M17F100_INTEGRATED_PASS cases=121 deliveries=185 rejected=86 elapsed_ms=49486
+M17F100_WINDOW client_width_px=1180 client_height_px=800 application_scale=1

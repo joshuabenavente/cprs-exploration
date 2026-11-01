@@ -35,6 +35,8 @@ def historical():
 
 
 def main(argv=None):
+    raise SystemExit('M16F100 is frozen history; use the M17F100 entry points.')
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--milestone', type=int, choices=[16], default=16)
     parser.add_argument('--code-only', action='store_true')

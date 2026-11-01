@@ -7,7 +7,7 @@ scale factors are deferred until the functional work is finished.
 
 Keep the application's keyboard and scaling functionality intact; this changes
 the testing scope. Preserve historical receipts and failed attempts. Write new
-functional-only evidence under `validation/milestone-16/functional-100/` and use
+functional-only evidence under `validation/milestone-17/functional-100/` and use
 the active `Test-MockChart.ps1` / `verify_integrated.py` entry points.
 
 Standing commit/push/merge/prune approval is recorded in

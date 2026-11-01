@@ -273,24 +273,37 @@ fn sync(app: &AppWindow, controller: &Controller) {
     app.set_orders_ending(o.ending_input.clone().into());
     app.set_orders_invalid_filter(matches!(o.list_status, OrdersListStatus::Invalid(_)));
     app.set_orders_status_filter(order_filter_index(o.status_filter));
+    app.set_orders_grouping(if o.grouping == OrdersGrouping::Service {
+        1
+    } else {
+        0
+    });
     let rows = o
-        .rows
-        .iter()
-        .map(|r| {
-            vec![
+        .display_rows()
+        .into_iter()
+        .map(|row| match row {
+            OrdersDisplayRow::ServiceHeading(service) => vec![
+                format!("Service: {service}"),
+                "Group heading".into(),
+                "".into(),
+                "".into(),
+                "".into(),
+                "".into(),
+            ],
+            OrdersDisplayRow::Order(r) => vec![
                 r.service.clone(),
                 r.description.clone(),
                 r.start_stop.clone(),
                 r.provider.clone(),
                 r.status.label().into(),
                 r.location.clone(),
-            ]
+            ],
         })
         .collect();
     if let Some(model) = changed_rows(&app.get_orders_rows(), rows) {
         app.set_orders_rows(model);
     }
-    app.set_selected_order(o.selected_index().map_or(-1, |i| i as i32));
+    app.set_selected_order(o.selected_display_index().map_or(-1, |i| i as i32));
     app.set_orders_scenario(match controller.provider.simulation {
         Simulation::OrdersListUnavailable => 1,
         Simulation::OrderDetailUnavailable => 2,
@@ -303,8 +316,13 @@ fn sync(app: &AppWindow, controller: &Controller) {
         OrdersListStatus::Idle => "Open Orders to load invented records.".into(),
         OrdersListStatus::Loading => "Loading invented order list…".into(),
         OrdersListStatus::Ready => format!(
-            "{} invented orders · Newest first · Select a row, then open detail",
-            o.rows.len()
+            "{} invented orders · {} · Select an order, then open detail",
+            o.rows.len(),
+            if o.grouping == OrdersGrouping::Service {
+                "Grouped by service; newest first within service"
+            } else {
+                "Newest first"
+            }
         )
         .into(),
         OrdersListStatus::Empty => {
@@ -1198,6 +1216,19 @@ fn wire(app: &AppWindow, shared: &Shared) {
         load_orders(weak.clone(), data.clone(), query, order_filter(index));
     });
     let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_orders_grouping_changed(move |index| {
+        let request = {
+            let mut c = data.borrow_mut();
+            c.last_order_click = None;
+            c.state.set_orders_grouping(if index == 1 {
+                OrdersGrouping::Service
+            } else {
+                OrdersGrouping::Flat
+            })
+        };
+        deliver_orders_list(weak.clone(), data.clone(), request);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
     app.on_orders_scenario_changed(move |index| {
         data.borrow_mut().provider.simulation = match index {
             1 => Simulation::OrdersListUnavailable,
@@ -1223,10 +1254,10 @@ fn wire(app: &AppWindow, shared: &Shared) {
     app.on_order_selected(move |index| {
         let index = usize::try_from(index).unwrap_or(usize::MAX);
         let mut c = data.borrow_mut();
-        if c.state.orders.selected_index() != Some(index) {
+        if c.state.orders.selected_display_index() != Some(index) {
             c.last_order_click = None;
         }
-        c.state.select_order(index);
+        c.state.select_display_order(index);
         drop(c);
         paint(&weak, &data);
     });
@@ -1240,7 +1271,10 @@ fn wire(app: &AppWindow, shared: &Shared) {
             if c.state.selector_open || c.state.tab != ChartTab::Orders {
                 return;
             }
-            let Some(row) = c.state.orders.rows.get(index) else {
+            let Some(row) = c.state.orders.display_order(index) else {
+                c.last_order_click = None;
+                drop(c);
+                paint(&weak, &data);
                 return;
             };
             let (patient, id) = (row.patient_id.clone(), row.id.clone());
@@ -1253,7 +1287,7 @@ fn wire(app: &AppWindow, shared: &Shared) {
             } else {
                 Some((patient, id, now))
             };
-            c.state.select_order(index);
+            c.state.select_display_order(index);
             activate
         };
         if activate {
@@ -1695,6 +1729,18 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_close_order_detail();
     assert_eq!(app.get_selected_order(), 1);
     assert!(app.get_order_body().is_empty());
+    app.invoke_orders_grouping_changed(1);
+    assert_eq!(app.get_orders_rows().row_count(), 7);
+    assert_eq!(app.get_selected_order(), -1);
+    app.invoke_order_released(0);
+    app.invoke_order_released(0);
+    assert!(!app.get_order_detail_open());
+    app.invoke_order_released(4);
+    app.invoke_order_released(4);
+    assert!(app.get_order_body().contains("ORDER-02"));
+    app.invoke_orders_reset_filters();
+    assert_eq!(app.get_orders_grouping(), 0);
+    assert_eq!(app.get_orders_rows().row_count(), 4);
     app.invoke_orders_filter_edited("李".into());
     assert_eq!(app.get_selected_order(), -1);
     assert_eq!(app.get_orders_rows().row_count(), 1);

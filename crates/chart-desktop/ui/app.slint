@@ -105,6 +105,7 @@ export component AppWindow inherits Window {
     in-out property <string> orders-ending;
     in property <bool> orders-invalid-filter;
     in property <int> orders-status-filter;
+    in property <int> orders-grouping;
     in property <int> orders-scenario;
     in property <bool> orders-loading;
     in property <bool> orders-list-error;
@@ -119,6 +120,7 @@ export component AppWindow inherits Window {
     callback orders-dates-edited(string, string);
     callback orders-reset-filters();
     callback orders-status-changed(int);
+    callback orders-grouping-changed(int);
     callback orders-scenario-changed(int);
     callback order-selected(int);
     callback order-released(int);
@@ -568,7 +570,7 @@ export component AppWindow inherits Window {
                             rows: root.orders-rows; selected-row <=> root.selected-order; query <=> root.orders-query;
                             beginning <=> root.orders-beginning; ending <=> root.orders-ending;
                             patient-id: root.active-id; invalid-filter: root.orders-invalid-filter;
-                            status-filter: root.orders-status-filter; scenario: root.orders-scenario; loading: root.orders-loading;
+                            grouping: root.orders-grouping; status-filter: root.orders-status-filter; scenario: root.orders-scenario; loading: root.orders-loading;
                             list-error: root.orders-list-error; list-status: root.orders-list-status;
                             identity: root.order-identity; body: root.order-body; body-status: root.order-body-status;
                             body-error: root.order-body-error; body-ready: root.order-body-ready; detail-open: root.order-detail-open;
@@ -576,6 +578,7 @@ export component AppWindow inherits Window {
                             dates-edited(beginning, ending) => { root.orders-dates-edited(beginning, ending); }
                             reset-filters => { root.orders-reset-filters(); }
                             status-changed(index) => { root.orders-status-changed(index); }
+                            grouping-changed(index) => { root.orders-grouping-changed(index); }
                             scenario-changed(index) => { root.orders-scenario-changed(index); }
                             selected(index) => { root.order-selected(index); }
                             released(index) => { root.order-released(index); }

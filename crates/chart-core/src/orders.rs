@@ -160,8 +160,23 @@ pub enum OrderDetailState {
     Error(String),
 }
 
+/// Authored presentation policy; service labels are exact, case-sensitive group keys.
+/// They never identify an order or a detail request.
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+pub enum OrdersGrouping {
+    #[default]
+    Flat,
+    Service,
+}
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OrdersDisplayRow<'a> {
+    ServiceHeading(&'a str),
+    Order(&'a OrderSummary),
+}
+
 #[derive(Clone, Debug, Default)]
 pub struct OrdersWorkspace {
+    pub grouping: OrdersGrouping,
     pub patient_id: Option<PatientId>,
     pub query: String,
     pub status_filter: OrderStatusFilter,
@@ -186,6 +201,7 @@ impl OrdersWorkspace {
         self.beginning_input.clear();
         self.ending_input.clear();
         self.status_filter = OrderStatusFilter::All;
+        self.grouping = OrdersGrouping::Flat;
         self.rows.clear();
         self.list_status = OrdersListStatus::Idle;
         self.selected = None;
@@ -197,6 +213,40 @@ impl OrdersWorkspace {
         self.detail_generation += 1;
         self.detail = OrderDetailState::Closed;
         self.pending_detail = None;
+    }
+    /// Project validated records into table rows without changing provider order/identity.
+    pub fn display_rows(&self) -> Vec<OrdersDisplayRow<'_>> {
+        let mut rows: Vec<_> = self.rows.iter().collect();
+        if self.grouping == OrdersGrouping::Flat {
+            return rows.into_iter().map(OrdersDisplayRow::Order).collect();
+        }
+        rows.sort_by(|a, b| {
+            a.service
+                .cmp(&b.service)
+                .then_with(|| b.date.cmp(&a.date))
+                .then_with(|| a.id.as_str().cmp(b.id.as_str()))
+        });
+        let mut display = Vec::new();
+        let mut service = None;
+        for row in rows {
+            if service != Some(row.service.as_str()) {
+                service = Some(row.service.as_str());
+                display.push(OrdersDisplayRow::ServiceHeading(&row.service));
+            }
+            display.push(OrdersDisplayRow::Order(row));
+        }
+        display
+    }
+    pub fn display_order(&self, index: usize) -> Option<&OrderSummary> {
+        match self.display_rows().get(index)? {
+            OrdersDisplayRow::Order(row) => Some(row),
+            OrdersDisplayRow::ServiceHeading(_) => None,
+        }
+    }
+    pub fn selected_display_index(&self) -> Option<usize> {
+        let selected = self.selected.as_ref()?;
+        self.display_rows().iter().position(|row| matches!(row,
+            OrdersDisplayRow::Order(r) if r.id == selected.id && r.patient_id == selected.patient_id))
     }
     pub fn selected_index(&self) -> Option<usize> {
         let selected = self.selected.as_ref()?;
@@ -237,7 +287,33 @@ impl AppState {
             self.orders.ending_input.clone(),
         )
     }
+    pub fn set_orders_grouping(&mut self, grouping: OrdersGrouping) -> Option<OrdersListRequest> {
+        if !self.orders_allowed() || self.orders.grouping == grouping {
+            return None;
+        }
+        self.orders.grouping = grouping;
+        self.begin_orders_list(self.orders.query.clone(), self.orders.status_filter)
+    }
+    pub fn select_display_order(&mut self, index: usize) -> bool {
+        let Some(row) = self.orders.display_order(index) else {
+            return false;
+        };
+        // Resolve projection through stable identity, never treat a heading offset as an ID.
+        let Some(index) = self
+            .orders
+            .rows
+            .iter()
+            .position(|r| r.id == row.id && r.patient_id == row.patient_id)
+        else {
+            return false;
+        };
+        self.select_order(index)
+    }
     pub fn reset_orders_filters(&mut self) -> Option<OrdersListRequest> {
+        if !self.orders_allowed() {
+            return None;
+        }
+        self.orders.grouping = OrdersGrouping::Flat;
         self.begin_orders_filter(
             String::new(),
             OrderStatusFilter::All,
@@ -496,7 +572,7 @@ pub(crate) fn mock_orders(patient: &PatientSummary, request: &OrdersListRequest)
                     .expect("compiled mock order ID"),
                 date: dates[i].into(),
                 description: descriptions[i].into(),
-                service: format!("Training service {}", ['A', 'B', 'C', 'D'][i]),
+                service: format!("Training service {}", ['A', 'B', 'A', 'C'][i]),
                 provider: format!("Demo provider {}", ['A', 'B', 'C', 'D'][i]),
                 location: patient.location.clone(),
                 status: [

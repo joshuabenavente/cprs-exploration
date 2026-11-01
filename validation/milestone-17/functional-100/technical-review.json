@@ -1,0 +1,45 @@
+{
+  "protocol": "M17F100",
+  "scope": "OG01\u2013OG08 core, desktop, timer, tooling and evidence review",
+  "blocking_findings": [],
+  "contracts": {
+    "OG01": "Flat retained; grouped service/date/ID ordering; equal-date and exact-label cases pass",
+    "OG02": "Heading rejects selection and repeated release, preserving prior real selection/detail",
+    "OG03": "Duplicate-title ORDER-02 resolved through patient/order identity; Unicode long detail and empty ORDER-04 core checks pass",
+    "OG04": "List/detail generations reject old success/error/duplicate and toggle-away/back replies; same-mode no-op retains pending detail",
+    "OG05": "Intersect text/status/dates before headings; invalid/empty/error/retry cases pass",
+    "OG06": "Reset restores flat/default tuple; selector/tab/patient ownership cases pass",
+    "OG07": "Nine patients, four rows/nonempty fixture and order IDs retained; service fixture now A/B/A/C",
+    "OG08": "Only 100% functional journeys; excluded focus/keyboard/geometry assertions absent; M16F100 writers frozen and new destinations verified"
+  },
+  "evidence": {
+    "protocol": "M17F100",
+    "checked_at_utc": "2026-11-01T23:14:21.073704+00:00",
+    "baseline": "18f3f532d380159524430dbb69ca700be119aee7",
+    "platform": "Linux Xvfb, Slint winit-software",
+    "functional_scope": "100% application scale at default/minimum sizes; keyboard/focus/navigation and screen readers excluded; other scales deferred",
+    "passed_local_automated": true,
+    "rust_tests": 157,
+    "protocol_tests": 21,
+    "automated_steps": 8,
+    "journeys": 3,
+    "checkpoints_each": 121,
+    "deliveries_each": 185,
+    "rejected_each": 86,
+    "source_inputs_bound": 47,
+    "executable_sha256": "c40acbcc79ae23930e0d079b9437db584756a4d19801c94f06e7c4b8bc2ad48d",
+    "automated_receipt_sha256": "71210dda2249bb4214597378ee0539563ad484007fe980ea62d086efc3b0e08f",
+    "integrated_receipt_sha256": "9317a6ac3acfc956b211e6653d9d8abf402af1e64174b5ea23be7dd7ec138615",
+    "historical_files_preserved": 2597,
+    "historical_manifest_matches_startup_snapshot": true,
+    "historical_bytes_unchanged": true,
+    "windows_code_build_ci": "pending final PR head",
+    "windows_manual_functional": "not run for M17; new build does not inherit M16 reports",
+    "functional_acceptance_complete": false
+  },
+  "limitations": [
+    "Authored mock grouping semantics; original runtime grouping unresolved.",
+    "Linux callbacks/timers are not native Windows mouse/manual observation.",
+    "Windows manual functional acceptance pending new build; keyboard/screen-reader checks excluded, other scales deferred."
+  ]
+}

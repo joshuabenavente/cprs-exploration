@@ -4,32 +4,31 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-The development branch is `main`; the policy change is merged in [PR #12](https://github.com/joshuabenavente/cprs-exploration/pull/12).
-The active testing phase is **functionality at 100% scale only**, at default and
-minimum sizes. Keyboard/focus/navigation and
-screen-reader checks are excluded; other scales are deferred until the functional
-work is finished. See [validation policy](docs/validation-policy.md), the
-[functional checklist](validation/milestone-16/functional-100/manual-checklist.md),
-[current handoff](docs/handoff.md) and [delivery approval](docs/delivery-workflow.md).
+M17 adds read-only [Orders grouping by service](docs/milestone-17.md), with
+[authored grouping rules](specifications/orders-grouping.md). Current Windows
+manual acceptance is pending for the new binary; prior
+[M16 acceptance](validation/milestone-16/functional-100/windows/user-acceptance.json)
+is preserved without transferring its passes.
 
-Current functional acceptance passed: Windows automation has verified source/log
-bindings, and both 100% manual checklists are user-reported pass. See
-[acceptance](validation/milestone-16/functional-100/windows/user-acceptance.json).
-Keyboard/focus/navigation and screen readers remain excluded; other scales stay deferred.
+Active testing is **functionality at 100% only**, default/minimum window sizes.
+Keyboard/focus/navigation and screen-reader checks are excluded; other scales
+are deferred. See [policy](docs/validation-policy.md), the
+[M17 checklist](validation/milestone-17/functional-100/manual-checklist.md),
+[current handoff](docs/handoff.md) and [standing delivery approval](docs/delivery-workflow.md).
 
 ## Run and validate the current mock
 
 ```powershell
 .\scripts\Test-MockChart.ps1 -Matrix -Bootstrap
 python scripts/verify_integrated.py
-python scripts/test_m16_functional_protocol.py
+python scripts/test_m17_functional_protocol.py
 ```
 
 `-Matrix` runs default-100 and minimum-100 only; `-CodeOnly` omits desktop execution.
-The active protocol is M16F100; receipts are written under
-`validation/milestone-16/functional-100/windows/` or `linux/`. Linux uses
-`python3 scripts/validate_m16_functional.py --matrix` with the pinned Rust and X11
-software backend. The older full-scale M16 writer/review entry points are frozen.
+The active protocol is M17F100; receipts are written under
+`validation/milestone-17/functional-100/windows/` or `linux/`. Linux uses
+`python3 scripts/validate_m17_functional.py --matrix` with the pinned Rust and X11
+software backend. Both earlier M16 protocols have frozen writer entry points.
 
 After automation passes, review functionality in the normal app:
 
@@ -40,13 +39,12 @@ After automation passes, review functionality in the normal app:
 Close it and repeat with `-Size minimum`; both are fixed at 100%. The manual
 launcher does not run a background automatic journey. No keyboard-navigation or
 Narrator report is requested. Typing query/date values is normal functional input.
-Use the [Windows update/rebuild guide](docs/m16-windows-rebuild.md)
-when moving from the old full-scale build; preserve its EXE and logs first.
+Preserve earlier EXEs and logs; M17 uses a separate receipt folder.
 
 Nine invented patients, five Cover Sheet panels and the read-only Notes, Orders
 and Results browsers remain. Notes has text/author/date filters and automatic
-reading; Orders text/status/date and Results text/date filters preserve explicit
-detail opening. Historical evidence and the [M16 overview](docs/project-overview-m16.md)
+reading; Orders text/status/date filters and service grouping, and Results text/date
+filters preserve explicit detail opening. Historical evidence and the [M16 overview](docs/project-overview-m16.md)
 remain available; the current policy supersedes their previous acceptance gates.
 The [published reverse-engineering folder](reverse-engineering/README.md) is unchanged.
 

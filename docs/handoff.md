@@ -1,5 +1,14 @@
 # CPRS Chart recreation: current handoff
 
+M17 implements read-only Orders grouping by service, approved after the
+M16F100 acceptance below. Current tools now use M17F100 and separate
+`validation/milestone-17/functional-100/` outputs. Both M16 writers are frozen.
+See the [M17 contract](../specifications/orders-grouping.md),
+[milestone](milestone-17.md) and [new checklist](../validation/milestone-17/functional-100/manual-checklist.md).
+Local checks passed 157 Rust / 21 protocol tests and three 121-checkpoint 100%
+journeys. Delivery and new Windows manual acceptance are pending; the following paragraphs describe the
+prior M16 acceptance and delivery checkpoints.
+
 Current functional acceptance: supplied Windows M16F100 automation passed nine
 steps and three 109-checkpoint journeys at 100%. All 43 source/build hashes and
 nine step-log hashes match; parsed journey/verifier receipts agree. The user then
@@ -11,7 +20,7 @@ The tested Windows SHA256 is
 Manual acceptance is user-reported; the binary and manual session were not
 independently tested in cloud. The review records archival manifest limitations.
 Keyboard/focus/navigation and screen readers stay excluded; other scales remain
-deferred. Next action: plan the next bounded functional milestone at 100%.
+deferred. That acceptance enabled the now-approved M17 milestone.
 
 Active phase: **functionality at 100% only**, default/minimum window sizes.
 Keyboard/focus/navigation and screen-reader/Narrator checks are excluded from
