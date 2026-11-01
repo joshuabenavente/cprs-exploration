@@ -11,7 +11,7 @@ from pathlib import Path
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / 'validation/milestone-11'
+BASE = ROOT / 'validation/milestone-12'
 
 
 def git(*args, env=None):
@@ -32,7 +32,7 @@ def main():
     if os.name != 'nt':
         raise RuntimeError('This check requires Windows with the MSVC Rust toolchain')
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%f')
-    local = ROOT / '.local' / ('m11-clean-' + stamp)
+    local = ROOT / '.local' / ('m12-clean-' + stamp)
     local.mkdir(parents=True)
     destination = local / 'checkout'
     destination.mkdir()
@@ -47,8 +47,8 @@ def main():
                  for folder in ('scripts', '.github') for p in (ROOT / folder).rglob('*')
                  if p.is_file() and p.suffix in ('.py', '.ps1', '.yml', '.yaml')]
     git('add', '--', *additions, 'rust-toolchain.toml',
-        'validation/milestone-11/historical-bytes.json',
-        'validation/milestone-11/startup-handoff.md', env=env)
+        'validation/milestone-12/historical-bytes.json',
+        'validation/milestone-12/startup-handoff.md', env=env)
     tree = git('write-tree', env=env)
     git('-c', 'core.autocrlf=false', '-c', 'core.longpaths=true', 'checkout-index', '--all',
         '--prefix=' + destination.as_posix() + '/', env=env)
@@ -71,7 +71,7 @@ def main():
     # Every new receipt/export in this snapshot must survive exactly, including
     # the startup manifest that hashes the older workstation bytes.
     for name in ('historical-bytes.json', 'startup-handoff.md'):
-        if digest(BASE / name) != digest(destination / 'validation/milestone-11' / name):
+        if digest(BASE / name) != digest(destination / 'validation/milestone-12' / name):
             raise ValueError('New evidence checkout bytes changed: ' + name)
     build_env = os.environ.copy()
     build_env.pop('CARGO_TARGET_DIR', None)
@@ -81,11 +81,12 @@ def main():
                '-File', str(destination / 'scripts/Test-MockChart.ps1'), '-CodeOnly', '-Bootstrap']
     with (BASE / 'clean-checkout.log').open('w', encoding='utf-8') as log:
         result = subprocess.run(command, cwd=destination, env=build_env, stdout=log, stderr=subprocess.STDOUT)
-    checks_path = destination / 'validation/milestone-11/code-checks.json'
+    checks_path = destination / 'validation/milestone-12/code-checks.json'
     checks = json.loads(checks_path.read_text(encoding='utf-8-sig')) if checks_path.exists() else None
     source_hashes = {p.relative_to(destination).as_posix(): digest(p)
                      for p in (destination / 'crates').rglob('*') if p.is_file()}
     receipt = {
+        'protocol': 'M12',
         'scope': 'Fresh Windows Git-tree checkout, explicit core.autocrlf=false, new empty target directory',
         'passed': result.returncode == 0 and checks is not None and checks['passed'],
         'baseline_commit': history['baseline_commit'], 'source_tree': tree,
@@ -100,7 +101,7 @@ def main():
         'log_sha256': digest(BASE / 'clean-checkout.log'),
         'limits': ['Existing Cargo registry cache reused; fetch --locked is a separate online bootstrap step.',
                    'No desktop callback, native keyboard, listening or remote CI claim from this code/build check.',
-                   'A fresh clone of a published M11 commit remains pending publication.'],
+                   'A fresh clone of a published M12 commit remains pending publication.'],
     }
     (BASE / 'clean-checkout.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
     print(f"Clean checkout passed={receipt['passed']}; historical blobs={len(history['files'])}; CRLF-only={len(normalized)}")

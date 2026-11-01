@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([ValidateSet(11)][int]$Milestone = 11, [switch]$CodeOnly, [switch]$Bootstrap)
+param([ValidateSet(12)][int]$Milestone = 12, [switch]$CodeOnly, [switch]$Bootstrap)
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'Get-MockFileSha256.ps1')
 $root = Split-Path -Parent $PSScriptRoot
@@ -49,8 +49,9 @@ try {
     }
     $binary = Join-Path $root 'target/debug/cprs-chart-mock.exe'
     $receipt = [ordered]@{
+        protocol = 'M12'
         checked_at = [DateTimeOffset]::Now.ToString('o')
-        scope = 'Milestone 11 shared Cover Sheet hardening and integrated chart validation'
+        scope = 'Milestone 12 shared Cover Sheet hardening and integrated chart validation'
         passed = ($null -eq $failure -and $results.Count -eq $steps.Count)
         rustc = (& rustc --version | Out-String).Trim()
         cargo = (& cargo --version | Out-String).Trim()

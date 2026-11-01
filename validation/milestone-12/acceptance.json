@@ -1,0 +1,493 @@
+{
+  "protocol": "M12",
+  "scope": "M12 local code/build/timer/geometry checkpoint; separate native/listening/remote CI statuses below",
+  "local_automated_checkpoint_passed": true,
+  "milestone_acceptance_complete": false,
+  "executable_sha256": "21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4",
+  "core_tests": 96,
+  "timed_checkpoints": 83,
+  "actual_deliveries": 92,
+  "rejected_stale_deliveries": 38,
+  "historical_worktree_and_git_files_verified": 719,
+  "clean_windows_tree_passed": true,
+  "probe_samples": [
+    {
+      "size": "default",
+      "scale": "1",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-default-100.log",
+      "log_sha256": "c2f8532e70fb060ca617486d6ffcb75f6f9c3ba1dc9371bf3a2cea91e907beda",
+      "client_pixels": [
+        1180,
+        800
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    },
+    {
+      "size": "minimum",
+      "scale": "1",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-minimum-100.log",
+      "log_sha256": "74faf59b834a2550e4032cbc64c5893d82ee512f5084cd35bcc5b14943a1a75a",
+      "client_pixels": [
+        980,
+        680
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    },
+    {
+      "size": "default",
+      "scale": "1.25",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-default-125.log",
+      "log_sha256": "bcbaf04e3d08f72e05c9ac49fe5226d8528e9659637368f4b9c7d810017debbf",
+      "client_pixels": [
+        1475,
+        1000
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    },
+    {
+      "size": "minimum",
+      "scale": "1.25",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-minimum-125.log",
+      "log_sha256": "e7424f17fd1f09373d49ee3d953d9e39515c0b3f64b22042ea0684bbfead3235",
+      "client_pixels": [
+        1225,
+        850
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    },
+    {
+      "size": "default",
+      "scale": "1.5",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-default-150.log",
+      "log_sha256": "71f48aa8f09ba17775afd2b1a7aebb4fd85f9f3290816d20d7cc43aecec469bd",
+      "client_pixels": [
+        1770,
+        1200
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    },
+    {
+      "size": "minimum",
+      "scale": "1.5",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-minimum-150.log",
+      "log_sha256": "f74dbbdbf635bbe1bb84d62013b30a86387299c2b0fc75a8e08cf658d8062089",
+      "client_pixels": [
+        1470,
+        1020
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    },
+    {
+      "size": "default",
+      "scale": "1.75",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-default-175.log",
+      "log_sha256": "ce425270d2d447397df6c283ef5f968f65671e6ecda8bf06ada4770d35c0b84c",
+      "client_pixels": [
+        2065,
+        1400
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    },
+    {
+      "size": "minimum",
+      "scale": "1.75",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-minimum-175.log",
+      "log_sha256": "2d6bf2f6a2747b1e0a55159979c2a05128843183bfbbf4a773643813c2422d03",
+      "client_pixels": [
+        1715,
+        1190
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    },
+    {
+      "size": "default",
+      "scale": "2",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-default-200.log",
+      "log_sha256": "4ad1a1bf8173f6c922e0f36ccf6d0e9c6f95b05358e0f31d623fd044db58ecb4",
+      "client_pixels": [
+        2360,
+        1400
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    },
+    {
+      "size": "minimum",
+      "scale": "2",
+      "exit_code": 0,
+      "log": "validation/milestone-12/probe-minimum-200.log",
+      "log_sha256": "f3a5ffef88f5f2a962fe8a4bd927f1acbf74600226fd009efaa2bfcc01ea8bae",
+      "client_pixels": [
+        1960,
+        1360
+      ],
+      "geometry": [
+        {
+          "panel": 0,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 1,
+          "content_top": 73.0,
+          "content_bottom": 339.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 2,
+          "content_top": 357.0,
+          "content_bottom": 623.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 3,
+          "content_top": 641.0,
+          "content_bottom": 907.0,
+          "content_height": 1249.0
+        },
+        {
+          "panel": 4,
+          "content_top": 925.0,
+          "content_bottom": 1191.0,
+          "content_height": 1249.0
+        }
+      ]
+    }
+  ],
+  "native_layout_and_keyboard": "pending; supported computer-use native pipe unavailable after retry/reset",
+  "m12_affected_controls_listening": "pending user report for the M12 executable",
+  "m10_appointments_listening": "pending; historical acceptance remains unchanged",
+  "remote_ci": "pending; M12 source has not been published or run in remote CI",
+  "published_windows_clone": null,
+  "source_sha256": {
+    "crates/chart-core/Cargo.toml": "31387910d8499a04921ea0939980e42bdd39f1d7571a32f07f207eda68a4dbbe",
+    "crates/chart-desktop/build.rs": "9d7db63aff17a776f5c76c0b7b245f5f823911af55e3202e9c6172bb60223887",
+    "crates/chart-desktop/Cargo.toml": "753966e777d214688a656381a15f7d70822186e68d1dfa0a738090c50d6cfc67",
+    "crates/chart-desktop/src/integrated_check.rs": "699508a10e14be3429257e646112d9929f3e7e48c558926bf221be1bdd162cdf",
+    "crates/chart-desktop/src/main.rs": "067d58cb09eeb53bc263ce342379fe070a124f4c60a3453fb2caa954871dff2c",
+    "crates/chart-desktop/ui/app.slint": "ded3611d76ea10ea4a422180389e0c7e9edf85390fea244d67fb8643866a22ca",
+    "crates/chart-desktop/ui/cover-panel.slint": "fc878ca615fef30c5fb4f835fb8ad876a606a42aecea25eff1069e1fe5ccaf6b",
+    "crates/chart-desktop/ui/notes-view.slint": "206c071938fa96e7842f1b0c9788a79f4830fce7183277243fb12119a9ecdfe8",
+    "crates/chart-desktop/ui/orders-view.slint": "d48337af4fe2202321464136484906bc508e99aba9e416d7fa63547277673c03",
+    "crates/chart-desktop/ui/results-view.slint": "2a7492a4ad564374152a46aa8316df29e3904539f54068debf4869a5a02c76af",
+    "crates/chart-core/src/cover_sheet.rs": "0d8c71728c25fab6617bfe46d3f55cf76883bc042dbe3d330c03eee473c4af9b",
+    "crates/chart-core/src/lib.rs": "1e8e9ba35cbef8c42f2da3bcd527462bba6c097c2ed95642cfc5e1b56faf8269",
+    "crates/chart-core/src/notes.rs": "08a96847ac0a1fb15b0e680b326ad8c406ebed89f508defc436380fddcb3daa2",
+    "crates/chart-core/src/orders.rs": "84cd800e8b22d07871bfab65ae5e71e8a8d533c1187e0e0b1455e59f60b49568",
+    "crates/chart-core/src/results.rs": "71fb07f3cc7b2fa391a9c7c6d3721d9db1c5832b5382016d39a79e71b785f692",
+    "crates/chart-core/tests/active_medications.rs": "5a1e36a870e7c642b12a11c492ee36efd7c8312ef460bf276c9a15999e428fdc",
+    "crates/chart-core/tests/appointments.rs": "36698364e0641d70a628c9f5a0fcb4a732ea4e45ed13082469d84d86ece207ec",
+    "crates/chart-core/tests/cover_sheet.rs": "186e0fb2627bda7dffd0315761b3337e52debcfaf525123cf3768d54cead644b",
+    "crates/chart-core/tests/notes.rs": "2e93a3576f461a17284ce7197def87225bf7a84ce087bfc349754ed5e21b12fd",
+    "crates/chart-core/tests/orders.rs": "bc1eb920b2b8630d9cc57461d840c4d4d0340b5f72fa93762c59875cc6542464",
+    "crates/chart-core/tests/results.rs": "ca0b429dd991b948d33d1339bc5c7c8bb1c0e656686dacc975eb2f1b5d9e61c0",
+    "crates/chart-core/tests/vitals.rs": "82183b458477d0181a5827c31758ae059ca79d18ba49d3dd293a07673c27fd15",
+    "crates/chart-core/tests/workflow.rs": "dda338e1935ddc37e950fdf1f9526b7637dbfb929fd9e89ea3b527335766f9f9",
+    "crates/chart-core/src/fixtures/patients.txt": "4a6b847f00a0d3dacf4eba18d562a7261eac3d3e9690b961b9d95a4212c16cd1"
+  },
+  "build_input_sha256": {
+    "Cargo.toml": "0bd568b6e3adb95eb26e8bfbeb3a2d34a4182107ab6f0a91b5e0fad0a1fd6bb0",
+    "Cargo.lock": "148635ccb084d5b5ecde4dc54886bea0e39c66bf7bfa421e75814340a9f3a98c",
+    "rust-toolchain.toml": "f715f440167e20fd8ea9afa0498c3d1ab80174cfcb8cbc895f106a34d907a1e1"
+  },
+  "source_hash_policy": "Raw LF Git-tree source bytes; current source compared after CRLF-to-LF normalization. Historical evidence remains byte-exact.",
+  "receipts_sha256": {
+    "automated.json": "97b145e61918bfa52446aa8bd881eba249dcbc7dd5a553df52ad561ae613438c",
+    "integrated.json": "5bfb0afc491bd02bb078462aad7bbec4cb4e86acaafe14ff45399b667f8aed46",
+    "clean-checkout.json": "22d8f18b4825590a023827f263f6f4e0280fc2501e4050bfb02e6d449af35908",
+    "probe-run.json": "3d376bf5f903bad5db38ef650fc779f7d0ee79e256415c9ed38d24dad9af0ebe",
+    "historical-bytes.json": "de1895f4e8d4d0fabec903d5c6af9f97784fe02b86b4531c7bb0dafb89163760",
+    "startup-handoff.md": "d98aa272807264438807c6e2a020534b44adf8e98dd30adebe4c652d3a7803eb",
+    "native-status.json": "87fb239f7b791d636a28b5d1cdbfd6754579085e099325ac413b44015c039671",
+    "ci-status.json": "a58004a1d0f5e0e98173ac6549c7883d4a9221a33daf1fae61e0fefc521af808",
+    "tooling-review.json": "39c0286ca40d7a62d2b8da32e038ec997d2f65771e5695ba3f2602276557c0c4"
+  }
+}

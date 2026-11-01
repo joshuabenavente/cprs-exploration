@@ -1,4 +1,4 @@
-"""Verify M11 evidence survives private-index staging and checkout exactly."""
+"""Verify M12 evidence survives private-index staging and checkout exactly."""
 import datetime
 import hashlib
 import json
@@ -7,7 +7,7 @@ from pathlib import Path
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / 'validation/milestone-11'
+BASE = ROOT / 'validation/milestone-12'
 
 
 def git(*args, env=None, input=None):
@@ -16,7 +16,7 @@ def git(*args, env=None, input=None):
 
 def main():
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%f')
-    local = ROOT / '.local' / ('m11-evidence-' + stamp)
+    local = ROOT / '.local' / ('m12-evidence-' + stamp)
     local.mkdir(parents=True)
     env = {**os.environ, 'GIT_INDEX_FILE': str(local / 'audit.index')}
     git('read-tree', 'HEAD', env=env)
@@ -24,7 +24,7 @@ def main():
                    if p.is_file() and p.name != 'byte-audit.json')
     git('add', '--', '.gitattributes', *paths, env=env)
     staged = {}
-    for line in git('ls-files', '-s', '--', 'validation/milestone-11', env=env).decode().splitlines():
+    for line in git('ls-files', '-s', '--', 'validation/milestone-12', env=env).decode().splitlines():
         meta, name = line.split('\t', 1)
         staged[name] = meta.split()[1]
     algorithm = git('rev-parse', '--show-object-format').decode().strip()
@@ -39,9 +39,9 @@ def main():
         verified[name] = hashlib.sha256(data).hexdigest()
     receipt = {'scope': 'Private Git index staging and fresh checkout; real index/branch unchanged',
                'passed': True, 'files_sha256': verified,
-               'limit': 'Audit excludes its own output to avoid a self-hash cycle; no M11 commit or remote clone claimed.'}
+               'limit': 'Audit excludes its own output to avoid a self-hash cycle; no M12 commit or remote clone claimed.'}
     (BASE / 'byte-audit.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
-    print(f'Exact staging/checkout bytes verified for {len(paths)} M11 evidence files')
+    print(f'Exact staging/checkout bytes verified for {len(paths)} M12 evidence files')
 
 
 if __name__ == '__main__':

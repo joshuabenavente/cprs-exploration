@@ -1,0 +1,1005 @@
+{
+  "protocol": "M12",
+  "automated_receipt_sha256": "97b145e61918bfa52446aa8bd881eba249dcbc7dd5a553df52ad561ae613438c",
+  "scope": "Mock desktop callbacks, real timers, binding ownership and widget focus probes",
+  "passed": true,
+  "executable_sha256": "21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4",
+  "log": "validation/milestone-12/integrated.log",
+  "log_sha256": "0f4e8af4a213754a80fdb58bd40373ae8afb40b0536cb2ef2a9f3b31b483fc5c",
+  "checkpoints": [
+    {
+      "name": "search-out-of-order",
+      "elapsed_ms": 872
+    },
+    {
+      "name": "commit-exact-duplicate",
+      "elapsed_ms": 1265
+    },
+    {
+      "name": "cover-close-rejects-late-detail",
+      "elapsed_ms": 1666
+    },
+    {
+      "name": "vitals-explicit-close-race",
+      "elapsed_ms": 2050
+    },
+    {
+      "name": "vitals-close-retains-row",
+      "elapsed_ms": 2076
+    },
+    {
+      "name": "vitals-error",
+      "elapsed_ms": 2485
+    },
+    {
+      "name": "vitals-retry-real-timer",
+      "elapsed_ms": 2869
+    },
+    {
+      "name": "vitals-late-error-tab",
+      "elapsed_ms": 3255
+    },
+    {
+      "name": "vitals-selector-cancel",
+      "elapsed_ms": 3643
+    },
+    {
+      "name": "medications-explicit-close-race",
+      "elapsed_ms": 4029
+    },
+    {
+      "name": "medications-close-retains-row",
+      "elapsed_ms": 4055
+    },
+    {
+      "name": "medications-error",
+      "elapsed_ms": 4480
+    },
+    {
+      "name": "medications-retry-real-timer",
+      "elapsed_ms": 4864
+    },
+    {
+      "name": "medications-late-error-tab",
+      "elapsed_ms": 5264
+    },
+    {
+      "name": "medications-selector-cancel",
+      "elapsed_ms": 5668
+    },
+    {
+      "name": "appointments-explicit-close-race",
+      "elapsed_ms": 6070
+    },
+    {
+      "name": "appointments-close-retains-row",
+      "elapsed_ms": 6095
+    },
+    {
+      "name": "appointments-error",
+      "elapsed_ms": 6532
+    },
+    {
+      "name": "appointments-retry-real-timer",
+      "elapsed_ms": 6928
+    },
+    {
+      "name": "appointments-late-error-tab",
+      "elapsed_ms": 7309
+    },
+    {
+      "name": "appointments-selector-cancel",
+      "elapsed_ms": 7704
+    },
+    {
+      "name": "notes-list-real-delay",
+      "elapsed_ms": 8698
+    },
+    {
+      "name": "notes-out-of-order",
+      "elapsed_ms": 9826
+    },
+    {
+      "name": "notes-reading-focus",
+      "elapsed_ms": 9852
+    },
+    {
+      "name": "pending-note-open-selector",
+      "elapsed_ms": 10115
+    },
+    {
+      "name": "patient-commit-before-old-note",
+      "elapsed_ms": 11015
+    },
+    {
+      "name": "vitals-same-id-new-owner",
+      "elapsed_ms": 11410
+    },
+    {
+      "name": "medications-same-id-new-owner",
+      "elapsed_ms": 11824
+    },
+    {
+      "name": "appointments-same-id-new-owner",
+      "elapsed_ms": 12242
+    },
+    {
+      "name": "new-patient-notes-list",
+      "elapsed_ms": 12535
+    },
+    {
+      "name": "same-note-id-new-owner",
+      "elapsed_ms": 12889
+    },
+    {
+      "name": "late-orders-list-after-tab-change",
+      "elapsed_ms": 13827
+    },
+    {
+      "name": "results-list-real-delay",
+      "elapsed_ms": 14817
+    },
+    {
+      "name": "reports-explicit-and-out-of-order",
+      "elapsed_ms": 15967
+    },
+    {
+      "name": "report-close-invalidates-inflight",
+      "elapsed_ms": 16312
+    },
+    {
+      "name": "empty-report-is-success",
+      "elapsed_ms": 16653
+    },
+    {
+      "name": "filter-invalidates-pending-report",
+      "elapsed_ms": 17796
+    },
+    {
+      "name": "results-list-error",
+      "elapsed_ms": 18024
+    },
+    {
+      "name": "results-list-retry-real-timer",
+      "elapsed_ms": 18253
+    },
+    {
+      "name": "late-list-error-after-recovery",
+      "elapsed_ms": 18484
+    },
+    {
+      "name": "recover-then-orders-error",
+      "elapsed_ms": 18764
+    },
+    {
+      "name": "order-selection-is-explicit",
+      "elapsed_ms": 19114
+    },
+    {
+      "name": "order-detail-retry-real-timer",
+      "elapsed_ms": 19455
+    },
+    {
+      "name": "late-order-error-after-tab-change",
+      "elapsed_ms": 19782
+    },
+    {
+      "name": "order-recovery-and-slow-list",
+      "elapsed_ms": 20728
+    },
+    {
+      "name": "pending-order-cancel-selector",
+      "elapsed_ms": 21892
+    },
+    {
+      "name": "acknowledgment-search",
+      "elapsed_ms": 22104
+    },
+    {
+      "name": "acknowledgment-required",
+      "elapsed_ms": 22137
+    },
+    {
+      "name": "acknowledgment-decline",
+      "elapsed_ms": 22179
+    },
+    {
+      "name": "acknowledgment-accept",
+      "elapsed_ms": 22553
+    },
+    {
+      "name": "denied-patient-search",
+      "elapsed_ms": 22802
+    },
+    {
+      "name": "denied-patient-keeps-chart",
+      "elapsed_ms": 22827
+    },
+    {
+      "name": "empty-patient-search",
+      "elapsed_ms": 23069
+    },
+    {
+      "name": "empty-patient-commit",
+      "elapsed_ms": 23421
+    },
+    {
+      "name": "empty-vitals",
+      "elapsed_ms": 23447
+    },
+    {
+      "name": "empty-medications",
+      "elapsed_ms": 23472
+    },
+    {
+      "name": "empty-appointments",
+      "elapsed_ms": 23498
+    },
+    {
+      "name": "empty-notes",
+      "elapsed_ms": 23721
+    },
+    {
+      "name": "empty-results",
+      "elapsed_ms": 23939
+    },
+    {
+      "name": "empty-orders",
+      "elapsed_ms": 24155
+    },
+    {
+      "name": "review-patient-search",
+      "elapsed_ms": 24366
+    },
+    {
+      "name": "review-patient-commit",
+      "elapsed_ms": 24688
+    },
+    {
+      "name": "review-results-list",
+      "elapsed_ms": 25010
+    },
+    {
+      "name": "results-cancel-focus",
+      "elapsed_ms": 25287
+    },
+    {
+      "name": "review-long-unicode-report",
+      "elapsed_ms": 25715
+    },
+    {
+      "name": "review-vitals-layout",
+      "elapsed_ms": 26110
+    },
+    {
+      "name": "review-vitals-closed",
+      "elapsed_ms": 26150
+    },
+    {
+      "name": "review-medications-layout",
+      "elapsed_ms": 26554
+    },
+    {
+      "name": "review-medications-closed",
+      "elapsed_ms": 26596
+    },
+    {
+      "name": "review-appointments-layout",
+      "elapsed_ms": 26979
+    },
+    {
+      "name": "review-appointments-closed",
+      "elapsed_ms": 27021
+    },
+    {
+      "name": "layout-problems",
+      "elapsed_ms": 27049
+    },
+    {
+      "name": "layout-allergies",
+      "elapsed_ms": 27107
+    },
+    {
+      "name": "layout-vitals",
+      "elapsed_ms": 27149
+    },
+    {
+      "name": "layout-medications",
+      "elapsed_ms": 27203
+    },
+    {
+      "name": "layout-appointments",
+      "elapsed_ms": 27246
+    },
+    {
+      "name": "reveal-appointments-view",
+      "elapsed_ms": 27289
+    },
+    {
+      "name": "reveal-medications-view",
+      "elapsed_ms": 27338
+    },
+    {
+      "name": "reveal-vitals-view",
+      "elapsed_ms": 27378
+    },
+    {
+      "name": "reveal-allergies-view",
+      "elapsed_ms": 27422
+    },
+    {
+      "name": "reveal-problems-view",
+      "elapsed_ms": 27457
+    },
+    {
+      "name": "layout-fixture-footer",
+      "elapsed_ms": 27482
+    },
+    {
+      "name": "review-final-state",
+      "elapsed_ms": 27518
+    }
+  ],
+  "deliveries": [
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 1,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 2,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "MORGAN",
+      "generation": 4,
+      "applied": true
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "M",
+      "generation": 3,
+      "applied": false
+    },
+    {
+      "operation": "chart",
+      "owner": "SYNTH-004",
+      "key": "SYNTH-004",
+      "generation": 5,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "PROB-01",
+      "generation": 3,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "ALLERGY-01",
+      "generation": 5,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "VITAL-01",
+      "generation": 7,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "VITAL-03",
+      "generation": 9,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "VITAL-03",
+      "generation": 11,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "VITAL-03",
+      "generation": 12,
+      "applied": true
+    },
+    {
+      "operation": "notes-list",
+      "owner": "SYNTH-004",
+      "key": "",
+      "generation": 4,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "VITAL-03",
+      "generation": 13,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 5,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "VITAL-01",
+      "generation": 16,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "MED-01",
+      "generation": 19,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "MED-03",
+      "generation": 21,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "MED-03",
+      "generation": 23,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "MED-03",
+      "generation": 24,
+      "applied": true
+    },
+    {
+      "operation": "notes-list",
+      "owner": "SYNTH-004",
+      "key": "",
+      "generation": 8,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "MED-03",
+      "generation": 26,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 7,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "MED-01",
+      "generation": 29,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "APPT-01",
+      "generation": 32,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "APPT-03",
+      "generation": 34,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "APPT-03",
+      "generation": 36,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "APPT-03",
+      "generation": 37,
+      "applied": true
+    },
+    {
+      "operation": "notes-list",
+      "owner": "SYNTH-004",
+      "key": "",
+      "generation": 12,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "APPT-03",
+      "generation": 39,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 9,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-004",
+      "key": "APPT-01",
+      "generation": 42,
+      "applied": false
+    },
+    {
+      "operation": "notes-list",
+      "owner": "SYNTH-004",
+      "key": "",
+      "generation": 16,
+      "applied": false
+    },
+    {
+      "operation": "notes-list",
+      "owner": "SYNTH-004",
+      "key": "",
+      "generation": 17,
+      "applied": true
+    },
+    {
+      "operation": "note-body",
+      "owner": "SYNTH-004",
+      "key": "NOTE-02",
+      "generation": 19,
+      "applied": true
+    },
+    {
+      "operation": "note-body",
+      "owner": "SYNTH-004",
+      "key": "NOTE-01",
+      "generation": 18,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 11,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "MORGAN",
+      "generation": 12,
+      "applied": true
+    },
+    {
+      "operation": "chart",
+      "owner": "SYNTH-003",
+      "key": "SYNTH-003",
+      "generation": 14,
+      "applied": true
+    },
+    {
+      "operation": "note-body",
+      "owner": "SYNTH-004",
+      "key": "NOTE-01",
+      "generation": 20,
+      "applied": false
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-003",
+      "key": "VITAL-01",
+      "generation": 48,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-003",
+      "key": "MED-01",
+      "generation": 50,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-003",
+      "key": "APPT-01",
+      "generation": 52,
+      "applied": true
+    },
+    {
+      "operation": "notes-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 22,
+      "applied": true
+    },
+    {
+      "operation": "note-body",
+      "owner": "SYNTH-003",
+      "key": "NOTE-01",
+      "generation": 26,
+      "applied": true
+    },
+    {
+      "operation": "orders-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 17,
+      "applied": false
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 18,
+      "applied": true
+    },
+    {
+      "operation": "notes-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 21,
+      "applied": false
+    },
+    {
+      "operation": "orders-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 18,
+      "applied": false
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 19,
+      "applied": true
+    },
+    {
+      "operation": "report-body",
+      "owner": "SYNTH-003",
+      "key": "REPORT-02",
+      "generation": 23,
+      "applied": true
+    },
+    {
+      "operation": "report-body",
+      "owner": "SYNTH-003",
+      "key": "REPORT-01",
+      "generation": 21,
+      "applied": false
+    },
+    {
+      "operation": "report-body",
+      "owner": "SYNTH-003",
+      "key": "REPORT-04",
+      "generation": 25,
+      "applied": false
+    },
+    {
+      "operation": "report-body",
+      "owner": "SYNTH-003",
+      "key": "REPORT-04",
+      "generation": 27,
+      "applied": true
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-003",
+      "key": "no invented match",
+      "generation": 20,
+      "applied": true
+    },
+    {
+      "operation": "report-body",
+      "owner": "SYNTH-003",
+      "key": "REPORT-01",
+      "generation": 29,
+      "applied": false
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-003",
+      "key": "no invented match",
+      "generation": 21,
+      "applied": true
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-003",
+      "key": "no invented match",
+      "generation": 22,
+      "applied": true
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-003",
+      "key": "no invented match",
+      "generation": 23,
+      "applied": false
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-003",
+      "key": "no invented match",
+      "generation": 24,
+      "applied": true
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-003",
+      "key": "no invented match",
+      "generation": 25,
+      "applied": false
+    },
+    {
+      "operation": "orders-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 21,
+      "applied": false
+    },
+    {
+      "operation": "orders-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 22,
+      "applied": true
+    },
+    {
+      "operation": "order-body",
+      "owner": "SYNTH-003",
+      "key": "ORDER-01",
+      "generation": 24,
+      "applied": true
+    },
+    {
+      "operation": "order-body",
+      "owner": "SYNTH-003",
+      "key": "ORDER-01",
+      "generation": 25,
+      "applied": true
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 28,
+      "applied": true
+    },
+    {
+      "operation": "order-body",
+      "owner": "SYNTH-003",
+      "key": "ORDER-01",
+      "generation": 26,
+      "applied": false
+    },
+    {
+      "operation": "orders-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 25,
+      "applied": false
+    },
+    {
+      "operation": "orders-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 26,
+      "applied": true
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 13,
+      "applied": false
+    },
+    {
+      "operation": "orders-list",
+      "owner": "SYNTH-003",
+      "key": "",
+      "generation": 28,
+      "applied": true
+    },
+    {
+      "operation": "order-body",
+      "owner": "SYNTH-003",
+      "key": "ORDER-01",
+      "generation": 32,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 15,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "PATEL",
+      "generation": 16,
+      "applied": true
+    },
+    {
+      "operation": "chart",
+      "owner": "SYNTH-005",
+      "key": "SYNTH-005",
+      "generation": 19,
+      "applied": true
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 17,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "RIVERA",
+      "generation": 18,
+      "applied": true
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "SYNTH-002",
+      "generation": 19,
+      "applied": true
+    },
+    {
+      "operation": "chart",
+      "owner": "SYNTH-002",
+      "key": "SYNTH-002",
+      "generation": 23,
+      "applied": true
+    },
+    {
+      "operation": "notes-list",
+      "owner": "SYNTH-002",
+      "key": "",
+      "generation": 34,
+      "applied": false
+    },
+    {
+      "operation": "notes-list",
+      "owner": "SYNTH-002",
+      "key": "",
+      "generation": 35,
+      "applied": true
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-002",
+      "key": "",
+      "generation": 37,
+      "applied": true
+    },
+    {
+      "operation": "orders-list",
+      "owner": "SYNTH-002",
+      "key": "",
+      "generation": 36,
+      "applied": true
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 20,
+      "applied": false
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "SYNTH-001",
+      "generation": 21,
+      "applied": true
+    },
+    {
+      "operation": "chart",
+      "owner": "SYNTH-001",
+      "key": "SYNTH-001",
+      "generation": 26,
+      "applied": true
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-001",
+      "key": "",
+      "generation": 42,
+      "applied": true
+    },
+    {
+      "operation": "search",
+      "owner": "",
+      "key": "",
+      "generation": 22,
+      "applied": false
+    },
+    {
+      "operation": "results-list",
+      "owner": "SYNTH-001",
+      "key": "",
+      "generation": 44,
+      "applied": true
+    },
+    {
+      "operation": "report-body",
+      "owner": "SYNTH-001",
+      "key": "REPORT-03",
+      "generation": 56,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-001",
+      "key": "VITAL-03",
+      "generation": 73,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-001",
+      "key": "MED-03",
+      "generation": 76,
+      "applied": true
+    },
+    {
+      "operation": "cover-detail",
+      "owner": "SYNTH-001",
+      "key": "APPT-03",
+      "generation": 79,
+      "applied": true
+    }
+  ],
+  "delivery_count": 92,
+  "rejected_deliveries": 38,
+  "elapsed_ms": 27566,
+  "window": {
+    "client_pixels": [
+      1180,
+      800
+    ],
+    "application_scale": 1.0
+  },
+  "limits": [
+    "No physical keys or pointer input are injected by this journey.",
+    "Binding/focus-probe checks do not establish UIA, compositor atomicity, or spoken output.",
+    "Native layout/keyboard observations and user listening results are recorded separately.",
+    "No original client, server, credentials, or clinical data is involved."
+  ]
+}

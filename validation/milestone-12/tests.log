@@ -1,0 +1,164 @@
+﻿   Compiling cprs-chart-mock v0.1.0 (C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration\crates\chart-desktop)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 16.49s
+     Running unittests src\lib.rs (target\debug\deps\chart_core-b70bb72368796bb7.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\active_medications.rs (target\debug\deps\active_medications-e2c0184be9fc169b.exe)
+
+running 9 tests
+test medications_activation_requires_current_cover_selection ... ok
+test medications_empty_list_and_error_retry_remain_distinct ... ok
+test medications_patient_switch_same_item_id_rejects_previous_owner ... ok
+test medications_and_orders_have_independent_fixtures_and_requests ... ok
+test medications_display_strings_and_details_preserve_identity_status_and_unicode ... ok
+test medications_close_reopen_rejects_stale_and_duplicate_success_and_failure ... ok
+test medications_selector_cancel_and_tab_changes_invalidate_pending_work ... ok
+test medications_wrong_patient_panel_or_item_response_fails_closed ... ok
+test medications_chart_rejects_foreign_duplicate_blank_and_missing_display_data ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\appointments.rs (target\debug\deps\appointments-7b3bcaeebb010050.exe)
+
+running 9 tests
+test appointments_activation_requires_current_cover_selection ... ok
+test appointments_patient_switch_same_item_id_rejects_previous_owner ... ok
+test appointments_and_orders_have_independent_fixtures_and_requests ... ok
+test appointments_display_strings_and_details_preserve_identity_status_and_unicode ... ok
+test appointments_empty_list_and_error_retry_remain_distinct ... ok
+test appointments_close_reopen_rejects_stale_and_duplicate_success_and_failure ... ok
+test appointments_selector_cancel_and_tab_changes_invalidate_pending_work ... ok
+test appointments_wrong_patient_panel_or_item_response_fails_closed ... ok
+test appointments_chart_rejects_foreign_duplicate_blank_and_missing_display_data ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\cover_sheet.rs (target\debug\deps\cover_sheet-37d15f11922f35d9.exe)
+
+running 9 tests
+test cs09_unicode_case_mapping_and_cjk_queries_preserve_fixture_identity ... ok
+test cs08_detail_activation_requires_a_valid_selection_and_cover_sheet ... ok
+test cs06_empty_panel_is_distinct_from_unavailable_detail_and_retry_is_explicit ... ok
+test cs07_opening_selector_clears_selection_and_details_cancel_preserves_chart ... ok
+test cs01_two_panels_and_details_belong_to_the_committed_patient ... ok
+test cs03_same_item_id_on_a_new_patient_does_not_accept_previous_details ... ok
+test cs02_closing_and_reopening_same_item_rejects_old_and_duplicate_delivery ... ok
+test cs04_wrong_patient_panel_or_item_in_detail_response_fails_closed ... ok
+test cs05_chart_commit_rejects_foreign_panel_owner_foreign_row_and_duplicate_ids ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\notes.rs (target\debug\deps\notes-556d8cc303024ea7.exe)
+
+running 12 tests
+test nt12_denied_and_unavailable_patient_records_cannot_be_requested_from_mock_provider ... ok
+test nt11_order_is_deterministic_even_when_provider_rows_are_reversed ... ok
+test nt10_read_only_unicode_long_body_and_selection_invalidation ... ok
+test nt01_duplicate_titles_select_exact_ids_and_expose_only_owned_text ... ok
+test nt09_document_owner_or_id_mismatch_fails_closed ... ok
+test nt06_empty_list_no_match_and_empty_document_are_distinct_from_errors ... ok
+test nt03_filter_clears_body_and_rejects_old_list_and_old_document ... ok
+test nt02_out_of_order_and_duplicate_note_replies_never_replace_current_selection ... ok
+test nt08_malformed_lists_reject_owner_duplicates_titles_and_unicode_dates ... ok
+test nt07_list_and_body_failures_clear_text_and_support_explicit_retry ... ok
+test nt05_tab_and_selector_cancel_invalidate_requests_while_preserving_chart ... ok
+test nt04_patient_change_rejects_same_note_id_from_previous_owner ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\orders.rs (target\debug\deps\orders-846cb932a9e2f74a.exe)
+
+running 15 tests
+test ot12_denied_and_unavailable_patient_records_cannot_be_requested_from_mock_provider ... ok
+test ot11_order_is_deterministic_even_when_provider_rows_are_reversed ... ok
+test ot09_document_owner_or_id_mismatch_fails_closed ... ok
+test ot01_duplicate_descriptions_select_exact_ids_and_expose_only_owned_text ... ok
+test ot02_out_of_order_and_duplicate_order_replies_never_replace_current_selection ... ok
+test ot10_read_only_unicode_long_detail_and_selection_invalidation ... ok
+test ot08_malformed_lists_reject_owner_duplicates_descriptions_and_unicode_dates ... ok
+test ot05_tab_and_selector_cancel_invalidate_requests_while_preserving_chart ... ok
+test ot06_empty_list_no_match_and_empty_document_are_distinct_from_errors ... ok
+test ot04_patient_change_rejects_same_order_id_from_previous_owner ... ok
+test ot07_list_and_detail_failures_clear_text_and_support_explicit_retry ... ok
+test ot15_response_rows_must_match_requested_status_and_text_filter ... ok
+test ot03_filter_clears_detail_and_rejects_old_list_and_old_document ... ok
+test ot14_selection_does_not_open_detail_and_close_retains_selection_but_invalidates_reply ... ok
+test ot13_status_filter_is_scoped_and_invalidates_old_detail_and_list ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\results.rs (target\debug\deps\results-4ed03da599965353.exe)
+
+running 15 tests
+test rt12_denied_and_unavailable_patient_records_cannot_be_requested_from_mock_provider ... ok
+test rt11_sort_order_is_deterministic_even_when_provider_rows_are_reversed ... ok
+test rt01_duplicate_descriptions_select_exact_ids_and_expose_only_owned_text ... ok
+test rt10_read_only_unicode_long_detail_and_selection_invalidation ... ok
+test rt09_document_owner_or_id_mismatch_fails_closed ... ok
+test rt07_list_and_detail_failures_clear_text_and_support_explicit_retry ... ok
+test rt02_out_of_order_and_duplicate_report_replies_never_replace_current_selection ... ok
+test rt06_empty_list_no_match_and_empty_document_are_distinct_from_errors ... ok
+test rt05_tab_and_selector_cancel_invalidate_requests_while_preserving_chart ... ok
+test rt08_malformed_lists_reject_owner_duplicates_descriptions_and_unicode_dates ... ok
+test rt04_patient_change_rejects_same_report_id_from_previous_owner ... ok
+test rt03_filter_clears_detail_and_rejects_old_list_and_old_document ... ok
+test rt14_response_rows_must_match_requested_text_filter ... ok
+test rt13_selection_does_not_open_detail_and_close_retains_selection_but_invalidates_reply ... ok
+test rt15_ids_and_single_report_metadata_are_bounded ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\vitals.rs (target\debug\deps\vitals-976651fd48103528.exe)
+
+running 8 tests
+test vitals_activation_requires_current_cover_selection ... ok
+test vitals_empty_list_and_error_retry_remain_distinct ... ok
+test vitals_display_strings_and_details_preserve_identity_units_date_and_unicode ... ok
+test vitals_patient_switch_same_item_id_rejects_previous_owner ... ok
+test vitals_close_reopen_rejects_stale_and_duplicate_success_and_failure ... ok
+test vitals_selector_cancel_and_tab_changes_invalidate_pending_work ... ok
+test vitals_wrong_patient_panel_or_item_response_fails_closed ... ok
+test vitals_chart_rejects_foreign_duplicate_blank_and_missing_display_data ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\workflow.rs (target\debug\deps\workflow-c3325c16b19b1437.exe)
+
+running 19 tests
+test ps06_unavailable_provider_is_not_an_empty_result ... ok
+test cancel_and_reopen_rejects_old_search_generation ... ok
+test demo_roster_is_a_fixture_filter_and_does_not_override_access ... ok
+test ps05_successful_zero_rows_is_empty ... ok
+test ps07_malformed_fixture_rows_fail_closed ... ok
+test ps04_stale_search_and_duplicate_delivery_are_ignored ... ok
+test ps03_editing_query_invalidates_selection_and_acknowledgment ... ok
+test ps01_opening_selector_keeps_committed_chart_identity ... ok
+test failed_chart_load_preserves_previous_header_and_view ... ok
+test ps08_paging_carries_explicit_scoped_cursor_and_direction ... ok
+test ps10_no_valid_selected_identifier_cannot_open_a_chart ... ok
+test ps02_duplicate_names_resolve_to_exact_id_and_demographics ... ok
+test ps09_cancel_rejects_pending_chart_and_preserves_previous_chart ... ok
+test mismatched_chart_identity_is_rejected_atomically ... ok
+test queued_row_selection_cannot_dismiss_an_access_prompt ... ok
+test ps16_implemented_tabs_require_an_active_chart ... ok
+test ps14_late_old_patient_data_cannot_replace_new_chart ... ok
+test ps11_denied_and_unavailable_access_preserve_active_chart ... ok
+test ps12_access_and_deceased_flags_require_explicit_acknowledgment ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\main.rs (target\debug\deps\cprs_chart_mock-ddb7dda1bc6c805f.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests chart_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

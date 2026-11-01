@@ -1,4 +1,4 @@
-"""Bind M11 automation to source, logs and preserved history; keep acceptance open."""
+"""Bind M12 automation to source, logs and preserved history; keep acceptance open."""
 import hashlib
 import json
 from pathlib import Path
@@ -7,7 +7,7 @@ import subprocess
 from verify_integrated import REQUIRED, require
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / 'validation/milestone-11'
+BASE = ROOT / 'validation/milestone-12'
 
 
 def digest(path):
@@ -22,12 +22,20 @@ def main():
     auto, integrated, clean, probes = [read(n) for n in
                                       ('automated.json', 'integrated.json', 'clean-checkout.json', 'probe-run.json')]
     native, ci, tooling = [read(n) for n in ('native-status.json', 'ci-status.json', 'tooling-review.json')]
-    require(all(c['passed'] for c in tooling['checks']), 'Historical output guard failed')
+    require(all(r['protocol'] == 'M12' for r in (auto, integrated, clean, probes, native, ci, tooling)), 'Receipt belongs to another protocol')
+    require(tooling['passed'] and tooling['checks'] and all(c['passed'] for c in tooling['checks']), 'Protocol test failed')
+    require(digest(ROOT / tooling['log']) == tooling['log_sha256'], 'Protocol test log changed')
+    for name, expected in tooling['source_sha256'].items():
+        require(hashlib.sha256((ROOT / name).read_bytes().replace(b'\r\n', b'\n')).hexdigest() == expected, 'Protocol tests are stale: ' + name)
     workflow = (ROOT / '.github/workflows/mock-checks.yml').read_bytes().replace(b'\r\n', b'\n')
     require(hashlib.sha256(workflow).hexdigest() == ci['workflow_sha256'], 'CI status belongs to another workflow')
     binary = digest(ROOT / auto['executable'])
+    require(native['executable_sha256'] == binary, 'Native/listening status belongs to another executable')
     require(auto['passed'] and integrated['passed'] and clean['passed'], 'Required code/build receipt failed')
     require(binary == auto['executable_sha256'] == integrated['executable_sha256'] == probes['executable_sha256'], 'Executable changed')
+    require(digest(BASE / 'automated.json') == integrated['automated_receipt_sha256'], 'Automated receipt changed after journey verification')
+    for check in auto['checks']:
+        require(check['passed'] and digest(ROOT / check['log']) == check['log_sha256'], 'Step log changed: ' + check['name'])
     require(len(REQUIRED) == 83 and {c['name'] for c in integrated['checkpoints']} == REQUIRED, 'Wrong journey version')
     require(integrated['delivery_count'] == 92 and integrated['rejected_deliveries'] == 38, 'Delivery baseline changed')
     require(digest(ROOT / integrated['log']) == integrated['log_sha256'], 'Integrated log changed')
@@ -79,10 +87,10 @@ def main():
         path = ROOT / sample['log']
         require(sample['exit_code'] == 0 and digest(path) == sample['log_sha256'], 'Failed/changed probe log')
         log = path.read_text(encoding='utf-8-sig')
-        checks = re.findall(r'^M11_CHECK ([a-z-]+) PASS elapsed_ms=\d+\s*$', log, re.M)
-        require(len(checks) == len(REQUIRED) and set(checks) == REQUIRED and 'M11_INTEGRATED_FAIL' not in log, 'Incomplete probe journey')
-        require(f'M11_INTEGRATED_PASS cases={len(REQUIRED)} deliveries=92 rejected=38' in log, 'Probe summary changed')
-        rows = re.findall(r'^M11_LAYOUT panel=(\d) top=([\d.-]+) bottom=([\d.-]+) table_bottom=([\d.-]+) view_top=([\d.-]+) help_bottom=([\d.-]+) viewport_top=([\d.-]+) viewport_bottom=([\d.-]+) content_height=([\d.-]+) scroll_y=([\d.-]+)\s*$', log, re.M)
+        checks = re.findall(r'^M12_CHECK ([a-z-]+) PASS elapsed_ms=\d+\s*$', log, re.M)
+        require(len(checks) == len(REQUIRED) and set(checks) == REQUIRED and 'M12_INTEGRATED_FAIL' not in log, 'Incomplete probe journey')
+        require(f'M12_INTEGRATED_PASS cases={len(REQUIRED)} deliveries=92 rejected=38' in log, 'Probe summary changed')
+        rows = re.findall(r'^M12_LAYOUT panel=(\d) top=([\d.-]+) bottom=([\d.-]+) table_bottom=([\d.-]+) view_top=([\d.-]+) help_bottom=([\d.-]+) viewport_top=([\d.-]+) viewport_bottom=([\d.-]+) content_height=([\d.-]+) scroll_y=([\d.-]+)\s*$', log, re.M)
         require(len(rows) == 5 and {int(r[0]) for r in rows} == set(range(5)), 'Missing panel geometry')
         geometry = []
         for row in rows:
@@ -94,7 +102,7 @@ def main():
         require(geometry[0]['content_top'] == geometry[1]['content_top'], 'Top row changed')
         for before, after in zip(geometry[1:], geometry[2:]):
             require(after['content_top'] > before['content_bottom'], 'Panel cards overlap')
-        windows = re.findall(r'^M11_WINDOW client_width_px=(\d+) client_height_px=(\d+) application_scale=([0-9.]+)\s*$', log, re.M)
+        windows = re.findall(r'^M12_WINDOW client_width_px=(\d+) client_height_px=(\d+) application_scale=([0-9.]+)\s*$', log, re.M)
         require(len(windows) == 1, 'Missing window geometry')
         width, height, scale = windows[0]
         logical = (980, 680) if sample['size'] == 'minimum' else (1180, 700 if float(scale) == 2 else 800)
@@ -103,14 +111,15 @@ def main():
     # This receipt intentionally cannot promote unavailable native/listening/CI
     # evidence into acceptance. Future native review needs its own bound receipt.
     receipt = {
-        'scope': 'M11 local code/build/timer/geometry checkpoint; separate native/listening/remote CI statuses below',
+        'protocol': 'M12',
+        'scope': 'M12 local code/build/timer/geometry checkpoint; separate native/listening/remote CI statuses below',
         'local_automated_checkpoint_passed': True, 'milestone_acceptance_complete': False,
         'executable_sha256': binary, 'core_tests': 96, 'timed_checkpoints': len(REQUIRED),
         'actual_deliveries': 92, 'rejected_stale_deliveries': 38,
         'historical_worktree_and_git_files_verified': len(history['files']),
         'clean_windows_tree_passed': True, 'probe_samples': observations,
-        'native_layout_and_keyboard': 'pending; computer-use native pipe unavailable after retry/reset',
-        'm11_affected_controls_listening': native['m11_listening'],
+        'native_layout_and_keyboard': native['status'],
+        'm12_affected_controls_listening': native['m12_listening'],
         'm10_appointments_listening': 'pending; historical acceptance remains unchanged',
         'remote_ci': ci['status'],
         'published_windows_clone': None if published is None else {'passed': published['passed'], 'commit': published['commit']},
@@ -122,7 +131,7 @@ def main():
     if published is not None:
         receipt['receipts_sha256']['published-clone.json'] = digest(BASE / 'published-clone.json')
     (BASE / 'acceptance.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
-    print(f"M11 local automated checkpoint passed; listening={native['m11_listening']}; CI={ci['status']}; native review remains open")
+    print(f"M12 local automated checkpoint passed; listening={native['m12_listening']}; CI={ci['status']}; native review remains open")
 
 
 if __name__ == '__main__':

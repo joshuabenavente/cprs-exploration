@@ -1420,7 +1420,7 @@ fn journey() -> VecDeque<Step> {
                     g.table_bottom <= g.view_top && g.help_bottom <= g.bottom,
                     "panel controls overlap or escape card"
                 );
-                println!("M11_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
+                println!("M12_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
                 Ok(())
             },
         ));
@@ -1562,12 +1562,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M11_DELIVERY {} {} {:?} generation={} applied={}",
+                "M12_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M11_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M12_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -1576,17 +1576,17 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M11_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M12_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
             );
         }
         if driver.keep_open {
-            println!("M11_REVIEW_READY SYNTH-001 CoverSheet APPT-03; close the mock to exit.");
+            println!("M12_REVIEW_READY SYNTH-001 CoverSheet APPT-03; close the mock to exit.");
         }
     } else if let Err(error) = &result {
-        eprintln!("M11_INTEGRATED_FAIL {error}");
+        eprintln!("M12_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -1637,7 +1637,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M11_CHECK {} PASS elapsed_ms={}",
+            "M12_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );

@@ -1,63 +1,42 @@
-# Current handoff: CPRS Chart Rust recreation
+# CPRS Chart recreation: current handoff
 
-Updated 31 October 2026. **Milestone 11 is published; native acceptance remains open.** Read [M11 results and remaining checks](milestone-11.md). Native layout/keyboard review is unavailable in this session because the supported computer-use native pipe cannot connect. M11 affected-controls listening is a user-reported pass on the identified final build (reply: "checks pass"). M10 Appointments listening remains pending. Windows desktop code/build and Ubuntu core PR CI passed on implementation `10f21c4`; the fresh published Windows clone also passed. Receipts preserve the actual outcomes. Do not mark either milestone fully accepted or reuse M10 native results as M11 evidence.
+Updated 31 October 2026 (Mountain time). **M12 separates current evidence from the preserved M11 record. Native acceptance and listening remain open.** Read [M12 protocol and checklists](milestone-12.md) and the actual [M12 checkpoint receipt](../validation/milestone-12/acceptance.json) before claiming completion.
 
-## Checkout and preserved baseline
+## Starting point and scope
 
-- Workspace: `C:\Users\soapo\Documents\AI-Work\projects\cprs-exploration`.
-- Current branch: `main`, tracking `origin/main`; GitHub default and `origin/HEAD` are now `main`. The user authorized all four consolidation steps; latest published-head Windows/Ubuntu CI passed before promotion. All eight obsolete local branches and the old remote M10 branch were pruned only after verifying ancestry. All seven tags and all 718 previously tracked evidence files were preserved. See [main consolidation receipt](../validation/milestone-11/main-consolidation.json).
-- Historical implementation branch: `codex/milestone-11-hardening`, created from clean handoff commit `da4298807b9e24017352bd247f382315cc4c8d9d` on `codex/milestone-10-appointments`. The user authorized commit, push, merge and pruning on 31 October 2026. Implementation `10f21c4` was merged through [PR #1](https://github.com/joshuabenavente/cprs-exploration/pull/1) in `be30bcd` into the then-default `codex/milestone-10-appointments`. That history is now consolidated on `main`; the old branch names remain provenance only. M11 publication and subsequent main-consolidation receipts preserve each delivery checkpoint.
-- Public remote: `https://github.com/joshuabenavente/cprs-exploration.git`, named `origin`; default branch is `main`. The user requested public publication, and public visibility was verified through an unauthenticated GitHub API request. Historical private-clone/publication receipts describe their original checkpoints.
-- [Incoming handoff](../validation/milestone-11/startup-handoff.md) and [startup manifest](../validation/milestone-11/historical-bytes.json) preserve 686 tracked historical analysis/validation files. Verify both worktree SHA256 and baseline Git blob identity. The pre-existing 167 CRLF-only Git/worktree differences are intentional historical conventions, not modified evidence.
-- No running mock was found at startup. Matrix checks launch and close their own synthetic windows; recheck processes before rebuilding. No original CPRS process was launched.
+- Local branch: `work/m12-evidence-and-native-review`, created from `main` at `d040c2e78b6103284c021d1025d194c9e91fa832`. PR #3 merged `9ef0647` and silent-log fix `6a01c99`; that review branch was pruned locally/remotely. M12 publication and remote CI remain separate pending work.
+- The user approved an M12 path/protocol, fresh evidence and attempting the native matrix plus outstanding listening checks. No domain feature is added.
+- Runtime remains a Rust/Slint native mock with nine compiled invented patients, five Cover Sheet panels, Notes, Orders and Results. No live transport/server/RPC, credentials, clinical data/imports, original CPRS execution, VistA/DLL work, clinical writes or cross-project functionality.
+- [Incoming handoff](../validation/milestone-12/startup-handoff.md) and [startup manifest](../validation/milestone-12/historical-bytes.json) preserve all 719 previously tracked analysis/validation files, including M11. Workstation SHA256 and baseline Git blob identity are separate checks; pre-existing CRLF normalization is historical, not permission to rewrite evidence.
 
-## Milestone 11 implementation
+## Current validation
 
-The Cover Sheet uses `cover-layout.min-height + surrounding padding`, bounded below by the viewport. Panel minima derive from headings, table, View/help, gaps and padding; the fixture footer participates in the layout. No manually maintained replacement total is used. Problem List/Allergies share the top row; Vitals, Active Medications and Appointments stay full-width. Selector and browser sizing policies are separate.
+The active runner accepts **only `-Milestone 12`** (the default), writes `validation/milestone-12/`, and uses `M12_*` journey logs. CI artifact paths, integrated/hardening verifiers, clean checkout, geometry probes and native review launcher moved together. New M12 evidence has byte-preserving Git attributes. Do not use historical writers to regenerate M2–11 receipts.
 
-Reveal uses actual control coordinates and clamps scroll bounds. Captured Tab key release handles entry into Fluent's private table focus scope; View focus reveals its button/help. Empty panels now expose a synthetic-owner/emptiness accessible group description. Compilation and geometry probes pass; actual native Tab/return still needs full review; speech is covered only by the separate user-reported M11 listening pass.
+The journey has 83 checkpoints, 92 actual deliveries and 38 rejected stale replies. Ten panel layout/reveal checks dispatch synthetic Slint Tab/Shift+Tab events after scrolling their target out of view; the footer check is separate. `review-final-state` restores Problems/Allergies to no selection and Vitals/Medications/Appointments to VITAL-03/MED-03/APPT-03, with detail closed. The generic Cover Sheet probe does not establish table focus.
 
-The normal runtime/core/provider remain mock-only. All nine invented fixtures, literal dates/values, explicit Cover Sheet activation, pending/committed ownership and stale/duplicate response rejection remain in place. Notes still loads selection automatically; Orders/Results still require explicit opening. No new domain panel, Consults implementation or static recovery was added.
-
-Rust 1.99.1 with rustfmt/Clippy is pinned. The workflow adds Windows desktop code/build and Ubuntu core checks; hosted checks omit desktop callbacks/timers and speech. The runner accepts only M11 and emits `M11_*` logs to M11 paths. New `Review-CoverSheet.ps1` binds review to the tested M11 executable. The M10 Appointments launcher now refuses a different executable before writing old paths.
-
-## Validation and reproduction
+Every step log, including silent formatting, is hashed. The integrated receipt also hashes the automated receipt. Seven temporary-tree validation-tool tests cover M11 rejection, output isolation, silent logs, failed-run cleanup and receipt/log rejection. Their synthetic Cargo/parser fixtures are separate from the 96 core tests and actual desktop journey.
 
 ```powershell
 .\scripts\Test-MockChart.ps1
-$ChartPython = 'C:\Users\soapo\AppData\Local\Python\pythoncore-3.14-64\python.exe'
-& $ChartPython scripts\verify_integrated.py
+python scripts\verify_integrated.py
+python scripts\test_validation_protocol.py
 .\scripts\Test-CoverSheetLayout.ps1
-& $ChartPython scripts\check_clean_checkout.py
-& $ChartPython scripts\verify_hardening.py
-& $ChartPython scripts\audit_m11_bytes.py
+python scripts\check_clean_checkout.py
+python scripts\verify_hardening.py
+python scripts\audit_m12_bytes.py
 ```
 
-Close the mock before building. The default runner uses cached locked/offline dependencies. For initial bootstrap or code-only checks, use `Test-MockChart.ps1 -CodeOnly -Bootstrap`: `fetch --locked` is separate from later offline checks. Logs declare UTF-8. Native stderr from Cargo is retained; actual exit codes determine success.
+The full runner is cached/offline. `-CodeOnly -Bootstrap` separates initial locked dependency fetch from offline code/build checks and skips desktop callbacks/timers. The clean checker exports a private-index Git tree with `core.autocrlf=false` and `core.longpaths=true`, verifies historical blobs, excludes ignored originals/tools, and uses an empty target; registry caches can be reused. The ten-sample matrix repeats default/minimum sizes at 100%, 125%, 150%, 175% and 200%. These are synthetic dispatch/binding/geometry checks, not native input or visual review. Read the receipts for actual outcomes.
 
-Formatting, warning-denied Clippy, 96 core tests, desktop build, immediate callback smoke and the 82-checkpoint real-timer journey pass on the current executable. The prior 71 checkpoints remain; eleven new heading/table/card, reverse View/help and footer geometry checks add no provider deliveries. The journey retains 92 deliveries / 38 stale replies rejected. All ten geometry probe samples and the corrected fresh Windows checkout/build also pass. Status is recorded in [M11 acceptance](../validation/milestone-11/acceptance.json); consult its actual receipts before claiming completion.
+Local M12 results passed: all six runner steps, 96 core tests, the 83-checkpoint journey, all ten probe samples, seven validation-tool tests and the fresh checkout/build. The latter verified 719 historical blobs and retained the 167 legacy CRLF-only differences. Five deliberate receipt/source/build-binding mismatches were rejected and restored; see [rejection checks](../validation/milestone-12/receipt-rejections.json).
 
-The clean checkout checker exports the current uncommitted Git tree through a private index with explicit `core.autocrlf=false`, uses an empty target, verifies historical blobs and excludes ignored specimens/tools/caches. Existing Cargo registry data may be reused. The initial snapshot check is separate from the later published private-remote clone check in `published-clone.json`; the latter passed against implementation commit `10f21c4`. The first attempt passed code/build but failed receipt hashing under Windows PowerShell; `clean-attempt-1.*` preserves that failure. The corrected runner uses .NET SHA256 without module auto-loading.
+## Native and listening work
 
-New M11 receipts have byte-preserving Git attributes and a separate private-index staging/checkout audit. No historical receipts should be regenerated with the new executable. Do not use `verify_appointments_checkpoint.py` for M11.
+The supported computer-use helper failed `list_windows`, a retry after two seconds, and a reset/reinitialization attempt with: `Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)`. [Native status](../validation/milestone-12/native-status.json) records all attempts and the current executable. No native capture, keyboard or visual pass follows from the synthetic matrix.
 
-## Post-M11 review fixes (branch `review/m11-validation-fixes`)
+After restoring the supported helper, run `.\scripts\Review-CoverSheet.ps1 -Matrix`. The launcher binds review to the M12 receipt/executable and writes only M12 output. Review all five panels, upper/middle/lower content, footer/fixed frame, forward/reverse Tab, arrows, explicit activation, initial reading focus, Escape return, Ctrl+O cancellation, resize repetition, Unicode/empty panels and read-only selection/scrolling at every supported size/scale. Record native input, settled UIA, focus probes and speech separately.
 
-A read-only review of `b774e9b` found validation gaps, not runtime defects. This branch changes test/validation code only; **no committed receipt was regenerated**, so `validation/milestone-11/` still describes the `10f21c4` executable and its 82-checkpoint journey. Fresh evidence for this branch needs a separate protocol decision (for example an M12 path) before running `Test-MockChart.ps1` here, because the runner writes into `validation/milestone-11/`.
+Current executable SHA256: `21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4`; confirm it against `automated.json`. Use the [M12 listening checklist](milestone-12.md#current-build-listening-checklist) for a user report. The historical M11 listening pass stays scoped to SHA256 `1673037d3f1e90b671cbf910ebc53fcee08971ba997160d2275e3fbe1ccdfdd8`. M10 Appointments listening still requires its own report on SHA256 `de217b49353b923172e62f7500eb20322aecec2cc0aa7c275d8c764e2d2288fd` and the [historical checklist](milestone-10.md#separate-appointments-listening-checklist). Do not backdate a current-build report.
 
-- The layout and reveal-View checkpoints now move focus with dispatched Slint Tab/Shift+Tab events after scrolling the target out of view, so they fail if the Tab-release or View-focus reveal handlers are removed. They previously called `reveal` directly. This is synthetic window dispatch, not native OS input.
-- New checkpoint `review-final-state` restores the review selections that the layout probes disturbed (journey: 83 checkpoints; deliveries unchanged at 92/38).
-- `Test-MockChart.ps1` deletes this mode's receipt and step logs before running, creates an empty log for successful silent steps such as formatting, and records each step log's SHA-256. The verifiers reject changed step logs, CI runs for a different commit, and `crates/` file-set drift since the clean checkout.
-- Clean-checkout and byte-audit checkouts enable `core.longpaths`; Python reads use extended-length paths.
-
-The longest tracked path is 147 characters. For a manual Windows clone, use a short base path or `git clone -c core.longpaths=true …`.
-
-## Remaining work
-
-1. Restore the supported computer-use helper and run `Review-CoverSheet.ps1 -Matrix`. The exact availability failure is in [native status](../validation/milestone-11/native-status.json). Inspect all five panels, upper/middle/lower content and fixed frame at default/minimum sizes, 100%, 125%, 150%, 175% and 200%. Native forward/reverse Tab, arrows, explicit activation, initial reading focus, Escape return, Ctrl+O cancellation, resize repetition, Unicode/empty panels and read-only scrolling/selection remain required.
-2. The user reported the separate final-build [M11 affected-controls listening checklist](milestone-11.md#separate-m11-affected-controls-listening-checklist) passed (reply: "checks pass"); keep that user-reported evidence scoped to this build. Retain M10's [separate Appointments listening status](milestone-10.md#separate-appointments-listening-checklist) as pending until an actual scoped report is received. Later-build results must not be backdated.
-3. Publication/merge/prune and consolidation onto `main` are complete. Consult PR #1 and `publication.json` for the merge/prune record, and `ci-status.json` for passing push/PR CI outcomes on implementation `10f21c4`. The published Windows clone passed formatting, warning-denied Clippy, all tests and desktop compilation without ignored originals/tools. Publication does not establish native acceptance.
-
-Current ignored executable SHA256: `1673037d3f1e90b671cbf910ebc53fcee08971ba997160d2275e3fbe1ccdfdd8`. Review starts SYNTH-001 / Cover Sheet / APPT-03 selected, detail closed. Default is 1180x800 logical, minimum 980x680, compact 200% default 1180x700. Process-local scale overrides do not establish monitor-DPI transition behavior.
-
-Keep callback/focus probes, native input, settled UIA, compositor observations and user speech reports distinct. No full accessibility, physical IME/dead-key, monitor-DPI transition, original-client parity or clinical-compatibility claim is supported. No live transport/server, credentials, clinical data/imports, VistA implementation, DLL internals, prescribing/order entry, signing, printing, interpretation, scheduling actions, encounter changes, reminders, capacity calculations or cross-project functionality. A future read-only slice remains a separate decision after this hardening checkpoint.
+M12 remains a local automated checkpoint while native/listening, remote CI and published-clone work are pending. Complete supported native review and scoped listening reports before another domain slice. No full accessibility, physical IME/dead-key, monitor-DPI transition, original-client parity or clinical-compatibility claim is supported.

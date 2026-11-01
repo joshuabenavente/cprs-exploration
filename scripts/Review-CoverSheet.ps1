@@ -8,8 +8,8 @@ $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'Get-MockFileSha256.ps1')
 $reviewRoot = Split-Path -Parent $PSScriptRoot
 $reviewBinary = Join-Path $reviewRoot 'target/debug/cprs-chart-mock.exe'
-$reviewReceipt = Get-Content -LiteralPath (Join-Path $reviewRoot 'validation/milestone-11/automated.json') -Raw | ConvertFrom-Json
-if (-not $reviewReceipt.passed -or (Get-MockFileSha256 -LiteralPath $reviewBinary) -ne $reviewReceipt.executable_sha256) {
+$reviewReceipt = Get-Content -LiteralPath (Join-Path $reviewRoot 'validation/milestone-12/automated.json') -Raw | ConvertFrom-Json
+if ($reviewReceipt.protocol -ne 'M12' -or -not $reviewReceipt.passed -or (Get-MockFileSha256 -LiteralPath $reviewBinary) -ne $reviewReceipt.executable_sha256) {
     throw 'Run Test-MockChart.ps1 successfully against this executable before native review.'
 }
 if ($Matrix) {
@@ -28,7 +28,7 @@ if (Get-Process -Name 'cprs-chart-mock' -ErrorAction SilentlyContinue | Where-Ob
     throw 'Close the current mock window before starting another layout sample.'
 }
 $percent = [int]([double]::Parse($ScaleFactor, [Globalization.CultureInfo]::InvariantCulture) * 100)
-$log = Join-Path $root "validation/milestone-11/layout-$Size-$percent.log"
+$log = Join-Path $root "validation/milestone-12/layout-$Size-$percent.log"
 $options = @{ IntegratedReview = $true; ScaleFactor = $ScaleFactor; MinimumSize = ($Size -eq 'minimum') }
 & (Join-Path $PSScriptRoot 'Start-MockChart.ps1') @options *> $log
 if ($LASTEXITCODE -ne 0) { throw "Native review failed. Inspect $log" }

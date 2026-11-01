@@ -1,11 +1,11 @@
-"""Verify Milestone 11's real-timer log and bind its receipt to the tested mock."""
+"""Verify Milestone 12's real-timer log and bind its receipt to the tested mock."""
 import hashlib
 import json
 from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / 'validation/milestone-11'
+BASE = ROOT / 'validation/milestone-12'
 REQUIRED = {
     'layout-problems', 'layout-allergies', 'layout-vitals', 'layout-medications', 'layout-appointments',
     'reveal-appointments-view', 'reveal-medications-view', 'reveal-vitals-view', 'reveal-allergies-view', 'reveal-problems-view', 'layout-fixture-footer',
@@ -49,9 +49,13 @@ def require(condition, message):
 
 def main():
     automated = json.loads((BASE / 'automated.json').read_text(encoding='utf-8-sig'))
+    require(automated['protocol'] == 'M12', 'Automated receipt belongs to another protocol')
     require(automated['passed'], 'Automated checks did not pass')
-    require({c['name'] for c in automated['checks'] if c['passed']} ==
-            {'format', 'clippy', 'tests', 'build', 'callbacks', 'integrated'}, 'Missing automated check')
+    expected = {'format', 'clippy', 'tests', 'build', 'callbacks', 'integrated'}
+    if automated.get('dependency_bootstrap_requested'):
+        expected.add('bootstrap')
+    require(len(automated['checks']) == len(expected) and
+            {c['name'] for c in automated['checks'] if c['passed']} == expected, 'Missing or duplicate automated check')
     for check in automated['checks']:
         # Step logs are rewritten in place by later runs; trust only the bytes
         # this receipt recorded.
@@ -62,26 +66,28 @@ def main():
     require(digest == automated['executable_sha256'], 'Executable differs from automated receipt')
     path = BASE / 'integrated.log'
     log = path.read_text(encoding='utf-8-sig')
-    require('M11_INTEGRATED_FAIL' not in log, 'Journey failure recorded')
-    checks = re.findall(r'^M11_CHECK ([a-z-]+) PASS elapsed_ms=(\d+)\s*$', log, re.M)
+    require('M12_INTEGRATED_FAIL' not in log, 'Journey failure recorded')
+    checks = re.findall(r'^M12_CHECK ([a-z-]+) PASS elapsed_ms=(\d+)\s*$', log, re.M)
     require(len(checks) == len(REQUIRED) and {c[0] for c in checks} == REQUIRED,
             'Missing or duplicate journey checkpoints')
-    summary = re.findall(r'^M11_INTEGRATED_PASS cases=(\d+) deliveries=(\d+) rejected=(\d+) elapsed_ms=(\d+)\s*$', log, re.M)
+    summary = re.findall(r'^M12_INTEGRATED_PASS cases=(\d+) deliveries=(\d+) rejected=(\d+) elapsed_ms=(\d+)\s*$', log, re.M)
     require(len(summary) == 1, 'Expected one completed journey')
     count, total, rejected, elapsed = map(int, summary[0])
     require(count == len(checks), 'Checkpoint count mismatch')
     deliveries = []
     for operation, owner, key, generation, applied in re.findall(
-            r'^M11_DELIVERY (\S+) (.*?) (".*") generation=(\d+) applied=(true|false)\s*$', log, re.M):
+            r'^M12_DELIVERY (\S+) (.*?) (".*") generation=(\d+) applied=(true|false)\s*$', log, re.M):
         require(owner == '' or re.fullmatch(r'SYNTH-\d{3}', owner), 'Unexpected delivery owner')
         deliveries.append({'operation': operation, 'owner': owner, 'key': json.loads(key),
                            'generation': int(generation), 'applied': applied == 'true'})
     require(total == len(deliveries) and rejected == sum(not d['applied'] for d in deliveries)
             and rejected > 0, 'Delivery audit count mismatch')
-    windows = re.findall(r'^M11_WINDOW client_width_px=(\d+) client_height_px=(\d+) application_scale=([0-9.]+)\s*$', log, re.M)
+    windows = re.findall(r'^M12_WINDOW client_width_px=(\d+) client_height_px=(\d+) application_scale=([0-9.]+)\s*$', log, re.M)
     require(len(windows) == 1, 'Missing final window observation')
     width, height, scale = windows[0]
     receipt = {
+        'protocol': 'M12',
+        'automated_receipt_sha256': hashlib.sha256((BASE / 'automated.json').read_bytes()).hexdigest(),
         'scope': 'Mock desktop callbacks, real timers, binding ownership and widget focus probes',
         'passed': True, 'executable_sha256': digest,
         'log': path.relative_to(ROOT).as_posix(), 'log_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
