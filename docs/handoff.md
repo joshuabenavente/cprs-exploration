@@ -1,5 +1,17 @@
 # CPRS Chart recreation: current handoff
 
+Current acceptance update: the user reported **“all pass”** for the supplied ten-
+combination visual/keyboard and Narrator checklist. The
+[raw report](../validation/milestone-16/windows/user-acceptance.json) is retained.
+The subsequent Windows EXE SHA256 is `a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3`,
+which exactly matches the historical M12 acceptance record. See the
+[build-binding review](../validation/milestone-16/windows/build-binding-review.json).
+M16 applicability is unresolved; do not promote current-build acceptance yet.
+Exact next action: obtain Windows Git HEAD and current M16 automated receipt
+protocol/pass/executable hash fields, then verify or rebuild the intended M16
+source and reconcile the report. No independent Windows or speech rerun occurred.
+All original receipts and checklists remain unchanged.
+
 M16 [patient-search page integrity](milestone-16.md) is merged in
 [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11) after both
 portable-core and Windows code/build CI passed on final head `34019be9aa7a867f9d4d3022c125e26e704db73e`.
@@ -17,9 +29,10 @@ scale samples passed and 2,517 startup evidence files remain unchanged.
 The new source-bound [acceptance checkpoint](../validation/milestone-16/acceptance.json)
 retains its capture-time limits. Later delivery records do not rewrite it.
 
-Exact next action: a fresh M16 Windows matrix and the
-[combined native/listening checklist](../validation/milestone-16/native-checklist.md).
-Current native Windows/keyboard/Narrator observations remain not run. The combined
+At the original delivery checkpoint, the fresh M16 Windows matrix and
+[combined native/listening checklist](../validation/milestone-16/native-checklist.md)
+were not run. The supplemental user report above supersedes that current status;
+the original raw receipts retain their capture-time values. The combined
 checklist covers current Notes/Orders/Results filters and selection; it cannot
 retroactively accept historical builds. Linux virtual displays and hosted builds
 are separate evidence. M16 tools are validate_m16.py, verify_m16.py /

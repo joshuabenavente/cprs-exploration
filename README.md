@@ -9,8 +9,9 @@ is merged after final-head portable/Windows code-build CI passed; its topic bran
 is pruned. See the [project overview after M16](docs/project-overview-m16.md),
 [handoff](docs/handoff.md), [M16 milestone](docs/milestone-16.md),
 [traceability](docs/traceability-2026-11-01.md) and
-[standing delivery authorization](docs/delivery-workflow.md). Fresh current-build
-native Windows/keyboard/Narrator acceptance remains pending. The
+[standing delivery authorization](docs/delivery-workflow.md). The user reports passing ten native visual/keyboard and Narrator samples; the
+supplied executable hash matches historical M12, so M16 build binding remains
+unresolved. The
 [published reverse-engineering folder](reverse-engineering/README.md) is retained.
 Original reference binaries/Ghidra database are excluded.
 

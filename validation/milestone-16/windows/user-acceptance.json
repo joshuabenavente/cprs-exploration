@@ -1,0 +1,97 @@
+{
+  "protocol": "M16",
+  "scope": "Supplemental current-build user-reported native visual/keyboard and Narrator acceptance; original receipts retain capture-time status",
+  "recorded_at_utc": "2026-11-01T21:54:44.530405+00:00",
+  "verbatim_report": "all pass",
+  "scope_basis": "Reply to the immediately preceding complete ten-combination visual/keyboard and Narrator checklist; sample scope inferred from that context",
+  "results": {
+    "native_visual_keyboard": "user-reported pass",
+    "narrator_listening": "user-reported pass"
+  },
+  "samples": [
+    {
+      "sample": "default-100",
+      "size": "default",
+      "application_scale": 1.0,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "default-125",
+      "size": "default",
+      "application_scale": 1.25,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "default-150",
+      "size": "default",
+      "application_scale": 1.5,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "default-175",
+      "size": "default",
+      "application_scale": 1.75,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "default-200",
+      "size": "default",
+      "application_scale": 2.0,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-100",
+      "size": "minimum",
+      "application_scale": 1.0,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-125",
+      "size": "minimum",
+      "application_scale": 1.25,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-150",
+      "size": "minimum",
+      "application_scale": 1.5,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-175",
+      "size": "minimum",
+      "application_scale": 1.75,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-200",
+      "size": "minimum",
+      "application_scale": 2.0,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    }
+  ],
+  "executable_sha256": null,
+  "build_binding": {
+    "state": "pending Windows executable SHA256",
+    "checklist_source_context": "1617e03b65f2f869b4a37e99e2d41f5766cf77d9",
+    "checked_runtime_pr_head": "34019be9aa7a867f9d4d3022c125e26e704db73e",
+    "basis": "Checklist directed git switch main / pull, matrix validation, source/executable verification and Get-FileHash. User did not supply the Windows hash, source revision or raw Windows receipts. Context identifies the intended M16 build; exact tested artifact is not verified.",
+    "linux_executable_hash_used_as_windows_binding": false
+  },
+  "evidence_limits": [
+    "User report, not an independent native keyboard/visual rerun or Narrator listening by the assistant.",
+    "No new Windows screenshots, logs, audio or source/build/executable receipt inspected in this cloud checkout.",
+    "Windows EXE hash requested separately; no complete exact-artifact acceptance claim until binding is recorded.",
+    "Historical M12/M13/M14/M15 acceptance and M16 original automated/checklist/delivery receipts remain unchanged."
+  ]
+}

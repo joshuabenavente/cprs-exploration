@@ -1,0 +1,29 @@
+{
+  "protocol": "M16",
+  "recorded_at_utc": "2026-11-01T21:56:37.645718+00:00",
+  "scope": "Supplemental review of user-supplied Windows executable hash; original pass report retained unchanged",
+  "user_report": "validation/milestone-16/windows/user-acceptance.json",
+  "user_report_sha256": "612326ebd4436faf4c34e9109da90ae7a8b5d7ad781131953c48cc5e3762f434",
+  "supplied_algorithm": "SHA256",
+  "supplied_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
+  "verbatim_hash": "A88CDDAB73F0D9978587C1AD211E1F93783ACD31F1983DDDFBE369D1CE20C6C3",
+  "comparison": {
+    "matching_historical_receipt": "validation/milestone-12/native-followup/user-acceptance.json",
+    "historical_receipt_sha256": "12cee68ba643f977aaf59bafb53158f10b1f651fe7ae1f978b62410a40c803b3",
+    "historical_protocol": "M12",
+    "historical_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
+    "exact_hash_match": true
+  },
+  "binding_state": "conflict: supplied hash matches historical M12 acceptance; M16 applicability unresolved",
+  "current_m16_native_acceptance_complete": false,
+  "next_evidence_needed": [
+    "Windows git rev-parse HEAD from tested repository",
+    "Current validation/milestone-16/windows/automated.json protocol/passed/executable_sha256/executable fields",
+    "Current M16 verifier result if receipt exists"
+  ],
+  "limits": [
+    "The supplied hash was compared with a recorded historical acceptance hash, not an independently available Windows EXE.",
+    "The pass report remains a user report for all ten samples; no M16 acceptance promotion while build identity conflicts.",
+    "No old receipt, native checklist or automated acceptance checkpoint is rewritten."
+  ]
+}

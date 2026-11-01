@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M16 merged after final-head portable/Windows code-build CI passed; topic branch pruned; project overview delivered; native combined-build acceptance remains pending",
+  "condition": "M16 delivered; user reports all ten native/keyboard/Narrator samples passed, but supplied Windows hash matches historical M12; current M16 build binding unresolved",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -27,8 +27,8 @@
       "id": "M16-WINDOWS",
       "priority": "P1",
       "task": "Fresh combined current-build Windows matrix and native visual/keyboard/Narrator acceptance covering selector and all current readers",
-      "status": "Hosted final-head code/build CI passed; combined-build native matrix/keyboard/visual/Narrator remain not run",
-      "dependency": "Windows desktop session and fresh M16 executable"
+      "status": "User-reported ten-sample passes received; supplied SHA256 matches historical M12, so M16 acceptance is unresolved",
+      "dependency": "Tested Windows source revision and M16 matrix receipt/executable binding"
     },
     {
       "id": "M15-WINDOWS",
@@ -191,11 +191,10 @@
     }
   ],
   "next_action": {
-    "task": "Fresh combined M16 Windows source/build matrix and native visual/keyboard/Narrator checklist covering selection and all current readers",
-    "dependency": "Windows desktop session and fresh M16 executable; follow validation/milestone-16/native-checklist.md",
+    "task": "Resolve Windows build identity: obtain tested-repository Git HEAD and current M16 automated receipt protocol/pass/executable hash fields; verify or rebuild M16 before binding the native pass report",
+    "missing_information": "Windows Git HEAD and validation/milestone-16/windows/automated.json fields",
     "project_overview": "docs/project-overview-m16.md",
-    "standing_delivery_authorization": "docs/delivery-workflow.md",
-    "historical_scope": "Old M13/M14/M15 receipts remain not run for their builds; current combined acceptance does not retroactively change them"
+    "standing_delivery_authorization": "docs/delivery-workflow.md"
   },
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
@@ -318,9 +317,12 @@
     "acceptance_receipt": "validation/milestone-16/acceptance.json",
     "synthetic_visual_review": "minimum-200 selector capture inspected; not native acceptance",
     "windows_code_build_ci": "Passed at PR head 34019be9aa7a867f9d4d3022c125e26e704db73e in run 41351388624; native/speech separate",
-    "windows_native_visual_keyboard": "not run",
-    "narrator_listening": "not run",
-    "milestone_complete": false
+    "windows_native_visual_keyboard": "user-reported pass for ten samples; M16 applicability unresolved because supplied hash matches historical M12",
+    "narrator_listening": "user-reported pass for ten samples; M16 applicability unresolved because supplied hash matches historical M12",
+    "milestone_complete": false,
+    "windows_user_acceptance_receipt": "validation/milestone-16/windows/user-acceptance.json",
+    "windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
+    "windows_exact_build_binding": "conflict: same hash as historical M12 record; need current Windows source/matrix receipt"
   },
   "publication": {
     "state": "M16 merged; topic branch pruned locally/remotely",
@@ -652,5 +654,20 @@
     ],
     "native_windows_and_narrator": "Not run for the combined M16 build; hosted CI and merge are not native acceptance",
     "followup_scope": "Delivery records and project overview only; runtime/build files unchanged from tested PR head"
+  },
+  "current_windows_acceptance": {
+    "milestone": 16,
+    "evidence_level": "user-reported",
+    "receipt": "validation/milestone-16/windows/user-acceptance.json",
+    "receipt_sha256": "612326ebd4436faf4c34e9109da90ae7a8b5d7ad781131953c48cc5e3762f434",
+    "verbatim_report": "all pass",
+    "sample_count": 10,
+    "native_visual_keyboard": "user-reported pass",
+    "narrator_listening": "user-reported pass",
+    "exact_build_binding": "conflict: supplied hash matches historical M12 acceptance",
+    "independent_native_or_listening_rerun": false,
+    "supplied_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
+    "binding_review": "validation/milestone-16/windows/build-binding-review.json",
+    "m16_acceptance_complete": false
   }
 }

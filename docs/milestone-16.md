@@ -43,3 +43,14 @@ after final-head CI passed; its topic branch is pruned locally/remotely. See the
 Exact next action: fresh combined-build Windows matrix and the
 [native/listening checklist](../validation/milestone-16/native-checklist.md).
 These observations remain not run; merge and code/build CI do not establish them.
+
+## Supplemental user report
+
+The user reported **“all pass”** for the ten-combination visual/keyboard and
+Narrator checklist. The [raw report](../validation/milestone-16/windows/user-acceptance.json)
+retains those user-reported passes. The subsequently supplied Windows EXE SHA256
+exactly matches the historical M12 acceptance record; the
+[binding review](../validation/milestone-16/windows/build-binding-review.json)
+records this conflict. M16 applicability and acceptance remain unresolved pending
+Windows Git HEAD and the current M16 automated receipt. No independent native
+or speech rerun is claimed; original raw receipts/checklists remain unchanged.
