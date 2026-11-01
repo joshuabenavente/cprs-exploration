@@ -329,6 +329,12 @@ impl PatientProvider for MockProvider {
         results::mock_report_detail(&self.preview(&request.patient_id)?, request)
     }
     fn orders_list(&self, request: &OrdersListRequest) -> Result<OrdersList, ProviderError> {
+        request.filter.validate()?;
+        if request.query != request.filter.query || request.status_filter != request.filter.status {
+            return Err(ProviderError::Malformed(
+                "Inconsistent Orders filter tuple.".into(),
+            ));
+        }
         if self.simulation == Simulation::OrdersListUnavailable {
             return Err(ProviderError::Unavailable(
                 "Mock order list unavailable. This is not an empty result.".into(),

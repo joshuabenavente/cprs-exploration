@@ -9,13 +9,20 @@ branches now contain only main. See the
 [merge/cleanup checkpoint](../validation/milestone-15/m14-merge-checkpoint.json).
 Historical publication/blocked-attempt receipts retain their capture-time status.
 
-[M15 draft: read-only Orders date filtering](milestone-15.md) is committed locally
-on `m15-plan`, based on merged M14. It proposes inclusive calendar bounds and Reset
-combined with existing text/mock-status filters, OF01–OF08, focused race tests,
-isolated evidence writers and fresh validation. No M15 code or remote publication
-has begun. Exact next implementation action: branch from the recorded baseline,
-hash historical evidence, and write `specifications/orders-filtering.md` before
-core/UI edits. Native validation remains a priority when Windows is available.
+M15 [Orders date filtering](milestone-15.md) was approved and is implemented on
+`m15-orders-date-filters`, from planning commit `b8e1f21` over merged M14. The
+[OF01–OF08 contract](../specifications/orders-filtering.md) adds inclusive calendar
+bounds and Reset to query/mock-status filtering. Invalid edits clear both pending
+channels without a provider request; detail activation remains explicit. The
+full automated suite/matrix is running. Exact next action: finish validation,
+verify all bindings/history and commit the implementation and evidence.
+New validation uses `validate_m15.py`, `verify_m15.py` / `verify_integrated.py`,
+`test_m15_protocol.py`, `Test-MockChart.ps1`, `Review-OrdersFilters.ps1`, and
+`validation/milestone-15/`. M14 writer entry points are frozen in this checkout.
+Fresh Windows native/keyboard/Narrator acceptance remains separate and not run.
+
+The following M14 paragraphs retain that milestone's completed validation
+checkpoint; they do not describe results of the current M15 executable.
 
 M14 adds query plus optional inclusive beginning/ending strict calendar bounds,
 Reset, invalid-input clearing and full owned filter/generation validation to the
@@ -30,7 +37,7 @@ All 2,447 pre-M14 evidence files remain byte-identical. See the
 [targeted synthetic visual review](../validation/milestone-14/linux/synthetic-visual-review.json).
 Final-head code/build CI passed on PR #9. Windows matrix and separate native/
 Narrator checks remain pending; merge does not promote them to passed.
-New validation uses `validate_m14.py`, `verify_m14.py` (also available through
+At the M14 checkout, validation used `validate_m14.py`, `verify_m14.py` (also available through
 `verify_integrated.py`), `Test-MockChart.ps1`, `Review-ResultsFilters.ps1`, and
 `validation/milestone-14/`. Historical M13 writers now fail before writing.
 Windows native/listening checks require a fresh Windows build and the

@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M14 merged after final-head portable/Windows code-build CI passed; obsolete branches pruned; M15 Orders date-filter plan drafted locally",
+  "condition": "M15 approved and implemented locally; final automated validation in progress; native Windows/Narrator remain pending",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -24,6 +24,13 @@
   },
   "prioritized_backlog": [
     {
+      "id": "M15-WINDOWS",
+      "priority": "P1",
+      "task": "Collect fresh M15 Windows source/build matrix and separate native visual/keyboard/Narrator observations",
+      "status": "not run",
+      "dependency": "fresh M15 Windows executable and native session"
+    },
+    {
       "id": "M14-WINDOWS",
       "priority": "P1",
       "task": "Collect fresh M14 Windows matrix and native visual/keyboard/Narrator observations with exact source/build/EXE bindings",
@@ -34,7 +41,7 @@
       "id": "OF-CONTRACT",
       "priority": "P2",
       "task": "Write proposed OF01\u2013OF08 contract for M15 read-only Orders date bounds and Reset",
-      "status": "planning draft delivered locally; no implementation started",
+      "status": "OF01\u2013OF08 contract and implementation delivered locally; final validation in progress",
       "dependency": "docs/milestone-15.md and merged M14 baseline"
     },
     {
@@ -169,11 +176,10 @@
     }
   ],
   "next_action": {
-    "task": "M15 draft complete. Next implementation action: create an implementation branch from e93c9a0, hash historical evidence and write specifications/orders-filtering.md from OF01\u2013OF08 before core/UI edits.",
-    "scope": "Planning only; no M15 feature implementation or remote publication started",
+    "task": "Finish M15 final automated suite and ten-sample Linux matrix, verify bindings/history, and commit code/docs/evidence",
     "blocked_by": null,
-    "independent_native_followup": "M13/M14 Windows matrix and native visual/keyboard/Narrator observations remain pending for their own builds",
-    "m15_merge_authorized": false
+    "independent_native_followup": "Fresh M15 Windows matrix/native keyboard/visual/Narrator remain not run; M13/M14 receipts remain unchanged",
+    "merge_authorized": false
   },
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
@@ -264,58 +270,44 @@
     ]
   },
   "implementation": {
-    "milestone": 14,
-    "branch": "m14-results-date-filters",
-    "baseline": "62bd340501f0d7753e1807cec12d7a967f8fb403",
-    "approval": "merge, prune, then start on M14 with a new agent",
-    "contract": "specifications/results-filtering.md",
+    "milestone": 15,
+    "branch": "m15-orders-date-filters",
+    "baseline": "b8e1f21",
+    "runtime_baseline": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+    "approval": "Approved",
+    "contract": "specifications/orders-filtering.md",
     "features": [
-      "inclusive strict Gregorian calendar bounds with open ends",
-      "query/date tuple generation and patient ownership",
-      "invalid edit clears rows/selection/detail and rejects late success/failure",
-      "Reset and patient/tab/cancel defaults",
-      "explicit report activation and read-only detail preserved",
-      "intrinsic Results height and geometry checks"
+      "typed query/status/inclusive calendar tuple",
+      "invalid edits clear list/detail before validation",
+      "Reset/defaults and owned response predicates",
+      "strict Orders timestamps",
+      "intrinsic Orders height and filter/reading geometry"
     ],
-    "runtime_scope": "nine invented patients, one report type, offline/read-only",
-    "local_implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
-    "state": "M14 merged; M15 planning only"
+    "runtime_scope": "nine invented patients; existing four orders/three mock statuses; offline read-only"
   },
   "current_validation": {
     "platform": "Linux Xvfb/software renderer",
-    "core_tests_passed": 116,
-    "protocol_tests_passed": 16,
-    "workspace_format": "passed",
-    "warning_denied_workspace_clippy": "passed",
-    "desktop_build": "passed",
-    "callback_smoke": "passed",
-    "real_timer_journey": "passed",
-    "checkpoints": 100,
-    "deliveries": 122,
-    "rejected": 53,
-    "default_minimum_scale_matrix_passed": 10,
-    "historical_files_unchanged": 2447,
-    "acceptance_receipt": "validation/milestone-14/acceptance.json",
-    "synthetic_visual_review": "minimum-200 captured/inspected; not native acceptance",
-    "windows_code_build_ci": "Passed on M14 final head d934582; run 41343365509; native matrix and listening are separate and pending",
+    "state": "Final automated validation in progress",
+    "focused_core_precheck": "passed before final suite; final totals will be taken from bound logs",
+    "protocol_tests_passed": 17,
+    "real_timer_precheck": {
+      "checkpoints": 112,
+      "deliveries": 145,
+      "rejected": 65
+    },
+    "first_full_attempt": "Retained under validation/milestone-15/linux/attempt-1; incorrect status assertion fixed",
+    "windows_code_build_ci": "not run for M15",
     "windows_native_visual_keyboard": "not run",
     "narrator_listening": "not run",
     "milestone_complete": false
   },
   "publication": {
-    "state": "M14 merged; topic branch pruned locally and remotely",
+    "state": "M15 implementation local; not published yet",
     "destination": "https://github.com/joshuabenavente/cprs-exploration",
-    "branch": "m14-results-date-filters",
-    "implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
-    "branch_published": true,
-    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/9",
-    "reason": "Explicit user approval received for M14 publication and subsequent merge/prune.",
-    "receipt": "validation/milestone-14/publication.json",
-    "merge_authorized": true,
-    "historical_block_receipt": "validation/milestone-14/publication-block.json",
-    "branch_pruned": true,
-    "merge_commit": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
-    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41343365509"
+    "branch": "m15-orders-date-filters",
+    "branch_published": false,
+    "pull_request": null,
+    "merge_authorized": false
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
@@ -395,7 +387,7 @@
   "root_review": {
     "receipt": "validation/milestone-14/root-review.json",
     "result": "read-only binding/receipt checks and scoped technical review passed",
-    "next_step": "M14 publication/merge completed; see M15 draft and merge checkpoint",
+    "next_step": "M15 final bindings/history review after matrix; no M15 native acceptance inferred",
     "automatic_approval_review": "Rejected M14 git push before execution; previous publication permission classified as M13-only, and move to next step was not accepted as explicit M14 export permission."
   },
   "m14_merge": {
@@ -445,10 +437,65 @@
     "requirements": "OF01\u2013OF08 proposed; contract not yet implemented",
     "branch": "m15-plan",
     "baseline": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
-    "runtime_changes_started": false,
+    "runtime_changes_started": true,
     "published": false,
     "validation": "Documentation consistency checks only; no new Rust or native test claims",
     "evidence": "analysis/orders/resources/TFRMORDERVIEW.dfm.json: chkDateRange, calFrom, calThru; original date semantics unresolved",
-    "next_implementation_action": "Pin baseline and historical evidence; write OF01\u2013OF08 contract on an implementation branch"
+    "next_implementation_action": "Pin baseline and historical evidence; write OF01\u2013OF08 contract on an implementation branch",
+    "state": "Plan approved; implementation active on m15-orders-date-filters"
+  },
+  "previous_m14_implementation": {
+    "milestone": 14,
+    "branch": "m14-results-date-filters",
+    "baseline": "62bd340501f0d7753e1807cec12d7a967f8fb403",
+    "approval": "merge, prune, then start on M14 with a new agent",
+    "contract": "specifications/results-filtering.md",
+    "features": [
+      "inclusive strict Gregorian calendar bounds with open ends",
+      "query/date tuple generation and patient ownership",
+      "invalid edit clears rows/selection/detail and rejects late success/failure",
+      "Reset and patient/tab/cancel defaults",
+      "explicit report activation and read-only detail preserved",
+      "intrinsic Results height and geometry checks"
+    ],
+    "runtime_scope": "nine invented patients, one report type, offline/read-only",
+    "local_implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
+    "state": "M14 merged; M15 planning only"
+  },
+  "previous_m14_validation": {
+    "platform": "Linux Xvfb/software renderer",
+    "core_tests_passed": 116,
+    "protocol_tests_passed": 16,
+    "workspace_format": "passed",
+    "warning_denied_workspace_clippy": "passed",
+    "desktop_build": "passed",
+    "callback_smoke": "passed",
+    "real_timer_journey": "passed",
+    "checkpoints": 100,
+    "deliveries": 122,
+    "rejected": 53,
+    "default_minimum_scale_matrix_passed": 10,
+    "historical_files_unchanged": 2447,
+    "acceptance_receipt": "validation/milestone-14/acceptance.json",
+    "synthetic_visual_review": "minimum-200 captured/inspected; not native acceptance",
+    "windows_code_build_ci": "Passed on M14 final head d934582; run 41343365509; native matrix and listening are separate and pending",
+    "windows_native_visual_keyboard": "not run",
+    "narrator_listening": "not run",
+    "milestone_complete": false
+  },
+  "previous_m14_publication": {
+    "state": "M14 merged; topic branch pruned locally and remotely",
+    "destination": "https://github.com/joshuabenavente/cprs-exploration",
+    "branch": "m14-results-date-filters",
+    "implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
+    "branch_published": true,
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/9",
+    "reason": "Explicit user approval received for M14 publication and subsequent merge/prune.",
+    "receipt": "validation/milestone-14/publication.json",
+    "merge_authorized": true,
+    "historical_block_receipt": "validation/milestone-14/publication-block.json",
+    "branch_pruned": true,
+    "merge_commit": "e93c9a03c8ae802d54a7252c0ff95fedec4385b4",
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41343365509"
   }
 }

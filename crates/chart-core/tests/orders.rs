@@ -263,6 +263,7 @@ fn ot12_denied_and_unavailable_patient_records_cannot_be_requested_from_mock_pro
                 patient_id: patient_id.clone(),
                 query: "".into(),
                 status_filter: OrderStatusFilter::All,
+                filter: OrdersFilter::default(),
             })
             .is_err()
         );
@@ -341,6 +342,7 @@ fn ot15_response_rows_must_match_requested_status_and_text_filter() {
             patient_id: s.active.as_ref().unwrap().patient.id.clone(),
             query: String::new(),
             status_filter: OrderStatusFilter::All,
+            filter: OrdersFilter::default(),
         })
         .unwrap();
     for (query, filter) in [

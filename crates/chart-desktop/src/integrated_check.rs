@@ -785,7 +785,7 @@ fn journey() -> VecDeque<Step> {
                 "filtered reading focus/body mismatch"
             );
             let g = a.invoke_notes_geometry();
-            println!("M14_NOTES_GEOMETRY card_top={} card_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.top, g.bottom, g.body_top, g.body_bottom, a.get_workspace_top(), a.get_workspace_visible_height());
+            println!("M15_NOTES_GEOMETRY card_top={} card_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.top, g.bottom, g.body_top, g.body_bottom, a.get_workspace_top(), a.get_workspace_visible_height());
             require!(
                 g.body_top >= g.top
                     && g.body_bottom <= g.bottom
@@ -1670,7 +1670,7 @@ fn journey() -> VecDeque<Step> {
             require!(!a.get_report_detail_open(), "filtered highlight opened detail");
             a.invoke_report_activated();
             let g = a.invoke_results_geometry();
-            println!("M14_RESULTS_GEOMETRY dates_top={} dates_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.dates_top,g.dates_bottom,g.body_top,g.body_bottom,a.get_workspace_top(),a.get_workspace_visible_height());
+            println!("M15_RESULTS_GEOMETRY dates_top={} dates_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.dates_top,g.dates_bottom,g.body_top,g.body_bottom,a.get_workspace_top(),a.get_workspace_visible_height());
             require!(g.body_top >= a.get_workspace_top() - 1.0 && g.body_bottom <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0, "filtered reading pane outside viewport");
             Ok(())
         },
@@ -1698,6 +1698,277 @@ fn journey() -> VecDeque<Step> {
                     && a.get_keyboard_focus() == "results-filter",
                 "cancel retained Results filters or lost focus"
             );
+            empty_text(a, s)
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-open",
+        |a, _| {
+            a.invoke_tab_changed(2);
+            Ok(())
+        },
+        |a, _, _| !a.get_orders_loading() && a.get_orders_rows().row_count() == 4,
+        |a, s| {
+            owned(a, s, "SYNTH-001", ChartTab::Orders)?;
+            empty_text(a, s)
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-date-race",
+        |a, _| {
+            a.invoke_orders_scenario_changed(3);
+            a.invoke_orders_dates_edited("2026-10-28".into(), "2026-10-29".into());
+            a.invoke_orders_dates_edited("2026-10-29".into(), "2026-10-29".into());
+            require!(
+                a.get_order_body().is_empty() && a.get_selected_order() == -1,
+                "date edit retained detail"
+            );
+            Ok(())
+        },
+        |a, s, i| {
+            !a.get_orders_loading()
+                && s.borrow().delivery_audit.as_ref().is_some_and(|v| {
+                    v[i..]
+                        .iter()
+                        .filter(|d| d.operation == "orders-list" && !d.applied)
+                        .count()
+                        >= 2
+                })
+        },
+        |a, s| {
+            require!(
+                a.get_orders_rows().row_count() == 1
+                    && s.borrow().state.orders.rows[0].id.as_str() == "ORDER-02",
+                "date race exposed wrong rows"
+            );
+            let g = a.invoke_orders_geometry();
+            require!(
+                g.dates_top >= a.get_workspace_top() - 1.0
+                    && g.dates_bottom
+                        <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0,
+                "date controls outside viewport"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-invalid-date",
+        |a, _| {
+            a.invoke_order_selected(0);
+            require!(
+                !a.get_order_detail_open(),
+                "filtered selection automatically opened order"
+            );
+            a.invoke_order_activated();
+            a.invoke_orders_dates_edited("2026-02-29".into(), "".into());
+            require!(
+                a.get_orders_invalid_filter()
+                    && !a.get_orders_loading()
+                    && !a.get_orders_list_error(),
+                "invalid date state not distinct"
+            );
+            Ok(())
+        },
+        |_, s, i| seen(s, i, "order-body", "SYNTH-001", "ORDER-02", false),
+        |a, s| {
+            require!(
+                a.get_orders_rows().row_count() == 0
+                    && a.get_selected_order() == -1
+                    && !a.get_order_detail_open(),
+                "invalid date retained rows/detail"
+            );
+            require!(
+                a.get_orders_list_status().contains("SYNTH-001"),
+                "invalid message lacks owner"
+            );
+            empty_text(a, s)
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-inclusive-recovery",
+        |a, _| {
+            a.invoke_orders_scenario_changed(0);
+            a.invoke_orders_dates_edited("2026-10-28".into(), "2026-10-29".into());
+            Ok(())
+        },
+        |a, _, _| {
+            !a.get_orders_loading()
+                && !a.get_orders_invalid_filter()
+                && a.get_orders_status_filter() == 0
+        },
+        |a, s| {
+            require!(
+                s.borrow()
+                    .state
+                    .orders
+                    .rows
+                    .iter()
+                    .map(|r| r.id.as_str())
+                    .collect::<Vec<_>>()
+                    == ["ORDER-02", "ORDER-03"],
+                "inclusive boundaries wrong"
+            );
+            require!(!a.get_order_detail_open(), "recovery opened detail");
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-status-combined",
+        |a, _| {
+            a.invoke_orders_status_changed(1);
+            Ok(())
+        },
+        |a, _, _| !a.get_orders_loading(),
+        |a, s| {
+            require!(
+                a.get_orders_rows().row_count() == 1
+                    && s.borrow().state.orders.rows[0].id.as_str() == "ORDER-03",
+                "status/date intersection wrong"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-combined-empty",
+        |a, _| {
+            a.invoke_orders_filter_edited("Empty".into());
+            Ok(())
+        },
+        |a, _, _| !a.get_orders_loading(),
+        |a, s| {
+            require!(
+                s.borrow().state.orders.list_status == OrdersListStatus::Empty
+                    && !a.get_orders_list_error()
+                    && !a.get_orders_invalid_filter()
+                    && a.get_orders_status_filter() == 1,
+                "valid empty intersection shown as error"
+            );
+            empty_text(a, s)
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-reset-race",
+        |a, _| {
+            a.invoke_orders_scenario_changed(3);
+            a.invoke_orders_filter_edited("Alpha".into());
+            a.invoke_orders_status_changed(2);
+            a.invoke_orders_reset_filters();
+            a.invoke_focus_orders_filter();
+            Ok(())
+        },
+        |a, s, i| {
+            !a.get_orders_loading()
+                && a.get_orders_rows().row_count() == 4
+                && s.borrow().delivery_audit.as_ref().is_some_and(|v| {
+                    v[i..]
+                        .iter()
+                        .filter(|d| d.operation == "orders-list" && !d.applied)
+                        .count()
+                        >= 2
+                })
+        },
+        |a, _| {
+            require!(
+                a.get_orders_query().is_empty()
+                    && a.get_orders_beginning().is_empty()
+                    && a.get_orders_ending().is_empty()
+                    && a.get_orders_status_filter() == 0
+                    && a.get_selected_order() == -1,
+                "reset retained filter/selection"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-unicode-combined",
+        |a, _| {
+            a.invoke_orders_scenario_changed(0);
+            a.invoke_orders_dates_edited("2026-10-28".into(), "2026-10-28".into());
+            a.invoke_orders_filter_edited("zoë 李".into());
+            a.invoke_orders_status_changed(1);
+            Ok(())
+        },
+        |a, _, _| !a.get_orders_loading(),
+        |a, s| {
+            require!(
+                a.get_orders_rows().row_count() == 1
+                    && s.borrow().state.orders.rows[0].id.as_str() == "ORDER-03",
+                "Unicode/date intersection wrong"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-retry-keeps-dates",
+        |a, _| {
+            a.invoke_orders_scenario_changed(1);
+            Ok(())
+        },
+        |a, _, _| a.get_orders_list_error(),
+        |a, _| {
+            a.invoke_retry_orders_list();
+            a.invoke_orders_scenario_changed(0);
+            require!(
+                a.get_orders_beginning() == "2026-10-28"
+                    && a.get_orders_ending() == "2026-10-28"
+                    && a.get_orders_query() == "zoë 李"
+                    && a.get_orders_status_filter() == 1,
+                "retry changed date tuple"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-reading-geometry",
+        noop,
+        |a, s, i| !a.get_orders_loading() && a.get_orders_rows().row_count() == 1 && s.borrow().delivery_audit.as_ref().is_some_and(|v| v[i..].iter().any(|d| d.operation == "orders-list" && !d.applied)),
+        |a, _| {
+            require!(!a.get_orders_list_error(), "late retry failure replaced date-filter recovery");
+            a.invoke_order_selected(0);
+            require!(!a.get_order_detail_open(), "filtered highlight opened detail");
+            a.invoke_order_activated();
+            let g = a.invoke_orders_geometry();
+            println!("M15_ORDERS_GEOMETRY dates_top={} dates_bottom={} body_top={} body_bottom={} viewport_top={} viewport_height={}", g.dates_top,g.dates_bottom,g.body_top,g.body_bottom,a.get_workspace_top(),a.get_workspace_visible_height());
+            require!(g.body_top >= a.get_workspace_top() - 1.0 && g.body_bottom <= a.get_workspace_top() + a.get_workspace_visible_height() + 1.0, "filtered reading pane outside viewport");
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-selector-reset",
+        |a, _| {
+            a.invoke_open_selection();
+            a.invoke_cancel_selection();
+            Ok(())
+        },
+        |a, s, i| {
+            !a.get_orders_loading()
+                && a.get_orders_rows().row_count() == 4
+                && seen(s, i, "order-body", "SYNTH-001", "ORDER-03", false)
+        },
+        |a, s| {
+            owned(a, s, "SYNTH-001", ChartTab::Orders)?;
+            require!(
+                a.get_orders_query().is_empty()
+                    && a.get_orders_beginning().is_empty()
+                    && a.get_orders_ending().is_empty()
+                    && !a.get_orders_invalid_filter()
+                    && a.get_orders_status_filter() == 0
+                    && a.get_selected_order() == -1
+                    && a.get_keyboard_focus() == "orders-filter",
+                "cancel retained Orders filters or lost focus"
+            );
+            empty_text(a, s)
+        },
+    ));
+    q.push_back(Step::new(
+        "orders-filter-return-results",
+        |a, _| {
+            a.invoke_tab_changed(3);
+            Ok(())
+        },
+        |a, _, _| !a.get_results_loading() && a.get_results_rows().row_count() == 4,
+        |a, s| {
+            owned(a, s, "SYNTH-001", ChartTab::Results)?;
             empty_text(a, s)
         },
     ));
@@ -1848,7 +2119,7 @@ fn journey() -> VecDeque<Step> {
                     g.table_visible_height >= g.table_content_height + 14.0,
                     "fixture rows overlap the table's overlay scrollbar"
                 );
-                println!("M14_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
+                println!("M15_LAYOUT panel={panel} top={} bottom={} table_bottom={} view_top={} help_bottom={} viewport_top={top} viewport_bottom={bottom} content_height={} scroll_y={}", g.top, g.bottom, g.table_bottom, g.view_top, g.help_bottom, a.get_cover_content_height(), a.get_cover_scroll_y());
                 Ok(())
             },
         ));
@@ -1990,12 +2261,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M14_DELIVERY {} {} {:?} generation={} applied={}",
+                "M15_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M14_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M15_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -2004,7 +2275,7 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M14_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M15_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
@@ -2013,14 +2284,14 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         drop(c);
         if driver.keep_open {
             if let Some(app) = driver.weak.upgrade() {
-                app.invoke_tab_changed(3);
+                app.invoke_tab_changed(2);
             }
             println!(
-                "M14_REVIEW_READY SYNTH-001 Results; wait for the list, then review filters; close the mock to exit."
+                "M15_REVIEW_READY SYNTH-001 Orders; wait for the list, then review filters; close the mock to exit."
             );
         }
     } else if let Err(error) = &result {
-        eprintln!("M14_INTEGRATED_FAIL {error}");
+        eprintln!("M15_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -2071,7 +2342,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M14_CHECK {} PASS elapsed_ms={}",
+            "M15_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );

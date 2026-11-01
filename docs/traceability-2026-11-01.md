@@ -65,14 +65,12 @@ adds evidence to the existing feature rows without changing prototype policies.
 | TIU excluded sign boundary | `evidence/batch-0003/00a0b3e0.asm`, `00a0c6fc.asm`, annotations and five boundary repairs | Bounded query/sign distinction B; complete authorization/ABI/server effects U. |
 | Keyboard/layout/native/listening | Full forms/event census supports stored controls; `catalog/uncertainties.json` U08 explicitly limits runtime UI claims | No new native or speech evidence. Retained M12 user reports and targeted captures keep their recorded scope. |
 
-## M15 planning checkpoint
+## M15 implementation checkpoint
 
-[M15 draft](milestone-15.md) proposes OF01–OF08: read-only Orders date bounds
-and Reset with the existing query/status tuple. B: stored `TFRMORDERVIEW`
-`chkDateRange`, `calFrom`, `calThru`, and change/OK/Cancel bindings. P: inclusive
-strict ISO calendar days, filtering the invented order timestamp, Reset and
-request invalidation. I: bounded extension of the existing reader. U: original
-date semantics, server contracts, placement/start-stop relationship and runtime
-accessibility. Implementation/tests are not started; existing `orders.rs` and
-`orders-view.slint` are the extension points. M14 merged after final-head CI;
-M13/M14 native acceptance remains pending. No new parity claim is supported.
+| Feature | Requirement and evidence | Implementation | Verification and remaining gap |
+| --- | --- | --- | --- |
+| Orders calendar/text/status filtering and Reset | [OF01–OF08](../specifications/orders-filtering.md). B: stored TFRMORDERVIEW chkDateRange/calFrom/calThru and change/OK/Cancel bindings. P: inclusive ISO days on invented order timestamp, Reset and invalidation. I: bounded reader extension. U: original placement/start-stop semantics, server rules and runtime accessibility. | orders.rs OrdersFilter/begin_orders_filter/reset_orders_filters, strict timestamp and response predicates; main.rs callbacks; orders-view.slint inputs/intrinsic height; CalendarDay reused. | Sixteen focused OF tests plus retained OT suite; twelve added delayed-reply/geometry checkpoints, M15 protocol/isolation tools and fresh ten-sample matrix in progress. Native Windows/keyboard/Narrator remain not run; no parity claim. |
+
+M14 merged after final-head CI; its capture-time receipts and pending native
+acceptance remain distinct from M15. Five prepared transport/save/login/DLL RE
+targets remain deferred. No original execution or new static recovery is claimed.

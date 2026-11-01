@@ -1,6 +1,7 @@
-# M15 draft: read-only Orders date filtering
+# M15: read-only Orders date filtering
 
-Status: planning only. No M15 runtime changes or acceptance runs have begun.
+Status: approved and implemented; full automated validation in progress.
+Work is on `m15-orders-date-filters` from planning commit `b8e1f21`.
 Baseline: M14 merged at `e93c9a03c8ae802d54a7252c0ff95fedec4385b4`; see the
 [handoff](handoff.md) and [merge receipt](../validation/milestone-15/m14-merge-checkpoint.json).
 
@@ -17,8 +18,8 @@ timestamp. Do not parse the Start / Stop display string or imply interval overla
 clinical activity, original order-placement semantics, FileMan or timezone rules.
 The current fixture places ORDER-01/02/03/04 on October 30/29/28/27, 2026.
 Reset clears query and bounds and restores All mock statuses, retaining the
-committed patient and scenario. Scenario changes preserve filter values; invalid inputs stay invalid without a
-provider request until corrected or reset.
+committed patient and scenario. Scenario changes preserve filter values; invalid
+inputs stay invalid without a provider request until corrected or reset.
 
 ## Evidence and remaining uncertainty
 
@@ -43,9 +44,9 @@ closer fidelity, resolve the address-keyed `chkDateRangeClick`, `calChange` and
 address is asserted here without a verified binding. The five prepared broker,
 save, login and DLL targets remain deferred; none is a dependency.
 
-## Proposed requirements and acceptance criteria
+## Requirements and acceptance criteria
 
-| ID | Proposed contract | Required verification |
+| ID | Contract | Required verification |
 | --- | --- | --- |
 | OF01 | One typed tuple carries query, mock status and optional bounds in each owned list request; patient and generation must match exactly. | Combined predicate tests, forged tuple tests and late reply journeys. |
 | OF02 | Bounds use `CalendarDay`: strict ASCII YYYY-MM-DD, no surrounding whitespace, blank means open, beginning <= ending. | Leap/century/year limits, equal and one-sided bounds, partial/Unicode/reversed inputs. |
@@ -109,6 +110,12 @@ Risks: filtering the wrong timestamp, stale detail after invalid edits, tuple
 mismatch, fixed-height clipping and historical evidence overwrite. OF01–OF08,
 the explicit field policy, isolated writers and the native gate address them.
 
-Exact next implementation action: on a new M15 implementation branch from the
-recorded merged baseline, hash historical evidence and write the OF01–OF08
-contract before editing core/UI. This draft does not start that implementation.
+Implementation checkpoint: [OF01–OF08 contract](../specifications/orders-filtering.md)
+and typed Orders tuple/core/UI are implemented. Sixteen focused Orders filter
+Rust tests supplement the retained suite. The real timer journey retains all 100
+M14 checkpoints and adds twelve Orders checkpoints. Historical M14 runner,
+verifier, protocol-main and review launcher now exit before writes; M15 has its
+own runner/verifier/protocol/CI/PowerShell paths. The complete Linux matrix is
+running; native Windows/Narrator observations remain not run. Exact next action:
+finish validation, independently verify receipt bindings and historical bytes,
+then commit the reviewable M15 implementation and evidence.

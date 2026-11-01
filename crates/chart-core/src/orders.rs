@@ -1,5 +1,5 @@
 //! Invented order records and patient-scoped read-only browsing. No broker wire types.
-use crate::{AppState, ChartTab, PatientId, PatientSummary, ProviderError, valid_date};
+use crate::{AppState, CalendarDay, ChartTab, PatientId, PatientSummary, ProviderError};
 use std::collections::HashSet;
 
 /// Authored demo statuses, not VistA status codes or clinical state semantics.
@@ -82,12 +82,46 @@ impl OrderSummary {
     }
 }
 
+/// Authored inclusive calendar bounds, independent of FileMan/timezones.
+#[derive(Clone, Debug, Default, PartialEq, Eq)]
+pub struct OrdersFilter {
+    pub query: String,
+    pub status: OrderStatusFilter,
+    pub beginning: Option<CalendarDay>,
+    pub ending: Option<CalendarDay>,
+}
+impl OrdersFilter {
+    pub fn validate(&self) -> Result<(), ProviderError> {
+        if self
+            .beginning
+            .as_ref()
+            .zip(self.ending.as_ref())
+            .is_some_and(|(a, b)| a > b)
+        {
+            return Err(ProviderError::Malformed(
+                "Beginning Orders date must be on or before ending date.".into(),
+            ));
+        }
+        Ok(())
+    }
+    pub fn matches(&self, row: &OrderSummary) -> bool {
+        let Some(day) = row.date.get(..10) else {
+            return false;
+        };
+        self.beginning.as_ref().is_none_or(|d| day >= d.as_str())
+            && self.ending.as_ref().is_none_or(|d| day <= d.as_str())
+            && self.status.matches(row.status)
+            && row.matches_query(&self.query)
+    }
+}
+
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct OrdersListRequest {
     pub generation: u64,
     pub patient_id: PatientId,
     pub query: String,
     pub status_filter: OrderStatusFilter,
+    pub filter: OrdersFilter,
 }
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct OrdersList {
@@ -115,6 +149,7 @@ pub enum OrdersListStatus {
     Ready,
     Empty,
     Error(String),
+    Invalid(String),
 }
 #[derive(Clone, Debug, Default, PartialEq, Eq)]
 pub enum OrderDetailState {
@@ -130,6 +165,8 @@ pub struct OrdersWorkspace {
     pub patient_id: Option<PatientId>,
     pub query: String,
     pub status_filter: OrderStatusFilter,
+    pub beginning_input: String,
+    pub ending_input: String,
     pub rows: Vec<OrderSummary>,
     pub list_status: OrdersListStatus,
     pub selected: Option<OrderSummary>,
@@ -146,6 +183,8 @@ impl OrdersWorkspace {
         self.detail_generation += 1;
         self.patient_id = None;
         self.query.clear();
+        self.beginning_input.clear();
+        self.ending_input.clear();
         self.status_filter = OrderStatusFilter::All;
         self.rows.clear();
         self.list_status = OrdersListStatus::Idle;
@@ -170,9 +209,11 @@ impl OrdersWorkspace {
 fn valid_order_date(value: &str) -> bool {
     value.is_ascii()
         && value.len() == 16
-        && valid_date(&value[..10])
+        && CalendarDay::parse(&value[..10]).is_ok()
         && &value[10..11] == " "
         && &value[13..14] == ":"
+        && value[11..13].bytes().all(|b| b.is_ascii_digit())
+        && value[14..].bytes().all(|b| b.is_ascii_digit())
         && value[11..13].parse::<u8>().is_ok_and(|v| v < 24)
         && value[14..].parse::<u8>().is_ok_and(|v| v < 60)
 }
@@ -189,6 +230,28 @@ impl AppState {
         query: String,
         status_filter: OrderStatusFilter,
     ) -> Option<OrdersListRequest> {
+        self.begin_orders_filter(
+            query,
+            status_filter,
+            self.orders.beginning_input.clone(),
+            self.orders.ending_input.clone(),
+        )
+    }
+    pub fn reset_orders_filters(&mut self) -> Option<OrdersListRequest> {
+        self.begin_orders_filter(
+            String::new(),
+            OrderStatusFilter::All,
+            String::new(),
+            String::new(),
+        )
+    }
+    pub fn begin_orders_filter(
+        &mut self,
+        query: String,
+        status_filter: OrderStatusFilter,
+        beginning_input: String,
+        ending_input: String,
+    ) -> Option<OrdersListRequest> {
         if !self.orders_allowed() {
             return None;
         }
@@ -199,14 +262,46 @@ impl AppState {
         n.patient_id = Some(patient_id.clone());
         n.query = query.clone();
         n.status_filter = status_filter;
+        n.beginning_input = beginning_input.clone();
+        n.ending_input = ending_input.clone();
         n.selected = None;
         n.rows.clear();
+        n.pending_list = None;
+        let parse_bound = |value: &str| {
+            if value.is_empty() {
+                Ok(None)
+            } else {
+                CalendarDay::parse(value).map(Some)
+            }
+        };
+        let filter = parse_bound(&beginning_input)
+            .and_then(|beginning| {
+                parse_bound(&ending_input).map(|ending| OrdersFilter {
+                    query: query.clone(),
+                    status: status_filter,
+                    beginning,
+                    ending,
+                })
+            })
+            .and_then(|filter| {
+                filter.validate()?;
+                Ok(filter)
+            });
+        let filter = match filter {
+            Ok(filter) => filter,
+            Err(error) => {
+                self.message = format!("Invalid Orders filter for {patient_id}: {error}");
+                n.list_status = OrdersListStatus::Invalid(self.message.clone());
+                return None;
+            }
+        };
         n.list_status = OrdersListStatus::Loading;
         let request = OrdersListRequest {
             generation: n.list_generation,
             patient_id,
             query,
             status_filter,
+            filter,
         };
         n.pending_list = Some(request.clone());
         self.message = "Loading invented orders…".into();
@@ -235,8 +330,10 @@ impl AppState {
                         && !row.description.trim().is_empty()
                         && valid_order_date(&row.date)
                         && !row.service.trim().is_empty()
-                        && request.status_filter.matches(row.status)
-                        && row.matches_query(&request.query)
+                        && !row.provider.trim().is_empty()
+                        && !row.location.trim().is_empty()
+                        && !row.start_stop.trim().is_empty()
+                        && request.filter.matches(row)
                         && ids.insert(row.id.clone())
                 })
             {
@@ -418,7 +515,7 @@ pub(crate) fn mock_orders(patient: &PatientSummary, request: &OrdersListRequest)
                     }
                 ),
             })
-            .filter(|r| request.status_filter.matches(r.status) && r.matches_query(&request.query))
+            .filter(|r| request.filter.matches(r))
             .collect()
     };
     OrdersList {
@@ -438,6 +535,7 @@ pub(crate) fn mock_order_detail(
             patient_id: patient.id.clone(),
             query: String::new(),
             status_filter: OrderStatusFilter::All,
+            filter: OrdersFilter::default(),
         },
     );
     let row = list
