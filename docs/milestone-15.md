@@ -1,6 +1,6 @@
 # M15: read-only Orders date filtering
 
-Status: approved and implemented; full automated validation in progress.
+Status: approved and implemented; Linux automated matrix passed; Windows native/listening pending.
 Work is on `m15-orders-date-filters` from planning commit `b8e1f21`.
 Baseline: M14 merged at `e93c9a03c8ae802d54a7252c0ff95fedec4385b4`; see the
 [handoff](handoff.md) and [merge receipt](../validation/milestone-15/m14-merge-checkpoint.json).
@@ -115,7 +115,17 @@ and typed Orders tuple/core/UI are implemented. Sixteen focused Orders filter
 Rust tests supplement the retained suite. The real timer journey retains all 100
 M14 checkpoints and adds twelve Orders checkpoints. Historical M14 runner,
 verifier, protocol-main and review launcher now exit before writes; M15 has its
-own runner/verifier/protocol/CI/PowerShell paths. The complete Linux matrix is
-running; native Windows/Narrator observations remain not run. Exact next action:
-finish validation, independently verify receipt bindings and historical bytes,
-then commit the reviewable M15 implementation and evidence.
+own runner/verifier/protocol/CI/PowerShell paths. The complete Linux matrix passed:
+132 Rust tests, 17 protocol/isolation tests,
+16 automated steps and eleven journeys, each 112 checkpoints / 145 deliveries /
+65 rejected replies. All ten size/scale samples passed; all 2,481 startup evidence
+files remain byte-identical. See the [acceptance checkpoint](../validation/milestone-15/acceptance.json)
+and [technical review](../validation/milestone-15/technical-review.json).
+
+The first full run caught a wrong retained-status assertion; its raw failed receipt
+and log are preserved under `linux/attempt-1`. The corrected final run passed.
+The [minimum-200 capture](../validation/milestone-15/linux/synthetic-visual-review.json)
+shows readable new controls and the fixed frame; it does not establish native keys
+or speech. Exact next action: publish the draft PR and verify code/build CI, then
+use the [new Windows checklist](../validation/milestone-15/native-checklist.md).
+Native Windows/Narrator remain not run; M15 merge is not authorized.

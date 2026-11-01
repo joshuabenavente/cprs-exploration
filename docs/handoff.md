@@ -13,9 +13,14 @@ M15 [Orders date filtering](milestone-15.md) was approved and is implemented on
 `m15-orders-date-filters`, from planning commit `b8e1f21` over merged M14. The
 [OF01–OF08 contract](../specifications/orders-filtering.md) adds inclusive calendar
 bounds and Reset to query/mock-status filtering. Invalid edits clear both pending
-channels without a provider request; detail activation remains explicit. The
-full automated suite/matrix is running. Exact next action: finish validation,
-verify all bindings/history and commit the implementation and evidence.
+channels without a provider request; detail activation remains explicit. All 132
+Rust tests, 17 protocol/isolation tests and sixteen automated steps passed.
+Eleven journeys each passed 112 checkpoints with 145 deliveries / 65 rejections;
+all ten scale samples passed and 2,481 startup evidence files remain unchanged.
+See the [acceptance checkpoint](../validation/milestone-15/acceptance.json).
+Exact next action: publish the reviewable draft PR and verify final-head code/build
+CI, then collect fresh Windows native/keyboard/Narrator observations. M15 merge
+is not authorized.
 New validation uses `validate_m15.py`, `verify_m15.py` / `verify_integrated.py`,
 `test_m15_protocol.py`, `Test-MockChart.ps1`, `Review-OrdersFilters.ps1`, and
 `validation/milestone-15/`. M14 writer entry points are frozen in this checkout.

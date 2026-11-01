@@ -1,0 +1,22 @@
+test_added_crate_file_is_rejected (__main__.ProtocolTests.test_added_crate_file_is_rejected) ... ok
+test_changed_executable_is_rejected (__main__.ProtocolTests.test_changed_executable_is_rejected) ... ok
+test_changed_step_log_is_rejected (__main__.ProtocolTests.test_changed_step_log_is_rejected) ... ok
+test_delivery_summary_cannot_hide_missing_deliveries (__main__.ProtocolTests.test_delivery_summary_cannot_hide_missing_deliveries) ... ok
+test_evidence_log_cannot_point_to_historical_folder (__main__.ProtocolTests.test_evidence_log_cannot_point_to_historical_folder) ... ok
+test_frozen_m14_verifier_and_protocol_entrypoints_cannot_write (__main__.ProtocolTests.test_frozen_m14_verifier_and_protocol_entrypoints_cannot_write) ... ok
+test_frozen_m14_writer_exits_before_touching_historical_destination (__main__.ProtocolTests.test_frozen_m14_writer_exits_before_touching_historical_destination) ... ok
+test_historical_byte_change_is_rejected (__main__.ProtocolTests.test_historical_byte_change_is_rejected) ... ok
+test_historical_log_is_rejected_even_with_updated_hash (__main__.ProtocolTests.test_historical_log_is_rejected_even_with_updated_hash) ... ok
+test_historical_receipt_and_protocol_are_rejected (__main__.ProtocolTests.test_historical_receipt_and_protocol_are_rejected) ... ok
+test_m14_protocol_and_milestone_cannot_be_reused_for_m15 (__main__.ProtocolTests.test_m14_protocol_and_milestone_cannot_be_reused_for_m15) ... ok
+test_matrix_runner_does_not_forward_its_flags_to_verifier (__main__.ProtocolTests.test_matrix_runner_does_not_forward_its_flags_to_verifier) ... ok
+test_reported_scale_mismatch_is_rejected (__main__.ProtocolTests.test_reported_scale_mismatch_is_rejected) ... ok
+test_requested_matrix_requires_every_sample (__main__.ProtocolTests.test_requested_matrix_requires_every_sample) ... ok
+test_runner_hashes_silent_logs_and_removes_stale_failed_outputs (__main__.ProtocolTests.test_runner_hashes_silent_logs_and_removes_stale_failed_outputs) ... ok
+test_runner_rejects_old_milestone_before_writing (__main__.ProtocolTests.test_runner_rejects_old_milestone_before_writing) ... ok
+test_valid_complete_source_bound_receipt (__main__.ProtocolTests.test_valid_complete_source_bound_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.058s
+
+OK

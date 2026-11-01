@@ -1,0 +1,25 @@
+{
+  "protocol": "M15",
+  "scope": "Synthetic Linux Xvfb minimum-size 200% targeted visual inspection only",
+  "executable_sha256": "b60f1ef41dd09b6fed9008e995161db1fd5d3059a9aa8735d737578287a088f4",
+  "screenshot": "review-minimum-200.png",
+  "screenshot_sha256": "f8d905c023d85e524bf8059480ae8cd21513c30f4d364402882fd6eb0805c330",
+  "preparation_log": "review-minimum-200.log",
+  "requested_client_pixels": [
+    1960,
+    1360
+  ],
+  "scale": 2,
+  "observations": [
+    "Beginning/ending inputs, format hints, Reset, query/status/scenario controls and validation area are readable",
+    "Patient header, mock-only banner, footer navigation and status remain visible",
+    "Orders table retains horizontal scrolling; detail/actions remain in scrolling workspace; integrated probes check reading geometry"
+  ],
+  "limitations": [
+    "Rendered synthetic display only; no physical keyboard or Windows desktop observation",
+    "No Narrator listening or original-client parity claim"
+  ],
+  "inspected": true,
+  "preparation_log_sha256": "d21ae0530b03ac0894a3920d9f50c2fbf1c8faa7cacf348cebd96d3d7142253a",
+  "process_cleanup": "Owned synthetic preview terminated after capture; no native close test claimed"
+}
