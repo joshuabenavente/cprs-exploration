@@ -5,11 +5,17 @@ after final-head portable-core and Windows code/build CI passed. Topic branches
 are pruned; only main remains. The delivery follow-up updates documentation only,
 with runtime/build files identical to the checked PR head.
 
+Latest Windows attempt: the user supplied an M16 automated receipt summary
+with passed=False and matrix_requested=True, plus a new receipt executable hash.
+The [attempt report](../validation/milestone-16/windows/matrix-attempt-report.json)
+records the fields. The failed step/log is needed before diagnosing or rerunning;
+current native/listening acceptance remains pending.
+
 The project is a working synthetic offline Rust/Slint chart prototype. Its
 patient selection, chart navigation and read-only readers are implemented and
-covered by automated regression checks. The user reports all ten native visual/keyboard and Narrator samples passed,
-but the supplied Windows executable hash matches historical M12 acceptance;
-current M16 applicability remains unresolved. Full original CPRS behavioral parity
+covered by automated regression checks. The earlier ten-sample pass report was followed by a historical-M12-matching
+hash and now a failed rebuilt M16 matrix attempt; current acceptance remains
+unresolved. Full original CPRS behavioral parity
 has not been established.
 
 ## What works
@@ -77,11 +83,10 @@ writes and DLL/original execution remain outside this project's runtime scope.
 
 ## Recommended next work
 
-1. Use the [Windows rebuild guide](m16-windows-rebuild.md) to preserve the existing
-   executable/evidence and produce a fresh M16 matrix receipt and matching EXE
-   hash. Then repeat the native/listening samples on the verified build. The
-   reported source is M16, but the matrix receipt is absent and supplied hash
-   matches historical M12. Retain prior reports and raw evidence separately.
+1. Diagnose the failed Windows M16 matrix attempt from its failure field and
+   failed-check log while preserving the receipt and logs. Fix the identified
+   problem, verify the resulting source/EXE/matrix bindings, then repeat native/
+   listening samples on the verified build. Retain earlier reports separately.
 2. Choose the next bounded read-only feature from the remaining fidelity gaps,
    with an authored contract and supporting static evidence where available.
    Keep the five transport/save/login/DLL investigation targets deferred while

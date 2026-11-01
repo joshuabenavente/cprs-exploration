@@ -57,3 +57,12 @@ build inputs, but executable/native applicability remains unresolved. Use the
 [rebuild guide](m16-windows-rebuild.md) and
 [source checkpoint](../validation/milestone-16/windows/source-checkpoint-review.json). No independent native
 or speech rerun is claimed; original raw receipts/checklists remain unchanged.
+
+## Windows matrix attempt update
+
+The user supplied an M16 receipt summary with passed=False, matrix_requested=True
+and a new executable hash. See the
+[attempt report](../validation/milestone-16/windows/matrix-attempt-report.json).
+Failure step/log and actual Get-FileHash output remain unavailable. Preserve the
+attempt and diagnose the failed check before rerunning; current native acceptance
+remains pending. Earlier user/hash/source reports retain their capture-time scope.

@@ -1,5 +1,16 @@
 # CPRS Chart recreation: current handoff
 
+Latest Windows update: a new M16 matrix receipt summary reports passed=False,
+matrix_requested=True and executable SHA256
+`0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758`.
+See the [attempt report](../validation/milestone-16/windows/matrix-attempt-report.json).
+The full receipt, failed step/log and actual Get-FileHash output are not supplied.
+Exact next action: preserve this attempt, obtain its failure field/failed-check
+log tail and diagnose before rerunning or rebuilding. Current native/listening
+acceptance remains pending; the earlier pass report is not applied to this new EXE.
+
+The following report/hash/source checkpoints retain earlier observations.
+
 Current acceptance update: the user reported **“all pass”** for the supplied ten-
 combination visual/keyboard and Narrator checklist. The
 [raw report](../validation/milestone-16/windows/user-acceptance.json) is retained.
@@ -10,7 +21,7 @@ M16 applicability is unresolved; do not promote current-build acceptance yet.
 The user subsequently reported Git HEAD `1617e03` and a missing M16 Windows
 matrix receipt. That commit has the same tracked runtime/build inputs as the
 checked M16 PR head. The [source checkpoint](../validation/milestone-16/windows/source-checkpoint-review.json)
-records the evidence. Exact next action: follow the
+records the evidence. At that earlier checkpoint, the next action was the
 [Windows rebuild guide](m16-windows-rebuild.md), preserving the old EXE/evidence
 before forcing a fresh desktop-package build and matrix/verifier run. Return
 matching receipt/hash, then repeat native/listening checks on the verified build.

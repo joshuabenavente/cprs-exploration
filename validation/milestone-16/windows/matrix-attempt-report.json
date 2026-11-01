@@ -1,0 +1,22 @@
+{
+  "protocol": "M16",
+  "recorded_at_utc": "2026-11-01T22:10:20.516208+00:00",
+  "scope": "User-pasted summary of a failed Windows M16 automated matrix attempt; not a raw source-bound runner receipt",
+  "reported_receipt_path": "validation/milestone-16/windows/automated.json",
+  "reported_fields": {
+    "protocol": "M16",
+    "passed": false,
+    "matrix_requested": true,
+    "executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
+  },
+  "failure_step": null,
+  "failed_log_received": false,
+  "actual_get_file_hash_result_received": false,
+  "limits": [
+    "Only selected receipt fields were supplied; complete source/build/log bindings are not available here.",
+    "Get-FileHash was shown as a command without its output; equality with the current executable is not established.",
+    "This new receipt hash differs from the historical M12-matching hash supplied earlier; the earlier all-pass report does not establish acceptance of this rebuilt executable."
+  ],
+  "next_action": "Preserve this receipt/logs; obtain failure field and failed-check log tail before rerunning or changing source",
+  "current_m16_native_acceptance_complete": false
+}

@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M16 source revision confirmed by user; Windows EXE hash matches historical M12 and M16 matrix receipt is absent; rebuild/binding and current native acceptance pending",
+  "condition": "M16 delivered; Windows M16 matrix attempt reports failed with a new receipt executable hash; failed step/log needed for diagnosis; current-build native acceptance pending",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -27,8 +27,8 @@
       "id": "M16-WINDOWS",
       "priority": "P1",
       "task": "Fresh combined current-build Windows matrix and native visual/keyboard/Narrator acceptance covering selector and all current readers",
-      "status": "Reported source commit has M16 inputs; Windows matrix receipt absent and EXE hash matches old M12 record; current-build native acceptance unresolved",
-      "dependency": "Fresh M16 Windows matrix/verifier and matching EXE hash, then native/listening observations"
+      "status": "New M16 Windows matrix receipt reports passed=False and matrix_requested=True; failed step/log needed; native acceptance unresolved",
+      "dependency": "Failed Windows step/log and source-bound receipt verification; then fresh native/listening results on verified build"
     },
     {
       "id": "M15-WINDOWS",
@@ -191,8 +191,8 @@
     }
   ],
   "next_action": {
-    "task": "Follow docs/m16-windows-rebuild.md: preserve old Windows EXE/evidence, force desktop-package rebuild, run M16 matrix/verifier and return matching receipt/hash; repeat native samples on verified build",
-    "dependency": "Windows desktop session; commands require no reset/source update at reported 1617e03",
+    "task": "Obtain Windows automated.json failure field and failed-check log tail; preserve attempt evidence and diagnose before rerunning or rebuilding",
+    "missing_information": "failure/check names/exit codes and failed log tail; actual Get-FileHash output",
     "project_overview": "docs/project-overview-m16.md",
     "standing_delivery_authorization": "docs/delivery-workflow.md"
   },
@@ -317,12 +317,14 @@
     "acceptance_receipt": "validation/milestone-16/acceptance.json",
     "synthetic_visual_review": "minimum-200 selector capture inspected; not native acceptance",
     "windows_code_build_ci": "Passed at PR head 34019be9aa7a867f9d4d3022c125e26e704db73e in run 41351388624; native/speech separate",
-    "windows_native_visual_keyboard": "user-reported pass for ten samples; M16 applicability unresolved because supplied hash matches historical M12",
-    "narrator_listening": "user-reported pass for ten samples; M16 applicability unresolved because supplied hash matches historical M12",
+    "windows_native_visual_keyboard": "pending retest on verified rebuilt executable; earlier pass report retained separately",
+    "narrator_listening": "pending retest on verified rebuilt executable; earlier pass report retained separately",
     "milestone_complete": false,
     "windows_user_acceptance_receipt": "validation/milestone-16/windows/user-acceptance.json",
     "windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
-    "windows_exact_build_binding": "Reported source matches checked M16 inputs; supplied EXE hash matches M12; no M16 Windows matrix receipt. Rebuild required to verify current artifact."
+    "windows_exact_build_binding": "new M16 receipt hash reported; full receipt/source/logs and actual file-hash comparison unavailable",
+    "windows_automated_matrix": "user-reported failed: M16 protocol, matrix_requested=True; failure step/log not supplied",
+    "windows_matrix_receipt_executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
   },
   "publication": {
     "state": "M16 merged; topic branch pruned locally/remotely",
@@ -664,7 +666,7 @@
     "sample_count": 10,
     "native_visual_keyboard": "user-reported pass",
     "narrator_listening": "user-reported pass",
-    "exact_build_binding": "unresolved: M16 source reported, old matching hash, no M16 Windows matrix receipt",
+    "exact_build_binding": "failed M16 attempt; full bindings and actual file-hash comparison pending",
     "independent_native_or_listening_rerun": false,
     "supplied_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
     "binding_review": "validation/milestone-16/windows/build-binding-review.json",
@@ -672,6 +674,9 @@
     "user_reported_source_commit": "1617e03b65f2f869b4a37e99e2d41f5766cf77d9",
     "reported_windows_matrix_receipt": "missing",
     "source_checkpoint_review": "validation/milestone-16/windows/source-checkpoint-review.json",
-    "rebuild_instructions": "docs/m16-windows-rebuild.md"
+    "rebuild_instructions": "docs/m16-windows-rebuild.md",
+    "current_matrix_attempt_report": "validation/milestone-16/windows/matrix-attempt-report.json",
+    "current_matrix_status": "failed (user-pasted receipt summary)",
+    "current_matrix_receipt_executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
   }
 }
