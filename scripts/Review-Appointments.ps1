@@ -5,6 +5,13 @@ param(
     [switch]$Matrix
 )
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'Get-MockFileSha256.ps1')
+$reviewRoot = Split-Path -Parent $PSScriptRoot
+$reviewBinary = Join-Path $reviewRoot 'target/debug/cprs-chart-mock.exe'
+$reviewReceipt = Get-Content -LiteralPath (Join-Path $reviewRoot 'validation/milestone-10/automated.json') -Raw | ConvertFrom-Json
+if ((Get-MockFileSha256 -LiteralPath $reviewBinary) -ne $reviewReceipt.executable_sha256) {
+    throw 'Historical M10 review requires its recorded executable. Use Review-CoverSheet.ps1 for M11; do not overwrite M10 logs.'
+}
 if ($Matrix) {
     foreach ($scale in @('1', '1.25', '1.5', '1.75', '2')) {
         if ([double]::Parse($scale, [Globalization.CultureInfo]::InvariantCulture) -lt

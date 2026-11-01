@@ -1,0 +1,21 @@
+{
+  "scope": "Local tooling self-review, distinct from native UI/CI",
+  "checks": [
+    {
+      "name": "historical-launcher-guard",
+      "exit_code": 1,
+      "passed": true,
+      "observed": "Historical M10 review requires its recorded executable. Use Review-CoverSheet.ps1 for M11; do not overwrite M10 logs.\nAt C:\\Users\\soapo\\Documents\\AI-Work\\projects\\cprs-exploration\\scripts\\Review-Appointments.ps1:13 char:5\n+     throw 'Historical M10 review requires its recorded executable. Us ...\n+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (Historical M10 ...write M10 logs.:String) [], RuntimeException\n    + FullyQualifiedErrorId : Historical M10 review requires its recorded executable. Use Review-CoverSheet.ps1 for M1 \n   1; do not overwrite M10 logs."
+    },
+    {
+      "name": "historical-output-path-guard",
+      "exit_code": 1,
+      "passed": true,
+      "observed": "C:\\Users\\soapo\\Documents\\AI-Work\\projects\\cprs-exploration\\scripts\\Test-MockChart.ps1 : Cannot validate argument on \nparameter 'Milestone'. The argument \"10\" does not belong to the set \"11\" specified by the ValidateSet attribute. \nSupply an argument that is in the set and then try the command again.\n    + CategoryInfo          : InvalidData: (:) [Test-MockChart.ps1], ParentContainsErrorRecordException\n    + FullyQualifiedErrorId : ParameterArgumentValidationError,Test-MockChart.ps1"
+    }
+  ],
+  "python_scripts": "Four new/active verifier scripts compiled via py_compile",
+  "powershell_syntax": "Five affected PowerShell files parsed without errors",
+  "historical_receipts": "Both negative guards ran before writing historical output; full historical-byte verification follows",
+  "review": "Local self-review only; no independent agent review"
+}

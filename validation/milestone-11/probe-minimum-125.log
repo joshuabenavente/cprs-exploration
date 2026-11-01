@@ -1,0 +1,181 @@
+M11_CHECK search-out-of-order PASS elapsed_ms=914
+M11_CHECK commit-exact-duplicate PASS elapsed_ms=1435
+M11_CHECK cover-close-rejects-late-detail PASS elapsed_ms=1842
+M11_CHECK vitals-explicit-close-race PASS elapsed_ms=2268
+M11_CHECK vitals-close-retains-row PASS elapsed_ms=2294
+M11_CHECK vitals-error PASS elapsed_ms=2726
+M11_CHECK vitals-retry-real-timer PASS elapsed_ms=3112
+M11_CHECK vitals-late-error-tab PASS elapsed_ms=3542
+M11_CHECK vitals-selector-cancel PASS elapsed_ms=3949
+M11_CHECK medications-explicit-close-race PASS elapsed_ms=4343
+M11_CHECK medications-close-retains-row PASS elapsed_ms=4381
+M11_CHECK medications-error PASS elapsed_ms=4827
+M11_CHECK medications-retry-real-timer PASS elapsed_ms=5244
+M11_CHECK medications-late-error-tab PASS elapsed_ms=5653
+M11_CHECK medications-selector-cancel PASS elapsed_ms=6042
+M11_CHECK appointments-explicit-close-race PASS elapsed_ms=6435
+M11_CHECK appointments-close-retains-row PASS elapsed_ms=6468
+M11_CHECK appointments-error PASS elapsed_ms=6960
+M11_CHECK appointments-retry-real-timer PASS elapsed_ms=7338
+M11_CHECK appointments-late-error-tab PASS elapsed_ms=7746
+M11_CHECK appointments-selector-cancel PASS elapsed_ms=8146
+M11_CHECK notes-list-real-delay PASS elapsed_ms=9128
+M11_CHECK notes-out-of-order PASS elapsed_ms=10387
+M11_CHECK notes-reading-focus PASS elapsed_ms=10413
+M11_CHECK pending-note-open-selector PASS elapsed_ms=10706
+M11_CHECK patient-commit-before-old-note PASS elapsed_ms=11588
+M11_CHECK vitals-same-id-new-owner PASS elapsed_ms=11993
+M11_CHECK medications-same-id-new-owner PASS elapsed_ms=12408
+M11_CHECK appointments-same-id-new-owner PASS elapsed_ms=12835
+M11_CHECK new-patient-notes-list PASS elapsed_ms=13163
+M11_CHECK same-note-id-new-owner PASS elapsed_ms=13518
+M11_CHECK late-orders-list-after-tab-change PASS elapsed_ms=14469
+M11_CHECK results-list-real-delay PASS elapsed_ms=15409
+M11_CHECK reports-explicit-and-out-of-order PASS elapsed_ms=16596
+M11_CHECK report-close-invalidates-inflight PASS elapsed_ms=16947
+M11_CHECK empty-report-is-success PASS elapsed_ms=17289
+M11_CHECK filter-invalidates-pending-report PASS elapsed_ms=18422
+M11_CHECK results-list-error PASS elapsed_ms=18663
+M11_CHECK results-list-retry-real-timer PASS elapsed_ms=18906
+M11_CHECK late-list-error-after-recovery PASS elapsed_ms=19137
+M11_CHECK recover-then-orders-error PASS elapsed_ms=19363
+M11_CHECK order-selection-is-explicit PASS elapsed_ms=19784
+M11_CHECK order-detail-retry-real-timer PASS elapsed_ms=20127
+M11_CHECK late-order-error-after-tab-change PASS elapsed_ms=20468
+M11_CHECK order-recovery-and-slow-list PASS elapsed_ms=21420
+M11_CHECK pending-order-cancel-selector PASS elapsed_ms=22613
+M11_CHECK acknowledgment-search PASS elapsed_ms=22877
+M11_CHECK acknowledgment-required PASS elapsed_ms=22906
+M11_CHECK acknowledgment-decline PASS elapsed_ms=22966
+M11_CHECK acknowledgment-accept PASS elapsed_ms=23390
+M11_CHECK denied-patient-search PASS elapsed_ms=23660
+M11_CHECK denied-patient-keeps-chart PASS elapsed_ms=23692
+M11_CHECK empty-patient-search PASS elapsed_ms=23916
+M11_CHECK empty-patient-commit PASS elapsed_ms=24318
+M11_CHECK empty-vitals PASS elapsed_ms=24346
+M11_CHECK empty-medications PASS elapsed_ms=24375
+M11_CHECK empty-appointments PASS elapsed_ms=24401
+M11_CHECK empty-notes PASS elapsed_ms=24624
+M11_CHECK empty-results PASS elapsed_ms=24853
+M11_CHECK empty-orders PASS elapsed_ms=25075
+M11_CHECK review-patient-search PASS elapsed_ms=25323
+M11_CHECK review-patient-commit PASS elapsed_ms=25704
+M11_CHECK review-results-list PASS elapsed_ms=25946
+M11_CHECK results-cancel-focus PASS elapsed_ms=26291
+M11_CHECK review-long-unicode-report PASS elapsed_ms=26768
+M11_CHECK review-vitals-layout PASS elapsed_ms=27176
+M11_CHECK review-vitals-closed PASS elapsed_ms=27236
+M11_CHECK review-medications-layout PASS elapsed_ms=27627
+M11_CHECK review-medications-closed PASS elapsed_ms=27683
+M11_CHECK review-appointments-layout PASS elapsed_ms=28093
+M11_CHECK review-appointments-closed PASS elapsed_ms=28154
+M11_LAYOUT panel=0 top=214 bottom=480 table_bottom=400 view_top=410 help_bottom=468 viewport_top=214 viewport_bottom=588 content_height=1249 scroll_y=-73
+M11_CHECK layout-problems PASS elapsed_ms=28183
+M11_LAYOUT panel=1 top=214 bottom=480 table_bottom=400 view_top=410 help_bottom=468 viewport_top=214 viewport_bottom=588 content_height=1249 scroll_y=-73
+M11_CHECK layout-allergies PASS elapsed_ms=28236
+M11_LAYOUT panel=2 top=402 bottom=668 table_bottom=588 view_top=598 help_bottom=656 viewport_top=214 viewport_bottom=588 content_height=1249 scroll_y=-169
+M11_CHECK layout-vitals PASS elapsed_ms=28272
+M11_LAYOUT panel=3 top=402 bottom=668 table_bottom=588 view_top=598 help_bottom=656 viewport_top=214 viewport_bottom=588 content_height=1249 scroll_y=-453
+M11_CHECK layout-medications PASS elapsed_ms=28322
+M11_LAYOUT panel=4 top=402 bottom=668 table_bottom=588 view_top=598 help_bottom=656 viewport_top=214 viewport_bottom=588 content_height=1249 scroll_y=-737
+M11_CHECK layout-appointments PASS elapsed_ms=28365
+M11_CHECK reveal-appointments-view PASS elapsed_ms=28411
+M11_CHECK reveal-medications-view PASS elapsed_ms=28457
+M11_CHECK reveal-vitals-view PASS elapsed_ms=28498
+M11_CHECK reveal-allergies-view PASS elapsed_ms=28543
+M11_CHECK reveal-problems-view PASS elapsed_ms=28589
+M11_CHECK layout-fixture-footer PASS elapsed_ms=28616
+M11_DELIVERY search  "" generation=1 applied=false
+M11_DELIVERY search  "MORGAN" generation=4 applied=true
+M11_DELIVERY search  "" generation=2 applied=false
+M11_DELIVERY search  "M" generation=3 applied=false
+M11_DELIVERY chart SYNTH-004 "SYNTH-004" generation=5 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "PROB-01" generation=3 applied=false
+M11_DELIVERY cover-detail SYNTH-004 "ALLERGY-01" generation=5 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "VITAL-01" generation=7 applied=false
+M11_DELIVERY cover-detail SYNTH-004 "VITAL-03" generation=9 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "VITAL-03" generation=11 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "VITAL-03" generation=12 applied=true
+M11_DELIVERY notes-list SYNTH-004 "" generation=4 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "VITAL-03" generation=13 applied=false
+M11_DELIVERY search  "" generation=5 applied=false
+M11_DELIVERY cover-detail SYNTH-004 "VITAL-01" generation=16 applied=false
+M11_DELIVERY cover-detail SYNTH-004 "MED-01" generation=19 applied=false
+M11_DELIVERY cover-detail SYNTH-004 "MED-03" generation=21 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "MED-03" generation=23 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "MED-03" generation=24 applied=true
+M11_DELIVERY notes-list SYNTH-004 "" generation=8 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "MED-03" generation=26 applied=false
+M11_DELIVERY search  "" generation=7 applied=false
+M11_DELIVERY cover-detail SYNTH-004 "MED-01" generation=29 applied=false
+M11_DELIVERY cover-detail SYNTH-004 "APPT-01" generation=32 applied=false
+M11_DELIVERY cover-detail SYNTH-004 "APPT-03" generation=34 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "APPT-03" generation=36 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "APPT-03" generation=37 applied=true
+M11_DELIVERY notes-list SYNTH-004 "" generation=12 applied=true
+M11_DELIVERY cover-detail SYNTH-004 "APPT-03" generation=39 applied=false
+M11_DELIVERY search  "" generation=9 applied=false
+M11_DELIVERY cover-detail SYNTH-004 "APPT-01" generation=42 applied=false
+M11_DELIVERY notes-list SYNTH-004 "" generation=16 applied=false
+M11_DELIVERY notes-list SYNTH-004 "" generation=17 applied=true
+M11_DELIVERY note-body SYNTH-004 "NOTE-02" generation=19 applied=true
+M11_DELIVERY note-body SYNTH-004 "NOTE-01" generation=18 applied=false
+M11_DELIVERY search  "" generation=11 applied=false
+M11_DELIVERY search  "MORGAN" generation=12 applied=true
+M11_DELIVERY chart SYNTH-003 "SYNTH-003" generation=14 applied=true
+M11_DELIVERY note-body SYNTH-004 "NOTE-01" generation=20 applied=false
+M11_DELIVERY cover-detail SYNTH-003 "VITAL-01" generation=48 applied=true
+M11_DELIVERY cover-detail SYNTH-003 "MED-01" generation=50 applied=true
+M11_DELIVERY cover-detail SYNTH-003 "APPT-01" generation=52 applied=true
+M11_DELIVERY notes-list SYNTH-003 "" generation=22 applied=true
+M11_DELIVERY note-body SYNTH-003 "NOTE-01" generation=26 applied=true
+M11_DELIVERY orders-list SYNTH-003 "" generation=17 applied=false
+M11_DELIVERY results-list SYNTH-003 "" generation=18 applied=true
+M11_DELIVERY notes-list SYNTH-003 "" generation=21 applied=false
+M11_DELIVERY orders-list SYNTH-003 "" generation=18 applied=false
+M11_DELIVERY results-list SYNTH-003 "" generation=19 applied=true
+M11_DELIVERY report-body SYNTH-003 "REPORT-02" generation=23 applied=true
+M11_DELIVERY report-body SYNTH-003 "REPORT-01" generation=21 applied=false
+M11_DELIVERY report-body SYNTH-003 "REPORT-04" generation=25 applied=false
+M11_DELIVERY report-body SYNTH-003 "REPORT-04" generation=27 applied=true
+M11_DELIVERY results-list SYNTH-003 "no invented match" generation=20 applied=true
+M11_DELIVERY report-body SYNTH-003 "REPORT-01" generation=29 applied=false
+M11_DELIVERY results-list SYNTH-003 "no invented match" generation=21 applied=true
+M11_DELIVERY results-list SYNTH-003 "no invented match" generation=22 applied=true
+M11_DELIVERY results-list SYNTH-003 "no invented match" generation=24 applied=true
+M11_DELIVERY results-list SYNTH-003 "no invented match" generation=23 applied=false
+M11_DELIVERY results-list SYNTH-003 "no invented match" generation=25 applied=false
+M11_DELIVERY orders-list SYNTH-003 "" generation=21 applied=false
+M11_DELIVERY orders-list SYNTH-003 "" generation=22 applied=true
+M11_DELIVERY order-body SYNTH-003 "ORDER-01" generation=24 applied=true
+M11_DELIVERY order-body SYNTH-003 "ORDER-01" generation=25 applied=true
+M11_DELIVERY results-list SYNTH-003 "" generation=28 applied=true
+M11_DELIVERY order-body SYNTH-003 "ORDER-01" generation=26 applied=false
+M11_DELIVERY orders-list SYNTH-003 "" generation=25 applied=false
+M11_DELIVERY orders-list SYNTH-003 "" generation=26 applied=true
+M11_DELIVERY search  "" generation=13 applied=false
+M11_DELIVERY orders-list SYNTH-003 "" generation=28 applied=true
+M11_DELIVERY order-body SYNTH-003 "ORDER-01" generation=32 applied=false
+M11_DELIVERY search  "" generation=15 applied=false
+M11_DELIVERY search  "PATEL" generation=16 applied=true
+M11_DELIVERY chart SYNTH-005 "SYNTH-005" generation=19 applied=true
+M11_DELIVERY search  "" generation=17 applied=false
+M11_DELIVERY search  "RIVERA" generation=18 applied=true
+M11_DELIVERY search  "SYNTH-002" generation=19 applied=true
+M11_DELIVERY chart SYNTH-002 "SYNTH-002" generation=23 applied=true
+M11_DELIVERY notes-list SYNTH-002 "" generation=34 applied=false
+M11_DELIVERY notes-list SYNTH-002 "" generation=35 applied=true
+M11_DELIVERY results-list SYNTH-002 "" generation=37 applied=true
+M11_DELIVERY orders-list SYNTH-002 "" generation=36 applied=true
+M11_DELIVERY search  "" generation=20 applied=false
+M11_DELIVERY search  "SYNTH-001" generation=21 applied=true
+M11_DELIVERY chart SYNTH-001 "SYNTH-001" generation=26 applied=true
+M11_DELIVERY results-list SYNTH-001 "" generation=42 applied=true
+M11_DELIVERY search  "" generation=22 applied=false
+M11_DELIVERY results-list SYNTH-001 "" generation=44 applied=true
+M11_DELIVERY report-body SYNTH-001 "REPORT-03" generation=56 applied=true
+M11_DELIVERY cover-detail SYNTH-001 "VITAL-03" generation=73 applied=true
+M11_DELIVERY cover-detail SYNTH-001 "MED-03" generation=76 applied=true
+M11_DELIVERY cover-detail SYNTH-001 "APPT-03" generation=79 applied=true
+M11_INTEGRATED_PASS cases=82 deliveries=92 rejected=38 elapsed_ms=28679
+M11_WINDOW client_width_px=1225 client_height_px=850 application_scale=1.25

@@ -1,0 +1,21 @@
+{
+  "scope": "Remote CI availability/status only, not a CI pass",
+  "command": [
+    "gh",
+    "run",
+    "list",
+    "--repo",
+    "joshuabenavente/cprs-exploration",
+    "--branch",
+    "codex/milestone-11-hardening",
+    "--json",
+    "databaseId,conclusion,status,headSha"
+  ],
+  "exit_code": 0,
+  "stdout": "[]",
+  "stderr": "",
+  "workflow_sha256": "df8cbf5735bd1d7468a09c3de7102b97944811d0099d28fe6901c75736d2c748",
+  "m11_publication": "not performed",
+  "ci_passed": false,
+  "status": "No M11 run; workflow remains local"
+}
