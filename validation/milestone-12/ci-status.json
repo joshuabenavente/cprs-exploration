@@ -1,0 +1,154 @@
+{
+  "protocol": "M12",
+  "scope": "Actual M12 implementation PR CI: Windows desktop code/build and Ubuntu core; final follow-up head checks remain linked from PR #4",
+  "recorded_at": "2026-11-01T01:56:27.553746+00:00",
+  "ci_passed": true,
+  "commit": "d0e83ebaf5d54f5ec538d8f8f5e85ba08c51c98a",
+  "workflow_sha256": "c3392629e1cf455285c7f5686346e89d74892ba47b8932778f7087abb7d91ded",
+  "runs": [
+    {
+      "conclusion": "success",
+      "databaseId": 41262723913,
+      "event": "pull_request",
+      "headBranch": "work/m12-evidence-and-native-review",
+      "headSha": "d0e83ebaf5d54f5ec538d8f8f5e85ba08c51c98a",
+      "jobs": [
+        {
+          "completedAt": "2026-11-01T01:54:15Z",
+          "conclusion": "success",
+          "databaseId": 124719100261,
+          "name": "windows-desktop-build",
+          "startedAt": "2026-11-01T01:50:22Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-01T01:50:24Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-01T01:50:23Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:50:31Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 2,
+              "startedAt": "2026-11-01T01:50:24Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:50:42Z",
+              "conclusion": "success",
+              "name": "Install pinned Rust toolchain",
+              "number": 3,
+              "startedAt": "2026-11-01T01:50:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:54:09Z",
+              "conclusion": "success",
+              "name": "Bootstrap locked dependencies, then check offline",
+              "number": 4,
+              "startedAt": "2026-11-01T01:50:42Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:54:11Z",
+              "conclusion": "success",
+              "name": "Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+              "number": 5,
+              "startedAt": "2026-11-01T01:54:09Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:54:13Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 10,
+              "startedAt": "2026-11-01T01:54:11Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:54:13Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "startedAt": "2026-11-01T01:54:13Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41262723913/job/124719100261"
+        },
+        {
+          "completedAt": "2026-11-01T01:50:42Z",
+          "conclusion": "success",
+          "databaseId": 124719100411,
+          "name": "portable-core",
+          "startedAt": "2026-11-01T01:50:22Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-01T01:50:23Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-01T01:50:23Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:50:24Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 2,
+              "startedAt": "2026-11-01T01:50:23Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:50:33Z",
+              "conclusion": "success",
+              "name": "Install pinned Rust toolchain",
+              "number": 3,
+              "startedAt": "2026-11-01T01:50:24Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:50:40Z",
+              "conclusion": "success",
+              "name": "Portable core checks",
+              "number": 4,
+              "startedAt": "2026-11-01T01:50:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:50:40Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
+              "number": 8,
+              "startedAt": "2026-11-01T01:50:40Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-01T01:50:40Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "startedAt": "2026-11-01T01:50:40Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41262723913/job/124719100411"
+        }
+      ],
+      "status": "completed",
+      "url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41262723913",
+      "workflowName": "Mock code checks"
+    }
+  ],
+  "status": "Windows desktop code/build and Ubuntu portable-core PR CI passed on M12 implementation d0e83eb",
+  "publication_pr": "https://github.com/joshuabenavente/cprs-exploration/pull/4",
+  "limits": [
+    "CI does not establish native keyboard, visual layout or spoken output.",
+    "This receipt pins the published implementation commit; final follow-up commit checks are recorded by PR #4."
+  ]
+}

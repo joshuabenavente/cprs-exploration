@@ -1,0 +1,26 @@
+{
+  "protocol": "M12",
+  "scope": "Supplemental user-reported listening outcomes for M10 and M12; historical receipts stay unchanged",
+  "recorded_at": "2026-11-01T01:50:40.830034+00:00",
+  "verbatim_report": "m10 and m12 pass. commit push merge and prune then reccomend next task",
+  "build_binding": "Milestone names resolve to the builds and separate listening checklists identified in the preceding handoff; the user did not repeat hashes in this message",
+  "reports": {
+    "10": {
+      "result": "user-reported pass",
+      "executable_sha256": "de217b49353b923172e62f7500eb20322aecec2cc0aa7c275d8c764e2d2288fd",
+      "checklist": "docs/milestone-10.md#separate-appointments-listening-checklist",
+      "scope": "Separate historical M10 Appointments Narrator/listening checklist"
+    },
+    "12": {
+      "result": "user-reported pass",
+      "executable_sha256": "21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4",
+      "checklist": "docs/milestone-12.md#current-build-listening-checklist",
+      "scope": "Current-build M12 affected-controls Narrator/listening checklist for all five Cover Sheet panels"
+    }
+  },
+  "limits": [
+    "User-reported listening only; no audio capture or independent speech verification.",
+    "This report does not establish the separate native visual/keyboard size/scale matrix.",
+    "Historical M10/M11 acceptance receipts retain their original capture-time status; this supplemental report records the later listening outcome."
+  ]
+}

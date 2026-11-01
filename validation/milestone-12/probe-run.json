@@ -1,0 +1,77 @@
+﻿{
+    "protocol":  "M12",
+    "scope":  "Callback/binding/geometry probes only; no native input or visual review",
+    "executable_sha256":  "21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4",
+    "samples":  [
+                    {
+                        "size":  "default",
+                        "scale":  "1",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-default-100.log",
+                        "log_sha256":  "c2f8532e70fb060ca617486d6ffcb75f6f9c3ba1dc9371bf3a2cea91e907beda"
+                    },
+                    {
+                        "size":  "minimum",
+                        "scale":  "1",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-minimum-100.log",
+                        "log_sha256":  "74faf59b834a2550e4032cbc64c5893d82ee512f5084cd35bcc5b14943a1a75a"
+                    },
+                    {
+                        "size":  "default",
+                        "scale":  "1.25",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-default-125.log",
+                        "log_sha256":  "bcbaf04e3d08f72e05c9ac49fe5226d8528e9659637368f4b9c7d810017debbf"
+                    },
+                    {
+                        "size":  "minimum",
+                        "scale":  "1.25",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-minimum-125.log",
+                        "log_sha256":  "e7424f17fd1f09373d49ee3d953d9e39515c0b3f64b22042ea0684bbfead3235"
+                    },
+                    {
+                        "size":  "default",
+                        "scale":  "1.5",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-default-150.log",
+                        "log_sha256":  "71f48aa8f09ba17775afd2b1a7aebb4fd85f9f3290816d20d7cc43aecec469bd"
+                    },
+                    {
+                        "size":  "minimum",
+                        "scale":  "1.5",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-minimum-150.log",
+                        "log_sha256":  "f74dbbdbf635bbe1bb84d62013b30a86387299c2b0fc75a8e08cf658d8062089"
+                    },
+                    {
+                        "size":  "default",
+                        "scale":  "1.75",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-default-175.log",
+                        "log_sha256":  "ce425270d2d447397df6c283ef5f968f65671e6ecda8bf06ada4770d35c0b84c"
+                    },
+                    {
+                        "size":  "minimum",
+                        "scale":  "1.75",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-minimum-175.log",
+                        "log_sha256":  "2d6bf2f6a2747b1e0a55159979c2a05128843183bfbbf4a773643813c2422d03"
+                    },
+                    {
+                        "size":  "default",
+                        "scale":  "2",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-default-200.log",
+                        "log_sha256":  "4ad1a1bf8173f6c922e0f36ccf6d0e9c6f95b05358e0f31d623fd044db58ecb4"
+                    },
+                    {
+                        "size":  "minimum",
+                        "scale":  "2",
+                        "exit_code":  0,
+                        "log":  "validation/milestone-12/probe-minimum-200.log",
+                        "log_sha256":  "f3a5ffef88f5f2a962fe8a4bd927f1acbf74600226fd009efaa2bfcc01ea8bae"
+                    }
+                ]
+}

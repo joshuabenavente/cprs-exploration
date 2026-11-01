@@ -1,0 +1,40 @@
+{
+  "protocol": "M12",
+  "scope": "Current M12 executable native/listening status; availability attempts are not native test passes",
+  "executable_sha256": "21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4",
+  "status": "pending; supported computer-use native pipe unavailable after retry/reset",
+  "native_layout_passed": false,
+  "native_keyboard_passed": false,
+  "attempts": [
+    {
+      "operation": "list_windows",
+      "at": "2026-11-01T01:33:47.174Z",
+      "passed": false,
+      "error": "Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)"
+    },
+    {
+      "operation": "list_windows retry after 2 seconds",
+      "at": "2026-11-01T01:33:53.677Z",
+      "passed": false,
+      "error": "Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)"
+    },
+    {
+      "operation": "list_windows after reset/reinitialize",
+      "at": "2026-11-01T01:34:02.321Z",
+      "passed": false,
+      "error": "Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)"
+    }
+  ],
+  "captures": [],
+  "samples": [],
+  "m12_listening": "user-reported pass",
+  "m10_appointments_listening": "user-reported pass",
+  "m10_executable_sha256": "de217b49353b923172e62f7500eb20322aecec2cc0aa7c275d8c764e2d2288fd",
+  "historical_m11_listening": {
+    "status": "user-reported pass on historical executable only",
+    "executable_sha256": "1673037d3f1e90b671cbf910ebc53fcee08971ba997160d2275e3fbe1ccdfdd8",
+    "receipt": "validation/milestone-11/native-status.json"
+  },
+  "next": "Restore the supported computer-use helper and complete the separate native visual/keyboard matrix with Review-CoverSheet.ps1 -Matrix. M10 and M12 listening were reported passed separately.",
+  "listening_reports": "validation/milestone-12/listening-reports.json"
+}

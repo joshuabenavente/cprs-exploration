@@ -1,0 +1,72 @@
+﻿{
+    "protocol":  "M12",
+    "checked_at":  "2026-10-31T19:36:37.1930383-06:00",
+    "scope":  "Milestone 12 shared Cover Sheet hardening and integrated chart validation",
+    "passed":  true,
+    "rustc":  "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "cargo":  "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "rustc_verbose":  "rustc 1.99.1 (58cf8f9c3 2026-10-13)\r\nbinary: rustc\r\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\r\ncommit-date: 2026-10-13\r\nhost: x86_64-pc-windows-msvc\r\nrelease: 1.99.1\r\nLLVM version: 23.1.1",
+    "os":  "Microsoft Windows NT 10.0.26300.0",
+    "architecture":  "X64",
+    "powershell":  "5.1.26100.9711",
+    "dependency_bootstrap_requested":  false,
+    "dependency_policy":  "Optional cargo fetch --locked may access the network; subsequent checks use --locked --offline. Registry caches may already be populated.",
+    "desktop_session_checks":  "immediate callbacks and real-timer journey requested in this desktop session",
+    "checks":  [
+                   {
+                       "name":  "format",
+                       "command":  "cargo fmt --all -- --check",
+                       "exit_code":  0,
+                       "passed":  true,
+                       "log":  "validation/milestone-12/format.log",
+                       "log_sha256":  "f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5"
+                   },
+                   {
+                       "name":  "clippy",
+                       "command":  "cargo clippy --workspace --all-targets --locked --offline -- -D warnings",
+                       "exit_code":  0,
+                       "passed":  true,
+                       "log":  "validation/milestone-12/clippy.log",
+                       "log_sha256":  "68163a7f96a0ac4a7625e703453fb9f828998b9194a3e3cda90ca6bd26512815"
+                   },
+                   {
+                       "name":  "tests",
+                       "command":  "cargo test --workspace --locked --offline",
+                       "exit_code":  0,
+                       "passed":  true,
+                       "log":  "validation/milestone-12/tests.log",
+                       "log_sha256":  "42e774a834e944b047d800d5473a11023d285798c3d121693109ec9c5e0adfde"
+                   },
+                   {
+                       "name":  "build",
+                       "command":  "cargo build -p cprs-chart-mock --locked --offline",
+                       "exit_code":  0,
+                       "passed":  true,
+                       "log":  "validation/milestone-12/build.log",
+                       "log_sha256":  "0465f3cf3659be637fa843c36a9056627b8f77f428a3f9897ddcf18e8f71844e"
+                   },
+                   {
+                       "name":  "callbacks",
+                       "command":  "cargo run -p cprs-chart-mock --locked --offline -- --smoke-check",
+                       "exit_code":  0,
+                       "passed":  true,
+                       "log":  "validation/milestone-12/callbacks.log",
+                       "log_sha256":  "3faf93889d77be62fe534b08ddf44500244d1673a1fd7b71b6f4d3b4763bb31f"
+                   },
+                   {
+                       "name":  "integrated",
+                       "command":  "cargo run -p cprs-chart-mock --locked --offline -- --integration-check",
+                       "exit_code":  0,
+                       "passed":  true,
+                       "log":  "validation/milestone-12/integrated.log",
+                       "log_sha256":  "0f4e8af4a213754a80fdb58bd40373ae8afb40b0536cb2ef2a9f3b31b483fc5c"
+                   }
+               ],
+    "executable":  "target/debug/cprs-chart-mock.exe",
+    "executable_sha256":  "21f1cde24ce21d39218846ba8a183f9263475207aacae5f7c75b0167153434c4",
+    "evidence_limits":  [
+                            "Callback smoke uses immediate responses; the separate integrated journey uses real timers and checks accepted/rejected deliveries and UI bindings. It does not inject physical keys or verify speech.",
+                            "Visual and keyboard observations are recorded separately.",
+                            "No clinical server or original CPRS process is involved."
+                        ]
+}

@@ -1,0 +1,12 @@
+test_failed_step_invalidates_receipt_and_removes_later_log (__main__.RunnerTests.test_failed_step_invalidates_receipt_and_removes_later_log) ... ok
+test_historical_milestone_is_rejected_before_output (__main__.RunnerTests.test_historical_milestone_is_rejected_before_output) ... ok
+test_silent_steps_create_hashed_logs_only_in_m12 (__main__.RunnerTests.test_silent_steps_create_hashed_logs_only_in_m12) ... ok
+test_changed_step_log_is_rejected (__main__.VerifierTests.test_changed_step_log_is_rejected) ... ok
+test_current_log_is_bound_to_automation_receipt (__main__.VerifierTests.test_current_log_is_bound_to_automation_receipt) ... ok
+test_historical_log_protocol_is_rejected (__main__.VerifierTests.test_historical_log_protocol_is_rejected) ... ok
+test_historical_receipt_protocol_is_rejected (__main__.VerifierTests.test_historical_receipt_protocol_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.676s
+
+OK
