@@ -1,5 +1,11 @@
 # Integrated mock Chart acceptance contract
 
+Active testing scope is now [100% functionality only](../docs/validation-policy.md).
+Keyboard/focus/navigation, screen readers and the old layout/reveal probes are
+excluded from current acceptance; other scales are deferred. The application
+features and earlier specification/evidence below remain historical references.
+Use protocol M16F100 and the new functional-100 receipts, not former M16 writers.
+
 Current M13 adds Notes author/date/reset controls and eight real-timer checks,
 bringing the journey to 91 checkpoints. Its `M13_*` protocol and platform-specific
 evidence directories supersede the historical runner instructions below. See

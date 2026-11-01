@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M16 delivered; Windows M16 matrix attempt reports failed with a new receipt executable hash; failed step/log needed for diagnosis; current-build native acceptance pending",
+  "condition": "100% functional-only validation passed locally; publication/final-head CI and delivery next; Windows functional results required for new policy/build",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -26,9 +26,9 @@
     {
       "id": "M16-WINDOWS",
       "priority": "P1",
-      "task": "Fresh combined current-build Windows matrix and native visual/keyboard/Narrator acceptance covering selector and all current readers",
-      "status": "New M16 Windows matrix receipt reports passed=False and matrix_requested=True; failed step/log needed; native acceptance unresolved",
-      "dependency": "Failed Windows step/log and source-bound receipt verification; then fresh native/listening results on verified build"
+      "task": "Verify current Windows functional workflows at default/minimum 100% only",
+      "status": "new M16F100 source/receipt required; former focus failure excluded from active gates",
+      "dependency": "Updated functional-only Windows executable and source-bound M16F100 receipt; no keyboard/Narrator gate"
     },
     {
       "id": "M15-WINDOWS",
@@ -36,7 +36,8 @@
       "task": "Collect fresh M15 Windows source/build matrix and separate native visual/keyboard/Narrator observations",
       "status": "Final-head hosted code/build CI passed; Windows matrix/native visual/keyboard/Narrator remain not run",
       "dependency": "fresh M15 Windows executable and native session",
-      "forward_acceptance": "Current feature acceptance moves to the fresh combined M16 checklist; historical build receipts remain not run"
+      "forward_acceptance": "Current feature acceptance moves to the fresh combined M16 checklist; historical build receipts remain not run",
+      "current_phase_status": "Historical only; keyboard/screen-reader gates excluded and other scales deferred by current policy"
     },
     {
       "id": "M14-WINDOWS",
@@ -44,7 +45,8 @@
       "task": "Collect fresh M14 Windows matrix and native visual/keyboard/Narrator observations with exact source/build/EXE bindings",
       "status": "pending; final-head hosted code/build CI passed",
       "dependency": "Windows desktop session and fresh M14 executable",
-      "forward_acceptance": "Current feature acceptance moves to the fresh combined M16 checklist; historical build receipts remain not run"
+      "forward_acceptance": "Current feature acceptance moves to the fresh combined M16 checklist; historical build receipts remain not run",
+      "current_phase_status": "Historical only; keyboard/screen-reader gates excluded and other scales deferred by current policy"
     },
     {
       "id": "OF-CONTRACT",
@@ -59,7 +61,8 @@
       "task": "Run new Windows source/build/matrix checks and affected native/Narrator checklist across ten combinations",
       "status": "source/build CI passed on M13 final head; fresh native matrix/visual/keyboard/Narrator remain pending",
       "dependency": "new M13 Windows executable and native desktop session",
-      "forward_acceptance": "Current feature acceptance moves to the fresh combined M16 checklist; historical build receipts remain not run"
+      "forward_acceptance": "Current feature acceptance moves to the fresh combined M16 checklist; historical build receipts remain not run",
+      "current_phase_status": "Historical only; keyboard/screen-reader gates excluded and other scales deferred by current policy"
     },
     {
       "id": "NF-CONTRACT",
@@ -191,10 +194,9 @@
     }
   ],
   "next_action": {
-    "task": "Obtain Windows automated.json failure field and failed-check log tail; preserve attempt evidence and diagnose before rerunning or rebuilding",
-    "missing_information": "failure/check names/exit codes and failed log tail; actual Get-FileHash output",
-    "project_overview": "docs/project-overview-m16.md",
-    "standing_delivery_authorization": "docs/delivery-workflow.md"
+    "task": "Publish/verify CI/merge/prune functional-only policy changes, then run updated Windows functionality at default/minimum 100% only",
+    "standing_delivery_authorization": "docs/delivery-workflow.md",
+    "checklist": "validation/milestone-16/functional-100/manual-checklist.md"
   },
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
@@ -301,44 +303,36 @@
     "state": "M16 merged; no M17 implementation started"
   },
   "current_validation": {
-    "platform": "Linux Xvfb/software renderer",
+    "protocol": "M16F100",
+    "state": "Linux functional-only validation passed",
+    "application_scales": [
+      1.0
+    ],
+    "sizes": [
+      "default",
+      "minimum"
+    ],
+    "keyboard_navigation": "excluded by user",
+    "focus_assertions": "excluded by user",
+    "screen_readers": "excluded by user",
+    "other_scales": "deferred until functional work is finished",
+    "windows_functional": "not run for new policy/build",
+    "functional_acceptance_complete": false,
     "core_tests_passed": 148,
-    "protocol_tests_passed": 18,
-    "workspace_format": "passed",
-    "warning_denied_workspace_clippy": "passed",
-    "desktop_build": "passed",
-    "callback_smoke": "passed",
-    "real_timer_journey": "passed",
-    "checkpoints": 121,
+    "protocol_tests_passed": 20,
+    "automated_steps": 8,
+    "journeys": 3,
+    "checkpoints": 109,
     "deliveries": 158,
     "rejected": 70,
-    "default_minimum_scale_matrix_passed": 10,
-    "startup_evidence_files_unchanged": 2517,
-    "acceptance_receipt": "validation/milestone-16/acceptance.json",
-    "synthetic_visual_review": "minimum-200 selector capture inspected; not native acceptance",
-    "windows_code_build_ci": "Passed at PR head 34019be9aa7a867f9d4d3022c125e26e704db73e in run 41351388624; native/speech separate",
-    "windows_native_visual_keyboard": "pending retest on verified rebuilt executable; earlier pass report retained separately",
-    "narrator_listening": "pending retest on verified rebuilt executable; earlier pass report retained separately",
-    "milestone_complete": false,
-    "windows_user_acceptance_receipt": "validation/milestone-16/windows/user-acceptance.json",
-    "windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
-    "windows_exact_build_binding": "new M16 receipt hash reported; full receipt/source/logs and actual file-hash comparison unavailable",
-    "windows_automated_matrix": "user-reported failed: M16 protocol, matrix_requested=True; failure step/log not supplied",
-    "windows_matrix_receipt_executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
+    "acceptance_receipt": "validation/milestone-16/functional-100/acceptance.json",
+    "historical_files_unchanged": 2554
   },
   "publication": {
-    "state": "M16 merged; topic branch pruned locally/remotely",
-    "branch": "m16-search-page-validation",
-    "destination": "https://github.com/joshuabenavente/cprs-exploration",
+    "state": "functional-100 implemented and Linux verified; publication next",
+    "branch": "functional-100-validation",
     "merge_authorized": true,
-    "standing_authorization": "docs/delivery-workflow.md",
-    "implementation_commit": "1d50aff8affbb0ddb6dddd68c5c37f1c19f42e24",
-    "branch_published": true,
-    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/11",
-    "receipt": "validation/milestone-16/publication.json",
-    "merge_commit": "2573dca9cd25454ee5016525a7d7255a483e9b02",
-    "branch_pruned": true,
-    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41351388624"
+    "standing_authorization": "docs/delivery-workflow.md"
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
@@ -678,5 +672,55 @@
     "current_matrix_attempt_report": "validation/milestone-16/windows/matrix-attempt-report.json",
     "current_matrix_status": "failed (user-pasted receipt summary)",
     "current_matrix_receipt_executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
+  },
+  "validation_policy": {
+    "protocol": "M16F100",
+    "recorded_at_utc": "2026-11-01T22:22:50.844910+00:00",
+    "verbatim_user_instruction": "from now on i only want to test 100% scale for functionality. also drop any keyboard navigation tests and any screen reader tests. after we finish we can go back and test different scales",
+    "active_scope": {
+      "application_scales": [
+        1.0
+      ],
+      "sizes": [
+        "default",
+        "minimum"
+      ],
+      "functional_workflows": true,
+      "keyboard_navigation": false,
+      "focus_assertions": false,
+      "screen_readers": false,
+      "layout_reveal_probes": false
+    },
+    "deferred": "Other scales until functional work is finished",
+    "historical_evidence": "Preserved; former failures and not-run statuses are not reclassified as passed",
+    "runtime_features": "Keyboard and scaling capabilities retained; only validation scope changes",
+    "document": "docs/validation-policy.md",
+    "instructions": "AGENTS.md"
+  },
+  "previous_full_m16_validation": {
+    "platform": "Linux Xvfb/software renderer",
+    "core_tests_passed": 148,
+    "protocol_tests_passed": 18,
+    "workspace_format": "passed",
+    "warning_denied_workspace_clippy": "passed",
+    "desktop_build": "passed",
+    "callback_smoke": "passed",
+    "real_timer_journey": "passed",
+    "checkpoints": 121,
+    "deliveries": 158,
+    "rejected": 70,
+    "default_minimum_scale_matrix_passed": 10,
+    "startup_evidence_files_unchanged": 2517,
+    "acceptance_receipt": "validation/milestone-16/acceptance.json",
+    "synthetic_visual_review": "minimum-200 selector capture inspected; not native acceptance",
+    "windows_code_build_ci": "Passed at PR head 34019be9aa7a867f9d4d3022c125e26e704db73e in run 41351388624; native/speech separate",
+    "windows_native_visual_keyboard": "pending retest on verified rebuilt executable; earlier pass report retained separately",
+    "narrator_listening": "pending retest on verified rebuilt executable; earlier pass report retained separately",
+    "milestone_complete": false,
+    "windows_user_acceptance_receipt": "validation/milestone-16/windows/user-acceptance.json",
+    "windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
+    "windows_exact_build_binding": "new M16 receipt hash reported; full receipt/source/logs and actual file-hash comparison unavailable",
+    "windows_automated_matrix": "user-reported failed: M16 protocol, matrix_requested=True; failure step/log not supplied",
+    "windows_matrix_receipt_executable_sha256": "0bae427b657d90cf14919807dfd150025d9757cf970e6ef2c3892b68617cf758"
   }
 }

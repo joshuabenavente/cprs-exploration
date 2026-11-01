@@ -1,5 +1,11 @@
 # M16: patient-search page integrity
 
+Current validation scope is M16F100: functionality at 100% only, default/minimum
+sizes. Keyboard/focus/navigation and screen readers are excluded; other scales
+are deferred by user instruction. See [active policy](validation-policy.md).
+The previous full-scale/keyboard checkpoints below retain historical context;
+their old gates are not current blockers. New evidence uses functional-100 paths.
+
 Status: merged after final-head portable/Windows code-build CI and full Linux
 matrix passed; native/listening pending. Implementation used
 `m16-search-page-validation`, from merged

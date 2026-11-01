@@ -4,65 +4,44 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-The development branch is `main`. M16 [PR #11](https://github.com/joshuabenavente/cprs-exploration/pull/11)
-is merged after final-head portable/Windows code-build CI passed; its topic branch
-is pruned. See the [project overview after M16](docs/project-overview-m16.md),
-[handoff](docs/handoff.md), [M16 milestone](docs/milestone-16.md),
-[traceability](docs/traceability-2026-11-01.md) and
-[standing delivery authorization](docs/delivery-workflow.md). A new Windows M16 matrix attempt reports failure; its failed step/log is needed
-for diagnosis. Current-build native visual/keyboard and Narrator acceptance
-remain pending; earlier pass reports are retained separately. The
-[published reverse-engineering folder](reverse-engineering/README.md) is retained.
-Original reference binaries/Ghidra database are excluded.
+The development branch is `main`. The active testing phase is **functionality at
+100% scale only**, at default and minimum sizes. Keyboard/focus/navigation and
+screen-reader checks are excluded; other scales are deferred until the functional
+work is finished. See [validation policy](docs/validation-policy.md), the
+[functional checklist](validation/milestone-16/functional-100/manual-checklist.md),
+[current handoff](docs/handoff.md) and [delivery approval](docs/delivery-workflow.md).
 
-## Run the current M16 Rust mock
-
-M16 validates patient-search rows and paging before displaying candidates.
-The Invalid search page scenario exercises response rejection without changing
-the committed chart. The nine invented fixtures and Notes/Orders/Results filters,
-read-only details, paging, access demonstrations and fixed frame are retained.
-Exact page/date/filter rules are authored mock policies, not original server rules.
+## Run and validate the current mock
 
 ```powershell
-.\scripts\Start-MockChart.ps1 -Rebuild
-.\scripts\Test-MockChart.ps1 -Matrix
-python scripts\verify_integrated.py
-python scripts\test_m15_protocol.py
+.\scripts\Test-MockChart.ps1 -Matrix -Bootstrap
+python scripts/verify_integrated.py
+python scripts/test_m16_functional_protocol.py
 ```
 
-The active runner accepts only M16 and writes platform-specific
-`validation/milestone-16/windows/` or `linux/` evidence. `-CodeOnly` omits desktop
-execution; `-Bootstrap` fetches locked dependencies before offline checks;
-`-Python` selects the installed Windows interpreter. Linux can run
-`python3 scripts/validate_m16.py --matrix` with Rust 1.99.1, native build libraries
-and an X11 display (a virtual display establishes only synthetic UI evidence).
-Unset SLINT_SCALE_FACTOR while compiling; the runner applies it only at runtime.
+`-Matrix` runs default-100 and minimum-100 only; `-CodeOnly` omits desktop execution.
+The active protocol is M16F100; receipts are written under
+`validation/milestone-16/functional-100/windows/` or `linux/`. Linux uses
+`python3 scripts/validate_m16_functional.py --matrix` with the pinned Rust and X11
+software backend. The older full-scale M16 writer/review entry points are frozen.
 
-The journey retains all 112 M15 checkpoints and adds nine search-page
-checks (121 total). Source/build/executable/log bindings and ten requested
-size/scale samples are verified together. See [M16](docs/milestone-16.md), the
-[Search-page contract](specifications/search-page-integrity.md) and
-[native/listening checklist](validation/milestone-15/native-checklist.md).
-Windows native and Narrator results must be recorded separately on the new build.
+After automation passes, review functionality in the normal app:
 
-Use `scripts/Review-SearchPages.ps1 -Size minimum -ScaleFactor 2` after the full
-Windows matrix to prepare a native sample. Repeat both sizes at 100%, 125%, 150%,
-175% and 200%. The launcher leaves the patient selector open and records preparation only.
-Close the app between samples. The largest-scale default remains 1180x700
-logical pixels; minimum is 980x680, other defaults 1180x800. These application
-scale overrides do not change Windows display settings.
+```powershell
+.\scripts\Review-Functional.ps1 -Size default
+```
 
-The earlier M2–M13 commands/receipts are historical. Do not run old validation
-writers or the M12 follow-up runner with the changed executable. The historical
-M12 user-reported acceptance remains bound to `a88c…`; a new M16 build needs its
-own acceptance. Earlier source-bound verifiers can be run in their historical
-checkout. All raw evidence and receipts are preserved.
+Close it and repeat with `-Size minimum`; both are fixed at 100%. The manual
+launcher does not run a background automatic journey. No keyboard-navigation or
+Narrator report is requested. Use the [Windows update/rebuild guide](docs/m16-windows-rebuild.md)
+when moving from the old full-scale build; preserve its EXE and logs first.
 
-Search MORGAN for duplicate names with distinct synthetic IDs, PATEL for an
-acknowledgment, RIVERA for denied access, and zárate or 李 for the Unicode fixture.
-SYNTH-002 has empty Notes, Orders, Results and designated Cover Sheet panels.
-Orders and Results still require explicit opening. Every record is invented;
-there is no VistA connection, credential, clinical import or clinical write API.
+Nine invented patients, five Cover Sheet panels and the read-only Notes, Orders
+and Results browsers remain. Notes has text/author/date filters and automatic
+reading; Orders text/status/date and Results text/date filters preserve explicit
+detail opening. Historical evidence and the [M16 overview](docs/project-overview-m16.md)
+remain available; the current policy supersedes their previous acceptance gates.
+The [published reverse-engineering folder](reverse-engineering/README.md) is unchanged.
 
 ## Analysis tools
 
