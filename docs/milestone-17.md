@@ -29,5 +29,8 @@ replies / 86 stale replies rejected. Default/minimum samples passed; all 2,597
 startup evidence files remain byte-identical. See
 [acceptance](../validation/milestone-17/functional-100/acceptance.json) and
 [technical review](../validation/milestone-17/functional-100/technical-review.json).
-Final-head CI and publication are next. Windows manual functionality is not run
+[PR #13](https://github.com/joshuabenavente/cprs-exploration/pull/13) is merged
+after final-head portable/Windows code-build CI passed. The topic is pruned
+locally/remotely; see [delivery receipt](../validation/milestone-17/functional-100/merge-checkpoint.json).
+Windows manual functionality is not run
 for M17; keyboard/screen-reader checks remain excluded and other scales deferred.

@@ -6,7 +6,10 @@ M16F100 acceptance below. Current tools now use M17F100 and separate
 See the [M17 contract](../specifications/orders-grouping.md),
 [milestone](milestone-17.md) and [new checklist](../validation/milestone-17/functional-100/manual-checklist.md).
 Local checks passed 157 Rust / 21 protocol tests and three 121-checkpoint 100%
-journeys. Delivery and new Windows manual acceptance are pending; the following paragraphs describe the
+journeys. [PR #13](https://github.com/joshuabenavente/cprs-exploration/pull/13) is merged
+after final-head portable/Windows code-build CI passed; topic branches are pruned.
+New Windows manual functional acceptance is pending. Next: update main, run
+`Test-MockChart.ps1 -Matrix -Bootstrap`, then the new checklist. The following paragraphs describe the
 prior M16 acceptance and delivery checkpoints.
 
 Current functional acceptance: supplied Windows M16F100 automation passed nine

@@ -1,0 +1,36 @@
+{
+  "protocol": "M17F100",
+  "recorded_at_utc": "2026-11-01T23:22:39.158442+00:00",
+  "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/13",
+  "merged": true,
+  "merge_commit": "e8a3519cef804bd0a5d1493da5e6806a4e83b598",
+  "tested_head": "a7a021425dfc88392384234d83b434713e6a0908",
+  "run_id": 41361147627,
+  "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41361147627",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 125011591501,
+      "name": "portable-core",
+      "conclusion": "success"
+    },
+    {
+      "id": 125011591301,
+      "name": "windows-desktop-build",
+      "conclusion": "success"
+    }
+  ],
+  "local_topic_branch_pruned": true,
+  "remote_topic_branch_pruned": true,
+  "remaining_local_branches": [
+    "main"
+  ],
+  "remaining_remote_branches": [
+    "main"
+  ],
+  "source_build_inputs_identical_to_tested_head": 47,
+  "functional_scope": "100% only, default/minimum windows; keyboard/focus/navigation and screen readers excluded; other scales deferred",
+  "windows_manual_functional": "not run for M17; does not inherit M16 acceptance",
+  "next_action": "Run M17 Windows automation, then manual functional checklist at default/minimum 100%",
+  "followup_scope": "Delivery records, status and provenance clarification only; 47 runtime/build inputs unchanged from the checked PR head"
+}

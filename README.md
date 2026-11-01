@@ -4,7 +4,9 @@ This workspace contains a mock-only Rust patient selector, five Cover Sheet pane
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-M17 adds read-only [Orders grouping by service](docs/milestone-17.md), with
+M17 [PR #13](https://github.com/joshuabenavente/cprs-exploration/pull/13) is merged
+and pruned after local checks and final-head CI passed. It adds read-only
+[Orders grouping by service](docs/milestone-17.md), with
 [authored grouping rules](specifications/orders-grouping.md). Current Windows
 manual acceptance is pending for the new binary; prior
 [M16 acceptance](validation/milestone-16/functional-100/windows/user-acceptance.json)

@@ -2,7 +2,9 @@
 
 B (bounded observation): the decoded `chkByService` checkbox in
 `analysis/orders/resources/TFRMORDERVIEW.dfm.json` contains the caption
-“Group Orders by Service” (line 399). This establishes a grouping affordance.
+“Group Orders by Service” (line 399), with serialized `Checked=true`.
+This establishes a grouping affordance and a resource default; the mock
+intentionally keeps Flat as its initial view to preserve existing behavior.
 U: original grouping algorithm, service identifiers, ordering, persistence,
 server rules, permissions and accessibility behavior. P: every exact rule below
 is authored synthetic mock policy, not a claim of original parity.

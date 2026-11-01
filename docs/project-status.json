@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M17 Orders grouping implemented; Linux 100% functional checks passed; publication/CI pending and new Windows manual functional acceptance not run",
+  "condition": "M17 Orders grouping merged after local 100% functional checks and final-head hosted CI passed; branch pruned; new Windows manual functional acceptance not run",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -27,7 +27,7 @@
       "id": "M17",
       "priority": "P1",
       "task": "Read-only Orders grouping by service",
-      "status": "Implemented; local 100% functional checks pass; delivery and Windows manual acceptance pending",
+      "status": "Merged and pruned; local/hosted checks pass; new Windows manual functional acceptance pending",
       "contract": "specifications/orders-grouping.md"
     },
     {
@@ -201,7 +201,7 @@
       "mitigation": "full typed filter/generation/owner equality, response predicates and list/detail invalidation tests"
     }
   ],
-  "next_action": "Validate and deliver M17 Orders service grouping at 100% default/minimum; obtain new Windows functional acceptance after delivery",
+  "next_action": "Run M17 Windows automation, then manual functional checklist at default/minimum 100%",
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
     "traceability": "docs/traceability-2026-11-01.md",
@@ -302,11 +302,12 @@
       "Grouping/filter/reset/lifecycle stale-reply invalidation"
     ],
     "runtime_scope": "Nine invented patients, four orders per nonempty fixture; offline and read-only",
-    "state": "Implemented, locally verified; publishing next"
+    "state": "Merged PR #13; local/remote topic pruned",
+    "tested_head": "a7a021425dfc88392384234d83b434713e6a0908"
   },
   "current_validation": {
     "protocol": "M17F100",
-    "state": "Local automated passed; hosted CI pending",
+    "state": "Linux automated and final-head portable/Windows code-build CI passed; new Windows manual functional acceptance not run",
     "application_scales": [
       1.0
     ],
@@ -328,7 +329,8 @@
     "deliveries": 185,
     "rejected": 86,
     "acceptance_receipt": "validation/milestone-17/functional-100/acceptance.json",
-    "historical_files_unchanged": 2597
+    "historical_files_unchanged": 2597,
+    "windows_code_build_ci": "Passed on PR #13 head a7a021425dfc88392384234d83b434713e6a0908; run 41361147627"
   },
   "publication": {
     "state": "Functional-only policy merged and topic branch pruned",
@@ -844,5 +846,41 @@
     "review": "validation/milestone-16/functional-100/windows/acceptance-review.json",
     "manual_evidence_level": "user-reported",
     "independent_windows_executable_hashing": false
+  },
+  "m17_merge": {
+    "protocol": "M17F100",
+    "recorded_at_utc": "2026-11-01T23:22:39.158442+00:00",
+    "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/13",
+    "merged": true,
+    "merge_commit": "e8a3519cef804bd0a5d1493da5e6806a4e83b598",
+    "tested_head": "a7a021425dfc88392384234d83b434713e6a0908",
+    "run_id": 41361147627,
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41361147627",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 125011591501,
+        "name": "portable-core",
+        "conclusion": "success"
+      },
+      {
+        "id": 125011591301,
+        "name": "windows-desktop-build",
+        "conclusion": "success"
+      }
+    ],
+    "local_topic_branch_pruned": true,
+    "remote_topic_branch_pruned": true,
+    "remaining_local_branches": [
+      "main"
+    ],
+    "remaining_remote_branches": [
+      "main"
+    ],
+    "source_build_inputs_identical_to_tested_head": 47,
+    "functional_scope": "100% only, default/minimum windows; keyboard/focus/navigation and screen readers excluded; other scales deferred",
+    "windows_manual_functional": "not run for M17; does not inherit M16 acceptance",
+    "next_action": "Run M17 Windows automation, then manual functional checklist at default/minimum 100%",
+    "followup_scope": "Delivery records, status and provenance clarification only; 47 runtime/build inputs unchanged from the checked PR head"
   }
 }
