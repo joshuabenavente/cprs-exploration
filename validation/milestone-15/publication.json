@@ -1,0 +1,20 @@
+{
+  "protocol": "M15",
+  "recorded_at_utc": "2026-11-01T20:39:15.843613+00:00",
+  "branch": "m15-orders-date-filters",
+  "initial_published_head": "863c86f21f85ac41b87b283d449a358ce995cc40",
+  "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/10",
+  "created_as_draft": true,
+  "authorization": {
+    "recorded_at_utc": "2026-11-01T20:39:15.843613+00:00",
+    "user_instruction": "I approve the action and the commit push merge and prune going forward",
+    "repository": "https://github.com/joshuabenavente/cprs-exploration",
+    "scope": "M15 publication and routine commit/push/PR/merge/prune going forward within the established synthetic offline project",
+    "merge_after_appropriate_checks": true,
+    "policy": "docs/delivery-workflow.md"
+  },
+  "merge_authorized": true,
+  "historical_block_receipt_preserved": "validation/milestone-15/publication-block.json",
+  "ci": "Pending final-head checks on PR #10",
+  "native_windows_and_narrator": "Not run; no acceptance inferred from publication or merge"
+}

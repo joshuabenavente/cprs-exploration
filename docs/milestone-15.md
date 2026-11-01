@@ -126,11 +126,10 @@ The first full run caught a wrong retained-status assertion; its raw failed rece
 and log are preserved under `linux/attempt-1`. The corrected final run passed.
 The [minimum-200 capture](../validation/milestone-15/linux/synthetic-visual-review.json)
 shows readable new controls and the fixed frame; it does not establish native keys
-or speech. Publication was rejected before push by automatic approval review,
-which classified “Approved” as implementation-only and requires explicit M15
-code/docs/evidence export approval to the named GitHub repository. The
-[block receipt](../validation/milestone-15/publication-block.json) preserves the
-reason. Exact next action: obtain M15 publication approval, then publish the draft
-PR, verify code/build CI and use the
+or speech. M15 is now published as [draft PR #10](https://github.com/joshuabenavente/cprs-exploration/pull/10).
+The user explicitly authorized publication, commit/push, merge and pruning going
+forward; see [delivery authorization](delivery-workflow.md). The historical
+publication-block receipt is preserved. Exact next action: verify final-head CI,
+mark ready and merge, synchronize main and prune the topic branch. Then use the
 [new Windows checklist](../validation/milestone-15/native-checklist.md).
-Native Windows/Narrator remain not run; M15 merge is not authorized.
+Native Windows/Narrator remain not run; merge does not establish acceptance.
