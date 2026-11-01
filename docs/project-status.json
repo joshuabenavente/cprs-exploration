@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M13 merged/pruned; M14 implemented and Linux validation passed locally; publication blocked by automatic approval review pending explicit M14 approval",
+  "condition": "M14 published as draft PR #9; final-head code/build CI pending; user authorized subsequent merge/prune and an M15 draft",
   "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -150,11 +150,11 @@
     }
   ],
   "next_action": {
-    "task": "Obtain explicit approval to publish M14 branch/code/docs/validation evidence and create a draft PR; then push and verify code/build CI",
-    "blocked_by": "Automatic approval review rejected M14 repository egress as outside prior M13-only publication approval",
+    "task": "Verify final M14 head CI, mark ready and merge PR #9, prune merged branches, then draft M15",
+    "blocked_by": null,
     "implementation_state": "M14 core/UI, 116 Rust tests, 16 protocol tests and full Linux matrix delivered locally",
     "independent_native_followup": "Windows M14 matrix, native visual/keyboard and Narrator checklist remain not run",
-    "merge_authorized": false
+    "merge_authorized": true
   },
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
@@ -277,21 +277,22 @@
     "historical_files_unchanged": 2447,
     "acceptance_receipt": "validation/milestone-14/acceptance.json",
     "synthetic_visual_review": "minimum-200 captured/inspected; not native acceptance",
-    "windows_code_build_ci": "not run for M14: publication blocked before upload",
+    "windows_code_build_ci": "Pending on PR #9; native visual/keyboard and Narrator remain not run",
     "windows_native_visual_keyboard": "not run",
     "narrator_listening": "not run",
     "milestone_complete": false
   },
   "publication": {
-    "state": "blocked by automatic approval review before git push execution",
+    "state": "published as draft PR",
     "destination": "https://github.com/joshuabenavente/cprs-exploration",
     "branch": "m14-results-date-filters",
     "implementation_commit": "d00d53427ac4048e478cae9c073d47fedf207028",
-    "branch_published": false,
-    "pull_request": null,
-    "reason": "Prior explicit publication approval was interpreted as M13-only; M14 code/project/evidence upload requires explicit approval.",
-    "receipt": "validation/milestone-14/publication-block.json",
-    "merge_authorized": false
+    "branch_published": true,
+    "pull_request": "https://github.com/joshuabenavente/cprs-exploration/pull/9",
+    "reason": "Explicit user approval received for M14 publication and subsequent merge/prune.",
+    "receipt": "validation/milestone-14/publication.json",
+    "merge_authorized": true,
+    "historical_block_receipt": "validation/milestone-14/publication-block.json"
   },
   "m13_merge": {
     "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/8",
@@ -371,7 +372,7 @@
   "root_review": {
     "receipt": "validation/milestone-14/root-review.json",
     "result": "read-only binding/receipt checks and scoped technical review passed",
-    "next_step": "Explicit approval to publish M14 branch/code/docs/validation evidence and open draft PR",
+    "next_step": "Verify final-head code/build CI, then carry out authorized merge/prune and draft M15",
     "automatic_approval_review": "Rejected M14 git push before execution; previous publication permission classified as M13-only, and move to next step was not accepted as explicit M14 export permission."
   }
 }

@@ -22,10 +22,9 @@ predicates. Intrinsic card height must permit keyboard scrolling. Linux virtual
 display evidence does not establish Windows visual, keyboard or Narrator results.
 All historical evidence is immutable; new receipts belong under milestone-14.
 
-Exact next action: obtain explicit M14 publication approval after automatic review
-blocked the push, then publish a draft PR and verify code/build CI. Perform the
-M14 Windows matrix and affected-controls native/Narrator checklist. Do not merge
-M14 without further instruction.
+Exact next action: verify final-head CI on published [PR #9](https://github.com/joshuabenavente/cprs-exploration/pull/9),
+then carry out the user's merge/prune instruction and draft M15. The separate
+Windows matrix and native/Narrator acceptance remain pending.
 
 ## Implementation checkpoint
 
@@ -74,11 +73,10 @@ merged with its own native/listening acceptance pending; older M12 acceptance
 remains bound to its historical build. No acceptance was inherited.
 
 
-Publication checkpoint: local implementation commit `d00d534`; Git push was
-rejected before execution by automatic approval review, which interpreted prior
-publication approval as M13-only. No M14 PR exists and M14 CI has not run. The
-[block receipt](../validation/milestone-14/publication-block.json) records the
-exact action and reason. All implementation/validation work is concrete and
-reviewable locally; the remaining upload needs explicit approval for this M14
-branch and its code/documentation/validation evidence. Do not merge without a
-separate instruction.
+Publication checkpoint: [PR #9](https://github.com/joshuabenavente/cprs-exploration/pull/9)
+was created as a draft after explicit M14 publication approval. The user also
+authorized merge after checks, branch cleanup and an M15 draft. The historical
+[blocked attempt](../validation/milestone-14/publication-block.json) remains
+unchanged; the [new publication receipt](../validation/milestone-14/publication.json)
+records its resolution. Final-head CI is pending. Merge is separate from native
+Windows and Narrator acceptance.
