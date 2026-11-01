@@ -1,0 +1,118 @@
+{
+  "protocol": "M12",
+  "scope": "Supplemental current-build user-reported native visual/keyboard and Narrator listening acceptance; historical receipts and indexes retain capture-time status",
+  "recorded_at": "2026-11-01T03:28:13.025332+00:00",
+  "executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
+  "verbatim_report": "everything passes",
+  "reported_at": "2026-11-01T03:25:52.759Z",
+  "clarification": {
+    "question": "Does “everything passes” cover native visual/keyboard checks and Narrator listening on the current build across all ten size/scale combinations, or only the sample(s) you ran?",
+    "verbatim_answer": "All ten combinations",
+    "selected_option_description": "Both window sizes at 100%, 125%, 150%, 175%, and 200%, including native checks and Narrator listening.",
+    "answered_at": "2026-11-01T03:26:19.300Z"
+  },
+  "build_binding": "The preceding native/listening instructions named this complete executable hash and both sizes at all five scale factors; the report and clarification refer to that current build. The user did not repeat the hash.",
+  "results": {
+    "native_visual_keyboard": "user-reported pass",
+    "narrator_listening": "user-reported pass"
+  },
+  "samples": [
+    {
+      "sample": "default-100",
+      "size": "default",
+      "application_scale": 1.0,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "default-125",
+      "size": "default",
+      "application_scale": 1.25,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "default-150",
+      "size": "default",
+      "application_scale": 1.5,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "default-175",
+      "size": "default",
+      "application_scale": 1.75,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "default-200",
+      "size": "default",
+      "application_scale": 2.0,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-100",
+      "size": "minimum",
+      "application_scale": 1.0,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-125",
+      "size": "minimum",
+      "application_scale": 1.25,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-150",
+      "size": "minimum",
+      "application_scale": 1.5,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-175",
+      "size": "minimum",
+      "application_scale": 1.75,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    },
+    {
+      "sample": "minimum-200",
+      "size": "minimum",
+      "application_scale": 2.0,
+      "native_visual_keyboard": "user-reported pass",
+      "narrator_listening": "user-reported pass"
+    }
+  ],
+  "user_reported_native_samples_passed": 10,
+  "user_reported_listening_samples_passed": 10,
+  "independent_evidence": {
+    "native_client_area_measurements": "not collected",
+    "audio_capture": "not collected",
+    "automated_native_matrix_verification": "not performed; existing automated journeys are synthetic dispatch/binding/geometry checks"
+  },
+  "supporting_preparation": {
+    "path": "validation/milestone-12/native-followup/native-default-100-20261101T0324349586880Z.log",
+    "sha256": "b2b28b39b31f462391a8c484ee9cb767916f7ccdd771c343599d10952473d4d1",
+    "sample": "default-100",
+    "scope": "Synthetic launcher preparation: 83 checkpoints, M12_WINDOW 1180x800 at scale 1 and M12_REVIEW_READY. This single log does not independently establish native interaction, listening, or all ten user-reported passes."
+  },
+  "historical_report_preservation": {
+    "index": "validation/milestone-12/native-followup/index.json",
+    "indexed_path": "report.md",
+    "preserved_path": "report-before-user-acceptance.md",
+    "sha256": "c8010651ca396ad29c96d0cda5b919c9a5668ff9abfccf373de73daf40634bd7",
+    "reason": "The existing index hashes the report before this supplemental acceptance. Its report.md hash now resolves to this byte-exact preserved copy; the current report is updated. No existing index or capture-time status field is rewritten."
+  },
+  "limits": [
+    "Both acceptance results are user-reported passes, separate from independent verification.",
+    "Existing targeted native captures retain their original scope; no additional native captures or repeated listening session were made.",
+    "Original M10/M11/M12 receipts and listening reports remain scoped to their recorded builds and times.",
+    "The overwritten layout-minimum-200.log correction remains in preparation-log-correction.json; no overwritten bytes are recovered.",
+    "No new CI, remote-clone validation, full accessibility certification, original-client parity or clinical compatibility is claimed. Runtime remains synthetic and mock-only."
+  ]
+}
