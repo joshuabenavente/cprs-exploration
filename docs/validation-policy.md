@@ -33,3 +33,8 @@ The [M17 report](../validation/milestone-17/functional-100/windows/user-acceptan
 records both 100% sizes as user-reported pass; exact Windows source/executable
 and receipt binding is pending. No manual rerun is requested to collect those
 read-only bindings.
+
+The [conditional VistA plan](live-vista-plan.md) adds future network/session and
+read-operation acceptance on the user's VA workstation. It retains the 100%
+functional-only scope. Development/CI use synthetic data; connected milestones
+need distinct sanitized receipts and cannot inherit live acceptance from M17.

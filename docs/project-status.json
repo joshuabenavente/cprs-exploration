@@ -10,8 +10,8 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M17 merged and pruned; local/hosted checks pass; default/minimum 100% manual checklist user-reported pass; exact Windows build/receipt binding pending",
-  "scope": "Nine compiled invented patients, patient selection, chart navigation, five Cover Sheet panels, read-only Notes/Orders/Results; offline synthetic runtime",
+  "condition": "M17 delivered and manual checklist user-reported pass, Windows binding pending; next priority is conditional VA-network/session-guarded read-only VistA foundations and Notes pilot",
+  "scope": "Current runtime: nine invented patients and offline read-only chart. Planned expansion: read-only VistA on the VA network during the user's active Windows and authenticated VistA sessions; no clinical writes.",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
     "native_visual_keyboard": "user-reported pass, ten combinations; independently captured observations have targeted scope",
@@ -23,6 +23,22 @@
     "ci_current_head_verified": false
   },
   "prioritized_backlog": [
+    {
+      "id": "M18",
+      "priority": "P1",
+      "task": "VA-network and active-user/VistA-session-guarded connection foundations",
+      "status": "Planned; route and gate discovery before implementation; no live access performed",
+      "dependency": "Supported local integration/authentication method and reliable network/session evidence",
+      "plan": "docs/milestone-18.md"
+    },
+    {
+      "id": "M19",
+      "priority": "P1",
+      "task": "First live patient identity and Notes read-only pilot",
+      "status": "Planned after M18 gates and exact read contracts; one user-selected authorized patient",
+      "dependency": "M18 guarded provider/session foundation",
+      "plan": "docs/live-vista-plan.md"
+    },
     {
       "id": "M17",
       "priority": "P1",
@@ -167,6 +183,13 @@
       "id": "D11",
       "decision": "M16 closes C01 through structural patient-search reply validation and preserves authored provider boundaries",
       "rationale": "Matching-generation replies had no candidate/paging validation; fixed within offline scope without needing more original reverse engineering"
+    },
+    {
+      "id": "D-LIVE-READ",
+      "decision": "Supersede blanket future VistA ban with conditional read-only access on VA network during active user and authenticated VistA sessions",
+      "rationale": "User requests real reading; prioritize connection foundations then bounded Notes pilot",
+      "supersedes": "D03 transport/login deferral only where needed; save/DLL targets remain deferred",
+      "plan": "docs/live-vista-plan.md"
     }
   ],
   "risks": [
@@ -201,16 +224,17 @@
       "mitigation": "full typed filter/generation/owner equality, response predicates and list/detail invalidation tests"
     }
   ],
-  "next_action": "Bind M17 all-passes report to Windows verifier, tested source and M17F100 receipt/executable hash; manual checklist does not need repeating",
+  "next_action": "Identify supported VA integration/sign-in method and reliable network/session signals, then specify M18 guarded provider contract; collect outstanding M17 Windows binding independently",
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
     "traceability": "docs/traceability-2026-11-01.md",
-    "next_milestone": "docs/milestone-17.md",
+    "next_milestone": "docs/milestone-18.md",
     "review_evidence": "validation/project-review-2026-11-01/",
     "initial_review": "docs/project-review-2026-11-01.md",
     "analysis_evidence": "validation/analysis-review-2026-11-01/",
     "implementation_contract": "specifications/orders-grouping.md",
-    "implementation_evidence": "validation/milestone-17/functional-100/"
+    "implementation_evidence": "validation/milestone-17/functional-100/",
+    "live_connection_plan": "docs/live-vista-plan.md"
   },
   "analysis_review": {
     "workspace": "reverse-engineering/",
@@ -890,5 +914,28 @@
     "windows_manual_functional": "not run for M17; does not inherit M16 acceptance",
     "next_action": "Run M17 Windows automation, then manual functional checklist at default/minimum 100%",
     "followup_scope": "Delivery records, status and provenance clarification only; 47 runtime/build inputs unchanged from the checked PR head"
+  },
+  "live_vista_plan": {
+    "recorded_at_utc": "2026-11-02T02:37:09.078765+00:00",
+    "verbatim_user_instruction": "i'd like to lift the rule on vista connection - provided that it only happens on the VA network when i am logged in. i am interested in getting some real reading going. factor that into the plan",
+    "status": "Planning only; current runtime unchanged; no live access attempted",
+    "local_execution": "User's VA-network Windows workstation only",
+    "required_conditions": [
+      "Trustworthy VA-network access boundary",
+      "Active/unlocked user Windows session",
+      "Authenticated authorized VistA session under user identity",
+      "Reviewed bounded read operation contract"
+    ],
+    "loss_behavior": "Deny reads, cancel and reject pending replies, close connection and clear application-held patient data",
+    "clinical_writes": "not authorized",
+    "real_data_in_cloud_chat_repository_ci": "excluded",
+    "integration_method": "awaiting available method description; discovery first if unknown",
+    "sequence": [
+      "M18 guarded provider/authentication foundations",
+      "M19 patient identity and Notes list/body pilot",
+      "Then individual Results/Cover Sheet/Orders read slices"
+    ],
+    "testing": "100% only at default/minimum; keyboard/focus/navigation and screen readers excluded; other scales deferred",
+    "plan": "docs/live-vista-plan.md"
   }
 }

@@ -2,6 +2,12 @@
 
 This workspace contains a mock-only Rust patient selector, five Cover Sheet panels with read-only item details, read-only Notes, Orders, and Results browsers, and static research on CPRS Chart 1.33.214.5 (executable metadata: OR*3.0*639). All nine prototype records are invented. The Rust application has no live connection or clinical-write functionality.
 
+The user has conditionally authorized future **read-only VistA access on the VA
+network while logged in**. The next priority is [M18 connection/session foundations](docs/milestone-18.md),
+followed by a small Notes reading pilot. See [the live VistA plan](docs/live-vista-plan.md)
+for the network/authentication gates, local data boundary and acceptance sequence.
+The current executable remains the offline mock; this plan adds no connection.
+
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
 M17 [PR #13](https://github.com/joshuabenavente/cprs-exploration/pull/13) is merged

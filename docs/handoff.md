@@ -1,5 +1,14 @@
 # CPRS Chart recreation: current handoff
 
+Next priority: the user lifted the blanket prohibition on VistA connections,
+conditional on being on the VA network and logged in, for real read-only access.
+Follow [the updated plan](live-vista-plan.md) and [M18](milestone-18.md): establish
+supported sign-in and trustworthy network/session guards, then pilot patient
+identity and Notes reading in M19 on the user's VA workstation. Current runtime
+and M17 evidence remain synthetic; no live access has been attempted. Current
+100% functional-only acceptance scope is unchanged. The available integration
+method is the immediate technical discovery dependency.
+
 M17 implements read-only Orders grouping by service, approved after the
 M16F100 acceptance below. Current tools now use M17F100 and separate
 `validation/milestone-17/functional-100/` outputs. Both M16 writers are frozen.
