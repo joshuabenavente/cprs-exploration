@@ -1,7 +1,8 @@
 # M18: guarded CPRS/RPC Broker session foundations
 
-Status: implementation plan and VS01–VS12 contract drafted. No M18 code or live
-connection has started. Planning baseline is main
+Status: portable/session UI foundation implemented; native Broker adapter and
+VA workstation connection verification remain unavailable/pending. No live
+connection has been attempted. Planning baseline is main
 `323383e3877600c0dab391f6038180691d6c1289`. The user has conditionally authorized
 read-only VistA use on the VA network while logged in and reports an approved
 CPRS/RPC Broker sign-in path. Standing delivery approval covers sanitized
@@ -83,8 +84,8 @@ endpoint configuration, auth transcripts, patient content and screenshots are
 excluded from publishable receipts. Use documented guard detection/validity
 bounds rather than claiming instantaneous detection from polling.
 
-No M18 receipt writer exists yet. The runnable tools remain M17F100 until step
-18.5. Before migration, pin historical bytes and freeze M17 writers; preserve its
+M18F100 writers now produce isolated synthetic evidence; active wrappers use
+M18. M17 writer entry points are frozen before writing. Before migration, pin historical bytes and freeze M17 writers; preserve its
 user-reported pass and pending exact Windows binding. Do not use a M17 result as
 proof of live sign-in, gate enforcement or M18 acceptance.
 
@@ -106,6 +107,35 @@ safe documentation references and leave unsupported gates denied.
 
 M17 manual functionality is already user-reported pass; its exact Windows
 artifact binding remains tracked independently and does not block planning.
-Immediate coding step: implement the portable coordinator and synthetic tests
-against VS01–VS12, alongside resolving the native fact table. M19 then implements
+The portable coordinator, source boundary and synthetic checks are implemented.
+Next integration step: resolve the native fact table and implement the supported
+Broker adapter; use [the morning handoff](m18-morning-handoff.md). M19 then implements
 patient identity and bounded Notes reading through the accepted session boundary.
+
+## Implementation checkpoint
+
+The implementation branch `m18-vista-session-foundations` starts from
+`91efbcce7c3acadbc4957abe41db455273cc7e1a`. It adds a pure Rust coordinator,
+redacted bounded identities, typed safe errors, bootstrap/read separation,
+request ownership, source/connection/session generations, freshness/revocation
+rules and source guards on all nine delayed Mock callback families. The desktop
+has explicit Mock/Live selection and a session-only view; unsupported native
+integration is visible and Connect is disabled. `--live-session` opens this
+unavailable view and cannot be combined with automated integration/smoke flags.
+
+`chart-vista-bridge` is an explicitly unavailable adapter on all targets. It
+contains no network/authentication/credential implementation and makes no
+production trust claims. Step 18.4 and 18.6 are not complete. Portable/Windows
+build success verifies the foundation and unavailable adapter only. Real session
+acceptance and M18 milestone completion remain pending; M19 cannot inherit a
+working native capability from this partial delivery.
+
+Local validation passed 178 Rust tests (20 new coordinator cases and one native
+unavailability test), 24 receipt/isolation tests, format, warning-denied workspace
+Clippy, build and callback smoke. Three 100% journeys each passed 132 checkpoints
+with 212 deliveries / 105 rejected replies. Both sizes passed. All 2,614 startup
+evidence files remain unchanged; the runner also preserves the new not-run
+session-status record. See [acceptance](../validation/milestone-18/functional-100/acceptance.json)
+and [technical review](../validation/milestone-18/functional-100/technical-review.json).
+Publication and exact-head hosted code/build checks are next. Native integration
+and actual VA session acceptance remain pending, so M18 is not complete.

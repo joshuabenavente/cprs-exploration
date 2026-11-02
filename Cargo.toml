@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/chart-core", "crates/chart-desktop"]
+members = ["crates/chart-core", "crates/chart-desktop", "crates/chart-vista-bridge"]
 resolver = "3"
 
 [workspace.package]

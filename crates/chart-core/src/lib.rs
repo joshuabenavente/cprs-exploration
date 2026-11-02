@@ -3,6 +3,8 @@
 //! Synthetic patient workflow. No broker, endpoint, credential, or file-import API.
 use std::collections::HashSet;
 use std::fmt;
+mod live_session;
+pub use live_session::*;
 mod calendar_day;
 pub use calendar_day::*;
 mod cover_sheet;

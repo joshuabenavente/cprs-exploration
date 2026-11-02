@@ -1,0 +1,22 @@
+import { Button } from "std-widgets.slint";
+export component ConnectionView inherits Rectangle {
+    in property <string> status;
+    in property <bool> connect-enabled;
+    in property <bool> disconnect-enabled;
+    callback connect();
+    callback disconnect();
+    background: #eff2f5;
+    VerticalLayout {
+        padding: 24px; spacing: 16px; alignment: start;
+        Text { text: "VistA session"; font-size: 23px; font-weight: 600; color: #193950; }
+        Text { text: root.status; wrap: word-wrap; color: #754220; accessible-label: "VistA connection status. " + root.status; }
+        Text { text: "This release cannot connect to VistA. The supported sign-in integration and VA-network/session verification still need to be established on your workstation."; wrap: word-wrap; color: #40596c; }
+        Text { text: "Patient lookup and chart reading are not available in this session view. Choose Mock patients to use the invented demonstration records."; wrap: word-wrap; color: #40596c; }
+        HorizontalLayout {
+            spacing: 12px;
+            Button { text: "Connect"; enabled: root.connect-enabled; clicked => { root.connect(); } }
+            Button { text: "Disconnect"; enabled: root.disconnect-enabled; clicked => { root.disconnect(); } }
+            Rectangle { horizontal-stretch: 1; background: transparent; }
+        }
+    }
+}

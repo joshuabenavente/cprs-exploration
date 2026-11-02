@@ -1,6 +1,7 @@
 #![deny(unsafe_code)]
 
 use chart_core::*;
+use chart_vista_bridge::NativeSessionPort;
 use slint::{ComponentHandle, Model, ModelRc, StandardListViewItem, VecModel};
 use std::{
     cell::RefCell,
@@ -18,6 +19,9 @@ use ui::AppWindow;
 mod integrated_check;
 
 struct Controller {
+    session: SessionCoordinator,
+    session_port: NativeSessionPort,
+    started: Instant,
     state: AppState,
     provider: MockProvider,
     immediate: bool,
@@ -104,7 +108,23 @@ fn order_filter_index(value: OrderStatusFilter) -> i32 {
 
 fn sync(app: &AppWindow, controller: &Controller) {
     let state = &controller.state;
-    app.set_selector_open(state.selector_open);
+    let live = !controller.session.is_mock();
+    app.set_live_source(live);
+    app.set_session_status(controller.session.status().into());
+    app.set_session_connect_enabled(
+        live && controller.session_port.available()
+            && !matches!(
+                controller.session.phase(),
+                SessionPhase::Authenticating | SessionPhase::Connected
+            ),
+    );
+    app.set_session_disconnect_enabled(
+        live && matches!(
+            controller.session.phase(),
+            SessionPhase::Authenticating | SessionPhase::Connected
+        ),
+    );
+    app.set_selector_open(state.selector_open && !live);
     app.set_has_active(state.active.is_some());
     app.set_fixture_date(FIXTURE_DATE.into());
     if let Some(chart) = &state.active {
@@ -629,6 +649,11 @@ fn sync(app: &AppWindow, controller: &Controller) {
             .unwrap_or_default()
             .into(),
     );
+    if live {
+        app.set_active_name("Live session".into());
+        app.set_active_detail("Session foundations only · Patient reading is not enabled".into());
+        app.set_message(controller.session.status().into());
+    }
 }
 
 fn changed_rows(
@@ -693,9 +718,27 @@ fn open_detail(weak: slint::Weak<AppWindow>, shared: Shared, panel: PanelKind) {
         let c = shared.borrow();
         (c.provider.clone(), c.immediate)
     };
+    let Some(source_stamp) = shared.borrow().session.mock_stamp() else {
+        return;
+    };
     let finish = move || {
-        let result = provider.detail(&request);
-        let applied = shared.borrow_mut().state.apply_detail(&request, result);
+        let current_source = shared.borrow().session.accepts_mock(source_stamp);
+        let applied = if current_source {
+            let result = provider.detail(&request);
+            shared.borrow_mut().state.apply_detail(&request, result)
+        } else {
+            false
+        };
+        if !current_source {
+            integrated_check::record(
+                &shared,
+                "source-reject",
+                "",
+                "cover-detail",
+                request.generation,
+                false,
+            );
+        }
         integrated_check::record(
             &shared,
             "cover-detail",
@@ -734,9 +777,27 @@ fn search_request(weak: slint::Weak<AppWindow>, shared: Shared, request: SearchR
     } else {
         180
     };
+    let Some(source_stamp) = shared.borrow().session.mock_stamp() else {
+        return;
+    };
     let finish = move || {
-        let result = provider.search(&request);
-        let applied = shared.borrow_mut().state.apply_search(&request, result);
+        let current_source = shared.borrow().session.accepts_mock(source_stamp);
+        let applied = if current_source {
+            let result = provider.search(&request);
+            shared.borrow_mut().state.apply_search(&request, result)
+        } else {
+            false
+        };
+        if !current_source {
+            integrated_check::record(
+                &shared,
+                "source-reject",
+                "",
+                "search",
+                request.generation,
+                false,
+            );
+        }
         integrated_check::record(
             &shared,
             "search",
@@ -775,9 +836,27 @@ fn confirm(weak: slint::Weak<AppWindow>, shared: Shared, acknowledged: bool) {
         let c = shared.borrow();
         (c.provider.clone(), c.immediate)
     };
+    let Some(source_stamp) = shared.borrow().session.mock_stamp() else {
+        return;
+    };
     let finish = move || {
-        let result = provider.chart(&request.patient_id);
-        let applied = shared.borrow_mut().state.apply_chart(&request, result);
+        let current_source = shared.borrow().session.accepts_mock(source_stamp);
+        let applied = if current_source {
+            let result = provider.chart(&request.patient_id);
+            shared.borrow_mut().state.apply_chart(&request, result)
+        } else {
+            false
+        };
+        if !current_source {
+            integrated_check::record(
+                &shared,
+                "source-reject",
+                "",
+                "chart",
+                request.generation,
+                false,
+            );
+        }
         integrated_check::record(
             &shared,
             "chart",
@@ -825,9 +904,27 @@ fn dispatch_notes_list(
     } else {
         180
     };
+    let Some(source_stamp) = shared.borrow().session.mock_stamp() else {
+        return;
+    };
     let finish = move || {
-        let result = provider.notes_list(&request);
-        let applied = shared.borrow_mut().state.apply_notes_list(&request, result);
+        let current_source = shared.borrow().session.accepts_mock(source_stamp);
+        let applied = if current_source {
+            let result = provider.notes_list(&request);
+            shared.borrow_mut().state.apply_notes_list(&request, result)
+        } else {
+            false
+        };
+        if !current_source {
+            integrated_check::record(
+                &shared,
+                "source-reject",
+                "",
+                "notes-list",
+                request.generation,
+                false,
+            );
+        }
         integrated_check::record(
             &shared,
             "notes-list",
@@ -862,9 +959,27 @@ fn deliver_note(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<No
         } else {
             300
         };
+    let Some(source_stamp) = shared.borrow().session.mock_stamp() else {
+        return;
+    };
     let finish = move || {
-        let result = provider.note_body(&request);
-        let applied = shared.borrow_mut().state.apply_note(&request, result);
+        let current_source = shared.borrow().session.accepts_mock(source_stamp);
+        let applied = if current_source {
+            let result = provider.note_body(&request);
+            shared.borrow_mut().state.apply_note(&request, result)
+        } else {
+            false
+        };
+        if !current_source {
+            integrated_check::record(
+                &shared,
+                "source-reject",
+                "",
+                "note-body",
+                request.generation,
+                false,
+            );
+        }
         integrated_check::record(
             &shared,
             "note-body",
@@ -915,12 +1030,30 @@ fn deliver_orders_list(
     } else {
         180
     };
+    let Some(source_stamp) = shared.borrow().session.mock_stamp() else {
+        return;
+    };
     let finish = move || {
-        let result = provider.orders_list(&request);
-        let applied = shared
-            .borrow_mut()
-            .state
-            .apply_orders_list(&request, result);
+        let current_source = shared.borrow().session.accepts_mock(source_stamp);
+        let applied = if current_source {
+            let result = provider.orders_list(&request);
+            shared
+                .borrow_mut()
+                .state
+                .apply_orders_list(&request, result)
+        } else {
+            false
+        };
+        if !current_source {
+            integrated_check::record(
+                &shared,
+                "source-reject",
+                "",
+                "orders-list",
+                request.generation,
+                false,
+            );
+        }
         integrated_check::record(
             &shared,
             "orders-list",
@@ -961,9 +1094,27 @@ fn deliver_order(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<O
     } else {
         300
     };
+    let Some(source_stamp) = shared.borrow().session.mock_stamp() else {
+        return;
+    };
     let finish = move || {
-        let result = provider.order_detail(&request);
-        let applied = shared.borrow_mut().state.apply_order(&request, result);
+        let current_source = shared.borrow().session.accepts_mock(source_stamp);
+        let applied = if current_source {
+            let result = provider.order_detail(&request);
+            shared.borrow_mut().state.apply_order(&request, result)
+        } else {
+            false
+        };
+        if !current_source {
+            integrated_check::record(
+                &shared,
+                "source-reject",
+                "",
+                "order-body",
+                request.generation,
+                false,
+            );
+        }
         integrated_check::record(
             &shared,
             "order-body",
@@ -1013,12 +1164,30 @@ fn deliver_results_list(
     } else {
         180
     };
+    let Some(source_stamp) = shared.borrow().session.mock_stamp() else {
+        return;
+    };
     let finish = move || {
-        let result = provider.results_list(&request);
-        let applied = shared
-            .borrow_mut()
-            .state
-            .apply_results_list(&request, result);
+        let current_source = shared.borrow().session.accepts_mock(source_stamp);
+        let applied = if current_source {
+            let result = provider.results_list(&request);
+            shared
+                .borrow_mut()
+                .state
+                .apply_results_list(&request, result)
+        } else {
+            false
+        };
+        if !current_source {
+            integrated_check::record(
+                &shared,
+                "source-reject",
+                "",
+                "results-list",
+                request.generation,
+                false,
+            );
+        }
         integrated_check::record(
             &shared,
             "results-list",
@@ -1059,9 +1228,27 @@ fn deliver_report(weak: slint::Weak<AppWindow>, shared: Shared, request: Option<
     } else {
         300
     };
+    let Some(source_stamp) = shared.borrow().session.mock_stamp() else {
+        return;
+    };
     let finish = move || {
-        let result = provider.report_detail(&request);
-        let applied = shared.borrow_mut().state.apply_report(&request, result);
+        let current_source = shared.borrow().session.accepts_mock(source_stamp);
+        let applied = if current_source {
+            let result = provider.report_detail(&request);
+            shared.borrow_mut().state.apply_report(&request, result)
+        } else {
+            false
+        };
+        if !current_source {
+            integrated_check::record(
+                &shared,
+                "source-reject",
+                "",
+                "report-body",
+                request.generation,
+                false,
+            );
+        }
         integrated_check::record(
             &shared,
             "report-body",
@@ -1087,11 +1274,80 @@ fn open_report(weak: slint::Weak<AppWindow>, shared: Shared) {
 
 fn wire(app: &AppWindow, shared: &Shared) {
     let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_source_changed(move |index| {
+        let mode = if index == 1 {
+            SourceMode::Live
+        } else {
+            SourceMode::Mock
+        };
+        let changed = {
+            let mut c = data.borrow_mut();
+            if c.session.mode() == mode {
+                false
+            } else {
+                c.state = AppState::default();
+                c.last_click = None;
+                c.last_cover_click = None;
+                c.last_order_click = None;
+                c.last_report_click = None;
+                let Controller {
+                    session,
+                    session_port,
+                    ..
+                } = &mut *c;
+                session.switch_mode(mode, session_port)
+            }
+        };
+        paint(&weak, &data);
+        if changed && mode == SourceMode::Mock {
+            let request = data.borrow_mut().state.open_selection();
+            search_request(weak.clone(), data.clone(), request);
+        }
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_session_connect(move || {
+        {
+            let mut c = data.borrow_mut();
+            let now = c.started.elapsed().as_millis().min(u64::MAX as u128) as u64;
+            let Controller {
+                session,
+                session_port,
+                ..
+            } = &mut *c;
+            // This release's NativeSessionPort is unavailable; it cannot return an attempt.
+            let _ = session.connect(session_port, now);
+        }
+        paint(&weak, &data);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
+    app.on_session_disconnect(move || {
+        {
+            let mut c = data.borrow_mut();
+            if c.session.is_mock() {
+                return;
+            }
+            c.state = AppState::default();
+            let Controller {
+                session,
+                session_port,
+                ..
+            } = &mut *c;
+            session.disconnect(session_port);
+        }
+        paint(&weak, &data);
+    });
+    let (weak, data) = (app.as_weak(), shared.clone());
     app.on_results_filter_edited(move |query| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         load_results(weak.clone(), data.clone(), query.to_string());
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_results_dates_edited(move |beginning, ending| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_report_click = None;
@@ -1103,6 +1359,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_results_reset_filters(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_report_click = None;
@@ -1112,6 +1371,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_results_scenario_changed(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         data.borrow_mut().provider.simulation = match index {
             1 => Simulation::ResultsListUnavailable,
             2 => Simulation::ReportDetailUnavailable,
@@ -1123,11 +1385,17 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_retry_results_list(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let query = data.borrow().state.results.query.clone();
         load_results(weak.clone(), data.clone(), query);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_report_selected(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let index = usize::try_from(index).unwrap_or(usize::MAX);
         let mut c = data.borrow_mut();
         if c.state.results.selected_index() != Some(index) {
@@ -1139,6 +1407,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_report_released(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let Ok(index) = usize::try_from(index) else {
             return;
         };
@@ -1173,6 +1444,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     app.on_report_activated(move || open_report(weak.clone(), data.clone()));
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_close_report_detail(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let mut c = data.borrow_mut();
         c.last_report_click = None;
         c.state.close_report_detail();
@@ -1181,16 +1455,25 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_retry_report(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = data.borrow_mut().state.retry_report();
         deliver_report(weak.clone(), data.clone(), request);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_orders_filter_edited(move |query| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let filter = data.borrow().state.orders.status_filter;
         load_orders(weak.clone(), data.clone(), query.to_string(), filter);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_orders_dates_edited(move |beginning, ending| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_order_click = None;
@@ -1203,6 +1486,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_orders_reset_filters(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_order_click = None;
@@ -1212,11 +1498,17 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_orders_status_changed(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let query = data.borrow().state.orders.query.clone();
         load_orders(weak.clone(), data.clone(), query, order_filter(index));
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_orders_grouping_changed(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_order_click = None;
@@ -1230,6 +1522,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_orders_scenario_changed(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         data.borrow_mut().provider.simulation = match index {
             1 => Simulation::OrdersListUnavailable,
             2 => Simulation::OrderDetailUnavailable,
@@ -1244,6 +1539,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_retry_orders_list(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let (query, filter) = {
             let c = data.borrow();
             (c.state.orders.query.clone(), c.state.orders.status_filter)
@@ -1252,6 +1550,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_order_selected(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let index = usize::try_from(index).unwrap_or(usize::MAX);
         let mut c = data.borrow_mut();
         if c.state.orders.selected_display_index() != Some(index) {
@@ -1263,6 +1564,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_order_released(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let Ok(index) = usize::try_from(index) else {
             return;
         };
@@ -1300,6 +1604,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     app.on_order_activated(move || open_order(weak.clone(), data.clone()));
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_close_order_detail(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let mut c = data.borrow_mut();
         c.last_order_click = None;
         c.state.close_order_detail();
@@ -1308,15 +1615,24 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_retry_order(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = data.borrow_mut().state.retry_order();
         deliver_order(weak.clone(), data.clone(), request);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_notes_filter_edited(move |query| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         load_notes(weak.clone(), data.clone(), query.to_string())
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_notes_author_changed(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let c = data.borrow();
         let author = if index == 0 {
             None
@@ -1343,6 +1659,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_notes_dates_edited(move |beginning, ending| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let (query, author) = {
             let c = data.borrow();
             (c.state.notes.query.clone(), c.state.notes.author.clone())
@@ -1357,16 +1676,25 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_reset_notes_filters(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = data.borrow_mut().state.reset_notes_filters();
         dispatch_notes_list(weak.clone(), data.clone(), request);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_retry_notes_list(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let query = data.borrow().state.notes.query.clone();
         load_notes(weak.clone(), data.clone(), query);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_notes_scenario_changed(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         data.borrow_mut().provider.simulation = match index {
             1 => Simulation::NotesListUnavailable,
             2 => Simulation::NoteBodyUnavailable,
@@ -1378,6 +1706,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_note_selected(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = data
             .borrow_mut()
             .state
@@ -1386,11 +1717,17 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_retry_note(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = data.borrow_mut().state.retry_note();
         deliver_note(weak.clone(), data.clone(), request);
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_cover_selected(move |kind, index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let mut c = data.borrow_mut();
         let kind = panel(kind);
         let index = usize::try_from(index).unwrap_or(usize::MAX);
@@ -1403,6 +1740,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_cover_released(move |kind, index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let kind = panel(kind);
         let Ok(index) = usize::try_from(index) else {
             return;
@@ -1446,6 +1786,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     app.on_cover_activated(move |kind| open_detail(weak.clone(), data.clone(), panel(kind)));
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_close_detail(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let panel = {
             let mut c = data.borrow_mut();
             c.last_cover_click = None;
@@ -1460,6 +1803,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_retry_detail(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let panel = data.borrow().state.detail.request().map(|r| r.panel);
         if let Some(panel) = panel {
             open_detail(weak.clone(), data.clone(), panel);
@@ -1467,6 +1813,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_open_selection(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_click = None;
@@ -1480,6 +1829,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_query_edited(move |query| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_click = None;
@@ -1490,6 +1842,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_mode_changed(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_click = None;
@@ -1500,6 +1855,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_simulation_changed(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_click = None;
@@ -1511,6 +1869,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_row_selected(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let index = usize::try_from(index).unwrap_or(usize::MAX);
         let mut c = data.borrow_mut();
         let provider = c.provider.clone();
@@ -1520,6 +1881,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_row_released(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let Ok(index) = usize::try_from(index) else {
             return;
         };
@@ -1555,6 +1919,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     app.on_accept_acknowledgment(move || confirm(weak.clone(), data.clone(), true));
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_decline_acknowledgment(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         data.borrow_mut().state.decline_confirmation();
         paint(&weak, &data);
         if let Some(app) = weak.upgrade() {
@@ -1563,6 +1930,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_cancel_selection(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         {
             let mut c = data.borrow_mut();
             c.last_click = None;
@@ -1594,6 +1964,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_previous_page(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_click = None;
@@ -1605,6 +1978,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_next_page(move || {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         let request = {
             let mut c = data.borrow_mut();
             c.last_click = None;
@@ -1616,6 +1992,9 @@ fn wire(app: &AppWindow, shared: &Shared) {
     });
     let (weak, data) = (app.as_weak(), shared.clone());
     app.on_tab_changed(move |index| {
+        if !data.borrow().session.is_mock() {
+            return;
+        }
         data.borrow_mut().last_order_click = None;
         data.borrow_mut().last_report_click = None;
         data.borrow_mut().state.set_tab(tab(index));
@@ -2022,6 +2401,17 @@ fn callback_smoke(app: &AppWindow, shared: &Shared) {
     app.invoke_cancel_selection();
     assert_eq!(app.get_active_id().as_str(), "SYNTH-009");
     assert!(shared.borrow().immediate);
+    app.invoke_source_changed(1);
+    assert!(app.get_live_source());
+    assert!(!app.get_has_active() && app.get_active_id().is_empty());
+    assert!(!app.get_session_connect_enabled());
+    app.invoke_session_connect();
+    assert!(app.get_session_status().contains("not built"));
+    app.invoke_query_edited("ignored".into());
+    assert!(shared.borrow().state.query.is_empty());
+    app.invoke_source_changed(0);
+    assert!(!app.get_live_source() && !app.get_has_active());
+    assert_eq!(app.get_patient_rows().row_count(), 4);
     println!(
         "Mock UI callback smoke passed: patient selection, Cover Sheet including Appointments and Active Medications, Notes, Results reports and Orders selection/detail/double-click/filter/status/close/error/retry, patient clearing, and Unicode fixture identity."
     );
@@ -2032,6 +2422,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let smoke = args.as_slice() == ["--smoke-check"];
     let integrated = args.iter().any(|a| a == "--integration-check");
     let keep_open = args.iter().any(|a| a == "--keep-open");
+    let live_session = args.iter().any(|a| a == "--live-session");
     let minimum_size = args.iter().any(|a| a == "--minimum-size");
     if args.iter().any(|a| {
         ![
@@ -2039,12 +2430,14 @@ fn main() -> Result<(), Box<dyn Error>> {
             "--minimum-size",
             "--integration-check",
             "--keep-open",
+            "--live-session",
         ]
         .contains(&a.as_str())
     }) || (args.iter().any(|a| a == "--smoke-check") && !smoke)
         || (keep_open && !integrated)
+        || (live_session && (smoke || integrated))
     {
-        return Err("Usage: cprs-chart-mock [--minimum-size] [--integration-check [--keep-open]] | --smoke-check".into());
+        return Err("Usage: cprs-chart-mock [--minimum-size] [--live-session | --integration-check [--keep-open]] | --smoke-check".into());
     }
     slint::BackendSelector::new()
         .backend_name("winit".into())
@@ -2070,6 +2463,9 @@ fn main() -> Result<(), Box<dyn Error>> {
             .set_position(slint::PhysicalPosition::new(0, 0));
     }
     let shared = Rc::new(RefCell::new(Controller {
+        session: SessionCoordinator::default(),
+        session_port: NativeSessionPort,
+        started: Instant::now(),
         state: AppState::default(),
         provider: MockProvider::default(),
         immediate: smoke,
@@ -2080,8 +2476,12 @@ fn main() -> Result<(), Box<dyn Error>> {
         last_report_click: None,
     }));
     wire(&app, &shared);
-    let request = shared.borrow_mut().state.open_selection();
-    search_request(app.as_weak(), shared.clone(), request);
+    if live_session {
+        app.invoke_source_changed(1);
+    } else {
+        let request = shared.borrow_mut().state.open_selection();
+        search_request(app.as_weak(), shared.clone(), request);
+    }
     if smoke {
         callback_smoke(&app, &shared);
     } else if integrated {

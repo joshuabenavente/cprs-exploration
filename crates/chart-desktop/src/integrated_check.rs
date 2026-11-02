@@ -2539,6 +2539,237 @@ fn journey() -> VecDeque<Step> {
             Ok(())
         },
     ));
+    q.push_back(Step::new(
+        "session-cover-source-race",
+        |a, _| {
+            a.invoke_cover_selected(2, 0);
+            a.invoke_cover_activated(2);
+            a.invoke_source_changed(1);
+            Ok(())
+        },
+        |_, s, _| seen(s, 0, "source-reject", "", "cover-detail", false),
+        |a, s| {
+            require!(
+                a.get_live_source() && !a.get_has_active() && a.get_active_id().is_empty(),
+                "Live retained mock patient"
+            );
+            require!(
+                a.get_patient_rows().row_count() == 0 && !a.get_detail_open(),
+                "Live retained mock selection/detail"
+            );
+            empty_text(a, s)
+        },
+    ));
+    q.push_back(Step::new(
+        "session-native-unavailable",
+        |a, _| {
+            a.invoke_session_connect();
+            a.invoke_query_edited("must-not-dispatch".into());
+            a.invoke_tab_changed(1);
+            a.invoke_orders_filter_edited("must-not-dispatch".into());
+            a.invoke_open_selection();
+            a.invoke_confirm_selection();
+            Ok(())
+        },
+        now,
+        |a, s| {
+            require!(
+                a.get_session_status().contains("not built")
+                    && !a.get_session_connect_enabled()
+                    && !a.get_session_disconnect_enabled(),
+                "unavailable native adapter made a connection claim"
+            );
+            require!(
+                s.borrow().session.phase() == SessionPhase::LiveUnavailable
+                    && !s.borrow().session.clinical_reads_allowed(),
+                "Live enabled an unsupported capability"
+            );
+            require!(
+                s.borrow().state.query.is_empty()
+                    && !a.get_selector_open()
+                    && a.get_patient_rows().row_count() == 0,
+                "hidden mock callbacks mutated Live state"
+            );
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "session-mock-search-aba",
+        |a, _| {
+            a.invoke_source_changed(0); // Old generation-1 search.
+            a.invoke_source_changed(1);
+            a.invoke_source_changed(0); // New generation-1 search, same query/IDs.
+            Ok(())
+        },
+        |a, s, i| !a.get_search_loading() && seen(s, i, "source-reject", "", "search", false),
+        |a, s| {
+            require!(
+                !a.get_live_source()
+                    && !a.get_has_active()
+                    && a.get_patient_rows().row_count() == 4,
+                "Mock recovery restored a previous chart"
+            );
+            require!(
+                s.borrow()
+                    .delivery_audit
+                    .as_ref()
+                    .unwrap()
+                    .iter()
+                    .any(|d| d.operation == "source-reject"
+                        && d.key == "search"
+                        && d.generation == 1),
+                "reused mock generation was not rejected"
+            );
+            a.invoke_query_edited("SYNTH-001".into());
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "session-chart-seed",
+        noop,
+        |a, _, _| !a.get_search_loading() && a.get_patient_rows().row_count() == 1,
+        |a, _| {
+            a.invoke_row_selected(0);
+            a.invoke_confirm_selection();
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "session-chart-source-aba",
+        |a, _| {
+            a.invoke_source_changed(1);
+            a.invoke_source_changed(0);
+            a.invoke_query_edited("SYNTH-001".into());
+            Ok(())
+        },
+        |a, _, _| !a.get_search_loading() && a.get_patient_rows().row_count() == 1,
+        |a, _| {
+            a.invoke_row_selected(0);
+            a.invoke_confirm_selection();
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "session-chart-recovery",
+        noop,
+        |a, s, _| {
+            a.get_has_active()
+                && !a.get_chart_loading()
+                && seen(s, 0, "source-reject", "", "chart", false)
+        },
+        |a, s| {
+            owned(a, s, "SYNTH-001", ChartTab::CoverSheet)?;
+            {
+                let c = s.borrow();
+                let audit = c.delivery_audit.as_ref().unwrap();
+                let (index, old) = audit
+                    .iter()
+                    .enumerate()
+                    .rev()
+                    .find(|(_, d)| d.operation == "source-reject" && d.key == "chart")
+                    .unwrap();
+                require!(
+                    audit[index..].iter().any(|d| d.operation == "chart"
+                        && d.applied
+                        && d.generation == old.generation),
+                    "reused chart generation was not rejected before new chart applied"
+                );
+            }
+            a.invoke_tab_changed(1);
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "session-note-source-seed",
+        noop,
+        |a, _, _| a.get_notes_rows().row_count() == 4,
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::SlowNotes;
+            a.invoke_note_selected(0);
+            s.borrow_mut().provider.simulation = Simulation::Normal;
+            a.invoke_tab_changed(2);
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "session-order-source-seed",
+        noop,
+        |a, _, _| a.get_orders_rows().row_count() == 4,
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::SlowOrders;
+            a.invoke_order_selected(0);
+            a.invoke_order_activated();
+            s.borrow_mut().provider.simulation = Simulation::Normal;
+            a.invoke_tab_changed(3);
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "session-browser-source-races",
+        noop,
+        |a, _, _| a.get_results_rows().row_count() == 4,
+        |a, s| {
+            s.borrow_mut().provider.simulation = Simulation::SlowResults;
+            a.invoke_report_selected(0);
+            a.invoke_report_activated();
+            s.borrow_mut().provider.simulation = Simulation::Normal;
+            // Queue all three list families, then invalidate the source before delivery.
+            a.invoke_tab_changed(1);
+            a.invoke_tab_changed(2);
+            a.invoke_tab_changed(3);
+            a.invoke_source_changed(1);
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "session-all-browser-replies-rejected",
+        noop,
+        |_, s, _| {
+            [
+                "notes-list",
+                "note-body",
+                "orders-list",
+                "order-body",
+                "results-list",
+                "report-body",
+            ]
+            .iter()
+            .all(|kind| seen(s, 0, "source-reject", "", kind, false))
+        },
+        |a, s| {
+            require!(
+                a.get_live_source()
+                    && a.get_notes_rows().row_count() == 0
+                    && a.get_orders_rows().row_count() == 0
+                    && a.get_results_rows().row_count() == 0,
+                "old browser rows crossed source boundary"
+            );
+            empty_text(a, s)?;
+            a.invoke_session_disconnect();
+            a.invoke_session_connect();
+            require!(
+                !s.borrow().session.clinical_reads_allowed(),
+                "read allowlist opened after retry"
+            );
+            a.invoke_source_changed(0);
+            Ok(())
+        },
+    ));
+    q.push_back(Step::new(
+        "session-final-clean-mock",
+        noop,
+        |a, _, _| !a.get_search_loading() && a.get_patient_rows().row_count() == 4,
+        |a, s| {
+            require!(
+                !a.get_live_source()
+                    && !a.get_has_active()
+                    && a.get_selected_row() == -1
+                    && a.get_active_id().is_empty(),
+                "source switch restored an old patient"
+            );
+            empty_text(a, s)
+        },
+    ));
     q
 }
 
@@ -2567,12 +2798,12 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         let audit = c.delivery_audit.as_ref().expect("opt-in delivery audit");
         for e in audit {
             println!(
-                "M17F100_DELIVERY {} {} {:?} generation={} applied={}",
+                "M18F100_DELIVERY {} {} {:?} generation={} applied={}",
                 e.operation, e.owner, e.key, e.generation, e.applied
             );
         }
         println!(
-            "M17F100_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
+            "M18F100_INTEGRATED_PASS cases={} deliveries={} rejected={} elapsed_ms={}",
             driver.completed,
             audit.len(),
             audit.iter().filter(|e| !e.applied).count(),
@@ -2581,7 +2812,7 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
         if let Some(app) = driver.weak.upgrade() {
             let size = app.window().size();
             println!(
-                "M17F100_WINDOW client_width_px={} client_height_px={} application_scale={}",
+                "M18F100_WINDOW client_width_px={} client_height_px={} application_scale={}",
                 size.width,
                 size.height,
                 app.window().scale_factor()
@@ -2593,11 +2824,11 @@ fn finish(d: &Rc<RefCell<Driver>>, result: Result<(), String>) {
                 app.invoke_open_selection();
             }
             println!(
-                "M17F100_REVIEW_READY SYNTH-001 patient selector; wait for candidates, then review page integrity; close the mock to exit."
+                "M18F100_REVIEW_READY SYNTH-001 patient selector; wait for candidates, then review page integrity; close the mock to exit."
             );
         }
     } else if let Err(error) = &result {
-        eprintln!("M17F100_INTEGRATED_FAIL {error}");
+        eprintln!("M18F100_INTEGRATED_FAIL {error}");
     }
     let quit = result.is_err() || !driver.keep_open;
     *driver.result.borrow_mut() = Some(result);
@@ -2648,7 +2879,7 @@ fn tick(d: Rc<RefCell<Driver>>) {
             return;
         }
         println!(
-            "M17F100_CHECK {} PASS elapsed_ms={}",
+            "M18F100_CHECK {} PASS elapsed_ms={}",
             running.step.name,
             d.borrow().started.elapsed().as_millis()
         );

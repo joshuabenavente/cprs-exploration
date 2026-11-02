@@ -26,12 +26,12 @@ jobs:
         with:
           name: windows-code-checks
           path: |
-            validation/milestone-17/functional-100/windows/code-checks.json
-            validation/milestone-17/functional-100/windows/bootstrap.log
-            validation/milestone-17/functional-100/windows/format.log
-            validation/milestone-17/functional-100/windows/clippy.log
-            validation/milestone-17/functional-100/windows/tests.log
-            validation/milestone-17/functional-100/windows/build.log
+            validation/milestone-18/functional-100/windows/code-checks.json
+            validation/milestone-18/functional-100/windows/bootstrap.log
+            validation/milestone-18/functional-100/windows/format.log
+            validation/milestone-18/functional-100/windows/clippy.log
+            validation/milestone-18/functional-100/windows/tests.log
+            validation/milestone-18/functional-100/windows/build.log
   portable-core:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -47,6 +47,6 @@ jobs:
           cargo --version
           cargo fetch --locked
           cargo fmt --all -- --check
-          cargo clippy -p chart-core --all-targets --locked --offline -- -D warnings
-          cargo test -p chart-core --locked --offline
-          python scripts/test_m17_functional_protocol.py
+          cargo clippy -p chart-core -p chart-vista-bridge --all-targets --locked --offline -- -D warnings
+          cargo test -p chart-core -p chart-vista-bridge --locked --offline
+          python scripts/test_m18_functional_protocol.py
