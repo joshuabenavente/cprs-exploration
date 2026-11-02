@@ -27,9 +27,10 @@
       "id": "M18",
       "priority": "P1",
       "task": "VA-network and active-user/VistA-session-guarded connection foundations",
-      "status": "Planned; approved CPRS/RPC Broker route reported by user; integration/guard contract before implementation; no live access performed",
+      "status": "Implementation plan and VS01\u2013VS12 contract drafted; no code/live access yet; portable work can proceed while native interface facts are resolved",
       "dependency": "Documented CPRS/RPC Broker integration interface/authentication handoff and trustworthy network/session signals",
-      "plan": "docs/milestone-18.md"
+      "plan": "docs/milestone-18.md",
+      "contract": "specifications/vista-session-foundations.md"
     },
     {
       "id": "M19",
@@ -224,7 +225,7 @@
       "mitigation": "full typed filter/generation/owner equality, response predicates and list/detail invalidation tests"
     }
   ],
-  "next_action": "Draft M18 guard/provider contract for user-reported approved CPRS/RPC Broker sign-in path; establish supported integration interface and reliable network/session signals; M17 binding remains independent",
+  "next_action": "Implement M18 portable session coordinator and synthetic VS01\u2013VS12 tests while resolving supported Broker interface and native gate facts; no clinical reads until M19",
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
     "traceability": "docs/traceability-2026-11-01.md",
@@ -234,7 +235,8 @@
     "analysis_evidence": "validation/analysis-review-2026-11-01/",
     "implementation_contract": "specifications/orders-grouping.md",
     "implementation_evidence": "validation/milestone-17/functional-100/",
-    "live_connection_plan": "docs/live-vista-plan.md"
+    "live_connection_plan": "docs/live-vista-plan.md",
+    "next_implementation_contract": "specifications/vista-session-foundations.md"
   },
   "analysis_review": {
     "workspace": "reverse-engineering/",
@@ -918,7 +920,7 @@
   "live_vista_plan": {
     "recorded_at_utc": "2026-11-02T02:37:09.078765+00:00",
     "verbatim_user_instruction": "i'd like to lift the rule on vista connection - provided that it only happens on the VA network when i am logged in. i am interested in getting some real reading going. factor that into the plan",
-    "status": "Planning only; current runtime unchanged; no live access attempted",
+    "status": "M18 implementation plan and VS01\u2013VS12 contract drafted; current runtime unchanged; no live access attempted",
     "local_execution": "User's VA-network Windows workstation only",
     "required_conditions": [
       "Trustworthy VA-network access boundary",
@@ -937,6 +939,52 @@
     ],
     "testing": "100% only at default/minimum; keyboard/focus/navigation and screen readers excluded; other scales deferred",
     "plan": "docs/live-vista-plan.md",
-    "verbatim_integration_reply": "An approved CPRS/RPC Broker sign-in path"
+    "verbatim_integration_reply": "An approved CPRS/RPC Broker sign-in path",
+    "m18_contract": "specifications/vista-session-foundations.md",
+    "m18_enabled_clinical_operations": []
+  },
+  "m18_plan": {
+    "status": "planned only",
+    "baseline": "323383e3877600c0dab391f6038180691d6c1289",
+    "proposed_branch": "m18-vista-session-foundations",
+    "document": "docs/milestone-18.md",
+    "contract": "specifications/vista-session-foundations.md",
+    "contract_ids": [
+      "VS01",
+      "VS02",
+      "VS03",
+      "VS04",
+      "VS05",
+      "VS06",
+      "VS07",
+      "VS08",
+      "VS09",
+      "VS10",
+      "VS11",
+      "VS12"
+    ],
+    "route": "User-reported approved CPRS/RPC Broker sign-in path",
+    "steps": [
+      "18.1 supported native facts",
+      "18.2 portable coordinator and synthetic tests",
+      "18.3 desktop source boundary and session-only Live panel",
+      "18.4 supported Windows Broker adapter and monitors",
+      "18.5 isolated M18F100 evidence migration",
+      "18.6 local VA session exercise without patient reads",
+      "18.7 delivery and M19 handoff"
+    ],
+    "native_facts": [
+      "supported interface/package/version/bitness/threading",
+      "authentication handoff/context/status APIs",
+      "VA-network attestor/access boundary",
+      "Windows lifecycle monitor signals and health",
+      "transport peer identity and local configuration"
+    ],
+    "completion": "Synthetic/hosted checks plus actual guarded supported adapter and local session review for an exact build; missing native dependency means partial delivery",
+    "current_runtime_protocol": "M17F100",
+    "reserved_protocol": "M18F100",
+    "clinical_reads_in_m18": false,
+    "patient_reading_milestone": 19,
+    "test_scope": "100% default/minimum, keyboard/focus/navigation and screen readers excluded"
   }
 }

@@ -134,8 +134,11 @@ synthetic tests and hosted builds without any live VA connectivity or real data.
 Use a new evidence protocol/path for the future connected milestone, preserving
 all M17 and earlier receipts; do not rebrand mock passes as live acceptance.
 
-Immediate next step: draft M18's concrete guard/provider contract around the
-selected CPRS/RPC Broker sign-in path, establishing its documented integration
-interface and reliable network/session signals. This is a
+The [M18 implementation plan](milestone-18.md) and
+[VS01–VS12 contract](../specifications/vista-session-foundations.md) now define
+the work sequence, two gates, ownership boundary and acceptance evidence.
+Immediate coding step: the portable coordinator and synthetic tests, while
+establishing the selected Broker integration interface and reliable native
+network/session signals. This is a
 technical discovery dependency, not a new blanket request for permission to
 perform the conditionally authorized read-only work.

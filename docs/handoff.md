@@ -1,14 +1,14 @@
 # CPRS Chart recreation: current handoff
 
-Next priority: the user lifted the blanket prohibition on VistA connections,
-conditional on being on the VA network and logged in, for real read-only access.
-Follow [the updated plan](live-vista-plan.md) and [M18](milestone-18.md): establish
-supported sign-in and trustworthy network/session guards, then pilot patient
-identity and Notes reading in M19 on the user's VA workstation. Current runtime
-and M17 evidence remain synthetic; no live access has been attempted. Current
-100% functional-only acceptance scope is unchanged. The user reports an approved CPRS/RPC Broker sign-in path; M18 targets that
-route. Its supported integration interface and reliable network/session signals
-are the next technical facts to establish.
+M18 is now planned in [the implementation sequence](milestone-18.md) and
+[VS01–VS12](../specifications/vista-session-foundations.md). Target the user's
+approved CPRS/RPC Broker route: separate local bootstrap gates from authenticated
+session/read gates, add source epochs for every callback and revoke before
+teardown. M18 enables guarded sign-in/session control with zero clinical reads;
+M19 pilots patient identity and Notes. Begin with the portable coordinator and
+synthetic tests while resolving the actual native interface and gate signals.
+The current executable/tools remain M17F100; no live access has been attempted.
+100% functional-only testing remains in force. See [scope](live-vista-plan.md).
 
 M17 implements read-only Orders grouping by service, approved after the
 M16F100 acceptance below. Current tools now use M17F100 and separate
