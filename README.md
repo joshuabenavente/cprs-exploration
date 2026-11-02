@@ -10,7 +10,9 @@ The current executable remains the offline mock; this plan adds no connection.
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-M18 now has a portable session coordinator and explicit Mock/Live source boundary.
+M18 [PR #14](https://github.com/joshuabenavente/cprs-exploration/pull/14) is merged
+and pruned after local checks and exact-head CI passed. It adds a portable
+session coordinator and explicit Mock/Live source boundary.
 The native Broker adapter is **unavailable**: this release cannot connect to VistA,
 even on the VA network while logged in. Native integration and local session
 acceptance remain pending; this is a partial M18 foundation delivery.

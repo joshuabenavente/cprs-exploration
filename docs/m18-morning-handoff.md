@@ -1,6 +1,8 @@
 # M18 morning handoff
 
-This build delivers session policy, source isolation and the connection surface.
+M18 [PR #14](https://github.com/joshuabenavente/cprs-exploration/pull/14) is merged
+and pruned after portable/Windows source checks passed. This build delivers
+session policy, source isolation and the connection surface.
 **It cannot connect to VistA yet.** The native Broker adapter is explicitly
 unavailable; being on the VA network and logged in will not enable it. No endpoint
 probe, sign-in attempt or patient read occurs. Do not expect a credential prompt.

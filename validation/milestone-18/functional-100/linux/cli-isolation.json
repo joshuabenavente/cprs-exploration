@@ -1,0 +1,41 @@
+{
+  "protocol": "M18F100",
+  "scope": "CLI rejection of live/automated mixing and unsupported overrides",
+  "executable_sha256": "abdf0603777e2f56d5a77ad9a45f95f16829d9a81930483a03f1b5e6226610f2",
+  "passed": true,
+  "cases": [
+    {
+      "arguments": [
+        "--live-session",
+        "--integration-check"
+      ],
+      "expected": "rejected before backend startup",
+      "exit_code": 1,
+      "passed": true,
+      "stderr": "Error: \"Usage: cprs-chart-mock [--minimum-size] [--live-session | --integration-check [--keep-open]] | --smoke-check\""
+    },
+    {
+      "arguments": [
+        "--live-session",
+        "--smoke-check"
+      ],
+      "expected": "rejected before backend startup",
+      "exit_code": 1,
+      "passed": true,
+      "stderr": "Error: \"Usage: cprs-chart-mock [--minimum-size] [--live-session | --integration-check [--keep-open]] | --smoke-check\""
+    },
+    {
+      "arguments": [
+        "--live-session",
+        "--unsupported-auth-override"
+      ],
+      "expected": "rejected before backend startup",
+      "exit_code": 1,
+      "passed": true,
+      "stderr": "Error: \"Usage: cprs-chart-mock [--minimum-size] [--live-session | --integration-check [--keep-open]] | --smoke-check\""
+    }
+  ],
+  "live_connection_attempted": false,
+  "native_adapter": "unavailable",
+  "platform": "linux"
+}

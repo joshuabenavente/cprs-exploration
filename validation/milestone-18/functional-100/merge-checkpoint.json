@@ -1,0 +1,44 @@
+{
+  "protocol": "M18F100",
+  "recorded_at_utc": "2026-11-02T03:30:41.330803+00:00",
+  "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/14",
+  "merged": true,
+  "merge_commit": "adb719e71fecb338827ce9a704ded7c9443fa4b5",
+  "tested_head": "3eafb9069e597f4b39507cfec2f878ed58d0ed11",
+  "run_id": 41382637302,
+  "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41382637302",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 125076542236,
+      "name": "portable-core",
+      "conclusion": "success"
+    },
+    {
+      "id": 125076542049,
+      "name": "windows-desktop-build",
+      "conclusion": "success"
+    }
+  ],
+  "local_topic_branch_pruned": true,
+  "remote_topic_branch_pruned": true,
+  "remaining_local_branches": [
+    "main"
+  ],
+  "remaining_remote_branches": [
+    "main"
+  ],
+  "source_build_inputs_identical_to_tested_head": 57,
+  "delivery_scope": "Partial portable coordinator, unavailable native bridge and source/UI foundation",
+  "milestone_complete": false,
+  "native_broker_adapter": "unavailable",
+  "native_guard_monitors_implemented": false,
+  "live_connection_attempted": false,
+  "clinical_read_operations_enabled": 0,
+  "windows_manual_foundation": "not run",
+  "native_session_acceptance": "not run; actual adapter/guard integration unavailable",
+  "next_action": "User morning foundation review and supported SDK/interface/network/session fact discovery; native implementation before any connection test",
+  "morning_handoff": "docs/m18-morning-handoff.md",
+  "test_scope": "100% default/minimum; keyboard/focus/navigation and screen readers excluded; other scales deferred",
+  "followup_scope": "Delivery/status records plus source-bound Linux CLI isolation receipt only; 57 runtime/build inputs unchanged"
+}

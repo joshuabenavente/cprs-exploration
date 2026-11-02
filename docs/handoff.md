@@ -1,7 +1,8 @@
 # CPRS Chart recreation: current handoff
 
 M18's portable coordinator, source boundary and unavailable connection surface
-are implemented on `m18-vista-session-foundations`. Synthetic checks passed 178 Rust / 24 protocol tests and three 132-checkpoint
+are delivered in [PR #14](https://github.com/joshuabenavente/cprs-exploration/pull/14),
+merged after exact-head portable/Windows code-build CI passed; the topic is pruned. Synthetic checks passed 178 Rust / 24 protocol tests and three 132-checkpoint
 journeys at default/minimum 100%; current tools use M18F100 and freeze M17 writers.
 The native Broker adapter, real network/session monitors and VA session review
 remain unavailable/not run: this is a partial foundation delivery. No live

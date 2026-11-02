@@ -10,7 +10,7 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M18 partial foundation locally verified at 100%; publication/CI next; native Broker/guard integration unavailable and actual session acceptance not run",
+  "condition": "M18 partial foundation merged/pruned after local 100% checks and exact-head hosted CI; native Broker adapter/guard integration unavailable, actual connection and manual foundation acceptance not run",
   "scope": "Nine invented patients and offline readers; M18 portable guarded session policy and explicit source selection; no native Broker connectivity or clinical reads in this build",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
@@ -27,7 +27,7 @@
       "id": "M18",
       "priority": "P1",
       "task": "VA-network and active-user/VistA-session-guarded connection foundations",
-      "status": "Partial portable/UI foundation locally verified; native SDK/guard integration and local session exercise pending",
+      "status": "Partial foundation delivered and pruned after local/hosted checks; supported native adapter/guard integration and actual connection verification pending",
       "dependency": "Documented CPRS/RPC Broker integration interface/authentication handoff and trustworthy network/session signals",
       "plan": "docs/milestone-18.md",
       "contract": "specifications/vista-session-foundations.md"
@@ -225,7 +225,7 @@
       "mitigation": "full typed filter/generation/owner equality, response predicates and list/detail invalidation tests"
     }
   ],
-  "next_action": "Complete synthetic verification/delivery, then user morning review of unavailable foundation and supported Broker SDK/network/session fact discovery; native adapter implementation remains pending",
+  "next_action": "User morning foundation review and supported SDK/interface/network/session fact discovery; native implementation before any connection test",
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
     "traceability": "docs/traceability-2026-11-01.md",
@@ -322,7 +322,7 @@
     "branch": "m18-vista-session-foundations",
     "baseline": "91efbcce7c3acadbc4957abe41db455273cc7e1a",
     "contract": "specifications/vista-session-foundations.md",
-    "state": "Partial foundation locally verified; publishing next",
+    "state": "Partial foundation delivered in PR #14; topic pruned; native steps 18.4/18.6 pending",
     "features": [
       "Pure Rust bootstrap/session policy and typed bounded redacted identities",
       "Freshness, ownership, monotonic epochs, revocation and stale reply rejection",
@@ -332,11 +332,12 @@
     ],
     "native_broker_adapter": "unavailable",
     "native_guard_monitors": "not implemented; supported interfaces still unknown",
-    "clinical_reads_enabled": false
+    "clinical_reads_enabled": false,
+    "tested_head": "3eafb9069e597f4b39507cfec2f878ed58d0ed11"
   },
   "current_validation": {
     "protocol": "M18F100",
-    "state": "Local automated checks passed; hosted CI pending",
+    "state": "Local synthetic and exact-head portable/Windows code-build CI passed; native integration remains unavailable",
     "application_scales": [
       1.0
     ],
@@ -371,7 +372,8 @@
     ],
     "acceptance_receipt": "validation/milestone-18/functional-100/acceptance.json",
     "historical_files_unchanged": 2614,
-    "milestone_complete": false
+    "milestone_complete": false,
+    "windows_code_build_ci": "Passed on PR #14 head 3eafb9069e597f4b39507cfec2f878ed58d0ed11; run 41382637302; unavailable bridge only"
   },
   "publication": {
     "state": "Functional-only policy merged and topic branch pruned",
@@ -944,7 +946,7 @@
     "m18_enabled_clinical_operations": []
   },
   "m18_plan": {
-    "status": "Partial foundation implemented; native integration and local session acceptance pending",
+    "status": "Partial portable/UI foundation delivered in merged PR #14; supported native SDK/guard integration and local VA session exercise pending",
     "baseline": "323383e3877600c0dab391f6038180691d6c1289",
     "proposed_branch": "m18-vista-session-foundations",
     "document": "docs/milestone-18.md",
@@ -1050,5 +1052,49 @@
     "executable_sha256": null,
     "tested_source_commit": null,
     "build_binding": "pending supplied Windows outputs; no M16 or Linux identity inherited"
+  },
+  "m18_merge": {
+    "protocol": "M18F100",
+    "recorded_at_utc": "2026-11-02T03:30:41.330803+00:00",
+    "pr": "https://github.com/joshuabenavente/cprs-exploration/pull/14",
+    "merged": true,
+    "merge_commit": "adb719e71fecb338827ce9a704ded7c9443fa4b5",
+    "tested_head": "3eafb9069e597f4b39507cfec2f878ed58d0ed11",
+    "run_id": 41382637302,
+    "ci_url": "https://github.com/joshuabenavente/cprs-exploration/actions/runs/41382637302",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 125076542236,
+        "name": "portable-core",
+        "conclusion": "success"
+      },
+      {
+        "id": 125076542049,
+        "name": "windows-desktop-build",
+        "conclusion": "success"
+      }
+    ],
+    "local_topic_branch_pruned": true,
+    "remote_topic_branch_pruned": true,
+    "remaining_local_branches": [
+      "main"
+    ],
+    "remaining_remote_branches": [
+      "main"
+    ],
+    "source_build_inputs_identical_to_tested_head": 57,
+    "delivery_scope": "Partial portable coordinator, unavailable native bridge and source/UI foundation",
+    "milestone_complete": false,
+    "native_broker_adapter": "unavailable",
+    "native_guard_monitors_implemented": false,
+    "live_connection_attempted": false,
+    "clinical_read_operations_enabled": 0,
+    "windows_manual_foundation": "not run",
+    "native_session_acceptance": "not run; actual adapter/guard integration unavailable",
+    "next_action": "User morning foundation review and supported SDK/interface/network/session fact discovery; native implementation before any connection test",
+    "morning_handoff": "docs/m18-morning-handoff.md",
+    "test_scope": "100% default/minimum; keyboard/focus/navigation and screen readers excluded; other scales deferred",
+    "followup_scope": "Delivery/status records plus source-bound Linux CLI isolation receipt only; 57 runtime/build inputs unchanged"
   }
 }

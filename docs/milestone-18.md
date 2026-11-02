@@ -137,5 +137,9 @@ with 212 deliveries / 105 rejected replies. Both sizes passed. All 2,614 startup
 evidence files remain unchanged; the runner also preserves the new not-run
 session-status record. See [acceptance](../validation/milestone-18/functional-100/acceptance.json)
 and [technical review](../validation/milestone-18/functional-100/technical-review.json).
-Publication and exact-head hosted code/build checks are next. Native integration
+[PR #14](https://github.com/joshuabenavente/cprs-exploration/pull/14) is merged
+after exact-head portable/Windows code-build CI passed; the topic branch is
+pruned locally/remotely. See the [delivery record](../validation/milestone-18/functional-100/merge-checkpoint.json).
+Three additional Linux CLI cases reject live/automation combinations and unsupported
+overrides before backend startup, bound to the same executable. Native integration
 and actual VA session acceptance remain pending, so M18 is not complete.
