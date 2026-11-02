@@ -9,6 +9,11 @@ read-only development. It does not change the implemented M17 runtime: today it
 still uses nine compiled invented patients and has no transport/authentication.
 Historical mock contracts and receipts retain their original scope.
 
+Selected route: the user reports **an approved CPRS/RPC Broker sign-in path**
+is available. M18 targets that supported path. The exact integration library,
+authentication handoff, session signals and endpoint configuration are still
+local technical facts to establish; this report does not by itself verify them.
+
 The next priority is a guarded local connection followed by a small real-reading
 pilot. Further mock UI features move behind this work. M17's user-reported manual
 pass and pending exact Windows build binding remain a separate evidence item.
@@ -43,9 +48,9 @@ condition is not established by this workspace’s ordinary internet access.
 
 ## M18: connection and session foundations
 
-1. Identify the supported local integration route and its documentation. Prefer an
-   available approved API/gateway or supported RPC Broker/SSO integration rather
-   than inventing a raw protocol. Determine how VA-network membership, Windows
+1. Use the user-reported approved CPRS/RPC Broker sign-in path. Identify its
+   supported local integration interface and documentation rather than inventing
+   a raw protocol or assuming automatic CPRS session reuse. Determine how VA-network membership, Windows
    session state, authenticated VistA identity, context and session expiry can
    actually be verified. Do not request secrets, internal endpoints or patient
    examples through this chat.
@@ -129,7 +134,8 @@ synthetic tests and hosted builds without any live VA connectivity or real data.
 Use a new evidence protocol/path for the future connected milestone, preserving
 all M17 and earlier receipts; do not rebrand mock passes as live acceptance.
 
-Immediate next step: resolve the available supported integration/sign-in method,
-then draft M18's concrete guard/provider contract around that route. This is a
+Immediate next step: draft M18's concrete guard/provider contract around the
+selected CPRS/RPC Broker sign-in path, establishing its documented integration
+interface and reliable network/session signals. This is a
 technical discovery dependency, not a new blanket request for permission to
 perform the conditionally authorized read-only work.

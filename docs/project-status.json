@@ -27,8 +27,8 @@
       "id": "M18",
       "priority": "P1",
       "task": "VA-network and active-user/VistA-session-guarded connection foundations",
-      "status": "Planned; route and gate discovery before implementation; no live access performed",
-      "dependency": "Supported local integration/authentication method and reliable network/session evidence",
+      "status": "Planned; approved CPRS/RPC Broker route reported by user; integration/guard contract before implementation; no live access performed",
+      "dependency": "Documented CPRS/RPC Broker integration interface/authentication handoff and trustworthy network/session signals",
       "plan": "docs/milestone-18.md"
     },
     {
@@ -224,7 +224,7 @@
       "mitigation": "full typed filter/generation/owner equality, response predicates and list/detail invalidation tests"
     }
   ],
-  "next_action": "Identify supported VA integration/sign-in method and reliable network/session signals, then specify M18 guarded provider contract; collect outstanding M17 Windows binding independently",
+  "next_action": "Draft M18 guard/provider contract for user-reported approved CPRS/RPC Broker sign-in path; establish supported integration interface and reliable network/session signals; M17 binding remains independent",
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
     "traceability": "docs/traceability-2026-11-01.md",
@@ -929,13 +929,14 @@
     "loss_behavior": "Deny reads, cancel and reject pending replies, close connection and clear application-held patient data",
     "clinical_writes": "not authorized",
     "real_data_in_cloud_chat_repository_ci": "excluded",
-    "integration_method": "awaiting available method description; discovery first if unknown",
+    "integration_method": "User-reported approved CPRS/RPC Broker sign-in path; exact supported interface/authentication handoff and network/session signals still to establish",
     "sequence": [
       "M18 guarded provider/authentication foundations",
       "M19 patient identity and Notes list/body pilot",
       "Then individual Results/Cover Sheet/Orders read slices"
     ],
     "testing": "100% only at default/minimum; keyboard/focus/navigation and screen readers excluded; other scales deferred",
-    "plan": "docs/live-vista-plan.md"
+    "plan": "docs/live-vista-plan.md",
+    "verbatim_integration_reply": "An approved CPRS/RPC Broker sign-in path"
   }
 }

@@ -6,8 +6,9 @@ Follow [the updated plan](live-vista-plan.md) and [M18](milestone-18.md): establ
 supported sign-in and trustworthy network/session guards, then pilot patient
 identity and Notes reading in M19 on the user's VA workstation. Current runtime
 and M17 evidence remain synthetic; no live access has been attempted. Current
-100% functional-only acceptance scope is unchanged. The available integration
-method is the immediate technical discovery dependency.
+100% functional-only acceptance scope is unchanged. The user reports an approved CPRS/RPC Broker sign-in path; M18 targets that
+route. Its supported integration interface and reliable network/session signals
+are the next technical facts to establish.
 
 M17 implements read-only Orders grouping by service, approved after the
 M16F100 acceptance below. Current tools now use M17F100 and separate
