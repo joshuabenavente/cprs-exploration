@@ -1,0 +1,13 @@
+{
+  "milestone": 18,
+  "status": "not run; native supported Broker adapter unavailable",
+  "user_intent": "User will check connection on the VA workstation in the morning",
+  "native_adapter_implemented": false,
+  "native_guard_monitors_implemented": false,
+  "live_connection_attempted": false,
+  "clinical_reads_enabled": false,
+  "native_session_acceptance_complete": false,
+  "required_next_input": "Supported Broker interface/package/documentation and reliable native network/session signals",
+  "handoff": "docs/m18-morning-handoff.md",
+  "limits": "Portable synthetic tests and Windows stub compilation are not real Broker session acceptance. No identities, endpoints, credentials or patient data are included."
+}

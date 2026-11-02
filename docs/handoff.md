@@ -1,14 +1,14 @@
 # CPRS Chart recreation: current handoff
 
-M18 is now planned in [the implementation sequence](milestone-18.md) and
-[VS01–VS12](../specifications/vista-session-foundations.md). Target the user's
-approved CPRS/RPC Broker route: separate local bootstrap gates from authenticated
-session/read gates, add source epochs for every callback and revoke before
-teardown. M18 enables guarded sign-in/session control with zero clinical reads;
-M19 pilots patient identity and Notes. Begin with the portable coordinator and
-synthetic tests while resolving the actual native interface and gate signals.
-The current executable/tools remain M17F100; no live access has been attempted.
-100% functional-only testing remains in force. See [scope](live-vista-plan.md).
+M18's portable coordinator, source boundary and unavailable connection surface
+are implemented on `m18-vista-session-foundations`. Synthetic checks passed 178 Rust / 24 protocol tests and three 132-checkpoint
+journeys at default/minimum 100%; current tools use M18F100 and freeze M17 writers.
+The native Broker adapter, real network/session monitors and VA session review
+remain unavailable/not run: this is a partial foundation delivery. No live
+connection or clinical reading is possible yet. See the [morning handoff](m18-morning-handoff.md),
+[contract](../specifications/vista-session-foundations.md) and [milestone](milestone-18.md).
+The user plans the local connection review in the morning; first establish the
+supported SDK/interface and native guard facts. Historical M17/M16 context follows.
 
 M17 implements read-only Orders grouping by service, approved after the
 M16F100 acceptance below. Current tools now use M17F100 and separate

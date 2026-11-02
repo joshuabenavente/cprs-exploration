@@ -7,7 +7,7 @@ scale factors are deferred until the functional work is finished.
 
 Keep the application's keyboard and scaling functionality intact; this changes
 the testing scope. Preserve historical receipts and failed attempts. Write new
-functional-only evidence under `validation/milestone-17/functional-100/` and use
+functional-only evidence under `validation/milestone-18/functional-100/` and use
 the active `Test-MockChart.ps1` / `verify_integrated.py` entry points.
 
 Standing commit/push/merge/prune approval is recorded in
@@ -25,7 +25,8 @@ invalidate pending/displayed patient data. No clinical writes are authorized.
 Real reads run locally on that VA workstation, not in cloud development or CI.
 Do not place patient data, credentials, internal endpoint details or raw live
 responses in this repository, chat, fixtures, screenshots or validation artifacts.
-The implemented M17 runtime remains synthetic/offline until a guarded live
-provider is built and validated. Historical milestone exclusions retain their
+The M18 foundation has no native Broker integration yet; normal launches must
+remain unavailable for live connection until the supported adapter and guards
+are built and validated. M18 enables no clinical reads. Historical milestone exclusions retain their
 capture-time meaning; this user instruction supersedes the blanket future ban.
 Current 100% functional-only test policy remains in force.

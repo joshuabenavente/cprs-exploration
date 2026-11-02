@@ -218,6 +218,8 @@ def verify(code_only=False):
 
 
 def main(argv=None):
+    raise SystemExit('M17F100 is frozen history; use M18F100 entry points.')
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--code-only', action='store_true')
     args = parser.parse_args(argv)

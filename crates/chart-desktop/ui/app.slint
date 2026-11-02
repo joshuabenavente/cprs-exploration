@@ -1,6 +1,7 @@
 import { Button, ComboBox, LineEdit, StandardTableView, ScrollView, TextEdit } from "std-widgets.slint";
 import { CoverPanel, CoverGeometry } from "cover-panel.slint";
 import { NotesView, NoteFilterGeometry } from "notes-view.slint";
+import { ConnectionView } from "connection-view.slint";
 import { OrdersView, OrdersFilterGeometry } from "orders-view.slint";
 import { ResultsView, ResultsFilterGeometry } from "results-view.slint";
 
@@ -13,7 +14,7 @@ component Field inherits VerticalLayout {
 }
 
 export component AppWindow inherits Window {
-    title: "CPRS Chart — Mock-only Rust prototype";
+    title: root.live-source ? "CPRS Chart — Live session foundations" : "CPRS Chart — Mock-only Rust prototype";
     preferred-width: 1180px;
     preferred-height: 800px;
     min-width: 980px;
@@ -23,6 +24,13 @@ export component AppWindow inherits Window {
     background: #eff2f5;
     forward-focus: search;
 
+    in property <bool> live-source;
+    in property <string> session-status;
+    in property <bool> session-connect-enabled;
+    in property <bool> session-disconnect-enabled;
+    callback source-changed(int);
+    callback session-connect();
+    callback session-disconnect();
     in property <bool> selector-open: true;
     in property <bool> has-active: false;
     in property <string> active-name: "No patient selected";
@@ -269,7 +277,7 @@ export component AppWindow inherits Window {
                 height: 30px;
                 background: #dcecf7;
                 Text { x: 20px; width: parent.width - 40px; height: parent.height;
-                    text: "MOCK ONLY  ·  All patient records are invented  ·  No live connection";
+                    text: root.live-source ? "LIVE SOURCE SELECTED  ·  Session foundations only  ·  No patient reader" : "MOCK ONLY  ·  All patient records are invented  ·  No live connection";
                     color: #193e58; font-size: 13px; vertical-alignment: center; }
             }
             Rectangle {
@@ -278,14 +286,19 @@ export component AppWindow inherits Window {
                 HorizontalLayout {
                     padding: 9px; padding-left: 18px; padding-right: 18px; spacing: 16px;
                     new-patient := Button {
-                        text: "Select new patient…"; enabled: !root.selector-open && !root.detail-open;
+                        text: "Select new patient…"; enabled: !root.live-source && !root.selector-open && !root.detail-open;
                         accessible-label: "Select new synthetic patient";
                         clicked => { root.open-selection(); }
                         changed has-focus => { if self.has-focus { workspace-scroll.content-y = 0px; } }
                     }
-                    Text { text: root.selector-open ? "Ctrl+F Patient search" : root.tab-index == 0 ? "Ctrl+O Select patient" : "Ctrl+O Select patient   Ctrl+F Filter list"; color: #616e7a; vertical-alignment: center; }
+                    Text { text: root.live-source ? "Session controls" : root.selector-open ? "Ctrl+F Patient search" : root.tab-index == 0 ? "Ctrl+O Select patient" : "Ctrl+O Select patient   Ctrl+F Filter list"; color: #616e7a; vertical-alignment: center; }
                     Rectangle { horizontal-stretch: 1; background: transparent; }
-                    Text { text: "Read-only demonstration"; color: #516272; vertical-alignment: center; }
+                    ComboBox {
+                        width: 190px; model: ["Mock patients", "Live session"];
+                        current-index: root.live-source ? 1 : 0;
+                        accessible-label: "Chart data source";
+                        selected(value) => { root.source-changed(self.current-index); }
+                    }
                 }
             }
             Rectangle {
@@ -303,7 +316,7 @@ export component AppWindow inherits Window {
                     VerticalLayout {
                         alignment: center; spacing: 5px;
                         Text { text: root.has-active ? "CURRENT CHART" : "CHART CLOSED"; color: #5d6d7a; font-size: 11px; horizontal-alignment: right; }
-                        Text { text: root.has-active ? root.active-id : "Synthetic fixtures only"; color: #193950; font-size: 16px; horizontal-alignment: right; }
+                        Text { text: root.has-active ? root.active-id : root.live-source ? "Session only" : "Synthetic fixtures only"; color: #193950; font-size: 16px; horizontal-alignment: right; }
                     }
                 }
             }
@@ -321,8 +334,17 @@ export component AppWindow inherits Window {
                     changed content-height => { self.content-y = min(0px, max(self.content-y, self.visible-height - self.content-height)); }
                     Rectangle {
                     width: workspace-scroll.visible-width; height: workspace-scroll.content-height;
+                connection := ConnectionView {
+                    visible: root.live-source;
+                    width: parent.width; height: parent.height;
+                    status: root.session-status;
+                    connect-enabled: root.session-connect-enabled;
+                    disconnect-enabled: root.session-disconnect-enabled;
+                    connect => { root.session-connect(); }
+                    disconnect => { root.session-disconnect(); }
+                }
                 selector := Rectangle {
-                    visible: root.selector-open;
+                    visible: root.selector-open && !root.live-source;
                     width: parent.width; height: parent.height;
                     background: #eff2f5;
                     VerticalLayout {
@@ -639,7 +661,7 @@ export component AppWindow inherits Window {
             }
         }
         detail-overlay := Rectangle {
-            visible: root.detail-open;
+            visible: root.detail-open && !root.live-source;
             x: 0px; y: 214px; width: parent.width; height: parent.height - 214px;
             background: #e2e9ef;
             accessible-role: groupbox;

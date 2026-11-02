@@ -10,8 +10,8 @@
     "review_changes": "Documentation and separate audit evidence; incoming commit adds reverse-engineering only; no runtime changes or publication",
     "runtime_source_commit": "8fec66d98b969c9c91f91bf56afaddbbe49357cf"
   },
-  "condition": "M17 delivered and manual checklist user-reported pass, Windows binding pending; next priority is conditional VA-network/session-guarded read-only VistA foundations and Notes pilot",
-  "scope": "Current runtime: nine invented patients and offline read-only chart. Planned expansion: read-only VistA on the VA network during the user's active Windows and authenticated VistA sessions; no clinical writes.",
+  "condition": "M18 partial foundation locally verified at 100%; publication/CI next; native Broker/guard integration unavailable and actual session acceptance not run",
+  "scope": "Nine invented patients and offline readers; M18 portable guarded session policy and explicit source selection; no native Broker connectivity or clinical reads in this build",
   "inherited_validation": {
     "accepted_windows_executable_sha256": "a88cddab73f0d9978587c1ad211e1f93783acd31f1983dddfbe369d1ce20c6c3",
     "native_visual_keyboard": "user-reported pass, ten combinations; independently captured observations have targeted scope",
@@ -27,7 +27,7 @@
       "id": "M18",
       "priority": "P1",
       "task": "VA-network and active-user/VistA-session-guarded connection foundations",
-      "status": "Implementation plan and VS01\u2013VS12 contract drafted; no code/live access yet; portable work can proceed while native interface facts are resolved",
+      "status": "Partial portable/UI foundation locally verified; native SDK/guard integration and local session exercise pending",
       "dependency": "Documented CPRS/RPC Broker integration interface/authentication handoff and trustworthy network/session signals",
       "plan": "docs/milestone-18.md",
       "contract": "specifications/vista-session-foundations.md"
@@ -225,7 +225,7 @@
       "mitigation": "full typed filter/generation/owner equality, response predicates and list/detail invalidation tests"
     }
   ],
-  "next_action": "Implement M18 portable session coordinator and synthetic VS01\u2013VS12 tests while resolving supported Broker interface and native gate facts; no clinical reads until M19",
+  "next_action": "Complete synthetic verification/delivery, then user morning review of unavailable foundation and supported Broker SDK/network/session fact discovery; native adapter implementation remains pending",
   "artifacts": {
     "review": "docs/analysis-review-2026-11-01.md",
     "traceability": "docs/traceability-2026-11-01.md",
@@ -233,10 +233,11 @@
     "review_evidence": "validation/project-review-2026-11-01/",
     "initial_review": "docs/project-review-2026-11-01.md",
     "analysis_evidence": "validation/analysis-review-2026-11-01/",
-    "implementation_contract": "specifications/orders-grouping.md",
-    "implementation_evidence": "validation/milestone-17/functional-100/",
+    "implementation_contract": "specifications/vista-session-foundations.md",
+    "implementation_evidence": "validation/milestone-18/functional-100/",
     "live_connection_plan": "docs/live-vista-plan.md",
-    "next_implementation_contract": "specifications/vista-session-foundations.md"
+    "next_implementation_contract": "specifications/vista-session-foundations.md",
+    "morning_handoff": "docs/m18-morning-handoff.md"
   },
   "analysis_review": {
     "workspace": "reverse-engineering/",
@@ -317,23 +318,25 @@
     ]
   },
   "implementation": {
-    "milestone": 17,
-    "branch": "m17-orders-service-grouping",
-    "baseline": "18f3f532d380159524430dbb69ca700be119aee7",
-    "approval": "Approved the recommended M17 Orders grouping; standing delivery authorization applies",
-    "contract": "specifications/orders-grouping.md",
+    "milestone": 18,
+    "branch": "m18-vista-session-foundations",
+    "baseline": "91efbcce7c3acadbc4957abe41db455273cc7e1a",
+    "contract": "specifications/vista-session-foundations.md",
+    "state": "Partial foundation locally verified; publishing next",
     "features": [
-      "Flat/service-grouped projection of filtered records",
-      "Exact order identity mapping; inert headings",
-      "Grouping/filter/reset/lifecycle stale-reply invalidation"
+      "Pure Rust bootstrap/session policy and typed bounded redacted identities",
+      "Freshness, ownership, monotonic epochs, revocation and stale reply rejection",
+      "Source guards on all nine mock delayed callback families",
+      "Session-only unavailable Live UI; explicit Mock selection",
+      "Isolated M18F100 tooling and frozen M17 writers"
     ],
-    "runtime_scope": "Nine invented patients, four orders per nonempty fixture; offline and read-only",
-    "state": "Merged PR #13; local/remote topic pruned",
-    "tested_head": "a7a021425dfc88392384234d83b434713e6a0908"
+    "native_broker_adapter": "unavailable",
+    "native_guard_monitors": "not implemented; supported interfaces still unknown",
+    "clinical_reads_enabled": false
   },
   "current_validation": {
-    "protocol": "M17F100",
-    "state": "Linux automated and hosted CI passed; M17 Windows manual checklist user-reported pass; exact Windows build binding pending",
+    "protocol": "M18F100",
+    "state": "Local automated checks passed; hosted CI pending",
     "application_scales": [
       1.0
     ],
@@ -344,21 +347,31 @@
     "keyboard_navigation": "excluded by user",
     "focus_assertions": "excluded by user",
     "screen_readers": "excluded by user",
-    "other_scales": "deferred until functional work is finished",
-    "windows_functional": "user-reported manual pass at both 100% sizes; Windows receipt/build binding pending",
+    "other_scales": "deferred",
+    "native_broker_adapter": "unavailable",
+    "live_connection_attempted": false,
     "functional_acceptance_complete": false,
-    "core_tests_passed": 157,
-    "protocol_tests_passed": 21,
+    "core_and_bridge_tests_passed": 178,
+    "protocol_tests_passed": 24,
     "automated_steps": 8,
     "journeys": 3,
-    "checkpoints": 121,
-    "deliveries": 185,
-    "rejected": 86,
-    "acceptance_receipt": "validation/milestone-17/functional-100/acceptance.json",
-    "historical_files_unchanged": 2597,
-    "windows_code_build_ci": "Passed on PR #13 head a7a021425dfc88392384234d83b434713e6a0908; run 41361147627",
-    "manual_functional_user_report_complete": true,
-    "windows_user_acceptance_receipt": "validation/milestone-17/functional-100/windows/user-acceptance.json"
+    "checkpoints": 132,
+    "deliveries": 212,
+    "rejected": 105,
+    "source_boundary_families": [
+      "chart",
+      "cover-detail",
+      "note-body",
+      "notes-list",
+      "order-body",
+      "orders-list",
+      "report-body",
+      "results-list",
+      "search"
+    ],
+    "acceptance_receipt": "validation/milestone-18/functional-100/acceptance.json",
+    "historical_files_unchanged": 2614,
+    "milestone_complete": false
   },
   "publication": {
     "state": "Functional-only policy merged and topic branch pruned",
@@ -688,27 +701,14 @@
     "followup_scope": "Delivery records and project overview only; runtime/build files unchanged from tested PR head"
   },
   "current_windows_acceptance": {
-    "protocol": "M17F100",
-    "functional_results": "user-reported manual checklist pass at default/minimum 100%; exact Windows build binding pending",
-    "functional_acceptance_complete": false,
-    "keyboard_navigation": "excluded by user",
-    "screen_readers": "excluded by user",
-    "scales": [
-      1.0
-    ],
-    "sizes": [
-      "default",
-      "minimum"
-    ],
-    "manual_functional_user_report_complete": true,
-    "evidence_level": "user-reported",
-    "receipt": "validation/milestone-17/functional-100/windows/user-acceptance.json",
-    "executable_sha256": null,
-    "tested_source_commit": null,
-    "build_binding": "pending supplied Windows outputs; no M16 or Linux identity inherited"
+    "protocol": "M18F100",
+    "functional_results": "not run for this foundation build",
+    "native_session_results": "not run; unavailable adapter",
+    "clinical_reads_enabled": false,
+    "functional_acceptance_complete": false
   },
   "validation_policy": {
-    "protocol": "M17F100",
+    "protocol": "M18F100",
     "recorded_at_utc": "2026-11-01T22:22:50.844910+00:00",
     "verbatim_user_instruction": "from now on i only want to test 100% scale for functionality. also drop any keyboard navigation tests and any screen reader tests. after we finish we can go back and test different scales",
     "active_scope": {
@@ -730,7 +730,7 @@
     "runtime_features": "Keyboard and scaling capabilities retained; only validation scope changes",
     "document": "docs/validation-policy.md",
     "instructions": "AGENTS.md",
-    "evidence_folder": "validation/milestone-17/functional-100/"
+    "evidence_folder": "validation/milestone-18/functional-100/"
   },
   "previous_full_m16_validation": {
     "platform": "Linux Xvfb/software renderer",
@@ -920,7 +920,7 @@
   "live_vista_plan": {
     "recorded_at_utc": "2026-11-02T02:37:09.078765+00:00",
     "verbatim_user_instruction": "i'd like to lift the rule on vista connection - provided that it only happens on the VA network when i am logged in. i am interested in getting some real reading going. factor that into the plan",
-    "status": "M18 implementation plan and VS01\u2013VS12 contract drafted; current runtime unchanged; no live access attempted",
+    "status": "Portable foundation implemented; no live access possible until native supported adapter and real guards are built",
     "local_execution": "User's VA-network Windows workstation only",
     "required_conditions": [
       "Trustworthy VA-network access boundary",
@@ -944,7 +944,7 @@
     "m18_enabled_clinical_operations": []
   },
   "m18_plan": {
-    "status": "planned only",
+    "status": "Partial foundation implemented; native integration and local session acceptance pending",
     "baseline": "323383e3877600c0dab391f6038180691d6c1289",
     "proposed_branch": "m18-vista-session-foundations",
     "document": "docs/milestone-18.md",
@@ -981,10 +981,74 @@
       "transport peer identity and local configuration"
     ],
     "completion": "Synthetic/hosted checks plus actual guarded supported adapter and local session review for an exact build; missing native dependency means partial delivery",
-    "current_runtime_protocol": "M17F100",
+    "current_runtime_protocol": "M18F100",
     "reserved_protocol": "M18F100",
     "clinical_reads_in_m18": false,
     "patient_reading_milestone": 19,
     "test_scope": "100% default/minimum, keyboard/focus/navigation and screen readers excluded"
+  },
+  "previous_m17_implementation": {
+    "milestone": 17,
+    "branch": "m17-orders-service-grouping",
+    "baseline": "18f3f532d380159524430dbb69ca700be119aee7",
+    "approval": "Approved the recommended M17 Orders grouping; standing delivery authorization applies",
+    "contract": "specifications/orders-grouping.md",
+    "features": [
+      "Flat/service-grouped projection of filtered records",
+      "Exact order identity mapping; inert headings",
+      "Grouping/filter/reset/lifecycle stale-reply invalidation"
+    ],
+    "runtime_scope": "Nine invented patients, four orders per nonempty fixture; offline and read-only",
+    "state": "Merged PR #13; local/remote topic pruned",
+    "tested_head": "a7a021425dfc88392384234d83b434713e6a0908"
+  },
+  "previous_m17_functional_validation": {
+    "protocol": "M17F100",
+    "state": "Linux automated and hosted CI passed; M17 Windows manual checklist user-reported pass; exact Windows build binding pending",
+    "application_scales": [
+      1.0
+    ],
+    "sizes": [
+      "default",
+      "minimum"
+    ],
+    "keyboard_navigation": "excluded by user",
+    "focus_assertions": "excluded by user",
+    "screen_readers": "excluded by user",
+    "other_scales": "deferred until functional work is finished",
+    "windows_functional": "user-reported manual pass at both 100% sizes; Windows receipt/build binding pending",
+    "functional_acceptance_complete": false,
+    "core_tests_passed": 157,
+    "protocol_tests_passed": 21,
+    "automated_steps": 8,
+    "journeys": 3,
+    "checkpoints": 121,
+    "deliveries": 185,
+    "rejected": 86,
+    "acceptance_receipt": "validation/milestone-17/functional-100/acceptance.json",
+    "historical_files_unchanged": 2597,
+    "windows_code_build_ci": "Passed on PR #13 head a7a021425dfc88392384234d83b434713e6a0908; run 41361147627",
+    "manual_functional_user_report_complete": true,
+    "windows_user_acceptance_receipt": "validation/milestone-17/functional-100/windows/user-acceptance.json"
+  },
+  "previous_m17_windows_acceptance": {
+    "protocol": "M17F100",
+    "functional_results": "user-reported manual checklist pass at default/minimum 100%; exact Windows build binding pending",
+    "functional_acceptance_complete": false,
+    "keyboard_navigation": "excluded by user",
+    "screen_readers": "excluded by user",
+    "scales": [
+      1.0
+    ],
+    "sizes": [
+      "default",
+      "minimum"
+    ],
+    "manual_functional_user_report_complete": true,
+    "evidence_level": "user-reported",
+    "receipt": "validation/milestone-17/functional-100/windows/user-acceptance.json",
+    "executable_sha256": null,
+    "tested_source_commit": null,
+    "build_binding": "pending supplied Windows outputs; no M16 or Linux identity inherited"
   }
 }

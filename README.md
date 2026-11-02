@@ -10,34 +10,35 @@ The current executable remains the offline mock; this plan adds no connection.
 
 Initial scope includes Chart forms, navigation, client state, and the interfaces Chart uses. VistA server implementation, terminal configuration under `vista/`, and bundled DLL internals are outside this milestone. No CPRS process or live clinical connection is needed for these analysis commands.
 
-M17 [PR #13](https://github.com/joshuabenavente/cprs-exploration/pull/13) is merged
-and pruned after local checks and final-head CI passed. It adds read-only
-[Orders grouping by service](docs/milestone-17.md), with
-[authored grouping rules](specifications/orders-grouping.md). The user reports
-all M17 manual functional checks passed at default/minimum 100%; exact Windows
-build binding is pending. See the [report](validation/milestone-17/functional-100/windows/user-acceptance.json). Prior
-[M16 acceptance](validation/milestone-16/functional-100/windows/user-acceptance.json)
-is preserved without transferring its passes.
+M18 now has a portable session coordinator and explicit Mock/Live source boundary.
+The native Broker adapter is **unavailable**: this release cannot connect to VistA,
+even on the VA network while logged in. Native integration and local session
+acceptance remain pending; this is a partial M18 foundation delivery.
+See [M18](docs/milestone-18.md), the [morning handoff](docs/m18-morning-handoff.md)
+and [VS01–VS12](specifications/vista-session-foundations.md).
 
-Active testing is **functionality at 100% only**, default/minimum window sizes.
-Keyboard/focus/navigation and screen-reader checks are excluded; other scales
-are deferred. See [policy](docs/validation-policy.md), the
-[M17 checklist](validation/milestone-17/functional-100/manual-checklist.md),
-[current handoff](docs/handoff.md) and [standing delivery approval](docs/delivery-workflow.md).
+M17 Orders grouping is delivered. Its [manual pass report](validation/milestone-17/functional-100/windows/user-acceptance.json)
+is preserved, with exact Windows binding still separate. M18 inherits no manual
+acceptance from that report.
+
+Testing stays **functional at 100% only**, default/minimum sizes. Keyboard/focus/
+navigation and screen-reader checks are excluded; other scales are deferred.
+See [policy](docs/validation-policy.md), the [M18 checklist](validation/milestone-18/functional-100/manual-checklist.md)
+and [standing delivery approval](docs/delivery-workflow.md).
 
 ## Run and validate the current mock
 
 ```powershell
 .\scripts\Test-MockChart.ps1 -Matrix -Bootstrap
 python scripts/verify_integrated.py
-python scripts/test_m17_functional_protocol.py
+python scripts/test_m18_functional_protocol.py
 ```
 
 `-Matrix` runs default-100 and minimum-100 only; `-CodeOnly` omits desktop execution.
-The active protocol is M17F100; receipts are written under
-`validation/milestone-17/functional-100/windows/` or `linux/`. Linux uses
-`python3 scripts/validate_m17_functional.py --matrix` with the pinned Rust and X11
-software backend. Both earlier M16 protocols have frozen writer entry points.
+The active protocol is M18F100; receipts are written under
+`validation/milestone-18/functional-100/windows/` or `linux/`. Linux uses
+`python3 scripts/validate_m18_functional.py --matrix` with the pinned Rust and X11
+software backend. M17 and earlier protocols have frozen writer entry points.
 
 After automation passes, review functionality in the normal app:
 

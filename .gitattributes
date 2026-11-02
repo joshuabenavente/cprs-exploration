@@ -37,3 +37,7 @@ validation/milestone-15/** -text -whitespace
 
 # M16 source-bound evidence is preserved byte-for-byte.
 validation/milestone-16/** -text -whitespace
+
+# Preserve M17 and isolated M18 receipts exactly across platforms.
+validation/milestone-17/** -text -whitespace
+validation/milestone-18/** -text -whitespace

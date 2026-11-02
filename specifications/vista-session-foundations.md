@@ -1,7 +1,7 @@
 # M18: VistA connection and session contract
 
-Status: proposed implementation contract. No transport or guard implementation
-is added by this document. Authority is the user's conditional read-only scope
+Status: portable coordinator and source/UI foundation implemented against this
+contract; native adapter/guard verification is not implemented. Authority is the user's conditional read-only scope
 and user-reported approved CPRS/RPC Broker sign-in path, recorded in
 [the connection plan](../docs/live-vista-plan.md). Those statements establish the
 intended route, not a verified SDK, endpoint, authentication handoff or network
@@ -94,7 +94,7 @@ detection. If the implementation cannot establish the user's network/session
 condition for an operation, that operation remains blocked. After suspend/resume,
 old evidence is invalid until freshly established.
 
-## Proposed implementation seams
+## Implementation seams and pending native integration
 
 | Location | Planned responsibility |
 | --- | --- |

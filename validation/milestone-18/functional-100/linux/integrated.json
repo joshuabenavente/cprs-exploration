@@ -1,0 +1,6100 @@
+{
+  "protocol": "M18F100",
+  "native_broker_adapter": "unavailable",
+  "live_connection_attempted": false,
+  "clinical_read_operations_enabled": 0,
+  "scope": "100% functional timer and source/executable binding verification; keyboard/focus/navigation and screen readers excluded",
+  "passed": true,
+  "automated_receipt_sha256": "7df28138bed47e2dee96b42df5b64f0c92508e5cafd5cede8bfe9855b4bf252e",
+  "executable_sha256": "abdf0603777e2f56d5a77ad9a45f95f16829d9a81930483a03f1b5e6226610f2",
+  "required_checkpoints": 132,
+  "journeys": {
+    "integrated": {
+      "checkpoints": [
+        {
+          "name": "search-out-of-order",
+          "elapsed_ms": 898
+        },
+        {
+          "name": "commit-exact-duplicate",
+          "elapsed_ms": 1228
+        },
+        {
+          "name": "search-page-invalid",
+          "elapsed_ms": 1561
+        },
+        {
+          "name": "search-page-recovery-race",
+          "elapsed_ms": 1782
+        },
+        {
+          "name": "search-page-next",
+          "elapsed_ms": 2083
+        },
+        {
+          "name": "search-page-final",
+          "elapsed_ms": 2328
+        },
+        {
+          "name": "search-page-backward",
+          "elapsed_ms": 2607
+        },
+        {
+          "name": "search-page-first",
+          "elapsed_ms": 2886
+        },
+        {
+          "name": "search-page-demo-roster",
+          "elapsed_ms": 3094
+        },
+        {
+          "name": "search-page-empty",
+          "elapsed_ms": 3386
+        },
+        {
+          "name": "search-page-cancel",
+          "elapsed_ms": 3412
+        },
+        {
+          "name": "cover-close-rejects-late-detail",
+          "elapsed_ms": 3823
+        },
+        {
+          "name": "vitals-explicit-close-race",
+          "elapsed_ms": 4216
+        },
+        {
+          "name": "vitals-close-retains-row",
+          "elapsed_ms": 4242
+        },
+        {
+          "name": "vitals-error",
+          "elapsed_ms": 4647
+        },
+        {
+          "name": "vitals-retry-real-timer",
+          "elapsed_ms": 5027
+        },
+        {
+          "name": "vitals-late-error-tab",
+          "elapsed_ms": 5414
+        },
+        {
+          "name": "vitals-selector-cancel",
+          "elapsed_ms": 5814
+        },
+        {
+          "name": "medications-explicit-close-race",
+          "elapsed_ms": 6245
+        },
+        {
+          "name": "medications-close-retains-row",
+          "elapsed_ms": 6271
+        },
+        {
+          "name": "medications-error",
+          "elapsed_ms": 6689
+        },
+        {
+          "name": "medications-retry-real-timer",
+          "elapsed_ms": 7075
+        },
+        {
+          "name": "medications-late-error-tab",
+          "elapsed_ms": 7482
+        },
+        {
+          "name": "medications-selector-cancel",
+          "elapsed_ms": 7867
+        },
+        {
+          "name": "appointments-explicit-close-race",
+          "elapsed_ms": 8286
+        },
+        {
+          "name": "appointments-close-retains-row",
+          "elapsed_ms": 8312
+        },
+        {
+          "name": "appointments-error",
+          "elapsed_ms": 8726
+        },
+        {
+          "name": "appointments-retry-real-timer",
+          "elapsed_ms": 9119
+        },
+        {
+          "name": "appointments-late-error-tab",
+          "elapsed_ms": 9504
+        },
+        {
+          "name": "appointments-selector-cancel",
+          "elapsed_ms": 9890
+        },
+        {
+          "name": "notes-list-real-delay",
+          "elapsed_ms": 10831
+        },
+        {
+          "name": "notes-out-of-order",
+          "elapsed_ms": 12029
+        },
+        {
+          "name": "notes-filter-author-race",
+          "elapsed_ms": 12995
+        },
+        {
+          "name": "notes-filter-invalid-date",
+          "elapsed_ms": 13928
+        },
+        {
+          "name": "notes-filter-date-recovery",
+          "elapsed_ms": 14897
+        },
+        {
+          "name": "notes-filter-combined-empty",
+          "elapsed_ms": 15844
+        },
+        {
+          "name": "notes-filter-reset-race",
+          "elapsed_ms": 16858
+        },
+        {
+          "name": "notes-filter-unicode-author",
+          "elapsed_ms": 17795
+        },
+        {
+          "name": "notes-filter-reading",
+          "elapsed_ms": 18363
+        },
+        {
+          "name": "notes-filter-selector-reset",
+          "elapsed_ms": 19300
+        },
+        {
+          "name": "pending-note-open-selector",
+          "elapsed_ms": 19598
+        },
+        {
+          "name": "patient-commit-before-old-note",
+          "elapsed_ms": 20485
+        },
+        {
+          "name": "vitals-same-id-new-owner",
+          "elapsed_ms": 20904
+        },
+        {
+          "name": "medications-same-id-new-owner",
+          "elapsed_ms": 21317
+        },
+        {
+          "name": "appointments-same-id-new-owner",
+          "elapsed_ms": 21725
+        },
+        {
+          "name": "new-patient-notes-list",
+          "elapsed_ms": 22034
+        },
+        {
+          "name": "same-note-id-new-owner",
+          "elapsed_ms": 22372
+        },
+        {
+          "name": "late-orders-list-after-tab-change",
+          "elapsed_ms": 23323
+        },
+        {
+          "name": "results-list-real-delay",
+          "elapsed_ms": 24324
+        },
+        {
+          "name": "reports-explicit-and-out-of-order",
+          "elapsed_ms": 25454
+        },
+        {
+          "name": "report-close-invalidates-inflight",
+          "elapsed_ms": 25781
+        },
+        {
+          "name": "empty-report-is-success",
+          "elapsed_ms": 26114
+        },
+        {
+          "name": "filter-invalidates-pending-report",
+          "elapsed_ms": 27241
+        },
+        {
+          "name": "results-list-error",
+          "elapsed_ms": 27479
+        },
+        {
+          "name": "results-list-retry-real-timer",
+          "elapsed_ms": 27690
+        },
+        {
+          "name": "late-list-error-after-recovery",
+          "elapsed_ms": 27923
+        },
+        {
+          "name": "recover-then-orders-error",
+          "elapsed_ms": 28145
+        },
+        {
+          "name": "order-selection-is-explicit",
+          "elapsed_ms": 28550
+        },
+        {
+          "name": "order-detail-retry-real-timer",
+          "elapsed_ms": 28880
+        },
+        {
+          "name": "late-order-error-after-tab-change",
+          "elapsed_ms": 29230
+        },
+        {
+          "name": "order-recovery-and-slow-list",
+          "elapsed_ms": 30171
+        },
+        {
+          "name": "pending-order-cancel-selector",
+          "elapsed_ms": 31380
+        },
+        {
+          "name": "acknowledgment-search",
+          "elapsed_ms": 31598
+        },
+        {
+          "name": "acknowledgment-required",
+          "elapsed_ms": 31628
+        },
+        {
+          "name": "acknowledgment-decline",
+          "elapsed_ms": 31674
+        },
+        {
+          "name": "acknowledgment-accept",
+          "elapsed_ms": 31989
+        },
+        {
+          "name": "denied-patient-search",
+          "elapsed_ms": 32241
+        },
+        {
+          "name": "denied-patient-keeps-chart",
+          "elapsed_ms": 32275
+        },
+        {
+          "name": "empty-patient-search",
+          "elapsed_ms": 32487
+        },
+        {
+          "name": "empty-patient-commit",
+          "elapsed_ms": 32800
+        },
+        {
+          "name": "empty-vitals",
+          "elapsed_ms": 32842
+        },
+        {
+          "name": "empty-medications",
+          "elapsed_ms": 32867
+        },
+        {
+          "name": "empty-appointments",
+          "elapsed_ms": 32896
+        },
+        {
+          "name": "empty-notes",
+          "elapsed_ms": 33123
+        },
+        {
+          "name": "empty-results",
+          "elapsed_ms": 33342
+        },
+        {
+          "name": "empty-orders",
+          "elapsed_ms": 33564
+        },
+        {
+          "name": "review-patient-search",
+          "elapsed_ms": 33813
+        },
+        {
+          "name": "review-patient-commit",
+          "elapsed_ms": 34217
+        },
+        {
+          "name": "review-results-list",
+          "elapsed_ms": 34490
+        },
+        {
+          "name": "results-cancel",
+          "elapsed_ms": 34710
+        },
+        {
+          "name": "results-filter-date-race",
+          "elapsed_ms": 35714
+        },
+        {
+          "name": "results-filter-invalid-date",
+          "elapsed_ms": 36057
+        },
+        {
+          "name": "results-filter-inclusive-recovery",
+          "elapsed_ms": 36273
+        },
+        {
+          "name": "results-filter-combined-empty",
+          "elapsed_ms": 36512
+        },
+        {
+          "name": "results-filter-reset-race",
+          "elapsed_ms": 37516
+        },
+        {
+          "name": "results-filter-unicode-combined",
+          "elapsed_ms": 37729
+        },
+        {
+          "name": "results-filter-retry-keeps-dates",
+          "elapsed_ms": 37977
+        },
+        {
+          "name": "results-filter-reading",
+          "elapsed_ms": 38203
+        },
+        {
+          "name": "results-filter-selector-reset",
+          "elapsed_ms": 38514
+        },
+        {
+          "name": "orders-filter-open",
+          "elapsed_ms": 38800
+        },
+        {
+          "name": "orders-filter-date-race",
+          "elapsed_ms": 39777
+        },
+        {
+          "name": "orders-filter-invalid-date",
+          "elapsed_ms": 40126
+        },
+        {
+          "name": "orders-filter-inclusive-recovery",
+          "elapsed_ms": 40399
+        },
+        {
+          "name": "orders-filter-status-combined",
+          "elapsed_ms": 40611
+        },
+        {
+          "name": "orders-filter-combined-empty",
+          "elapsed_ms": 40858
+        },
+        {
+          "name": "orders-filter-reset-race",
+          "elapsed_ms": 41794
+        },
+        {
+          "name": "orders-filter-unicode-combined",
+          "elapsed_ms": 42056
+        },
+        {
+          "name": "orders-filter-retry-keeps-dates",
+          "elapsed_ms": 42300
+        },
+        {
+          "name": "orders-filter-reading",
+          "elapsed_ms": 42532
+        },
+        {
+          "name": "orders-filter-selector-reset",
+          "elapsed_ms": 42857
+        },
+        {
+          "name": "orders-group-list-race",
+          "elapsed_ms": 43786
+        },
+        {
+          "name": "orders-group-heading-inert",
+          "elapsed_ms": 43877
+        },
+        {
+          "name": "orders-group-exact-detail",
+          "elapsed_ms": 44228
+        },
+        {
+          "name": "orders-group-detail-race",
+          "elapsed_ms": 45170
+        },
+        {
+          "name": "orders-group-filter-intersection",
+          "elapsed_ms": 45447
+        },
+        {
+          "name": "orders-group-unicode-detail",
+          "elapsed_ms": 45955
+        },
+        {
+          "name": "orders-group-empty",
+          "elapsed_ms": 46184
+        },
+        {
+          "name": "orders-group-invalid-and-reset",
+          "elapsed_ms": 46399
+        },
+        {
+          "name": "orders-group-error-and-retry",
+          "elapsed_ms": 46692
+        },
+        {
+          "name": "orders-group-retry-recovery",
+          "elapsed_ms": 46934
+        },
+        {
+          "name": "orders-group-selector-reset",
+          "elapsed_ms": 47258
+        },
+        {
+          "name": "orders-group-tab-reset",
+          "elapsed_ms": 47488
+        },
+        {
+          "name": "orders-filter-return-results",
+          "elapsed_ms": 47826
+        },
+        {
+          "name": "review-long-unicode-report",
+          "elapsed_ms": 48376
+        },
+        {
+          "name": "review-vitals-detail",
+          "elapsed_ms": 48770
+        },
+        {
+          "name": "review-vitals-closed",
+          "elapsed_ms": 48831
+        },
+        {
+          "name": "review-medications-detail",
+          "elapsed_ms": 49229
+        },
+        {
+          "name": "review-medications-closed",
+          "elapsed_ms": 49283
+        },
+        {
+          "name": "review-appointments-detail",
+          "elapsed_ms": 49678
+        },
+        {
+          "name": "review-appointments-closed",
+          "elapsed_ms": 49734
+        },
+        {
+          "name": "review-final-state",
+          "elapsed_ms": 49760
+        },
+        {
+          "name": "session-cover-source-race",
+          "elapsed_ms": 50158
+        },
+        {
+          "name": "session-native-unavailable",
+          "elapsed_ms": 50184
+        },
+        {
+          "name": "session-mock-search-aba",
+          "elapsed_ms": 50409
+        },
+        {
+          "name": "session-chart-seed",
+          "elapsed_ms": 50644
+        },
+        {
+          "name": "session-chart-source-aba",
+          "elapsed_ms": 50919
+        },
+        {
+          "name": "session-chart-recovery",
+          "elapsed_ms": 51204
+        },
+        {
+          "name": "session-note-source-seed",
+          "elapsed_ms": 51397
+        },
+        {
+          "name": "session-order-source-seed",
+          "elapsed_ms": 51661
+        },
+        {
+          "name": "session-browser-source-races",
+          "elapsed_ms": 51914
+        },
+        {
+          "name": "session-all-browser-replies-rejected",
+          "elapsed_ms": 53017
+        },
+        {
+          "name": "session-final-clean-mock",
+          "elapsed_ms": 53204
+        }
+      ],
+      "deliveries": [
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "MORGAN",
+          "generation": 4,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 2,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "M",
+          "generation": 3,
+          "applied": false
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-004",
+          "key": "SYNTH-004",
+          "generation": 5,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 5,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 6,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 10,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "M",
+          "generation": 9,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "M",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 7,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 11,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 12,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 13,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 14,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 15,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "absent fixture",
+          "generation": 17,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 16,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "PROB-01",
+          "generation": 4,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "ALLERGY-01",
+          "generation": 6,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-01",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 10,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 12,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 13,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 5,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 14,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-01",
+          "generation": 17,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-01",
+          "generation": 20,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 22,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 25,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 9,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 21,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-01",
+          "generation": 30,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-01",
+          "generation": 33,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 37,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 38,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 13,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 40,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-01",
+          "generation": 43,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 17,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 18,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-02",
+          "generation": 20,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-01",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 20,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-02",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 21,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 23,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "Zo\u00eb \u674e",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "progress",
+          "generation": 25,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 26,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 27,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-03",
+          "generation": 31,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 25,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "MORGAN",
+          "generation": 28,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-003",
+          "key": "SYNTH-003",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-01",
+          "generation": 35,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-003",
+          "key": "VITAL-01",
+          "generation": 50,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-003",
+          "key": "MED-01",
+          "generation": 52,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-003",
+          "key": "APPT-01",
+          "generation": 54,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-003",
+          "key": "",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-003",
+          "key": "NOTE-01",
+          "generation": 41,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 20,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-003",
+          "key": "",
+          "generation": 34,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 20,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 21,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-02",
+          "generation": 25,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-01",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-04",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-04",
+          "generation": 29,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 22,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-01",
+          "generation": 31,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 23,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 26,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 25,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 26,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 27,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 28,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 28,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 29,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 34,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 31,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "PATEL",
+          "generation": 32,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-005",
+          "key": "SYNTH-005",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 33,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "RIVERA",
+          "generation": 34,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-002",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-002",
+          "key": "SYNTH-002",
+          "generation": 39,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-002",
+          "key": "",
+          "generation": 47,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-002",
+          "key": "",
+          "generation": 48,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-002",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 39,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-002",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 38,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 36,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-001",
+          "generation": 37,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-001",
+          "key": "SYNTH-001",
+          "generation": 42,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 44,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 38,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 46,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 49,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 48,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 47,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-02",
+          "generation": 61,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 52,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"Empty\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 53,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 56,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"Alpha\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 55,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"Empty\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 54,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 59,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 58,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 57,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 60,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 62,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 61,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 40,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 64,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-03",
+          "generation": 76,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 45,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 46,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 47,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 48,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-02",
+          "generation": 56,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 51,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 52,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Empty\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 53,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 57,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: Pending, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 56,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 55,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Empty\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 54,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 58,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 59,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 61,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 60,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 62,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 63,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 64,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 42,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 66,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-03",
+          "generation": 74,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 70,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 69,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 68,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 67,
+          "applied": false
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-02",
+          "generation": 82,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-03",
+          "generation": 85,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 71,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 72,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 73,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 74,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 75,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 76,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-03",
+          "generation": 93,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Missing\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 77,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 81,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 82,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: None, ending: None }",
+          "generation": 83,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 84,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 85,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 87,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 86,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 44,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 89,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-02",
+          "generation": 106,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 90,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 69,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 93,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 72,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-03",
+          "generation": 88,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "VITAL-03",
+          "generation": 82,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "MED-03",
+          "generation": 85,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "APPT-03",
+          "generation": 88,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "cover-detail",
+          "generation": 90,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "VITAL-01",
+          "generation": 90,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "search",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-001",
+          "generation": 2,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-001",
+          "generation": 2,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "chart",
+          "generation": 3,
+          "applied": false
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-001",
+          "key": "SYNTH-001",
+          "generation": 3,
+          "applied": false
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-001",
+          "key": "SYNTH-001",
+          "generation": 3,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-001",
+          "key": "",
+          "generation": 4,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 5,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 6,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "notes-list",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-001",
+          "key": "",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "orders-list",
+          "generation": 9,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 9,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "results-list",
+          "generation": 10,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 10,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "note-body",
+          "generation": 5,
+          "applied": false
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-001",
+          "key": "NOTE-01",
+          "generation": 5,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "order-body",
+          "generation": 7,
+          "applied": false
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-01",
+          "generation": 7,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "report-body",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-01",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": true
+        }
+      ],
+      "delivery_count": 212,
+      "rejected_deliveries": 105,
+      "elapsed_ms": 53284,
+      "window": {
+        "client_pixels": [
+          1180,
+          800
+        ],
+        "application_scale": 1.0
+      }
+    },
+    "probe-default-100": {
+      "checkpoints": [
+        {
+          "name": "search-out-of-order",
+          "elapsed_ms": 887
+        },
+        {
+          "name": "commit-exact-duplicate",
+          "elapsed_ms": 1225
+        },
+        {
+          "name": "search-page-invalid",
+          "elapsed_ms": 1587
+        },
+        {
+          "name": "search-page-recovery-race",
+          "elapsed_ms": 1807
+        },
+        {
+          "name": "search-page-next",
+          "elapsed_ms": 2131
+        },
+        {
+          "name": "search-page-final",
+          "elapsed_ms": 2386
+        },
+        {
+          "name": "search-page-backward",
+          "elapsed_ms": 2672
+        },
+        {
+          "name": "search-page-first",
+          "elapsed_ms": 2960
+        },
+        {
+          "name": "search-page-demo-roster",
+          "elapsed_ms": 3168
+        },
+        {
+          "name": "search-page-empty",
+          "elapsed_ms": 3468
+        },
+        {
+          "name": "search-page-cancel",
+          "elapsed_ms": 3495
+        },
+        {
+          "name": "cover-close-rejects-late-detail",
+          "elapsed_ms": 3914
+        },
+        {
+          "name": "vitals-explicit-close-race",
+          "elapsed_ms": 4307
+        },
+        {
+          "name": "vitals-close-retains-row",
+          "elapsed_ms": 4334
+        },
+        {
+          "name": "vitals-error",
+          "elapsed_ms": 4733
+        },
+        {
+          "name": "vitals-retry-real-timer",
+          "elapsed_ms": 5122
+        },
+        {
+          "name": "vitals-late-error-tab",
+          "elapsed_ms": 5504
+        },
+        {
+          "name": "vitals-selector-cancel",
+          "elapsed_ms": 5901
+        },
+        {
+          "name": "medications-explicit-close-race",
+          "elapsed_ms": 6338
+        },
+        {
+          "name": "medications-close-retains-row",
+          "elapsed_ms": 6364
+        },
+        {
+          "name": "medications-error",
+          "elapsed_ms": 6783
+        },
+        {
+          "name": "medications-retry-real-timer",
+          "elapsed_ms": 7170
+        },
+        {
+          "name": "medications-late-error-tab",
+          "elapsed_ms": 7558
+        },
+        {
+          "name": "medications-selector-cancel",
+          "elapsed_ms": 7943
+        },
+        {
+          "name": "appointments-explicit-close-race",
+          "elapsed_ms": 8361
+        },
+        {
+          "name": "appointments-close-retains-row",
+          "elapsed_ms": 8386
+        },
+        {
+          "name": "appointments-error",
+          "elapsed_ms": 8799
+        },
+        {
+          "name": "appointments-retry-real-timer",
+          "elapsed_ms": 9187
+        },
+        {
+          "name": "appointments-late-error-tab",
+          "elapsed_ms": 9567
+        },
+        {
+          "name": "appointments-selector-cancel",
+          "elapsed_ms": 9947
+        },
+        {
+          "name": "notes-list-real-delay",
+          "elapsed_ms": 10882
+        },
+        {
+          "name": "notes-out-of-order",
+          "elapsed_ms": 12058
+        },
+        {
+          "name": "notes-filter-author-race",
+          "elapsed_ms": 13031
+        },
+        {
+          "name": "notes-filter-invalid-date",
+          "elapsed_ms": 13982
+        },
+        {
+          "name": "notes-filter-date-recovery",
+          "elapsed_ms": 14952
+        },
+        {
+          "name": "notes-filter-combined-empty",
+          "elapsed_ms": 15900
+        },
+        {
+          "name": "notes-filter-reset-race",
+          "elapsed_ms": 16919
+        },
+        {
+          "name": "notes-filter-unicode-author",
+          "elapsed_ms": 17856
+        },
+        {
+          "name": "notes-filter-reading",
+          "elapsed_ms": 18407
+        },
+        {
+          "name": "notes-filter-selector-reset",
+          "elapsed_ms": 19343
+        },
+        {
+          "name": "pending-note-open-selector",
+          "elapsed_ms": 19652
+        },
+        {
+          "name": "patient-commit-before-old-note",
+          "elapsed_ms": 20531
+        },
+        {
+          "name": "vitals-same-id-new-owner",
+          "elapsed_ms": 20926
+        },
+        {
+          "name": "medications-same-id-new-owner",
+          "elapsed_ms": 21331
+        },
+        {
+          "name": "appointments-same-id-new-owner",
+          "elapsed_ms": 21744
+        },
+        {
+          "name": "new-patient-notes-list",
+          "elapsed_ms": 21979
+        },
+        {
+          "name": "same-note-id-new-owner",
+          "elapsed_ms": 22374
+        },
+        {
+          "name": "late-orders-list-after-tab-change",
+          "elapsed_ms": 23327
+        },
+        {
+          "name": "results-list-real-delay",
+          "elapsed_ms": 24335
+        },
+        {
+          "name": "reports-explicit-and-out-of-order",
+          "elapsed_ms": 25475
+        },
+        {
+          "name": "report-close-invalidates-inflight",
+          "elapsed_ms": 25824
+        },
+        {
+          "name": "empty-report-is-success",
+          "elapsed_ms": 26160
+        },
+        {
+          "name": "filter-invalidates-pending-report",
+          "elapsed_ms": 27293
+        },
+        {
+          "name": "results-list-error",
+          "elapsed_ms": 27538
+        },
+        {
+          "name": "results-list-retry-real-timer",
+          "elapsed_ms": 27755
+        },
+        {
+          "name": "late-list-error-after-recovery",
+          "elapsed_ms": 27991
+        },
+        {
+          "name": "recover-then-orders-error",
+          "elapsed_ms": 28235
+        },
+        {
+          "name": "order-selection-is-explicit",
+          "elapsed_ms": 28688
+        },
+        {
+          "name": "order-detail-retry-real-timer",
+          "elapsed_ms": 29020
+        },
+        {
+          "name": "late-order-error-after-tab-change",
+          "elapsed_ms": 29368
+        },
+        {
+          "name": "order-recovery-and-slow-list",
+          "elapsed_ms": 30310
+        },
+        {
+          "name": "pending-order-cancel-selector",
+          "elapsed_ms": 31517
+        },
+        {
+          "name": "acknowledgment-search",
+          "elapsed_ms": 31733
+        },
+        {
+          "name": "acknowledgment-required",
+          "elapsed_ms": 31765
+        },
+        {
+          "name": "acknowledgment-decline",
+          "elapsed_ms": 31809
+        },
+        {
+          "name": "acknowledgment-accept",
+          "elapsed_ms": 32116
+        },
+        {
+          "name": "denied-patient-search",
+          "elapsed_ms": 32361
+        },
+        {
+          "name": "denied-patient-keeps-chart",
+          "elapsed_ms": 32397
+        },
+        {
+          "name": "empty-patient-search",
+          "elapsed_ms": 32610
+        },
+        {
+          "name": "empty-patient-commit",
+          "elapsed_ms": 32922
+        },
+        {
+          "name": "empty-vitals",
+          "elapsed_ms": 32968
+        },
+        {
+          "name": "empty-medications",
+          "elapsed_ms": 32992
+        },
+        {
+          "name": "empty-appointments",
+          "elapsed_ms": 33021
+        },
+        {
+          "name": "empty-notes",
+          "elapsed_ms": 33253
+        },
+        {
+          "name": "empty-results",
+          "elapsed_ms": 33477
+        },
+        {
+          "name": "empty-orders",
+          "elapsed_ms": 33698
+        },
+        {
+          "name": "review-patient-search",
+          "elapsed_ms": 33946
+        },
+        {
+          "name": "review-patient-commit",
+          "elapsed_ms": 34344
+        },
+        {
+          "name": "review-results-list",
+          "elapsed_ms": 34614
+        },
+        {
+          "name": "results-cancel",
+          "elapsed_ms": 34836
+        },
+        {
+          "name": "results-filter-date-race",
+          "elapsed_ms": 35802
+        },
+        {
+          "name": "results-filter-invalid-date",
+          "elapsed_ms": 36159
+        },
+        {
+          "name": "results-filter-inclusive-recovery",
+          "elapsed_ms": 36419
+        },
+        {
+          "name": "results-filter-combined-empty",
+          "elapsed_ms": 36629
+        },
+        {
+          "name": "results-filter-reset-race",
+          "elapsed_ms": 37629
+        },
+        {
+          "name": "results-filter-unicode-combined",
+          "elapsed_ms": 37840
+        },
+        {
+          "name": "results-filter-retry-keeps-dates",
+          "elapsed_ms": 38088
+        },
+        {
+          "name": "results-filter-reading",
+          "elapsed_ms": 38321
+        },
+        {
+          "name": "results-filter-selector-reset",
+          "elapsed_ms": 38639
+        },
+        {
+          "name": "orders-filter-open",
+          "elapsed_ms": 38944
+        },
+        {
+          "name": "orders-filter-date-race",
+          "elapsed_ms": 39876
+        },
+        {
+          "name": "orders-filter-invalid-date",
+          "elapsed_ms": 40248
+        },
+        {
+          "name": "orders-filter-inclusive-recovery",
+          "elapsed_ms": 40512
+        },
+        {
+          "name": "orders-filter-status-combined",
+          "elapsed_ms": 40724
+        },
+        {
+          "name": "orders-filter-combined-empty",
+          "elapsed_ms": 40989
+        },
+        {
+          "name": "orders-filter-reset-race",
+          "elapsed_ms": 41925
+        },
+        {
+          "name": "orders-filter-unicode-combined",
+          "elapsed_ms": 42197
+        },
+        {
+          "name": "orders-filter-retry-keeps-dates",
+          "elapsed_ms": 42441
+        },
+        {
+          "name": "orders-filter-reading",
+          "elapsed_ms": 42668
+        },
+        {
+          "name": "orders-filter-selector-reset",
+          "elapsed_ms": 42997
+        },
+        {
+          "name": "orders-group-list-race",
+          "elapsed_ms": 44009
+        },
+        {
+          "name": "orders-group-heading-inert",
+          "elapsed_ms": 44035
+        },
+        {
+          "name": "orders-group-exact-detail",
+          "elapsed_ms": 44388
+        },
+        {
+          "name": "orders-group-detail-race",
+          "elapsed_ms": 45407
+        },
+        {
+          "name": "orders-group-filter-intersection",
+          "elapsed_ms": 45671
+        },
+        {
+          "name": "orders-group-unicode-detail",
+          "elapsed_ms": 46172
+        },
+        {
+          "name": "orders-group-empty",
+          "elapsed_ms": 46401
+        },
+        {
+          "name": "orders-group-invalid-and-reset",
+          "elapsed_ms": 46615
+        },
+        {
+          "name": "orders-group-error-and-retry",
+          "elapsed_ms": 46903
+        },
+        {
+          "name": "orders-group-retry-recovery",
+          "elapsed_ms": 47141
+        },
+        {
+          "name": "orders-group-selector-reset",
+          "elapsed_ms": 47461
+        },
+        {
+          "name": "orders-group-tab-reset",
+          "elapsed_ms": 47686
+        },
+        {
+          "name": "orders-filter-return-results",
+          "elapsed_ms": 48033
+        },
+        {
+          "name": "review-long-unicode-report",
+          "elapsed_ms": 48572
+        },
+        {
+          "name": "review-vitals-detail",
+          "elapsed_ms": 48986
+        },
+        {
+          "name": "review-vitals-closed",
+          "elapsed_ms": 49046
+        },
+        {
+          "name": "review-medications-detail",
+          "elapsed_ms": 49440
+        },
+        {
+          "name": "review-medications-closed",
+          "elapsed_ms": 49488
+        },
+        {
+          "name": "review-appointments-detail",
+          "elapsed_ms": 49881
+        },
+        {
+          "name": "review-appointments-closed",
+          "elapsed_ms": 49939
+        },
+        {
+          "name": "review-final-state",
+          "elapsed_ms": 49965
+        },
+        {
+          "name": "session-cover-source-race",
+          "elapsed_ms": 50366
+        },
+        {
+          "name": "session-native-unavailable",
+          "elapsed_ms": 50391
+        },
+        {
+          "name": "session-mock-search-aba",
+          "elapsed_ms": 50632
+        },
+        {
+          "name": "session-chart-seed",
+          "elapsed_ms": 50826
+        },
+        {
+          "name": "session-chart-source-aba",
+          "elapsed_ms": 51118
+        },
+        {
+          "name": "session-chart-recovery",
+          "elapsed_ms": 51403
+        },
+        {
+          "name": "session-note-source-seed",
+          "elapsed_ms": 51669
+        },
+        {
+          "name": "session-order-source-seed",
+          "elapsed_ms": 52050
+        },
+        {
+          "name": "session-browser-source-races",
+          "elapsed_ms": 52252
+        },
+        {
+          "name": "session-all-browser-replies-rejected",
+          "elapsed_ms": 53359
+        },
+        {
+          "name": "session-final-clean-mock",
+          "elapsed_ms": 53549
+        }
+      ],
+      "deliveries": [
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "MORGAN",
+          "generation": 4,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 2,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "M",
+          "generation": 3,
+          "applied": false
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-004",
+          "key": "SYNTH-004",
+          "generation": 5,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 5,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 6,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "M",
+          "generation": 9,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "M",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 7,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 10,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 11,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 12,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 13,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 14,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 15,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 16,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "absent fixture",
+          "generation": 17,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "PROB-01",
+          "generation": 4,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "ALLERGY-01",
+          "generation": 6,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-01",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 10,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 12,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 13,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 5,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 14,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-01",
+          "generation": 17,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-01",
+          "generation": 20,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 22,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 25,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 9,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 21,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-01",
+          "generation": 30,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-01",
+          "generation": 33,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 37,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 38,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 13,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 40,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-01",
+          "generation": 43,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 17,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 18,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-02",
+          "generation": 20,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-01",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 20,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-02",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 21,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 23,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "Zo\u00eb \u674e",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "progress",
+          "generation": 25,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 26,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 27,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-03",
+          "generation": 31,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 25,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "MORGAN",
+          "generation": 28,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-003",
+          "key": "SYNTH-003",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-01",
+          "generation": 35,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-003",
+          "key": "VITAL-01",
+          "generation": 50,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-003",
+          "key": "MED-01",
+          "generation": 52,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-003",
+          "key": "APPT-01",
+          "generation": 54,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-003",
+          "key": "",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-003",
+          "key": "NOTE-01",
+          "generation": 41,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 20,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-003",
+          "key": "",
+          "generation": 34,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 20,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 21,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-02",
+          "generation": 25,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-01",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-04",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-04",
+          "generation": 29,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 22,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-01",
+          "generation": 31,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 23,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 25,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 26,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 26,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 27,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 28,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 28,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 29,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 34,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 31,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "PATEL",
+          "generation": 32,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-005",
+          "key": "SYNTH-005",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 33,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "RIVERA",
+          "generation": 34,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-002",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-002",
+          "key": "SYNTH-002",
+          "generation": 39,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-002",
+          "key": "",
+          "generation": 47,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-002",
+          "key": "",
+          "generation": 48,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-002",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 39,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-002",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 38,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 36,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-001",
+          "generation": 37,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-001",
+          "key": "SYNTH-001",
+          "generation": 42,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 44,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 38,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 46,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 47,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 48,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 49,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-02",
+          "generation": 61,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 52,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"Empty\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 53,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"Empty\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 54,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"Alpha\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 55,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 56,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 59,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 58,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 57,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 60,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 62,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 61,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 40,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 64,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-03",
+          "generation": 76,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 45,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 48,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 47,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 46,
+          "applied": false
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-02",
+          "generation": 56,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 51,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 52,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Empty\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 53,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Empty\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 54,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 55,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: Pending, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 56,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 57,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 58,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 59,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 60,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 61,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 62,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 64,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 63,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 42,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 66,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-03",
+          "generation": 74,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 70,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 69,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 68,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 67,
+          "applied": false
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-02",
+          "generation": 82,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-03",
+          "generation": 85,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 71,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 72,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 73,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 74,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 75,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 76,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-03",
+          "generation": 93,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Missing\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 77,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 81,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 82,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: None, ending: None }",
+          "generation": 83,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 84,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 85,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 87,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 86,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 44,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 89,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-02",
+          "generation": 106,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 90,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 69,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 93,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 72,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-03",
+          "generation": 88,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "VITAL-03",
+          "generation": 82,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "MED-03",
+          "generation": 85,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "APPT-03",
+          "generation": 88,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "cover-detail",
+          "generation": 90,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "VITAL-01",
+          "generation": 90,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "search",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-001",
+          "generation": 2,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-001",
+          "generation": 2,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "chart",
+          "generation": 3,
+          "applied": false
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-001",
+          "key": "SYNTH-001",
+          "generation": 3,
+          "applied": false
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-001",
+          "key": "SYNTH-001",
+          "generation": 3,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-001",
+          "key": "",
+          "generation": 4,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 5,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 6,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "notes-list",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-001",
+          "key": "",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "orders-list",
+          "generation": 9,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 9,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "results-list",
+          "generation": 10,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 10,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "note-body",
+          "generation": 5,
+          "applied": false
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-001",
+          "key": "NOTE-01",
+          "generation": 5,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "order-body",
+          "generation": 7,
+          "applied": false
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-01",
+          "generation": 7,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "report-body",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-01",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": true
+        }
+      ],
+      "delivery_count": 212,
+      "rejected_deliveries": 105,
+      "elapsed_ms": 53623,
+      "window": {
+        "client_pixels": [
+          1180,
+          800
+        ],
+        "application_scale": 1.0
+      }
+    },
+    "probe-minimum-100": {
+      "checkpoints": [
+        {
+          "name": "search-out-of-order",
+          "elapsed_ms": 877
+        },
+        {
+          "name": "commit-exact-duplicate",
+          "elapsed_ms": 1198
+        },
+        {
+          "name": "search-page-invalid",
+          "elapsed_ms": 1547
+        },
+        {
+          "name": "search-page-recovery-race",
+          "elapsed_ms": 1765
+        },
+        {
+          "name": "search-page-next",
+          "elapsed_ms": 2064
+        },
+        {
+          "name": "search-page-final",
+          "elapsed_ms": 2318
+        },
+        {
+          "name": "search-page-backward",
+          "elapsed_ms": 2594
+        },
+        {
+          "name": "search-page-first",
+          "elapsed_ms": 2851
+        },
+        {
+          "name": "search-page-demo-roster",
+          "elapsed_ms": 3149
+        },
+        {
+          "name": "search-page-empty",
+          "elapsed_ms": 3394
+        },
+        {
+          "name": "search-page-cancel",
+          "elapsed_ms": 3420
+        },
+        {
+          "name": "cover-close-rejects-late-detail",
+          "elapsed_ms": 3835
+        },
+        {
+          "name": "vitals-explicit-close-race",
+          "elapsed_ms": 4237
+        },
+        {
+          "name": "vitals-close-retains-row",
+          "elapsed_ms": 4266
+        },
+        {
+          "name": "vitals-error",
+          "elapsed_ms": 4662
+        },
+        {
+          "name": "vitals-retry-real-timer",
+          "elapsed_ms": 5044
+        },
+        {
+          "name": "vitals-late-error-tab",
+          "elapsed_ms": 5427
+        },
+        {
+          "name": "vitals-selector-cancel",
+          "elapsed_ms": 5824
+        },
+        {
+          "name": "medications-explicit-close-race",
+          "elapsed_ms": 6223
+        },
+        {
+          "name": "medications-close-retains-row",
+          "elapsed_ms": 6251
+        },
+        {
+          "name": "medications-error",
+          "elapsed_ms": 6652
+        },
+        {
+          "name": "medications-retry-real-timer",
+          "elapsed_ms": 7037
+        },
+        {
+          "name": "medications-late-error-tab",
+          "elapsed_ms": 7435
+        },
+        {
+          "name": "medications-selector-cancel",
+          "elapsed_ms": 7818
+        },
+        {
+          "name": "appointments-explicit-close-race",
+          "elapsed_ms": 8216
+        },
+        {
+          "name": "appointments-close-retains-row",
+          "elapsed_ms": 8242
+        },
+        {
+          "name": "appointments-error",
+          "elapsed_ms": 8640
+        },
+        {
+          "name": "appointments-retry-real-timer",
+          "elapsed_ms": 9029
+        },
+        {
+          "name": "appointments-late-error-tab",
+          "elapsed_ms": 9432
+        },
+        {
+          "name": "appointments-selector-cancel",
+          "elapsed_ms": 9814
+        },
+        {
+          "name": "notes-list-real-delay",
+          "elapsed_ms": 10814
+        },
+        {
+          "name": "notes-out-of-order",
+          "elapsed_ms": 11942
+        },
+        {
+          "name": "notes-filter-author-race",
+          "elapsed_ms": 12879
+        },
+        {
+          "name": "notes-filter-invalid-date",
+          "elapsed_ms": 13829
+        },
+        {
+          "name": "notes-filter-date-recovery",
+          "elapsed_ms": 14797
+        },
+        {
+          "name": "notes-filter-combined-empty",
+          "elapsed_ms": 15738
+        },
+        {
+          "name": "notes-filter-reset-race",
+          "elapsed_ms": 16750
+        },
+        {
+          "name": "notes-filter-unicode-author",
+          "elapsed_ms": 17691
+        },
+        {
+          "name": "notes-filter-reading",
+          "elapsed_ms": 18212
+        },
+        {
+          "name": "notes-filter-selector-reset",
+          "elapsed_ms": 19149
+        },
+        {
+          "name": "pending-note-open-selector",
+          "elapsed_ms": 19455
+        },
+        {
+          "name": "patient-commit-before-old-note",
+          "elapsed_ms": 20351
+        },
+        {
+          "name": "vitals-same-id-new-owner",
+          "elapsed_ms": 20747
+        },
+        {
+          "name": "medications-same-id-new-owner",
+          "elapsed_ms": 21139
+        },
+        {
+          "name": "appointments-same-id-new-owner",
+          "elapsed_ms": 21541
+        },
+        {
+          "name": "new-patient-notes-list",
+          "elapsed_ms": 21813
+        },
+        {
+          "name": "same-note-id-new-owner",
+          "elapsed_ms": 22157
+        },
+        {
+          "name": "late-orders-list-after-tab-change",
+          "elapsed_ms": 23102
+        },
+        {
+          "name": "results-list-real-delay",
+          "elapsed_ms": 24096
+        },
+        {
+          "name": "reports-explicit-and-out-of-order",
+          "elapsed_ms": 25228
+        },
+        {
+          "name": "report-close-invalidates-inflight",
+          "elapsed_ms": 25574
+        },
+        {
+          "name": "empty-report-is-success",
+          "elapsed_ms": 25905
+        },
+        {
+          "name": "filter-invalidates-pending-report",
+          "elapsed_ms": 27043
+        },
+        {
+          "name": "results-list-error",
+          "elapsed_ms": 27274
+        },
+        {
+          "name": "results-list-retry-real-timer",
+          "elapsed_ms": 27510
+        },
+        {
+          "name": "late-list-error-after-recovery",
+          "elapsed_ms": 27741
+        },
+        {
+          "name": "recover-then-orders-error",
+          "elapsed_ms": 28030
+        },
+        {
+          "name": "order-selection-is-explicit",
+          "elapsed_ms": 28375
+        },
+        {
+          "name": "order-detail-retry-real-timer",
+          "elapsed_ms": 28707
+        },
+        {
+          "name": "late-order-error-after-tab-change",
+          "elapsed_ms": 29057
+        },
+        {
+          "name": "order-recovery-and-slow-list",
+          "elapsed_ms": 29994
+        },
+        {
+          "name": "pending-order-cancel-selector",
+          "elapsed_ms": 31196
+        },
+        {
+          "name": "acknowledgment-search",
+          "elapsed_ms": 31413
+        },
+        {
+          "name": "acknowledgment-required",
+          "elapsed_ms": 31443
+        },
+        {
+          "name": "acknowledgment-decline",
+          "elapsed_ms": 31481
+        },
+        {
+          "name": "acknowledgment-accept",
+          "elapsed_ms": 31793
+        },
+        {
+          "name": "denied-patient-search",
+          "elapsed_ms": 32044
+        },
+        {
+          "name": "denied-patient-keeps-chart",
+          "elapsed_ms": 32077
+        },
+        {
+          "name": "empty-patient-search",
+          "elapsed_ms": 32317
+        },
+        {
+          "name": "empty-patient-commit",
+          "elapsed_ms": 32621
+        },
+        {
+          "name": "empty-vitals",
+          "elapsed_ms": 32665
+        },
+        {
+          "name": "empty-medications",
+          "elapsed_ms": 32689
+        },
+        {
+          "name": "empty-appointments",
+          "elapsed_ms": 32718
+        },
+        {
+          "name": "empty-notes",
+          "elapsed_ms": 32931
+        },
+        {
+          "name": "empty-results",
+          "elapsed_ms": 33170
+        },
+        {
+          "name": "empty-orders",
+          "elapsed_ms": 33394
+        },
+        {
+          "name": "review-patient-search",
+          "elapsed_ms": 33611
+        },
+        {
+          "name": "review-patient-commit",
+          "elapsed_ms": 33927
+        },
+        {
+          "name": "review-results-list",
+          "elapsed_ms": 34278
+        },
+        {
+          "name": "results-cancel",
+          "elapsed_ms": 34575
+        },
+        {
+          "name": "results-filter-date-race",
+          "elapsed_ms": 35508
+        },
+        {
+          "name": "results-filter-invalid-date",
+          "elapsed_ms": 35863
+        },
+        {
+          "name": "results-filter-inclusive-recovery",
+          "elapsed_ms": 36130
+        },
+        {
+          "name": "results-filter-combined-empty",
+          "elapsed_ms": 36358
+        },
+        {
+          "name": "results-filter-reset-race",
+          "elapsed_ms": 37300
+        },
+        {
+          "name": "results-filter-unicode-combined",
+          "elapsed_ms": 37588
+        },
+        {
+          "name": "results-filter-retry-keeps-dates",
+          "elapsed_ms": 37824
+        },
+        {
+          "name": "results-filter-reading",
+          "elapsed_ms": 38053
+        },
+        {
+          "name": "results-filter-selector-reset",
+          "elapsed_ms": 38358
+        },
+        {
+          "name": "orders-filter-open",
+          "elapsed_ms": 38645
+        },
+        {
+          "name": "orders-filter-date-race",
+          "elapsed_ms": 39578
+        },
+        {
+          "name": "orders-filter-invalid-date",
+          "elapsed_ms": 39939
+        },
+        {
+          "name": "orders-filter-inclusive-recovery",
+          "elapsed_ms": 40218
+        },
+        {
+          "name": "orders-filter-status-combined",
+          "elapsed_ms": 40474
+        },
+        {
+          "name": "orders-filter-combined-empty",
+          "elapsed_ms": 40685
+        },
+        {
+          "name": "orders-filter-reset-race",
+          "elapsed_ms": 41709
+        },
+        {
+          "name": "orders-filter-unicode-combined",
+          "elapsed_ms": 41930
+        },
+        {
+          "name": "orders-filter-retry-keeps-dates",
+          "elapsed_ms": 42172
+        },
+        {
+          "name": "orders-filter-reading",
+          "elapsed_ms": 42410
+        },
+        {
+          "name": "orders-filter-selector-reset",
+          "elapsed_ms": 42753
+        },
+        {
+          "name": "orders-group-list-race",
+          "elapsed_ms": 43770
+        },
+        {
+          "name": "orders-group-heading-inert",
+          "elapsed_ms": 43796
+        },
+        {
+          "name": "orders-group-exact-detail",
+          "elapsed_ms": 44146
+        },
+        {
+          "name": "orders-group-detail-race",
+          "elapsed_ms": 45087
+        },
+        {
+          "name": "orders-group-filter-intersection",
+          "elapsed_ms": 45412
+        },
+        {
+          "name": "orders-group-unicode-detail",
+          "elapsed_ms": 45902
+        },
+        {
+          "name": "orders-group-empty",
+          "elapsed_ms": 46131
+        },
+        {
+          "name": "orders-group-invalid-and-reset",
+          "elapsed_ms": 46431
+        },
+        {
+          "name": "orders-group-error-and-retry",
+          "elapsed_ms": 46643
+        },
+        {
+          "name": "orders-group-retry-recovery",
+          "elapsed_ms": 46889
+        },
+        {
+          "name": "orders-group-selector-reset",
+          "elapsed_ms": 47221
+        },
+        {
+          "name": "orders-group-tab-reset",
+          "elapsed_ms": 47451
+        },
+        {
+          "name": "orders-filter-return-results",
+          "elapsed_ms": 47781
+        },
+        {
+          "name": "review-long-unicode-report",
+          "elapsed_ms": 48354
+        },
+        {
+          "name": "review-vitals-detail",
+          "elapsed_ms": 48747
+        },
+        {
+          "name": "review-vitals-closed",
+          "elapsed_ms": 48793
+        },
+        {
+          "name": "review-medications-detail",
+          "elapsed_ms": 49188
+        },
+        {
+          "name": "review-medications-closed",
+          "elapsed_ms": 49226
+        },
+        {
+          "name": "review-appointments-detail",
+          "elapsed_ms": 49624
+        },
+        {
+          "name": "review-appointments-closed",
+          "elapsed_ms": 49665
+        },
+        {
+          "name": "review-final-state",
+          "elapsed_ms": 49690
+        },
+        {
+          "name": "session-cover-source-race",
+          "elapsed_ms": 50098
+        },
+        {
+          "name": "session-native-unavailable",
+          "elapsed_ms": 50124
+        },
+        {
+          "name": "session-mock-search-aba",
+          "elapsed_ms": 50338
+        },
+        {
+          "name": "session-chart-seed",
+          "elapsed_ms": 50529
+        },
+        {
+          "name": "session-chart-source-aba",
+          "elapsed_ms": 50803
+        },
+        {
+          "name": "session-chart-recovery",
+          "elapsed_ms": 51087
+        },
+        {
+          "name": "session-note-source-seed",
+          "elapsed_ms": 51286
+        },
+        {
+          "name": "session-order-source-seed",
+          "elapsed_ms": 51473
+        },
+        {
+          "name": "session-browser-source-races",
+          "elapsed_ms": 51668
+        },
+        {
+          "name": "session-all-browser-replies-rejected",
+          "elapsed_ms": 52774
+        },
+        {
+          "name": "session-final-clean-mock",
+          "elapsed_ms": 53031
+        }
+      ],
+      "deliveries": [
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 2,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "MORGAN",
+          "generation": 4,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "M",
+          "generation": 3,
+          "applied": false
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-004",
+          "key": "SYNTH-004",
+          "generation": 5,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 5,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 6,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 10,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "M",
+          "generation": 9,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "M",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 7,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 11,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 12,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 13,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 14,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 15,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "absent fixture",
+          "generation": 17,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 16,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "PROB-01",
+          "generation": 4,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "ALLERGY-01",
+          "generation": 6,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-01",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 10,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 12,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 13,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 5,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-03",
+          "generation": 14,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "VITAL-01",
+          "generation": 17,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-01",
+          "generation": 20,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 22,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 25,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 9,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-03",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 21,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "MED-01",
+          "generation": 30,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-01",
+          "generation": 33,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 37,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 38,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 13,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-03",
+          "generation": 40,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-004",
+          "key": "APPT-01",
+          "generation": 43,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 17,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 18,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-02",
+          "generation": 20,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-01",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 20,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-02",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 21,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 23,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "Zo\u00eb \u674e",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "progress",
+          "generation": 25,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 26,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 27,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-03",
+          "generation": 31,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 25,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-004",
+          "key": "",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "MORGAN",
+          "generation": 28,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-003",
+          "key": "SYNTH-003",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-004",
+          "key": "NOTE-01",
+          "generation": 35,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-003",
+          "key": "VITAL-01",
+          "generation": 50,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-003",
+          "key": "MED-01",
+          "generation": 52,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-003",
+          "key": "APPT-01",
+          "generation": 54,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-003",
+          "key": "",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-003",
+          "key": "NOTE-01",
+          "generation": 41,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 19,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 20,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-003",
+          "key": "",
+          "generation": 34,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 20,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 21,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-02",
+          "generation": 25,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-01",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-04",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-04",
+          "generation": 29,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 22,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-003",
+          "key": "REPORT-01",
+          "generation": 31,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 23,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 25,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 26,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"no invented match\", beginning: None, ending: None }",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 23,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 24,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 26,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 27,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-003",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 28,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 27,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 28,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 29,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-003",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 30,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-003",
+          "key": "ORDER-01",
+          "generation": 34,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 31,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "PATEL",
+          "generation": 32,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-005",
+          "key": "SYNTH-005",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 33,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "RIVERA",
+          "generation": 34,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-002",
+          "generation": 35,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-002",
+          "key": "SYNTH-002",
+          "generation": 39,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-002",
+          "key": "",
+          "generation": 47,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-002",
+          "key": "",
+          "generation": 48,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-002",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 39,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-002",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 38,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 36,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-001",
+          "generation": 37,
+          "applied": true
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-001",
+          "key": "SYNTH-001",
+          "generation": 42,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 44,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 38,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 46,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 47,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 48,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 49,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-02",
+          "generation": 61,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 52,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"Empty\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 53,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"Alpha\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 55,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"Empty\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 54,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 56,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 57,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 58,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 59,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 60,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 61,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"zo\u00eb \u674e\", beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 62,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 40,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 64,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-03",
+          "generation": 76,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 45,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 46,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 47,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 48,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-02",
+          "generation": 56,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 51,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 52,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Empty\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 53,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Empty\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 54,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 55,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: Pending, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 56,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 57,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 60,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 59,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 58,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 61,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 62,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 64,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-28\")) }",
+          "generation": 63,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 42,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 66,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-03",
+          "generation": 74,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 67,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 68,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 69,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 70,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-02",
+          "generation": 82,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-03",
+          "generation": 85,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 71,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"zo\u00eb \u674e\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 76,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 75,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 74,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 73,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 72,
+          "applied": false
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-03",
+          "generation": 93,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Missing\", status: Active, beginning: Some(CalendarDay(\"2026-10-28\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 77,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 81,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 82,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: None, ending: None }",
+          "generation": 83,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 84,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 85,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 87,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"Alpha\", status: All, beginning: Some(CalendarDay(\"2026-10-29\")), ending: Some(CalendarDay(\"2026-10-29\")) }",
+          "generation": 86,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 44,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 89,
+          "applied": true
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-02",
+          "generation": 106,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 90,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 69,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 93,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 72,
+          "applied": true
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-03",
+          "generation": 88,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "VITAL-03",
+          "generation": 82,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "MED-03",
+          "generation": 85,
+          "applied": true
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "APPT-03",
+          "generation": 88,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "cover-detail",
+          "generation": 90,
+          "applied": false
+        },
+        {
+          "operation": "cover-detail",
+          "owner": "SYNTH-001",
+          "key": "VITAL-01",
+          "generation": 90,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "search",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-001",
+          "generation": 2,
+          "applied": true
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "SYNTH-001",
+          "generation": 2,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "chart",
+          "generation": 3,
+          "applied": false
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-001",
+          "key": "SYNTH-001",
+          "generation": 3,
+          "applied": false
+        },
+        {
+          "operation": "chart",
+          "owner": "SYNTH-001",
+          "key": "SYNTH-001",
+          "generation": 3,
+          "applied": true
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-001",
+          "key": "",
+          "generation": 4,
+          "applied": true
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 5,
+          "applied": true
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 6,
+          "applied": true
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "notes-list",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "notes-list",
+          "owner": "SYNTH-001",
+          "key": "",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "orders-list",
+          "generation": 9,
+          "applied": false
+        },
+        {
+          "operation": "orders-list",
+          "owner": "SYNTH-001",
+          "key": "OrdersFilter { query: \"\", status: All, beginning: None, ending: None }",
+          "generation": 9,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "results-list",
+          "generation": 10,
+          "applied": false
+        },
+        {
+          "operation": "results-list",
+          "owner": "SYNTH-001",
+          "key": "ResultsFilter { query: \"\", beginning: None, ending: None }",
+          "generation": 10,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "note-body",
+          "generation": 5,
+          "applied": false
+        },
+        {
+          "operation": "note-body",
+          "owner": "SYNTH-001",
+          "key": "NOTE-01",
+          "generation": 5,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "order-body",
+          "generation": 7,
+          "applied": false
+        },
+        {
+          "operation": "order-body",
+          "owner": "SYNTH-001",
+          "key": "ORDER-01",
+          "generation": 7,
+          "applied": false
+        },
+        {
+          "operation": "source-reject",
+          "owner": "",
+          "key": "report-body",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "report-body",
+          "owner": "SYNTH-001",
+          "key": "REPORT-01",
+          "generation": 8,
+          "applied": false
+        },
+        {
+          "operation": "search",
+          "owner": "",
+          "key": "",
+          "generation": 1,
+          "applied": true
+        }
+      ],
+      "delivery_count": 212,
+      "rejected_deliveries": 105,
+      "elapsed_ms": 53056,
+      "window": {
+        "client_pixels": [
+          980,
+          680
+        ],
+        "application_scale": 1.0
+      }
+    }
+  },
+  "limits": [
+    "Synthetic callbacks and geometry do not prove physical keyboard, Windows UIA or speech."
+  ]
+}
